@@ -1,0 +1,125 @@
+<div class="app-container" [class.dark-theme]="currentTheme === 'dark'">
+  <!-- Loading Overlay -->
+  <div class="loading-overlay" *ngIf="isLoading">
+    <div class="loading-content">
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      <p class="loading-message">{{ loadingMessage }}</p>
+    </div>
+  </div>
+
+  <!-- Error Overlay -->
+  <div class="error-overlay" *ngIf="errorMessage">
+    <div class="error-content">
+      <mat-icon class="error-icon">error</mat-icon>
+      <h3>Application Error</h3>
+      <p>{{ errorMessage }}</p>
+      <button mat-raised-button color="primary" (click)="clearError()">
+        Dismiss
+      </button>
+    </div>
+  </div>
+
+  <!-- Main Application Layout -->
+  <div class="app-layout" *ngIf="!isLoading && !errorMessage">
+    <!-- Main Menu -->
+    <app-main-menu *ngIf="isMainMenuVisible"></app-main-menu>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+      <!-- Sidebar -->
+      <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #sidenav 
+                     [mode]="'side'" 
+                     [opened]="isSidebarOpen"
+                     class="app-sidenav">
+          
+          <!-- Sidebar Header -->
+          <div class="sidenav-header">
+            <h3>Tools</h3>
+            <button mat-icon-button (click)="toggleSidebar()">
+              <mat-icon>close</mat-icon>
+            </button>
+          </div>
+
+          <!-- Sidebar Content -->
+          <mat-nav-list class="sidenav-content">
+            <!-- File Explorer Toggle -->
+            <mat-list-item (click)="toggleFileExplorer()" 
+                          [class.active]="isFileExplorerVisible">
+              <mat-icon matListItemIcon>folder</mat-icon>
+              <span matListItemTitle>File Explorer</span>
+            </mat-list-item>
+
+            <!-- Property Panel Toggle -->
+            <mat-list-item (click)="togglePropertyPanel()" 
+                          [class.active]="isPropertyPanelVisible">
+              <mat-icon matListItemIcon>settings</mat-icon>
+              <span matListItemTitle>Properties</span>
+            </mat-list-item>
+
+            <!-- Additional Tools -->
+            <mat-divider></mat-divider>
+            
+            <mat-list-item>
+              <mat-icon matListItemIcon>palette</mat-icon>
+              <span matListItemTitle>Color Picker</span>
+            </mat-list-item>
+
+            <mat-list-item>
+              <mat-icon matListItemIcon>text_fields</mat-icon>
+              <span matListItemTitle>Text Editor</span>
+            </mat-list-item>
+
+            <mat-list-item>
+              <mat-icon matListItemIcon>code</mat-icon>
+              <span matListItemTitle>Script Editor</span>
+            </mat-list-item>
+
+            <mat-list-item>
+              <mat-icon matListItemIcon>data_usage</mat-icon>
+              <span matListItemTitle>Data Sources</span>
+            </mat-list-item>
+
+            <mat-list-item>
+              <mat-icon matListItemIcon>layers</mat-icon>
+              <span matListItemTitle>Layers</span>
+            </mat-list-item>
+          </mat-nav-list>
+        </mat-sidenav>
+
+        <!-- Main Content -->
+        <mat-sidenav-content class="sidenav-content-main">
+          <!-- Designer Canvas Area -->
+          <div class="designer-area">
+            <app-designer></app-designer>
+          </div>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
+
+      <!-- Right Side Panels -->
+      <div class="right-panels">
+        <!-- Property Panel -->
+        <div class="panel-container property-panel-container" 
+             [class.visible]="isPropertyPanelVisible">
+          <app-property-panel
+            (propertyChanged)="onPropertyChanged($event)"
+            (propertyReset)="onPropertyReset($event)">
+          </app-property-panel>
+        </div>
+
+        <!-- File Explorer Panel -->
+        <div class="panel-container file-explorer-container" 
+             [class.visible]="isFileExplorerVisible">
+          <app-file-explorer
+            (fileSelected)="onFileSelected($event)"
+            (folderSelected)="onFolderSelected($event)"
+            (fileUploaded)="onFileUploaded($event)">
+          </app-file-explorer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Router Outlet for Additional Routes -->
+  <router-outlet></router-outlet>
+</div>
