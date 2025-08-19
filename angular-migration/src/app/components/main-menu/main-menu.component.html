@@ -1,0 +1,246 @@
+<mat-toolbar class="main-menu-toolbar" [class.dark-theme]="darkMode">
+  <!-- Logo and Brand -->
+  <div class="toolbar-left">
+    <img [src]="brandConfig.logo || 'assets/images/logo.png'" 
+         [alt]="brandConfig.name || 'Dashboard Designer'" 
+         class="brand-logo">
+    <span class="brand-name">{{ brandConfig.name || 'Dashboard Designer' }}</span>
+  </div>
+
+  <!-- Main Menu Items -->
+  <div class="toolbar-center">
+    <button mat-button 
+            (click)="createNewDashboard()" 
+            [disabled]="controlDisable"
+            matTooltip="New Dashboard (Ctrl+N)">
+      <mat-icon>add</mat-icon>
+      New
+    </button>
+
+    <button mat-button 
+            (click)="openDashboard()" 
+            [disabled]="controlDisable"
+            matTooltip="Open Dashboard (Ctrl+O)">
+      <mat-icon>folder_open</mat-icon>
+      Open
+    </button>
+
+    <button mat-button 
+            (click)="saveDashboard()" 
+            [disabled]="controlDisable"
+            matTooltip="Save Dashboard (Ctrl+S)">
+      <mat-icon>save</mat-icon>
+      Save
+    </button>
+
+    <button mat-button 
+            (click)="publishDashboard()" 
+            [disabled]="controlDisable"
+            matTooltip="Publish Dashboard (Ctrl+P)">
+      <mat-icon>publish</mat-icon>
+      Publish
+    </button>
+
+    <button mat-button 
+            (click)="toggleSearch()" 
+            [disabled]="controlDisable"
+            matTooltip="Search">
+      <mat-icon>search</mat-icon>
+      Search
+    </button>
+  </div>
+
+  <!-- Right Side Controls -->
+  <div class="toolbar-right">
+    <!-- Theme Toggle -->
+    <mat-slide-toggle 
+      [(ngModel)]="darkMode"
+      (change)="toggleDarkMode()"
+      matTooltip="Toggle Dark Mode">
+      <mat-icon>{{ darkMode ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </mat-slide-toggle>
+
+    <!-- Language Selector -->
+    <mat-form-field appearance="outline" class="language-selector">
+      <mat-select [(ngModel)]="selectedLanguage" 
+                  (selectionChange)="changeLanguage($event.value)">
+        <mat-option *ngFor="let language of languageList" 
+                    [value]="language">
+          {{ language.displayName }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Help Menu -->
+    <button mat-icon-button 
+            [matMenuTriggerFor]="helpMenu"
+            matTooltip="Help">
+      <mat-icon>help</mat-icon>
+    </button>
+    <mat-menu #helpMenu="matMenu">
+      <button mat-menu-item (click)="showHelp()">
+        <mat-icon>help_outline</mat-icon>
+        <span>Designer Help</span>
+      </button>
+      <button mat-menu-item (click)="showScriptHelp()">
+        <mat-icon>code</mat-icon>
+        <span>Script Help</span>
+      </button>
+    </mat-menu>
+
+    <!-- User Menu -->
+    <div class="user-menu-container">
+      <!-- Notifications -->
+      <button mat-icon-button 
+              (click)="toggleUserAlertNotification()"
+              class="user-alert"
+              matTooltip="Notifications">
+        <mat-icon [matBadge]="getNotificationCount()" 
+                  matBadgeColor="warn"
+                  [matBadgeHidden]="!hasNotifications()">
+          notifications
+        </mat-icon>
+      </button>
+
+      <!-- User Dropdown -->
+      <button mat-icon-button 
+              (click)="toggleUserDropdown()"
+              class="user-dropdown"
+              matTooltip="User Menu">
+        <img [src]="getUserAvatar()" 
+             [alt]="getUserDisplayName()" 
+             class="user-avatar">
+      </button>
+
+      <!-- User Dropdown Menu -->
+      <div class="user-dropdown-menu" 
+           [class.open]="isUserDropdownOpen"
+           *ngIf="isUserDropdownOpen">
+        <div class="user-info">
+          <img [src]="getUserAvatar()" 
+               [alt]="getUserDisplayName()" 
+               class="user-avatar-large">
+          <div class="user-details">
+            <div class="user-name">{{ getUserDisplayName() }}</div>
+            <div class="user-email">{{ getUserEmail() }}</div>
+          </div>
+        </div>
+        
+        <mat-divider></mat-divider>
+        
+        <button mat-menu-item (click)="userNotification()">
+          <mat-icon>notifications</mat-icon>
+          <span>Notifications</span>
+        </button>
+        
+        <button mat-menu-item (click)="toggleUserNavigation()">
+          <mat-icon>settings</mat-icon>
+          <span>Settings</span>
+        </button>
+        
+        <mat-divider></mat-divider>
+        
+        <button mat-menu-item (click)="userLogout()">
+          <mat-icon>logout</mat-icon>
+          <span>Logout</span>
+        </button>
+      </div>
+
+      <!-- User Alert Menu -->
+      <div class="user-alert-menu" 
+           [class.open]="isUserAlertOpen"
+           *ngIf="isUserAlertOpen">
+        <div class="alert-header">
+          <h3>Notifications</h3>
+          <button mat-icon-button (click)="toggleUserAlertNotification()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+        <div class="alert-content">
+          <div class="no-notifications" *ngIf="!hasNotifications()">
+            <mat-icon>notifications_none</mat-icon>
+            <p>No new notifications</p>
+          </div>
+          <!-- Notification items would go here -->
+        </div>
+      </div>
+
+      <!-- User Navigation Menu -->
+      <div class="user-navigation-menu" 
+           [class.open]="isUserNavigationOpen"
+           *ngIf="isUserNavigationOpen">
+        <div class="nav-header">
+          <h3>Settings</h3>
+          <button mat-icon-button (click)="toggleUserNavigation()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+        <div class="nav-content">
+          <div class="nav-section">
+            <h4>Workspace</h4>
+            <div class="workspace-info">
+              <span class="workspace-name">{{ selectedWorkspace.name }}</span>
+              <span class="workspace-key">{{ selectedWorkspace.key }}</span>
+            </div>
+          </div>
+          
+          <div class="nav-section">
+            <h4>Preferences</h4>
+            <div class="preference-item">
+              <span>Theme</span>
+              <mat-slide-toggle 
+                [(ngModel)]="darkMode"
+                (change)="toggleDarkMode()">
+                {{ darkMode ? 'Dark' : 'Light' }}
+              </mat-slide-toggle>
+            </div>
+            <div class="preference-item">
+              <span>Language</span>
+              <mat-select [(ngModel)]="selectedLanguage" 
+                         (selectionChange)="changeLanguage($event.value)">
+                <mat-option *ngFor="let language of languageList" 
+                           [value]="language">
+                  {{ language.displayName }}
+                </mat-option>
+              </mat-select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-toolbar>
+
+<!-- Search Bar -->
+<div class="search-container" [class.visible]="searchVisible">
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>Search dashboards...</mat-label>
+    <input matInput placeholder="Enter search term">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+  <button mat-icon-button (click)="toggleSearch()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<!-- Server Alert -->
+<div class="server-alert" 
+     [class.visible]="serverAlertMsg.text"
+     [class]="'alert-' + serverAlertMsg.type">
+  <mat-icon>{{ getAlertIcon(serverAlertMsg.type) }}</mat-icon>
+  <span>{{ serverAlertMsg.text }}</span>
+  <button mat-icon-button (click)="serverAlertMsg.text = ''">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<!-- Publish Info -->
+<div class="publish-info" 
+     [class.visible]="pubInfoMsg"
+     *ngIf="pubInfoMsg">
+  <mat-icon>info</mat-icon>
+  <span>{{ pubInfoMsg }}</span>
+  <button mat-icon-button (click)="pubInfoMsg = ''">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
