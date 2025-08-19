@@ -1,0 +1,161 @@
+<div class="property-panel" [class.hidden]="!isVisible">
+  <mat-card class="property-panel-header">
+    <mat-card-header>
+      <mat-card-title>
+        <mat-icon>settings</mat-icon>
+        Properties
+      </mat-card-title>
+      <mat-card-subtitle *ngIf="selectedObject">
+        {{ selectedObject.name || 'Selected Object' }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-actions>
+      <button mat-icon-button (click)="toggleVisibility()" matTooltip="Hide Properties">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="property-panel-content" *ngIf="selectedObject">
+    <!-- Property Groups Navigation -->
+    <mat-tab-group [(selectedIndex)]="selectedPropertyGroupIndex" class="property-tabs">
+      <mat-tab *ngFor="let group of propertyGroups | keyvalue; let i = index" 
+               [label]="group.key" 
+               [value]="group.key">
+        
+        <div class="property-group">
+          <!-- Advanced Properties Toggle -->
+          <div class="advanced-toggle" *ngIf="hasAdvancedProperties(group.value)">
+            <mat-slide-toggle 
+              [(ngModel)]="showAdvancedProperties"
+              (change)="toggleAdvancedProperties()">
+              Show Advanced Properties
+            </mat-slide-toggle>
+          </div>
+
+          <!-- Properties Form -->
+          <form [formGroup]="propertyForm" class="properties-form">
+            <div class="property-item" 
+                 *ngFor="let property of group.value" 
+                 [class.hidden]="!shouldShowProperty(property)">
+              
+              <mat-form-field appearance="outline" class="property-field">
+                <mat-label>{{ property.name }}</mat-label>
+                
+                <!-- Text Input -->
+                <input matInput 
+                       *ngIf="property.type === 'text'"
+                       [formControlName]="property.id"
+                       [placeholder]="property.name"
+                       [attr.disabled]="property.disabled">
+                
+                <!-- Number Input -->
+                <input matInput 
+                       *ngIf="property.type === 'number'"
+                       type="number"
+                       [formControlName]="property.id"
+                       [placeholder]="property.name"
+                       [min]="property.min"
+                       [max]="property.max"
+                       [step]="property.step || 1"
+                       [attr.disabled]="property.disabled">
+                
+                <!-- Select Dropdown -->
+                <mat-select *ngIf="property.type === 'select'"
+                           [formControlName]="property.id"
+                           [attr.disabled]="property.disabled">
+                  <mat-option *ngFor="let option of property.options" 
+                             [value]="option.value">
+                    {{ option.label || option.value }}
+                  </mat-option>
+                </mat-select>
+                
+                <!-- Color Picker -->
+                <input matInput 
+                       *ngIf="property.type === 'color'"
+                       type="color"
+                       [formControlName]="property.id"
+                       [attr.disabled]="property.disabled">
+                
+                <mat-error *ngIf="hasError(property.id, 'required')">
+                  {{ property.name }} is required
+                </mat-error>
+                <mat-error *ngIf="hasError(property.id, 'pattern')">
+                  Please enter a valid {{ property.type }}
+                </mat-error>
+                <mat-error *ngIf="hasError(property.id, 'minlength')">
+                  {{ property.name }} must be at least 1 character
+                </mat-error>
+              </mat-form-field>
+
+              <!-- Boolean Toggle -->
+              <div class="boolean-property" *ngIf="property.type === 'boolean'">
+                <mat-slide-toggle 
+                  [formControlName]="property.id"
+                  [attr.disabled]="property.disabled">
+                  {{ property.name }}
+                </mat-slide-toggle>
+              </div>
+
+              <!-- Slider -->
+              <div class="slider-property" *ngIf="property.type === 'slider'">
+                <label class="slider-label">{{ property.name }}</label>
+                <mat-slider 
+                  [formControlName]="property.id"
+                  [min]="property.min"
+                  [max]="property.max"
+                  [step]="property.step || 1"
+                  [disabled]="property.disabled">
+                  <input matSliderThumb>
+                </mat-slider>
+                <span class="slider-value">{{ getFormControl(property.id)?.value }}</span>
+              </div>
+
+              <!-- Reset Button -->
+              <button mat-icon-button 
+                      class="reset-button"
+                      (click)="resetProperty(property)"
+                      matTooltip="Reset to default"
+                      *ngIf="!property.disabled">
+                <mat-icon>restore</mat-icon>
+              </button>
+            </div>
+          </form>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+    <!-- Action Buttons -->
+    <div class="property-actions">
+      <button mat-raised-button 
+              color="primary"
+              (click)="saveProperties()"
+              [disabled]="propertyForm.invalid || isLoading">
+        <mat-icon *ngIf="isLoading" class="spinner">hourglass_empty</mat-icon>
+        <mat-icon *ngIf="!isLoading">save</mat-icon>
+        {{ isLoading ? 'Saving...' : 'Save Properties' }}
+      </button>
+      
+      <button mat-button 
+              (click)="propertyForm.reset()"
+              [disabled]="isLoading">
+        <mat-icon>refresh</mat-icon>
+        Reset All
+      </button>
+    </div>
+
+    <!-- Error Message -->
+    <div class="error-message" *ngIf="errorMessage">
+      <mat-error>{{ errorMessage }}</mat-error>
+    </div>
+  </mat-card>
+
+  <!-- No Selection Message -->
+  <mat-card class="no-selection" *ngIf="!selectedObject">
+    <mat-card-content>
+      <mat-icon class="no-selection-icon">info</mat-icon>
+      <p>Select an object to view its properties</p>
+    </mat-card-content>
+  </mat-card>
+</div>
