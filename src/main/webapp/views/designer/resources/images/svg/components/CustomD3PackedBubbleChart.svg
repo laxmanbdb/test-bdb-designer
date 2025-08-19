@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fffde2;
+      }
+
+      .cls-2 {
+        fill: #f9e8dc;
+        isolation: isolate;
+        opacity: .2;
+      }
+
+      .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        fill: #ffaf6d;
+      }
+
+      .cls-6 {
+        fill: #7c4dff;
+      }
+
+      .cls-7 {
+        fill: #fae872;
+      }
+
+      .cls-4 {
+        stroke: #d3d3d3;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Layer_1-2" data-name="Layer_1">
+        <g id="Group_3072">
+          <g id="Rectangle_206">
+            <rect class="cls-3" width="50" height="50" rx="6" ry="6"/>
+            <rect class="cls-4" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+          </g>
+          <circle id="Ellipse_1380" class="cls-6" cx="25" cy="25" r="17.7"/>
+          <circle id="Ellipse_1381" class="cls-5" cx="19.6" cy="26.8" r="11.5"/>
+          <circle id="Ellipse_1382" class="cls-7" cx="26" cy="12.2" r="3.8"/>
+          <circle id="Ellipse_1383" class="cls-7" cx="33.4" cy="17.9" r="3.4"/>
+          <circle id="Ellipse_1384" class="cls-7" cx="36.7" cy="26.6" r="5.2"/>
+          <circle id="Ellipse_1385" class="cls-7" cx="32.6" cy="35.7" r="3.8"/>
+          <circle id="Ellipse_1386" class="cls-2" cx="14.6" cy="28" r="6.4"/>
+          <circle id="Ellipse_1387" class="cls-2" cx="22.1" cy="33.8" r="2.6"/>
+          <circle id="Ellipse_1388" class="cls-2" cx="21.8" cy="20.2" r="2.6"/>
+          <circle id="Ellipse_1389" class="cls-1" cx="24.7" cy="10.8" r="1.5"/>
+          <circle id="Ellipse_1390" class="cls-2" cx="26" cy="26.8" r="4.7"/>
+          <circle id="Ellipse_1391" class="cls-1" cx="27.8" cy="12.2" r="1.5"/>
+          <circle id="Ellipse_1392" class="cls-1" cx="25.3" cy="13.8" r="1.1"/>
+          <circle id="Ellipse_1393" class="cls-1" cx="32.2" cy="18.1" r="1"/>
+          <circle id="Ellipse_1394" class="cls-1" cx="34.6" cy="18.8" r="1"/>
+          <circle id="Ellipse_1395" class="cls-1" cx="33" cy="19.8" r=".7"/>
+          <circle id="Ellipse_1396" class="cls-1" cx="33.7" cy="16.3" r=".7"/>
+          <circle id="Ellipse_1397" class="cls-1" cx="34.1" cy="26.8" r="1.5"/>
+          <circle id="Ellipse_1398" class="cls-1" cx="36.4" cy="24.5" r="1.5"/>
+          <circle id="Ellipse_1399" class="cls-1" cx="39.4" cy="26" r="1.5"/>
+          <circle id="Ellipse_1400" class="cls-1" cx="37.1" cy="28.1" r="1.1"/>
+          <circle id="Ellipse_1401" class="cls-1" cx="31.1" cy="35.4" r="1.2"/>
+          <circle id="Ellipse_1402" class="cls-1" cx="34.1" cy="36.3" r="1.2"/>
+          <circle id="Ellipse_1403" class="cls-1" cx="31.9" cy="37.7" r=".9"/>
+          <circle id="Ellipse_1404" class="cls-1" cx="33.3" cy="33.8" r=".9"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

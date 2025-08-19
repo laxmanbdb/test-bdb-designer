@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #1ca2a5;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-10, .cls-11, .cls-12, .cls-5, .cls-6, .cls-7, .cls-8, .cls-13, .cls-14, .cls-9 {
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .cls-2, .cls-11 {
+        stroke: #7979e2;
+      }
+
+      .cls-3 {
+        stroke: #ececec;
+      }
+
+      .cls-10 {
+        fill: #fff;
+        stroke: #000;
+      }
+
+      .cls-11 {
+        fill: #4032ff;
+      }
+
+      .cls-12 {
+        fill: #ffaf6d;
+        stroke: #ffaf6d;
+      }
+
+      .cls-5 {
+        stroke: #ed1c24;
+      }
+
+      .cls-6 {
+        stroke: #edcd32;
+      }
+
+      .cls-7 {
+        stroke: #dd9726;
+      }
+
+      .cls-8 {
+        stroke: #4aa2d3;
+      }
+
+      .cls-13 {
+        fill: #7979e2;
+        stroke: #8662cc;
+      }
+
+      .cls-14 {
+        fill: #5925dc;
+        stroke: #7c4dff;
+      }
+
+      .cls-9 {
+        stroke: #1884c6;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Group_3103">
+        <g id="Rectangle_172">
+          <rect class="cls-4" width="50" height="50" rx="6" ry="6"/>
+          <rect class="cls-3" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+        </g>
+        <path id="Path_14" class="cls-14" d="M10.8,22.4s0,0,0,0c.4-1.3.9-2.6,1.7-3.8"/>
+        <path id="Path_15" class="cls-5" d="M10.3,24.5c0-.1,0-.3,0-.4"/>
+        <path id="Path_16" class="cls-12" d="M11.5,32.3c-.1-.3-.2-.5-.3-.8,0,0,0,0,0-.1-.6-1.6-.9-3.3-.9-5v-.8"/>
+        <path id="Path_17" class="cls-8" d="M17.4,36c-1.1-.9-2-2-2.8-3.2,0,0,0,0,0-.1,0,0-.1-.2-.2-.3,0,0,0,0,0,0"/>
+        <path id="Path_18" class="cls-5" d="M20,40.2c-.5-.2-1-.4-1.4-.6,0,0,0,0,0,0-.3-.1-.5-.3-.8-.4,0,0-.1,0-.2-.1"/>
+        <path id="Path_19" class="cls-7" d="M20.7,40.4c0,0-.2,0-.3,0"/>
+        <path id="Path_20" class="cls-7" d="M21.4,40.6c0,0-.2,0-.3,0"/>
+        <path id="Path_21" class="cls-2" d="M23.1,41c-.3,0-.6,0-.9-.1,0,0-.1,0-.2,0"/>
+        <path id="Path_22" class="cls-7" d="M25.8,38.6c-.8,0-1.6,0-2.4,0"/>
+        <path id="Path_23" class="cls-5" d="M28.5,40.6h-.5c0,.1-.6.2-.6.2"/>
+        <path id="Path_24" class="cls-11" d="M34.8,37.3c-1.4,1.2-3,2.2-4.7,2.8,0,0,0,0-.1,0l-.6.2"/>
+        <path id="Path_25" class="cls-12" d="M38,33.2v.2c-.4.5-.7,1.1-1.1,1.5,0,0,0,0-.1.1,0,0,0,.1-.1.1-.5.6-1,1.2-1.6,1.8"/>
+        <path id="Path_26" class="cls-5" d="M38.7,31.7s0,0,0,.1c0,0,0,.1,0,.2-.1.3-.2.5-.3.7,0,0,0,0,0,.1"/>
+        <path id="Path_27" class="cls-14" d="M39,22c.2.8.4,1.6.5,2.5,0,0,0,.1,0,.2,0,.5.1,1.1.1,1.7h0c0,.4,0,.6,0,.8v.2c0,1-.2,2-.5,3,0,0,0,0,0,.1"/>
+        <path id="Path_28" class="cls-5" d="M38.7,21s0,0,0,.1"/>
+        <path id="Path_29" class="cls-5" d="M36.9,17.7c.2.3.4.6.6.9"/>
+        <path id="Path_30" class="cls-5" d="M35.6,16.1l.4.4"/>
+        <path id="Path_31" class="cls-5" d="M34.6,15.2c.1,0,.2.2.3.3"/>
+        <path id="Path_32" class="cls-5" d="M32.9,13.9c0,0,.1,0,.2.1.4.3.9.6,1.3.9"/>
+        <path id="Path_33" class="cls-13" d="M28.3,12c.2,0,.3,0,.5.1,0,0,0,0,.1,0,.1,0,.3,0,.4.1.3,0,.6.2.9.3.5.2,1,.4,1.5.6"/>
+        <path id="Path_34" class="cls-1" d="M25.2,11.6h.5c.6,0,1.2.1,1.8.2"/>
+        <path id="Path_35" class="cls-5" d="M24.2,11.6c.1,0,.3,0,.4,0h.4"/>
+        <path id="Path_36" class="cls-5" d="M23.3,11.7c.1,0,.2,0,.3,0"/>
+        <path id="Path_37" class="cls-9" d="M20.1,12.4l.6-.2c.7-.2,1.3-.4,2-.5"/>
+        <path id="Path_38" class="cls-5" d="M19.4,12.7c0,0,.2,0,.3-.1"/>
+        <path id="Path_39" class="cls-12" d="M13.2,17.4s0,0,0-.1c1.3-1.6,2.9-3,4.7-4"/>
+        <path id="Path_40" class="cls-6" d="M37.8,18.9c0,0,0,.1.1.2.3.5.5.9.8,1.4"/>
+        <path id="Path_41" class="cls-2" d="M17.3,38.9c-.3-.1-.5-.3-.8-.5,0,0-.1,0-.1-.1"/>
+        <path id="Path_42" class="cls-2" d="M23,40.9c-.3,0-.5,0-.7-.1,0,0-.1,0-.1,0"/>
+        <path id="Path_43" class="cls-10" d="M16.6,33.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

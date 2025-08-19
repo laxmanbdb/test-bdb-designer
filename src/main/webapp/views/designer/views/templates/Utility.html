@@ -1,0 +1,10 @@
+<table class="helpTable">
+	<tr class="helpTableHeader">
+		<td class="shortcutKeyTd">Shortcut</td>
+		<td class="shortcutDescriptionTd">Description</td>
+	</tr>
+	<tr ng-repeat="data in helpData.helpMenus_UTILITY_Data" ng-if="data.status == 'active'">
+		<td class="shortcutKeyTd">{{data.key}}</td>
+		<td class="shortcutDescriptionTd">{{data.description}}</td>
+	</tr>
+</table>

@@ -1,0 +1,38 @@
+<div ng-controller="HelpController" class="designer-help">
+    <div layout="row" layout-sm="column" class="ht100per">
+        <div flex-gt-sm="25" class="ht100per">
+            <md-sidenav  id="help-menue" class="md-sidenav-left md-whiteframe-z2 d-w-separator" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+                <ul class="menu-li">
+                    <li ng-repeat="menu in helpMenuList" href="#{{menu.id}}" class="listMenu">
+                        <a ng-click="pageForDisplay($event,menu)" class="forHoleBlockClick">
+                            <div ng-show="menu.isUiActive">
+                            </div>
+                            {{ menu.title}}
+                            <span ng-if="(menu.subMenu.length > 0)&&(menu.isActive)"><md-icon md-svg-src="./views/helpIcons/ic_change_history_black_24px.svg"  id="toggle-icon"></md-icon></span>
+                            <span ng-if="(menu.subMenu.length > 0)&&(!menu.isActive)"><md-icon md-svg-src="./views/helpIcons/ic_details_black_24px.svg"  id="toggle-icon"></md-icon></span>
+                        </a>
+                        <ul class="menu-li" ng-if="(menu.subMenu.length > 0)&&(menu.isActive)">
+                            <li ng-repeat="subMenu in menu.subMenu" ng-if="subMenu.enabled" href="#{{subMenu.id}}" class="listSubMenu">
+                                <a ng-click="pageForDisplay($event,subMenu)" class="forHoleBlockClick">
+                                    {{ subMenu.title }}
+                                    <span ng-if="(subMenu.childSubMenu.length > 0)&&(subMenu.isActive)"><md-icon md-svg-src="./views/helpIcons/ic_change_history_black_24px.svg"  id="toggle-icon"></md-icon></span>
+                                    <span ng-if="(subMenu.childSubMenu.length > 0)&&(!subMenu.isActive)"><md-icon md-svg-src="./views/helpIcons/ic_details_black_24px.svg" id="toggle-icon"></md-icon></span>
+                                </a>
+                                <ul ng-if="(subMenu.childSubMenu.length > 0)&&(subMenu.isActive)">
+                                    <li ng-repeat="childSubMenu in subMenu.childSubMenu" ng-click="pageForDisplay($event,childSubMenu)" href="#{{childSubMenu.id}}" class="listSubMenu">
+                                        <a class="forHoleBlockClick">
+                                    {{ childSubMenu.title }}
+                                </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </md-sidenav>
+        </div>
+        <div flex-gt-sm="75" ng-model="helpModel" class="displayPannel" ng-include="helpModel">
+        </div>
+    </div>
+</div>
+</div>

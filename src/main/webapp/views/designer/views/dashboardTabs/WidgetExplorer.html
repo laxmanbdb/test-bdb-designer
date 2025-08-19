@@ -1,0 +1,166 @@
+<div id="compBox" class="bizVizRightControlComponentBoxContainer biz-viz-side-window hideBox bvz-invisible"
+	ng-init="initWidgets()" >
+
+	<form class="filter-search-wrapper widget-search-wrapper">
+		<input type="text" id="compSearch" class="we-search-input propValue pull-left widget-search" placeholder="{{ 'Search in components' | translate }}" 
+			ng-model="search" ng-change="searchWidget()" /><img style="cursor: pointer; margin-right: 10px;" src="./resources/images/svg/additional/Search.svg" alt="" class="searchCloseButton" /><!--<i class="material-icons cursor-hand pos_search">search</i>-->
+		<span 
+			class="we-clear-search"
+			ng-click="clearSearch()" ng-show="searchActive" >
+	    	<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+	    </span>
+		<span 
+			class="window-action-icon we-switch-view pull-right" 
+			ng-click="switchView()">
+			<!-- <i ng-class="view.viewIcon"></i> -->
+			<!-- <i class='material-icons cursor-hand' mat-tooltip="Switch View">{{view.viewIcon}}</i>-->
+			<md-icon class="{{view.viewIcon}} cursor-hand" mat-tooltip="Switch View"></md-icon>
+		</span>
+		<span
+			class="window-action-icon close-button" 
+			ng-click="reloadDefault();">
+			<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Close Window"></md-icon>
+		</span>
+		<div class="clear"></div>
+	</form>
+
+	<div class="bizVizControlBoxBody" style="/*background: #EEEEF4 0% 0% no-repeat padding-box;*/">
+	
+		<div class="d-w-wrapper widget-group-wrapper">
+			<div class="widget-group-container widget-group pull-left widget-group-container-w16" 
+				ng-class="{ groupDisabled: wGr.disabled }" 
+				ng-repeat="wGr in wGroups" 
+				data-toggle="tooltip" data-placement="bottom" style="border-bottom: 3px solid var(--selected-state);">
+				<span id="{{ wGr.gId }}" class="thumbnail cursor-hand" 
+					ng-click="displayWidgets( $event, wGr )">
+<!-- 					<span class="bdb-sprite-{{wGr.gClass | lowercase}} bdb-sprite-chart"></span> -->
+					<img ng-src="{{ wGr.gIcon }}"/>
+					<span class="widget-name" mat-tooltip="{{ wGr.gName | translate }}">{{ wGr.gName | translate }}</span>
+				</span>
+			</div>
+		</div>
+		
+		<!--<div class="group-widget-separator" ng-show="active">
+			<div class="pointer"></div>
+		</div>-->
+		
+		<div class="not-found" style="text-align: center; color: red" ng-hide="searchFound" >
+			<h6>{{ "No match found" | translate }}</h6>
+		</div>
+		
+		<div class="not-found" style="text-align: center" ng-hide="active" >
+			<h6>{{ "Search or click on groups" | translate }}</h6>
+		</div>
+		
+		<ul class="d-w-wrapper widget-list-wrapper" 
+			ng-show="view.isListView">
+			<li class="w-list-item draggable-widget-item" 
+				ng-repeat="w in widgets" 
+				ng-drag="true" ng-drag-data="w" 
+				data-toggle="tooltip" data-placement="bottom" 
+				ng-show="w.show" ng-mouseover="setDraggedItem( $event, w )"
+				mat-tooltip = "<table style='z-index:99999;'> <tr> <td colspan='2' align='center'>{{ w.name }}</td> </tr> <tr ng-if='w.isDSSupported'> <td colspan='2' style='border-bottom: 1px solid purple'>{{w.datastore}}</td> </tr> <tr ng-if='w.info.req && w.info.req.Category' style='font-size: 10px;'> <td align='left'>Category :</td> <td align='left'>{{ w.info.req.Category }}</td> </tr> <tr ng-if='w.info.req && w.info.req.Series' style='font-size: 10px;'> <td align='left'>Series :</td> <td align='left'>{{ w.info.req.Series }}</td> </tr> <tr ng-if='w.info.req && w.info.req.Field' style='font-size: 10px;'> <td align='left'>Field :</td> <td align='left'>{{ w.info.req.Field }}</td> </tr> <tr ng-if='w.info.req && w.info.req.Date' style='font-size: 10px;'> <td align='left'>Date :</td> <td align='left'>{{ w.info.req.Date }}</td> </tr> <tr ng-if='w.info.req && w.info.req.Intro' style='font-size: 10px;'> <td colspan='2'>{{ w.info.req.Intro }}</td> </tr> </table>">
+<!-- 				<span class="bdb-sprite-{{w.class | lowercase}} bdb-sprite-chart"></span>  -->
+				<span>
+					<span class="w-list-item-icon">
+						<img ng-src="{{ w.icon }}" ng-class="{ dsindicator: w.isDSSupported }" />
+					</span>
+					<span class="w-list-item-name">
+						{{ w.name | translate }}
+					</span>
+				</span>
+<!-- 					<md-tooltip ng-if="w.info.enable" md-direction="top" style="height: auto !important;"> -->
+<!-- 						<table style='z-index:99999;'> -->
+<!-- 							<tr> -->
+<!-- 								<td colspan='2' align='center'>{{ w.name }}</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.isDSSupported"> -->
+<!-- 								<td colspan="2" style="border-bottom:1px solid purple">Data Store is supported</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.info.req && w.info.req.Category" style='font-size: 10px;'> -->
+<!-- 								<td align='left'>Category :</td> -->
+<!-- 								<td align='left'>{{ w.info.req.Category }}</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.info.req && w.info.req.Series" style='font-size: 10px;'> -->
+<!-- 								<td align='left'>Series :</td> -->
+<!-- 								<td align='left'>{{ w.info.req.Series }}</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.info.req && w.info.req.Field" style='font-size: 10px;'> -->
+<!-- 								<td align='left'>Field :</td> -->
+<!-- 								<td align='left'>{{ w.info.req.Field }}</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.info.req && w.info.req.Date" style='font-size: 10px;'> -->
+<!-- 								<td align='left'>Date :</td> -->
+<!-- 								<td align='left'>{{ w.info.req.Date }}</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.info.req && w.info.req.Intro" style='font-size: 10px;'> -->
+<!-- 								<td colspan='2'>{{ w.info.req.Intro }}</td> -->
+<!-- 							</tr> -->
+<!-- 						</table> -->
+<!-- 						<span ng-if="!w.info.enable">{{w.name}}</span> -->
+<!-- 	     			</md-tooltip> -->
+			</li>
+			<li class="w-list-item" ng-drag-clone="">
+				<span class="w-list-item-icon">
+					<img class="list" ng-src="{{ draggedItem.icon }}" />
+				</span>
+				<span class="w-list-item-name">{{ draggedItem.name | translate }}</span>
+			</li>
+		</ul>
+		
+		<div class="d-w-wrapper widget-wrapper" 
+			ng-hide="view.isListView">
+			<div class="w-grid-wrapper">
+				<div class="widget-container widget-items draggable-widget-item pull-left" 
+					ng-repeat="w in widgets" 
+					ng-drag="true" ng-drag-data="w" 
+					data-toggle="tooltip" data-placement="bottom" 
+					ng-show="w.show" ng-mouseover="setDraggedItem( $event, w )"
+					mat-tooltip = "<table style='z-index:99999;'> <tr> <td colspan='2' align='center'>{{ w.name }}</td> </tr> <tr ng-if='w.isDSSupported'> <td colspan='2' style='border-bottom: 1px solid purple'>{{w.datastore}}</td> </tr> <tr ng-if='w.info.req && w.info.req.Category' style='font-size: 10px;'> <td align='left'>Category :</td> <td align='left'>{{ w.info.req.Category }}</td> </tr> <tr ng-if='w.info.req && w.info.req.Series' style='font-size: 10px;'> <td align='left'>Series :</td> <td align='left'>{{ w.info.req.Series }}</td> </tr> <tr ng-if='w.info.req && w.info.req.Field' style='font-size: 10px;'> <td align='left'>Field :</td> <td align='left'>{{ w.info.req.Field }}</td> </tr> <tr ng-if='w.info.req && w.info.req.Date' style='font-size: 10px;'> <td align='left'>Date :</td> <td align='left'>{{ w.info.req.Date }}</td> </tr> <tr ng-if='w.info.req && w.info.req.Intro' style='font-size: 10px;'> <td colspan='2'>{{ w.info.req.Intro }}</td> </tr> </table>">
+					<span class="thumbnail" style="width: 100%; height: 100%; padding: 8px !important;">
+						<img ng-src="{{ w.icon }}" ng-class="{ dsindicator: w.isDSSupported }"/>
+						<span class="widget-name" style="font-weight: normal !important;">{{ w.name | translate }}</span>
+					</span>
+<!-- 					<md-tooltip ng-if="w.info.enable" md-direction="top" style="height: auto !important;"> -->
+<!-- 						<table style='z-index:99999;'> -->
+<!-- 							<tr> -->
+<!-- 								<td colspan='2' align='center'>{{ w.name }}</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.isDSSupported"> -->
+<!-- 								<td colspan="2" style="border-bottom: 1px solid purple">Data Store is supported</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.info.req && w.info.req.Category" style='font-size: 10px;'> -->
+<!-- 								<td align='left'>Category :</td> -->
+<!-- 								<td align='left'>{{ w.info.req.Category }}</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.info.req && w.info.req.Series" style='font-size: 10px;'> -->
+<!-- 								<td align='left'>Series :</td> -->
+<!-- 								<td align='left'>{{ w.info.req.Series }}</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.info.req && w.info.req.Field" style='font-size: 10px;'> -->
+<!-- 								<td align='left'>Field :</td> -->
+<!-- 								<td align='left'>{{ w.info.req.Field }}</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.info.req && w.info.req.Date" style='font-size: 10px;'> -->
+<!-- 								<td align='left'>Date :</td> -->
+<!-- 								<td align='left'>{{ w.info.req.Date }}</td> -->
+<!-- 							</tr> -->
+<!-- 							<tr ng-if="w.info.req && w.info.req.Intro" style='font-size: 10px;'> -->
+<!-- 								<td colspan='2'>{{ w.info.req.Intro }}</td> -->
+<!-- 							</tr> -->
+<!-- 						</table> -->
+<!-- 						<span ng-if="!w.info.enable">{{w.name}}</span> -->
+<!-- 	     			</md-tooltip> -->
+				</div>
+			</div>
+			<div ng-drag-clone="">
+				<span class="thumbnail">
+					<img class="grid" ng-src="{{ draggedItem.icon }}" />
+					<span class="widget-name">{{ draggedItem.name | translate }}</span>
+				</span>
+			</div>
+		</div>
+		
+	</div>
+
+</div>

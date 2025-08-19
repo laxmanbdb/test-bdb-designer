@@ -1,0 +1,16 @@
+<table class="helpTable">
+	<tr class="helpTableHeader">
+		<td class="shortcutKeyTd">#</td>
+		<td class="shortcutKeyTd">Plugin</td>
+		<td class="shortcutKeyTd">Version</td>
+		<td class="shortcutKeyTd">License</td>
+		<td class="shortcutDescriptionTd">Source</td>
+	</tr>
+	<tr ng-repeat="data in helpData.helpMenus_REFERENCES_Data track by $index">
+		<td class="shortcutKeyTd">{{$index + 1}}</td>
+		<td class="shortcutKeyTd">{{data.Plugin}}</td>
+		<td class="shortcutKeyTd">{{data.Version}}</td>
+		<td class="shortcutKeyTd">{{data.LicenceType}}</td>
+		<td class="shortcutDescriptionTd"><a target="_blank" href="{{data.Source}}">{{data.Source}}</a></td>
+	</tr>
+</table>

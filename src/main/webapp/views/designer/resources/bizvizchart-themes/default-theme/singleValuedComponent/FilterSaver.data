@@ -1,0 +1,51 @@
+{
+	"FilterSaver": {
+		"Properties": {
+			"Object": {
+				"componentType": "filter_saver",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "filtersaver",
+				"showLocked": "false",
+				"globalVariableKeyAttribute": "globalkey",
+				"subElement": "FilterSaver",
+				"objectName": "filterSaver_1",
+				"y": "82",
+				"unShowHidden": "false",
+				"groupings": "",
+				"width": "125",
+				"initialVisibility": "true",
+				"objectType": "filtersaver",
+				"objectID": "Obj.213AA581N8A53N40EEN640FNA626F1EA0287",
+				"height": "44",
+				"x": "85",
+				"updatedDesign": "true",
+				"FilterSaver": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"fontFamily": "BizvizFont",
+					"chromeColor": "#0d78bf",
+					"label": "Save Filter",
+					"toolTip": "",
+					"fontWeight": "normal",
+					"fontStyle": "normal",
+					"fontSize": 16,
+					"color": "#ffffff",
+					"globalkey": "filterSaver1",
+					"showBorder": "false",
+					"borderColor": "#EFF0F0",
+					"borderRadius": "5",
+					"borderThickness": "1",
+
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.1"
+				}
+			}
+		}
+	}
+}

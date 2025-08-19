@@ -1,0 +1,44 @@
+*{
+	outline: none !important;
+}
+.b-n-s-wrapper {
+    position: relative;
+    tex-align: left;
+}
+.b-n-s-wrapper:hover .b-n-s-buttons {
+	display: block !important;
+}
+.b-n-z-val-wrapper input {
+    width: 100%;
+    border: none;
+    height: 24px;
+    background: transparent;
+}
+.b-n-s-buttons {
+    background: #fafafa;
+    width: 20px;
+    height: 90%;
+    top: 5%;
+    right: 0px;
+    font-size: 8px;
+    text-align: center;
+    position: absolute;
+    display: none;
+    cursor: default;
+}
+.btn-visible {
+	display: block !important;
+}
+
+.b-n-s-buttons a:HOVER {
+    background: #eeeeee;
+}
+.b-n-s-buttons div {
+    height: 50%;
+}
+.b-n-s-buttons div a {
+    padding: 0px;
+    display: inline-block;
+    cursor: pointer;
+    color: #000000;
+}

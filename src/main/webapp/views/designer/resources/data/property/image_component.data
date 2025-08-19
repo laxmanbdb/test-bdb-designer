@@ -1,0 +1,153 @@
+{
+	"Info": [{
+		"class": "ImageComponent"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Maintain Aspect Ratio : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "maintainAspectRatio",
+		"propertyName": "Image"
+	}, {
+		"label": "Rollover Glow : ",
+		"type": "checkbox",
+		"value": "",
+		"attributeName": "rollOverGlowEnable",
+		"propertyName": "Image"
+	}, {
+		"label": "Glow Color : ",
+		"type": "color",
+		"value": "#3333FF",
+		"attributeName": "rollOverGlowColor",
+		"propertyName": "Image"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.5",
+		"attributeName": "alpha",
+		"propertyName": "Image"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "10",
+		"attributeName": "borderRadius",
+		"propertyName": "Image"
+	}, {
+		"label": "Tool Tip : ",
+		"type": "text",
+		"value": "10",
+		"attributeName": "toolTip",
+		"propertyName": "Image"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "Image"
+	}, {
+		"label": "Cursor Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "default",
+			"value": "Default"
+		}, {
+			"key": "pointer",
+			"value": "Pointer"
+		}, {
+			"key": "help",
+			"value": "Help"
+		}, {
+			"key": "not-allowed",
+			"value": "Blocked"
+		}, {
+			"key": "progress",
+			"value": "Progress"
+		}],
+		"attributeName": "cursorType",
+		"propertyName": "Image"
+	}, {
+		"label": "Browse Image : ",
+		"heading": "Image loader",
+		"type": "customImageBrowse",
+		"value": "",
+		"attributeName": "cdata",
+		"propertyName": "Image.imageSource"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Image"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Image"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Image"
+	}]
+}

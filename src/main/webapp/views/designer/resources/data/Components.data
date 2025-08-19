@@ -1,0 +1,537 @@
+[
+    {
+        "name": "Export",
+        "type": "singleValuedComponent",
+        "class": "ExportToPPTButton",
+        "show": true,
+        "icon": "./resources/images/svg/components/ExportToPPT.svg"
+    },
+    {
+        "name": "FilterSaver",
+        "type": "singleValuedComponent",
+        "class": "FilterSaver",
+        "show": true,
+        "icon": "./resources/images/svg/components/FilterSaver.svg"
+    },
+    {
+        "name": "Area",
+        "type": "chart",
+        "class": "AreaChart",
+        "frameworkClass": "Area",
+        "show": true,
+        "icon": "./resources/images/svg/components/Area.svg"
+    },
+    {
+        "name": "Bar",
+        "type": "chart",
+        "class": "BarChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Bar.svg"
+    },
+    {
+        "name": "Benchmark Analysis",
+        "type": "chart",
+        "class": "BenchmarkAnalysisChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/CandleStick.svg"
+    },
+    {
+        "name": "Bubble",
+        "type": "chart",
+        "class": "BubbleChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Bubble.svg"
+    },
+    {
+        "name": "BoxPlot",
+        "type": "chart",
+        "class": "BoxPlotChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/BoxPlot.svg"
+    },
+    {
+        "name": "Candle Stick",
+        "type": "chart",
+        "class": "CandleStickChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/CandleStick.svg"
+    },
+    {
+        "name": "Circumplex",
+        "type": "chart",
+        "class": "CircumplexChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Circumplex.svg"
+    },
+    {
+        "name": "Chevron",
+        "type": "chart",
+        "class": "ChevronChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Chevron.svg"
+    },
+    {
+        "name": "Column",
+        "type": "chart",
+        "class": "ColumnStackChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Column.svg"
+    },
+	{
+		"name": "Custom",
+		"type": "chart",
+		"class": "CustomChart",
+		"show": true,
+		"icon": "./resources/images/svg/components/CustomChart.svg"
+	},
+     {
+        "name": "DecisionTree",
+        "type": "chart",
+        "class": "DecisionTreeChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/DecisionTree.svg"
+    },
+    {
+        "name": "GroupBar",
+        "type": "chart",
+        "class": "GroupBarChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/GroupBar.svg"
+    },
+    {
+        "name": "GroupColumn",
+        "type": "chart",
+        "class": "GroupColumnChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/GroupColumn.svg"
+    },
+    {
+        "name": "Heat Map",
+        "type": "chart",
+        "class": "HeatMapChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/HeatMap.svg"
+    },
+    {
+        "name": "Histogram",
+        "type": "chart",
+        "class": "HistogramChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Histogram.svg"
+    },
+    {
+        "name": "Inverted Funnel",
+        "type": "chart",
+        "class": "InvertedFunnelChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/InvertedFunnel.svg"
+    },
+    {
+        "name": "Knowledge Graph",
+        "type": "chart",
+        "class": "KnowledgeGraphChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Line.svg"
+    },
+    {
+        "name": "Line",
+        "type": "chart",
+        "class": "LineChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Line.svg"
+    },
+    {
+        "name": "MitoPlot",
+        "type": "chart",
+        "class": "MitoPlotChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/MitoPlotChart.svg"
+    },
+    {
+        "name": "Mixed",
+        "type": "chart",
+        "class": "MixedChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Mixed.svg"
+    },
+    {
+        "name": "Pie",
+        "type": "chart",
+        "class": "PieChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Pie.svg"
+    },
+    {
+        "name": "Progress Pie",
+        "type": "chart",
+        "class": "ProgressChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Progress.svg"
+    },
+	{
+		"name": "ProjectTimeline",
+		"type": "chart",
+		"class": "ProjectTimelineChart",
+		"show": true,
+		"icon": "./resources/images/svg/components/ProjectTimeline.svg"
+	},
+    {
+        "name": "Pyramid",
+        "type": "chart",
+        "class": "PyramidChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Pyramid.svg"
+    },
+    {
+        "name": "Scattered Plot",
+        "type": "chart",
+        "class": "ScatteredPlotChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/ScatteredPlot.svg"
+    },
+    {
+        "name": "Text Analyzer",
+        "type": "chart",
+        "class": "SentimentPlotChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/SentimentPlot.svg"
+    },
+    {
+        "name": "Timeline",
+        "type": "chart",
+        "class": "TimelineChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Timeline.svg"
+    },
+    {
+        "name": "Decomposition",
+        "type": "chart",
+        "class": "DecompositionChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/D3DecompositionTree.svg"
+    },
+    {
+        "name": "Sankey",
+        "type": "chart",
+        "class": "SankeyChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/SankeyChart.svg"
+    },
+    {
+        "name": "TimeArea",
+        "type": "chart",
+        "class": "TimeAreaChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Timeline.svg"
+    },
+    {
+        "name": "TimeColumn",
+        "type": "chart",
+        "class": "TimeColumnStackChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/TimeColumn.svg"
+    },
+    {
+        "name": "TreeMap",
+        "type": "chart",
+        "class": "TreeMapChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/TreeMap.svg"
+    },
+    {
+        "name": "Waterfall",
+        "type": "chart",
+        "class": "WaterfallChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Waterfall.svg"
+    },
+    {
+        "name": "WordCloud",
+        "type": "chart",
+        "class": "WordCloudChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/WordCloud.svg"
+    },
+    {
+        "name": "NewWordCloud",
+        "type": "chart",
+        "class": "NewWordCloudChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/WordCloud.svg"
+    },
+    {
+        "name": "Trellis",
+        "type": "chart",
+        "class": "TrellisChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Trellis.svg"
+    },
+    {
+        "name": "Funnel",
+        "type": "chart",
+        "class": "SimpleFunnelChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/SimpleFunnel.svg"
+    },
+    {
+        "name": "Spark Line",
+        "type": "chart",
+        "class": "SparkLineChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Sparkline.svg"
+    },
+    {
+        "name": "Spider",
+        "type": "chart",
+        "class": "SpiderChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/Spider.svg"
+    },
+    {
+        "name": "Map",
+        "type": "chart",
+        "class": "WorldMapChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/map.svg"
+    },
+    {
+        "name": "Legend",
+        "type": "singleValuedComponent",
+        "class": "Legend",
+        "show": true,
+        "icon": "./resources/images/svg/components/Legend.svg"
+    },
+       {
+        "name": "FilterChips",
+        "type": "singleValuedComponent",
+        "class": "FilterChips",
+        "show": true,
+        "icon": "./resources/images/svg/components/FilterchipsNew.svg"
+    },
+    {
+        "name": "Box",
+        "type": "container",
+        "class": "Rectangle",
+        "show": true,
+        "icon": "./resources/images/svg/components/Rectangle.svg"
+    },
+    {
+        "name": "Paging Datagrid",
+        "type": "datagrid",
+        "class": "PagingDataGrid",
+        "show": true,
+        "icon": "./resources/images/svg/components/PagingDatagrid.svg"
+    },
+    {
+        "name": "DataGrid",
+        "type": "datagrid",
+        "class": "SimpleDataGrid",
+        "show": true,
+        "icon": "./resources/images/svg/components/SimpleDatagrid.svg"
+    },
+    {
+        "name": "Pivot Grid",
+        "type": "datagrid",
+        "class": "DynamicDataGrid",
+        "show": true,
+        "icon": "./resources/images/svg/components/DynamicDatagrid.svg"
+    },
+    {
+        "name": "Scorecard",
+        "type": "datagrid",
+        "class": "ScoreCard",
+        "show": true,
+        "icon": "./resources/images/svg/components/TreeGrid.svg"
+    },
+    {
+        "name": "JExcelDataGrid",
+        "type": "datagrid",
+        "class": "JExcelDataGrid",
+        "show": true,
+        "icon": "./resources/images/svg/components/JExcelDataGrid.svg"
+    },
+    {
+        "name": "Checkbox",
+        "type": "filter",
+        "class": "CheckboxFilter",
+        "show": true,
+        "icon": "./resources/images/svg/components/checkboxgroup.svg"
+    },
+     {
+        "name": "Graphics",
+        "type": "singleValuedComponent",
+        "class": "SVGShape",
+        "frameworkClass": "SVGShape",
+        "show": true,
+        "icon": "./resources/images/svg/components/SVGShape.svg"
+    },
+    {
+        "name": "SVG Image",
+        "type": "singleValuedComponent",
+        "class": "SVGImage",
+        "frameworkClass": "SVGImage",
+        "show": true,
+        "icon": "./resources/images/svg/components/SVGImage.svg"
+    },
+    {
+        "name": "Combobox Filter",
+        "type": "filter",
+        "class": "ComboFilter",
+        "show": true,
+        "icon": "./resources/images/svg/components/Combobox.svg"
+    },
+    {
+        "name": "Hierarchical Combobox",
+        "type": "filter",
+        "class": "HierarchicalCombo",
+        "show": true,
+        "icon": "./resources/images/svg/components/Combotree.svg"
+    },
+    {
+        "name": "List",
+        "type": "filter",
+        "class": "ListFilter",
+        "show": true,
+        "icon": "./resources/images/svg/components/ListFilter.svg"
+    },
+    {
+        "name": "Radio Button",
+        "type": "filter",
+        "class": "RadioFilter",
+        "show": true,
+        "icon": "./resources/images/svg/components/Radio.svg"
+    },
+    {
+        "name": "Gauge",
+        "type": "singleValuedComponent",
+        "class": "Gauge",
+        "show": true,
+        "icon": "./resources/images/svg/components/Gauge.svg"
+    },
+    {
+        "name": "GuidedTour",
+        "type": "singleValuedComponent",
+        "class": "GuidedTour",
+        "show": true,
+        "icon": "./resources/images/svg/components/GuidedTour.svg"
+    },
+    {
+        "name": "Bullet",
+        "type": "singleValuedComponent",
+        "class": "Bullet",
+        "show": true,
+        "icon": "./resources/images/svg/components/Bullet.svg"
+    },
+    {
+        "name": "Image",
+        "type": "singleValuedComponent",
+        "class": "ImageComponent",
+        "show": true,
+        "icon": "./resources/images/svg/components/ImageComponent.svg"
+    },
+    {
+        "name": "Info Button",
+        "type": "singleValuedComponent",
+        "class": "InfoButton",
+        "show": true,
+        "icon": "./resources/images/svg/components/InfoButton.svg"
+    },
+    {
+        "name": "Label",
+        "type": "singleValuedComponent",
+        "class": "Label",
+        "show": true,
+        "icon": "./resources/images/svg/components/Label.svg"
+    },
+    {
+        "name": "Semi Gauge",
+        "type": "singleValuedComponent",
+        "class": "SemiGauge",
+        "show": true,
+        "icon": "./resources/images/svg/components/SemiGauge.svg"
+    },
+    {
+        "name": "Text Box",
+        "type": "singleValuedComponent",
+        "class": "TextBox",
+        "show": true,
+        "icon": "./resources/images/svg/components/TextBox.svg"
+    },
+    {
+        "name": "Trend",
+        "type": "singleValuedComponent",
+        "class": "Trend",
+        "show": true,
+        "icon": "./resources/images/svg/components/Trend.svg"
+    },
+    {
+        "name": "Url Button",
+        "type": "singleValuedComponent",
+        "class": "UrlButton",
+        "show": true,
+        "icon": "./resources/images/svg/components/URL_Button.svg"
+    },
+    {
+        "name": "Button",
+        "type": "singleValuedComponent",
+        "class": "InputButton",
+        "show": true,
+        "icon": "./resources/images/svg/components/InputButton.svg"
+    },
+    {
+        "name": "H-Slider",
+        "type": "singleValuedComponent",
+        "class": "HSlider",
+        "show": true,
+        "icon": "./resources/images/svg/components/HSlider.svg"
+    },
+    {
+        "name": "Input Box",
+        "type": "singleValuedComponent",
+        "class": "InputBox",
+        "show": true,
+        "icon": "./resources/images/svg/components/InputBox.svg"
+    },
+    {
+        "name": "V-Slider",
+        "type": "singleValuedComponent",
+        "class": "VSlider",
+        "show": true,
+        "icon": "./resources/images/svg/components/VSlider.svg"
+    },
+    {
+        "name": "Stepper",
+        "type": "singleValuedComponent",
+        "class": "NumericStepper",
+        "show": true,
+        "icon": "./resources/images/svg/components/NumericStepper.svg"
+    },
+    {
+        "name": "Data Search",
+        "type": "singleValuedComponent",
+        "class": "DataSearch",
+        "show": true,
+        "icon": "./resources/images/svg/components/DataSearch.svg"
+    },
+    {
+        "name": "Date Picker",
+        "type": "singleValuedComponent",
+        "class": "DatePicker",
+        "show": true,
+        "icon": "./resources/images/svg/components/DatePicker.svg"
+    },
+    {
+        "name": "Tab",
+        "type": "singleValuedComponent",
+        "class": "TabComponent",
+        "show": true,
+        "icon": "./resources/images/svg/components/Tab.svg"
+    },
+    {
+        "name": "WidgetChart",
+        "type": "chart",
+        "class": "WidgetChart",
+        "show": true,
+        "icon": "./resources/images/svg/components/CustomChart.svg"
+    }
+]

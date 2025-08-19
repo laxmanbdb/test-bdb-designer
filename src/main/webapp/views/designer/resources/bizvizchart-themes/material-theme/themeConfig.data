@@ -1,0 +1,2617 @@
+{
+	"dashboardTheme": {
+		"themeName": "material-theme",
+		"Dashboard": {
+			"height": "",
+			"width": "",
+			"backgroundColor": "",
+			"showGridLines": "",
+			"showBorder": false,
+			"borderColor": "",
+			"borderThickness": ""
+		},
+		"datasetColors": [
+			"#F4C484",
+			"#FF8467",
+			"#007172",
+			"#005D7F",
+			"#4F4F67",
+			"#cee18e",
+			"#c2af9a"
+		]
+	},
+	"DashboardObjects": {
+		"AreaChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "area_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineYAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"BarChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "bar_chart",
+					"themeType": "material-theme",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"GradientColor": "#ffffff,#ffffff",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#808080",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#808080",
+							"LineXAxisColor": "#e6e6e6",
+							"FontColor": "#cccccc"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"BubbleChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "bubble_chart",
+					"themeType": "material-theme",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"GradientColor": "#ffffff,#ffffff",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#808080",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"BandColors": "#ff8568,#005d7b,#cccccc",
+						"rangedSeriesColors": "#ff8568,#005d7b,#cccccc",
+						"maxRangeColor": "#00b16a",
+						"minRangeColor": "#f89406",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"CircumplexChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "circumplex_chart",
+					"themeType": "material-theme",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"axisColor": "#ffffff",
+						"axisStrokeColor": "#ffffff",
+						"strokeColor": "#ffffff",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"SimpleFunnelChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "simple_funnel_chart",
+					"objectType": "funnel",
+					"subElement": "Funnel",
+					"themeType": "material-theme",
+					"Funnel": {
+						"GradientColor": "#ffffff,#ffffff",
+						"bgGradients": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"seriesColor": "#ff8467,#f4c484,#007172,#07678e,#cccccc,#808080",
+						"backGroundColor": "#ffffff",
+						"legendfontColor": "#666666",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"ColumnStackChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "column_stack_chart",
+					"themeType": "material-theme",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"HistogramChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "histogram_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#cccccc",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"BorderStrokeColor": "#ffffff",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"InvertedFunnelChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "inverted_funnel_chart",
+					"objectType": "funnel",
+					"subElement": "Funnel",
+					"themeType": "material-theme",
+					"Funnel": {
+						"GradientColor": "#ffffff,#ffffff",
+						"bgGradients": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"seriesColor": "#ff8467,#f4c484,#007172,#07678e,#cccccc,#808080",
+						"backGroundColor": "#ffffff",
+						"legendfontColor": "#666666",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"KPITile": {
+			"Properties": {
+				"Object": {
+					"componentType": "kpi_tile",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"objectType": "chart",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"GradientColor": "#ffffff,#ffffff",
+						"fillColor": "#ffffff",
+						"lineColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#666666",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"CategoryFontColor": "#cccccc",
+						"PrimarySeriesFontColor": "#ffffff",
+						"SecondarySeriesFontColor": "#cccccc",
+						"positiveTrendColor": "#007172",
+						"negativeTrendColor": "#FF8568",
+						"zeroTrendColor": "#FCC88B"
+					}
+				}
+			}
+		},
+		"WorldMapChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "world_map",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"DefaultColor": "#353553",
+						"RollOverColor": "#545476",
+						"OutlineColor": "#353553",
+						"rangedColors": "#ff8467,#f9c886,#007172,#005d7d,#677a9a,#9e9ea7",
+						"maxRangeColor": "#009eb3",
+						"minRangeColor": "#7bd0e9",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"seriesColor": "#ff8467,#f4c484,#007172,#07678e,#cccccc,#808080",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"MitoPlotChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "mitoplot_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"seriesColor": "#9E9EA7,#016c96,#007172,#f4c484,#ff8467,#808080",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#ffffff",
+							"FontColor": "#cccccc"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#ffffff",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"MixedChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "mixed_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#cccccc",
+						"legendbackgroundColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"secondAxisZeroMarkerColor": "#cccccc",
+						"secondAxisfontcolor": "#cccccc",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"PieChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "pie_chart",
+					"themeType": "material-theme",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"seriesColor": "#ff8467,#f4c484,#007172,#07678e,#cccccc,#2682D5",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"ProgressChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "progress_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"GradientColor": "#ffffff,#ffffff",
+						"showBorder": false,
+						"borderColor": "#005d7f",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"strokeColor": "#ffffff",
+						"bgGradients": "#ffffff",
+						"FontColor": "#e6e6e6",
+						"baseColor": "#ffffff",
+						"valueColor": "#005d7f",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"ProjectTimelineChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "project_timeline_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#ffffff",
+						"milestoneFontColor": "#ffffff",
+						"taskFontColor": "#cccccc",
+						"majorLabelColor": "#cccccc",
+						"minorLabelColor": "#cccccc",
+						"minorLabelBorderColor": "#666666",
+						"todayMarkerColor": "#000000",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						},
+						"TaskDetails": {
+							"TColor": "#ff6d4b,#007172,#7b7b9e,#016c96"
+						}
+					}
+				}
+			}
+		},
+		"PyramidChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "pyramid_chart",
+					"objectType": "funnel",
+					"subElement": "Funnel",
+					"themeType": "material-theme",
+					"Funnel": {
+						"GradientColor": "#ffffff,#ffffff",
+						"bgGradients": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"seriesColor": "#ff8467,#f4c484,#007172,#07678e,#cccccc,#808080",
+						"backGroundColor": "#808080",
+						"legendfontColor": "#808080",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"ScatteredPlotChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "scattered_plot_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"verticalZeroMarkerColor": "#cccccc",
+						"maxRangeColor": "#456a76",
+						"minRangeColor": "#52c3e8",
+						"Legend": {
+							"Colors": "#E74C3C,#ff8568,#005d7b,#cccccc,#36D7B7,#26A65B"
+						},
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"SparkLineChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "sparkline_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"lineColor": "#ffffff,#86dff9,#fd940b,#e0dfdf,#F64747",
+						"fillColor": "#ffffff",
+						"spotColor": "#005d7b",
+						"minSpotColor": "#ff8568",
+						"maxSpotColor": "#e6e6e6",
+						"highlightSpotColor": "#e6e6e6",
+						"highlightLineColor": "#e6e6e6",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#E0DFDF",
+						"normalRangeColor": "#cccccc",
+						"barcolor": "#006488",
+						"negbarcolor": "#ff8568",
+						"zerobarcolor": "#007172",
+						"tristateposbarcolor": "#006488",
+						"tristatenegbarcolor": "#ff8568",
+						"tristatezerobarcolor": "#007172"
+					}
+				}
+			}
+		},
+		"SpiderChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "spider_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#808080",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"axisColor": "#005d7b",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#ffffff",
+							"FontColor": "#ffffff"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"WaterfallChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "water_fall_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#808080",
+						"zeroMarkerColor": "#be4a47",
+						"positiveColor": "#005d7b",
+						"negativeColor": "#ff8568",
+						"totalColor": "#007172",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"GroupBarChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "group_bar_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"GroupColumnChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "group_column_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"TimelineChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "timeline_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"sliderBorderColor": "#69697a",
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#cccccc",
+						"legendbackgroundColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"stackBorderColor": "#FFFFFF",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"secondAxisZeroMarkerColor": "#cccccc",
+						"TargetColor": "0xff0000",
+						"ValueColor": "0x00ff00",
+						"fillColor": "0x00ffff",
+						"strokeColor": "0x000fff",
+						"declineFillColor": "0x00ffff",
+						"lineSecondAxisColor": "#808080",
+						"secondAxisfontcolor": "#cccccc",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"LineChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "line_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"legendbackgroundColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#cccccc",
+						"zeroMarkerColor": "#444461",
+						"TargetColor": "0xff0000",
+						"ValueColor": "0x00ff00",
+						"fillColor": "0x00ffff",
+						"strokeColor": "0x000fff",
+						"declineFillColor": "0x00ffff",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"BoxPlotChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "box_plot_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"fillColor": "#ffffff",
+						"strokeColor": "#ffffff",
+						"declineFillColor": "#ffffff",
+						"lowerBoxFillColors": "#006488,#fd940b",
+						"upperBoxFillColors": "#86dff9,#e0dfdf",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"BenchmarkAnalysisChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "benchmark_analysis_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"fillColor": "#ffffff",
+						"strokeColor": "#808080",
+						"declineFillColor": "#ffffff",
+						"lowerBoxFillColors": "#F4C484,#FF8467,#007172",
+						"upperBoxFillColors":"#005D7F,#4F4F67,#cee18e",			
+						"gridlabelfontcolor":"#808080",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"CandleStickChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "candle_stick_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#e6e6e6",
+						"zeroMarkerColor": "#000000",
+						"fillColor": "#005d7b",
+						"strokeColor": "#808080",
+						"declineFillColor": "#cccccc",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"ChevronChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "chevron_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"axisColor": "#ffffff",
+						"seriesColor": "#9E9EA7,#FF8568,#FCC88B,#007172,#005D7B,#808080",
+						"currentPhaseBorderColor": "#ffffff",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"CustomChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "custom_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#000000",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#fdee7f,#fdee7f",
+						"legendfontColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"showShadow": true,
+						"shadowColor": "#ffffff",
+						"zeroMarkerColor": "#ffffff",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#ffffff"
+						},
+						"SubTitle": {
+							"FontColor": "#ffffff"
+						}
+					}
+				}
+			}
+		},
+		"DecisionTreeChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "decisiontree_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#ffffff",
+						"bgGradients": "#ffffff",
+						"nodeRectStrokeColor": "#000000",
+						"nodeRectFillColor": "#000000",
+						"lineStrokeColor": "#ffffff",
+						"prob1color": "#ffffff",
+						"prob2color": "#ffffff",
+						"percentColor": "#666666",
+						"strokeColorForPercentRect": "#ffffff",
+						"prababilityRectColors": "#9E9EA7,#FF8568,#FCC88B,#007172,#005D7B,#808080,#4d4dff,#8a8a5c,#ff7733,#ff6666",
+						"textStrokeColor": "#cccccc",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"HeatMapChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "heat_map_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"cellTextColor": "#ffffff",
+						"cellTextFontColor": "#ffffff",
+						"maxRangeColor": "#65647f",
+						"minRangeColor": "#005d7b",
+						"Legend": {
+							"Colors": "#ff8467,#f4c484,#007172,#016c96,#808080"
+						},
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"SentimentPlotChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "sentiment_plot_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"axisColor": "#000000",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LabelFontColor": "#e6e6e6",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"TreeMapChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "tree_map_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"headerBgColor": "#ffffff",
+						"cellTextColor": "#cccccc",
+						"cellTextFontColor": "#cccccc",
+						"maxRangeColor": "#65647f",
+						"minRangeColor": "#005d7b",
+						"Legend": {
+							"Colors": "#aa5845,#a8855c,#005d7b,#063854,#1b424e"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"WordCloudChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "word_cloud_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#ffffff",
+						"HighlightColor": "#ffffff",
+						"maxRangeColor": "#005d7b",
+						"minRangeColor": "#8aa8b2",
+						"Legend": {
+							"Colors": "#FF8568,#ff8568,#fcc88b,#2f8283,8c9da3"
+						},
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineYAxisColor": "#ffffff",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"SankeyChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "sankey_chart",
+					"themeType": "material-theme",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#FFFFFF",
+						"GradientColor": "#ffffff,#ffffff",
+						"borderColor": "#ffffff",
+						"shadowColor": "#ffffff",
+						"labelFontColor": "#808080",
+						"Title": {
+							"FontColor": "#808080"
+						},
+						"SubTitle": {
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"KnowledgeGraphChart": {
+	         "Properties": {
+	             "Object": {
+	                 "componentType": "knowledge_graph_chart",
+	                 "objectType": "chart",
+	                 "subElement": "Chart",
+	                 "themeType": "material-theme",
+	                 "Chart": {
+	                     "bgGradients": "#ffffff",
+	                     "tooltipBackgroundColor": "#FFFFFF",
+	                     "tooltipBorderColor": "#E0DFDF",
+	                     "GradientColor": "#ffffff,#ffffff",
+	                     "legendfontColor": "#808080",
+	                     "legendbackgroundColor": "#ffffff",
+	                     "borderColor": "#ffffff",
+	                     "shadowColor": "#ffffff",
+	                     "nodeColor": "#F4C484",
+	                     "nodeBorderColor": "#F4C484",
+	                     "nodeHoverColor": "#cccccc",
+	                     "nodeFontColor": "#808080",
+	                     "customNodeTypeColors": "#F4C484,#FF8467,#007172,#005D7F",
+	                     "customNodeRangeColors": "#F4C484,#FF8467,#007172,#005D7F",
+	                     "edgeColor": "#ffffff",
+	                     "edgeFontColor": "#808080",      
+	                     "Title": {
+	                         "FontColor": "#808080"
+	                     },
+	                     "SubTitle": {
+	                         "FontColor": "#808080"
+	                     }
+	                 }
+	             }
+	         }
+	     },
+		"NewWordCloudChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "new_word_cloud_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#ffffff",
+						"HighlightColor": "#ffffff",
+						"maxRangeColor": "#005d7b",
+						"minRangeColor": "#8aa8b2",
+						"Legend": {
+							"Colors": "#FF8568,#ff8568,#fcc88b,#2f8283,8c9da3"
+						},
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#e6e6e6",
+							"LabelFontColor": "#808080",
+							"FontColor": "#808080",
+							"CategoryMarkingColor": "#FFFFFF"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineYAxisColor": "#ffffff",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"TrellisChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "trellis_chart",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"themeType": "material-theme",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#ffffff",
+						"tooltipBorderColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"legendfontColor": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"markerColor": "#ffffff",
+						"fillColor": "#ffffff",
+						"strokeColor": "#808080",
+						"declineFillColor": "#cccccc",
+						"lowerBoxFillColors": "#4183d7,#663399",
+						"upperBoxFillColors": "#f7ca18,#2ecc71",
+						"headerFontColor": "#cccccc",
+						"headerSymbolColor": "#ffffff",
+						"headerchromeColor": "#ffffff",
+						"horizontalGridLineColor": "#e6e6e6",
+						"verticalGridLineColor": "#e6e6e6",
+						"xAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineXAxisColor": "#ffffff",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"yAxis": {
+							"FontSize": 12,
+							"LabelFontSize": "10",
+							"LineYAxisColor": "#ffffff",
+							"LabelFontColor": "#808080",
+							"FontColor": "#cccccc"
+						},
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"CheckboxFilter": {
+			"Properties": {
+				"Object": {
+					"componentType": "checkbox_filter",
+					"objectType": "filter",
+					"subElement": "Filter",
+					"themeType": "material-theme",
+					"Filter": {
+						"rollOverColor": "#E8F2FE",
+						"FontColor": "#808080",
+						"chromeColor": "#ffffff",
+						"selectionColor": "#E8F2FE",
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"ComboFilter": {
+			"Properties": {
+				"Object": {
+					"componentType": "combo_filter",
+					"objectType": "filter",
+					"subElement": "Filter",
+					"themeType": "material-theme",
+					"Filter": {
+						"FontColor": "#808080",
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"rollOverColor": "#D9D7D8",
+						"chromeColor": "#f2f2f2",
+						"selectionColor": "#D9D7D8",
+						"filterbgColor":"#f2f2f2",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#808080",
+							"GradientColor": "#ffffff,#e6e6e6"
+						}
+					}
+				}
+			},
+			"autoAddScriptsFromDesigner": "sdk.autoReload();"
+		},
+		"HierarchicalCombo": {
+			"Properties": {
+				"Object": {
+					"componentType": "hierarchical_combo",
+					"objectType": "filter",
+					"subElement": "Filter",
+					"themeType": "material-theme",
+					"Filter": {
+						"FontColor": "#808080",
+						"rollOverColor": "#D9D7D8",
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"chromeColor": "#f2f2f2",
+						"selectionColor": "#D9D7D8"
+					}
+				}
+			},
+			"autoAddScriptsFromDesigner": "sdk.autoReload();"
+		},
+		"ListFilter": {
+			"Properties": {
+				"Object": {
+					"componentType": "list_filter",
+					"subElement": "Filter",
+					"objectType": "filter",
+					"themeType": "material-theme",
+					"Filter": {
+						"selectionColor": "#00A0F0",
+						"selectionFontColor": "#ffffff",
+						"chromeColor": "#ffffff",
+						"FontColor": "#808080",
+						"backgroundColor": "#e6e6e6",
+						"rollOverColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#000000",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666",
+							"GradientColor": "#ffffff,#e6e6e6"
+						}
+					}
+				}
+			},
+			"autoAddScriptsFromDesigner": "sdk.autoReload();"
+		},
+		"RadioFilter": {
+			"Properties": {
+				"Object": {
+					"componentType": "radio_filter",
+					"objectType": "filter",
+					"subElement": "Filter",
+					"themeType": "material-theme",
+					"Filter": {
+						"rollOverColor": "#666666",
+						"FontColor": "#808080",
+						"chromeColor": "#e6e6e6",
+						"selectionColor": "#666666",
+						"showBorder": false,
+						"borderColor": "#000000",
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"JExcelDataGrid": {
+			"Properties": {
+				"Object": {
+					"componentType": "jexcel_data_grid",
+					"objectName": "Datasheet_1",
+					"themeType": "material-theme",
+					"subElement": "DataGrid",
+					"shortName": "datasheet",
+					"objectType": "datagrid",
+					"DataGrid": {
+						"pagerBackgroundColor": "#a7a9ab",
+						"bgGradients": "#191C24",
+						"borderColor": "#191C24",
+						"shadowColor": "#191C24",
+						"xmlwithColorColumn": "false",
+						"labelFontColor": "#ffffff",
+						"FontFamily": "BizvizFont",
+						"AlertColors": "#FF0000,#FFFF00,#0000FF,#00FF00",
+						"GradientColor": "#000000,#000000",
+						"headerFontColor": "#ffffff",
+						"headerFontWeight": "bold",
+						"headerSymbolColor": "#ffffff",
+						"headerchromeColor": "#ffffff",
+						"FontColor": "#ffffff",
+						"Title": {
+							"FontWeight": "600",
+							"FontColor": "#ffffff"
+						},
+						"SubTitle": {
+							"FontColor": "#ffffff"
+						},
+						"DatagridStyles": {
+							"horizontalGridLineColor": "#CECFD0",
+							"verticalGridLineColor": "#CECFD0",
+							"selectionColor": "#ffffff",
+							"rollOverColor": "#e6e6e6",
+							"enableItemrenderer": "false",
+							"alternateRowsColor": "#ffffff,#fafafa"
+						},
+						"Column": {
+							"columnColorArray": "#FF0000,#00CC00,#0000DD,#FFCC00"
+						},
+						"LinkButton": {
+							"TextRolloverColor": "26214",
+							"TextColor": "ffffff",
+							"TextSelectedColor": "204",
+							"TitRolloverColorle": "52479",
+							"SelectedColor": "32425"
+						},
+						"LinkBar": {
+							"SelectedColor": "13311",
+							"LinkBarColor": "#020f0e",
+							"TextRolloverColor": "16777062",
+							"SeperatorColor": "ffffff",
+							"TextColor": "ffffff",
+							"TextSelectedColor": "13209",
+							"RolloverColor": "13311"
+						}
+					}
+				}
+			}
+		},
+		"SimpleDataGrid": {
+			"Properties": {
+				"Object": {
+					"componentType": "simple_data_grid",
+					"objectName": "Datagrid_1",
+					"showLocked": "false",
+					"subElement": "DataGrid",
+					"themeType": "material-theme",
+					"DataGrid": {
+						"pagerBackgroundColor": "#ffffff",
+						"bgGradients": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"labelFontColor": "#808080",
+						"AlertColors": "#e97d67,#545469,#546877,#00FF00",
+						"GradientColor": "#ffffff,#ffffff",
+						"headerFontColor": "#cccccc",
+						"headerSymbolColor": "#ffffff",
+						"headerchromeColor": "#ffffff",
+						"FontColor": "#808080",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						},
+						"DatagridStyles": {
+							"horizontalGridLineColor": "#e6e6e6",
+							"verticalGridLineColor": "#e6e6e6",
+							"selectionColor": "#666666",
+							"rollOverColor": "#666666",
+							"alternateRowsColor": "#ffffff,#e6e6e6"
+						},
+						"Column": {
+							"columnColorArray": "#FF0000,#00CC00,#0000DD,#FFCC00"
+						}
+					}
+				}
+			}
+		},
+		"PagingDataGrid": {
+			"Properties": {
+				"Object": {
+					"componentType": "paging_data_grid",
+					"objectName": "PagingDG_1",
+					"subElement": "DataGrid",
+					"themeType": "material-theme",
+					"DataGrid": {
+						"bgGradients": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"LabelFontColor": "#808080",
+						"AlertColors": "#e97d67,#545469,#546877,#00FF00",
+						"GradientColor": "#ffffff,#ffffff",
+						"pagerBackgroundColor": "#ffffff",
+						"headerFontColor": "#cccccc",
+						"headerSymbolColor": "#ffffff",
+						"headerchromeColor": "#ffffff",
+						"FontColor": "#808080",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						},
+						"DatagridStyles": {
+							"horizontalGridLineColor": "#e6e6e6",
+							"verticalGridLineColor": "#e6e6e6",
+							"selectionColor": "#666666",
+							"rollOverColor": "#666666",
+							"alternateRowsColor": "#ffffff,#e6e6e6"
+						},
+						"Column": {
+							"columnColorArray": "#FF0000,#00CC00,#0000DD,#FFCC00"
+						},
+						"LinkButton": {
+							"Id": "Linkbar",
+							"Description": "ShowAll",
+							"TextRolloverColor": "26214",
+							"TextColor": "#333333",
+							"TextSelectedColor": "204",
+							"TitRolloverColorle": "52479",
+							"SelectedColor": "32425"
+						},
+						"LinkBar": {
+							"LinkBarColor": "#000",
+							"SelectedColor": "13311",
+							"TextRolloverColor": "16777062",
+							"SeperatorColor": "0",
+							"TextColor": "#333333",
+							"TextSelectedColor": "13209",
+							"RolloverColor": "13311"
+						},
+						"Alerts": {}
+					}
+				}
+			}
+		},
+		"DynamicDataGrid": {
+			"Properties": {
+				"Object": {
+					"componentType": "dynamic_data_grid",
+					"objectName": "dynamic_Datagrid_1",
+					"showLocked": "false",
+					"subElement": "DataGrid",
+					"themeType": "material-theme",
+					"DataGrid": {
+						"pagerBackgroundColor": "#ffffff",
+						"bgGradients": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"LabelFontColor": "#808080",
+						"AlertColors": "#e97d67,#545469,#546877,#00FF00",
+						"GradientColor": "#ffffff,#ffffff",
+						"headerFontColor": "#cccccc",
+						"headerSymbolColor": "#ffffff",
+						"headerchromeColor": "#ffffff",
+						"FontColor": "#808080",
+						"Title": {
+							"FontSize": 15,
+							"TitleBarHeight": 45,
+							"FontColor": "#666666"
+						},
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						},
+						"DatagridStyles": {
+							"horizontalGridLineColor": "#e6e6e6",
+							"verticalGridLineColor": "#e6e6e6",
+							"selectionColor": "#666666",
+							"rollOverColor": "#666666",
+							"alternateRowsColor": "#ffffff,#e6e6e6"
+						},
+						"Column": {
+							"columnColorArray": "#FF0000,#00CC00,#0000DD,#FFCC00"
+						},
+						"LinkButton": {
+							"TextRolloverColor": "26214",
+							"TextColor": "0",
+							"TextSelectedColor": "204",
+							"TitRolloverColorle": "52479",
+							"SelectedColor": "32425"
+						},
+						"LinkBar": {
+							"SelectedColor": "13311",
+							"LinkBarColor": "#020f0e",
+							"TextRolloverColor": "16777062",
+							"SeperatorColor": "0",
+							"TextColor": "0",
+							"TextSelectedColor": "13209",
+							"RolloverColor": "13311"
+						},
+						"Alerts": {}
+					}
+				}
+			}
+		},
+		"ScoreCard": {
+			"Properties": {
+				"Object": {
+					"componentType": "tree_grid",
+					"objectType": "scorecard",
+					"objectName": "Scorecard_1",
+					"themeType": "material-theme",
+					"Scorecard": {
+						"bgGradients": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"LabelFontColor": "#808080",
+						"GradientColor": "#ffffff,#ffffff",
+						"gridColor": "#ffffff,#ffffff,#ffffff",
+						"alternaterowscolor": "#ffffff,#ffffff",
+						"selectedrowcolor": "#ffffff",
+						"verticalgridlinecolor": "#ffffff",
+						"horizontalgridlinecolor": "#ffffff",
+						"selectionColor": "#ffffff",
+						"rollovercolor": "#ffffff",
+						"FontColor": "#ffffff",
+						"headerFontColor": "#cccccc",
+						"headerSymbolColor": "#ffffff",
+						"headerchromeColor": "#ffffff",
+						"SubTitle": {
+							"FontSize": 10,
+							"FontColor": "#808080"
+						}
+					}
+				}
+			}
+		},
+		"Bullet": {
+			"Properties": {
+				"Object": {
+					"componentType": "bullet",
+					"objectType": "bullet",
+					"subElement": "Bullet",
+					"themeType": "material-theme",
+					"Bullet": {
+						"ticksColor": "#808080",
+						"showBorder": false,
+						"borderColor": "#1C1D2E",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"faceColor": "#000000",
+						"targetColor": "#ffffff",
+						"rangedColors": "#5a1200,#763f00,#055354,#004e67",
+						"FontColor": "#808080",
+						"markerTextColor": "#cccccc"
+					}
+				}
+			}
+		},
+		"DataSearch": {
+			"Properties": {
+				"Object": {
+					"componentType": "data_search",
+					"objectType": "dataSearch",
+					"subElement": "DataSearch",
+					"themeType": "material-theme",
+					"DataSearch": {
+						"showBorder": false,
+						"borderColor": "#1C1D2E",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"fontColor": "#808080"
+					}
+				}
+			}
+		},
+		"DatePicker": {
+			"Properties": {
+				"Object": {
+					"componentType": "date_picker",
+					"objectType": "date",
+					"subElement": "DateSelector",
+					"themeType": "material-theme",
+					"DateSelector": {
+						"chromeColor": "#e6e6e6",
+						"rollOverColor": "#FCC88B",
+						"selectionColor": "#005D7B",
+						"color": "#666666",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"ExportToPPTButton": {
+			"Properties": {
+				"Object": {
+					"componentType": "export_to_ppt_button",
+					"subElement": "ExportPPTButton",
+					"objectType": "exportppt",
+					"themeType": "material-theme",
+					"ExportPPTButton": {
+						"chromeColor": "#e6e6e6",
+						"color": "#cccccc",
+						"showBorder": false,
+						"borderColor": "#000000",
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"FilterSaver": {
+			"Properties": {
+				"Object": {
+					"componentType": "filter_saver",
+					"subElement": "FilterSaver",
+					"objectType": "filtersaver",
+					"themeType": "material-theme",
+					"FilterSaver": {
+						"chromeColor": "#e6e6e6",
+						"color": "#cccccc",
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"Gauge": {
+			"Properties": {
+				"Object": {
+					"componentType": "gauge",
+					"subElement": "Gauge",
+					"objectType": "gauge",
+					"themeType": "material-theme",
+					"Gauge": {
+						"ticksColor": "#004959",
+						"colors": "#FF8568,#FCC88B,#007172,#005D7B",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"bgGradients": "#ffffff",
+						"faceColor": "#ffffff",
+						"fontColor": "#ffffff",
+						"bezelColor": "#34495e",
+						"centerColor": "#403b52",
+						"pointerColor": "#cccccc",
+						"faceShadowColor": "#ffffff",
+						"titleFontColor": "#000000",
+						"rangeFontColor": "#808080",
+						"targetcolor": "#ffffff"
+					}
+				}
+			}
+		},
+		"GuidedTour": {
+			"Properties": {
+				"Object": {
+					"componentType": "guidedtour",
+					"subElement": "GuidedTour",
+					"objectType": "guidedtour",
+					"themeType": "material-theme",
+					"GuidedTour": {
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"color": "#666666",
+						"backgroundColor": "#ffffff"
+					}
+				}
+			}
+		},
+		"HSlider": {
+			"Properties": {
+				"Object": {
+					"componentType": "h_slider",
+					"objectType": "hslider",
+					"subElement": "HSlider",
+					"themeType": "material-theme",
+					"HSlider": {
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"handlecolor": "#FCCAAB",
+						"chromeColor": "#005D7B",
+						"labelColor": "#005d7b",
+						"backgroundColor": "#e6e6e6"
+					}
+				}
+			}
+		},
+		"ImageComponent": {
+			"Properties": {
+				"Object": {
+					"componentType": "image_component",
+					"subElement": "Image",
+					"objectType": "image",
+					"themeType": "material-theme",
+					"Image": {
+						"rollOverGlowColor": "#08AEA8",
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#cccccc"
+					}
+				}
+			}
+		},
+		"InfoButton": {
+			"Properties": {
+				"Object": {
+					"componentType": "info_button",
+					"objectType": "info",
+					"subElement": "InfoButton",
+					"themeType": "material-theme",
+					"InfoButton": {
+						"darkColor": "#e6e6e6",
+						"lightColor": "#4f4f67",
+						"windowChromeColor": "#e6e6e6",
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"titleFontColor": "#cccccc",
+						"color": "#000000",
+						"textcolor": "#ffffff"
+					}
+				}
+			}
+		},
+		"Label": {
+			"Properties": {
+				"Object": {
+					"componentType": "label",
+					"subElement": "Label",
+					"objectType": "label",
+					"themeType": "material-theme",
+					"Label": {
+						"color": "#ffffff",
+						"backgroundColor": "#e6e6e6",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"Legend": {
+			"Properties": {
+				"Object": {
+					"componentType": "legend",
+					"subElement": "Legend",
+					"objectType": "legend",
+					"themeType": "material-theme",
+					"Legend": {
+						"bgGradients": "#ffffff",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"FontColor": "#808080",
+						"legendColors": "#FF8568,#FCC88B,#007172"
+					}
+				}
+			}
+		},
+		"NumericStepper": {
+			"Properties": {
+				"Object": {
+					"componentType": "numeric_stepper",
+					"objectType": "numericstepper",
+					"subElement": "NumericStepper",
+					"themeType": "material-theme",
+					"NumericStepper": {
+						"fontColor": "9388608",
+						"rollOverColor": "11259375",
+						"selectionColor": "56831",
+						"chromeColor": "#006684",
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#cccccc"
+					}
+				}
+			}
+		},
+		"SemiGauge": {
+			"Properties": {
+				"Object": {
+					"componentType": "semi_gauge",
+					"subElement": "SemiGauge",
+					"objectType": "semigauge",
+					"themeType": "material-theme",
+					"SemiGauge": {
+						"colors": "#FF8568,#FCC88B,#007172,#005D7B",
+						"faceColor": "#ffffff",
+						"faceShadowColor": "#ffffff",
+						"ticksColor": "#004959",
+						"bezelColor": "#34495e",
+						"centerColor": "#403b52",
+						"pointerColor": "#cccccc",
+						"FontColor": "#808080",
+						"markerfontColor": "#808080",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#000000",
+						"bgGradients": "#ffffff",
+						"targetcolor": "#ffffff"
+					}
+				}
+			}
+		},
+		"SVGImage": {
+			"Properties": {
+				"Object": {
+					"componentType": "svg_image",
+					"subElement": "SVGImage",
+					"objectType": "SVGImage",
+					"themeType": "material-theme",
+					"SVGImage": {
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#cccccc"
+					}
+				}
+			}
+		},
+		"SVGShape": {
+			"Properties": {
+				"Object": {
+					"componentType": "svg_shape",
+					"subElement": "SVGShape",
+					"objectType": "SVGShape",
+					"themeType": "material-theme",
+					"SVGShape": {
+						"color": "#8D8E96",
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"TextBox": {
+			"Properties": {
+				"Object": {
+					"componentType": "text_box",
+					"objectType": "textbox",
+					"subElement": "NividhTextBox",
+					"themeType": "material-theme",
+					"NividhTextBox": {
+						"color": "#000000",
+						"contentBackgroundColor": "#e6e6e6",
+						"showBorder": false,
+						"borderColor": "#666666",
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"Trend": {
+			"Properties": {
+				"Object": {
+					"componentType": "trend",
+					"subElement": "Trend",
+					"objectType": "trend",
+					"themeType": "material-theme",
+					"Trend": {
+						"positiveTrendColor": "#1c1d2f",
+						"negativeTrendColor": "#1c1d2f",
+						"zeroTrendColor": "#1c1d2f",
+						"zeroSymbolColor": "#FCC88B",
+						"positiveSymbolColor": "#007172",
+						"negativeSymbolColor": "#FF8568",
+						"showBorder": false,
+						"borderColor": "#cccccc",
+						"borderRadius": 0,
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"UrlButton": {
+			"Properties": {
+				"Object": {
+					"componentType": "url_button",
+					"objectType": "URLButton",
+					"subElement": "URLButton",
+					"themeType": "material-theme",
+					"URLButton": {
+						"chromeColor": "#e6e6e6",
+						"color": "#cccccc",
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"VSlider": {
+			"Properties": {
+				"Object": {
+					"componentType": "v_slider",
+					"objectType": "vslider",
+					"subElement": "VSlider",
+					"themeType": "material-theme",
+					"VSlider": {
+						"labelColor": "#005d7b",
+						"ticksColor": "16777215",
+						"chromeColor": "#005D7B",
+						"backgroundColor": "#e6e6e6",
+						"handlecolor": "#fcc88b",
+						"showBorder": false,
+						"borderColor": "#BDC3C7",
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		},
+		"TabComponent": {
+			"Properties": {
+				"Object": {
+					"componentType": "tab_component",
+					"themeType": "dark-theme",
+					"objectType": "TabComponent",
+					"subElement": "TabComponent",
+					"TabComponent": {
+						"chromeColor": "#00A0F0",
+						"fontColor": "#fffff",
+						"selectionColor": "#317BDB",
+						"borderColor": "#00A0F0",
+						"tabColors": "#039DEF,#00A0F0,#00BCD4"
+					}
+				}
+			}
+		},
+		"InputBox": {
+			"Properties": {
+				"Object": {
+					"componentType": "input_box",
+					"themeType": "dark-theme",
+					"objectType": "inputbox",
+					"subElement": "InputBox",
+					"InputBox": {
+						"color": "#494950",
+						"contentBackgroundColor": "#EAEAEA",
+						"borderColor": "#EAEAEA",
+						"shadowColor": "#cccccc"
+					}
+				}
+			}
+		},
+		"InputButton": {
+			"Properties": {
+				"Object": {
+					"componentType": "input_button",
+					"themeType": "dark-theme",
+					"objectType": "InputButton",
+					"subElement": "InputButton",
+					"InputButton": {
+						"chromeColor": "#EFF0F0",
+						"fontColor": "#000000",
+						"hoverColor": "#cccccc",
+						"borderColor": "#cccccc",
+						"shadowColor": "#cccccc"
+					}
+				}
+			}
+		},
+		"FilterChips": {
+			"Properties": {
+				"Object": {
+					"componentType": "filterchips",
+					"themeType": "dark-theme",
+					"subElement": "FilterChips",
+					"objectType": "filterchips",
+					"FilterChips": {
+						"bgAlpha": "1",
+						"bgGradients": "#ffffff",
+						"bgGradientRotation": "90",
+						"borderColor": "#cccccc",
+						"shadowColor": "#cccccc",
+						"fontFamily": "Roboto",
+						"fontSize": "16",
+						"fontColor": "#000000",
+						"fontStyle": "normal",
+						"fontWeight": "normal",
+						"legendColors": "#f89406,#86dff9,#006488",
+						"chipsBgColor": "#efefef",
+						"btnBgColor": "#ffffff",
+						"closeBtnBgColor": "#000000",
+						"chipsFontColor": "#000000"
+					}
+				}
+			}
+		},
+		"DecompositionChart": {
+			"Properties": {
+				"Object": {
+					"componentType": "decomposition_chart",
+					"themeType": "dark-theme",
+					"objectType": "chart",
+					"subElement": "Chart",
+					"Chart": {
+						"bgGradients": "#ffffff",
+						"tooltipBackgroundColor": "#FFFFFF",
+						"tooltipBorderColor": "#E0DFDF",
+						"tooltipFontSize": "12",
+						"GradientColor": "#F5F5F5,#F5F5F5",
+						"borderColor": "#cccccc",
+						"shadowColor": "#cccccc",
+						"nodeColor": "#f5f5f5",
+						"fillColor": "#9E9EA7",
+						"strokeColor": "#000000",
+						"labelFontColor": "#000000",
+						"labelFontSize": "11",
+						"labelValueFontColor":"#000000",
+						"Title": {
+							"FontSize": "15",
+							"FontColor": "#000000"
+						},
+						"SubTitle": {
+							"FontColor": "#000000"
+						},
+						"ConditionalColors": {
+							"ConditionalColor": []
+						},
+						"CategoryColors": {
+							"categoryDefaultColor": "",
+							"categoryDefaultColorSet": "",
+							"CategoryColor": []
+						}
+					}
+				}
+			}
+		},
+		"Rectangle": {
+			"Properties": {
+				"Object": {
+					"componentType": "rectangle",
+					"subElement": "Rectangle",
+					"objectType": "rectangle",
+					"themeType": "material-theme",
+					"Rectangle": {
+						"gradients": "#e6e6e6,#e6e6e6",
+						"showBorder": false,
+						"borderColor": "#666666",
+						"showShadow": true,
+						"shadowColor": "#808080"
+					}
+				}
+			}
+		}
+	}
+}

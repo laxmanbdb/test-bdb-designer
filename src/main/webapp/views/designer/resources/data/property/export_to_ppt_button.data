@@ -1,0 +1,420 @@
+{
+	"Info": [{
+		"class": "ExportToPPTButton"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "25",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "100",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Label : ",
+		"type": "text",
+		"value": "",
+		"attributeName": "label",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Export Window : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportWindow",
+		"propertyName": "ExportPPTButton"
+	},{
+		"label": "Show Data Services : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showDataServices",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Mode : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "bvzx",
+			"value": "BVZX"
+		}, {
+			"key": "excel",
+			"value": "Excel"
+		}, {
+			"key": "pdf",
+			"value": "PDF"
+		}, {
+			"key": "ppt",
+			"value": "PPT"
+		}, {
+			"key": "screenshot",
+			"value": "ScreenShot"
+		}],
+		"attributeName": "mode",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Heading : ",
+		"type": "text",
+		"value": "Sub Heading",
+		"attributeName": "pptHeading",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Sub Heading : ",
+		"type": "text",
+		"value": "Sub Heading",
+		"attributeName": "pptSubHeading",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Export File Name : ",
+		"type": "text",
+		"value": "File Name",
+		"attributeName": "fileName",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "PDF Format : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "a3",
+			"value": "a3"
+		}, {
+			"key": "a4",
+			"value": "a4"
+		}, {
+			"key": "a5",
+			"value": "a5"
+		}, {
+			"key": "letter",
+			"value": "letter"
+		}, {
+			"key": "legal",
+			"value": "legal"
+		}, {
+			"key": "default",
+			"value": "default"
+		}],
+		"attributeName": "pdfformat",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Tool Tip : ",
+		"type": "text",
+		"value": "",
+		"attributeName": "toolTip",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "ExportPPTButton"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "ExportPPTButton"
+	}],
+	"PDF Settings": [{
+		"label": "PDF Type : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "tabular",
+			"value": "Tabular"
+		}, {
+			"key": "screenshot",
+			"value": "ScreenShot"
+		}],
+		"attributeName": "pdfType",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Table Type : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "striped",
+			"value": "Striped"
+		}, {
+			"key": "grid",
+			"value": "Grid"
+		},{
+			"key": "plain",
+			"value": "Plain"
+		}],
+		"attributeName": "pdfGridType",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Table Orientation : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "p",
+			"value": "Portrait"
+		}, {
+			"key": "l",
+			"value": "Landscape"
+		}],
+		"attributeName": "pdfTabularOrientation",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Filter Details : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "pdfFilterDetails",
+		"propertyName": "ExportPPTButton"
+	},{
+		"label": "PDF Pages : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "single",
+			"value": "Single"
+		}, {
+			"key": "multiple",
+			"value": "Multiple"
+		}],
+		"attributeName": "pdfPages",
+		"propertyName": "ExportPPTButton"
+	}],
+	"Export Options":[{
+		"label": "Excel : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showExcel",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "PPT : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showPpt",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "PDF : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showPdf",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "PNG : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showPng",
+		"propertyName": "ExportPPTButton"
+	},  {
+		"label": "Print : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showPrint",
+		"propertyName": "ExportPPTButton"
+	}],
+	"Style": [{
+		"label": "Background Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "chromeColor",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "10",
+		"attributeName": "borderRadius",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "12",
+		"attributeName": "color",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "10",
+		"value": "12",
+		"attributeName": "fontSize",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "fontStyle",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "fontWeight",
+		"propertyName": "ExportPPTButton"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "fontFamily",
+		"propertyName": "ExportPPTButton"
+	}],
+	"PDF Style" : [{
+		"label": "Heading Color: ",
+		"type": "color",
+		"value": "#006684",
+		"attributeName": "pdfHeadingColor",
+		"propertyName": "ExportPPTButton"
+	},{
+		"label": "Sub Heading Color: ",
+		"type": "color",
+		"value": "#f5f5f5 ",
+		"attributeName": "pdfSubHeadingColor",
+		"propertyName": "ExportPPTButton"
+	},{
+		"label": "Heading Opacity: ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "pdfHeadingOpacity",
+		"propertyName": "ExportPPTButton"
+	},{
+		"label": "Sub Heading Opacity: ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "pdfSubHeadingOpacity",
+		"propertyName": "ExportPPTButton"
+	},{
+		"label": "Heading Font Color: ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "pdfHFontColor",
+		"propertyName": "ExportPPTButton"
+	},{
+		"label": "Sub Heading Font Color: ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "pdfSHFontColor",
+		"propertyName": "ExportPPTButton"
+	}]
+}

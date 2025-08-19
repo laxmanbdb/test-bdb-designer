@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>BDB HTML Editor </title>
+		<link rel="icon" href="../images/designer.ico">
+	</head>
+	<body>
+		<style>
+			.editor{height:80%; width:80%; margin:auto;}
+		</style>
+		<div class="editor">
+			<form><textarea id="editorTextArea"></textarea></form>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//cdn.ckeditor.com/4.5.7/full/ckeditor.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ckeditor/4.2/adapters/jquery.js"></script>	
+		<script>
+			$('#editorTextArea').ckeditor({height:"80%", width:"100%"});
+			CKEDITOR.on('instanceReady', function(config){
+				var hidePlugins = ["cke_button__save", "cke_button__language", "cke_button__about", "cke_button__scayt", "cke_button__anchor"];
+				for(var i=0; i<$(".cke_button").length; i++){
+					for(var j=0; j<hidePlugins.length; j++){
+						if($($(".cke_button")[i]).hasClass(hidePlugins[j])){
+							$($(".cke_button")[i]).css("display","none");
+						}
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_254" data-name="Group 254" transform="translate(-1078 -147)">
+    <g id="Rectangle_172" data-name="Rectangle 172" transform="translate(1078 147)" fill="#fff" stroke="#ececec" stroke-width="1">
+      <rect width="50" height="50" rx="6" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="49" rx="5.5" fill="none"/>
+    </g>
+    <g id="Layer_2_3_" transform="translate(1088.299 157.411)">
+      <path id="Path_89" data-name="Path 89" d="M24.5,21.5H50.052a1.594,1.594,0,0,1,1.58,1.6v4.144H22.9V23.1A1.61,1.61,0,0,1,24.5,21.5Z" transform="translate(-22.9 -21.5)" fill="#0d78bf"/>
+      <path id="Path_90" data-name="Path 90" d="M22.9,64V85.28H51.632V64ZM49.736,83.551H24.777V65.84H49.736Z" transform="translate(-22.9 -56.101)" fill="#0d78bf"/>
+    </g>
+    <g id="Layer_3_6_" transform="translate(1108.185 179.787)">
+      <rect id="Rectangle_116" data-name="Rectangle 116" width="1.022" height="0.632" fill="#3f51b5"/>
+      <rect id="Rectangle_117" data-name="Rectangle 117" width="1.022" height="0.632" transform="translate(1.468)" fill="#3f51b5"/>
+      <rect id="Rectangle_118" data-name="Rectangle 118" width="1.022" height="0.632" transform="translate(2.862)" fill="#3f51b5"/>
+      <rect id="Rectangle_119" data-name="Rectangle 119" width="1.022" height="0.632" transform="translate(0 0.966)" fill="#3f51b5"/>
+      <rect id="Rectangle_120" data-name="Rectangle 120" width="1.022" height="0.632" transform="translate(1.468 0.966)" fill="#3f51b5"/>
+      <rect id="Rectangle_121" data-name="Rectangle 121" width="1.022" height="0.632" transform="translate(2.862 0.966)" fill="#3f51b5"/>
+      <rect id="Rectangle_122" data-name="Rectangle 122" width="1.022" height="0.632" transform="translate(0 1.877)" fill="#3f51b5"/>
+      <rect id="Rectangle_123" data-name="Rectangle 123" width="1.115" height="0.632" transform="translate(1.431 1.877)" fill="#3f51b5"/>
+      <rect id="Rectangle_124" data-name="Rectangle 124" width="1.115" height="0.632" transform="translate(2.825 1.877)" fill="#3f51b5"/>
+    </g>
+    <g id="Layer_19" transform="translate(1091.719 168.711)">
+      <rect id="Rectangle_125" data-name="Rectangle 125" width="5.78" height="3.717" transform="translate(0 0)" fill="#e17d00"/>
+      <rect id="Rectangle_126" data-name="Rectangle 126" width="5.78" height="3.717" transform="translate(0 5.334)" fill="#e17d00"/>
+      <rect id="Rectangle_127" data-name="Rectangle 127" width="5.78" height="3.717" transform="translate(0 10.723)" fill="#e17d00"/>
+    </g>
+    <g id="Layer_19_copy" transform="translate(1099.636 168.711)">
+      <rect id="Rectangle_128" data-name="Rectangle 128" width="5.78" height="3.717" transform="translate(0 0)" fill="#e17d00"/>
+      <rect id="Rectangle_129" data-name="Rectangle 129" width="5.78" height="3.717" transform="translate(0 5.334)" fill="#e17d00"/>
+      <rect id="Rectangle_130" data-name="Rectangle 130" width="5.706" height="3.717" transform="translate(0.019 10.723)" fill="#e17d00"/>
+    </g>
+    <rect id="Rectangle_214" data-name="Rectangle 214" width="5.891" height="3.717" transform="translate(1107.516 168.711)" fill="#e17d00"/>
+    <rect id="Rectangle_215" data-name="Rectangle 215" width="5.78" height="3.717" transform="translate(1107.609 174.044)" fill="#431515"/>
+    <rect id="Rectangle_216" data-name="Rectangle 216" width="5.706" height="3.717" transform="translate(1107.701 179.434)" fill="#431515"/>
+    <rect id="Rectangle_213" data-name="Rectangle 213" width="14.925" height="9.944" transform="translate(1098.482 173.355)" fill="#fff"/>
+    <g id="Layer_24" transform="translate(1100.529 174.511)">
+      <g id="Layer_2_4_" transform="translate(0 0)">
+        <path id="Path_91" data-name="Path 91" d="M95.1,114.769h.354l-.523,2.415H83.9v-.231l4.138-3.508L83.9,109.677V109.4H94.731l.169,1.969h-.292a1.471,1.471,0,0,0-1.677-1.462H86.161l3.354,3.031-3.877,3.185h7.123S94.731,116.185,95.1,114.769Z" transform="translate(-83.9 -109.4)" fill="#00a0f0" stroke="#00a0f0" stroke-width="0.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

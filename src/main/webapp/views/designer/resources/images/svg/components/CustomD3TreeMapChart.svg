@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #ffaf6d;
+      }
+
+      .cls-4 {
+        fill: #fad873;
+      }
+
+      .cls-5 {
+        fill: #7c4dff;
+      }
+
+      .cls-6 {
+        fill: #fbd8f8;
+      }
+
+      .cls-7 {
+        fill: #fef8b7;
+      }
+
+      .cls-2 {
+        stroke: #d3d3d3;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Group_3073">
+        <g id="Rectangle_206">
+          <rect class="cls-1" width="50" height="50" rx="6" ry="6"/>
+          <rect class="cls-2" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+        </g>
+        <rect id="Rectangle_14442" class="cls-5" x="5.8" y="5.8" width="11.3" height="14.3"/>
+        <rect id="Rectangle_14443" class="cls-5" x="5.8" y="26.2" width="11.3" height="8.8"/>
+        <rect id="Rectangle_14444" class="cls-5" x="17.4" y="5.8" width="11.3" height="14.3"/>
+        <rect id="Rectangle_14445" class="cls-5" x="17.3" y="26.2" width="11.3" height="8.8"/>
+        <rect id="Rectangle_14446" class="cls-5" x="5.8" y="20.4" width="22.8" height="5.5"/>
+        <rect id="Rectangle_14447" class="cls-3" x="28.9" y="5.8" width="15.2" height="5.4"/>
+        <rect id="Rectangle_14448" class="cls-3" x="28.9" y="11.4" width="15.2" height="4.4"/>
+        <rect id="Rectangle_14449" class="cls-3" x="28.9" y="16.2" width="7.3" height="5.1"/>
+        <rect id="Rectangle_14450" class="cls-3" x="36.5" y="16.2" width="7.7" height="5.1"/>
+        <rect id="Rectangle_14451" class="cls-7" x="28.9" y="21.5" width="5.6" height="13.3"/>
+        <rect id="Rectangle_14452" class="cls-7" x="34.8" y="21.5" width="9.3" height="6"/>
+        <rect id="Rectangle_14453" class="cls-7" x="34.8" y="27.7" width="9.3" height="3.5"/>
+        <rect id="Rectangle_14454" class="cls-7" x="34.8" y="31.5" width="4.6" height="3.3"/>
+        <rect id="Rectangle_14455" class="cls-7" x="39.7" y="31.5" width="4.5" height="3.3"/>
+        <rect id="Rectangle_14456" class="cls-6" x="5.8" y="35.3" width="14.5" height="8.9"/>
+        <rect id="Rectangle_14457" class="cls-6" x="20.5" y="35.3" width="8.1" height="5"/>
+        <rect id="Rectangle_14458" class="cls-6" x="20.5" y="40.5" width="8.1" height="3.7"/>
+        <rect id="Rectangle_14459" class="cls-4" x="28.9" y="35.1" width="15.2" height="4.3"/>
+        <rect id="Rectangle_14460" class="cls-4" x="28.9" y="39.7" width="6.4" height="4.4"/>
+        <rect id="Rectangle_14461" class="cls-4" x="35.7" y="39.7" width="8.5" height="4.4"/>
+      </g>
+    </g>
+  </g>
+</svg>

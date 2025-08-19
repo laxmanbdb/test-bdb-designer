@@ -1,0 +1,35 @@
+<div id="searchFnTool" class="bvz-select-wrapper" 
+	ng-click="toggleFnOptions( $event )">
+	<div class="bvz-display">
+		<label class="bvz-display-placeholder" 
+			ng-show="true">
+			Select function
+		</label>
+		<label class="bvz-display can-select" 
+			ng-show="selectedFn != undefined">
+			{{ selectedInternalFunction.internalFunction }}
+		</label>
+	</div>
+	<span class="bvz-dd-btn">
+		<i class="glyphicon glyphicon-triangle-bottom"></i>
+	</span>
+	<div class="bvz-select-options-container" 
+		ng-show="displayFnOptions" >
+		<div class="bvz-search-wrapper">
+			<input ng-model="fnQuery" 
+				class="bvz-search propValue" 
+				type="text" 
+				placeholder="Search Functions" />
+		</div>
+		<div class="bvz-no-match-found" 
+			ng-show="inbFns.length === 0">
+			No item found
+		</div>
+		<ul class="bvz-select-options-wrapper">
+			<li ng-click="updateSelectedInternalFunction( $event, fn )"
+				ng-repeat="fn in inbFns = ( inbuiltFunctions | filter: fnQuery )">
+				{{ fn.label }}
+			</li>
+		</ul>
+	</div>
+</div>

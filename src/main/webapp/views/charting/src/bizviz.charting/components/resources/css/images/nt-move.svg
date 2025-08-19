@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_2905" data-name="Group 2905" transform="translate(-883.538 -1069.225)">
+    <g id="Group_2898" data-name="Group 2898">
+      <rect id="Rectangle_7101" data-name="Rectangle 7101" width="24" height="24" transform="translate(883.538 1069.225)" fill="#f3c4c4" opacity="0"/>
+      <g id="Rectangle_6913" data-name="Rectangle 6913" transform="translate(886.038 1072.725)" fill="none" stroke="#525252" >
+        <rect width="15" height="13" rx="3" stroke="none"/>
+        <rect x="0.25" y="0.25" width="14.5" height="12.5" rx="2.75" fill="none"/>
+      </g>
+      <line id="Line_869" data-name="Line 869" x2="17.792" transform="translate(884.538 1085.725)" fill="none" stroke="#525252" />
+      <path id="Icon_awesome-share" data-name="Icon awesome-share" d="M8.087,4.784,5.261,2.344a.386.386,0,0,0-.637.292V3.921C2.045,3.95,0,4.467,0,6.912A3.282,3.282,0,0,0,1.338,9.386a.286.286,0,0,0,.451-.3C1.061,6.759,2.134,6.141,4.624,6.1V7.516a.386.386,0,0,0,.637.292L8.087,5.368A.385.385,0,0,0,8.087,4.784Z" transform="translate(889.324 1074.073)" fill="none" stroke="#525252" />
+    </g>
+  </g>
+</svg>

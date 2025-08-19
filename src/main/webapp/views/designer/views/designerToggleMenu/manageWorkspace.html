@@ -1,0 +1,1603 @@
+<div class="row ht100per workspacelist" style="height: calc(100% - 10px);">
+	<!-- Workspace Panel -->
+	<div class="ht100per col-sm-6 col-md-5 col-lg-4 no-pad">
+		<!-- Workspace Header -->
+		<div class="row header-bg nt-header-manage-page" style="cursor: default; padding: 1px 15px;">
+			<div class="col-sm-6 col-md-6 col-lg-6 padding-lr0">
+				<div class="mw-wsdb-header">
+					<span class="pull-left"> {{ modal.workSpaceHeader | translate}}</span>
+					<span ng-show="modal.wsObj.wsList.length > 0" class="ws-db-count">&nbsp;&nbsp;{{ "(" + modal.wsObj.wsList.length + ")" }} </span>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-5 col-lg-6 padding-lr0">
+				<div class="mw-dashboard-search">
+				<ul class="pull-right workspace-lists no-mar no-pad" >
+					<md-button class="md-secondary md-icon-button" ng-click="openCreateWorkspaceModal()" aria-label="New Workspace">
+		            	<md-icon class="nt-plus-icon cursor-hand" mat-tooltip="New Workspace"></md-icon>
+		          	</md-button>
+		          	<md-button class="md-secondary md-icon-button" ng-click="refreshWorkSpaceList();"  aria-label="Reload Workspaces">
+		            	<md-icon class="nt-refresh-icon cursor-hand" mat-tooltip="Reload Workspaces"></md-icon>
+		          	</md-button>
+		          	<md-button class="md-secondary md-icon-button" ng-click="toggleSearchWs( $event );"   aria-label="Search in Workspaces">
+	            		<md-icon class="nt-search-icon cursor-hand" mat-tooltip="Search in Workspaces"></md-icon>
+	          		</md-button>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Workspace list -->
+		<div class="navbar ht100per">
+		<!-- Workspace search box -->
+			<div ng-show="modal.sWsVisible" class="search-ws-wrapper" 
+				ng-click="$event.stopPropagation();">
+			  	<input type="text" name="worspace_search" class="propValue" placeholder="Search" 
+			  		style="    width: 100%;box-shadow: none !important;" 
+			  		ng-model="modal.wsSearchKey" >
+			  	<a href="javascript: void( 0 )" 
+			  		style="position: absolute; top: 9px; right: 5px;" 
+			  		ng-show="modal.wsSearchKey != undefined && modal.wsSearchKey != ''" 
+			  		ng-click="modal.wsSearchKey = ''" >
+			    	<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+			    </a>
+			</div>
+				
+			<div class="no-workspace col-sm-12 col-md-12 col-lg-12" ng-show="modal.zeroWorkspcae">
+				<span>{{modal.workspaceSpaceMsg | translate}}</span>
+			</div>
+			<ul class="list-group d-list-group ht100per workspace-lists nt-manage-scrollbar">
+			
+				<md-content>
+			      <md-list flex>
+			        <md-list-item
+			        	 ng-hide="modal.zeroWorkspcae" 
+			        	 ng-click="listContainingDashboards(); setWorkspaceSelected( $event, 'ALL_DASHBOARD' )" 
+			        	 class="nt-background-all nt-bg-alldashboard" ng-class="{'nt-main-menu-higlighter':uiActive.allDashboard}">
+			        	 
+			          <div class="md-list-item-text md-header" layout="column">
+			            <h5 class="workspaceHeader">All Dashboards</h5>
+			          </div>
+			        </md-list-item>
+			        <!--<md-divider></md-divider>-->
+			        
+			        <md-list-item 
+				        ng-class-odd="'listOfRowEven'" ng-class-even="'nt-background-all'" ng-class="{'nt-main-menu-higlighter':workspace.isActive}"
+				   		ng-repeat="workspace in modal.wsObj.wsList | advSearch :modal.wsSearchKey :'dashboardName' track by workspace.dashboardId"
+				   		ng-init="checkLast($last)" 
+				   		ng-click="listContainingDashboards( workspace.dashboardId ); setWorkspaceSelected( $event, workspace )">
+				   	
+			          <div class="md-list-item-text" layout="column">
+			            <h5 class="worspaceContent">{{ workspace.dashboardName }} </h5> 
+			          </div>
+			          <md-button class="md-secondary md-icon-button"   
+			           	 aria-label="call"
+			           	  headerName="Shared Workspace"
+			           	  ng-hide="!workspace.isShared">
+			            <md-icon class="nt-shared-icon" ></md-icon>
+			          </md-button>
+			           <md-button class="md-secondary md-icon-button"   
+			           	 aria-label="call"
+			           	  headerName="Rename"
+			           	 ng-click="updateDashboard($event, workspace, 'renameWorkspace')" ng-hide="workspace.isShared">
+			            <md-icon class="nt-edit-icon" mat-tooltip="Rename"></md-icon>
+			          </md-button>
+			          <md-button class="md-secondary md-icon-button"   
+			          	aria-label="call"
+			          	 headerName="Share"
+			          	ng-click="openShareWokspaceDialog($event, workspace)" ng-hide="workspace.isShared">
+			            <md-icon class="nt-share-icon" mat-tooltip="Share Workspace"></md-icon>
+			          </md-button>
+			          <md-button class="md-secondary md-icon-button"   
+			          	aria-label="call"
+			          	 headerName="Remove"
+			          	ng-click="updateDashboard($event, workspace, 'deleteWorkspace')" ng-hide="workspace.isShared">
+			            <md-icon class="nt-trash-icon" mat-tooltip="Remove"></md-icon>
+			          </md-button>
+			          <md-divider ></md-divider>
+			        </md-list-item>
+			        <!--<md-divider ></md-divider>-->
+			        
+			        <!--  trash  -->
+			        	<md-list-item 
+				        ng-hide="zeroTrash"
+				        ng-click="listContainingDashboards('trash'); setWorkspaceSelected( $event, 'TRASH' )" 
+				        ng-class="{'nt-main-menu-higlighter':uiActive.trash}" >
+				        
+				   		<!-- <div class="highlighter" ng-show="uiActive.trash" ng-style="getHighlighterStyle()"></div>-->
+			          <div class="md-list-item-text" layout="column">
+			            <h5 class="worspaceContent">Trash</h5>
+			          </div>
+			          <md-button class="md-secondary md-icon-button"   
+			          	aria-label="call"
+			          	headerName="Empty The Trash"
+						ng-click="showModalPopupRemoveAllTrashItems($event, null, 'CleanTrash')">
+						<md-icon class="nt-delete-cancel-icon" mat-tooltip="Empty the Trash"></md-icon>
+			          </md-button>
+			          <md-divider ></md-divider>
+			        </md-list-item>
+			        <!--  trash -->
+			        </md-list>
+        		</md-content>
+			
+			</ul>
+		</div>
+	</div>
+
+	<!-- Dashboard Panel -->
+	<div class="col-sm-6 col-md-7 col-lg-8 ht100per no-pad">
+		<!-- Header dashboards list -->
+		<div class="row header-bg nt-header-manage-page"  style="cursor: default; padding:1px 0px;">
+			<div class="col-sm-6 col-md-6 col-lg-6 padding-lr0">
+				<div class="mw-wsdb-header">
+					<span>{{ modal.dashboardSpaceHeader | translate}}</span>
+					<span ng-show="filtered.length > 0" class="ws-db-count">&nbsp;&nbsp;{{ "(" + filtered.length + ")" }} </span>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6 padding-lr0">
+				<div class="mw-dashboard-search dash_newsearch">
+					<form role="form" ng-show="searchVisible" class="pull-left" 
+						style="    width: calc(100% - 30px);position: absolute;">
+					    <input id="search-db" type="search" class="d-search"
+					    	required autofocus 
+					    	placeholder="Search" ng-model="workSpaceAndDashboardSearch" />
+					    <a href="javascript: void( 0 )"
+					    	style="position: absolute;top: 8px;right: -17px; background: var(--small-container); z-index: 99;"
+					    	ng-click="resetDashboardSearch()" 
+					    	ng-show="workSpaceAndDashboardSearch != undefined && workSpaceAndDashboardSearch != ''" >
+					    	<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+					    </a>
+					</form>
+					<ul class="nav navbar-nav pull-right" 
+						style="width: 50px;">
+						<li class="ws-edit-opt">
+							<a href="#" class="" ng-click="toggleSearchBox()" 
+								style="padding: 8px 0px 0px 10px;" >
+								<md-icon class="nt-search-icon cursor-hand" mat-tooltip="Search in Dashboards"></md-icon>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- Dashboards list -->
+		<div class="navbar ht100per">
+			<div class="no-dashboard col-sm-12 col-md-12 col-lg-12" ng-show="zeroDashboard">
+				<span>{{ modal.dashboardSpaceMsg }}</span>
+			</div>
+			<ul class="list-group d-list-group dlist-new">
+			    <li class="list-group-item d-list-item d-list"  
+			    	ng-repeat="db in filtered = ( modal.dbInsideWs | advSearch :workSpaceAndDashboardSearch :'dashboardName' ) track by db.dashboardId" 
+					ng-dblclick="(db.status == 1) && (OpenDasboard( db, $event ))" 
+			    	ng-click="setDashboardSelected( $event, db )"
+			    	ng-class-odd="'listOfRowEven'" ng-class-even="'nt-background-all'" ng-class="{'nt-main-menu-higlighter':db.isActive}">
+
+			    	<div class="db-name-list cursor-hand col-sm-3 col-md-4 col-lg-5" title="{{ db.isOpen ? 'Currently opened in designer': '' }}">
+				    	<span class="worspaceContent">{{db.dashboardName}} </span> <!--<img src="./resources/images/share-ico.png" style="background-position: center center;height: 24px;" ng-show="db.isShared" class="material-icons" />-->
+				    	<span class="open-indi" ng-show="db.isOpen">*</span>
+			    	</div>
+			    	<ul class="pull-right d-list-options col-sm-9 col-md-8 col-lg-7 list-inline text-right" >
+			    					    		
+			    		<li class="ws-edit-opt dbControlIcon" ng-hide="db.isOpen || db.status==0 || !db.isShared" >
+							<a href="#" class="d-list-option" headerName="Shared Dashboard" >
+								 <md-icon class="nt-shared-icon cursor-hand"></md-icon>
+							</a>
+						</li>
+			    		
+			    		<li class="ws-edit-opt dbControlIcon" ng-hide="db.isOpen || db.status==0 || db.isShared" >
+							<a href="#" class="d-list-option" headerName="Push To VCS" 
+								 ng-click="vcsPush($event, db, 'vcsPush')" >
+								 <md-icon class="nt-up-arrow-icon cursor-hand" mat-tooltip="Push To VCS"></md-icon>
+							</a>
+						</li>
+						
+						<li class="ws-edit-opt dbControlIcon" ng-hide="db.isOpen || db.status==0 || db.isShared">
+							<a href="#" class="d-list-option" headerName="Pull From VCS" 
+								 ng-click="openVcsImportDialog($event, db )" >
+								<md-icon class="nt-down-arrow-icon cursor-hand" mat-tooltip="Pull From VCS"></md-icon>
+							</a>
+						</li>
+						<li class="ws-edit-opt dbControlIcon" ng-hide="db.isOpen || db.status==0 || db.isShared">
+							<a href="#" class="d-list-option" 
+								ng-click="openShareDialog( db )" >
+								<md-icon class="nt-share-icon cursor-hand" mat-tooltip="Share Dashboard"></md-icon>
+							</a>
+						</li>
+<!-- -			    		<li class="ws-edit-opt dbControlIcon" ng-hide="db.isOpen || db.status==0 || db.isShared">
+							<a href="#" class="d-list-option" headerName="GIT Export" 
+								 ng-click="gitExport($event, db, 'gitExport')" >
+								<i class="material-icons cursor-hand" mat-tooltip = "GIT Export">arrow_upward</i>
+ 								<md-tooltip md-direction="top">GIT Export</md-tooltip> 
+							</a>
+						</li>-->
+						<li class="ws-edit-opt dbControlIcon" ng-hide="db.isOpen || db.status==0 || db.isShared">
+							<a href="#" class="d-list-option" 
+								ng-click="openPublishDialog( db )" >
+								<md-icon class="nt-publish-icon cursor-hand" mat-tooltip="Publish to Portal"></md-icon>
+							</a>
+						</li>
+						<li class="ws-edit-opt dbControlIcon" ng-hide="db.isOpen || db.status==0" >
+							<a href="#" class="d-list-option" 
+								ng-click="OpenDasboard( db, $event )" >
+								<md-icon class="nt-open-dashboard-icon cursor-hand" mat-tooltip="Open in Designer"></md-icon>
+								</a>
+						</li>
+						
+						<!--  more options -->
+						<li class="ws-edit-opt dbControlIcon"  ng-hide="db.isOpen || db.status==0 || db.isShared">
+							 <md-menu md-position-mode="target-right target" >
+						         <a href="#" class="d-list-option"><md-button aria-label="Open Actions Menu" class="md-icon-button  trip_btn" ng-click="$mdMenu.open($event)" >
+						            <md-icon class="nt-more-menu-icon cursor-hand" mat-tooltip="More Actions"></md-icon>
+						          </md-button></a> 
+						          <md-menu-content width="4" >
+						            <md-menu-item ng-hide="db.isOpen || db.status==0">
+						              <md-button ng-click="previewFromManagePage( db, $event )">
+						                  <div layout="row" flex>
+						                    <p flex class="" >
+						                    	Preview
+						                    </p>
+						                    <md-icon md-menu-align-target class="nt-preview-icon cursor-hand"></md-icon>
+						                  </div>
+						              </md-button>
+						            </md-menu-item>
+						            <md-menu-item  ng-hide="db.isOpen || db.status==0" >
+						              <md-button ng-click="exportDashboard( db );">
+						                  <div layout="row" flex >
+						                    <p flex class="" >
+						                    Export to Local Disk
+						                    </p>
+						                    <md-icon md-menu-align-target class="nt-export-icon cursor-hand"></md-icon>
+						                  </div>
+						              </md-button>
+						            </md-menu-item>
+						            <md-menu-item  ng-hide="db.isOpen || db.status==0">
+						              <md-button headerName="Rename" ng-click="updateDashboard($event, db, 'renameDashboard')" ng-hide="db.isShared">
+						                  <div layout="row" flex >
+						                    <p flex class="">
+						                    	Rename		
+						                    </p>
+						                    <md-icon md-menu-align-target  class="nt-edit-icon cursor-hand"></md-icon>
+						                  </div>
+						              </md-button>
+						            </md-menu-item>
+						            <md-menu-item  ng-hide="db.isOpen || db.status==0">
+						              <md-button headerName="Save as Template" ng-click="updateDashboard($event,db,'saveDashboardAsTemplate')">
+						                  <div layout="row" flex >
+						                    <p flex class="">
+						                    	Save as Template 
+						                    </p>
+						                    <md-icon md-menu-align-target class="nt-saveas-icon cursor-hand"></md-icon>
+						                  </div>
+						              </md-button>
+						            </md-menu-item>
+						            <md-menu-item ng-hide="db.isOpen || db.status==0">
+						              <md-button headerName="Delete" ng-click="updateDashboard($event,db,'deleteDashboard')" ng-hide="db.isShared">
+						                  <div layout="row" flex>
+						                    <p flex class="" >
+						                    	Delete
+						                    </p>
+						                    <md-icon md-menu-align-target  class="nt-trash-icon cursor-hand"></md-icon>
+						                  </div>
+						              </md-button>
+						            </md-menu-item>
+						            <md-menu-item  ng-hide="db.isOpen || db.status==0">
+						              <md-button headerName="Move to Another Workspace" ng-click="updateDashboard($event,db,'moveDashboard')">
+						                  <div layout="row" flex >
+						                    <p flex class="">
+						                    	Move to 
+						                    </p>
+						                    <md-icon md-menu-align-target  class="nt-move-icon cursor-hand"></md-icon>
+						                  </div>
+						              </md-button>
+						            </md-menu-item>
+						            <md-menu-item  ng-hide="db.isOpen || db.status==0">
+						              <md-button  headerName="Info" ng-click="openInfoDialog(db)">
+						                  <div layout="row" flex >
+						                    <p flex class="">
+						                    	Info
+						                    </p>
+						                    <md-icon md-menu-align-target  class="nt-alert-icon cursor-hand"></md-icon>
+						                  </div>
+						              </md-button>
+						            </md-menu-item>
+						            
+						          </md-menu-content>
+						        </md-menu>
+						       </li>
+						<!-- more options -->
+						<li class="ws-hidden-opt col-sm-2 col-md-2 col-lg-2" ng-show="db.isOpen || db.status==0"><a href="#" class="d-list-option"></a></li>
+						<li class="ws-hidden-opt col-sm-2 col-md-2 col-lg-2" ng-show="db.isOpen || db.status==0"><a href="#" class="d-list-option"></a></li>
+						<li class="ws-hidden-opt col-sm-2 col-md-2 col-lg-2" ng-show="db.isOpen || db.status==0"><a href="#" class="d-list-option"></a></li>
+						<li class="ws-hidden-opt col-sm-2 col-md-2 col-lg-2" ng-show="db.isOpen || db.status==0"><a href="#" class="d-list-option"></a></li>
+						<li class="ws-hidden-opt col-sm-2 col-md-2 col-lg-2" ng-show="db.isOpen"><a href="#" class="d-list-option"></a></li>
+						<li class="ws-edit-opt dbControlIcon" ng-show="db.isOpen">
+							<a href="#" class="d-list-option" 
+								ng-click="triggerCloaseDashboardFromManagePage( db.dashboardId )" >
+								<i class="material-icons cursor-hand" mat-tooltip="Close from Designer">close</i>
+							</a>
+						</li>
+						<li class="ws-edit-opt dbControlIcon" ng-show="db.status==0">
+							<a href="#" class="d-list-option" headerName="Restore"
+								ng-click="trashActions($event,db,'trash_Restore')" >
+								<md-icon class="nt-restore-icon ng-scope material-icons" mat-tooltip="Restore" aria-hidden="true"></md-icon>
+							</a>
+						</li>
+						<li class="ws-edit-opt dbControlIcon" ng-show="db.status==0">
+							<a href="#" class="d-list-option" headerName="Remove Permanently"
+								ng-click="trashActions($event,db,'trash_Remove')" >
+								<md-icon class="nt-trash-icon ng-scope material-icons" mat-tooltip="Remove Permanently" aria-hidden="true"></md-icon>
+							</a>
+						</li>
+					</ul>
+			    </li>
+			</ul>
+		</div>
+		
+	</div>
+</div>
+<div class="designer-footer pos-rev">
+		<div class="col-sm-6 col-md-6 col-lg-6 zero-padding"><span class="float-l">Dashboard Designer {{modal.global.versionDetail}}</span></div>
+		<div class="col-sm-6 col-md-6 col-lg-6 zero-padding"><span class="float-r">Released on: {{modal.global.buildDate}}</span></div>
+	</div>
+
+<!-- MODAL DIALOGS -->
+
+<!-- Dialog for clean trash items -->
+<div id="cleanTrashModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.cleanTrashModalDialog == true">
+	<div class="modal-dialog">
+		<div class="modal-content container-border">
+		<md-toolbar>
+			      <div class="md-toolbar-tools">
+			        <h2 id="updateModelTitle" id="updateModelTitle">{{updateModalHeader}}</h2>
+			        <span flex></span>
+			        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('cleanTrashModalDialog', false); cancel()">
+			          <md-icon href="javascript: void( 0 )"  aria-label="Close dialog" class="nt-close-icon cursor-hand " mat-tooltip="Close"></md-icon>
+			        </md-button>
+			      </div>
+			    </md-toolbar>
+			<div class="modal-Body">
+				<div class="row-height"></div>				
+				<div class="row-height sub-heading">
+					<span class="col-sm-12 col-md-12 col-lg-12 warning">
+						{{deleteWarning}}
+					</span>
+				</div>
+				<div class="row-height"></div>
+			</div>
+			<md-dialog-actions layout="row">
+				<span flex="" class="flex"></span>
+				<md-button data-dismiss="modal" ng-click="setModelWatcherStatus('cleanTrashModalDialog', false); removeAllTrashItems()" class="md-raised md-default">{{updateBtnLabel}}</md-button>
+				<md-button data-dismiss="modal" class="md-raised md-primary" ng-click="setModelWatcherStatus('cleanTrashModalDialog', false);">Cancel</md-button>
+			</md-dialog-actions>
+		</div>
+	</div>
+</div>
+
+<!-- Dialog for all other events on items of manage page -->
+<div id="updateModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.updateModalDialog == true">
+	<div class="col-sm-2 col-md-4 col-lg-4"></div>
+	<div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+		<div class="modal-content container-border">
+		
+			<md-toolbar>
+			      <div class="md-toolbar-tools">
+			        <h2 id="updateModelTitle" data-q_id="21627">{{updateModalHeader}}</h2>
+			        <span flex></span>
+			        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('updateModalDialog', false); cancel()">
+			          <md-icon href="javascript: void( 0 )"  aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip="Close" ></md-icon>
+			        </md-button>
+			      </div>
+			    </md-toolbar>
+			<div class="modal-Body">
+				<div class="row-height"></div>
+				<div class="row-height" 
+					ng-show="updateDashAction=='renameDashboard'||updateDashAction=='renameWorkspace'">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						<input type="text" 
+							maxLength="50" 
+							class="renameDashWork"
+							id="dashboardName"
+							ng-model="modal.dashActionConfig.nameOfDashboardToUpdate" ng-pattern-restrict="^[A-Za-z0-9 ~`!@#$%^&()_+;,.]*$" />
+					</div>
+				</div>
+				<div class="row-height" 
+					ng-show="updateDashAction=='saveDashboardAsTemplate'">
+					<div class="col-sm-6 col-md-3 col-lg-3">
+						<span>Template Name</span>
+					</div>
+					<div class="col-sm-6 col-md-9 col-lg-9">
+						<input type="text" 
+							maxLength="50" 
+							class="renameDashWork"
+							id="dashboardTemplateName"
+							ng-model="modal.dashActionConfig.nameOfDashboardToUpdate" ng-pattern-restrict="^[A-Za-z0-9 ~`!@#$%^&()_+;,.]*$" />
+					</div>
+				</div>
+				
+				<div class="row-height sub-heading" 
+					ng-show="updateDashAction=='moveDashboard'|| updateDashAction=='trash_RestoreDashboard'">
+					<div class="col-sm-6 col-md-3 col-lg-3">
+						<span>Workspace</span>
+					</div>
+					<div class="col-sm-6 col-md-9 col-lg-9">
+						<div class="">
+							<md-input-container class="selectClass fullWidth">
+   		           				<md-select ng-model="modal.dashActionConfig.nameOfWorkspaceToUpdate"
+        	       					aria-label="updateWorkspaceName"
+                  					class="selectPos">
+                   					<md-option ng-repeat="ws in modal.wsObj.wsList | filter:filterSameWS" ng-value="ws">
+                   						{{ws.dashboardName}}
+                   					</md-option>
+                   				</md-select>
+                   			</md-input-container>		
+						</div>
+					</div>
+				</div>
+				<div class="row-height sub-heading" 
+					ng-show="updateDashAction=='deleteDashboard'||updateDashAction=='deleteWorkspace'||updateDashAction=='trash_RemoveDashboard'||updateDashAction=='trash_RemoveWorkspace' ||updateDashAction=='trash_RestoreWorkspace'">
+					<div class="col-sm-12 col-md-12">
+						<span class="warning">{{deleteWarning}}</span>
+					</div>
+				</div>
+				<div class="row-height"></div>
+			</div>
+			<md-dialog-actions layout="row">
+				<span flex="" class="flex"></span>
+				<md-button ng-hide="isTrashAction" ng-click="setModelWatcherStatus('updateModalDialog', false); updateDashboardOrWorkspace()" class="md-raised md-default">{{updateBtnLabel}}</md-button>
+				<md-button data-dismiss="modal" ng-show="isTrashAction" ng-click="setModelWatcherStatus('updateModalDialog', false); updateFromTrash()" class="md-raised md-default">{{updateBtnLabel}}</md-button>
+				<md-button data-dismiss="modal" class="md-raised md-primary" ng-click="setModelWatcherStatus('updateModalDialog', false);">Cancel</md-button>
+			</md-dialog-actions>
+		</div>
+	</div>
+</div>
+<div id="infoDialog" class="modal vcsmodal">
+ <div class="col-sm-2 col-md-4 col-lg-4"></div>
+	<div class="modal-dialog col-sm-10 col-md-8 col-lg-8" style="width:500px;">
+		<div class="modal-content container-border">
+		
+			<md-toolbar>
+			      <div class="md-toolbar-tools">
+			        <h2>Dashboard Info</h2>
+			        <span flex></span>
+			        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('vcsExportModalDialog', false); cancel()">
+			          <md-icon href="javascript: void( 0 )" class="nt-close-icon cursor-hand" mat-tooltip = "Close"  aria-label="Close dialog"><!--<i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>--></md-icon>
+			        </md-button>
+			      </div>
+			    </md-toolbar>
+			<div class="modal-Body">
+			<div class="row-height sub-heading">
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						Last Updated Date 
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-8" style="text-align: center;">
+						{{ date | date:'EEEE, dd MMM yyyy, HH:mm' }}
+					</div>
+				</div>
+				<div class="row" style="margin-bottom:10px;"></div>
+				<div class="row-height sub-heading">
+					<div class="col-sm-6 col-md-6 col-lg-4">
+						Last Updated By 
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-8" style="text-align: center;">
+						{{name}}
+					</div>
+				</div>
+				<div class="row-height"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="vcsExportModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.vcsExportModalDialog == true">
+	<div class="col-sm-2 col-md-4 col-lg-4"></div>
+	<div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+		<div class="modal-content container-border">
+		
+			<md-toolbar>
+			      <div class="md-toolbar-tools">
+			        <h2 id="updateModelTitle" data-q_id="21627">Push into Version Controlling System</h2>
+			        <span flex></span>
+			        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('vcsExportModalDialog', false); cancel()">
+			          <md-icon href="javascript: void( 0 )"  aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip = "Close"><!-- <i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>--></md-icon>
+			        </md-button>
+			      </div>
+			    </md-toolbar>
+			<div class="modal-Body">
+			<div class="row-height sub-heading">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						Commit Message
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<input type="text" ng-pattern-restrict="^[A-Za-z0-9 ~`!@#$%^&()_+;,.]*$" 
+							id="dashboardName" 
+							maxLength="150" 
+							class="renameDashWork"
+							ng-model="modal.vcsexportconfig.commitMessage" 
+							placeHolder="Commit Message" />
+					</div>
+				</div>
+				<div class="row" style="margin-bottom:10px;"></div>
+				<div class="row-height sub-heading">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						Push Type
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<md-radio-group ng-model="modal.vcsexportconfig.pushItem">
+                      <md-radio-button ng-repeat="option in modal.vcsexportconfig.pushType" ng-checked="{{modal.vcsexportconfig.pushItem}}" ng-value="option.value" required>
+                             {{ option.label}}
+                      </md-radio-button>
+                    </md-radio-group>
+					</div>
+				</div>
+				<div class="row-height"></div>
+			</div>
+			<md-dialog-actions layout="row">
+				<span flex="" class="flex"></span>
+				<md-button ng-click="setModelWatcherStatus('vcsExportModalDialog', false); updateVcsExport()" class="md-raised md-default">Push</md-button>
+				<md-button data-dismiss="modal" class="md-raised md-primary" ng-click="setModelWatcherStatus('vcsExportModalDialog', false);">Cancel</md-button>
+			</md-dialog-actions>
+		</div>
+	</div>
+</div>
+
+<div id="vcsImportModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.vcsImportModalDialog == true">
+	<div class="modal-dialog " style="width:750px;">
+		<div class="modal-content container-border">
+		
+			<md-toolbar>
+			      <div class="md-toolbar-tools">
+			        <h2 id="updateModelTitle" data-q_id="21627">Pull from Version Controlling System</h2>
+			        <span flex></span>
+			        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('vcsImportModalDialog', false); cancel()">
+			          <md-icon href="javascript: void( 0 )"  aria-label="Close dialog"><i class="material-icons cursor-hand" mat-tooltip = "Close">close</i></md-icon>
+			        </md-button>
+			      </div>
+			    </md-toolbar>
+			<div class="modal-Body">
+				<div class="row-height sub-heading">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						Dashboard Name
+					</div>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" id="dashboardName" class="propValue" ng-model="modal.importVcsDbConfig.name" 
+							placeHolder="Dashboard Name" disabled />
+					</div>
+				</div>
+				<div class="row">
+				<table class="table vcstable table-striped" style="max-height:200px;overflow:auto;">
+				<thead>
+
+                    <tr>
+                        <th class="select">Select&nbsp;</th>
+                        <th class="versions">Versions&nbsp;</th>
+                        <th class="commit_message">Commit Message&nbsp;</th>
+                        <th class="committed_by">Committed By&nbsp;</th>
+                        <th class="commit_message">Commit Time&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in modal.importVcsDbConfig.publishedVersions">
+				<td>
+				<md-radio-group ng-model="modal.pullDashboard.pushVersion" aria-label="selectVersion" >
+										<md-radio-button ng-value="item.commit_id" aria-label="{{item.entityname}}"
+											class="cursor-hand margNull md-primary"
+											name="pushVersion">							
+										</md-radio-button>
+										</md-radio-group>
+				</td>
+				<td>{{item.versions}}</td>
+				<td>{{item.commit_message}}</td>
+				<td>{{item.committed_by}}</td>
+				<td>{{item.time | date:'medium'}}</td>
+				</tr>
+                </tbody>
+				</table>
+				</div>
+			</div>
+			<div>
+			<md-dialog-actions layout="row">
+				<span flex="" class="flex"></span>
+				<md-button ng-click="setModelWatcherStatus('vcsImportModalDialog', false); updateVcsImport()" class="md-raised md-default">Pull</md-button>
+				<md-button data-dismiss="modal" class="md-raised md-primary" ng-click="setModelWatcherStatus('vcsImportModalDialog', false);">Cancel</md-button>
+			</md-dialog-actions>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="gitExportModalDialog" class="modal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.gitExportModalDialog == true">
+	<div class="col-sm-2 col-md-4 col-lg-4"></div>
+	<div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+		<div class="modal-content container-border">
+		
+			<md-toolbar>
+			      <div class="md-toolbar-tools">
+			        <h2 id="updateModelTitle" data-q_id="21627">Push into Version Controlling System</h2>
+			        <span flex></span>
+			        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('gitExportModalDialog', false); cancel()">
+			          <md-icon href="javascript: void( 0 )"  aria-label="Close dialog"><i class="material-icons cursor-hand" mat-tooltip = "Close">close</i></md-icon>
+			        </md-button>
+			      </div>
+			    </md-toolbar>
+			<div class="modal-Body">
+			<div class="row-height">
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						Commit Message
+					</div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<input type="text" ng-pattern-restrict="^[A-Za-z0-9 ~`!@#$%^&()_+;,.]*$" 
+							id="dashboardName" 
+							maxLength="150" 
+							class="renameDashWork"
+							ng-model="modal.gitexportconfig.commitMessage" 
+							placeHolder="Commit Message" />
+					</div>
+				</div>
+				<div class="row-height"></div>
+			</div>
+			<md-dialog-actions layout="row">
+				<span flex="" class="flex"></span>
+				<md-button ng-click="setModelWatcherStatus('gitExportModalDialog', false); updateGitExport()" class="md-raised md-primary">Push</md-button>
+				<md-button data-dismiss="modal" class="md-raised md-warn" ng-click="setModelWatcherStatus('gitExportModalDialog', false);">Cancel</md-button>
+			</md-dialog-actions>
+		</div>
+	</div>
+</div>
+
+<div id="websoketAlertModalDialog" class="modal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" >
+	<div class="col-sm-2 col-md-4 col-lg-4"></div>
+	<div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+		<div class="modal-content container-border">
+		
+			<md-toolbar>
+			      <div class="md-toolbar-tools">
+			        <h2 id="updateModelTitle" data-q_id="21627">Alert Notification</h2>
+			        <span flex></span>
+			        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('websoketAlertModalDialog', false); cancel()">
+			          <md-icon href="javascript: void( 0 )"  aria-label="Close dialog"><i class="material-icons cursor-hand" mat-tooltip = "Close">close</i></md-icon>
+			        </md-button>
+			      </div>
+			    </md-toolbar>
+			<div class="modal-Body">
+			<div class="row-height">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						<b>Attention !!</b> 
+					</div>
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						There have been recent changes made to the file you are currently working on. Please note that updating the file will override any current changes you have made.
+					</div>
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						<b>Are you sure you want to proceed with the update?</b>
+					</div>
+				</div>
+				<div class="row-height"></div>
+			</div>
+			<md-dialog-actions layout="row">
+				<span flex="" class="flex"></span>
+				<md-button ng-click="setModelWatcherStatus('websoketAlertModalDialog', false); closeOpenSameDashboard()" class="md-raised md-primary">Yes</md-button>
+				<md-button data-dismiss="modal" class="md-raised md-warn" ng-click="setModelWatcherStatus('websoketAlertModalDialog', false);">Cancel</md-button>
+			</md-dialog-actions>
+		</div>
+	</div>
+</div>
+
+
+<div id="publishModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.publishModalDialog == true">
+	<div class="col-sm-2 col-md-4 col-lg-4"></div>
+	<div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+		<div class="modal-content container-border">
+			<md-toolbar>
+		      <div class="md-toolbar-tools">
+		        <h2>Publish</h2>
+		        <span flex></span>
+		        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('publishModalDialog', false); cancel()">
+		          <md-icon href="javascript: void( 0 )"  aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip="Close"></md-icon>
+		        </md-button>
+		      </div>
+		    </md-toolbar>
+			<div class="modal-Body">
+				<div class="row-height sub-heading">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						Name
+					</div>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<input type="text" ng-disabled="modal.publishDbConfig.publishAction=='PUB_OVERRIDE'" ng-pattern-restrict="^[A-Za-z0-9 ~`!@#$%^&()_+;,.]*$" 
+							id="dashboardName" 
+							class="propValue" 
+							ng-model="modal.publishDbConfig.name" 
+							placeHolder="Dashboard Name" />
+					</div>
+				</div>
+				<div class="row" style="margin-top:10px;"></div>
+				<div class="row-height sub-heading">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						Description
+					</div>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<textarea ng-model="modal.publishDbConfig.description" 
+							class="pubDesc propValue" 
+							placeholder="Description">
+						</textarea>
+					</div>
+				</div>
+				<div class="row" style="margin-top:10px;"></div>
+				<div class="row-height sub-heading" ng-if="modal.publishDbConfig.publishAction === 'PUB_NEW' ">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						Folder Location
+					</div>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<div class="">
+							<md-input-container class="selectClass fullWidth">
+   		           				<md-select ng-model="modal.publishDbConfig.publishToFolder"
+        	       					aria-label="updateWorkspaceName"
+                  					class="pubDesc" ng-change="getSelectedFolderValue(modal.publishDbConfig.publishToFolder);">
+                   					<md-option ng-repeat="ws in modal.publishDbConfig.currentUser.rootFolders" ng-selected="ws.title == modal.publishDbConfig.selectedFolderName" ng-value="ws.id" ng-if="ws.title.indexOf('My Documents') > -1 || ws.title.indexOf('Public Documents') > -1">
+                   						{{ws.title}}
+                   					</md-option>
+                   				</md-select>
+                   			</md-input-container>		
+						</div>
+					</div>
+				</div>
+				<!--
+				<div class="row-height sub-heading" ng-if="modal.publishDbConfig.publishAction !== 'PUB_NEW' ">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						Folder Location
+					</div>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<div class="">
+							<md-input-container class="selectClass fullWidth">
+   		           				<md-select ng-model="modal.publishDbConfig.publishToFolderId"
+        	       					aria-label="updateWorkspaceName"
+                  					class="pubDesc" ng-disabled="modal.publishDbConfig.publishAction=='PUB_OVERRIDE'">
+                   					<md-option ng-repeat="ws in modal.publishDbConfig.currentUser.rootFolders" ng-selected="ws.id === modal.publishDbConfig.publishToFolderId || ws.title.indexOf('My Documents') > -1" ng-value="ws.id" ng-if="ws.title.indexOf('My Documents') > -1 || ws.title.indexOf('Public Documents') > -1">
+                   						{{ws.title}}
+                   					</md-option>
+                   				</md-select>
+                   			</md-input-container>		
+						</div>
+					</div>
+					
+				</div>
+				-->
+				<div class="row" style="margin-bottom: 10px;"></div>
+				<div class="row-height sub-heading" ng-show="modal.publishDbConfig.alreadyPublished">
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						Action
+					</div>
+					<div class="col-sm-9 col-md-9 col-lg-9">
+						<div class="row" style="font-weight:normal">
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<label>
+									<md-radio-group ng-model="modal.publishDbConfig.publishAction" aria-label="selectOption" ng-change="getUserGroupsForVersion()">
+										<md-radio-button value="PUB_OVERRIDE" 
+											class="cursor-hand margNull md-primary"
+											name="publishAction">
+											Re-publish
+										</md-radio-button>
+									</md-radio-group>
+								</label>
+							</div>
+							<div class="col-sm-6 col-md-6 col-lg-6">
+								<label>
+									<md-radio-group ng-model="modal.publishDbConfig.publishAction" aria-label="selectOption" ng-change="getUserGroupsForVersion()">
+										<md-radio-button value="PUB_NEW" 
+											class="cursor-hand margNull md-primary"
+											name="publishAction">
+											Publish as New
+										</md-radio-button>
+									</md-radio-group>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			<!-- New Publish -->			
+			<div class="row form-group" ng-if="(!modal.publishDbConfig.alreadyPublished || modal.publishDbConfig.publishAction=='PUB_NEW') && modal.publishDbConfig.selectedFolderName != 'Public Documents' ">
+				<md-content class="md-padding ht100per">
+					<md-tabs class="ht100per" md-selected="modal.publishDbConfig.selectedTab">
+						<!-- tab1 -->
+						<md-tab label="User List">
+							<md-content class="md-padding">
+								<div id="userListTabDivision">
+									<!--  Search -->
+									<div class="" ng-click="$event.stopPropagation();">
+									  	<input type="text" id="publishUserSearch" name="user_search" class="propValue" placeholder="Search" ng-model="userSearchKey" >
+									  	<a href="javascript: void( 0 )" 
+									  		style="position: absolute; top: 9px; right: 5px;" 
+									  		ng-show="userSearchKey != undefined && userSearchKey != ''"  ng-click="userSearchKey = ''" >
+									    	<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+									    </a>
+									</div>
+									<!--  list items -->
+									<md-content>
+										<md-list flex>
+											<md-list-item ng-hide="modal.publishDbConfig.publishNew.users.length > 0" ng-click="" > User list not available ! </md-list-item>
+											<md-list-item ng-click="" 
+												ng-repeat="user in filtered = ( modal.publishDbConfig.publishNew.users | advSearch :userSearchKey :'userName' | orderBy ) track by $index">
+												<div class="md-list-item-text" layout="column">
+													<h5 class="primary-info ng-binding" > {{ user.userName }} </h5>
+													<h6 class="secondary-info ng-binding" > {{ user.uniqueId }} </h6>
+												</div>
+												<md-checkbox class="md-secondary" aria-label="{{user.userName}}" ng-model="user.published" ng-change="onSelectDeselectUser(user.id, user.published)"></md-checkbox>
+												<md-divider ></md-divider>
+											</md-list-item>
+										</md-list>
+									</md-content>
+								</div>
+							</md-content>
+						</md-tab>
+						<!-- tab2 -->
+						<md-tab label="User Groups">
+							<md-content class="md-padding ht100per">
+								<div id="userGroupTabDivision">
+									<!--  Search -->
+									<div class="" ng-click="$event.stopPropagation();">
+									  	<input type="text" name="userGroup_search" class="propValue" placeholder="Search" ng-model="userGroupSearchKey" >
+									  	<a href="javascript: void( 0 )" 
+									  		style="position: absolute; top: 9px; right: 5px;" 
+									  		ng-show="userGroupSearchKey != undefined && userGroupSearchKey != ''"  ng-click="userGroupSearchKey = ''" >
+									    	<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+									    </a>
+									</div>
+									<!--  list items -->
+									<md-content>
+										<md-list flex>
+											<md-list-item ng-hide="modal.publishDbConfig.publishNew.userGroupsList.length > 0" ng-click="" > User group not available ! </md-list-item>
+											<md-list-item ng-click="" 
+												ng-repeat="userGroup in filtered = ( modal.publishDbConfig.publishNew.userGroupsList | advSearch :userGroupSearchKey :'name' | orderBy )">
+												<div class="md-list-item-text" layout="column">
+													<h5 class=" ng-binding" > {{ userGroup.name }} </h5>
+													<md-checkbox class="md-secondary" aria-label="{{userGroup.name}}" ng-model="userGroup.published" ng-change="onSelectDeselectUser(userGroup.id, userGroup.published)"></md-checkbox>
+												</div>
+												<md-divider ></md-divider>
+											</md-list-item>
+										</md-list>
+									</md-content>
+								</div>
+							</md-content>
+						</md-tab>
+						<!-- tab3 -->
+						<md-tab label="Exclude User" ng-click="getAllExcludeUsersFromGroupList()" >
+							<md-content class="md-padding ht100per">
+								<div id="excludeUserTabDivision">
+									<!--  Search -->
+									<div class="" ng-click="$event.stopPropagation();">
+									  	<input type="text" name="excludeUser_search" class="propValue" placeholder="Search" ng-model="excludeUserSearchKey" >
+									  	<a href="javascript: void( 0 )" 
+									  		style="position: absolute; top: 9px; right: 5px;" 
+									  		ng-show="excludeUserSearchKey != undefined && excludeUserSearchKey != ''"  ng-click="excludeUserSearchKey = ''" >
+									    	<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+									    </a>
+									</div>
+									<!--  list items -->
+									<md-content>
+										<md-list flex>
+											<md-list-item ng-hide="modal.publishDbConfig.publishNew.excludeUsers.length > 0" ng-click="" > No user is excluded ! </md-list-item>
+											<md-list-item ng-click="" 
+												ng-repeat="excludeUser in filtered = ( modal.publishDbConfig.publishNew.excludeUsers | advSearch :excludeUserSearchKey :'userName' | orderBy )">
+												<div class="md-list-item-text" layout="column">
+													<h5 class="primary-info ng-binding" > {{ excludeUser.userName }} </h5>
+													<h6 class="secondary-info ng-binding" > {{ excludeUser.uniqueId }} </h6>
+												</div>
+												<md-checkbox class="md-secondary" aria-label="{{excludeUser.userName}}" ng-model="excludeUser.published" ng-change="onSelectDeselectUser(excludeUser.id, excludeUser.published)"></md-checkbox>
+												<md-divider ></md-divider>
+											</md-list-item>
+										</md-list>
+									</md-content>
+								</div>
+							</md-content>
+						</md-tab>
+					</md-tabs>
+				</md-content>
+			</div>
+			
+			<!-- Publish Override -->
+			<div class="row-height sub-heading" ng-if="modal.publishDbConfig.alreadyPublished && modal.publishDbConfig.publishAction=='PUB_OVERRIDE'">
+				<div class="col-sm-3 col-md-3 col-lg-3">
+					Versions
+				</div>
+				<div class="col-sm-9 col-md-9 col-lg-9">
+					<div class="col-sm-12 col-md-12 col-lg-12" ng-if="modal.publishDbConfig.publishedVersions.length >0" style="max-height: 120px;overflow: auto">
+						<md-radio-group ng-model="modal.publishDbConfig.pubDocId" aria-label="selectVersion" ng-change="getUserGroupsForVersion();" > 
+							<md-list-item class="no-pad" ng-repeat="version in modal.publishDbConfig.publishedVersions track by $index" >
+								<div class="md-list-item-text" layout="column">
+									<h5 class="primary-info ng-binding">
+										<md-radio-button ng-value="{{version.id}}" aria-label="{{version.name}}" 
+											class="cursor-hand margNull md-primary"
+											name="publishedVersion">
+											<h6 class="primary-info">{{version.name}}</h6>
+											<h6 class="secondary-info ng-binding" > {{version.publishTime | date:'medium'}} | {{getPublishedFolderName(version.publishFolder);}}</h6>
+											
+										</md-radio-button>
+									</h5>
+								</div>
+							</md-list-item>				
+						</md-radio-group>
+					</div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<!-- re publish user list-->
+			<div class="row form-group" ng-if="modal.publishDbConfig.alreadyPublished && modal.publishDbConfig.publishAction=='PUB_OVERRIDE'" ng-show="modal.publishDbConfig.selectedFolderName != 'Public Documents'">
+				<md-content class="md-padding ht100per">
+					<md-tabs class="ht100per" md-selected="modal.publishDbConfig.selectedTab">
+						<!-- tab1 -->
+						<md-tab label="User List">
+							<md-content class="md-padding">
+								<div id="userListTabDivision">
+									<!--  Search -->
+									<div class="" ng-click="$event.stopPropagation();">
+									  	<input type="text" id="publishUserSearch" name="user_search" class="propValue" placeholder="Search" ng-model="userSearchKey" >
+									  	<a href="javascript: void( 0 )" 
+									  		style="position: absolute; top: 9px; right: 5px;" 
+									  		ng-show="userSearchKey != undefined && userSearchKey != ''"  ng-click="userSearchKey = ''" >
+									    	<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+									    </a>
+									</div>
+									<!--  list items -->
+									<md-content>
+										<md-list flex>
+											<md-list-item ng-hide="modal.publishDbConfig.publishTo.users.length > 0" ng-click="" > User list not available ! </md-list-item>
+											<md-list-item ng-click="" 
+												ng-repeat="user in filtered = ( modal.publishDbConfig.publishTo.users | advSearch :userSearchKey :'userName' | orderBy ) track by $index">
+												<div class="md-list-item-text" layout="column">
+													<h5 class="primary-info ng-binding" > {{ user.userName }} </h5>
+													<h6 class="secondary-info ng-binding" > {{ user.uniqueId }} </h6>
+												</div>
+												<md-divider ></md-divider>
+											</md-list-item>
+										</md-list>
+									</md-content>
+								</div>
+							</md-content>
+						</md-tab>
+						<!-- tab2 -->
+						<md-tab label="User Groups">
+							<md-content class="md-padding ht100per">
+								<div id="userGroupTabDivision">
+									<!--  Search -->
+									<div class="" ng-click="$event.stopPropagation();">
+									  	<input type="text" name="userGroup_search" class="propValue" placeholder="Search" ng-model="userGroupSearchKey" >
+									  	<a href="javascript: void( 0 )" 
+									  		style="position: absolute; top: 9px; right: 5px;" 
+									  		ng-show="userGroupSearchKey != undefined && userGroupSearchKey != ''"  ng-click="userGroupSearchKey = ''" >
+									    	<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+									    </a>
+									</div>
+									<!--  list items -->
+									<md-content>
+										<md-list flex>
+											<md-list-item ng-hide="modal.publishDbConfig.publishTo.userGroupsList.length > 0" ng-click="" > User group not available ! </md-list-item>
+											<md-list-item ng-click="" 
+												ng-repeat="userGroup in filtered = ( modal.publishDbConfig.publishTo.userGroupsList | advSearch :userGroupSearchKey :'name' | orderBy )">
+												<div class="md-list-item-text" layout="column">
+													<h5 class=" ng-binding" > {{ userGroup.name }} </h5>
+												</div>
+												<md-divider ></md-divider>
+											</md-list-item>
+										</md-list>
+									</md-content>
+								</div>
+							</md-content>
+						</md-tab>
+						<!-- tab3 -->
+						<md-tab label="Exclude User">
+							<md-content class="md-padding ht100per">
+								<div id="excludeUserTabDivision">
+									<!--  Search -->
+									<div class="" ng-click="$event.stopPropagation();">
+									  	<input type="text" name="excludeUser_search" class="propValue" placeholder="Search" ng-model="excludeUserSearchKey" >
+									  	<a href="javascript: void( 0 )" 
+									  		style="position: absolute; top: 9px; right: 5px;" 
+									  		ng-show="excludeUserSearchKey != undefined && excludeUserSearchKey != ''"  ng-click="excludeUserSearchKey = ''" >
+									    	<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+<!-- 									    	<md-tooltip md-direction="top">Clear Search</md-tooltip> -->
+									    </a>
+									</div>
+									<!--  list items -->
+									<md-content>
+										<md-list flex>
+											<md-list-item ng-hide="modal.publishDbConfig.publishTo.excludeUsers.length > 0" ng-click="" > No user is excluded ! </md-list-item>
+											<md-list-item ng-click="" 
+												ng-repeat="excludeUser in filtered = ( modal.publishDbConfig.publishTo.excludeUsers | advSearch :excludeUserSearchKey :'userName' | orderBy )">
+												<div class="md-list-item-text" layout="column">
+													<h5 class="primary-info ng-binding" > {{ excludeUser.userName }} </h5>
+													<h6 class="secondary-info ng-binding" > {{ excludeUser.uniqueId }} </h6>
+												</div>
+												<md-divider ></md-divider>
+											</md-list-item>
+										</md-list>
+									</md-content>
+								</div>
+							</md-content>
+						</md-tab>
+					</md-tabs>
+				</md-content>
+			</div>
+			
+		</div>
+		 
+		<md-dialog-actions layout="row">
+			<span flex="" class="flex"></span>
+			<md-button class="md-raised md-default" 
+					ng-click="setModelWatcherStatus('publishModalDialog', false); publishDashboardToUserGroups();" ng-disabled="modal.publishDbConfig.disablepublish">Publish</md-button>
+			<md-button data-dismiss="modal" class="md-raised md-primary" ng-click="setModelWatcherStatus('publishModalDialog', false);">Cancel</md-button>
+		</md-dialog-actions>
+			
+	</div>
+</div>
+</div>
+<!--sharing dashboard-->
+<div id="shareModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false"
+	ng-if="modal.modelPopupStatus.shareModalDialog == true">
+	<div class="col-sm-2 col-md-4 col-lg-4"></div>
+	<div class="modal-dialog" style="width: 1100px;">
+		<div class="modal-content container-border">
+			<md-toolbar>
+				<div class="md-toolbar-tools">
+					<h2>Manage Access: {{modal.shareDbConfig.name}}</h2>
+					<span flex></span>
+					<md-button class="md-icon-button" data-dismiss="modal"
+						ng-click="setModelWatcherStatus('shareModalDialog', false); cancel()">
+						<md-icon href="javascript: void( 0 )" aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip="Close"><!--<i class="material-icons cursor-hand"
+								mat-tooltip="Close">close</i>--></md-icon>
+					</md-button>
+				</div>
+			</md-toolbar>
+			<div layout="row" style="padding:0px 20px;">
+				<!-- New Publish -->
+				<div flex="60" layout="column" layout-align="start stretch">
+					<div class="row form-group">
+						<md-content class="md-padding ht100per" style="height: 505px; overflow: hidden;">
+							<div layout="row" layout-align="start center">
+								<div class="md-list-item-text" layout="column">
+									<h5>Grant Permissions:</h5>
+								</div>
+								<h5 class="primary-info ng-binding" style="margin: 0px 10px;">View</h5>
+								<md-checkbox class="md-secondary" aria-label="View" ng-model="permissions.view"
+									style="margin-bottom: 0px;"  ng-true-value="1" ng-false-value="0" ng-change="onPermissionChange(permissions)">
+								</md-checkbox>
+								<h5 class="primary-info ng-binding" style="margin-right: 10px">Edit</h5>
+								<md-checkbox class="md-secondary" aria-label="Edit" ng-model="permissions.edit"
+									style="margin-bottom: 0px;" ng-true-value="1" ng-false-value="0" ng-change="onPermissionChange(permissions)">
+								</md-checkbox>
+								<h5 class="primary-info ng-binding" style="margin-right: 10px">Execute</h5>
+								<md-checkbox class="md-secondary" aria-label="Edit" ng-model="permissions.execute"
+									style="margin-bottom: 0px;" ng-true-value="1" ng-false-value="0" ng-change="onPermissionChange(permissions)">
+								</md-checkbox>
+							</div>
+							<md-tabs class="ht100per" md-selected="modal.shareDbConfig.selectedTab"
+								style="height: 505px;">
+								<!-- tab1 -->
+								<md-tab label="User List">
+									<md-content class="md-padding">
+										<div id="userListTabDivision">
+											<!--  Search -->
+											<div class="" ng-click="$event.stopPropagation();">
+												<input type="text" id="publishUserSearchD"
+													ng-change="UserfilterFunction('publishUserSearchD','userlist_lists')"
+													name="user_search" class="propValue" placeholder="Search"
+													ng-model="userSearchKey" />
+												<a href="javascript: void( 0 )"
+													style="position: absolute; top: 9px; right: 5px;"
+													ng-show="userSearchKey != undefined && userSearchKey != ''"
+													ng-click="clearfilterFunction('publishUserSearchD','userlist_lists');">
+													<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+												</a>
+											</div>
+											<!--  list items -->
+											<md-content>
+												<md-list id="userlist_lists" flex>
+													<md-list-item name="userlist_list"
+														multiple="multiple"
+														ng-repeat="user in filtered = (modal.shareDbConfig.publishNew.users | orderBy ) track by $index">
+														<div class="md-list-item-text" layout="column">
+															<h5 class="primary-info ng-binding" value="{{user.id}}">
+																{{user.userName}}</h5>
+															<h6 class="secondary-info ng-binding" > {{ user.uniqueId }} </h6>
+														</div>
+														<md-checkbox class="md-secondary" aria-label="{{user.userName}}"
+															ng-model="user.published" ng-change="">
+														</md-checkbox>
+														<md-divider></md-divider>
+													</md-list-item>
+												</md-list>
+											</md-content>
+										</div>
+									</md-content>
+								</md-tab>
+								<!-- tab2 -->
+								<md-tab label="User Groups">
+									<md-content class="md-padding ht100per">
+										<div id="userGroupTabDivision">
+											<!--  Search -->
+											<div class="" ng-click="$event.stopPropagation();">
+												<input type="text" name="userGroup_searchD" id="userGroup_searchD"
+													ng-change="UserfilterFunction('userGroup_searchD','userlist_groups')"
+													class="propValue" placeholder="Search"
+													ng-model="userGroupSearchKey">
+												<a href="javascript: void( 0 )"
+													style="position: absolute; top: 9px; right: 5px;"
+													ng-show="userGroupSearchKey != undefined && userGroupSearchKey != ''"
+													ng-click="clearfilterFunction('userGroup_searchD','userlist_groups')">
+													<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+												</a>
+											</div>
+											<!--  list items -->
+											<md-content>
+												<md-list id="userlist_groups" flex>
+													<md-list-item name="userlist_groups" multiple="multiple"
+														ng-repeat="userGroup in filtered = (modal.shareDbConfig.publishNew.userGroupsList | orderBy )">
+														<div class="md-list-item-text" layout="column">
+															<h5 class="primary-info ng-binding"
+																value="{{userGroup.id}}">
+																{{userGroup.name}}</h5>
+														</div>
+														<md-checkbox class="md-secondary"
+															aria-label="{{userGroup.name}}"
+															ng-model="userGroup.published" ng-change="">
+														</md-checkbox>
+														<md-divider></md-divider>
+													</md-list-item>
+												</md-list>
+											</md-content>
+										</div>
+									</md-content>
+								</md-tab>
+								<!-- tab3 -->
+								<md-tab label="Exclude User" ng-click="getDashboardExcludeUsersFromGroupList()">
+									<md-content class="md-padding ht100per">
+										<div id="excludeUserTabDivision">
+											<!--  Search -->
+											<div class="" ng-click="$event.stopPropagation();">
+												<input type="text" name="excludeUser_searchD" id="excludeUser_searchD"
+													ng-change="UserfilterFunction('excludeUser_searchD','listexclude_users')"
+													class="propValue" placeholder="Search"
+													ng-model="excludeUserSearchKey">
+												<a href="javascript: void( 0 )"
+													style="position: absolute; top: 9px; right: 5px;"
+													ng-show="excludeUserSearchKey != undefined && excludeUserSearchKey != ''"
+													ng-click="clearfilterFunction('excludeUser_searchD','listexclude_users')">
+													<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+												</a>
+											</div>
+											<!--  list items -->
+											<md-content>
+												<md-list id="listexclude_users">
+													<md-list-item name="listexclude_users" multiple="multiple"
+														ng-repeat="excludeUser in filtered = ( modal.shareDbConfig.publishNew.excludeUsers | orderBy )">
+														<div class="md-list-item-text" layout="column">
+															<h5 class="primary-info ng-binding"
+																value="{{excludeUser.id}}">
+																{{excludeUser.userName}}</h5>
+																<h6 class="secondary-info ng-binding" > {{ excludeUser.uniqueId }} </h6>
+														</div>
+														<md-checkbox class="md-secondary"
+															aria-label="{{excludeUser.userName}}"
+															ng-model="excludeUser.published" ng-change=""></md-checkbox>
+														</md-checkbox>
+														<md-divider></md-divider>
+													</md-list-item>
+												</md-list>
+											</md-content>
+										</div>
+									</md-content>
+								</md-tab>
+							</md-tabs>
+						</md-content>
+					</div>
+					<md-dialog-actions layout="row">
+						<span flex="" class="flex"></span>
+						<md-button class="md-raised md-default"
+							ng-click="shareDashboardToUserGroups();">Share</md-button>
+						<md-button data-dismiss="modal" class="md-raised md-primary"
+							ng-click="setModelWatcherStatus('shareModalDialog', false);">Cancel</md-button>
+					</md-dialog-actions>
+
+				</div>
+				<!-- Show Publish history-->
+				<div flex="40" layout="column" layout-align="start stretch" style="margin-right: 15px;">
+					<div class="row form-group">
+						<md-content class="md-padding ht100per" style="height: 505px; overflow: hidden;">
+							<div class="md-list-item-text" layout="column">
+								<h5>Granted Permissions</h5>
+							</div>
+							<!-- Heading Row for Users and Privilege -->
+							<div layout="row" class="heading-row">
+								<div class="primary-info ng-binding" style="margin-left: 15px;" flex="40">
+									<h5>User / Groups</h5>
+								</div>
+								<div class="primary-info ng-binding" style="text-align: center;" flex="40">
+									<h5>Privileges</h5>
+								</div>
+								<div class="primary-info ng-binding" style="text-align: center;margin-right: 15px" flex="20">
+									<h5>Revoke</h5>
+								</div>
+							</div>
+							<md-divider></md-divider>
+							<!-- User and Privilege List -->
+							<div ng-if="(modal.shareDbConfig.publishTo.users.length == 0 && modal.shareDbConfig.publishTo.userGroupsList.length == 0)"
+								style="text-align: center;">
+								<h6>This Dashboard is currently not shared with any users or groups</h6>
+							</div>
+							<div style="display:flex;flex-direction: column;height:450px;">
+								<md-list flex style="overflow-y: auto;"ng-style="{'height': modal.shareDbConfig.publishTo.excludedGroupUsers.length > 0 ? '30%' : '100%'}">
+									<md-list-item name="selectListuser_lists" multiple="multiple"
+										ng-repeat="user in modal.shareDbConfig.publishTo.users">
+										<div layout="row" class="user-row" style="align-items: center;" flex="40">
+											<i class="nt-user-icon cursor-hand" mat-tooltip="Users"
+											style="margin-right:5px; width:20px;" >account_circle</i>
+											<h5 class="primary-info ng-binding" value="{{user.id}}" mat-tooltip="{{user.userName}}"
+												style="word-wrap: break-word; overflow: hidden; max-width: 50%;white-space: nowrap;text-overflow: ellipsis;">
+												{{user.userName}}
+											</h5>
+											<h6 class="secondary-info ng-binding" > {{ user.uniqueId }} </h6>
+										</div>
+										<h5 style="text-align: center" flex="40"> {{ getPrivileges(user.id) }}</h5>
+										<md-icon style="text-align: center"  ng-class="{'cursor-hand': true, 'nt-delete-icon': true}" mat-tooltip="Revoke" ng-click="confirmDeleteUserGroup($event, user,user.userName,'dashboard');setModelWatcherStatus('shareModalDialog', false);">
+										</md-icon>
+										<md-divider></md-divider>
+									</md-list-item>
+					<!--displaying groups -->
+									<md-list-item name="selectListuser_groups" multiple="multiple"
+										ng-repeat="userGroup in modal.shareDbConfig.publishTo.userGroupsList">
+										<div layout="row" class="user-row" style="align-items: center;" flex="40">
+											<i class="nt-users-icon cursor-hand primary-info" mat-tooltip="Group"
+												style="margin-right:5px; width:20px;">group</i>
+											<h5 class="primary-info ng-binding" value="{{userGroup.id}}" mat-tooltip="{{userGroup.name}}"
+												style="word-wrap: break-word; overflow: hidden; max-width: 50%;white-space: nowrap;text-overflow: ellipsis;">
+												{{userGroup.name}}
+											</h5>
+										</div>
+										<h5 style="text-align: center" flex="40">{{ getPrivileges(userGroup.id) }}</h5>
+										<md-icon style="text-align: center"  ng-class="{'cursor-hand': true, 'nt-delete-icon': true}" mat-tooltip="Revoke" ng-click="confirmDeleteUserGroup($event, userGroup,userGroup.name,'dashboard');setModelWatcherStatus('shareModalDialog', false);">
+										</md-icon>
+										<md-divider></md-divider>
+									</md-list-item>
+								</md-list>
+								<div class="row-height"></div>
+								<!--Excluded users-->
+								<div ng-show="modal.shareDbConfig.publishTo.excludedGroupUsers.length > 0" style="height:60%;" >
+									<div class="md-list-item-text" layout="column" style="margin-top: 12px;">
+										<h5>Excluded users</h5>
+									</div>
+									<div layout="row" class="heading-row">
+										<div class="primary-info ng-binding" style="margin-left: 15px;" flex="40">
+											<h5>Users</h5>
+										</div>
+										<div class="primary-info ng-binding" style="text-align: center;" flex="40">
+											<h5>Groups</h5>
+										</div>
+										<div class="primary-info ng-binding" style="text-align: end;margin-right: 15px" flex="20">
+											<h5>Include user</h5>
+										</div>
+									</div>
+									<md-divider></md-divider>
+									<md-list id="selectListuser_lists" flex style="height: 152px;overflow-y: auto;">
+										<md-list-item name="selectListuser_lists" multiple="multiple"
+											ng-repeat="user in modal.shareDbConfig.publishTo.excludedGroupUsers">
+											<div layout="row" class="user-row" style="align-items: center;" flex="40">
+												<i class="nt-user-icon cursor-hand" mat-tooltip="Users"
+													style="margin-right:5px; width:20px;">account_circle</i>
+												<h5 class="primary-info ng-binding" value="{{user.id}}" mat-tooltip="{{user.userName}}"
+													style="word-wrap: break-word; overflow: hidden; max-width: 50%;white-space: nowrap;text-overflow: ellipsis;">
+													{{user.userName}}
+												</h5>
+											</div>
+											<h5 style="text-align: center;word-wrap: break-word; overflow: hidden; max-width: 50%;white-space: nowrap;text-overflow: ellipsis;"
+												mat-tooltip="{{user.groupName}}" flex="40">
+												{{user.groupName}}
+											</h5>
+											<md-icon style="text-align: center" >
+												<i class="nt-add-user-icon cursor-hand" mat-tooltip="Include User"
+													ng-click="includeUser(user);shareDashboardToUserGroups();setModelWatcherStatus('shareModalDialog', false);">person_add</i>
+											</md-icon>
+											<md-divider></md-divider>
+										</md-list-item>
+									</md-list>
+								</div>
+							</div>
+						</md-content>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Sharing Workspace -->
+<div id="shareWorkspaceModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false"
+	ng-if="modal.modelPopupStatus.shareWorkspaceModalDialog == true">
+	<div class="col-sm-2 col-md-4 col-lg-4"></div>
+	<div class="modal-dialog" style="width: 1100px;">
+		<div class="modal-content container-border">
+			<md-toolbar>
+				<div class="md-toolbar-tools">
+					<h2>Manage Access: {{modal.shareWorkspaceDbConfig.name}}</h2>
+					<span flex></span>
+					<md-button class="md-icon-button" data-dismiss="modal"
+						ng-click="setModelWatcherStatus('shareWorkspaceModalDialog', false); cancel()">
+						<md-icon href="javascript: void( 0 )" aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip="Close"></md-icon>
+					</md-button>
+				</div>
+			</md-toolbar>
+			<div layout="row" style="padding:0px 20px;">
+				<!-- New Publish -->
+				<div flex="60" layout="column" layout-align="start stretch">
+					<div class="row form-group">
+						<md-content class="md-padding ht100per" style="height: 505px; overflow: hidden;">
+							<div layout="row" layout-align="start center">
+								<div class="md-list-item-text" layout="column">
+									<h5>Grant permissions:</h5>
+								</div>
+								<h5 class="primary-info ng-binding" style="margin: 0px 10px;">View</h5>
+								<md-checkbox class="md-secondary" aria-label="View" ng-model="permissions.view"
+									style="margin-bottom: 0px;" ng-true-value="1" ng-false-value="0"
+									ng-change="onPermissionChange(permissions)">
+								</md-checkbox>
+								<h5 class="primary-info ng-binding" style="margin-right: 10px">Edit</h5>
+								<md-checkbox class="md-secondary" aria-label="Edit" ng-model="permissions.edit"
+									style="margin-bottom: 0px;" ng-true-value="1" ng-false-value="0"
+									ng-change="onPermissionChange(permissions)">
+								</md-checkbox>
+								<h5 class="primary-info ng-binding" style="margin-right: 10px">Execute</h5>
+								<md-checkbox class="md-secondary" aria-label="Edit" ng-model="permissions.execute"
+									style="margin-bottom: 0px;" ng-true-value="1" ng-false-value="0"
+									ng-change="onPermissionChange(permissions)">
+								</md-checkbox>
+							</div>
+							<md-tabs class="ht100per" md-selected="modal.shareWorkspaceDbConfig.selectedTab" style="height: 505px;">
+								<!-- tab1 -->
+								<md-tab label="User List">
+									<md-content class="md-padding">
+										<div id="userListTabDivision">
+											<!--  Search -->
+											<div class="" ng-click="$event.stopPropagation();">
+												<input type="text" id="publishUserSearchW"
+													ng-change="UserfilterFunction('publishUserSearchW','userlist_lists')"
+													name="user_search" class="propValue" placeholder="Search"
+													ng-model="userSearchKey">
+												<a href="javascript: void( 0 )" style="position: absolute; top: 9px; right: 5px;"
+													ng-show="userSearchKey != undefined && userSearchKey != ''"
+													ng-click="clearfilterFunction('publishUserSearchW','userlist_lists')">
+													<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+												</a>
+											</div>
+											<!--  list items -->
+											<md-content>
+												<md-list id="userlist_lists" flex>
+													<md-list-item name="userlist_lists" multiple="multiple"
+														ng-repeat="user in filtered = ( modal.shareWorkspaceDbConfig.publishNew.users | orderBy ) track by $index">
+														<div class="md-list-item-text" layout="column">
+															<h5 class="primary-info ng-binding" value="{{user.id}}">
+																{{user.userName}}</h5>
+														</div>
+														<md-checkbox class="md-secondary" aria-label="{{user.userName}}"
+															ng-model="user.published" ng-change="">
+														</md-checkbox>
+														<md-divider></md-divider>
+													</md-list-item>
+												</md-list>
+											</md-content>
+										</div>
+									</md-content>
+								</md-tab>
+								<!-- tab2 -->
+								<md-tab label="User Groups">
+									<md-content class="md-padding ht100per">
+										<div id="userGroupTabDivision">
+											<!--  Search -->
+											<div class="" ng-click="$event.stopPropagation();">
+												<input type="text" name="userGroup_searchW" id="userGroup_searchW"
+													ng-change="UserfilterFunction('userGroup_searchW','userlist_groups')"
+													class="propValue" placeholder="Search" ng-model="userGroupSearchKey">
+												<a href="javascript: void( 0 )" style="position: absolute; top: 9px; right: 5px;"
+													ng-show="userGroupSearchKey != undefined && userGroupSearchKey != ''"
+													ng-click="clearfilterFunction('userGroup_searchW','userlist_groups')">
+													<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+												</a>
+											</div>
+											<!--  list items -->
+											<md-content>
+												<md-list id="userlist_groups" flex>
+													<md-list-item name="userlist_groups" multiple="multiple"
+														ng-repeat="userGroup in filtered = ( modal.shareWorkspaceDbConfig.publishNew.userGroupsList | orderBy )">
+														<div class="md-list-item-text" layout="column">
+															<h5 class="primary-info ng-binding" value="{{userGroup.id}}">
+																{{userGroup.name}}</h5>
+														</div>
+														<md-checkbox class="md-secondary" aria-label="{{userGroup.name}}"
+															ng-model="userGroup.published" ng-change="">
+														</md-checkbox>
+														<md-divider></md-divider>
+													</md-list-item>
+												</md-list>
+											</md-content>
+										</div>
+									</md-content>
+								</md-tab>
+								<!-- tab3 -->
+								<md-tab label="Exclude User" ng-click="getWorkspaceExcludeUsersFromGroupList()">
+									<md-content class="md-padding ht100per">
+										<div id="excludeUserTabDivision">
+											<!--  Search -->
+											<div class="" ng-click="$event.stopPropagation();">
+												<input type="text" name="excludeUser_searchW" id="excludeUser_searchW"
+													ng-change="UserfilterFunction('excludeUser_searchW','listexclude_users')"
+													class="propValue" placeholder="Search" ng-model="excludeUserSearchKey">
+												<a href="javascript: void( 0 )" style="position: absolute; top: 9px; right: 5px;"
+													ng-show="excludeUserSearchKey != undefined && excludeUserSearchKey != ''"
+													ng-click="clearfilterFunction('excludeUser_searchW','listexclude_users')">
+													<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+												</a>
+											</div>
+											<!--  list items -->
+											<md-content>
+												<md-list id="listexclude_users">
+													<md-list-item name="listexclude_users" multiple="multiple"
+														ng-repeat="excludeUser in filtered = ( modal.shareWorkspaceDbConfig.publishNew.excludeUsers | orderBy )">
+														<div class="md-list-item-text" layout="column">
+															<h5 class="primary-info ng-binding" value="{{excludeUser.id}}">
+																{{excludeUser.userName}}</h5>
+															<h6 class="secondary-info ng-binding" > {{ excludeUser.uniqueId }} </h6>
+														</div>
+														<md-checkbox class="md-secondary" aria-label="{{excludeUser.userName}}"
+															ng-model="excludeUser.published" ng-change=""></md-checkbox>
+														</md-checkbox>
+														<md-divider></md-divider>
+													</md-list-item>
+												</md-list>
+											</md-content>
+										</div>
+									</md-content>
+								</md-tab>
+							</md-tabs>
+						</md-content>
+					</div>
+					<!--New Publish buttons-->
+					<md-dialog-actions layout="row">
+						<span flex="" class="flex"></span>
+						<md-button class="md-raised md-default"
+							ng-click="shareWorkspaceDashboardToUserGroups();">Share</md-button>
+						<md-button data-dismiss="modal" class="md-raised md-primary"
+							ng-click="setModelWatcherStatus('shareWorkspaceModalDialog', false);">Cancel</md-button>
+					</md-dialog-actions>
+				</div>
+				<!-- Show Publish history-->
+				<div flex="40" layout="column" layout-align="start stretch" style="margin-right: 15px;">
+					<div class="row form-group">
+						<md-content class="md-padding ht100per" style="height: 505px; overflow: hidden;">
+							<div class="md-list-item-text" layout="column">
+								<h5>Granted permissions</h5>
+							</div>
+							<!-- Heading Row for Users and Privilege -->
+							<div layout="row" class="heading-row">
+								<div class="primary-info ng-binding" style="margin-left: 15px;" flex="40">
+									<h5>User / Groups</h5>
+								</div>
+								<div class="primary-info ng-binding" style="text-align: center;" flex="40">
+									<h5>Privileges</h5>
+								</div>
+								<div class="primary-info ng-binding" style="text-align: center;margin-right: 15px" flex="20">
+									<h5>Revoke</h5>
+								</div>
+							</div>
+							<md-divider></md-divider>
+							<!-- User and Privilege List -->
+							<div ng-if="(modal.shareWorkspaceDbConfig.publishTo.users.length == 0 && modal.shareWorkspaceDbConfig.publishTo.userGroupsList.length == 0)"
+								style="text-align: center;">
+								<h6>This workspace is currently not shared with any users or groups</h6>
+							</div>
+							<div style="display:flex;flex-direction: column;height:400px;">
+								<md-list id="selectListuser_lists" flex style="overflow-y: auto;"
+								ng-style="{'height': modal.shareWorkspaceDbConfig.publishTo.excludedGroupUsers.length > 0 ? '35%' : '100%'}">
+									<md-list-item name="selectListuser_lists" multiple="multiple"
+										ng-repeat="user in modal.shareWorkspaceDbConfig.publishTo.users">
+										<div layout="row" class="user-row" style="align-items: center;" flex="40">
+											<i class="nt-user-icon cursor-hand" mat-tooltip="Users"
+												style="margin-right:5px; width:20px;">account_circle</i>
+											<h5 class="primary-info ng-binding" value="{{user.id}}" mat-tooltip="{{user.userName}}"
+												style="word-wrap: break-word; overflow: hidden; max-width: 50%;white-space: nowrap;text-overflow: ellipsis;">
+												{{user.userName}}
+											</h5>
+										</div>
+										<h5 style="text-align: center" flex="40">{{getPrivileges(user.id) }}</h5>
+										<md-icon style="text-align: center" ng-class="{'cursor-hand': true, 'nt-delete-icon': true}" mat-tooltip="Revoke" ng-click="confirmDeleteUserGroup($event, user,user.userName,'workspace');setModelWatcherStatus('shareWorkspaceModalDialog', false);">
+										</md-icon>
+										
+										<md-divider></md-divider>
+									</md-list-item>
+									<md-list-item name="selectListuser_groups" multiple="multiple"
+										ng-repeat="userGroup in modal.shareWorkspaceDbConfig.publishTo.userGroupsList">
+										<div layout="row" class="user-row" style="align-items: center;" flex="40">
+											<i class="nt-users-icon cursor-hand primary-info" mat-tooltip="Group"
+												style="margin-right:5px;; width:20px;">group</i>
+											<h5 class="primary-info ng-binding" value="{{userGroup.id}}"
+												mat-tooltip="{{userGroup.name}}"
+												style="word-wrap: break-word; overflow: hidden; max-width: 50%;white-space: nowrap;text-overflow: ellipsis;">
+												{{userGroup.name}} 
+											</h5>
+										</div>
+										<h5 style="text-align: center" flex="40">{{ getPrivileges(userGroup.id) }}</h5>
+										<md-icon style="text-align: center"  ng-class="{'cursor-hand': true, 'nt-delete-icon': true}" mat-tooltip="Revoke" ng-click="confirmDeleteUserGroup($event, userGroup,userGroup.name,'workspace');setModelWatcherStatus('shareWorkspaceModalDialog', false);">
+										</md-icon>
+										<md-divider></md-divider>
+									</md-list-item>
+								</md-list>
+							<!--Exclused users list-->
+								<div ng-show="modal.shareWorkspaceDbConfig.publishTo.excludedGroupUsers.length > 0" style="height:65%;" >
+									<div class="row-height"></div>
+									<div class="md-list-item-text" layout="column">
+										<h5>Excluded Users</h5>
+									</div>
+									<div layout="row" class="heading-row">
+										<div class="primary-info ng-binding" style="margin-left: 15px;" flex="40">
+											<h5>Users</h5>
+										</div>
+										<div class="primary-info ng-binding" style="text-align: center;" flex="40">
+											<h5>Groups</h5>
+										</div>
+										<div class="primary-info ng-binding" style="text-align: end;margin-right: 15px" flex="20">
+											<h5>Include user</h5>
+										</div>
+									</div>
+									<md-divider></md-divider>
+									<md-list id="selectListuser_lists" flex style="height:55%;overflow-y: auto;">
+										<md-list-item name="selectListuser_lists" multiple="multiple"
+											ng-repeat="user in modal.shareWorkspaceDbConfig.publishTo.excludedGroupUsers">
+											<div layout="row" class="user-row" style="align-items: center;" flex="40">
+												<i class="nt-user-icon cursor-hand" mat-tooltip="Users"
+													style="margin-right:5px; width:20px;">account_circle</i>
+												<h5 class="primary-info ng-binding" value="{{user.id}}" mat-tooltip="{{user.userName}}"
+													style="word-wrap: break-word; overflow: hidden; max-width: 100%;white-space: nowrap;text-overflow: ellipsis;">
+													{{user.userName}}
+												</h5>
+											</div>
+											<h5 style="text-align: center;word-wrap: break-word; overflow: hidden; max-width: 100%;white-space: nowrap;text-overflow: ellipsis;"
+												mat-tooltip="{{user.groupName}}" flex="40">
+												{{user.groupName}}
+											</h5>
+											<md-icon style="text-align: center">
+												<i class="nt-add-user-icon cursor-hand" mat-tooltip="Include User"
+													ng-click="includeUser(user);shareWorkspaceDashboardToUserGroups();setModelWatcherStatus('shareWorkspaceModalDialog', false);">person_add</i>
+											</md-icon>
+											<md-divider></md-divider>
+										</md-list-item>
+									</md-list>
+								</div>
+							</div>
+						</md-content>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--confirming the deletion of a user group.-->
+<div id="confirmDeleteUserGroupModal" class="modal vcsmodal" ng-if="modal.modelPopupStatus.confirmDeleteUserGroupModal == true">
+    <div class="col-sm-2 col-md-4 col-lg-4"></div>
+    <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+        <div class="modal-content container-border">
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h2>{{ deleteUser_GroupModalHeader }}</h2>
+                    <span flex></span>
+                    <md-button class="md-icon-button" ng-click="closeDeleteUserGroupModal()">
+                        <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip="Close"></md-icon>
+                    </md-button>
+                </div>
+            </md-toolbar>
+            <div class="modal-Body">
+                <div class="row-height">
+                    <h5 style="padding: 0px 20px;">Do you want to revoke permissions from <strong>{{user_groupName}}</strong> ?</h5>
+                </div>
+            </div>
+            <md-dialog-actions layout="row">
+                <span flex></span>
+                <md-button class="md-raised md-default" ng-click="deleteUser_Group(user_GroupToDelete,type)">Yes</md-button>
+                <md-button class="md-raised md-primary" ng-click="closeDeleteUserGroupModal()">No</md-button>
+            </md-dialog-actions>
+        </div>
+    </div>
+</div>
+
+					            

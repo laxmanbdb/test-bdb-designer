@@ -1,0 +1,56 @@
+{
+	"DataSearch": {
+		"Properties": {
+			"Object": {
+				"componentType": "data_search",
+				"isDataSetAvailable": "false",
+				"themeType": "default-theme",
+				"enableScript": "true",
+				"referenceID": "",
+				"showContextMenu": "false",
+				"shortName": "search",
+				"objectName": "search_1",
+				"subElement": "DataSearch",
+				"globalVariableKeyAttribute": "globalkey",
+				"height": "44",
+				"percentheight": "100",
+				"y": "881",
+				"objectType": "dataSearch",
+				"percentwidth": "400",
+				"width": "500",
+				"initialVisibility": "true",
+				"showLocked": "false",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "Obj.BN863CN533TT2D4NE6EB4E194B8E",
+				"x": "662",
+				"DataSearch": {
+					"backgroundColor" : "#ffffff",
+					"bgAlpha": "1",
+					"borderThickness": "1",
+					"borderColor": "#cccccc",
+					"borderRadius": "0",
+					"showBorder": "false",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",		
+					"globalkey": "",
+					"fieldName": "Value",
+					"fieldValue": "",
+					"selectedDSId": "",
+					"searchQuery": "",
+					"associatedDSChartId": "",
+					"placeholderText": "Data Search",
+					"fontFamily": "BizvizFont",
+					"fontSize": "16",
+					"fontColor": "#000000",
+					"fontStyle": "normal",
+					"fontWeight": "normal",
+					"textDecoration": "none",
+					"panelIconFontSize": "14",
+					"panelHeight": "300"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,128 @@
+{
+	"designerHome": {
+		"name": "designerHome",
+		"steps": [{
+				"element": "#dashboardTabs > li",
+				"title": "New Dashboard",
+				"placement": "bottom",
+				"content": "Start exploring your data by adding a new dashboard."
+			}, {
+				"element": "#NEW",
+				"title": "New Workspace",
+				"placement": "right",
+				"content": "Add a new workspace which is kind of a folder.<br>Workspace stores your dashboards."
+			}, {
+				"element": "#MANAGE",
+				"title": "Manage Dashboards",
+				"placement": "right",
+				"content": "All your dashboards will stay here, you can rename, edit, publish, or delete them."
+			}, {
+				"element": "#OPN_FRM_LKL_DISK",
+				"title": "Open Dashboard",
+				"placement": "right",
+				"content": "Open a dashboard from your local disk and start editing."
+			}, {
+				"element": "#PREFERENCES",
+				"title": "User Preference",
+				"placement": "right",
+				"content": "Personalize your work area by setting background and border colors, or control notifications display."
+			}, {
+				"element": "#SAVE_AS",
+				"title": "Duplicate a Dashboard",
+				"placement": "right",
+				"content": "Save another copy of currently opened dashboard."
+			}, {
+				"element": "#HELP",
+				"title": "Help Section",
+				"placement": "right",
+				"content": "Get detailed information of chart configuration, data connectors and scripting methods."
+			}, {
+				"element": "#EXIT",
+				"title": "Exit",
+				"placement": "right",
+				"content": "Close the designer from here.<br> Do not forget to save your dashboards."
+			}
+		]
+	},
+	"designerView": {
+		"name": "designerView",
+		"steps": [{
+				"element": ".bvz-home-designer",
+				"title": "Home Page",
+				"placement": "bottom",
+				"content": "Go to home page or manage dasboards page"
+			}, {
+				"element": "#dashboardTabs",
+				"title": "Dashboards",
+				"placement": "bottom",
+				"content": "Your dashboard tab will be listed here.<br>You can open 3 dashboards at a time and switch among them"
+			}, {
+				"element": "#mainDesignerViewDiv",
+				"orphan": true,
+				"title": "Design Area",
+				"placement": "top",
+				"content": "Drag and drop component in this design area.<br>Select a component, drag and move them in this space.<br>Right click on the empty space and choose from various action to perform."
+			}, {
+				"element": "#dashboardMobileView",
+				"title": "Mobile View",
+				"placement": "bottom",
+				"content": "Create mobile view of your dashboard"
+			}, {
+				"element": "#dashboardTabletView",
+				"title": "Tablet View",
+				"placement": "bottom",
+				"content": "Create tablet view of your dashboard"
+			}, {
+				"element": "#dashboardDesktopView",
+				"title": "Desktop View",
+				"placement": "bottom",
+				"content": "Desktop view is master view of your dashboard.<br>Design your dashboard by creating data connections and connect charts with data.<br>Or arrange the components to build the desired the layout"
+			}, {
+				"element": "#exportDashboard",
+				"title": "Export Dashboard",
+				"placement": "bottom",
+				"content": "You can download your current dasboard to local disk"
+			}, {
+				"element": "#saveAsDashboard",
+				"title": "Save Another Copy",
+				"placement": "bottom",
+				"content": "Create a duplicate copy of current dashboard which can be accessible in Manage Section of Home page"
+			}, {
+				"element": "#saveDashboard",
+				"title": "Save Dashboard",
+				"placement": "bottom",
+				"content": "Save your changes to the dashboard"
+			}, {
+				"element": "#togglePreview",
+				"title": "Preview Dashboard",
+				"placement": "bottom",
+				"content": "Preview your dashboard with live data before publishing to users"
+			}, {
+				"element": "#toggleHeader",
+				"title": "Full Screen",
+				"placement": "left",
+				"content": "Design your dashboard in full screen mode"
+			}, {
+				"element": "#toggleDatasource",
+				"title": "Data Connectors",
+				"placement": "left",
+				"content": "Create a connection by Importing an Excel or by connecting to Data Services"
+			}, {
+				"element": "#toggleCompContainer",
+				"title": "Visualizations",
+				"placement": "left",
+				"content": "Browse through a huge list of data visualization components.<br>Drag and drop a chart or grid component in design area"
+			}, {
+				"element": "#toggleObjectBrowser",
+				"title": "Dashboard Objects",
+				"placement": "left",
+				"content": "Manage all your visual objects from this panel.<br> You can create a group of components to toggle their visibility.<br> Re-arrange the stack order for overlapping components"
+			}, {
+				"element": "#toggleVarWin",
+				"title": "Dashboard Scripting",
+				"placement": "left",
+				"content": "Try your hands on scripting feature and build dashboards the way you wish"
+			}
+		]
+	}
+}

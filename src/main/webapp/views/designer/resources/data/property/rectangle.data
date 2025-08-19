@@ -1,0 +1,133 @@
+{
+	"Info": [{
+		"class": "Rectangle"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "25",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "100",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "Rectangle"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Rectangle"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Rectangle"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Rectangle"
+	}],
+	"Style": [{
+		"label": "Gradient Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "",
+		"attributeName": "gradientRotation",
+		"propertyName": "Rectangle"
+	},{
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "gradients",
+		"propertyName": "Rectangle"
+	},{
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"count": 1,
+		"value": "0.5",
+		"attributeName": "alpha",
+		"propertyName": "Rectangle"
+	}, {
+		"label": "Border Thickness : ",
+		"type": "number",
+		"min": "0",
+		"max": "10",
+		"step": "1",
+		"value": "",
+		"attributeName": "borderThickness",
+		"propertyName": "Rectangle"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "10",
+		"attributeName": "borderRadius",
+		"propertyName": "Rectangle"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "",
+		"attributeName": "borderColor",
+		"propertyName": "Rectangle"
+	}]
+}

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_2945" data-name="Group 2945" transform="translate(-26.297 -223.006)">
+    <rect id="Rectangle_6930" data-name="Rectangle 6930" width="24" height="24" transform="translate(26.297 223.006)" fill="#dbdbdb" opacity="0"/>
+    <path id="Path_6424" data-name="Path 6424" d="M1429.817,231.74h-9.18v-1.4h7.78V214.119h-7.78v-1.4h9.18Z" transform="translate(-1383.666 13.276)" fill="#525252"/>
+    <path id="Icon_awesome-arrow-left" data-name="Icon awesome-arrow-left" d="M5.069,10.672l-.437.437a.471.471,0,0,1-.668,0L.135,7.282a.471.471,0,0,1,0-.668L3.964,2.786a.471.471,0,0,1,.668,0l.437.437a.473.473,0,0,1-.008.676L2.688,6.16H10.9a.472.472,0,0,1,.473.473v.63a.472.472,0,0,1-.473.473H2.688L5.061,10A.47.47,0,0,1,5.069,10.672Z" transform="translate(29.838 229.016)" fill="#525252"/>
+  </g>
+</svg>

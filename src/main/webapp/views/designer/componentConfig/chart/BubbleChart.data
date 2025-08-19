@@ -1,0 +1,325 @@
+{
+	"BubbleChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "bubble_chart",
+				"themeType": "default-theme",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "bubble",
+				"showLocked": "false",
+				"objectName": "Bubble_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "600",
+				"x": "20",
+				"height": "304",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "Bubble",
+					"showGradient": "false",
+					"bgGradients": "#ffffff",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+
+					"exportToExcel": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"exportType":"screenshot",
+
+					"showScreenShotButton": "true",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showTooltip": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"showMaximizeButton": "true",
+					"showExcelDownload": "true",
+					"showSubTitle": "false",
+					"showTitle": "true",
+					"GradientColor": "#F5F5F5,#F5F5F5",
+					"showLegends": "false",
+					"hideLegendOnStart": "true",
+					"legendDirection": "horizontal",
+					"legendfontSize": "10",
+					"legendtextDecoration": "none",
+					"legendfontStyle": "normal",
+					"legendfontColor": "#000000",
+					"legendfontFamily": "Roboto",
+					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+					"showcheckboxwithlegend": "false",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"markerColor": "#F5F5F5",
+					"markerTransparency": "0.3",
+					"showMarkerLine": "true",
+					"showVerticalMarkerLine": "false",
+					"autoaxisSetup": "true",
+					"minimumAxisValue": "-20",
+					"maximumAxisValue": "110",
+					"baseZero": "false",
+					"zeroMarkerLine": "true",
+					"zeroMarkerColor": "#be4a47",
+					"FixedLabel": "false",
+					"Formater": "Currency",
+					"Unit": "none",
+					"SignPosition": "prefix",
+					"Precision": "default",
+					"NumberFormatter": "number",
+					"SecondaryFormater": "Number",
+					"SecondaryUnit": "none",
+					"Globalkey": "",
+					"enableColorFromDrill": "false",
+					"showColorBands": "false",
+					"BandDisplayNames": "Low,Mid,High",
+					"ColorBandRanges": "45,75,100",
+					"BandColors": "#F22613,#F89406,#00B16A",
+					"BandAlphas": "0.5,0.6,0.7",
+					"ShowColorBandLegends": "false",
+					"rangedSeriesColors": "#F22613,#F89406,#00B16A",
+					"rangesOfSeries": "0~20,20~40,40~100",
+					"rangedSeriesDisplayNames": "Low,Mid,High",
+					"showDynamicRange": "false",
+					"maxRangeColor": "#00b16a",
+					"minRangeColor": "#f89406",
+					"ChartBase": "gradient",
+					"luminance": "0.5",
+					"shadowVisible": "false",
+					"transparency": "0.5",
+					"SolidColorFill": "false",
+					"xAxis": {
+						"ShowLineXAxis": "true",
+						"LineXAxisColor": "#bbbbbb",
+						"Description": "xAxis Title",
+						"LabelFontWeight": "normal",
+						"FontSize": "10",
+						"LabelFontColor": "#808080",
+						"LabelFontStyle": "normal",
+						"TextDecoration": "none",
+						"LabelFontFamily": "Roboto",
+						"Labelrotation": "90",
+						"LabelTilted": "false",
+						"FontColor": "#808080",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "11",
+						"FontStyle": "normal",
+						"FontFamily": "Roboto",
+						"FontWeight": "normal",
+						"TickMarks": "true",
+						"CategoryMarkingColor": "#cccccc"
+					},
+					"yAxis": {
+						"ShowLineYAxis": "false",
+						"LineYAxisColor": "#808080",
+						"Description": "yAxis Title",
+						"rightaxisFormater": "false",
+						"LabelFontWeight": "normal",
+						"FontStyle": "normal",
+						"LabelFontColor": "#808080",
+						"FontFamily": "Roboto",
+						"TextDecoration": "none",
+						"LabelFontStyle": "normal",
+						"LabelFontFamily": "Roboto",
+						"FontColor": "#808080",
+						"SecondDiscription": "yaxis",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "10",
+						"FontSize": "11",
+						"leftaxisFormater": "true",
+						"FontWeight": "normal"
+					},
+					"Title": {
+						"FontWeight": "bold",
+						"Description": "Year wise Expense & Revenue",
+						"FontSize": "11",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "Roboto",
+						"FontColor": "#808080",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"TitleBarHeight": "40"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "SubTitle",
+						"showSubTitle": "false",
+						"FontSize": "10",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "Roboto",
+						"FontColor": "#808080",
+						"FontStyle": "italic"
+					},
+					"ConditionalColors": {
+						"ConditionalColor": []
+					},
+					"CategoryColors": {
+						"categoryDefaultColor": "",
+						"categoryDefaultColorSet": "",
+						"showColorsFromCategoryName": "false",
+						"CategoryColor": []
+					}
+				}
+			}
+		},
+		"Fields": [{
+				"DisplayName": "Year",
+				"Type": "Category",
+				"visible": "true",
+				"PlotRadius": "0",
+				"Name": "Year",
+				"Color": "#fcdb96",
+				"axis": "none",
+				"Precision": "0",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "Expense",
+				"Type": "Series",
+				"visible": "true",
+				"PlotRadius": "0",
+				"Name": "Expense",
+				"Color": "#2382b5",
+				"axis": "none",
+				"Precision": "0",
+				"PlotTransparency": "1",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "Revenue",
+				"Type": "Series",
+				"visible": "true",
+				"PlotRadius": "0",
+				"Name": "Revenue",
+				"Color": "#cccccc",
+				"axis": "none",
+				"Precision": "0",
+				"PlotTransparency": "1",
+				"ChartType": "none"
+			}
+		],
+		"Data": [{
+				"Year": 1,
+				"Expense": 48,
+				"Revenue": 50
+			},
+			{
+				"Year": 2,
+				"Expense": 41,
+				"Revenue": 43
+			},
+			{
+				"Year": 3,
+				"Expense": 60,
+				"Revenue": 54
+			},
+			{
+				"Year": 4,
+				"Expense": 78,
+				"Revenue": 56
+			},
+			{
+				"Year": 5,
+				"Expense": 70,
+				"Revenue": 56
+			},
+			{
+				"Year": 6,
+				"Expense": 43,
+				"Revenue": 45
+			},
+			{
+				"Year": 7,
+				"Expense": 53,
+				"Revenue": 56
+			},
+			{
+				"Year": 8,
+				"Expense": 45,
+				"Revenue": 47
+			},
+			{
+				"Year": 9,
+				"Expense": 57,
+				"Revenue": 62
+			},
+			{
+				"Year": 10,
+				"Expense": 40,
+				"Revenue": 34
+			},
+			{
+				"Year": 11,
+				"Expense": 78,
+				"Revenue": 87
+			},
+			{
+				"Year": 12,
+				"Expense": 57,
+				"Revenue": 65
+			},
+			{
+				"Year": 13,
+				"Expense": 45,
+				"Revenue": 45
+			},
+			{
+				"Year": 14,
+				"Expense": 38,
+				"Revenue": 35
+			},
+			{
+				"Year": 15,
+				"Expense": 58,
+				"Revenue": 60
+			},
+			{
+				"Year": 16,
+				"Expense": 78,
+				"Revenue": 75
+			},
+			{
+				"Year": 17,
+				"Expense": 28,
+				"Revenue": 40
+			},
+			{
+				"Year": 18,
+				"Expense": 65,
+				"Revenue": 46
+			}
+		]
+	}
+}

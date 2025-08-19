@@ -1,0 +1,2145 @@
+<div class="bizVizDashboardContainer">
+    <div class="dashboardContents tab-content" id="mainDesignerViewDiv">
+        <div class="selectable-wrapper full-size tab-pane active" jq-selectable="dashboardSelectConfig" ng-repeat="dashboard in modal.dashboardTabs">
+            <div sglclick="true || dashboardBodyClickHandler( dashboard.id );" id="{{dashboard.id}}" ng-if="dashboard.responsive != true" class="draggablesParentDiv dashboard-area ng-pristine ng-valid ui-droppable" data-drop="true" ng-drop="true" jq-resizable="dashboardResizeConfig" ng-drop-success="onDropComplete($data,$event)" aria-disabled="false"></div>
+            <div class="responside-dashboard container-fluid draggablesParentDiv tab-pane active" bvz-responsive id="{{dashboard.id}}" ng-if="dashboard.responsive == true" ng-repeat="dashboard in modal.dashboardTabs">
+                {{dashboard.id}}</div>
+            <div id="templeteContainer" style="display: none"></div>
+        </div>
+        <div class="col-lg-12 col-md-12 default-window-status">
+            <div ng-hide="modal.dashboardTabs.length > 0">
+                <h4>Create a new dashboard by clicking `+` icon !</h4>
+            </div>
+        </div>
+    </div>
+    <div class="rw-container">
+        <biz-comp-container class="ht100per"></biz-comp-container>
+        <biz-property-palette class="ht100per"></biz-property-palette>
+        <biz-object-browser-container class="ht100per"></biz-object-browser-container>
+        <biz-data-source-container class="ht100per" style="width: 100%"></biz-data-source-container>
+        <biz-dataset-container class="ht100per"></biz-dataset-container>
+        <biz-script-container class="ht100per"></biz-script-container>
+        <biz-fn-container class="ht100per"></biz-fn-container>
+    </div>
+    <div id="saveDbModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.saveDbModalDialog == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Save Dashboard</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="setModelWatcherStatus('saveDbModalDialog', false); cancel()">
+                            <md-icon aria-label="Close dialog">
+                                <i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height sub-section">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <span>Dashboard Name</span>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <input type="text" spellcheck="false" maxLength="50" class="propValue" id="dashboardName" ng-blur="reSetModal()" ng-change="syncDbNameWithTabName( modal.selectedDashboard.id )" ng-model="modal.selectedDashboard.name" ng-pattern-restrict="^[A-Za-z0-9 ~`!@#$%^&()_+;,.]*$" />
+                        </div>
+                    </div>
+                    <div class="row-height sub-section"  ng-if="modal.wsObj.wsList.length != 0">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <span>Workspace</span>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="paddingNull col-sm-10 col-md-10 col-lg-10">
+                                <md-input-container class="selectClass fullWidth propValue">
+                                    <md-select ng-model="modal.selectedWorkspaceIdForSave" aria-label="option" class="selectPos">
+                                        <md-option ng-repeat="ws in modal.wsObjForSave.wsList" ng-value="ws.dashboardId">
+                                            {{ws.dashboardName}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <span class="refresh-btn-icon-container">
+                        	        <i ng-click="refreshWorkSpaceList();" class="material-icons cursor-hand" mat-tooltip = "Refresh">refresh</i>
+<!--                         	        <md-tooltip md-direction="top">Reload</md-tooltip> -->
+                           	 	</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-height sub-section" ng-if="modal.wsObj.wsList.length == 0">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <span>New Workspace</span>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <input type="text" spellcheck="false" maxLength="50" class="propValue" id="dashboardName" ng-blur="reSetModal()" ng-model="modal.newWorkspaceName" ng-pattern-restrict="^[A-Za-z0-9 ~`!@#$%^&()_+;,.]*$" />
+                        </div>
+                    </div>
+                </div>
+
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+
+                    <md-button type="button" class="md-raised md-default" data-dismiss="modal" ng-click="setModelWatcherStatus('saveDbModalDialog', false); exportCurrentDashboard()">
+                        Export
+                    </md-button>
+                    <md-button type="button" class="md-raised md-default" ng-click="setModelWatcherStatus('saveDbModalDialog', false); createNewDashboardInDB()">
+                        Save
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('saveDbModalDialog', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+    
+    <div id="saveAsModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.saveAsModalDialog == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Save As</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="setModelWatcherStatus('saveAsModalDialog', false); cancel()">
+                            <md-icon aria-label="Close dialog">
+                                <i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height sub-section">
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <span>Name</span>
+                        </div>
+                        <div class="col-sm-6 col-md-8 col-lg-9">
+                            <input type="text" spellcheck="false" maxLength="50" class="propValue" id="saveAsdashboardName" ng-model="modal.saveAsDashboardName" ng-pattern-restrict="^[A-Za-z0-9 ~`!@#$%^&()_+;,.]*$" />
+                        </div>
+                    </div>
+                    <div class="row-height sub-section">
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <span>Workspace</span>
+                        </div>
+                        <div class="col-sm-6 col-md-8 col-lg-9">
+                            <div class="paddingNull col-sm-10 col-md-10 col-lg-10">
+                                <md-input-container class="selectClass fullWidth propValue">
+                                    <md-select ng-model="modal.selectedWorkspaceIdForSave" aria-label="option" class="selectPos">
+                                        <md-option ng-repeat="ws in modal.wsObjForSave.wsList" ng-value="ws.dashboardId">
+                                            {{ws.dashboardName}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <span class="refresh-btn-icon-container">
+                            		<span
+                        	      	class="refresh-btn-icon-container">
+	                            		<i ng-click="refreshWorkSpaceList();" class="material-icons cursor-hand" mat-tooltip = "Reload">refresh</i>
+<!--              	                       <md-tooltip md-direction="top">Reload</md-tooltip> -->
+                                	</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-default" ng-click="setModelWatcherStatus('saveAsModalDialog', false); saveCopyOfDashboardAsInDB();">
+                        Save
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('saveAsModalDialog', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+    
+    <div id="newWorkspaceModal" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.newWorkspaceModal == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>New workspace</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="setModelWatcherStatus('newWorkspaceModal', false); ; modal.newWorkspaceName='Untitled Workspace'; cancel()">
+                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip = "Close">
+                                <!--<i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>-->
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height"></div>
+                    <div class="row-height sub-heading">
+                        <div class="col-sm-3 col-md-3 cl-lg-3">
+                            <span>Name</span>
+                        </div>
+                        <div class="col-sm-9 col-md-9 col-lg-9">
+                            <input type="text" spellcheck="false" maxLength="50" class="propValue" id="workspaceName" ng-model="modal.newWorkspaceName" ng-pattern-restrict="^[A-Za-z0-9 ~`!@#$%^&()_+;,.]*$" />
+                        </div>
+                    </div>
+                    <div class="row-height"></div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+
+                    <md-button type="button" class="md-raised md-default" data-dismiss="modal vcsmodal" ng-click="setModelWatcherStatus('newWorkspaceModal', false); createNewWorkspace()">
+                        Save
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('newWorkspaceModal', false);modal.newWorkspaceName='Untitled Workspace';">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+    <div id="closeAndSaveDbModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.closeAndSaveDbModalDialog == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border modal-container">
+                <md-toolbar class="">
+                    <div class="md-toolbar-tools noPadding">
+                        <h2 >Close Dashboard</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="setModelWatcherStatus('closeAndSaveDbModalDialog', false); cancel()">
+                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand icon-color" mat-tooltip = "Close">
+                                <!--<i class="material-icons cursor-hand icon-color" mat-tooltip = "Close">close</i>-->
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height" ng-show="!saveDashboardBeforeClose"></div>
+                    <div class="row-height">
+                        <div class="col-sm-6 col-md-6 col-lg-6 ">
+                            <span>Save this dashboard</span>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <input ng-model="saveDashboardBeforeClose" type="checkbox" class="propValue" />
+                        </div>
+                    </div>
+                    <div class="row-height" ng-show="saveDashboardBeforeClose">
+                        <div class="col-sm-6 col-md-4 col-lg-3 ">
+                            <span>Name</span>
+                        </div>
+                        <div class="col-sm-6 col-md-8 col-lg-9">
+                            <input type="text" spellcheck="false" maxLength="50" class="propValue md-textStyle" id="dashboardName" ng-change="syncDbNameWithTabName( modal.dashboardToClose.id )" ng-model="modal.dashboardToClose.name" />
+                        </div>
+                    </div>
+                    <div class="row-height" ng-show="saveDashboardBeforeClose">
+                        <div class="col-sm-6 col-md-4 col-lg-3 ">
+                            <span>Workspace</span>
+                        </div>
+                        <div class="col-sm-6 col-md-8 col-lg-9 md-textStyle">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedWorkspace" aria-label="option" class="selectPos">
+                                    <md-option ng-repeat="ws in modal.wsObj.wsList" ng-value="ws">
+                                        {{ws.dashboardName}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                    </div>
+                    <div class="row-height" ng-show="!saveDashboardBeforeClose"></div>
+                </div>
+
+                <md-dialog-actions layout="row" class="md-footer">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" ng-show="saveDashboardBeforeClose" class="md-raised md-default box-shadow" ng-click="setModelWatcherStatus('closeAndSaveDbModalDialog', false); closeModelDashboardResponse(modal.dashboardToClose.dashboardExistInDatabase)">
+                        Save & Close
+                    </md-button>
+                    <md-button type="button" ng-show="!saveDashboardBeforeClose" class="md-raised md-default box-shadow" ng-click="setModelWatcherStatus('closeAndSaveDbModalDialog', false); closeModelDashboardResponse('close')">
+                        Close
+                    </md-button>
+                    <md-button type="button" class="md-raised box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('closeAndSaveDbModalDialog', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+    
+    <div id="previewThemeTemplateModal" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.previewThemeTemplateModal == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+            	<md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Preview Theme</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog">
+                                <i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height">
+                        <div class="col-sm-12 col-md-12 cl-lg-12">
+                            <span>Click on Preview to see the '{{previewOrEditThemeObj.name}} Theme' template</span>
+                        </div>
+                    </div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+					<md-button type="button" class="md-raised md-default" data-dismiss="modal" ng-click="setModelWatcherStatus('previewThemeTemplateModal', false); previewOrEditThemeUrlFromWelcomePage($event, true);">
+                        Preview
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('previewThemeTemplateModal', false); previewOrEditThemeUrlFromWelcomePage($event, false);">
+                        Use this template
+                    </md-button>
+                    <md-button type="button" class="md-raised md-warn" data-dismiss="modal" ng-click="setModelWatcherStatus('previewThemeTemplateModal', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+
+    <div id="templateSelection" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.templateSelection == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Select Template</h2>
+                    </div>
+                </md-toolbar>
+                <div class="modal-body">
+                    <div class="row d-form-line">
+                        <div class="col-md-2" ng-repeat="tp in modal.responsiveTemplates track by $index">
+                            <a href="#" class="thumbnail template-image" ng-click="createNewResponsiveDashboard( tp )">
+                                <img
+                                ng-if="tp.tIconImagePath == '' && tp.tIconClass == ''"
+                                ng-src="./images/template.png" alt="">
+                                <img ng-if="tp.tIconImagePath != ''"
+                                ng-src="{{tp.tIconImagePath}}" alt="">
+                                <i
+                                ng-if="tp.tIconClass != '' && tp.tIconImagePath == ''"
+                                class="{{tp.tIconClass}}"></i> <span
+                                class="template-name"
+                                title="{{ tp.tName }}">{{
+                                    tp.tName }}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-warn" data-dismiss="modal" ng-click="setModelWatcherStatus('templateSelection', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+
+    <div id="copyComponentJsonModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.copyComponentJsonModalDialog == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Copy component Json</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog">
+                                <i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="custom-textbox-container-JsonData">
+                        <form role="form">
+                            <textarea class="custom-text-area-jsonData" spellcheck="false" wrap="off">
+								{{selectedComponentJSON}}
+							</textarea>
+                        </form>
+                    </div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-warn" data-dismiss="modal" ng-click="setModelWatcherStatus('copyComponentJsonModalDialog', false);">
+                        Close
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteCompConfirmation" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.deleteCompConfirmation == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border modal-container">
+                <md-toolbar class="">
+                    <div class="md-toolbar-tools noPadding">
+                        <h2 >Delete Component(s)</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" data-dismiss="modal" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand icon-color" mat-tooltip = "Close"><!--<i class="material-icons cursor-hand icon-color" mat-tooltip = "Close">close</i>-->
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height"></div>
+                    <div class="row-height">
+                        <span class="col-sm-12 col-md-12 col-lg-12 ">
+                			Do you want to delete the selected component(s)?
+                		</span>
+                    </div>
+                    <div class="row-height"></div>
+                </div>
+                <md-dialog-actions layout="row" class="md-footer">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-default box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteCompConfirmation', false); handleAlertConfirmation( $event, 'DEL-COMP' )">
+                        Yes
+                    </md-button>
+                    <md-button type="button" class="md-raised box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteCompConfirmation', false); handleAlertConfirmation( $event, 'NO' )">
+                        No
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteSelectedCompConfirmation" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.deleteSelectedCompConfirmation == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border modal-container">
+                <md-toolbar class="">
+                    <div class="md-toolbar-tools noPadding">
+                        <h2 >Delete Component(s)</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" data-dismiss="modal" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog"><i class="material-icons cursor-hand icon-color" mat-tooltip = "Close">close</i>
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height"></div>
+                    <div class="row-height">
+                        <span class="col-sm-12 col-md-12 col-lg-12 ">
+                			Do you want to delete selected components(s) ?
+                		</span>
+                    </div>
+                    <div class="row-height"></div>
+                </div>
+                <md-dialog-actions layout="row" class="md-footer">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-default box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteSelectedCompConfirmation', false); handleAlertConfirmation( $event, 'DEL-ALL-COMP' )">
+                        Yes
+                    </md-button>
+                    <md-button type="button" class="md-raised box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteSelectedCompConfirmation', false); handleAlertConfirmation( $event, 'NO' )">
+                        No
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteAllCompConfirmation" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.deleteAllCompConfirmation == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border modal-container">
+                <md-toolbar class="">
+                    <div class="md-toolbar-tools noPadding">
+                        <h2 >Delete Component(s)</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" data-dismiss="modal" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog"><i class="material-icons cursor-hand icon-color" mat-tooltip = "Close">close</i>
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height"></div>
+                    <div class="row-height">
+                        <span class="col-sm-12 col-md-12 col-lg-12 ">
+                    		Do you want to delete the selected component(s)?
+                    	</span>
+                    </div>
+                    <div class="row-height"></div>
+                </div>
+                <md-dialog-actions layout="row" class="md-footer">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-default box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteAllCompConfirmation', false); handleAlertConfirmation( $event, 'DEL-ALL-COMP' )">
+                        Yes
+                    </md-button>
+                    <md-button type="button" class="md-raised box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteAllCompConfirmation', false); handleAlertConfirmation( $event, 'NO' )">
+                        No
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+    
+   	 <div id="deleteAllCompConfirmationFromManageDashPallete" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.deleteAllCompConfirmationFromManageDashPallete == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border modal-container">
+                <md-toolbar class="">
+                    <div class="md-toolbar-tools noPadding">
+                        <h2 >Delete Component(s)</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" data-dismiss="modal" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand icon-color" mat-tooltip = "Close"><!--<i class="material-icons cursor-hand icon-color" mat-tooltip = "Close">close</i>-->
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height"></div>
+                    <div class="row-height">
+                        <span class="col-sm-12 col-md-12 col-lg-12 ">
+                    		Do you want to delete the selected component(s)?
+                    	</span>
+                    </div>
+                    <div class="row-height"></div>
+                </div>
+                <md-dialog-actions layout="row" class="md-footer">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-default box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteAllCompConfirmationFromManageDashPallete', false); handleAlertConfirmation( $event, 'DEL-ALL-COMP' )">
+                        Yes
+                    </md-button>
+                    <md-button type="button" class="md-raised box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteAllCompConfirmationFromManageDashPallete', false); handleAlertConfirmation( $event, 'NO' ); deselectAllComponent()">
+                        No
+                    </md-button>
+                </md-dialog-actions>
+               
+            </div>
+        </div>
+    </div>
+    
+    <div id="deleteConnConfirmation" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.deleteConnConfirmation == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border modal-container">
+                <md-toolbar class="">
+                    <div class="md-toolbar-tools noPadding">
+                        <h2 >Delete Connection</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" data-dismiss="modal" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip = "Close"><!--<i class="material-icons cursor-hand icon-color" mat-tooltip = "Close">close</i> -->
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height"></div>
+                    <div class="row-height">
+                        <span class="col-sm-12 col-md-12 col-lg-12 ">Do you want to delete this connection?</span>
+                    </div>
+                    <div class="row-height"></div>
+                </div>
+
+                <md-dialog-actions layout="row" class="md-footer">
+                    <span flex="" class="flex"></span>
+
+                    <md-button type="button" class="md-raised md-default box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteConnConfirmation', false); handleAlertConfirmation( $event, 'DEL-CONN' )">
+                        Yes
+                    </md-button>
+                    <md-button type="button" class="md-raised box-shadow" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteConnConfirmation', false); handleAlertConfirmation( $event, 'NO' )">
+                        No
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+
+    <div id="deleteCalcFieldConfirmation" class="vcsmodal modal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.deleteCalcFieldConfirmation == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Delete Calculated Field</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip = "Close"><!--<i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>-->
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height"></div>
+                    <div class="row-height">
+                        <span class="col-sm-12 col-md-12 col-lg-12">Do you want to delete this Field ?</span>
+                    </div>
+                    <div class="row-height"></div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+
+                    <md-button type="button" class="md-raised md-default" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteCalcFieldConfirmation', false); handleCalcFieldDeleteAlertConfirmation( $event, 'DEL-CAlCFIELD' )">
+                        Yes
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteCalcFieldConfirmation', false); handleCalcFieldDeleteAlertConfirmation( $event, 'NO' )">
+                        No
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+
+    <div id="customAlertColortWindow" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" role="dialog" ng-if="modal.modelPopupStatus.customAlertColortWindow == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Custom Properties [{{selectedField.name}} ]</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog"><i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="customAlertControlsWrapper">
+                        <div class="row-height modalBdrBtm sub-heading">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <span>Alert type</span>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customAlertPropertiesJson.alertType.value" aria-label="AlertType" name="AlertType" class="selectPos propValue">
+                                        <md-option ng-repeat="opt in customAlertPropertiesJson.alertType.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                            <div ng-if="customAlertPropertiesJson.alertType.value!='colorfill' && customAlertPropertiesJson.alertType.value!='textcolor'">
+                                <div class="col-sm-2 col-md-2 col-lg-2">Position</div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <md-input-container class="selectClass fullWidth">
+                                        <md-select ng-model="customAlertPropertiesJson.alertPosition.value" aria-label="AlertPosition" name="AlertPosition" class="selectPos propValue">
+                                            <md-option ng-repeat="alertPos in customAlertPropertiesJson.alertPosition.options" ng-value="alertPos.key">
+                                                {{alertPos.value}}
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+                            </div>
+                        </div>
+                           
+                        <div class="row-height modalBdrBtm sub-section" ng-show="customAlertPropertiesJson.alertType.value!='arrow' && customAlertPropertiesJson.alertType.value != 'colorfill' && customAlertPropertiesJson.alertType.value != 'textcolor'  && customAlertPropertiesJson.alertType.value != 'bar'">
+                    
+                        <div >
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <span>Alert Size</span>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" class="propValue NumericOnly" min="8" max="20" onkeypress="return checkValidNumber(event)" style="border: hidden; width: 100%;"  ng-disabled="false" ng-model="customAlertPropertiesJson.alertSize.value" />
+                                
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row-height modalBdrBtm sub-section">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <span>Fixed Value Comparison</span>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <input type="checkbox" ng-click="onChangeCompareValue()" ng-model="customAlertPropertiesJson.fixedValueCompare.value" />
+                            </div>
+                            <div ng-show="customAlertPropertiesJson.fixedValueCompare.value">
+                                <div class="col-sm-2 col-md-2 col-lg-2">
+                                    <span>Value</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <input type="number" class="propValue" ng-change="onChangeCompareValue()" ng-model="customAlertPropertiesJson.fixedValue.value">
+                                </div>
+                            </div>
+                            <div ng-show="!customAlertPropertiesJson.fixedValueCompare.value">
+                                <div class="col-sm-2 col-md-2 col-lg-2">
+                                    <span>Column</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <md-input-container class="selectClass fullWidth">
+                                        <md-select ng-model="customAlertPropertiesJson.compareColumn.value" aria-label="AlertPosition" class="selectPos" ng-change="onChangeCompareValue()">
+                                            <md-option ng-repeat="opt in customAlertPropertiesJson.compareColumn.options" ng-value="opt.name">
+                                                {{opt.name}}
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin:20px;">
+                            <div class="row-height modalBdrBtm containerHeader">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Column</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Operator</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Value</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Color</span>
+                                </div>
+                            </div>
+                            <div class="customAlertBodyContainer">
+                                <div>
+                                    <div class="row-height modalBdrBtm" ng-repeat="comp in numeralComparision">
+                                        <div class="col-sm-3 col-md-3 col-lg-3">
+                                            <label class="label-font">
+                                                {{comp.AlertColumn}}
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3 col-lg-3">
+                                            <label class="label-font">
+                                                {{comp.Operator}} 
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3 col-lg-3">
+                                            <label class="label-font">
+                                                {{comp.CompareColumn}}
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-3 col-md-3 col-lg-3">
+                                            <input type="color" class="propValue cursor-hand" ng-model="comp.AlertColor" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+
+                    <md-button type="button" class="md-raised md-default" data-dismiss="modal" ng-click="setModelWatcherStatus('customAlertColortWindow', false); updateAlertColor()">
+                        Save
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('customAlertColortWindow', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+    <div id="customCellMergeWindow" class="modal vcsmodal ng-scope show" data-backdrop="static" data-keyboard="false" ng-if="modal.modelPopupStatus.customCellMergeWindow == true" style="display: block;" aria-modal="true" role="dialog">
+    <div class="col-sm-2 col-md-4 col-lg-4"></div>
+    <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+        <div class="modal-content container-border">
+            <md-toolbar class="_md _md-toolbar-transitions">
+                <div class="md-toolbar-tools">
+                    <h2 class="ng-binding">Cell Merge Properties [ {{selectedField.name}} ]</h2>
+                    <span flex="" class="flex"></span>
+                    <button class="md-icon-button md-button md-ink-ripple" type="button" ng-transclude="" data-dismiss="modal" ng-click="setModelWatcherStatus('customCellMergeWindow', false); cancel()">
+                        <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand ng-scope material-icons" mat-tooltip="Close">
+                           <!-- <i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>-->
+                        </md-icon>
+                    </button>
+                </div>
+            </md-toolbar>
+            <div class="modal-Body">
+                <div class="row-height modalBdrBtm containerHeader">
+                    <div class="col-sm-3 col-md-3 col-lg-3" style="display: flex; align-items: center; flex-direction: column;">
+                        <span>Row Index</span>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3" style="display: flex; align-items: center; flex-direction: column;">
+                        <span>Row Span</span>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3" style="display: flex; align-items: center; flex-direction: column;">
+                        <span>Col Span</span>
+                    </div>
+                    <div class="col-sm-3 col-md-3 col-lg-3" style="display: flex; align-items: center; flex-direction: column;">
+                        <span>
+							<i class="material-icons cursor-hand" ng-click="deleteAllCellMerge();" mat-tooltip="Delete All" role="button" tabindex="0">delete</i>
+						</span>
+                    </div>
+                </div>
+                    <div>
+                    <div class="tableContainer">
+                        <div class="row-height modalBdrBtm" ng-repeat="comp in cellMergeArray">
+                            <div class="col-sm-3 col-md-3 col-lg-3" style="display: flex; align-items: center; flex-direction: column;">
+                                <input style="text-align:center;"  class="propValue" type="text" spellcheck="false" placeholder="Row Index" ng-model="comp.index" value="comp.index" />
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3" style="display: flex; align-items: center; flex-direction: column;">
+                                <input style="text-align:center;" class="propValue" type="text" spellcheck="false" placeholder="Row Span" ng-model="comp.rowspan" value="comp.rowspan" />
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3" style="display: flex; align-items: center; flex-direction: column;">
+                                <input style="text-align:center;" class="propValue" type="text" spellcheck="false" placeholder="Column Span" ng-model="comp.colspan" value="comp.colspan" />
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3" style="display: flex; align-items: center; flex-direction: column;">
+                                <span>
+                            		<i class="material-icons cursor-hand"
+                                		ng-model="comp.Delete"
+                                	    ng-click="deleteCellMerge(comp);" mat-tooltip = "Delete">delete
+                                	</i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-Body">
+			<div class="row-height">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						<b>Attention !!</b> 
+					</div>
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						MergeCells only visible when rowspan or colspan > 1. This will merges to the next N - 1 visible fields.
+					</div>
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						<b>Please don't merge cells that already contain a merge.</b>
+					</div>
+				</div>
+				<div class="row-height"></div>
+			</div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex">
+                    <md-button type="button" class="md-raised md-default" ng-click="addCellMergeRow()">
+                    	    <i class="material-icons cursor-hand add-align"  mat-tooltip = "Add Row">add</i>
+<!--            	        	   	<md-tooltip md-direction="top">Add Range</md-tooltip> -->
+							<span class="add-align add-padding">Add Row</span>
+                    </md-button>
+                    </span>
+                    <md-button type="button" class="md-raised md-default" data-dismiss="modal" ng-click="setModelWatcherStatus('customDataLabelWindow', false); updateCellMergePropertiesJson()">
+                        Save
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('customDataLabelWindow', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div id="customDataLabelWindow" class="vcsmodal modal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" role="dialog" ng-if="modal.modelPopupStatus.customDataLabelWindow == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Data Label Properties [ {{selectedField.name}} ]</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip = "Close"><!-- <i class="material-icons cursor-hand" mat-tooltip = "Close">close</i> -->
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body" style="max-height:550px;overflow:auto;">
+                    <div class="row-height" ng-if="!customDataLabelProperty.showDataLabel.value"></div>
+                    <div class="row-height modalBdrBtm">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <span>Show Data Label</span>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <input type="checkbox" ng-model="customDataLabelProperty.showDataLabel.value" />
+                        </div>
+                    </div>
+                    <div class="customAlertControlsWrapper" ng-if="customDataLabelProperty.showDataLabel.value">
+                        
+                        <div class="row-height modalBdrBtm">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Hide Data Label</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <input type="checkbox" ng-model="customDataLabelProperty.hideDataLabel.value" />
+                            </div>
+                            </div>
+                        
+                        <div class="row-height modalBdrBtm" ng-if="customDataLabelProperty.hideDataLabel.value">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <span>Hide Data Label Value</span>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                        <input type="text" class="propValue" ng-model="customDataLabelProperty.hideDataLabelText.value"> 
+                        </div>
+                    	</div>
+                        
+                        
+                        <div class="row-height modalBdrBtm" ng-if="(component.componentType !== 'pie_chart') && (component.objectType !== 'funnel') && (component.componentType !== 'mitoplot_chart')">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Text Align</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.dataLabelTextAlign.value" class="selectPos" aria-label="dataLabelTextAlign" name="dataLabelTextAlign">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.dataLabelTextAlign.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="row-height modalBdrBtm" ng-if="(component.componentType !== 'pie_chart') && (component.objectType !== 'funnel') && (component.componentType !== 'mitoplot_chart')">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Rotation</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.dataLabelRotation.value" class="selectPos" aria-label="dataLabelRotation" name="dataLabelRotation">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.dataLabelRotation.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Font Size</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <bvz-number-spinner onkeypress="return checkValidNumber(event)" ng-model="customDataLabelProperty.dataLabelFontSize.value" bvz-step="prop.step" bvz-max="24" bvz-min="1">
+                                </bvz-number-spinner>
+                            </div>
+                        </div>
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Font Style</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.datalabelFontStyle.value" class="selectPos" aria-label="datalabelFontStyle" name="datalabelFontStyle">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.datalabelFontStyle.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Font Weight</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.datalabelFontWeight.value" class="selectPos" aria-label="datalabelFontWeight" name="datalabelFontWeight">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.datalabelFontWeight.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Font Family</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.datalabelFontFamily.value" class="selectPos" aria-label="datalabelFontFamily" name="datalabelFontFamily">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.datalabelFontFamily.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="row-height modalBdrBtm" ng-if="(component.componentType !== 'pie_chart') && (component.objectType !== 'funnel') && (component.componentType !== 'mitoplot_chart')">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Use Field Color</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <input type="checkbox" ng-model="customDataLabelProperty.useFieldColor.value" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div ng-if="customDataLabelProperty.showDataLabel.value" ng-hide="customDataLabelProperty.useFieldColor.value">
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Font Color</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <input type="color" class="propValue" ng-model="customDataLabelProperty.dataLabelFontColor.value" />
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="customDataLabelProperty.showDataLabel.value">
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Default Font Color</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <input type="color" class="propValue" ng-model="customDataLabelProperty.dataLabelDefaultFontColor.value" />
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="customDataLabelProperty.showDataLabel.value && ShowPercentageValue">
+                    	<div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Show Percent Value</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <input type="checkbox" ng-model="customDataLabelProperty.showPercentValue.value" />
+                            </div>
+                    </div>
+                    </div>
+                    <div ng-if="customDataLabelProperty.showDataLabel.value && (component.componentType!=='histogram_chart') && (component.componentType!=='trellis_chart') && ShowPercentage && !(customDataLabelProperty.showPercentValue.value)">
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Data Label Field</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.datalabelField.value" class="selectPos" aria-label="datalabelField" name="datalabelField">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.datalabelField.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="customDataLabelProperty.showDataLabel.value && (component.componentType !== 'pie_chart') && (component.objectType !== 'funnel') && (component.componentType !== 'mitoplot_chart')">
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Position</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.datalabelPosition.value" class="selectPos" aria-label="datalabelPosition" name="datalabelPosition">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.datalabelPosition.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-height modalBdrBtm" ng-if="customDataLabelProperty.showDataLabel.value && (component.componentType == 'pie_chart' || component.componentType == 'timeline_chart'|| component.componentType == 'bar_chart'|| component.componentType == 'group_bar_chart'|| component.componentType == 'group_column_chart') ">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <span>Background Stroke</span>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <input type="checkbox" ng-model="customDataLabelProperty.datalabelBackgroundRect.value" ng-init="customDataLabelProperty.datalabelBackgroundRect.value" />
+                        </div>
+                    </div>
+                    <div class="row-height modalBdrBtm" ng-if="customDataLabelProperty.showDataLabel.value && customDataLabelProperty.datalabelBackgroundRect.value">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Background Color</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <input type="color" class="propValue" ng-model="customDataLabelProperty.datalabelBackgroundRectColor.value" />
+                            </div>
+                    </div>
+                     <div class="row-height modalBdrBtm" ng-if="customDataLabelProperty.showDataLabel.value && customDataLabelProperty.datalabelBackgroundRect.value">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Stroke Color</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <input type="color" class="propValue" ng-model="customDataLabelProperty.datalabelStrokeColor.value" />
+                            </div>
+                    </div>
+                    <div class="row-height modalBdrBtm" ng-if="customDataLabelProperty.showDataLabel.value && ShowPercentage && (component.componentType !== 'mitoplot_chart')">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <span>Use Component Formater</span>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <input type="checkbox" ng-model="customDataLabelProperty.dataLabelUseComponentFormater.value" ng-init="customDataLabelProperty.dataLabelUseComponentFormater.value" />
+                        </div>
+                    </div>
+                    <div ng-if="customDataLabelProperty.showDataLabel.value && !(customDataLabelProperty.dataLabelUseComponentFormater.value) && ShowPercentage && (component.componentType !== 'mitoplot_chart') ">
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Unit</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.datalabelFormaterUnit.value" class="selectPos" aria-label="datalabelFormaterUnit" name="datalabelFormaterUnit">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.datalabelFormaterUnit.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="customDataLabelProperty.showDataLabel.value && !(customDataLabelProperty.dataLabelUseComponentFormater.value) && ShowPercentage && (component.componentType !== 'mitoplot_chart') ">
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Precision</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.datalabelFormaterPrecision.value" class="selectPos" aria-label="datalabelFormaterPrecision" name="datalabelFormaterPrecision">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.datalabelFormaterPrecision.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="customDataLabelProperty.showDataLabel.value && !(customDataLabelProperty.dataLabelUseComponentFormater.value) && ShowPercentage && (component.componentType !== 'mitoplot_chart') ">
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Currency</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.datalabelFormaterCurrency.value" class="selectPos" aria-label="datalabelFormaterCurrency" name="datalabelFormaterCurrency">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.datalabelFormaterCurrency.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-if="customDataLabelProperty.showDataLabel.value && !(customDataLabelProperty.dataLabelUseComponentFormater.value) && ShowPercentage && (component.componentType !== 'mitoplot_chart') ">
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <span>Formater Position</span>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-6">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customDataLabelProperty.datalabelFormaterPosition.value" class="selectPos" aria-label="datalabelFormaterPosition" name="datalabelFormaterPosition">
+                                        <md-option ng-repeat="opt in customDataLabelProperty.datalabelFormaterPosition.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-height" ng-if="!customDataLabelProperty.showDataLabel.value"></div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-default" data-dismiss="modal" ng-click="setModelWatcherStatus('customDataLabelWindow', false); updateCustomDataLabelPropertiesJson()">
+                        Save
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('customDataLabelWindow', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+
+    <div id="customRadiusRangeWindow" class="vcsmodal modal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" role="dialog" ng-if="modal.modelPopupStatus.customRadiusRangeWindow == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Advance Properties [ {{selectedField.name}} ]</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip = "Close"><!--<i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>
+                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="customAlertControlsWrapper">
+                        <div ng-if="(component.componentType=='scattered_plot_chart')">
+                            <div class="row-height modalBdrBtm">
+
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Other Field</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <md-input-container class="selectClass fullWidth">
+                                        <md-select ng-model="customRangeColorPropertiesJson.otherField.value" aria-label="OtherField" class="selectPos" ng-change="updateOtherFieldDpName('OtherField')">
+                                            <md-option ng-repeat="opt in customRangeColorPropertiesJson.otherField.options" ng-value="opt.key">
+                                                {{opt.value}}
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Display Name</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <input type="text" class="propValue" ng-model="customRangeColorPropertiesJson.otherFieldDisplayName.value">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-height modalBdrBtm" ng-if="(component.componentType !== 'timeline_chart')">
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <span>Color Field</span>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customRangeColorPropertiesJson.colorField.value" aria-label="ColorField" class="selectPos" ng-change="updateOtherFieldDpName('ColorField')">
+                                        <md-option ng-repeat="opt in customRangeColorPropertiesJson.colorField.options" ng-value="opt.key">
+                                            {{opt.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                            <div ng-if="(component.componentType=='scattered_plot_chart')">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Display Name</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <input type="text" class="propValue" ng-model="customRangeColorPropertiesJson.colorFieldDisplayName.value">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-height modalBdrBtm">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <span>Fixed Radius </span>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <input type="checkbox" ng-model="customRangeColorPropertiesJson.isFixedRadius.value" />
+                            </div>
+                            <div ng-show="customRangeColorPropertiesJson.isFixedRadius.value">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Radius Value</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <bvz-number-spinner onkeypress="return checkValidNumber(event)" ng-model="customRangeColorPropertiesJson.fixedValue.value" bvz-step="prop.step" bvz-max="20" bvz-min="0">
+                                    </bvz-number-spinner>
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="!customRangeColorPropertiesJson.isFixedRadius.value">
+                            <div class="row-height modalBdrBtm">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Radius Field</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <md-input-container class="selectClass fullWidth">
+                                        <md-select ng-model="customRangeColorPropertiesJson.radiusField.value" aria-label="RadiusField" class="selectPos" ng-change="updateOtherFieldDpName('RadiusField')">
+                                            <md-option ng-repeat="opt in customRangeColorPropertiesJson.radiusField.options" ng-value="opt.key">
+                                                {{opt.value}}
+                                            </md-option>
+                                        </md-select>
+                                    </md-input-container>
+                                </div>
+                                <div ng-if="(component.componentType=='scattered_plot_chart')">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <span>Display Name</span>
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <input type="text" class="propValue" ng-model="customRangeColorPropertiesJson.radiusFieldDisplayName.value">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-default" data-dismiss="modal" ng-click="setModelWatcherStatus('customRadiusRangeWindow', false); updateRadiusRangeCustomAdvancePropertiesJson()">
+                        Save
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('customRadiusRangeWindow', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+    <div id="AlertRangeColortWindow" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" role="dialog" ng-if="modal.modelPopupStatus.AlertRangeColortWindow == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Custom Properties [{{selectedField.name}}]</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog"><i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height modalBdrBtm sub-heading">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <span>Dynamic Range ?</span>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <input type="checkbox" ng-model="customPropertiesJson.showDynamicRange">
+                        </div>
+                    </div>
+                    <div class="row-height modalBdrBtm sub-section">
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <span>Alert Type</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="customPropertiesJson.alertType.value" aria-label="AlertPosition" class="selectPos" name="AlertType">
+                                    <md-option ng-repeat="type in customPropertiesJson.alertType.options" ng-value="type.key">
+                                        {{type.value}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div ng-if="customPropertiesJson.alertType.value!='colorfill' && customPropertiesJson.alertType.value!='textcolor'">
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <span>Alert Position</span>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="customPropertiesJson.alertPosition.value" aria-label="AlertPosition" class="selectPos" name="AlertPosition">
+                                        <md-option ng-repeat="alertPos in customPropertiesJson.alertPosition.options" ng-value="alertPos.key">
+                                            {{alertPos.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-height modalBdrBtm sub-section" ng-show="customPropertiesJson.alertType.value != 'colorfill' && customPropertiesJson.alertType.value != 'textcolor' && customPropertiesJson.alertType.value != 'bar'">
+                    
+                        <div >
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <span>Alert Size</span>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" class="propValue NumericOnly" min="8" max="20" onkeypress="return checkValidNumber(event)" style="border: hidden; width: 100%;" ng-disabled="false" ng-model="customPropertiesJson.alertSize.value" />
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-show="customPropertiesJson.showDynamicRange">
+                        <div class="row-height modalBdrBtm containerHeader">
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <span>Min</span>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <span>Gradient</span>
+                            </div>
+                            <div class="col-sm-4 col-md-4 col-lg-4">
+                                <span>Max</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="row-height modalBdrBtm">
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <input type="color" class="propValue cursor-hand" ng-model="alertJson.minColor" />
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <div class="swap-color-container">
+                                        <div class="swap-color-body" ng-style="{'background':'linear-gradient(90deg, '+alertJson.minColor+','+alertJson.maxColor +')'}">
+                                            <span class='icons bd-exchange cursor-hand swap-color-btn' ng-click='alertJson.minColor = [alertJson.maxColor, alertJson.maxColor = alertJson.minColor][0]' mat-tooltip = "Swap Colors">
+                                            </span>
+<!--                                             <md-tooltip md-direction="top">Swap Colors</md-tooltip> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-md-4 col-lg-4">
+                                    <input type="color" class="propValue cursor-hand" ng-model="alertJson.maxColor" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div ng-hide="customPropertiesJson.showDynamicRange" style="margin:20px;">
+                        <div>
+                            <div class="row-height modalBdrBtm containerHeader">
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Range From</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Range Upto</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>Color</span>
+                                </div>
+                                <div class="col-sm-3 col-md-3 col-lg-3">
+                                    <span>
+                                    	<i class="material-icons cursor-hand" ng-click="deleteAllAlertRanges();" mat-tooltip = "Delete All">delete</i>
+<!--                                     	<md-tooltip md-direction="top">Delete All</md-tooltip> -->
+									</span>
+                                </div>
+                            </div>
+                            <div class="tableContainer">
+                                <div ng-repeat="comp in alertRangeArray" class="row-height modalBdrBtm">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <input style="border: hidden; width: 100%;" type="text" spellcheck="false" placeholder="Range From" ng-model="comp.RangeFrom" value="comp.RangeFrom" />
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <input id="comp.objectID" style="border: hidden; width:100%;" type="text" spellcheck="false" placeholder="Range UpTo" ng-model="comp.RangeUpTo" value="comp.RangeUpTo" />
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <input id="comp.objectID" style="border: hidden" type="color" class="cursor-hand" ng-model="comp.AlertColor" />
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <span>
+	                                    	<i class="material-icons cursor-hand"
+    	                                    	ng-model="comp.Delete"
+        	                                    ng-click="deleteAlertRange(comp);" mat-tooltip = "Delete">delete
+            	                            </i>
+<!--                                             <md-tooltip md-direction="top">Delete</md-tooltip> -->
+                                       	</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex">
+				<md-button type="button" class="md-raised md-default" ng-hide="customPropertiesJson.showDynamicRange"
+                    	    ng-click="addAlertRange()">
+                    	    <i class="material-icons cursor-hand add-align"  mat-tooltip = "Add Range">add</i>
+<!--            	        	   	<md-tooltip md-direction="top">Add Range</md-tooltip> -->
+							<span class="add-align add-padding">Add Range</span>
+                    </md-button>
+                    </span>
+                    <md-button type="button" class="md-raised md-default" ng-click="setModelWatcherStatus('AlertRangeColortWindow', false); updateAlertColor()" data-dismiss="modal">
+                        Save
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('AlertRangeColortWindow', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+
+    <div id="customAlertStaticComparisonWindow" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" role="dialog" ng-if="modal.modelPopupStatus.customAlertStaticComparisonWindow == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Custom Properties [{{StaticComparisionAlertPropertiesJson.columnName.value}}]</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" ng-hide="StaticComparisionAlertPropertiesJson.rowStaticIndicator" ng-click="goToBizvizFontIconBrowser()">
+	                        <md-icon><i class="material-icons cursor-hand closeButtonPos" mat-tooltip = "Open Shape Browser">open_in_new</i>
+<!-- 	                            <md-tooltip md-direction="top">Open Shape Browser</md-tooltip> -->
+	                        </md-icon>
+	                    </md-button>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog"><i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height modalBdrBtm sub-heading">
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <span>Alert Type</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <md-input-container class="selectClass fullWidth propValue">
+                                <md-select ng-model="StaticComparisionAlertPropertiesJson.alertType.value" aria-label="AlertType" class="selectPos propValue" name="AlertType">
+                                    <md-option ng-repeat="opt in StaticComparisionAlertPropertiesJson.alertType.options" ng-click="checkRowStaticIndicator(opt)" ng-value="opt.key">
+                                        {{opt.value}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div ng-show="StaticComparisionAlertPropertiesJson.alertType.value != 'colorfill'">
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <span>Alert Position</span>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <md-input-container class="selectClass fullWidth propValue">
+                                    <md-select ng-model="StaticComparisionAlertPropertiesJson.alertPosition.value" aria-label="AlertPosition" class="selectPos" name="AlertPosition">
+                                        <md-option ng-repeat="alertPos in StaticComparisionAlertPropertiesJson.alertPosition.options" ng-value="alertPos.key">
+                                            {{alertPos.value}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="row-height modalBdrBtm sub-section" ng-show="StaticComparisionAlertPropertiesJson.alertType.value != 'colorfill' && StaticComparisionAlertPropertiesJson.alertType.value != 'textcolor'">
+                    
+                        <div >
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <span>Alert Size</span>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                            <input type="number" class="propValue NumericOnly" min="8" max="20" onkeypress="return checkValidNumber(event)" style="border: hidden; width: 100%;" ng-disabled="false" ng-model="StaticComparisionAlertPropertiesJson.alertSize.value" />
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-height modalBdrBtm sub-section">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <span>Compare Column</span>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="StaticComparisionAlertPropertiesJson.compareColumn.value" aria-label="CompareColumn" class="selectPos propValue" name="CompareColumn">
+                                    <md-option ng-repeat="opt in StaticComparisionAlertPropertiesJson.compareColumn.options" ng-value="opt.name">
+                                        {{opt.name}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                    </div>
+                    <div ng-show="StaticComparisionAlertPropertiesJson.rowStaticIndicator" style="margin:20px;">
+                        <div class="row-height modalBdrBtm containerHeader" >
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <span>Column</span>
+                            </div>
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <span>Operator</span>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <span>Value</span>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <span>Color</span>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <span>
+                                 	<i class="material-icons cursor-hand"
+                                       	ng-click="deleteAllAlertRangeForStaticComparision();" mat-tooltip = "Delete All">delete
+                                   	</i>
+<!--                                    	<md-tooltip md-direction="top">Delete All</md-tooltip> -->
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tableContainer">
+                                <div class="row-height modalBdrBtm" ng-repeat="comp in numeralComparision">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <input style="border: hidden; width: 100%; overflow: hidden" type="text" spellcheck="false" ng-disabled="true" ng-model="StaticComparisionAlertPropertiesJson.compareColumn.value" value="StaticComparisionAlertPropertiesJson.compareColumn.value" />
+                                    </div>
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <md-input-container id="comp.index" class="selectClass fullWidth">
+                                            <md-select ng-model="comp.SelectedOperator" aria-label="OperatorType" class="selectPos" name="OperatorType">
+                                                <md-option ng-repeat="opt in comp.Operator.options" ng-value="opt.key">
+                                                    {{opt.value}}
+                                                </md-option>
+                                            </md-select>
+                                        </md-input-container>
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                        <input id="comp.objectID" class="propValue ng-pristine ng-untouched ng-valid ng-valid-min ng-valid-max" style="border: hidden; width: 100%;" spellcheck="false" type="text" ng-disabled="false" ng-model="comp.Range" value="comp.Range" />
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                        <input id="comp.objectID" style="border: hidden; width: 100%;" type="color" class="cursor-hand" ng-model="comp.AlertColor" />
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                        <span>
+                                    		<i class="material-icons cursor-hand"
+                                        		ng-model="comp.Delete"
+                                        	    ng-click="deleteAlertRangeForStaticComparision(comp);" mat-tooltip = "Delete">delete
+                                        	</i>
+<!--                                         	<md-tooltip md-direction="top">Delete</md-tooltip> -->
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Static indicator arrow option START -->
+                    <div ng-hide="StaticComparisionAlertPropertiesJson.rowStaticIndicator">
+                        <div class="row-height modalBdrBtm containerHeader">
+                            <div class="col-sm-3 col-md-3 col-lg-3">
+                                <span>Column</span>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <span>Operator</span>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <span>Value</span>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <span>Shape</span>
+                            </div>
+                            <div class="col-sm-1 col-md-1 col-lg-1">
+                                <span>Color</span>
+                            </div>
+                            <div class="col-sm-2 col-md-2 col-lg-2">
+                                <span>
+                                 	<i class="material-icons cursor-hand"
+                                       	ng-click="deleteAllAlertRangeForStaticComparision();" mat-tooltip = "Delete All">delete
+                                   	</i>
+<!--                                    	<md-tooltip md-direction="top">Delete All</md-tooltip> -->
+                                </span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tableContainer">
+                                <div class="row-height modalBdrBtm" ng-repeat="comp in numeralComparision">
+                                    <div class="col-sm-3 col-md-3 col-lg-3">
+                                        <input style="border: hidden; width: 100%; overflow: hidden" type="text" spellcheck="false" ng-disabled="true" ng-model="StaticComparisionAlertPropertiesJson.compareColumn.value" value="StaticComparisionAlertPropertiesJson.compareColumn.value" />
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                        <md-input-container id="comp.index" class="selectClass fullWidth">
+                                            <md-select ng-model="comp.SelectedOperator" aria-label="OperatorType" class="selectPos" name="OperatorType">
+                                                <md-option ng-repeat="opt in comp.Operator.options" ng-value="opt.key">
+                                                    {{opt.value}}
+                                                </md-option>
+                                            </md-select>
+                                        </md-input-container>
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                        <input id="comp.objectID" class="propValue ng-pristine ng-untouched ng-valid ng-valid-min ng-valid-max" style="border: hidden; width: 100%;" spellcheck="false" type="text" ng-disabled="false" ng-model="comp.Range" value="comp.Range" />
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                    	<input class="propValue ng-pristine ng-untouched ng-valid ng-valid-min ng-valid-max" style="border: hidden; width: 100%;" spellcheck="false" type="text" ng-disabled="false" ng-model="comp.customIcon" value="comp.customIcon" />
+                                    </div>
+                                    <div class="col-sm-1 col-md-1 col-lg-1">
+                                        <input id="comp.objectID" style="border: hidden; width: 100%;" type="color" class="cursor-hand" ng-model="comp.AlertColor" />
+                                    </div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2">
+                                        <span>
+                                    		<i class="material-icons cursor-hand"
+                                        		ng-model="comp.Delete"
+                                        	    ng-click="deleteAlertRangeForStaticComparision(comp);" mat-tooltip = "Delete">delete
+                                        	</i>
+<!--                                         	<md-tooltip md-direction="top">Delete</md-tooltip> -->
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Static indicator arrow option END -->
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"><md-button type="button" class="md-raised md-default" ng-click="addStaticAlertRange()">
+                    	    <i class="material-icons cursor-hand add-align" mat-tooltip = "Add Range">add</i>
+<!--            	        	   	<md-tooltip md-direction="top">Add Range</md-tooltip> -->
+							<span class="add-align add-padding">Add Range</span>
+                    </md-button>
+                    </span>
+                    <md-button type="button" class="md-raised md-default" ng-click="setModelWatcherStatus('customAlertStaticComparisonWindow', false); updateAlertColor()" data-dismiss="modal">
+                        Save
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('customAlertStaticComparisonWindow', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+
+    <div id="conditionalColorModel" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.conditionalColorModel == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar class="">
+                    <div class="md-toolbar-tools">
+                        <h2>Conditional Color[{{selectedField.name}}]</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" ng-click="goToBizvizFontIconBrowser()" ng-if="(component.componentType === 'world_map')">
+	                        <md-icon><i class="material-icons cursor-hand closeButtonPos" mat-tooltip = "Open Shape Browser">open_in_new</i>
+<!-- 	                            <md-tooltip md-direction="top">Open Shape Browser</md-tooltip> -->
+	                        </md-icon>
+	                    </md-button>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip = "Close">
+                                <!--<i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>-->
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height modalBdrBtm" ng-hide="(component.componentType == 'decomposition_chart' || component.componentType == 'sankey_chart')">
+                        <div class="col-sm-4 col-md-4 col-lg-4">
+                            <span>Fixed value comparison</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <input type="checkbox" ng-model="fixedValueComparison" ng-change="updateOperatorList(fixedValueComparison)" />
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3" ng-show="(component.componentType == 'world_map')">
+                            <span>SVG</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3" ng-show="(component.componentType == 'world_map')">
+                            <input type="checkbox" ng-model="browseMapSVG" ng-change="showSVG(browseMapSVG)" />
+                        </div>
+                    </div>
+     				<div class="row-height modalBdrBtm containerHeader" ng-if="(component.componentType === 'decomposition_chart')">
+                          <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Field</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <span>Compared Field</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Operator</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <span>Compare To</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Color</span>
+                        </div>
+                       
+                    </div>
+                    <div class="row-height modalBdrBtm containerHeader" ng-if="(component.componentType === 'sankey_chart')">
+                          <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Field</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <span>Compared To</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Operator</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <span>Compare Value</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Color</span>
+                        </div>
+                       
+                    </div>
+ <!-- ------         <div class="row-height modalBdrBtm containerHeader" ng-if="(component.componentType === 'scattered_plot_chart' && component.componentType !== 'world_map')">
+                          <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Field</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <span>Compared Field</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Operator</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <span>Compare To</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Color</span>
+                        </div>
+                       
+                    </div>                            --------> 
+                    <div class="row-height modalBdrBtm containerHeader" ng-if="(component.componentType !== 'scattered_plot_chart' && component.componentType === 'world_map')" style="height:50px;">
+                        
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Field</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Compared Field</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Operator</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Compare To</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Icon</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Color</span>
+                        </div>
+                        
+                    </div>
+                    <div class="row-height modalBdrBtm containerHeader" ng-if="(component.componentType === 'scattered_plot_chart')">
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Field</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2" style="margin: -10px 0px 0px 0px;">
+                            <span>Compared Field</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Operator</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2" style="margin: -10px 0px 0px 0px;">
+                            <span>Compare To</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Color</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span>Opacity</span>
+                        </div>
+                    </div>
+                    <div class="row-height modalBdrBtm" ng-if="(component.componentType === 'decomposition_chart')">
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span class="conditionalColorFieldName">{{selectedIndicator.seriesName}}</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedIndicatorModal.comparedField" aria-label="compareField" class="selectPos">
+                                    <md-option ng-repeat="opt in compareColumnFields" ng-value="opt">
+                                        {{opt}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedIndicatorModal.operator" aria-label="compareField" class="selectPos">
+                                    <md-option ng-repeat="opt in compareOperators" ng-value="opt.key">
+                                        {{opt.value}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div>
+                                <input type="text" spellcheck="false" class="propValue" ng-model="selectedIndicatorModal.compareTo" />
+                            </div>
+                            <!--<div ng-show="!fixedValueComparison">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="selectedIndicatorModal.compareTo" aria-label="compareField" class="selectPos">
+                                        <md-option ng-repeat="opt in compareColumnFields" ng-value="opt">
+                                            {{opt}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>-->
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <input type="color" class="propValue cursor-hand" ng-model="selectedIndicatorModal.color" />
+                        </div>
+                    </div>
+                    <!--sankey chart -->
+                     <div class="row-height modalBdrBtm" ng-if="(component.componentType === 'sankey_chart')">
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span class="conditionalColorFieldName">{{selectedIndicator.seriesName}}</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedIndicatorModal.comparedField" aria-label="compareField" class="selectPos">
+                                    <md-option ng-repeat="opt in compareColumnFields" ng-value="opt" ng-if="opt == selectedIndicator.seriesName">
+                                        {{opt}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedIndicatorModal.operator" aria-label="compareField" class="selectPos">
+                                    <md-option ng-repeat="opt in compareOperators" ng-value="opt.key">
+                                        {{opt.value}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div>
+                                <input type="text" spellcheck="false" class="propValue" ng-model="selectedIndicatorModal.compareTo" />
+                            </div>
+                            <!--<div ng-show="!fixedValueComparison">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="selectedIndicatorModal.compareTo" aria-label="compareField" class="selectPos">
+                                        <md-option ng-repeat="opt in compareColumnFields" ng-value="opt">
+                                            {{opt}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>-->
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <input type="color" class="propValue cursor-hand" ng-model="selectedIndicatorModal.color" />
+                        </div>
+                    </div>
+                    <div class="row-height modalBdrBtm" ng-if="(component.componentType === 'scattered_plot_chart')">
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span class="conditionalColorFieldName">{{selectedIndicator.seriesName}}</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedIndicatorModal.comparedField" aria-label="compareField" class="selectPos">
+                                    <md-option ng-repeat="opt in compareColumnFields" ng-value="opt">
+                                        {{opt}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedIndicatorModal.operator" aria-label="compareField" class="selectPos">
+                                    <md-option ng-repeat="opt in compareOperators" ng-value="opt.key">
+                                        {{opt.value}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div ng-show="fixedValueComparison">
+                                <input type="text" spellcheck="false" class="propValue" ng-model="selectedIndicatorModal.compareTo" />
+                            </div>
+                            <div ng-show="!fixedValueComparison">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="selectedIndicatorModal.compareTo" aria-label="compareField" class="selectPos">
+                                        <md-option ng-repeat="opt in compareColumnFields" ng-value="opt">
+                                            {{opt}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <input type="color" class="propValue cursor-hand" ng-model="selectedIndicatorModal.color" />
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2" >
+                            <input type="number" class="propValue" ng-model="selectedIndicatorModal.opacity" step="0.1" min="0" max="1"/>
+                        </div>
+                    </div>
+                    <div class="row-height modalBdrBtm" ng-if="(component.componentType !== 'scattered_plot_chart' && component.componentType !== 'decomposition_chart' && component.componentType !== 'sankey_chart')">
+                        <div ng-if="component.componentType === 'world_map'">
+                        <div class="col-sm-2 col-md-2 col-lg-2" class="row-height">
+                            <span class="conditionalColorFieldName">{{selectedIndicator.seriesName}}</span>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedIndicatorModal.comparedField" aria-label="compareField" class="selectPos">
+                                    <md-option ng-repeat="opt in compareColumnFields" ng-value="opt">
+                                        {{opt}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedIndicatorModal.operator" aria-label="compareField" class="selectPos">
+                                    <md-option ng-repeat="opt in compareOperators" ng-value="opt.key">
+                                        {{opt.value}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <div ng-show="fixedValueComparison">
+                                <input type="text" spellcheck="false" class="propValue" ng-model="selectedIndicatorModal.compareTo" />
+                            </div>
+                            <div ng-show="!fixedValueComparison">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="selectedIndicatorModal.compareTo" aria-label="compareField" class="selectPos">
+                                        <md-option ng-repeat="opt in compareColumnFields" ng-value="opt">
+                                            {{opt}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                        	<div ng-show="!browseMapSVG">
+                        		<input type="text" class="propValue cursor-hand" ng-model="selectedIndicatorModal.icon" />
+                        	</div>
+                        	<div  ng-show="browseMapSVG" class="valueWrapper pull-right" style="text-align: left !important; font: normal normal 600 11px BizvizFont !important; letter-spacing: 0px !important; color: #434344 !important; opacity: 1 !important;">
+	                            <span class="ds-connector-opr pull-left">
+									<i class="custom-text cursor-hand glyphicon glyphicon-new-window ng-touched" ng-click="onCustomMapFileClick( selectedIndicatorModal );" ng-model="selectedIndicatorModal.icon" mat-tooltip="Browse SVG file" role="button" tabindex="0" aria-invalid="false">
+					      			</i>
+					      		</span>
+	                        </div>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <input type="color" class="propValue cursor-hand" ng-model="selectedIndicatorModal.color" />
+                        </div>
+                        </div>
+                        <div ng-if="component.componentType !== 'world_map'">
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <span class="conditionalColorFieldName">{{selectedIndicator.seriesName}}</span>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedIndicatorModal.comparedField" aria-label="compareField" class="selectPos">
+                                    <md-option ng-repeat="opt in compareColumnFields" ng-value="opt">
+                                        {{opt}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <md-input-container class="selectClass fullWidth">
+                                <md-select ng-model="selectedIndicatorModal.operator" aria-label="compareField" class="selectPos">
+                                    <md-option ng-repeat="opt in compareOperators" ng-value="opt.key">
+                                        {{opt.value}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <div class="col-sm-3 col-md-3 col-lg-3">
+                            <div ng-show="fixedValueComparison">
+                                <input type="text" spellcheck="false" class="propValue" ng-model="selectedIndicatorModal.compareTo" />
+                            </div>
+                            <div ng-show="!fixedValueComparison">
+                                <md-input-container class="selectClass fullWidth">
+                                    <md-select ng-model="selectedIndicatorModal.compareTo" aria-label="compareField" class="selectPos">
+                                        <md-option ng-repeat="opt in compareColumnFields" ng-value="opt">
+                                            {{opt}}
+                                        </md-option>
+                                    </md-select>
+                                </md-input-container>
+                            </div>
+                        </div>
+                       
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <input type="color" class="propValue cursor-hand" ng-model="selectedIndicatorModal.color" />
+                        </div>
+                        </div>
+                    </div>
+                    <div class="row-height" ng-if="component.componentType=='world_map'">
+	                <ul>
+	                	<li> <span>For icon inside marker use <a href="https://labs.mapbox.com/maki-icons/">Maki icons</a> : copy icon name and paste like zoo </span> </li>
+	                	<li> <span>For custom markers use <a href="//getbootstrap.com/docs/3.3/components/#glyphicons" target="">Glyph Icons</a> : write like bd-glyphicon glyphicon-asterisk </span> </li>
+	                	</ul>
+				</div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-default" data-dismiss="modal" ng-show="indicatorWindowMode == 'Create'" ng-click="setModelWatcherStatus('conditionalColorModel', false); updateConditionalColorList()">
+                        Create
+                    </md-button>
+                    <md-button type="button" class="md-raised md-default" ng-show="indicatorWindowMode == 'Update'" ng-click="setModelWatcherStatus('conditionalColorModel', false); updateChartIndicator(selectedIndicatorModal)" data-dismiss="modal">
+                        Update
+                    </md-button>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('conditionalColorModel', false);">
+                        Cancel
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Dialog box to exit from designer page -->
+	<div id="exitModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false">
+		<div class="col-sm-2 col-md-4 col-lg-4"></div>
+		<div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+			<div class="modal-content container-border">
+			
+				<md-toolbar>
+				      <div class="md-toolbar-tools">
+				        <h2 id="exitModelTitle" data-q_id="21627">Exit from dashboard designer</h2>
+				        <span flex></span>
+				        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('exitModalDialog', false); cancel()">
+				          <md-icon href="javascript: void( 0 )"  aria-label="Close dialog"><i class="material-icons cursor-hand" mat-tooltip="Close">close</i></md-icon>
+				        </md-button>
+				      </div>
+				    </md-toolbar>
+				<div class="modal-Body">
+					<div class="row-height"></div>
+					<div class="row-height sub-heading">
+						<div class="col-sm-12 col-md-12">
+							<span class="warning">Do you want to exit from designer?</span>
+						</div>
+					</div>
+					<div class="row-height"></div>
+				</div>
+				<md-dialog-actions layout="row">
+					<span flex="" class="flex"></span>
+					<md-button ng-hide="isTrashAction" ng-click="setModelWatcherStatus('exitModalDialog', false); updateExitDesigner()" class="md-raised md-default">Yes</md-button>
+					<md-button data-dismiss="modal" class="md-raised md-primary" ng-click="setModelWatcherStatus('exitModalDialog', false);">Cancel</md-button>
+				</md-dialog-actions>
+			</div>
+		</div>
+	</div>
+        <!-- Dialog box to alert user to change designer theme from after selecting theme -->
+	<div id="changeThemeDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false">
+		<div class="col-sm-2 col-md-4 col-lg-4"></div>
+		<div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+			<div class="modal-content container-border">
+			
+				<md-toolbar>
+				      <div class="md-toolbar-tools">
+				        <h2 id="changeThemeDialogTitle" data-q_id="21627">Change dashboard designer theme</h2>
+				        <span flex></span>
+				        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('changeThemeDialog', false); resetThemeDesigner(); cancel()">
+				          <md-icon href="javascript: void( 0 )"  aria-label="Close dialog"><i class="material-icons cursor-hand" mat-tooltip="Close">close</i></md-icon>
+				        </md-button>
+				      </div>
+				    </md-toolbar>
+				<div class="modal-Body">
+					<div class="row-height"></div>
+					<div class="row-height sub-heading">
+						<div class="col-sm-12 col-md-12">
+							<span class="warning">This theme will change font properties like font family and font-size as per theme setting. Do you want to change theme ?</span>
+						</div>
+					</div>
+					<div class="row-height"></div>
+				</div>
+				<md-dialog-actions layout="row">
+					<span flex="" class="flex"></span>
+					<md-button ng-hide="isTrashAction" ng-click="setModelWatcherStatus('changeThemeDialog', false); updateThemeDesigner()" class="md-raised md-default">Yes</md-button>
+					<md-button data-dismiss="modal" class="md-raised md-primary" ng-click="setModelWatcherStatus('changeThemeDialog', false); resetThemeDesigner();">Cancel</md-button>
+				</md-dialog-actions>
+			</div>
+		</div>
+	</div>
+    <div id="addGroupDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.addGroupDialog == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Manage component group</h2>
+                        <span flex></span>
+                        <md-button data-dismiss="modal" class="md-icon-button" ng-click="cancel()">
+                            <md-icon aria-label="Close dialog">
+                                <i class="material-icons cursor-hand" mat-tooltip = "Close">close</i>
+<!--                                 <md-tooltip md-direction="top">Close</md-tooltip> -->
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height modalBdrBtm">
+                        <div class="col-sm-11 col-md-11 col-lg-11">
+                            <input type="text" spellcheck="false" ng-model="newGroup" class="propValue" maxLength="20" placeholder="Create new group(s)" />
+                        </div>
+                        <div class="col-sm-1 col-md-1 col-lg-1">
+                            <span>
+                    	        <a href="javascript:void( 0 )"> 
+                	            	<i class="material-icons cursor-hand" ng-click="createNewDashboardGroup( newGroup )" mat-tooltip = "Add Group">add</i>
+    	                        </a>
+<!-- 	                            <md-tooltip md-direction="top">Add Group</md-tooltip> -->
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 tableContainer">
+                            <div class="" ng-repeat="g in modal.selectedDashboard.json.Dashboard.componentGroups">
+                                <div id="{{g.gName}}" class="cursor-hand c-group" ng-click="selectGroup( $event, g.gName )">
+                                    <a href="javascript:void( 0 )">
+                                        <i class="material-icons cursor-hand">label</i>
+                                    </a>
+                                    <span>{{ g.gName }}</span>
+                                    <a class="pull-right" ng-click="removeGroup( $event, g )" href="javascript: void( 0 )">
+                                        <i class="material-icons cursor-hand" mat-tooltip = "Delete Group">delete</i>
+<!--                                         <md-tooltip md-direction="top">Delete Group</md-tooltip> -->
+                                    </a>
+                                </div>
+                                <div class="a-comps cursor-arrow-point" ng-repeat="c in g.aCompIds">
+                                    <a>
+                                        <i class="material-icons cursor-hand">insert_drive_file</i>
+                                    </a>
+                                    <span>{{ getComponentbyId( c ).objectName }}</span>
+                                    <a class="pull-right" ng-click="removeComponentFromDashboardGroup( c, g.gName )" href="javascript: void( 0 )">
+                                        <i class="material-icons cursor-hand" mat-tooltip = "Delete From Group">close</i>
+<!--                                         <md-tooltip md-direction="top">Delete from Group</md-tooltip> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+
+                    <md-button type="button" class="md-raised md-default" ng-show="fromExistingGroup" ng-disabled="modal.selectedComponentId == ''" ng-click="setModelWatcherStatus('addGroupDialog', false); addSelectedComponentToSelectedGroup();">
+                        Add to {{ getSelectedGroup() }}
+                    </md-button>
+                    <md-button type="button" class="md-raised md-warn" data-dismiss="modal" ng-click="setModelWatcherStatus('addGroupDialog', false);">
+                        Close
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+</div>

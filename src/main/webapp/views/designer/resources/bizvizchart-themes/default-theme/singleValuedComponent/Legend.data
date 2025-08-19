@@ -1,0 +1,61 @@
+{
+	"Legend": {
+		"Properties": {
+			"Object": {
+				"componentType": "legend",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "legend",
+				"showLocked": "false",
+				"subElement": "Legend",
+				"globalVariableKeyAttribute": "globalkey",
+				"y": "894",
+				"objectType": "legend",
+				"width": "354",
+				"initialVisibility": "true",
+				"height": "48",
+				"objectName": "legend",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "Obj.2FD54250N12FAN78FDN9ED4NE6EAD191DE7",
+				"x": "125",
+				"Legend": {
+					"bgAlpha": "1",
+					"bgGradients": "#ffffff",
+					"bgGradientRotation": "90",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#EFF0F0",
+					"borderRadius": "0",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"borderAlpha": "",
+					"fontFamily": "BizvizFont",
+					"fontSize": "14",
+					"fontColor": "#494950",
+					"fontStyle": "normal",
+					"fontWeight": "normal",
+					"textDecoration": "none",
+					"legendDirection": "horizontal",
+					"legendTextAlign": "left",
+					"legendCheckbox": "false",
+					"rowpadding" : "4",
+					"columnpadding" : "5",
+					"legendSymbol": "similartoseries",
+					"associatedChartId": "",
+					"legendWidth": "10",
+					"legendHeight": "10",
+					"legendColors": "#039DEF,#124CA3,#00BCD4",
+					"legendNames": "Sale day 1,Sale day 2,Sale day 3",
+					"legendShapes": "cube,triangle,point"
+				}
+			}
+		}
+	}
+}

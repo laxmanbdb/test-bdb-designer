@@ -1,0 +1,147 @@
+<h1
+	style="text-align: left; font-size: 30px; margin-left: 15px; margin-bottom: 3%;">Component
+	Attributes</h1>
+
+<p class="contentTextStyle"
+	style="text-align: left; font-size: 20px; padding-left: 13px;">
+	Component Attributes consists of attributes and values of charts and
+	components that have been dragged onto the canvas. It is used for:<br>
+</p>
+<ul style="list-style: none;">
+	<li>a) Place where default values will be passed</li>
+	<li>b) Performing Dynamic Filtering
+</ul>
+
+
+
+<p class="contentTextStyle">
+	<b>Passing Default Values:</b>In the following tutorial, we will see
+	how to pass default values to chart. <br> <b>Ex:</b> In this
+	example scenario, assume that we have sales data for auto
+	manufacturers. We would now like to view only data for the month of
+	'Aug'. To accomplish this, we will need to perform the following steps:
+</p>
+<ul style="list-style: none;">
+	<li><p class="contentTextStyle">
+			i) Select the column chart component from the component list and drag
+			it onto the canvas. (you can refer to the <b>Creating Dashboards</b>
+			tutorial).
+		</p></li>
+	<li><p class="contentTextStyle">
+			ii) Connect the Excel data source (auto sales data) (you can refer to
+			the <b>Creating a Data Source Connection using Excel</b> tutorial)
+		</p></li>
+	<li><p class="contentTextStyle">iii) Click on the. 'Column
+			Chart's data source connection and select the Condition tab and give
+			input as 'Aug' in the text box.(as shown below).</p></li>
+	<li><p class="contentTextStyle">iv) Click on the 'Preview'
+			button to view the results.</p></li>
+</ul>
+<p class="contentTextStyle">
+	<b>Fig:</b> Since the condition has been set to 'Aug', only August
+	month data is displayed.
+</p>
+<p class="contentTextStyle">
+	<b>Performing Dynamic Filtering in a Dashboard:</b> In this tutorial,we
+	will explain how to perform dynamic filtering using filters and charts.
+	Every component has attributes and values which can be seen in the <b>'Component
+		Attributes'</b> window. By passing the values of one component into
+	another component, dynamic filtering is achieved.
+</p>
+
+<p class="contentTextStyle">
+	<b>Scenario:</b> We will perform filtering using Pie-Chart to Column
+	chart<br>
+	<br> a) Creating Data Source Connections for Charts
+<h3>
+</h3>
+	<ul style="list-style: none;">
+		<li>i) Go to the Dashboard Designer Home Screen, and click on the
+			'Data Source' icon.<br>
+		<br>
+		</li>
+		<li>ii) Click on the icon to create a new connection. In this
+			tutorial we will select an Excel data connection.<br>
+		<br>
+		</li>
+
+
+		<b>Note:</b> As we will be performing drill-down analysis from the
+		Pie-chart to the Column chart, we have created two data sources (Pie
+		and Column).
+		<br>
+		<br>
+		<ul>
+			Fill in the necessary details:
+			<li><b>Name:</b> Name the connection.</li>
+			<li><b>Browse:</b> Navigate to the Excel file that you wish to
+				use as a data-source.</li>
+			<li><b>Sheet Name:</b> Select the sheet you wish to use from the
+				Excel file you have selected.</li>
+			<li><b>Load at Start:</b> Enabling this option refreshes the
+				data-source before opening the charts.<br>
+			<br></li>
+
+		</ul>
+
+
+		<li>iii) Click on the 'Charts' icon provided to the right side to
+			the canvas.
+			<ul>
+				<br>
+				<li>A list of available components will be displayed.</li>
+				<li>Drag and drop the Pie-Chart and Column components onto the
+					canvas.</li>
+			</ul> <br>
+		</li>
+		<li>iv) Connecting the Column chart component to an existing data
+			connection
+			<ul>
+				<br>
+				<li>Click on the settings icon that appears next to the chart,
+					as shown below (in the yellow box).</li>
+				<li>Select the 'Column' connection from the <b>'Available
+						Connections'</b> dropdown menu.
+				</li>
+				<li>Drag and drop the fields to their respective series and
+					categories.</li>
+			</ul> <br>
+		</li>
+		<li>v) Connecting the Pie chart to an existing data connection
+			<ul>
+				<br>
+				<li>Click on the settings icon that appears next to the chart,
+					as shown below (in the yellow box).</li>
+				<li>Select a connection from the <b>'Available Connections'</b>
+					dropdown (Ex: <b>Pie</b>)
+				</li>
+				<li>Drag and drop the fields to their respective series and
+					categories.</li>
+			</ul>
+		</li>
+	</ul>
+	<h3>a) Enabling Drilldown</h3>
+	<p class="contentTextStyle">
+		Click the <b>'Data source'</b> icon provided to the right of the
+		canvas. Select the 'Column' data source (located under the <b>'Excel'</b>
+		data source). <br>
+		<br> Steps to follow:
+	</p>
+	<ul>
+		<li>Select the <b>'Script on Load'</b> button, and select the <b>'Auto
+				Reload'</b> function.
+		</li>
+		<li>Select the <b>'Condition'</b> button, and in the 'Search
+			Available Conditions' box, type the field name on which the filtering
+			will be performed (in this example, we will use the <b>'Make'</b>
+			field for drilling down).
+		</li>
+		<li>Copy the condition and paste it under the <b>'Condition'</b>
+			tab and enable the <b>'Action'</b> checkbox (as shown in the above).
+		</li>
+		<li>Click on the 'Preview' button to perform a drilldown
+			operation.</li>
+	</ul>
+
+
+	</p>

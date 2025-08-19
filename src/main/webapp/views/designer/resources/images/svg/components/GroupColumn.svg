@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_272" data-name="Group 272" transform="translate(-1078 -317)">
+    <g id="Rectangle_172" data-name="Rectangle 172" transform="translate(1078 317)" fill="#fff" stroke="#ececec" stroke-width="1">
+      <rect width="50" height="50" rx="6" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="49" rx="5.5" fill="none"/>
+    </g>
+    <path id="rect11" d="M0,0H1V36H0Z" transform="translate(1086 359) rotate(-90)" fill="#0d78bf"/>
+    <rect id="rect14" width="30" height="5" transform="translate(1086 357) rotate(-90)" fill="#0d78bf"/>
+    <rect id="rect14-2" data-name="rect14" width="20" height="5" transform="translate(1099 357) rotate(-90)" fill="#0d78bf"/>
+    <rect id="rect14-3" data-name="rect14" width="32" height="5" transform="translate(1112 357) rotate(-90)" fill="#0d78bf"/>
+    <rect id="rect14-4" data-name="rect14" width="26" height="5" transform="translate(1091 357) rotate(-90)" fill="#e17d00"/>
+    <rect id="rect14-5" data-name="rect14" width="25" height="5" transform="translate(1104 357) rotate(-90)" fill="#e17d00"/>
+    <rect id="rect14-6" data-name="rect14" width="22" height="5" transform="translate(1117 357) rotate(-90)" fill="#e17d00"/>
+  </g>
+</svg>

@@ -1,0 +1,54 @@
+{
+	"NumericStepper": {
+		"Properties": {
+			"Object": {
+				"componentType": "numeric_stepper",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "stepper",
+				"y": "1023",
+				"objectType": "numericstepper",
+				"width": "200",
+				"height": "44",
+				"subElement": "NumericStepper",
+				"globalVariableKeyAttribute": "globalkey",
+				"initialVisibility": "true",
+				"showLocked": "false",
+				"objectName": "NStepper_34",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "Obj.45FAA2A8NBD92N9D64NC569NE6EA96762B14",
+				"x": "513",
+				"NumericStepper": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"value": "0",
+					"fontColor": "9388608",
+					"fontSize": "16",
+					"rollOverColor": "11259375",
+					"selectionColor": "56831",
+					"chromeColor": "#EFF0F0",
+					"stepSize": "1",
+					"minimum": "0",
+					"fontFamily": "BizvizFont",
+					"fontWeight": "normal",
+					"maximum": "100",
+					"fontStyle": "normal",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"color": "0"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,488 @@
+{
+	"Info": [{
+		"class": "Gauge"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Show Ticks : ",
+		"type": "checkbox",
+		"value": false,
+		"attributeName": "showTicks",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Show Range : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "showMinMax",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Show Title : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showTitle",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Title : ",
+		"type": "text",
+		"value": "Gauge",
+		"maxLength": "15",
+		"attributeName": "title",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "Gauge"
+	}],
+	"Background": [{
+		"label": "Gradient Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "45",
+		"attributeName": "bgGradientRotation",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "bgAlpha",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "bgGradients",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Border : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showBorder",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "borderColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "5",
+		"attributeName": "borderRadius",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Gauge"
+	}],
+	"Indicators": [{
+		"label": "Ranges : ",
+		"heading": "Indicators",
+		"type": "customGaugeAlertWindow",
+		"value": "",
+		"attributeName": "colors",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Value Variable : ",
+		"type": "textNumeric",
+		"value": "50",
+		"max": "20",
+		"attributeName": "valueVariable",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Target Value : ",
+		"type": "textNumeric",
+		"value": "50",
+		"max": "20",
+		"attributeName": "targetvalue",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Minimum Range : ",
+		"type": "number",
+		"min": "-1000000000000000",
+		"max": "1000000000000000",
+		"step": "1",
+		"value": "0",
+		"attributeName": "minValue",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Maximum Range : ",
+		"type": "number",
+		"min": "-1000000000000000",
+		"max": "1000000000000000",
+		"step": "1",
+		"value": "100",
+		"attributeName": "maxValue",
+		"propertyName": "Gauge"
+	}],
+	"Style": [{
+		"label": "Bezel Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "bezelColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Face Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "faceColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Face Shadow Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "faceShadowColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Tick Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "ticksColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Pointer Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "pointerColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Center Color : ",
+		"type": "color",
+		"value": "#fbfbfb",
+		"attributeName": "centerColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Label Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "fontColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Target Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "targetcolor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Title Font Color : ",
+		"type": "color",
+		"value": "#fbfbfb",
+		"attributeName": "titleFontColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Range Font Color : ",
+		"type": "color",
+		"value": "#fbfbfb",
+		"attributeName": "rangeFontColor",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Color Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "colorOpacity",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Label Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "valueFontFamily",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Title Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "titleFontFamily",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Title Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "20",
+		"step": "1",
+		"value": "12",
+		"attributeName": "titlefontSize",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Label Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "20",
+		"step": "1",
+		"value": "12",
+		"attributeName": "fontSize",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Range Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "20",
+		"step": "1",
+		"value": "12",
+		"attributeName": "markerfontSize",
+		"propertyName": "Gauge"
+	}],
+	"Formatter": [{
+		"label": "Unit : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "auto",
+			"value": "Auto"
+		}, {
+			"key": "Percent",
+			"value": "%"
+		}, {
+			"key": "Thousand",
+			"value": "K"
+		}, {
+			"key": "Million",
+			"value": "M"
+		}, {
+			"key": "Billion",
+			"value": "B"
+		}, {
+			"key": "Trillion",
+			"value": "T"
+		}, {
+			"key": "Quadrillion",
+			"value": "Q"
+		}],
+		"attributeName": "SecondaryUnit",
+		"propertyName": "Gauge"
+	}, {
+			"label": "Precision :",
+			"type": "select",
+			"value": "default",
+			"options": [{
+				"key": "default",
+				"value": "Default"
+			}, {
+				"key": "0",
+				"value": "None"
+			}, {
+				"key": "1",
+				"value": ".0"
+			}, {
+				"key": "2",
+				"value": ".00"
+			}, {
+				"key": "3",
+				"value": ".000"
+			}, {
+				"key": "4",
+				"value": ".0000"
+			}, {
+				"key": "6",
+				"value": ".000000"
+			}, {
+				"key": "8",
+				"value": ".00000000"
+			}],
+			"attributeName": "Precision",
+			"propertyName": "Gauge"
+		}, {
+		"label": "Currency : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "Cent",
+			"value": "CENT"
+		}, {
+			"key": "Euro",
+			"value": "EURO"
+		}, {
+			"key": "Rupees",
+			"value": "IND"
+		}, {
+			"key": "Pound",
+			"value": "POUND"
+		}, {
+			"key": "USD",
+			"value": "USD"
+		}, {
+			"key": "Yen",
+			"value": "YEN"
+		}],
+		"attributeName": "Unit",
+		"propertyName": "Gauge"
+	}, {
+		"label": "Position : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "prefix",
+			"value": "Prefix"
+		}, {
+			"key": "suffix",
+			"value": "Suffix"
+		}],
+		"attributeName": "SignPosition",
+		"propertyName": "Gauge"
+	}]
+}

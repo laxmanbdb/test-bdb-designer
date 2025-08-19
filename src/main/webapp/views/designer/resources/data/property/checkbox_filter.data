@@ -1,0 +1,289 @@
+{
+	"Info": [{
+		"class": "CheckboxFilter"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "20",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "30",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Show Checked : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "checkBoxSelected",
+		"propertyName": "Filter"
+	}, {
+		"label": "Label : ",
+		"type": "text",
+		"value": "Label",
+		"attributeName": "label",
+		"propertyName": "Filter.Values"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Filter"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Filter"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Filter"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Filter"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Filter"
+	}, {
+		"label": "Chrome Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "chromeColor",
+		"propertyName": "Filter"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "1",
+		"attributeName": "transparency",
+		"propertyName": "Filter"
+	}, {
+		"label": "Checked Value : ",
+		"type": "text",
+		"value": "1",
+		"attributeName": "value",
+		"propertyName": "Filter.Values"
+	}, {
+		"label": "Unchecked Value : ",
+		"type": "text",
+		"value": "0",
+		"attributeName": "unCheckedValue",
+		"propertyName": "Filter.Values"
+	}],
+	"Multi-checkbox Settings": [{
+		"label": "Multiple Checkboxes : ",
+		"type": "checkbox",
+		"value": "",
+		"attributeName": "allowMultipleSelection",
+		"propertyName": "Filter"
+	}, {
+		"label": "Toggle Checkboxes : ",
+		"type": "checkbox",
+		"value": "",
+		"attributeName": "toggleCheckboxLayout",
+		"propertyName": "Filter"
+	}, {
+		"label": "Manage Checkboxes : ",
+		"heading": "Manage Checkboxes",
+		"type": "customCheckboxesWindow",
+		"value": "",
+		"attributes": {
+			"names": "checkboxNames",
+			"colors": "checkboxColors"
+		},
+		"attributeName": "checkboxNames",
+		"propertyName": "Filter"
+	}, {
+		"label": "Direction : ",
+		"type": "select",
+		"value": "horizontal",
+		"options": [{
+			"key": "horizontal",
+			"value": "Horizontal"
+		}, {
+			"key": "vertical",
+			"value": "Vertical"
+		}],
+		"attributeName": "direction",
+		"propertyName": "Filter"
+	}],
+	"Toggle Style": [{
+		"label": "Width : ",
+		"type": "text",
+		"value": "60",
+		"attributeName": "toggleWidth",
+		"propertyName": "Filter"
+	}, {
+		"label": "Height : ",
+		"type": "text",
+		"value": "40",
+		"attributeName": "toggleHeight",
+		"propertyName": "Filter"
+	}, {
+		"label": "Toggle Switch Shape : ",
+		"type": "select",
+		"value": "round",
+		"options": [{
+			"key": "round",
+			"value": "Round"
+		}, {
+			"key": "square",
+			"value": "Square"
+		}],
+		"attributeName": "toggleShape",
+		"propertyName": "Filter"
+	}, {
+		"label": "Slider Color : ",
+		"type": "color",
+		"attributeName": "toggleColor",
+		"propertyName": "Filter"
+	}, {
+		"label": "Checked Color : ",
+		"type": "color",
+		"attributeName": "toggleCheckedColor",
+		"propertyName": "Filter"
+	}, {
+		"label": "UnChecked Color : ",
+		"type": "color",
+		"attributeName": "toggleUnCheckedColor",
+		"propertyName": "Filter"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Filter"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Filter"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Filter"
+	}]
+}

@@ -1,0 +1,7 @@
+var base_url = "http://162.13.201.118/cxf";
+var base_url = "http://182.74.192.213:8181/cxf";
+
+var urls = [{
+		"getProxyURL" : base_url+"/proxy/getRecords"
+	}
+];

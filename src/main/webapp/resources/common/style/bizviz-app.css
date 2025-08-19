@@ -1,0 +1,156 @@
+html, body {
+	font-family: 'BizvizFont';
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.bizviz-toolbar {}
+.bizviz-toolbar .md-toolbar-tools {}
+.bizviz-toolbar .md-toolbar-tools .nav-logo {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.bizviz-toolbar.bizviz-header {
+	background: -moz-linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 8%, #006684 47%, #006684 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, #FFFFFF), color-stop(8%, #FFFFFF), color-stop(47%, #006684), color-stop(100%, #006684)); /* safari4+,chrome */
+	background: -webkit-linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 8%, #006684 47%, #006684 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 8%, #006684 47%, #006684 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 8%, #006684 47%, #006684 100%); /* ie10+ */
+	background: linear-gradient(90deg, #FFFFFF 0%, #FFFFFF 8%, #006684 47%, #006684 100%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#006684',GradientType=1 ); /* ie6-9 */
+	background: #ffffff;
+	box-shadow: 0 -1px 2px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+.popover-app-containpopover-apper {
+	overflow-y: auto;
+}
+
+.ns-popover-tooltip-theme .ns-popover-tooltip {
+	max-width: 510px;
+}
+
+.popover-app {
+	background: #fff;
+    margin: 0;
+    padding-right: 27px;
+    text-align: left;
+    white-space: normal;
+    min-height: 100px;
+    max-height: 500px;
+    max-width: 510px;
+    width: 309px;
+    
+    padding-top: 10px;
+}
+.popover-app .menu-item {
+	display: inline-block;
+	vertical-align: top;
+	color: black;
+	z-index: 999;
+	height: 90px;
+	width: 100px;
+	padding-top: 5px;
+}
+.popover-app .menu-item a {
+	text-decoration: none;
+}
+.popover-app .menu-item .menu-icon {
+	padding-left: 8px;
+	cursor: pointer;
+}
+.popover-app .menu-item .icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+.popover-app .menu-item .menu-icon span {
+	font-size: 36px;
+	color: #90CAF9;
+}
+.popover-app .menu-item .menu-text {
+	width: 100%;
+  		text-align: center;
+  		font-size: 11px;
+  		padding-top: 0;
+}
+
+.popover-user {
+	box-shadow: none;
+	width: 270px;
+}
+.popover-user md-card-header {
+	padding: 0px;
+	height: 60px;
+}
+.popover-user button.md-button {
+	text-transform: none !important;
+}
+
+.bizviz-content {
+	background-color: #f9f9f9; 
+}
+
+.bizviz-header {
+	height: 40px;
+    max-height: 40px;
+    min-height: 40px;
+    padding-left: 0px;
+    box-shadow: 0px 3px 3px #00000029 !important;
+	position: relative;
+	z-index: 10;
+}
+.md-toolbar-tools{
+	padding-left: 0px;
+    height: 50px;
+    max-height: 50px;
+}
+.notification-style{
+	max-width: 35px;
+    max-height: 35px;
+    font-size: 12px;
+    background-color: darkturquoise;
+}
+
+/*  Material Toast Style  */
+md-toast.md-custom {
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 25%;
+    min-width: 300px;
+    max-width: 400px;
+}
+md-toast.md-custom.md-info .md-toast-content {
+	background-color: #4CAF50;
+    color: #FFFFFF;
+}
+md-toast.md-custom.md-warning .md-toast-content {
+	background-color: #FF9800;	
+    color: #FFFFFF;	
+}
+md-toast.md-custom.md-error .md-toast-content {
+	background-color: #F44336;
+    color: #FFFFFF;
+}
+/*  Material Toast Style: Ends  */
+
+.ns-popover-tooltip-theme {
+	z-index: 99999999;
+}
+
+/* Session Expired Login style */
+.reinit-session {
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 999999999;
+    width: 100%;
+    height: 100%;
+}

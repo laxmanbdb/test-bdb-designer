@@ -1,0 +1,860 @@
+{
+	"Info": [{
+		"class": "PyramidChart"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "250",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Max Button : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showMaximizeButton",
+		"propertyName": "Funnel"
+	},  {
+		"label": "Show Percentage : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "showLayerValue",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Series Colors : ",
+		"heading": "Series Colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "seriesColor",
+		"propertyName": "Funnel"
+	}],
+	"Background": [{
+		"label": "Gradient Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "45",
+		"attributeName": "bgGradientRotation",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "bgAlpha",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "bgGradients",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Border : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showBorder",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "borderColor",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "5",
+		"attributeName": "borderRadius",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Funnel"
+	}],
+	"Tooltip": [{
+		"label": "Show Tool Tip : ",
+		"heading": "Tool Tip Configuration",
+		"type": "customTextBoxForToolTip",
+		"value": "500",
+		"showcustom": "true",
+		"attributeName": "CustomTextBoxForToolTip",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Background Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "tooltipBackgroundColor",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "tooltipBackgroundTransparency",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "tooltipBorderColor",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Tooltip Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "tooltipFontSize",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Box Width :",
+		"type": "select",
+		"value": "default",
+		"options": [{
+			"key": "auto",
+			"value": "Auto"
+		}, {
+			"key": "100",
+			"value": "100px"
+		}, {
+			"key": "200",
+			"value": "200px"
+		}, {
+			"key": "300",
+			"value": "300px"
+		}, {
+			"key": "400",
+			"value": "400px"
+		}, {
+			"key": "500",
+			"value": "500px"
+		}, {
+			"key": "600",
+			"value": "600px"
+		}, {
+			"key": "1000",
+			"value": "1000px"
+		}],
+		"attributeName": "customTooltipWidth",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Precision :",
+		"type": "select",
+		"value": "default",
+		"options": [{
+			"key": "default",
+			"value": "Default"
+		}, {
+			"key": "0",
+			"value": "None"
+		}, {
+			"key": "1",
+			"value": ".0"
+		}, {
+			"key": "2",
+			"value": ".00"
+		}, {
+			"key": "3",
+			"value": ".000"
+		}, {
+			"key": "4",
+			"value": ".0000"
+		}, {
+			"key": "6",
+			"value": ".000000"
+		}, {
+			"key": "8",
+			"value": ".00000000"
+		}],
+		"attributeName": "tooltipPrecision",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Highlighter : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "tooltipHighlighter",
+		"propertyName": "Funnel"
+	}],
+	"Title": [{
+		"label": "Title Box Color : ",
+		"type": "gradient",
+		"value": "",
+		"attributeName": "GradientColor",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Show Title Box : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "showGradient",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Show Title : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showTitle",
+		"propertyName": "Funnel.Title"
+	}, {
+		"label": "Title Bar Height : ",
+		"type": "number",
+		"min": "25",
+		"max": "75",
+		"step": "1",
+		"value": "25",
+		"attributeName": "TitleBarHeight",
+		"propertyName": "Funnel.Title"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "Title",
+		"attributeName": "Description",
+		"propertyName": "Funnel.Title"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Funnel.Title"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Funnel.Title"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Funnel.Title"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Funnel.Title"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Funnel.Title"
+	}, {
+		"label": "Align : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "Align",
+		"propertyName": "Funnel.Title"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "TextDecoration",
+		"propertyName": "Funnel.Title"
+	}, {
+		"label": "Show Dataset Description : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showDatasetDescription",
+		"propertyName": "Funnel.Title"
+	}],
+	"Sub Title": [{
+		"label": "Show Sub Title : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showSubTitle",
+		"propertyName": "Funnel.SubTitle"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "SubTitle",
+		"attributeName": "Description",
+		"propertyName": "Funnel.SubTitle"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Funnel.SubTitle"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Funnel.SubTitle"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Funnel.SubTitle"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Funnel.SubTitle"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Funnel.SubTitle"
+	}, {
+		"label": "Align : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "Align",
+		"propertyName": "Funnel.SubTitle"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"attributeName": "TextDecoration",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"propertyName": "Funnel.SubTitle"
+	}],
+	"Legend": [{
+		"label": "Show Legend : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showLegends",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "legendfontColor",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "normal",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "legendfontWeight",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "10",
+		"attributeName": "legendfontSize",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "legendfontFamily",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "legendfontStyle",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "legendtextDecoration",
+		"propertyName": "Funnel"
+	},{
+		"label": "Hide on Load: ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "hideLegendOnStart",
+		"propertyName": "Funnel"
+	}],
+	"Formatter": [{
+		"label": "Unit : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "Percent",
+			"value": "%"
+		}],
+		"attributeName": "SecondaryUnit",
+		"propertyName": "Funnel"
+	}, {
+			"label": "Precision :",
+			"type": "select",
+			"value": "default",
+			"options": [{
+				"key": "default",
+				"value": "Default"
+			}, {
+				"key": "0",
+				"value": "None"
+			}, {
+				"key": "1",
+				"value": ".0"
+			}, {
+				"key": "2",
+				"value": ".00"
+			}, {
+				"key": "3",
+				"value": ".000"
+			}, {
+				"key": "4",
+				"value": ".0000"
+			}, {
+				"key": "6",
+				"value": ".000000"
+			}, {
+				"key": "8",
+				"value": ".00000000"
+			}],
+			"attributeName": "Precision",
+			"propertyName": "Funnel"
+		}, {
+		"label": "Currency : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "Cent",
+			"value": "CENT"
+		}, {
+			"key": "Euro",
+			"value": "EURO"
+		}, {
+			"key": "Rupees",
+			"value": "INR"
+		}, {
+			"key": "Pound",
+			"value": "POUND"
+		}, {
+			"key": "USD",
+			"value": "USD"
+		}, {
+			"key": "Yen",
+			"value": "YEN"
+		}],
+		"attributeName": "Unit",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Position : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "prefix",
+			"value": "Prefix"
+		}, {
+			"key": "suffix",
+			"value": "Suffix"
+		}],
+		"attributeName": "SignPosition",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Number Formatter : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "indiannumber",
+			"value": "Indian"
+		}, {
+			"key": "number",
+			"value": "International"
+		}],
+		"attributeName": "NumberFormatter",
+		"propertyName": "Funnel"
+	}],
+	"Export Options": [{
+		"label": "Enable Context Menu : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showContextMenu",
+		"propertyName": "Object"
+	}, {
+		"label": "Export Excel : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToExcel",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Export CSV : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToCSV",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Export JPEG : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToJPEG",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Export PNG : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPNG",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Export PPT : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPPT",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Export PDF : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPDF",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Show Print : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPrint",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Export Heading : ",
+		"type": "text",
+		"value": "PPT Heading",
+		"maxLength": "50",
+		"attributeName": "pptHeading",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Export Sub Heading : ",
+		"type": "text",
+		"value": "PPT SubHeading",
+		"maxLength": "30",
+		"attributeName": "pptSubHeading",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Export File Name : ",
+		"type": "text",
+		"value": "File Name",
+		"maxLength": "30",
+		"attributeName": "scrnShotFileName",
+		"propertyName": "Funnel"
+	}, {
+		"label": "Global Export Type : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "screenshot",
+			"value": "ScreenShot"
+		}, {
+			"key": "tabular",
+			"value": "Tabular"
+		}],
+		"attributeName": "exportType",
+		"propertyName": "Funnel"
+	}]
+}

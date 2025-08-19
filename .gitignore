@@ -1,0 +1,6 @@
+#
+# Project specific excludes
+#
+
+/target/*
+/src/main/webapp/shared/*

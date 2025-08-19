@@ -1,0 +1,235 @@
+[
+    {
+        "label": "Auto Reload",
+        "internalFunction": "sdk.autoReload();",
+        "attributes": "No attributes required",
+        "description": "It will automatically reload those connections which has the fields as their filter key"
+    },
+    {
+        "label": "Reload from List",
+        "internalFunction": "sdk.reload( [ 'ConnectionID_1' , 'ConnectionID_2' ] );",
+        "attributes": "connection IDs as array",
+        "description": "Reloads given connection(s)"
+    },
+    {
+        "label": "Reload All Connections",
+        "internalFunction": "sdk.reloadAll();",
+        "attributes": "No attribute required",
+        "description": "Reloads all connections of the dashboard"
+    },
+    {
+        "label": "Reload Dataset",
+        "internalFunction": "sdk.reloadDataset( [ 'ComponentID_1' , 'ComponentID_2' ] );",
+        "attributes": "component IDs as array",
+        "description": "Refreshes the data sets of components"
+    },
+    {
+        "label": "Apply Aggregation",
+        "internalFunction": "sdk.applyAggregation( 'ComponentID' , 'Group_By_Field' , 'Field1,Field2' , 'Operation1,Operation2' );",
+        "attributes": "ComponentId , Group By Node , Fields to aggregate , Operations to apply",
+        "description": "Will group and aggregate the data before rendering in to chart"
+    },
+    {
+        "label": "Apply Filter",
+        "internalFunction": "sdk.applyDataSetFilter( 'ComponentID' , [ \"Condition1\" , \"Condition2\" ] );",
+        "attributes": "ComponentId , Filter Conditions",
+        "description": "Will filter out the matching records"
+    },
+    {
+        "label": "Apply AutoManipulator",
+        "internalFunction": "sdk.applyAutoManipulator( 'ComponentID', 'CategoryGroupField', 'SeriesGroupField', 'ValueField', '#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC' );",
+        "attributes": "ComponentId , CategoryGroupField , SeriesGroupField , ValueField , SeriesColors",
+        "description": "Automanipulator is kind of limited pivoting of the data"
+    },
+    {
+        "label": "Remove DataSet Filter",
+        "internalFunction": "sdk.removeDataSetFilter( 'ComponentID' );",
+        "attributes": "ComponentId",
+        "description": "Remove the applied filters from the dataset"
+    },
+    {
+        "label": "Remove Aggregation",
+        "internalFunction": "sdk.removeAggregation( 'ComponentID' );",
+        "attributes": "ComponentId",
+        "description": "Remove the applied aggregation from the dataset"
+    },
+    {
+        "label": "Remove AutoManipulator",
+        "internalFunction": "sdk.removeAutoManipulator( 'ComponentID' );",
+        "attributes": "ComponentId",
+        "description": "Remove the applied Automanipulator from the dataset"
+    },
+    {
+        "label": "Get Aggregated Data",
+        "internalFunction": "sdk.getAggregatedDataSet( changedItem.attributes.data , 'SUM' );",
+        "attributes": "Data Object , Operation to apply",
+        "description": "Returns the aggregated data"
+    },
+    {
+        "label": "Set Single Value",
+        "internalFunction": "sdk.setValue( 'ComponentID' , 'Value' );",
+        "attributes": "ComponentID, Value to be set, Optional target value for gauges/ bullets ",
+        "description": "Sets the value in single-valued-components like Gauge/Bullet/ Label etc."
+    },
+    {
+        "label": "Get Value",
+        "internalFunction": "sdk.getValue( 'ComponentID' );",
+        "attributes": "component id",
+        "description": ""
+    },
+    {
+        "label": "Hide Components",
+        "internalFunction": "sdk.hideComponent( [ 'ComponentID1' , 'ComponentID2' ] );",
+        "attributes": "component IDs as array or single component ID as string",
+        "description": ""
+    },
+    {
+        "label": "Show Components",
+        "internalFunction": "sdk.showComponent( [ 'ComponentID1' , 'ComponentID2' ] );",
+        "attributes": "component IDs as array or single component ID as string",
+        "description": ""
+    },
+    {
+        "label": "Hide Except These",
+        "internalFunction": "sdk.hideAllComponentExcept( [ 'ComponentID1' , 'ComponentID2' ] );",
+        "attributes": "component IDs as array",
+        "description": ""
+    },
+    {
+        "label": "Show Except These",
+        "internalFunction": "sdk.showAllComponentExcept( [ 'ComponentID1' , 'ComponentID2' ] );",
+        "attributes": "component IDs as array",
+        "description": ""
+    },
+    {
+        "label": "Change Rectangle BG",
+        "internalFunction": "sdk.changeBGColor( 'RectangleID' , [ 'Color1' , 'Color2' ]);",
+        "attributes": "ID of rectangle, color",
+        "description": ""
+    },
+    {
+        "label": "Change Dashboard BG",
+        "internalFunction": "sdk.changeDashboardBGColor( 'Color' );",
+        "attributes": "color",
+        "description": ""
+    },
+    {
+        "label": "Invoke Another Change",
+        "internalFunction": "sdk.updateGlobalVariable( 'ComponentID' , <ValueMap> , <Notify - true or false> );",
+        "attributes": "Component ID, Object of Global_Variable values, if set to true, script written on componentID will be executed just after this global variable update",
+        "description": ""
+    },
+     {
+        "label": "Execute Change Script",
+        "internalFunction": "sdk.executeScript( 'ComponentID' , <Changed item attribute object>  );",
+        "attributes": "Component ID, Object which should be passed when component script executes",
+        "description": ""
+    },
+    {
+        "label": "Stack Bar 100%",
+        "internalFunction": "sdk.createHorizontalSlices( [ 'RectID1' , RectID2' ] , [ 'Value1' , 'Value2' ], [ 'Color1' , 'Colo2' ] );",
+        "attributes": "ID of rectangle, color",
+        "description": ""
+    },
+    {
+        "label": "Stack Column 100%",
+        "internalFunction": "sdk.createVerticalSlices([ 'RectID1' , RectID2' ] , [ 'Value1' , 'Value2' ], [ 'Color1' , 'Colo2' ] );",
+        "description": ""
+    },
+    {
+        "label": "Fill By Percentage Horizontal",
+        "internalFunction": "sdk.fillHorizontalByPercentage( 'RectID1' , 'Percent_Value' );",
+        "attributes": "ID of rectangle, color",
+        "description": ""
+    },
+    {
+        "label": "Fill By Percentage Vertical",
+        "internalFunction": "sdk.fillVerticalByPercentage( 'RectID1' , 'Percent_Value' );",
+        "attributes": "ID of rectangle, color",
+        "description": ""
+    },
+    {
+        "label": "Save a Key-Value",
+        "internalFunction": "sdk.addContext( 'Key' , 'Value' );",
+        "attributes": "<key string>,<value>",
+        "description": ""
+    },
+    {
+        "label": "Get a Saved Value",
+        "internalFunction": "sdk.getContext( 'Key' );",
+        "attributes": "key string",
+        "description": ""
+    },
+      {
+        "label": "Remove a Saved Value",
+        "internalFunction": "sdk.removeContext( 'Key' );",
+        "attributes": "key string",
+        "description": ""
+    },
+    {
+        "label": "Get Div ID",
+        "internalFunction": "sdk.getDivIdFromComponetId( 'ComponentID' );",
+        "attributes": "component ID",
+        "description": ""
+    },
+    {
+        "label": "Apply Css to Html Elements",
+        "internalFunction": "sdk.applyStyle( 'Selector' , 'CSS_Property_Name' , 'CSS_Value' );",
+        "attributes": "selector,css property name,value to set",
+        "description": ""
+    },
+    {
+        "label": "Set Top",
+        "internalFunction": "sdk.setTop('ComponentID' , 'Numeric_Value');",
+        "attributes": "id and top",
+        "description": ""
+    },
+     {
+        "label": "Set Left",
+        "internalFunction": "sdk.setLeft('ComponentID' , 'Numeric_Value');",
+        "attributes": "id and top",
+        "description": ""
+    },
+    {
+        "label": "Get Current Top",
+        "internalFunction": "sdk.getTop('ComponentID');",
+        "attributes": "id and top",
+        "description": ""
+    },
+    {
+        "label": "Get Current Left",
+        "internalFunction": "sdk.getLeft('ComponentID');",
+        "attributes": "id and top",
+        "description": ""
+    },
+     {
+        "label": "Set Graphics Property",
+        "internalFunction": "sdk.setGraphicsProperty('ComponentID', 'Property_Name' , 'Property_Value');",
+        "attributes": "id and top",
+        "description": ""
+    },
+    {
+        "label": "Get Current Graphics Property",
+        "internalFunction": "sdk.getGraphicsProperty('ComponentID', 'Property_Name');",
+        "attributes": "id and top",
+        "description": ""
+    },
+	{
+		"label": "Get Component Object Reference",
+        "internalFunction": "sdk.getWidget('ComponentID');",
+        "attributes": "id",
+        "description": ""
+	},
+	{
+		"label": "Apply Global Font to dashboard",
+        "internalFunction": "sdk.applyGlobalFont({'url': '', 'fontFamily': '', 'useGlobalFont': 'false'});",
+        "attributes": "object",
+        "description": ""
+	},
+	{
+		"label": "Apply Category Color set to chart",
+        "internalFunction": "sdk.setCategoryColorSet('ComponentID', ['Color_Array']);",
+        "attributes": "object",
+        "description": ""
+	}
+]

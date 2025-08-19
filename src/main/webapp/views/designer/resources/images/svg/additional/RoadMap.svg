@@ -1,0 +1,20 @@
+<?xml-stylesheet type="text/css" href="icon.css" ?>
+<svg id="svg2985" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" sodipodi:docname="RoadMap.svg" viewBox="0 0 32 32" height="100%" width="100%" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" inkscape:version="0.48.5 r10040" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+ <metadata id="metadata4982">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <sodipodi:namedview id="namedview4978" bordercolor="#666666" inkscape:pageshadow="2" guidetolerance="10" pagecolor="#ffffff" gridtolerance="10" inkscape:window-maximized="1" inkscape:window-width="1366" inkscape:zoom="11.18" objecttolerance="10" showgrid="false" borderopacity="1" inkscape:current-layer="svg2985" inkscape:cx="22.80978" inkscape:cy="23.591462" inkscape:window-y="-8" inkscape:window-x="-8" inkscape:window-height="706" inkscape:pageopacity="0"/>
+ <path id="path6493-8" d="m24.182,8.7907,5.057-3.0635-5.2004-2.9057,0.07546,5.8682" sodipodi:nodetypes="cccc" fill="#0daea7" inkscape:connector-curvature="0"/>
+ <rect id="rect6497-8" ry="0" fill-rule="nonzero" transform="matrix(-0.01339765,-0.99991025,-0.99999998,2.1845332e-4,0,0)" height="23.037" width="5.9506" y="-24.076" x="-8.7892" fill="#0daea7"/>
+ <path id="path4682" sodipodi:nodetypes="cccc" inkscape:connector-curvature="0" fill="#1f4e82" d="m21.176,11.827,5.057,3.0635-5.1249,2.8907,0-5.8532"/>
+ <rect id="rect4684" ry="0" fill-rule="nonzero" transform="matrix(-0.00352997,0.99999377,-0.99999966,-8.2918573e-4,0,0)" height="6.0692" width="5.9501" y="-21.23" x="11.817" fill="#1f4e82"/>
+ <rect id="rect4684-5" ry="0" fill-rule="nonzero" transform="matrix(-0.00469116,0.999989,-0.99999981,-6.2393625e-4,0,0)" height="8.0657" width="5.9501" y="-31.296" x="21.853" fill="#000"/>
+ <path id="path4739" d="m12.624,27.819,5.057-3.0635-5.1249-2.8907,0,5.8532" sodipodi:nodetypes="cccc" inkscape:connector-curvature="0" fill="#e28d14"/>
+ <rect id="rect4741" ry="0" fill-rule="nonzero" transform="matrix(-0.00674112,-0.99997728,-0.99999991,4.3419466e-4,0,0)" height="11.59" width="5.9502" y="-12.537" x="-27.818" fill="#e28d14"/>
+</svg>

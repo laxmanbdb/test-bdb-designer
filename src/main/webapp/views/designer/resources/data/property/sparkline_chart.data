@@ -1,0 +1,468 @@
+{
+	"Info": [{
+		"class": "SparkLineChart"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "25",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "100",
+		"attributeName": "width",
+		"propertyName": "Object"
+	},{
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	},{
+		"label": "Type : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "line",
+			"value": "Line"
+		}, {
+			"key": "bar",
+			"value": "Bar"
+		}, {
+			"key": "tristate",
+			"value": "Tristate"
+		}],
+		"attributeName": "sparkLineType",
+		"propertyName": "Chart"
+	}],
+	"Background": [{
+		"label": "Gradient Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "45",
+		"attributeName": "bgGradientRotation",
+		"propertyName": "Chart"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "bgAlpha",
+		"propertyName": "Chart"
+	}, {
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "bgGradients",
+		"propertyName": "Chart"
+	},{
+		"label": "Border : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showBorder",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "borderColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "5",
+		"attributeName": "borderRadius",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Chart"
+	}],
+	"Tooltip": [{
+		"label": "Show Tool Tip : ",
+		"heading": "Tool Tip Configuration",
+		"type": "customTextBoxForToolTip",
+		"value": "500",
+		"showcustom": "false",
+		"attributeName": "CustomTextBoxForToolTip",
+		"propertyName": "Chart"
+	}, {
+		"label": "Background Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "tooltipBackgroundColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "tooltipBackgroundTransparency",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "tooltipBorderColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Tooltip Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "tooltipFontSize",
+		"propertyName": "Chart"
+	}, {
+		"label": "Box Width :",
+		"type": "select",
+		"value": "default",
+		"options": [{
+			"key": "auto",
+			"value": "Auto"
+		}, {
+			"key": "100",
+			"value": "100px"
+		}, {
+			"key": "200",
+			"value": "200px"
+		}, {
+			"key": "300",
+			"value": "300px"
+		}, {
+			"key": "400",
+			"value": "400px"
+		}, {
+			"key": "500",
+			"value": "500px"
+		}, {
+			"key": "600",
+			"value": "600px"
+		}, {
+			"key": "1000",
+			"value": "1000px"
+		}],
+		"attributeName": "customTooltipWidth",
+		"propertyName": "Chart"
+	}, {
+		"label": "Precision :",
+		"type": "select",
+		"value": "default",
+		"options": [{
+			"key": "default",
+			"value": "Default"
+		}, {
+			"key": "0",
+			"value": "None"
+		}, {
+			"key": "1",
+			"value": ".0"
+		}, {
+			"key": "2",
+			"value": ".00"
+		}, {
+			"key": "3",
+			"value": ".000"
+		}, {
+			"key": "4",
+			"value": ".0000"
+		}, {
+			"key": "6",
+			"value": ".000000"
+		}, {
+			"key": "8",
+			"value": ".00000000"
+		}],
+		"attributeName": "tooltipPrecision",
+		"propertyName": "Chart"
+	}],
+	"Line": [{
+		"label": "Line Color : ",
+		"type": "customColor",
+		"value": "#0000f0",
+		"attributeName": "lineColor",
+		"propertyName": "Chart"
+	},{
+		"label": "Fill Color : ",
+		"type": "color",
+		"value": "#c0d0f0",
+		"attributeName": "fillColor",
+		"propertyName": "Chart"
+	},{
+		"label": "Opacity: ",
+		"type": "number",
+		"value": "1",
+		"min": "0",
+		"step": "0.1",
+		"max": "1",
+		"attributeName": "fillcolorOpacity",
+		"propertyName": "Chart"
+	},{
+		"label": "Line Width: ",
+		"type": "number",
+		"value": "1",
+		"min": "1",
+		"max": "10",
+		"attributeName": "lineWidth",
+		"propertyName": "Chart"
+	},{
+		"label": "Spot Color: ",
+		"type": "color",
+		"value": "#f08000",
+		"attributeName": "spotColor",
+		"propertyName": "Chart"
+	},{
+		"label": "Min Spot Color: ",
+		"type": "color",
+		"value": "#ff0000",
+		"attributeName": "minSpotColor",
+		"propertyName": "Chart"
+	},{
+		"label": "Max Spot Color: ",
+		"type": "color",
+		"value": "#ff0000",
+		"attributeName": "maxSpotColor",
+		"propertyName": "Chart"
+	},{
+		"label": "Highlight Spot Color: ",
+		"type": "color",
+		"value": "#ffaaaa",
+		"attributeName": "highlightSpotColor",
+		"propertyName": "Chart"
+	},{
+		"label": "Highlight Line Color: ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "highlightLineColor",
+		"propertyName": "Chart"
+	},{
+		"label": "Spot Radius: ",
+		"type": "number",
+		"value": "1",
+		"min": "1",
+		"max": "10",
+		"attributeName": "spotRadius",
+		"propertyName": "Chart"
+	},{
+		"label": "Min Normal Value: ",
+		"type": "number",
+		"value": "0",
+		"attributeName": "normalRangeMin",
+		"propertyName": "Chart"
+	},{
+		"label": "Max Normal Value: ",
+		"type": "number",
+		"value": "0",
+		"attributeName": "normalRangeMax",
+		"propertyName": "Chart"
+	},{
+		"label": "Normal Color: ",
+		"type": "color",
+		"value": "#c0c0c0",
+		"attributeName": "normalRangeColor",
+		"propertyName": "Chart"
+	},{
+		"label": "Min/Max Data Label: ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "dataLabel",
+		"propertyName": "Chart"
+	}],
+	"Bar": [{
+		"label": "Bar Spacing: ",
+		"type": "number",
+		"min": "0",
+		"max": "10",
+		"step": "1",
+		"value": "1",
+		"attributeName": "barspacing",
+		"propertyName": "Chart"
+	}, {
+		"label": "Zero Axis: ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "barzeroaxis",
+		"propertyName": "Chart"
+	}, {
+		"label": "Positive Color: ",
+		"type": "color",
+		"value": "#16A085",
+		"attributeName": "barcolor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Negative Color: ",
+		"type": "color",
+		"value": "#D24D57",
+		"attributeName": "negbarcolor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Zero Color: ",
+		"type": "color",
+		"value": "#cccccc",
+		"attributeName": "zerobarcolor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Auto Axis: ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "autoaxisSetup",
+		"propertyName": "Chart"
+	}, {
+		"label": "Min Y-Axis Range: ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "0",
+		"attributeName": "minimumAxisValue",
+		"propertyName": "Chart"
+	}],
+	"Tristate": [{
+		"label": "Bar Spacing: ",
+		"type": "number",
+		"min": "0",
+		"max": "10",
+		"step": "1",
+		"value": "1",
+		"attributeName": "tristatebarspacing",
+		"propertyName": "Chart"
+	}, {
+		"label": "Positive Color: ",
+		"type": "color",
+		"value": "#3366cc",
+		"attributeName": "tristateposbarcolor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Negative Color: ",
+		"type": "color",
+		"value": "#f04040",
+		"attributeName": "tristatenegbarcolor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Zero Color: ",
+		"type": "color",
+		"value": "#cccccc",
+		"attributeName": "tristatezerobarcolor",
+		"propertyName": "Chart"
+	}],
+	"Formatter": [{
+		"label": "Currency : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "Cent",
+			"value": "CENT"
+		}, {
+			"key": "Euro",
+			"value": "EURO"
+		}, {
+			"key": "Rupees",
+			"value": "INR"
+		}, {
+			"key": "Pound",
+			"value": "POUND"
+		}, {
+			"key": "USD",
+			"value": "USD"
+		}, {
+			"key": "Yen",
+			"value": "YEN"
+		}],
+		"attributeName": "Unit",
+		"propertyName": "Chart"
+	}, {
+		"label": "Position : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "prefix",
+			"value": "Prefix"
+		}, {
+			"key": "suffix",
+			"value": "Suffix"
+		}],
+		"attributeName": "SignPosition",
+		"propertyName": "Chart"
+	}, {
+		"label": "Number Formatter : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "indiannumber",
+			"value": "Indian"
+		}, {
+			"key": "number",
+			"value": "International"
+		}],
+		"attributeName": "NumberFormatter",
+		"propertyName": "Chart"
+	}]
+}

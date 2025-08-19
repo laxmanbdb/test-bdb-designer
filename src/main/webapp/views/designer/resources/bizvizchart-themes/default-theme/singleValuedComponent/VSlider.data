@@ -1,0 +1,63 @@
+{
+	"VSlider": {
+		"Properties": {
+			"Object": {
+				"componentType": "v_slider",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "vslider",
+				"height": "300",
+				"y": "929",
+				"objectType": "vslider",
+				"width": "130",
+				"initialVisibility": "true",
+				"subElement": "VSlider",
+				"globalVariableKeyAttribute": "globalkey",
+				"showLocked": "false",
+				"objectName": "Vslider_32",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "Obj.A067B496ND13ENF9EAN33ABNE6EA7E2AEBBE",
+				"x": "226",
+				"VSlider": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"ticksColor": "16777215",
+					"labelFontStyle": "normal",
+					"labelFontWeight": "normal",
+					"labelColor": "#494950",
+					"snapInterval": "1",
+					"numberOfTicks": "5",
+					"chromeColor": "#434344",
+					"backgroundColor": "#FFFFFF",
+					"backgroundAlpha": "1",
+					"handlecolor": "#ffffff",
+					"handleradius": "12",
+					"scalewidth": "10",
+					"showTicks": "false",
+					"freezeHandle" : "false",
+					"unit" : "auto",
+					"showMarkers": "true",
+					"labelFontFamily": "BizvizFont",
+					"minimum": "0",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"maximum": "100",
+					"tickAlpha": "1",
+					"labelFontSize": "14",
+					"enhancedVSlider": "true"
+				}
+			}
+		}
+	}
+}

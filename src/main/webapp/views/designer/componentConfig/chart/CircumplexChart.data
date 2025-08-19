@@ -1,0 +1,295 @@
+{
+	"CircumplexChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "circumplex_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "cplex",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "cplex",
+				"showLocked": "false",
+				"objectName": "Cplex_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "600",
+				"x": "20",
+				"height": "304",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"id": "Obj784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "Circumplex",
+					"showGradient": "false",
+					"bgGradients": "#ffffff",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+
+					"exportToExcel": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"exportType":"screenshot",
+
+					"showScreenShotButton": "true",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showTooltip": "true",
+					"enableAnimation": "true",
+					"showMaximizeButton": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"showExcelDownload": "true",
+					"showSubTitle": "false",
+					"showTitle": "true",
+					"GradientColor": "#F5F5F5,#F5F5F5",
+					"seriesColor": "#2d48cf,#ae36d6,#06BE7F,#eb42a4,#ff7733,#2382b5,#559fc9,#90bfde,#f9ad39,#db5937,#808080,#006488,#f02720,#86dff9,#2c3e50,#fd940b,#2ecc71,#2c69b0,#ffb6b0,#ac613c,#e9c39b,#6ba3d6,#b5dffd,#ac8763,#ddc9b4,#bd0a36,#f4737a",
+					"showLegends": "false",
+					"hideLegendOnStart": "true",
+					"legendDirection": "horizontal",
+					"legendfontSize": "10",
+					"legendtextDecoration": "none",
+					"legendfontStyle": "normal",
+					"legendfontColor": "#000000",
+					"legendfontFamily": "Roboto",
+					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+					"showcheckboxwithlegend": "false",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"autoaxisSetup": "true",
+					"minimumAxisValue": "-20",
+					"maximumAxisValue": "110",
+					"baseZero": "false",
+					"FixedLabel": "false",
+					"Formater": "Currency",
+					"Unit": "none",
+					"SignPosition": "prefix",
+					"Precision": "default",
+					"NumberFormatter": "number",
+					"SecondaryFormater": "Number",
+					"SecondaryUnit": "none",
+					"Globalkey": "",
+					"enableColorFromDrill": "false",
+					"showPoint": true,
+					"webType": "circle",
+					"clockWiseDirection": true,
+					"ChartType": "clustered",
+					"axisColor": "#E8E8E8",
+					"axisStrokeColor": "#F5F5F5",
+					"strokeColor": "#FFFFFF",
+					"strokeWidth": "1",
+					"useSeriesColors": "true",
+					"lineWidth": "60",
+					"xAxis": {
+						"LabelFontWeight": "normal",
+						"FontSize": "11",
+						"LabelFontColor": "#808080",
+						"LabelFontStyle": "italic",
+						"TextDecoration": "none",
+						"LabelFontFamily": "Roboto",
+						"Labelrotation": "90",
+						"LabelTilted": "false",
+						"FontColor": "#808080",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "10",
+						"FontStyle": "normal",
+						"FontFamily": "Roboto",
+						"FontWeight": "normal"
+					},
+					"yAxis": {
+						"rightaxisFormater": "false",
+						"LabelFontWeight": "normal",
+						"FontStyle": "normal",
+						"LabelFontColor": "#808080",
+						"FontFamily": "Roboto",
+						"TextDecoration": "none",
+						"LabelFontStyle": "normal",
+						"LabelFontFamily": "Roboto",
+						"FontColor": "#808080",
+						"SecondDiscription": "yaxis",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "10",
+						"FontSize": "11",
+						"leftaxisFormater": "true",
+						"FontWeight": "normal"
+					},
+					"Title": {
+						"FontWeight": "bold",
+						"Description": "Growth of countries by regions",
+						"FontSize": "11",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "Roboto",
+						"FontColor": "#808080",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"TitleBarHeight": "40"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "SubTitle",
+						"showSubTitle": "false",
+						"FontSize": "10",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "Roboto",
+						"FontColor": "#808080",
+						"FontStyle": "italic"
+					}
+				}
+			}
+		},
+		"Fields": [{
+			"DisplayName": "Region",
+			"Type": "Category",
+			"visible": "true",
+			"PlotRadius": "8",
+			"Name": "Region",
+			"Color": "#fcdb96",
+			"axis": "none",
+			"Precision": "0",
+			"PlotTransparency": "0.8",
+			"PlotType": "point",
+			"ChartType": "none"
+		}, {
+			"DisplayName": "Country",
+			"Type": "SubCategory",
+			"visible": "true",
+			"PlotRadius": "8",
+			"Name": "Country",
+			"Color": "#fcdb96",
+			"axis": "none",
+			"Precision": "0",
+			"PlotTransparency": "0.8",
+			"PlotType": "point",
+			"ChartType": "none"
+		}, {
+			"DisplayName": "2008",
+			"Type": "Series",
+			"visible": "false",
+			"PlotRadius": "3",
+			"Name": "yr_08",
+			"Color": "#2382b5",
+			"axis": "left",
+			"Precision": "0",
+			"PlotTransparency": "0.8",
+			"PlotType": "point",
+			"ChartType": "column"
+		}, {
+			"DisplayName": "2009",
+			"Type": "Series",
+			"visible": "true",
+			"PlotRadius": "3",
+			"Name": "yr_09",
+			"Color": "#2382b5",
+			"axis": "right",
+			"Precision": "0",
+			"PlotTransparency": "0.8",
+			"PlotType": "point",
+			"ChartType": "line"
+		}],
+		"Data": [{
+			"Region": "East Asia & Pacific",
+			"Country": "Australia",
+			"yr_08": 3,
+			"yr_09": 20
+		}, {
+			"Region": "East Asia & Pacific",
+			"Country": "Japan",
+			"yr_08": 19,
+			"yr_09": 25
+		}, {
+			"Region": "Europe & Central Asia",
+			"Country": "France",
+			"yr_08": 7,
+			"yr_09": 12
+		}, {
+			"Region": "Europe & Central Asia",
+			"Country": "Germany",
+			"yr_08": 9,
+			"yr_09": 20
+		}, {
+			"Region": "Europe & Central Asia",
+			"Country": "Russia",
+			"yr_08": 18,
+			"yr_09": 25
+		}, {
+			"Region": "Europe & Central Asia",
+			"Country": "Spain",
+			"yr_08": 8,
+			"yr_09": 10
+		}, {
+			"Region": "Latin America & Caribbean",
+			"Country": "Jamaica",
+			"yr_08": 6,
+			"yr_09": 28
+		}, {
+			"Region": "Latin America & Caribbean",
+			"Country": "Argentina",
+			"yr_08": 9,
+			"yr_09": 15
+		}, {
+			"Region": "Middle East & North Africa",
+			"Country": "Libya",
+			"yr_08": 6,
+			"yr_09": 23
+		}, {
+			"Region": "North America",
+			"Country": "Barbados",
+			"yr_08": 12,
+			"yr_09": 13
+		}, {
+			"Region": "North America",
+			"Country": "Maxico",
+			"yr_08": 5,
+			"yr_09": 25
+		}, {
+			"Region": "North America",
+			"Country": "Canada",
+			"yr_08": 17,
+			"yr_09": 11
+		}, {
+			"Region": "North America",
+			"Country": "United States",
+			"yr_08": 3,
+			"yr_09": 15
+		}, {
+			"Region": "Sub-Saharan Africa",
+			"Country": "South Africa",
+			"yr_08": 5,
+			"yr_09": 24
+		}, {
+			"Region": "Sub-Saharan Africa",
+			"Country": "Kenya",
+			"yr_08": 10,
+			"yr_09": 6
+		}]
+	}
+}

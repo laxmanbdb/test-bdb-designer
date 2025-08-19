@@ -1,0 +1,60 @@
+{
+	"TabComponent": {
+		"Properties": {
+			"Object": {
+				"componentType": "tab_component",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "Tab",
+				"y": "1097",
+				"objectType": "TabComponent",
+				"subElement": "TabComponent",
+				"globalVariableKeyAttribute": "globalkey",
+				"height": "45",
+				"showLocked": "false",
+				"objectName": "tab_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"width": "398",
+				"objectID": "Obj.B84FD0C3NEA44N1709N980ENE6E87792A37C",
+				"x": "668",
+				"initialVisibility": "true",
+				"TabComponent": {
+					"fieldName": "Value",
+					"encode": "true",
+					"chromeColor": "#EFF0F0",
+					"fontColor": "#000000",
+					"selectionColor": "#cccccc",
+					"fontWeight": "normal",
+					"fontStyle": "normal",
+					"openDoc": "true",
+					"fontFamily": "BizvizFont",
+					"fontSize": "12",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#000000",
+					"borderThickness": "1",
+					"borderRadius" : "5",
+					"associateGroups": [],
+					"tabObjectArr": [],
+					"redraw": false,
+					"tabColors": "#039DEF,#124CA3,#00BCD4",
+					"tabNames": "Tab 1,Tab 2,Tab 3",
+					"tabGroups": "grp1,grp2,grp3",
+					"assignTabId": "",
+					"btnPadding": "4",
+					"buttonWidth": "100",
+					"borderOnSelection": "false",
+					"backgroundOpacity": "1",
+					"tabAlignment": "horizontal",
+					"contentAlignment": "center",
+					"borderWidth": "2"
+				}
+			}
+		}
+	}
+}

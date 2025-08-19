@@ -1,0 +1,710 @@
+{
+  "SankeyChart": {
+    "Properties": {
+      "Object": {
+        "componentType": "sankey_chart",
+        "themeType": "default-theme",
+        "objectType": "chart",
+        "subElement": "Chart",
+        "globalVariableKeyAttribute": "Globalkey",
+        "isDataSetAvailable": "true",
+        "enableScript": "true",
+        "referenceID": "",
+        "isValueFieldsAvailable": "false",
+        "showContextMenu": "false",
+        "shortName": "sankey",
+        "showLocked": "false",
+        "objectName": "Sankey_1",
+        "unShowHidden": "false",
+        "groupings": "",
+        "percentheight": "320",
+        "width": "900",
+        "x": "20",
+        "height": "560",
+        "y": "10",
+        "initialVisibility": "true",
+        "percentwidth": "450",
+        "objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+        "Chart": {
+          "id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+          "Type": "Sankey",
+          "showGradient": "false",
+          "bgGradients": "#ffffff",
+          "bgAlpha": "1",
+          "bgGradientRotation": "0",
+          "borderRadius": "0",
+          "exportToExcel": "true",
+          "exportToCSV": "true",
+          "exportToJPEG": "true",
+          "exportToPNG": "true",
+          "exportToPDF": "true",
+          "exportToPPT": "true",
+          "exportToPrint": "true",
+          "exportType": "screenshot",
+          "showScreenShotButton": "true",
+          "screenShotMode": "ppt",
+          "pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+          "pptHeading": "Heading",
+          "pptSubHeading": "Sub Heading",
+          "subHeading": "Sub Heading",
+          "scrnShotFileName": "exportDashboard",
+          "showTooltip": "true",
+          "showRandomNodeColor": "true",
+          "tooltipBackgroundColor": "#FFFFFF",
+          "tooltipBorderColor": "#E0DFDF",
+          "tooltipPrecision": "default",
+          "tooltipFontSize": "12",
+          "mobileTooltipStyle": "top",
+          "repeaterCommonMarker": "false",
+          "showMaximizeButton": "true",
+          "showSettingMenuButton": "false",
+          "showExcelDownload": "true",
+          "showSubTitle": "false",
+          "showTitle": "true",
+          "GradientColor": "#F5F5F5,#F5F5F5",
+          "enableAnimation": "true",
+          "showCheckboxSeprate": "false",
+          "showBorder": "true",
+          "borderColor": "#EFF0F0",
+          "borderThickness": "1",
+          "showShadow": "false",
+          "shadowColor": "#cccccc",
+          "shadowOpacity": "0.3",
+          "FixedLabel": "false",
+          "Formater": "Currency",
+          "Unit": "none",
+		  "SignPosition": "prefix",
+		  "Precision": "default",
+		  "NumberFormatter": "number",
+		  "SecondaryFormater": "Number",
+		  "SecondaryUnit": "none",
+          "Globalkey": "",
+          "enableColorFromDrill": "false",
+          "collapseChildren": "false",
+          "showPercentage": "false",
+          "labelFontColor": "#000000",
+          "labelFontSize": "12",
+          "labelFontStyle": "normal",
+          "labelFontWeight": "normal",
+          "labelFontFamily": "BizvizFont",
+          "controlBarWidth": "30",
+          "highlightPathStyle":"adjacency",
+          "lineStyle": "gradient",
+          "lineOpacity": "0.6",
+          "nodeGap": "8",
+          "showPercentValue": "false",
+          "textAlign": "right",
+          "tooltipFontStyle": "normal",
+          "tooltipFontWeight": "normal",
+          "tooltipFontFamily": "BizvizFont",
+          "tooltipFontColor": "#000000",
+          "Level": {
+            "DisplayLevelName": "Level 1,Level 2,Level 3,Level 4,Level 5",
+            "Colors": "#e6e6e6,#5BEEFB,#00BCD4,#00A0F0,#124CA3"
+          },
+          "Title": {
+            "FontWeight": "600",
+            "Description": "Year wise Expense & Revenue",
+            "FontSize": "17",
+            "TextDecoration": "none",
+            "Align": "left",
+            "FontFamily": "BizvizFont",
+            "FontColor": "#000000",
+            "FontStyle": "normal",
+            "showTitle": "true",
+            "showDatasetDescription": "true",
+            "TitleBarHeight": "48"
+          },
+          "SubTitle": {
+            "FontWeight": "normal",
+            "Description": "Sub Heading",
+            "showSubTitle": "false",
+            "FontSize": "15",
+            "TextDecoration": "none",
+            "Align": "left",
+            "FontFamily": "BizvizFont",
+            "FontColor": "#000000",
+            "FontStyle": "normal"
+          },
+          "ConditionalColors": {
+            "ConditionalColor": []
+          },
+          "CategoryColors": {
+            "categoryDefaultColor": "",
+            "categoryDefaultColorSet": "",
+            "showColorsFromCategoryName": "false",
+            "CategoryColor": []
+          },
+          "SubCategoryColors": {
+			"subCategoryDefaultColor": "",
+			"subCategoryDefaultColorSet": "",
+			"showColorsFromSubCategoryName": "false",
+			"subCategoryColor": []
+		}
+        }
+      }
+    },
+    "Fields": [
+      {
+        "DisplayName": "Source",
+        "Type": "Category",
+        "visible": "true",
+        "PlotRadius": "0",
+        "Name": "source",
+        "Color": "#fcdb96",
+        "LineColor": "gradient",
+        "StripeOpacity": "0.6",
+        "axis": "none",
+        "ChartType": "none"
+      },
+      {
+        "DisplayName": "Target",
+        "Type": "SubCategory",
+        "visible": "true",
+        "PlotRadius": "0",
+        "PlotTransparency": "1",
+        "Name": "target",
+        "Color": "#db5937",
+        "LineColor": "gradient",
+        "StripeOpacity": "0.6",
+        "axis": "none",
+        "ChartType": "none"
+      },
+      {
+        "DisplayName": "Value",
+        "Type": "Series",
+        "visible": "true",
+        "PlotRadius": "0",
+        "PlotTransparency": "1",
+        "Name": "value",
+        "Color": "#2382b5",
+        "LineColor": "gradient",
+        "StripeOpacity": "0.6",
+        "axis": "none",
+        "ChartType": "none"
+      }
+    ],
+    "Data": [
+	  {
+	    "source": "Total",
+	    "target": "Environment",
+	    "value": 0.34228
+	  },
+	  {
+	    "source": "Environment",
+	    "target": "Land use",
+	    "value": 0.32323
+	  },
+	  {
+	    "source": "Land use",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.17768
+	  },
+	  {
+	    "source": "Land use",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.13724
+	  },
+	  {
+	    "source": "Land use",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.00433
+	  },
+	  {
+	    "source": "Land use",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00297
+	  },
+	  {
+	    "source": "Land use",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.001
+	  },
+	  {
+	    "source": "Environment",
+	    "target": "Climate change",
+	    "value": 0.01129
+	  },
+	  {
+	    "source": "Climate change",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00677
+	  },
+	  {
+	    "source": "Climate change",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.00395
+	  },
+	  {
+	    "source": "Climate change",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00032
+	  },
+	  {
+	    "source": "Climate change",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.00022
+	  },
+	  {
+	    "source": "Climate change",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00004
+	  },
+	  {
+	    "source": "Environment",
+	    "target": "Harmful substances",
+	    "value": 0.00604
+	  },
+	  {
+	    "source": "Harmful substances",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.00551
+	  },
+	  {
+	    "source": "Harmful substances",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00033
+	  },
+	  {
+	    "source": "Harmful substances",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.0002
+	  },
+	  {
+	    "source": "Harmful substances",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0
+	  },
+	  {
+	    "source": "Harmful substances",
+	    "target": "Vegetables (Organic)",
+	    "value": 0
+	  },
+	  {
+	    "source": "Environment",
+	    "target": "Water use",
+	    "value": 0.00148
+	  },
+	  {
+	    "source": "Water use",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00135
+	  },
+	  {
+	    "source": "Water use",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.00011
+	  },
+	  {
+	    "source": "Water use",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.00001
+	  },
+	  {
+	    "source": "Water use",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00001
+	  },
+	  {
+	    "source": "Water use",
+	    "target": "Vegetables (Organic)",
+	    "value": 0
+	  },
+	  {
+	    "source": "Environment",
+	    "target": "Resource depletion",
+	    "value": 0.00024
+	  },
+	  {
+	    "source": "Resource depletion",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00023
+	  },
+	  {
+	    "source": "Resource depletion",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00001
+	  },
+	  {
+	    "source": "Resource depletion",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0
+	  },
+	  {
+	    "source": "Resource depletion",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0
+	  },
+	  {
+	    "source": "Resource depletion",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0
+	  },
+	  {
+	    "source": "Environment",
+	    "target": "Refrigeration",
+	    "value": 0
+	  },
+	  {
+	    "source": "Environment",
+	    "target": "Packaging",
+	    "value": 0
+	  },
+	  {
+	    "source": "Total",
+	    "target": "Human rights",
+	    "value": 0.30757
+	  },
+	  {
+	    "source": "Human rights",
+	    "target": "Child labour",
+	    "value": 0.04106
+	  },
+	  {
+	    "source": "Child labour",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.01053
+	  },
+	  {
+	    "source": "Child labour",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.0105
+	  },
+	  {
+	    "source": "Child labour",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00873
+	  },
+	  {
+	    "source": "Child labour",
+	    "target": "Coconut oil (Organic)",
+	    "value": 0.00474
+	  },
+	  {
+	    "source": "Child labour",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00388
+	  },
+	  {
+	    "source": "Child labour",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00267
+	  },
+	  {
+	    "source": "Human rights",
+	    "target": "Forced labour",
+	    "value": 0.03655
+	  },
+	  {
+	    "source": "Forced labour",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.01149
+	  },
+	  {
+	    "source": "Forced labour",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00811
+	  },
+	  {
+	    "source": "Forced labour",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.00765
+	  },
+	  {
+	    "source": "Forced labour",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.004
+	  },
+	  {
+	    "source": "Forced labour",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00297
+	  },
+	  {
+	    "source": "Forced labour",
+	    "target": "Coconut oil (Organic)",
+	    "value": 0.00232
+	  },
+	  {
+	    "source": "Human rights",
+	    "target": "Health safety",
+	    "value": 0.03454
+	  },
+	  {
+	    "source": "Health safety",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.01214
+	  },
+	  {
+	    "source": "Health safety",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.00767
+	  },
+	  {
+	    "source": "Health safety",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00562
+	  },
+	  {
+	    "source": "Health safety",
+	    "target": "Coconut oil (Organic)",
+	    "value": 0.00362
+	  },
+	  {
+	    "source": "Health safety",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00277
+	  },
+	  {
+	    "source": "Health safety",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00272
+	  },
+	  {
+	    "source": "Human rights",
+	    "target": "Access to water",
+	    "value": 0.03402
+	  },
+	  {
+	    "source": "Access to water",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.0105
+	  },
+	  {
+	    "source": "Access to water",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00893
+	  },
+	  {
+	    "source": "Access to water",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.00541
+	  },
+	  {
+	    "source": "Access to water",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00334
+	  },
+	  {
+	    "source": "Access to water",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00315
+	  },
+	  {
+	    "source": "Access to water",
+	    "target": "Coconut oil (Organic)",
+	    "value": 0.00269
+	  },
+	  {
+	    "source": "Human rights",
+	    "target": "Freedom of association",
+	    "value": 0.03206
+	  },
+	  {
+	    "source": "Freedom of association",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.01323
+	  },
+	  {
+	    "source": "Freedom of association",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00777
+	  },
+	  {
+	    "source": "Freedom of association",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.00511
+	  },
+	  {
+	    "source": "Freedom of association",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00354
+	  },
+	  {
+	    "source": "Freedom of association",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00241
+	  },
+	  {
+	    "source": "Freedom of association",
+	    "target": "Coconut oil (Organic)",
+	    "value": 0
+	  },
+	  {
+	    "source": "Human rights",
+	    "target": "Access to land",
+	    "value": 0.0315
+	  },
+	  {
+	    "source": "Access to land",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.00965
+	  },
+	  {
+	    "source": "Access to land",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.00939
+	  },
+	  {
+	    "source": "Access to land",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00601
+	  },
+	  {
+	    "source": "Access to land",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00381
+	  },
+	  {
+	    "source": "Access to land",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00265
+	  },
+	  {
+	    "source": "Access to land",
+	    "target": "Coconut oil (Organic)",
+	    "value": 0
+	  },
+	  {
+	    "source": "Human rights",
+	    "target": "Sufficient wage",
+	    "value": 0.02878
+	  },
+	  {
+	    "source": "Sufficient wage",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.00884
+	  },
+	  {
+	    "source": "Sufficient wage",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00783
+	  },
+	  {
+	    "source": "Sufficient wage",
+	    "target": "Coconut oil (Organic)",
+	  "value": 0.00348
+	  },
+	  {
+	    "source": "Sufficient wage",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.00316
+	  },
+	  {
+	    "source": "Sufficient wage",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00281
+	  },
+	  {
+	    "source": "Sufficient wage",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00266
+	  },
+	  {
+	    "source": "Human rights",
+	    "target": "Equal rights migrants",
+	    "value": 0.02711
+	  },
+	  {
+	    "source": "Equal rights migrants",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.0071
+	  },
+	  {
+	    "source": "Equal rights migrants",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.00637
+	  },
+	  {
+	    "source": "Equal rights migrants",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.00601
+	  },
+	  {
+	    "source": "Equal rights migrants",
+	    "target": "Coconut oil (Organic)",
+	    "value": 0.00429
+	  },
+	  {
+	    "source": "Equal rights migrants",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00183
+	  },
+	  {
+	    "source": "Equal rights migrants",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00151
+	  },
+	  {
+	    "source": "Human rights",
+	    "target": "Discrimination",
+	    "value": 0.02112
+	  },
+	  {
+	    "source": "Discrimination",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.0061
+	  },
+	  {
+	    "source": "Discrimination",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00477
+	  },
+	  {
+	    "source": "Discrimination",
+	    "target": "Coconut oil (Organic)",
+	    "value": 0.00368
+	  },
+	  {
+	    "source": "Discrimination",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00286
+	  },
+	  {
+	    "source": "Discrimination",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00284
+	  },
+	  {
+	    "source": "Discrimination",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.00087
+	  },
+	  {
+	    "source": "Human rights",
+	    "target": "Working hours",
+	    "value": 0.02083
+	  },
+	  {
+	    "source": "Working hours",
+	    "target": "Hazelnuts (Organic)",
+	    "value": 0.01072
+	  },
+	  {
+	    "source": "Working hours",
+	    "target": "Coconut oil (Organic)",
+	    "value": 0.00359
+	  },
+	  {
+	    "source": "Working hours",
+	    "target": "Vegetables (Organic)",
+	    "value": 0.00212
+	  },
+	  {
+	    "source": "Working hours",
+	    "target": "Cocoa butter (Organic)",
+	    "value": 0.00185
+	  },
+	  {
+	    "source": "Working hours",
+	    "target": "Cocoa mass (Organic)",
+	    "value": 0.00158
+	  },
+	  {
+	    "source": "Working hours",
+	    "target": "Cane sugar (Organic)",
+	    "value": 0.00096
+	  }
+	]
+  }
+}

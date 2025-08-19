@@ -1,0 +1,122 @@
+{
+	"ComboFilter": {
+		"Properties": {
+			"Object": {
+				"componentType": "combo_filter",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "filter",
+				"objectType": "filter",
+				"percentwidth": "130",
+				"width": "250",
+				"subElement": "Filter",
+				"globalVariableKeyAttribute": "Globalkey",
+				"showLocked": "false",
+				"objectName": "Combobox_27",
+				"unShowHidden": "false",
+				"groupings": "",
+				"x": "309",
+				"height": "40",
+				"y": "951",
+				"percentheight": "25",
+				"initialVisibility": "true",
+				"showSearch":"true",
+				"objectID": "Obj.BB8FBAE3N300CND3DFN1A66NE6E978DE011C",
+				"Filter": {
+					"SelectedIndex": "0",
+					"enableGVAutoUpdate": "true",
+					"notifyGVAutoUpdate": "false",
+					"publicFilter" : "false",
+					"SelectionType" : "default",
+					"textDecoration": "normal",
+					"hierarchyLevel": "Single",
+					"direction": "horizontal",
+					"FontFamily": "BizvizFont",
+					"FontColor": "#333333",
+					"FontStyle": "normal",
+					"layout": "horizontal",
+					"Name": "filter",
+					"controlledSelection": "false",
+					"Type": "dropdown",
+					"showExpandButton": "true",
+					"FontSize": "12",
+					"fieldName": "Value",
+					"checkBoxSelected": "false",
+					"FontWeight": "normal",
+					"Globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"filterbgColor": "#dddddd",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"rollOverColor": "#d9d7d8",
+					"chromeColor": "#f2f2f2",
+					"selectionColor": "#BDC3C7",
+					"backgroundColor" : "#dddddd",
+					"actionBarTooltip" : "false",
+					"Values": [],
+					"Title": {
+						"FontWeight": "normal",
+						"Description": "Year",
+						"FontSize": "12",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#808080",
+						"FontStyle": "normal",
+						"showTitle": "false",
+						"showOnlyTitle":"false",
+						"showGradient": "false",
+						"GradientColor": "#F5F5F5,#F5F5F5",
+						"TitleBarHeight": "25",
+						"Position": "top"
+					}
+				}
+			}
+		},
+		"Fields": [{
+			"DisplayField": "Year",
+			"Value": "Sales",
+			"additionalFields": "Year,Sales,QP"
+		}],
+		"Data": [{
+				"Year": "2005",
+				"Sales": "17.1",
+				"QP": "32.54",
+				"Expense": "17.1"
+			},
+			{
+				"Year": "2006",
+				"Sales": "16.4",
+				"QP": "22.76",
+				"Expense": "16.4"
+			},
+			{
+				"Year": "2007",
+				"Sales": "50.32",
+				"QP": "84.654",
+				"Expense": "14.32"
+			},
+			{
+				"Year": "2008",
+				"Sales": "13.24",
+				"QP": "24.9",
+				"Expense": "13.24"
+			},
+			{
+				"Year": "2009",
+				"Sales": "22.24",
+				"QP": "26.9",
+				"Expense": "17.24"
+			}
+		],
+		"autoAddScriptsFromDesigner": "sdk.autoReload();"
+	}
+}

@@ -1,0 +1,208 @@
+{
+	"TreeMapChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "tree_map_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "treemap",
+				"showLocked": "false",
+				"objectName": "Treemap_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "643",
+				"x": "20",
+				"height": "536",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "TreeMap",
+					"showGradient": "true",
+					"bgGradients": "#FFFFFF",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+
+					"exportToExcel": "true",
+					"exportToCSV": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"exportType":"screenshot",
+
+					"showScreenShotButton": "true",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showTooltip": "true",
+					"showMaximizeButton": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"showExcelDownload": "true",
+					"showSubTitle": "false",
+					"showTitle": "true",
+					"colorOpacity": "1",
+					"GradientColor": "#FFFFFF,#FFFFFF",
+					"showLegends": "false",
+					"legendDirection": "horizontal",
+					"legendfontSize": "10",
+					"legendtextDecoration": "none",
+					"legendfontStyle": "normal",
+					"legendfontColor": "#000000",
+					"legendfontFamily": "BizvizFont",
+					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+					"showcheckboxwithlegend": "false",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"autoaxisSetup": "true",
+					"minimumAxisValue": "0",
+					"maximumAxisValue": "100",
+					"baseZero": "true",
+					"FixedLabel": "false",
+					"Formater": "Currency",
+					"Unit": "none",
+					"SignPosition": "prefix",
+					"Precision": "default",
+					"NumberFormatter": "number",
+					"SecondaryFormater": "Number",
+					"SecondaryUnit": "none",
+					"Globalkey": "",
+					"enableColorFromDrill": "false",
+					"ChartType": "",
+					"showCellText": "true",
+					"showParentText": "true",
+					"headerBgColor": "#cccccc",
+					"cellTextColor": "#000000",
+					"cellTextFontSize": "10",
+					"cellTextDecoration": "none",
+					"cellTextFontStyle": "normal",
+					"cellTextFontColor": "#000000",
+					"cellTextFontWeight": "normal",
+					"cellTextFontFamily": "BizvizFont",
+					"bodyStrokeColor": "#FFFFFF",
+					"bodyStrokeColorLineWidth": "1",
+					"showDynamicRange": "false",
+					"maxRangeColor": "#2C5DA7",
+					"minRangeColor": "#00BCD4",
+					"position": "center",
+ 					"updatedDesign": "true",
+					"Legend": {
+						"DisplayName": "Very Low,Low,Medium,High,Very High",
+						"Ranges": "0~2.5,2.5~4.5,4.5~10,10~18,18~25",
+						"Colors": "#00BCD4,#79C0E8,#4191E1,#1D61C8,#2C5DA7"
+					},
+					"Title": {
+						"FontWeight": "600",
+						"Description": "GDP Ranking (2018) of the top 10 countries",
+						"FontSize": "17",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"showDatasetDescription": "true",
+						"TitleBarHeight": "40"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "GDP Ranking of Countries",
+						"showSubTitle": "false",
+						"FontSize": "15",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal"
+					}
+				}
+			}
+		},
+		"Fields": [{
+				"Name": "Country",
+				"DisplayName": "Country",
+				"hierarchyType": "parent",
+				"visible": "true",
+				"precision": "0",
+				"AdditionalField":"Country"
+			},
+			{
+				"Name": "EconomyPercent",
+				"DisplayName": "EconomyPercent",
+				"hierarchyType": "none",
+				"visible": "true",
+				"precision": "0",
+				"AdditionalField":"EconomyPercent"
+			}
+		],
+		"Data": [{
+				"Country": "Canada",
+				"EconomyPercent": 2.06
+			},
+			{
+				"Country": "Brazil",
+				"EconomyPercent": 2.44
+			},
+			{
+				"Country": "Italy",
+				"EconomyPercent": 2.49
+			},
+			{
+				"Country": "India",
+				"EconomyPercent": 3.25
+			},
+			{
+				"Country": "France",
+				"EconomyPercent": 3.34
+			},
+			{
+				"Country": "United Kingdom",
+				"EconomyPercent": 3.36
+			},
+			{
+				"Country": "Germany",
+				"EconomyPercent": 4.81
+			},
+			{
+				"Country": "Japan",
+				"EconomyPercent": 5.90
+			},
+			{
+				"Country": "China",
+				"EconomyPercent": 16.10
+			},
+			{
+				"Country": "United States",
+				"EconomyPercent": 23.32
+			}
+		]
+	}
+}

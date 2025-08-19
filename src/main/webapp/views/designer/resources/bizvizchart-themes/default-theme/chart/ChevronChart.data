@@ -1,0 +1,272 @@
+{
+	"ChevronChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "chevron_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "chevron",
+				"showLocked": "false",
+				"objectName": "Chevron_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "643",
+				"x": "20",
+				"height": "536",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "Chevron",
+					"showGradient": "true",
+					"bgGradients": "#FFFFFF",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+					"borderRadius": "5",
+
+					"exportToExcel": "true",
+					"exportToCSV": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"exportType": "screenshot",
+
+					"showScreenShotButton": "true",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showTooltip": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"showMaximizeButton": "true",
+					"showExcelDownload": "true",
+					"showSubTitle": "false",
+					"showTitle": "true",
+					"GradientColor": "#FFFFFF,#FFFFFF",
+					"showLegends": "false",
+					"hideLegendOnStart": "true",
+					"legendDirection": "horizontal",
+					"legendfontSize": "14",
+					"legendtextDecoration": "none",
+					"legendfontStyle": "normal",
+					"legendfontColor": "#000000",
+					"legendfontFamily": "BizvizFont",
+					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+					"showcheckboxwithlegend": "false",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#cccccc",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"axisColor": "#95A5A6",
+					"Globalkey": "",
+					"enableColorFromDrill": "false",
+					"isClickToLink": "true",
+					"clickLink": "",
+					"dataAscending": "true",
+					"sourceDateFormat": "mm/dd/yyyy",
+					"seriesColor": "#5BEEFB,#00BCD4,#00A0F0,#124CA3,#004B70,#013f5e",
+					"currentPhaseBorderColor": "#333333",
+ 					"updatedDesign": "true",
+					"xAxis": {
+						"ShowLineXAxis": "true",
+						"LineXAxisColor": "#808080",
+						"LabelFontWeight": "normal",
+						"FontSize": "14",
+						"LabelFontColor": "#000000",
+						"LabelFontStyle": "normal",
+						"TextDecoration": "none",
+						"LabelFontFamily": "BizvizFont",
+						"Labelrotation": "90",
+						"LabelTilted": "false",
+						"FontColor": "#000000",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "14",
+						"FontStyle": "normal",
+						"FontFamily": "BizvizFont",
+						"FontWeight": "normal"
+					},
+					"yAxis": {
+						"ShowLineYAxis": "true",
+						"LineYAxisColor": "#808080",
+						"rightaxisFormater": "false",
+						"LabelFontWeight": "normal",
+						"FontStyle": "normal",
+						"LabelFontColor": "#494950",
+						"FontFamily": "BizvizFont",
+						"TextDecoration": "none",
+						"LabelFontStyle": "normal",
+						"LabelFontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"SecondDiscription": "yaxis",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "14",
+						"FontSize": "14",
+						"leftaxisFormater": "true",
+						"FontWeight": "normal"
+					},
+					"Title": {
+						"FontWeight": "600",
+						"Description": "Status of Projects",
+						"FontSize": "17",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"showDatasetDescription": "true",
+						"TitleBarHeight": "48"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "Project Status",
+						"showSubTitle": "false",
+						"FontSize": "15",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal"
+					}
+				}
+			}
+		},
+		"Fields": [{
+				"DisplayName": "ProjectName",
+				"Type": "Category",
+				"visible": "true",
+				"PlotRadius": "0",
+				"Name": "ProjectName",
+				"Color": "5011072",
+				"axis": "none",
+				"Precision": "0",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "PhaseName",
+				"Type": "Series",
+				"visible": "true",
+				"PlotRadius": "0",
+				"Name": "PhaseName",
+				"Color": "56042",
+				"axis": "none",
+				"Precision": "0",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "PhaseStartDate",
+				"Type": "startvalue",
+				"visible": "true",
+				"PlotRadius": "0",
+				"Name": "PhaseStartDate",
+				"Color": "56042",
+				"axis": "none",
+				"Precision": "0",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "PhaseEndDate",
+				"Type": "endvalue",
+				"visible": "true",
+				"PlotRadius": "0",
+				"Name": "PhaseEndDate",
+				"Color": "56042",
+				"axis": "none",
+				"Precision": "0",
+				"ChartType": "none"
+			}
+		],
+		"Data": [{
+				"ProjectName": "Project 1",
+				"PhaseName": "Initiation",
+				"PhaseStartDate": "01/01/2015",
+				"PhaseEndDate": "01/31/2015"
+			},
+			{
+				"ProjectName": "Project 1",
+				"PhaseName": "Planning",
+				"PhaseStartDate": "01/02/2015",
+				"PhaseEndDate": "03/31/2015"
+			},
+			{
+				"ProjectName": "Project 1",
+				"PhaseName": "Execution",
+				"PhaseStartDate": "01/04/2015",
+				"PhaseEndDate": "06/30/2015"
+			},
+			{
+				"ProjectName": "Project 1",
+				"PhaseName": "Deployment",
+				"PhaseStartDate": "01/10/2015",
+				"PhaseEndDate": "08/30/2015"
+			},
+			{
+				"ProjectName": "Project 2",
+				"PhaseName": "Initiation",
+				"PhaseStartDate": "01/01/2015",
+				"PhaseEndDate": "01/31/2015"
+			},
+			{
+				"ProjectName": "Project 2",
+				"PhaseName": "Planning",
+				"PhaseStartDate": "01/02/2015",
+				"PhaseEndDate": "03/31/2015"
+			},
+			{
+				"ProjectName": "Project 2",
+				"PhaseName": "Execution",
+				"PhaseStartDate": "01/04/2015",
+				"PhaseEndDate": "05/30/2015"
+			},
+			{
+				"ProjectName": "Project 2",
+				"PhaseName": "Deployment",
+				"PhaseStartDate": "01/10/2015",
+				"PhaseEndDate": "07/31/2015"
+			},
+			{
+				"ProjectName": "Project 3",
+				"PhaseName": "Initiation",
+				"PhaseStartDate": "01/11/2015",
+				"PhaseEndDate": "01/30/2015"
+			},
+			{
+				"ProjectName": "Project 3",
+				"PhaseName": "Planning",
+				"PhaseStartDate": "01/31/2015",
+				"PhaseEndDate": "02/26/2015"
+			},
+			{
+				"ProjectName": "Project 3",
+				"PhaseName": "Execution",
+				"PhaseStartDate": "02/27/2015",
+				"PhaseEndDate": "06/15/2015"
+			}
+		]
+	}
+}

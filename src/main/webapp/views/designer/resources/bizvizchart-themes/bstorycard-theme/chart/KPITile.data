@@ -1,0 +1,114 @@
+{
+	"KPITile": {
+		"Properties": {
+			"Object": {
+				"componentType": "kpi_tile",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "kpitile",
+				"showLocked": "false",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "globalKey",
+				"y": "894",
+				"objectType": "chart",
+				"width": "300",
+				"initialVisibility": "true",
+				"height": "150",
+				"objectName": "kpi",
+				"unShowHidden": "false",
+				"objectID": "Obj.2FD54250N12FAN78FDN9ED4NE6EAD191DE18",
+				"x": "125",
+				"Chart": {
+					"id": "Obj.2FD54250N12FAN78FDN9ED4NE6EAD191DE18",
+					"Type": "KPITile",
+					"showGradient": "false",
+					"bgGradients": "#f8f8f8",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+					"showMaximizeButton": "true",
+					"GradientColor": "#F5F5F5,#F5F5F5",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"fillColor": "#86dff9",
+					"lineColor": "#006488",
+					"NoofBranches": "1",
+					"PaddingBetTile": "5",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"Globalkey": "",
+					"enableToolTip": "false",
+					"lineForm": "curve",
+					"CategoryFontColor": "#000000",
+					"CategoryFontSize": "16",
+					"CategoryFontStyle": "normal",
+					"CategoryFontWeight": "normal",
+					"CategoryFontFamily": "Roboto",
+					"PrimarySeriesFontColor": "#000000",
+					"PrimarySeriesFontSize": "20",
+					"PrimarySeriesFontStyle": "normal",
+					"PrimarySeriesFontWeight": "normal",
+					"PrimarySeriesFontFamily": "Roboto",
+					"SecondarySeriesFontColor": "#000000",
+					"SecondarySeriesFontSize": "16",
+					"SecondarySeriesFontStyle": "normal",
+					"SecondarySeriesFontWeight": "normal",
+					"SecondarySeriesFontFamily": "Roboto",
+					"fillOpacity": "0.7",
+					"kpitileDirection": "horizontal",
+					"positiveTrendColor": "#26A65B",
+					"negativeTrendColor": "#F22613",
+					"zeroTrendColor": "#F7CA18"
+				}
+			}
+		},
+		"Fields": [{
+				"Name": "FieldArea",
+				"Type": "Category",
+				"visible": "true"
+			},
+			{
+				"Name": "TotalRevenue",
+				"Type": "Series",
+				"visible": "true",
+				"unitname": "USD",
+				"signposition": "prefix"
+			},
+			{
+				"Name": "RevenueInformation",
+				"Type": "Series",
+				"visible": "true",
+				"unitname": "none",
+				"signposition": "suffix"
+			},
+			{
+				"DisplayName": "Microchart",
+				"Type": "Indicator",
+				"visible": "true",
+				"Name": "Microchart",
+				"IndicatorType": "sparkline"
+			},
+			{
+				"DisplayName": "Trend",
+				"Type": "Indicator",
+				"visible": "true",
+				"Name": "Trend",
+				"IndicatorType": "trend"
+			}
+		],
+		"Data": [{
+			"FieldArea": "Yearly revenue in Dollars",
+			"TotalRevenue": "1,234,567",
+			"RevenueInformation": "Year 2017",
+			"Microchart": "400000, 60000, 120000, 150000, 500000, 235000, 562000, 100000, 40000, 900000, 125000, 80000",
+			"Trend": "15,5,10"
+		}]
+	}
+}

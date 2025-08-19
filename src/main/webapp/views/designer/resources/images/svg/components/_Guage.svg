@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #7c4dff;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #ffaf6d;
+      }
+
+      .cls-5 {
+        fill: #fef8b7;
+      }
+
+      .cls-3 {
+        stroke: #d3d3d3;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Group_3048">
+        <g id="Rectangle_302">
+          <rect class="cls-2" width="50" height="50" rx="6" ry="6"/>
+          <rect class="cls-3" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+        </g>
+        <path id="Path_258" class="cls-5" d="M19.6,16.6l2.5,3c1.9-.8,4.1-.8,6,0l2.6-3s-5.5-3.5-11.2,0Z"/>
+        <path id="Path_259" class="cls-5" d="M32.3,17.7l-2.6,3s1.4,1.1,2,4.6h3.9s.4-3.7-3.2-7.6Z"/>
+        <path id="Path_260" class="cls-4" d="M25,23.4l1,.4c.2,0,.4,0,.5-.2,0,0,0,0,0,0h0s2.2-7,2.2-7c0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0l-3.8,6.4c-.1.2,0,.4.1.5,0,0,0,0,0,0,0,0,0,0,0,0Z"/>
+        <circle id="Ellipse_44" class="cls-4" cx="25" cy="25.3" r="3.4"/>
+        <circle class="cls-2" cx="25.3" cy="25" r="15"/>
+        <circle class="cls-1" cx="25.3" cy="25" r="14"/>
+      </g>
+    </g>
+  </g>
+</svg>

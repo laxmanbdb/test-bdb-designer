@@ -1,0 +1,1549 @@
+{
+	"Info": [{
+		"class": "HeatMapChart"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"maxLength": "20",
+		"value": "Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Max Button : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showMaximizeButton",
+		"propertyName": "Chart"
+	}, {
+		"label": "Actions : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showSettingMenuButton",
+		"propertyName": "Chart"
+	}, {
+		"label": "Animation : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "enableAnimation",
+		"propertyName": "Chart"
+	}],
+	"Tooltip": [{
+		"label": "Show Tool Tip : ",
+		"heading": "Tool Tip Configuration",
+		"type": "customTextBoxForToolTip",
+		"value": "500",
+		"showcustom": "true",
+		"attributeName": "CustomTextBoxForToolTip",
+		"propertyName": "Chart"
+	}, {
+		"label": "Background Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "tooltipBackgroundColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "tooltipBackgroundTransparency",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "tooltipBorderColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Tooltip Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "tooltipFontSize",
+		"propertyName": "Chart"
+	}, {
+		"label": "Box Width :",
+		"type": "select",
+		"value": "default",
+		"options": [{
+			"key": "auto",
+			"value": "Auto"
+		}, {
+			"key": "100",
+			"value": "100px"
+		}, {
+			"key": "200",
+			"value": "200px"
+		}, {
+			"key": "300",
+			"value": "300px"
+		}, {
+			"key": "400",
+			"value": "400px"
+		}, {
+			"key": "500",
+			"value": "500px"
+		}, {
+			"key": "600",
+			"value": "600px"
+		}, {
+			"key": "1000",
+			"value": "1000px"
+		}],
+		"attributeName": "customTooltipWidth",
+		"propertyName": "Chart"
+	}, {
+		"label": "Precision :",
+		"type": "select",
+		"value": "default",
+		"options": [{
+			"key": "default",
+			"value": "Default"
+		}, {
+			"key": "0",
+			"value": "None"
+		}, {
+			"key": "1",
+			"value": ".0"
+		}, {
+			"key": "2",
+			"value": ".00"
+		}, {
+			"key": "3",
+			"value": ".000"
+		}, {
+			"key": "4",
+			"value": ".0000"
+		}, {
+			"key": "6",
+			"value": ".000000"
+		}, {
+			"key": "8",
+			"value": ".00000000"
+		}],
+		"attributeName": "tooltipPrecision",
+		"propertyName": "Chart"
+	}],
+	"Background": [{
+		"label": "Gradient Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "45",
+		"attributeName": "bgGradientRotation",
+		"propertyName": "Chart"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "bgAlpha",
+		"propertyName": "Chart"
+	}, {
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "bgGradients",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showBorder",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "borderColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "5",
+		"attributeName": "borderRadius",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Chart"
+	}],
+	"Cell Styles": [{
+		"label": "Range Colors : ",
+		"heading": "Range Colors",
+		"type": "customRangeIndicatorWindow",
+		"value": "",
+		"attributes": {
+			"names": "DisplayName",
+			"ranges": "Ranges",
+			"colors": "Colors"
+		},
+		"attributeName": "DisplayName",
+		"propertyName": "Chart.Legend"
+	}, {
+		"label": "Solid Color : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "SolidColorFill",
+		"propertyName": "Chart"
+	},{
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "1",
+		"attributeName": "colorOpacity",
+		"propertyName": "Chart"
+	},{
+		"label": "High Values Are Good: ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "higherValuesAreGood",
+		"propertyName": "Chart"
+	}, {
+		"label": "Base Type : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "plane",
+			"value": "Plain"
+		}, {
+			"key": "gradient1",
+			"value": "Gradient1"
+		}, {
+			"key": "gradient2",
+			"value": "Gradient2"
+		}, {
+			"key": "gradient3",
+			"value": "Gradient3"
+		}, {
+			"key": "gradient4",
+			"value": "Gradient4"
+		}],
+		"attributeName": "ChartBase",
+		"propertyName": "Chart"
+	}, {
+		"label": "Show Frequency Bar : ",
+		"type": "checkbox",
+		"value": "",
+		"attributeName": "showFrequencyBar",
+		"propertyName": "Chart"
+	}, {
+		"label": "Show Text On Cell : ",
+		"type": "checkbox",
+		"value": "",
+		"attributeName": "showCellText",
+		"propertyName": "Chart"
+	}, {
+		"label": "Text Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "cellTextColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Text Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "cellTextFontSize",
+		"propertyName": "Chart"
+	}, {
+		"label": "Text Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "cellTextFontStyle",
+		"propertyName": "Chart"
+	}, {
+		"label": "Text Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "cellTextFontWeight",
+		"propertyName": "Chart"
+	}, {
+		"label": "Text Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "cellTextFontFamily",
+		"propertyName": "Chart"
+	}],
+	"Title": [{
+		"label": "Title Box Color : ",
+		"type": "gradient",
+		"value": "",
+		"attributeName": "GradientColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Show Title Box : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "showGradient",
+		"propertyName": "Chart"
+	}, {
+		"label": "Show Title : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showTitle",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Title Bar Height : ",
+		"type": "number",
+		"min": "25",
+		"max": "75",
+		"step": "1",
+		"value": "25",
+		"attributeName": "TitleBarHeight",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "Title",
+		"attributeName": "Description",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Align : ",
+		"type": "select",
+		"value": "left",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "Align",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "TextDecoration",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Show Dataset Description : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showDatasetDescription",
+		"propertyName": "Chart.Title"
+	}],
+	"Sub Title": [{
+		"label": "Show Sub Title : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showSubTitle",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "SubTitle",
+		"attributeName": "Description",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Align : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "Align",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "TextDecoration",
+		"propertyName": "Chart.SubTitle"
+	}],
+	"X Axis": [{
+		"label": "Show X-Axis Line : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "ShowLineXAxis",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Text Wrap : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "xAxisTextWrap",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "X-Axis Line Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "LineXAxisColor",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Label Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "LabelFontColor",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Label Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "LabelFontSize",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Label Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "LabelFontStyle",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Label Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "LabelFontWeight",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Label Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "LabelFontFamily",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Label Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "LabelTextDecoration",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Label Rotation : ",
+		"type": "number",
+		"min": "-90",
+		"max": "90",
+		"step": "1",
+		"value": "90",
+		"attributeName": "Labelrotation",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Tilted Label : ",
+		"type": "checkbox",
+		"value": "Tilted Label",
+		"attributeName": "LabelTilted",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "Description",
+		"attributeName": "Description",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "TextDecoration",
+		"propertyName": "Chart.xAxis"
+	}, {
+		"label": "Show Dataset Description : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showDatasetDescription",
+		"propertyName": "Chart.xAxis"
+	}],
+	"Y Axis": [{
+		"label": "Show Y-Axis Line : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "ShowLineYAxis",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Y-Axis Line Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "LineYAxisColor",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Label Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "LabelFontColor",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Label Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "LabelFontSize",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Label Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "LabelFontStyle",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Label Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "LabelFontWeight",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Label Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "LabelFontFamily",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Label Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "LabelTextDecoration",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "Description",
+		"attributeName": "Description",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "TextDecoration",
+		"propertyName": "Chart.yAxis"
+	}, {
+		"label": "Show Dataset Description : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showDatasetDescription",
+		"propertyName": "Chart.yAxis"
+	}],
+	"Legend": [{
+		"label": "Show Legend : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showLegends",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "legendfontColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "normal",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "legendfontWeight",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "10",
+		"attributeName": "legendfontSize",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "legendfontFamily",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "legendfontStyle",
+		"propertyName": "Chart"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "legendtextDecoration",
+		"propertyName": "Chart"
+	},{
+		"label": "Hide on Load: ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "hideLegendOnStart",
+		"propertyName": "Chart"
+	}],
+	"Formatter": [{
+		"label": "Unit : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "auto",
+			"value": "Auto"
+		}, {
+			"key": "Percent",
+			"value": "%"
+		}, {
+			"key": "Thousand",
+			"value": "K"
+		}, {
+			"key": "Million",
+			"value": "M"
+		}, {
+			"key": "Billion",
+			"value": "B"
+		}, {
+			"key": "Trillion",
+			"value": "T"
+		}, {
+			"key": "Quadrillion",
+			"value": "Q"
+		}, {
+			"key": "Lac",
+			"value": "Lacs"
+		}, {
+			"key": "Crore",
+			"value": "Cr"
+		}],
+		"attributeName": "SecondaryUnit",
+		"propertyName": "Chart"
+	}, {
+			"label": "Precision :",
+			"type": "select",
+			"value": "default",
+			"options": [{
+				"key": "default",
+				"value": "Default"
+			}, {
+				"key": "0",
+				"value": "None"
+			}, {
+				"key": "1",
+				"value": ".0"
+			}, {
+				"key": "2",
+				"value": ".00"
+			}, {
+				"key": "3",
+				"value": ".000"
+			}, {
+				"key": "4",
+				"value": ".0000"
+			}, {
+				"key": "6",
+				"value": ".000000"
+			}, {
+				"key": "8",
+				"value": ".00000000"
+			}],
+			"attributeName": "Precision",
+			"propertyName": "Chart"
+		}, {
+		"label": "Currency : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "Cent",
+			"value": "CENT"
+		}, {
+			"key": "Euro",
+			"value": "EURO"
+		}, {
+			"key": "Rupees",
+			"value": "INR"
+		}, {
+			"key": "Pound",
+			"value": "POUND"
+		}, {
+			"key": "USD",
+			"value": "USD"
+		}, {
+			"key": "Yen",
+			"value": "YEN"
+		}],
+		"attributeName": "Unit",
+		"propertyName": "Chart"
+	}, {
+		"label": "Position : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "prefix",
+			"value": "Prefix"
+		}, {
+			"key": "suffix",
+			"value": "Suffix"
+		}],
+		"attributeName": "SignPosition",
+		"propertyName": "Chart"
+	}, {
+		"label": "Number Formatter : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "indiannumber",
+			"value": "Indian"
+		}, {
+			"key": "number",
+			"value": "International"
+		}],
+		"attributeName": "NumberFormatter",
+		"propertyName": "Chart"
+	}],
+	"Export Options": [{
+		"label": "Enable Context Menu : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showContextMenu",
+		"propertyName": "Object"
+	}, {
+		"label": "Export Excel : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToExcel",
+		"propertyName": "Chart"
+	}, {
+		"label": "Export CSV : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToCSV",
+		"propertyName": "Chart"
+	}, {
+		"label": "Export JPEG : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToJPEG",
+		"propertyName": "Chart"
+	}, {
+		"label": "Export PNG : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPNG",
+		"propertyName": "Chart"
+	}, {
+		"label": "Export PPT : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPPT",
+		"propertyName": "Chart"
+	}, {
+		"label": "Export PDF : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPDF",
+		"propertyName": "Chart"
+	}, {
+		"label": "Show Print : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPrint",
+		"propertyName": "Chart"
+	}, {
+		"label": "Export Heading : ",
+		"type": "text",
+		"value": "PPT Heading",
+		"maxLength": "50",
+		"attributeName": "pptHeading",
+		"propertyName": "Chart"
+	}, {
+		"label": "Export Sub Heading : ",
+		"type": "text",
+		"value": "PPT SubHeading",
+		"maxLength": "30",
+		"attributeName": "pptSubHeading",
+		"propertyName": "Chart"
+	}, {
+		"label": "Export File Name : ",
+		"type": "text",
+		"value": "File Name",
+		"maxLength": "30",
+		"attributeName": "scrnShotFileName",
+		"propertyName": "Chart"
+	},{
+		"label": "Global Export Type : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "screenshot",
+			"value": "ScreenShot"
+		}, {
+			"key": "tabular",
+			"value": "Tabular"
+		}],
+		"attributeName": "exportType",
+		"propertyName": "Chart"
+	}]
+}

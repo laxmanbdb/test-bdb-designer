@@ -1,0 +1,849 @@
+{
+	"TimeAreaChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "time_area_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "timearea",
+				"showLocked": "false",
+				"objectName": "TimeArea_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "900",
+				"x": "20",
+				"height": "300",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "Timearea",
+					"chartType": "timeseries",
+					"showSlider": "true",
+					"showSliderMarker": "true",
+					"sliderBorderColor": "#333333",
+					"sliderBGHandle": "#ffffff",
+					"sliderOpacityHandle": "1",
+					"sliderBGSelection": "#cccccc",
+					"sliderOpacitySelection": "0.5",
+					"sliderBGContainer": "#ecf0f1",
+					"sliderOpacityContainer": "0.0",
+					"sliderBGScrollbar": "#b0b0b0",
+					"sliderOpacityScrollbar": "0.7",
+
+					"rangeSelectorOpacity": "1.0",
+					"rangeSelectorBGColor": "#cccddd",
+					"showRangeSelector": "true",
+					"sourceDateFormat": "mm/dd/yyyy",
+
+					"showGradient": "false",
+					"bgGradients": "#f8f8f8",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+					"exportToExcel": "true",
+					"exportToCSV": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"showScreenShotButton": "true",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showTooltip": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"showMaximizeButton": "true",
+					"showExcelDownload": "true",
+					"showSubTitle": "false",
+					"showTitle": "true",
+					"GradientColor": "#F5F5F5,#F5F5F5",
+					"showLegends": "false",
+					"legendDirection": "horizontal",
+					"legendfontSize": "10",
+					"legendtextDecoration": "none",
+					"legendfontStyle": "normal",
+					"legendfontColor": "#000000",
+					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+					"showcheckboxwithlegend": "false",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"markerColor": "#F5F5F5",
+					"markerTransparency": "0.3",
+					"showMarkerLine": true,
+					"showVerticalMarkerLine": "false",
+					"autoaxisSetup": "true",
+					"minimumAxisValue": "-20",
+					"maximumAxisValue": "110",
+					"baseZero": "true",
+					"FixedLabel": "false",
+					"Formater": "Currency",
+					"Unit": "none",
+					"SignPosition": "prefix",
+					"Precision": "0",
+					"SecondaryFormater": "Number",
+					"SecondaryUnit": "none",
+					"Globalkey": "",
+					"enableColorFromDrill": "false",
+					"showPoint": false,
+					"lineForm": "segment",
+					"ChartBase": "plane",
+					"showWholeNumberInAxis": "false",
+					"plotWithLabel": "true",
+					"showColorBands": "false",
+					"BandColors": "",
+					"BandAlphas": "",
+					"rangeEnabledSeries": "false",
+					"rangedSeriesColors": "",
+					"rangesOfSeries": "",
+					"rangedSeriesDisplayNames": "",
+					"ColorBandRanges": "",
+					"ShowColorBandLegends": "",
+					"backgroundAlpha": "",
+					"backGroundColor": "",
+					"enableAutoColors": "true",
+					"TargetColor": "0xff0000",
+					"ValueColor": "0x00ff00",
+					"drillLevel": "0",
+					"URL": "",
+					"Name": "true",
+					"columnNumbers": "",
+					"NumberOfTicks": "",
+					"toolTipDateFormat": "",
+					"fillColor": "0x00ffff",
+					"strokeColor": "0x000fff",
+					"declineFillColor": "0x00ffff",
+					"autoAdjustLayout": "true",
+					"seriesColor": "",
+					"useCategoryColor": "false",
+					"isClickToLink": "true",
+					"clickLink": "",
+					"dataAscending": "true",
+					"SecondChartType": "stacked",
+					"secondaryAxisShow": "false",
+					"secondAxisautoSetup": "false",
+					"secondAxisminimumValue": "na",
+					"secondAxismaximumValue": "na",
+					"secondAxisbaseZero": "true",
+					"SecondaryAxisFormater": "Number",
+					"SecondaryAxisUnit": "Thousand",
+					"SecondaryAxisPrecision": "0",
+					"SecondaryAxisSignPosition": "suffix",
+					"horizontalMinimumAxisValue": "",
+					"horizontalAxisAutoAdjust": "",
+					"horizontalMaximumAxisValue": "",
+					"horizontalAxisBaseZero": "",
+					"lineWidth": 2.0,
+ 					"updatedDesign": "true",
+					"xAxis": {
+						"ShowLineXAxis": "false",
+						"LineXAxisColor": "#ffffff",
+						"Description": "",
+						"LabelFontWeight": "normal",
+						"FontSize": "12",
+						"LabelFontColor": "#808080",
+						"LabelFontStyle": "normal",
+						"TextDecoration": "none",
+						"LabelFontFamily": "BizvizFont",
+						"Labelrotation": "90",
+						"LabelTilted": "false",
+						"FontColor": "#808080",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "10",
+						"FontStyle": "normal",
+						"FontFamily": "BizvizFont",
+						"FontWeight": "normal",
+						"TickMarks": "true",
+						"CategoryMarkingColor": "#cccccc"
+					},
+					"yAxis": {
+						"ShowLineYAxis": "false",
+						"LineYAxisColor": "#ffffff",
+						"Description": "",
+						"rightaxisFormater": "false",
+						"LabelFontWeight": "normal",
+						"FontStyle": "normal",
+						"LabelFontColor": "#808080",
+						"FontFamily": "BizvizFont",
+						"TextDecoration": "none",
+						"LabelFontStyle": "normal",
+						"LabelFontFamily": "BizvizFont",
+						"FontColor": "#808080",
+						"SecondDiscription": "yaxis",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "10",
+						"FontSize": "12",
+						"leftaxisFormater": "true",
+						"FontWeight": "normal"
+					},
+					"Title": {
+						"FontWeight": "600",
+						"Description": "Year wise Groth comparision between Companies",
+						"FontSize": "17",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#808080",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"TitleBarHeight": "40"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "SubTitle",
+						"showSubTitle": "false",
+						"FontSize": "15",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#808080",
+						"FontStyle": "italic"
+					},
+					"ConditionalColors": {
+						"ConditionalColor": []
+					},
+					"CategoryColors": {
+						"categoryDefaultColor": "",
+						"categoryDefaultColorSet": "",
+						"showColorsFromCategoryName": "false",
+						"CategoryColor": []
+					}
+				}
+			}
+		},
+
+		"Fields": [{
+				"DisplayName": "TimeLine",
+				"Type": "Category",
+				"visible": "true",
+				"PlotRadius": "0",
+				"Name": "TimeLine",
+				"Color": "#fcdb96",
+				"axis": "none",
+				"Precision": "0",
+				"LineWidth": "2",
+				"LineType": "straight",
+				"PlotTransparency": "0.8",
+				"PlotType": "point",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "Company_A",
+				"Type": "Series",
+				"visible": "true",
+				"PlotRadius": "4",
+				"Name": "Company_A",
+				"Color": "#333333",
+				"axis": "none",
+				"Precision": "0",
+				"LineWidth": "2",
+				"LineType": "straight",
+				"PlotTransparency": "0.5",
+				"PlotType": "point",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "Company_B",
+				"Type": "Series",
+				"visible": "true",
+				"PlotRadius": "4",
+				"Name": "Company_B",
+				"Color": "#339900",
+				"axis": "none",
+				"Precision": "0",
+				"LineWidth": "2",
+				"LineType": "straight",
+				"PlotTransparency": "0.5",
+				"PlotType": "point",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "Company_C",
+				"Type": "Series",
+				"visible": "true",
+				"PlotRadius": "4",
+				"Name": "Company_C",
+				"Color": "#DB0A5B",
+				"axis": "none",
+				"Precision": "0",
+				"LineWidth": "2",
+				"LineType": "straight",
+				"PlotTransparency": "0.5",
+				"PlotType": "point",
+				"ChartType": "none"
+			}
+		],
+		"Data": [{
+				"TimeLine": "01-01-2008",
+				"Company_A": 3,
+				"Company_B": 1,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "02-01-2008",
+				"Company_A": 4,
+				"Company_B": 1,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "03-01-2008",
+				"Company_A": 4,
+				"Company_B": 1,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "04-01-2008",
+				"Company_A": 4,
+				"Company_B": 2,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "05-01-2008",
+				"Company_A": 3,
+				"Company_B": 2,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "06-01-2008",
+				"Company_A": 3,
+				"Company_B": 3,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "07-01-2008",
+				"Company_A": 2,
+				"Company_B": 3,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "08-01-2008",
+				"Company_A": 1,
+				"Company_B": 3,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "09-01-2008",
+				"Company_A": 1,
+				"Company_B": 4,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "10-01-2008",
+				"Company_A": 2,
+				"Company_B": 4,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "11-01-2008",
+				"Company_A": 3,
+				"Company_B": 5,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "12-01-2008",
+				"Company_A": 7,
+				"Company_B": 4,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "01-01-2009",
+				"Company_A": 9,
+				"Company_B": 4,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "02-01-2009",
+				"Company_A": 9,
+				"Company_B": 3,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "03-01-2009",
+				"Company_A": 10,
+				"Company_B": 3,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "04-01-2009",
+				"Company_A": 10,
+				"Company_B": 4,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "05-01-2009",
+				"Company_A": 7,
+				"Company_B": 4,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "06-01-2009",
+				"Company_A": 7,
+				"Company_B": 5,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "07-01-2009",
+				"Company_A": 10,
+				"Company_B": 5,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "08-01-2009",
+				"Company_A": 10,
+				"Company_B": 5,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "09-01-2009",
+				"Company_A": 9,
+				"Company_B": 6,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "10-01-2009",
+				"Company_A": 9,
+				"Company_B": 6,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "11-01-2009",
+				"Company_A": 10,
+				"Company_B": 7,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "12-01-2009",
+				"Company_A": 10,
+				"Company_B": 8,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "01-01-2010",
+				"Company_A": 12,
+				"Company_B": 6,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "02-01-2010",
+				"Company_A": 14,
+				"Company_B": 9,
+				"Company_C": 2
+			},
+			{
+				"TimeLine": "03-01-2010",
+				"Company_A": 16,
+				"Company_B": 10,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "04-01-2010",
+				"Company_A": 16,
+				"Company_B": 12,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "05-01-2010",
+				"Company_A": 18,
+				"Company_B": 14,
+				"Company_C": 2
+			},
+			{
+				"TimeLine": "06-01-2010",
+				"Company_A": 20,
+				"Company_B": 12,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "07-01-2010",
+				"Company_A": 24,
+				"Company_B": 13,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "08-01-2010",
+				"Company_A": 26,
+				"Company_B": 12,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "09-01-2010",
+				"Company_A": 28,
+				"Company_B": 13,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "10-01-2010",
+				"Company_A": 30,
+				"Company_B": 15,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "11-01-2010",
+				"Company_A": 34,
+				"Company_B": 16,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "12-01-2010",
+				"Company_A": 34,
+				"Company_B": 15,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "01-01-2011",
+				"Company_A": 33,
+				"Company_B": 17,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "02-01-2011",
+				"Company_A": 32,
+				"Company_B": 16,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "03-01-2011",
+				"Company_A": 32,
+				"Company_B": 17,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "04-01-2011",
+				"Company_A": 33,
+				"Company_B": 15,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "05-01-2011",
+				"Company_A": 33,
+				"Company_B": 17,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "06-01-2011",
+				"Company_A": 34,
+				"Company_B": 18,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "07-01-2011",
+				"Company_A": 33,
+				"Company_B": 19,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "08-01-2011",
+				"Company_A": 34,
+				"Company_B": 16,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "09-01-2011",
+				"Company_A": 38,
+				"Company_B": 15,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "10-01-2011",
+				"Company_A": 40,
+				"Company_B": 18,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "11-01-2011",
+				"Company_A": 42,
+				"Company_B": 20,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "12-01-2011",
+				"Company_A": 44,
+				"Company_B": 22,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "01-01-2012",
+				"Company_A": 46,
+				"Company_B": 23,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "02-01-2012",
+				"Company_A": 49,
+				"Company_B": 24,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "03-01-2012",
+				"Company_A": 49,
+				"Company_B": 22,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "04-01-2012",
+				"Company_A": 48,
+				"Company_B": 23,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "05-01-2012",
+				"Company_A": 46,
+				"Company_B": 22,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "06-01-2012",
+				"Company_A": 46,
+				"Company_B": 20,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "07-01-2012",
+				"Company_A": 40,
+				"Company_B": 22,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "08-01-2012",
+				"Company_A": 38,
+				"Company_B": 24,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "09-01-2012",
+				"Company_A": 38,
+				"Company_B": 22,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "10-01-2012",
+				"Company_A": 37,
+				"Company_B": 24,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "11-01-2012",
+				"Company_A": 36,
+				"Company_B": 26,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "12-01-2012",
+				"Company_A": 35,
+				"Company_B": 24,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "01-01-2013",
+				"Company_A": 34,
+				"Company_B": 26,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "02-01-2013",
+				"Company_A": 34,
+				"Company_B": 24,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "03-01-2013",
+				"Company_A": 28,
+				"Company_B": 26,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "04-01-2013",
+				"Company_A": 26,
+				"Company_B": 28,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "05-01-2013",
+				"Company_A": 24,
+				"Company_B": 26,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "06-01-2013",
+				"Company_A": 22,
+				"Company_B": 28,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "07-01-2013",
+				"Company_A": 22,
+				"Company_B": 30,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "08-01-2013",
+				"Company_A": 24,
+				"Company_B": 32,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "09-01-2013",
+				"Company_A": 24,
+				"Company_B": 30,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "10-01-2013",
+				"Company_A": 26,
+				"Company_B": 30,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "11-01-2013",
+				"Company_A": 25,
+				"Company_B": 36,
+				"Company_C": 2
+			},
+			{
+				"TimeLine": "12-01-2013",
+				"Company_A": 25,
+				"Company_B": 35,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "01-01-2014",
+				"Company_A": 24,
+				"Company_B": 34,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "02-01-2014",
+				"Company_A": 25,
+				"Company_B": 38,
+				"Company_C": 3
+			},
+			{
+				"TimeLine": "03-01-2014",
+				"Company_A": 25,
+				"Company_B": 40,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "04-01-2014",
+				"Company_A": 24,
+				"Company_B": 40,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "05-01-2014",
+				"Company_A": 24,
+				"Company_B": 39,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "06-01-2014",
+				"Company_A": 23,
+				"Company_B": 38,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "07-01-2014",
+				"Company_A": 22,
+				"Company_B": 37,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "08-01-2014",
+				"Company_A": 18,
+				"Company_B": 39,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "09-01-2014",
+				"Company_A": 14,
+				"Company_B": 38,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "10-01-2014",
+				"Company_A": 12,
+				"Company_B": 36,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "11-01-2014",
+				"Company_A": 14,
+				"Company_B": 36,
+				"Company_C": 7
+			},
+			{
+				"TimeLine": "12-01-2014",
+				"Company_A": 15,
+				"Company_B": 36,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "01-01-2015",
+				"Company_A": 12,
+				"Company_B": 38,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "02-01-2015",
+				"Company_A": 12,
+				"Company_B": 38,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "03-01-2015",
+				"Company_A": 14,
+				"Company_B": 40,
+				"Company_C": 5
+			},
+			{
+				"TimeLine": "04-01-2015",
+				"Company_A": 15,
+				"Company_B": 42,
+				"Company_C": 4
+			},
+			{
+				"TimeLine": "05-01-2015",
+				"Company_A": 16,
+				"Company_B": 44,
+				"Company_C": 6
+			},
+			{
+				"TimeLine": "06-01-2015",
+				"Company_A": 18,
+				"Company_B": 44,
+				"Company_C": 8
+			},
+			{
+				"TimeLine": "07-01-2015",
+				"Company_A": 18,
+				"Company_B": 46,
+				"Company_C": 8
+			}
+		]
+	}
+}

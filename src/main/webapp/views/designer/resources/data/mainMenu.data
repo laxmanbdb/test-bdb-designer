@@ -1,0 +1,102 @@
+[
+    {
+        "id": "NEW",
+        "title": "New",
+        "iconClass": "nt-add-round-icon",
+        "isUiActive": false,
+        "enabled": true,
+        "subMenu": [
+            {
+                "id": "WORKSPACE",
+                "title": "Workspace",
+                "isUiActive": false,
+                "enabled": true,
+                "iconClass": ""
+            },
+            {
+                "id": "DASHBOARD",
+                "title": "Dashboard",
+                "isUiActive": false,
+                "enabled": true,
+                "iconClass": ""
+            },
+            {
+                "id": "RES_DASHBOARD",
+                "title": "Responsive Dashboard",
+                "enabled": false,
+                "isUiActive": false,
+                "iconClass": ""
+            }
+        ]
+    },
+    {
+        "id": "MANAGE",
+        "title": "Manage",
+        "isUiActive": false,
+        "enabled": true,
+        "iconClass": "nt-manage-icon"
+    },
+    {
+        "id": "OPEN",
+        "title": "Open",
+        "iconClass": "nt-open-icon",
+        "isUiActive": false,
+        "enabled": true,
+        "subMenu": [
+            {
+                "id": "OPN_FRM_LKL_DISK",
+                "title": "Open from Local Disk",
+                "isUiActive": false,
+                "enabled": true,
+                "iconClass": "glyphicon glyphicon-export"
+            },{
+                "id": "TEMPLATES",
+                "title": "Templates",
+                "isUiActive": false,
+                "enabled": true,
+                "iconClass": ""
+            },{
+                "id": "SAMPLEDB",
+                "title": "Sample Dashboard",
+                "isUiActive": false,
+                "enabled": false,
+                "iconClass": ""
+            }
+        ]
+    },
+    {
+        "id": "PREFERENCES",
+        "title": "Preferences",
+        "isUiActive": false,
+        "enabled": true,
+        "iconClass": "nt-preferences-icon"
+    },
+    {
+        "id": "SAVE_AS",
+        "title": "Save as",
+        "isUiActive": false,
+        "enabled": true,
+        "iconClass": "nt-saveas-icon"
+    },
+    {
+        "id": "HELP",
+        "title": "Help",
+        "isUiActive": false,
+        "enabled": false,
+        "iconClass": "glyphicon glyphicon-question-sign"
+    },
+    {
+        "id": "GUIDED_TOUR",
+        "title": "Take a tour",
+        "isUiActive": false,
+        "enabled": true,
+        "iconClass": "nt-bulb-icon"
+    },
+    {
+        "id": "EXIT",
+        "title": "Exit",
+        "isUiActive": false,
+        "enabled": true,
+        "iconClass": "nt-exit-icon"
+    }
+]

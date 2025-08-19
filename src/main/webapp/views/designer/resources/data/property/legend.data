@@ -1,0 +1,317 @@
+{
+	"Info": [{
+		"class": "Legend"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "25",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "100",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Show Checkbox : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "legendCheckbox",
+		"propertyName": "Legend"
+	}, {
+		"label": "Associate Chart : ",
+		"heading": "Associated Chart",
+		"type": "customAssignChartWindow",
+		"value": "",
+		"attributeName": "associatedChartId",
+		"propertyName": "Legend"
+	}, {
+		"label": "Static Legends : ",
+		"heading": "Legends Name",
+		"type": "customLegendsWindow",
+		"value": "",
+		"attributes": {
+			"names": "legendNames",
+			"colors": "legendColors"
+		},
+		"attributeName": "legendNames",
+		"propertyName": "Legend"
+	}, {
+		"label": "Direction : ",
+		"type": "select",
+		"value": "horizontal",
+		"options": [{
+			"key": "horizontal",
+			"value": "Horizontal"
+		}, {
+			"key": "vertical",
+			"value": "Vertical"
+		}],
+		"attributeName": "legendDirection",
+		"propertyName": "Legend"
+	}, {
+		"label": "Legend Shape : ",
+		"type": "select",
+		"value": "Value",
+		"options": [{
+			"key": "defaultshape",
+			"value": "Default Shape"
+		}, {
+			"key": "similartoseries",
+			"value": "Similar to Series"
+		}],
+		"attributeName": "legendSymbol",
+		"propertyName": "Legend"
+	}],
+	"Background": [{
+		"label": "Gradient Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "45",
+		"attributeName": "bgGradientRotation",
+		"propertyName": "Legend"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "bgAlpha",
+		"propertyName": "Legend"
+	}, {
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "bgGradients",
+		"propertyName": "Legend"
+	}, {
+		"label": "Border : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showBorder",
+		"propertyName": "Legend"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "borderColor",
+		"propertyName": "Legend"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "5",
+		"attributeName": "borderRadius",
+		"propertyName": "Legend"
+	}, {
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Legend"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Legend"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Legend"
+	}],
+	"Style": [{
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "fontSize",
+		"propertyName": "Legend"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "fontColor",
+		"propertyName": "Legend"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "normal",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "fontStyle",
+		"propertyName": "Legend"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "normal",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "fontWeight",
+		"propertyName": "Legend"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "Verdana",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "fontFamily",
+		"propertyName": "Legend"
+	},  {
+		"label": "Text Align : ",
+		"type": "select",
+		"value": "left",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "legendTextAlign",
+		"propertyName": "Legend"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "textDecoration",
+		"propertyName": "Legend"
+	},{
+		"label": "Vertical Padding : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "4",
+		"attributeName": "rowPadding",
+		"propertyName": "Legend"
+	},{
+		"label": "Horizontal Padding : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "5",
+		"attributeName": "columnPadding",
+		"propertyName": "Legend"
+	}]
+}

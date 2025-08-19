@@ -1,0 +1,464 @@
+{
+	"MitoPlotChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "mitoplot_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "mitoplot",
+				"showLocked": "false",
+				"objectName": "MitoPlot_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "643",
+				"x": "20",
+				"height": "536",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "MitoPlot",
+					"showGradient": "true",
+					"bgGradients": "#ffffff",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+
+					"exportToExcel": "true",
+					"exportToCSV": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"exportType":"screenshot",
+
+					"showScreenShotButton": "true",
+					"showSettingMenuButton": "false",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showMaximizeButton": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"showExcelDownload": "true",
+					"showSubTitle": "true",
+					"showTitle": "true",
+					"GradientColor": "#FFFFFF,#FFFFFF",
+					"showLegends": "false",
+					"hideLegendOnStart": "true",
+					"legendDirection": "horizontal",
+					"legendfontSize": "14",
+					"legendtextDecoration": "none",
+					"legendfontStyle": "normal",
+					"legendfontColor": "#494950",
+					"legendfontFamily": "BizvizFont",
+					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+					"showcheckboxwithlegend": "false",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#EFF0F0",
+					"borderRadius": "0",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"FixedLabel": "false",
+					"Formater": "Currency",
+					"Unit": "none",
+					"SignPosition": "prefix",
+					"Precision": "default",
+					"NumberFormatter": "number",
+					"SecondaryFormater": "Number",
+					"SecondaryUnit": "none",
+					"Globalkey": "",
+					"enableColorFromDrill": "false",
+					"autoAdjustLayout": "true",
+					"seriesColor": "#7C4DFF,#FFAF6D,#FAE872,#2D48CF,#00BCD4,#FF0000,#4AC5F8,#00BCD4,#EFF0F0,#E17D00",
+					"useCategoryColor": "false",
+					"chartType": "MitoPlot",
+					"chartBase": "plane",
+					"lineWidth": "50",
+					"luminance": "0.5",
+					"showSliceValue": "false",
+					"enableAnimation": "true",
+					"sliceLimit": "false",
+					"noOfSlices": "5",
+					"chartAlignment": "center",
+					"updatedDesign": "true",
+					"xAxis": {
+						"LabelFontWeight": "normal",
+						"FontSize": "14",
+						"LabelFontColor": "#494950",
+						"LabelFontStyle": "normal",
+						"TextDecoration": "none",
+						"LabelFontFamily": "BizvizFont",
+						"Labelrotation": "90",
+						"LabelTilted": "false",
+						"FontColor": "#000000",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "14",
+						"FontStyle": "normal",
+						"FontFamily": "BizvizFont",
+						"FontWeight": "normal"
+					},
+					"yAxis": {
+						"rightaxisFormater": "false",
+						"LabelFontWeight": "normal",
+						"FontStyle": "normal",
+						"LabelFontColor": "#494950",
+						"FontFamily": "BizvizFont",
+						"TextDecoration": "none",
+						"LabelFontStyle": "normal",
+						"LabelFontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"SecondDiscription": "yaxis",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "14",
+						"FontSize": "14",
+						"leftaxisFormater": "true",
+						"FontWeight": "normal"
+					},
+					"Title": {
+						"FontWeight": "600",
+						"Description": "Genome plot",
+						"FontSize": "17",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"showDatasetDescription": "true",
+						"TitleBarHeight": "48"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "Sub Heading",
+						"showSubTitle": "false",
+						"FontSize": "15",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal"
+					}
+				}
+			}
+		},
+		"Fields": [{
+				"Type": "Category",
+				"Name": "gene"
+			},
+			{
+				"Type": "Series",
+				"Name": "type"
+			},
+			{
+				"Type": "Orientation",
+				"Name": "orien"
+			},
+			{
+				"Type": "Start",
+				"Name": "start"
+			},
+			{
+				"Type": "Stop",
+				"Name": "stop"
+			}
+		],
+		"Data": [{
+				"gene": "D-loop",
+				"type": "cntrl",
+				"orien": "-",
+				"start": 1,
+				"stop": 576
+			},
+			{
+				"gene": "tRNA-Phe",
+				"type": "tRNA",
+				"orien": "+",
+				"start": 577,
+				"stop": 647
+			},
+			{
+				"gene": "s-rRNA",
+				"type": "rRNA",
+				"orien": "+",
+				"start": 648,
+				"stop": 1601
+			},
+			{
+				"gene": "tRNA-Val",
+				"type": "tRNA",
+				"orien": "+",
+				"start": 1602,
+				"stop": 1670
+			},
+			{
+				"gene": "l-rRNA",
+				"type": "rRNA",
+				"orien": "+",
+				"start": 1671,
+				"stop": 3229
+			},
+			{
+				"gene": "tRNA-Leu",
+				"type": "mRNA",
+				"orien": "+",
+				"start": 3230,
+				"stop": 3304
+			},
+			{
+				"gene": "ND1",
+				"type": "cds",
+				"orien": "+",
+				"start": 3307,
+				"stop": 4262
+			},
+			{
+				"gene": "tRNA-Ile",
+				"type": "mRNA",
+				"orien": "+",
+				"start": 4263,
+				"stop": 4331
+			},
+			{
+				"gene": "tRNA-Gln",
+				"type": "NADA",
+				"orien": "-",
+				"start": 4329,
+				"stop": 4400
+			},
+			{
+				"gene": "tRNA-Met",
+				"type": "mRNA",
+				"orien": "+",
+				"start": 4402,
+				"stop": 4469
+			},
+			{
+				"gene": "ND2",
+				"type": "cds",
+				"orien": "+",
+				"start": 4470,
+				"stop": 5511
+			},
+			{
+				"gene": "tRNA-Trp",
+				"type": "tRNA",
+				"orien": "+",
+				"start": 5512,
+				"stop": 5579
+			},
+			{
+				"gene": "tRNA-Ala",
+				"type": "mRNA",
+				"orien": "-",
+				"start": 5587,
+				"stop": 5655
+			},
+			{
+				"gene": "tRNA-Asn",
+				"type": "tRNA",
+				"orien": "-",
+				"start": 5657,
+				"stop": 5729
+			},
+			{
+				"gene": "tRNA-Cys",
+				"type": "mRNA",
+				"orien": "-",
+				"start": 5761,
+				"stop": 5826
+			},
+			{
+				"gene": "tRNA-Tyr",
+				"type": "NADA",
+				"orien": "-",
+				"start": 5826,
+				"stop": 5891
+			},
+			{
+				"gene": "COX1",
+				"type": "cds",
+				"orien": "+",
+				"start": 5904,
+				"stop": 7445
+			},
+			{
+				"gene": "tRNA-Ser",
+				"type": "mRNA",
+				"orien": "-",
+				"start": 7446,
+				"stop": 7514
+			},
+			{
+				"gene": "tRNA-Asp",
+				"type": "tRNA",
+				"orien": "+",
+				"start": 7518,
+				"stop": 7585
+			},
+			{
+				"gene": "COX2",
+				"type": "cds",
+				"orien": "+",
+				"start": 7586,
+				"stop": 8269
+			},
+			{
+				"gene": "tRNA-Lys",
+				"type": "mRNA",
+				"orien": "+",
+				"start": 8295,
+				"stop": 8364
+			},
+			{
+				"gene": "ATP8",
+				"type": "cds",
+				"orien": "+",
+				"start": 8366,
+				"stop": 8572
+			},
+			{
+				"gene": "ATP6",
+				"type": "cds",
+				"orien": "+",
+				"start": 8527,
+				"stop": 9207
+			},
+			{
+				"gene": "COX3",
+				"type": "cds",
+				"orien": "+",
+				"start": 9207,
+				"stop": 9990
+			},
+			{
+				"gene": "tRNA-Gly",
+				"type": "mRNA",
+				"orien": "+",
+				"start": 9991,
+				"stop": 10058
+			},
+			{
+				"gene": "ND3",
+				"type": "cds",
+				"orien": "+",
+				"start": 10059,
+				"stop": 10404
+			},
+			{
+				"gene": "tRNA-Arg",
+				"type": "mRNA",
+				"orien": "+",
+				"start": 10405,
+				"stop": 10469
+			},
+			{
+				"gene": "ND4L",
+				"type": "cds",
+				"orien": "+",
+				"start": 10470,
+				"stop": 10766
+			},
+			{
+				"gene": "ND4",
+				"type": "cds",
+				"orien": "+",
+				"start": 10760,
+				"stop": 12137
+			},
+			{
+				"gene": "tRNA-His",
+				"type": "NADA",
+				"orien": "+",
+				"start": 12138,
+				"stop": 12206
+			},
+			{
+				"gene": "tRNA-Ser",
+				"type": "tRNA",
+				"orien": "+",
+				"start": 12207,
+				"stop": 12265
+			},
+			{
+				"gene": "tRNA-Leu",
+				"type": "mRNA",
+				"orien": "+",
+				"start": 12266,
+				"stop": 12336
+			},
+			{
+				"gene": "ND5",
+				"type": "cds",
+				"orien": "+",
+				"start": 12337,
+				"stop": 14148
+			},
+			{
+				"gene": "ND6",
+				"type": "cds",
+				"orien": "-",
+				"start": 14149,
+				"stop": 14673
+			},
+			{
+				"gene": "tRNA-Glu",
+				"type": "mRNA",
+				"orien": "-",
+				"start": 14674,
+				"stop": 14742
+			},
+			{
+				"gene": "CYTB",
+				"type": "cds",
+				"orien": "+",
+				"start": 14747,
+				"stop": 15887
+			},
+			{
+				"gene": "tRNA-Thr",
+				"type": "tRNA",
+				"orien": "+",
+				"start": 15888,
+				"stop": 15953
+			},
+			{
+				"gene": "tRNA-Pro",
+				"type": "NADA",
+				"orien": "-",
+				"start": 15956,
+				"stop": 16023
+			},
+			{
+				"gene": "D-loop",
+				"type": "cntrl",
+				"orien": "-",
+				"start": 16024,
+				"stop": 16569
+			}
+		]
+	}
+}

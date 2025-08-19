@@ -1,0 +1,56 @@
+{
+    "Legend": {
+        "Properties": {
+            "Object": {
+                "componentType": "legend",
+                "isDataSetAvailable":"false",
+                "enableScript": "true",
+                "referenceID":"",
+                "isValueFieldsAvailable":"false",
+                "showContextMenu":"false",
+                "shortName":"legend",
+                "showLocked": "false",
+                "subElement" :"Legend",
+                "globalVariableKeyAttribute" :"globalkey",
+                "y": "894",
+                "objectType": "legend",
+                "width": "125",
+                "initialVisibility": "true",
+                "height": "85",
+                "objectName": "legend",
+                "unShowHidden": "false",
+ 				"groupings" : "",
+                "objectID": "Obj.2FD54250N12FAN78FDN9ED4NE6EAD191DE7",
+                "x": "125",
+                "Legend": {
+			      	"bgAlpha": "1",
+			      	"bgGradients": "#ffffff",
+			      	"bgGradientRotation": "90",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#BDC3C7",
+			        "borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#000000",
+					"shadowOpacity": "0.1",
+					"borderAlpha": "",
+					"fontFamily":"BizvizFont",
+			  	    "fontSize":"12",
+			  	    "fontColor":"#000000",
+			  	    "fontStyle":"normal",
+			  	    "fontWeight":"normal",
+			 	    "textDecoration":"none",
+			 	    "legendDirection":"vertical",
+			   	    "legendCheckbox":"false",
+			        "legendSymbol":"similartoseries",
+			   	 	"associatedChartId":"",
+			   	 	"legendWidth":"10",
+			   	 	"legendHeight":"10",
+			   	 	"legendColors":"#E08283,#38d3a9,#797979",
+			   	 	"legendNames":"Series1,Series2,Series3",
+			   	 	"legendShapes":"cube,triangle,point"
+       	     }
+       	  }
+        }
+    }
+} 

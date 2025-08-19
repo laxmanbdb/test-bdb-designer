@@ -1,0 +1,573 @@
+{
+    "ScatteredPlotChart": {
+        "Properties": {
+            "Object": {
+                "componentType": "scattered_plot_chart",
+                "objectType": "chart", 
+                "subElement" :"Chart",
+                "globalVariableKeyAttribute" :"Globalkey",
+                "isDataSetAvailable":"true",
+                "enableScript": "true",
+                "referenceID":"",
+                "isValueFieldsAvailable":"false",
+                "showContextMenu":"false",
+                "shortName":"Plot",
+                "showLocked": "false",
+                "objectName": "Plot_1",
+                "unShowHidden": "false",
+ 				"groupings" : "",
+                "percentheight": "320",
+                "width": "480",
+                "x": "20",
+                "height": "180",
+                "y": "10",
+                "initialVisibility": "true",
+                "percentwidth": "450",
+                "objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+                "Chart": {
+			        "id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+			        "Type": "Plot",
+			        "showGradient": "false",
+			        "bgGradients": "0xffffff",
+			        "bgAlpha": "1",
+			        "bgGradientRotation": "0",
+			        "exportToExcel": "true",
+			        "exportToJPEG": "true",
+			        "exportToPNG": "true",
+			        "exportToPDF": "true",
+			        "exportToPPT": "true",
+			        "exportToPrint": "true",
+			        "showScreenShotButton": "true",
+			        "screenShotMode": "ppt",
+			        "pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+			        "pptHeading": "Heading",
+			        "pptSubHeading": "Sub Heading",
+			        "subHeading": "Sub Heading",
+			        "scrnShotFileName": "exportDashboard",
+			        "showTooltip": "true",
+ 					"tooltipBackgroundColor": "#FFFFFF",
+ 					"tooltipBackgroundTransparency": "1",
+ 					"tooltipBorderColor": "#E0DFDF",
+ 					"customTooltipWidth": "auto",
+ 					"tooltipPrecision": "default",
+ 					"tooltipHighlighter": "true",
+			        "showMaximizeButton": "false",
+			        "showExcelDownload": "true",
+			        "showSubTitle": "false",
+			        "showTitle": "false",
+			        "GradientColor": "#BDC3C7,#BDC3C7",
+			        "showLegends": "false",
+			        "legendDirection": "horizontal",
+			        "legendfontSize": "10",
+			        "legendtextDecoration": "none",
+			        "legendfontStyle": "normal",
+			        "legendfontColor": "#000000",
+			        "legendfontWeight": "normal",
+			        "showcheckboxwithlegend": "false",
+			        "hideLegendOnStart" : "true",
+			        "showCheckboxSeprate": "false",
+					"showBorder": "false",
+					"borderColor": "#BDC3C7",
+			        "borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#000000",
+					"shadowOpacity": "0.1",
+			        "axisColor": "#ffffff",
+			        "markerColor": "#908c8c",
+			        "markerTransparency": "0.5",
+			        "showMarkerLine": true,
+			        "showVerticalMarkerLine": "false",
+			        "autoaxisSetup": "true",
+			        "minimumAxisValue": "-20",
+			        "maximumAxisValue": "110",
+			        "baseZero": "true",
+			        "zeroMarkerLine" : "false",
+					"zeroMarkerColor" : "#CCCCCC",
+					"verticalZeroMarkerLine" : "false",
+					"verticalZeroMarkerColor" : "#CCCCCC",
+			        "FixedLabel": "false",
+			        "Formater": "Currency",
+			        "Unit": "none",
+			        "SignPosition": "prefix",
+			        "Precision": "default",
+			        "NumberFormatter": "number",
+			        "SecondaryFormater": "Number",
+			        "SecondaryUnit": "none",
+			        "Globalkey": "",
+			        "enableColorFromDrill": "false",
+			        "plotWithLabel": "true",
+			        "horizontalMinimumAxisValue": "-20",
+			        "horizontalAxisAutoAdjust": "true",
+			        "horizontalMaximumAxisValue": "110",
+			        "horizontalAxisBaseZero": "true",
+			        "SecondaryAxisFormater": "Currency",
+			        "SecondaryAxisUnit": "none",
+			        "SecondaryAxisSecondaryFormatter":"Number",
+			        "SecondaryAxisSecondaryUnit":"none",
+			        "SecondaryAxisPrecision": "default",
+			        "SecondaryAxisSignPosition": "suffix",
+			        "ChartBase": "gradient",
+			        "luminance": "0.4",
+			        "transparency": "0.7",
+                    "higherValuesAreGood" : "true",
+                    "showFrequencyBar" : "false",
+					"showDynamicRange" : "false",
+					"maxRangeColor" : "#00b16a",
+					"minRangeColor" : "#f89406",
+					"ShowXAxisThreshold" : "false",
+					"MinimumXAxisThreshold" : "0",
+					"MaximumXAxisThreshold" : "50",
+					"ShowYAxisThreshold" : "false",
+					"MinimumYAxisThreshold" : "0",
+					"MaximumYAxisThreshold" : "50",
+					"enableAnimation" : "true",
+					"SolidColorFill": "false",
+                    "Legend":{
+                    	"DisplayName":"Very Low,Low,Medium,High,Very High,Extremely High",
+                    	"Ranges":"0~20,20~30,30~50,50~70,70~100,100~140",
+                    	"Colors":"#E74C3C,#DB0A5B,#F7CA18,#F89406,#36D7B7,#26A65B"
+                    },
+			        "xAxis": {
+			            "Description": "",
+			            "LabelFontWeight": "normal",
+			            "FontSize": "12",
+			            "LabelFontColor": "0",
+			            "LabelFontStyle": "normal",
+			            "TextDecoration": "none",
+			            "LabelFontFamily": "BizvizFont",
+			            "Labelrotation": "90",
+			            "LabelTilted": "false",
+			            "FontColor": "0",
+			            "LabelTextDecoration": "none",
+			            "LabelFontSize": "12",
+			            "FontStyle": "normal",
+			            "FontFamily": "BizvizFont",
+			            "FontWeight": "normal",
+			            "TickMarks": "false"
+			        },
+			        "yAxis": {
+			            "Description": "",
+			            "rightaxisFormater": "false",
+			            "LabelFontWeight": "normal",
+			            "FontStyle": "normal",
+			            "LabelFontColor": "0",
+			            "FontFamily": "BizvizFont",
+			            "TextDecoration": "none",
+			            "LabelFontStyle": "normal",
+			            "LabelFontFamily": "BizvizFont",
+			            "FontColor": "0",
+			            "SecondDiscription": "yaxis",
+			            "LabelTextDecoration": "none",
+			            "LabelFontSize": "12",
+			            "FontSize": "12",
+			            "leftaxisFormater": "true",
+			            "FontWeight": "normal"
+			        },
+			        "Title": {
+			            "FontWeight": "normal",
+			            "Description": "Title",
+			            "FontSize": "12",
+			            "TextDecoration": "none",
+			            "Align": "left",
+			            "FontFamily": "BizvizFont",
+			            "FontColor": "#22313f",
+			            "FontStyle": "normal",
+			            "showTitle": "false",
+			            "TitleBarHeight" : "25"
+			        },
+			        "SubTitle": {
+			            "FontWeight": "normal",
+			            "Description": "Subtitle Description",
+			            "showSubTitle": "false",
+			            "FontSize": "12",
+			            "TextDecoration": "none",
+			            "Align": "center",
+			            "FontFamily": "BizvizFont",
+			            "FontColor": "0",
+			            "FontStyle": "normal"
+			        }
+                }
+            }
+        },
+        "Fields": [
+            {
+                "visible": "true",
+                "Precision": "0",
+                "Type": "XField",
+                 "Color": "#336e7b",
+                "Name": "ind",
+                "PlotType": "point",
+                "OtherField": "wt",
+                "axis": "none",
+                "DisplayName": "Sales-QP",
+               	"PlotRadius": "5"
+            },
+            {
+                "visible": "true",
+                "Precision": "0",
+                "Type": "XField",
+                 "Color": "#797979",
+                "Name": "ht",
+                "PlotType": "quad",
+                "OtherField": "wt",
+                "axis": "none",
+                "DisplayName": "QP-expense",
+                "PlotRadius": "7"
+            }
+        ],
+        "Data":[
+  {
+    "ind": 39,
+    "ht": 98,
+    "wt": 32,
+    "ht1": 65,
+    "wt1": 14
+  },
+  {
+    "ind": 48,
+    "ht": 100,
+    "wt": 25,
+    "ht1": 42,
+    "wt1": 15
+  },
+  {
+    "ind": 51,
+    "ht": 17,
+    "wt": 25,
+    "ht1": 24,
+    "wt1": 58
+  },
+  {
+    "ind": 47,
+    "ht": 63,
+    "wt": 30,
+    "ht1": 30,
+    "wt1": 44
+  },
+  {
+    "ind": 36,
+    "ht": 85,
+    "wt": 45,
+    "ht1": 71,
+    "wt1": 27
+  },
+  {
+    "ind": 45,
+    "ht": 24,
+    "wt": 33,
+    "ht1": 71,
+    "wt1": 62
+  },
+  {
+    "ind": 48,
+    "ht": 90,
+    "wt": 52,
+    "ht1": 83,
+    "wt1": 7
+  },
+  {
+    "ind": 37,
+    "ht": 29,
+    "wt": 37,
+    "ht1": 22,
+    "wt1": 26
+  },
+  {
+    "ind": 56,
+    "ht": 34,
+    "wt": 51,
+    "ht1": 34,
+    "wt1": 12
+  },
+  {
+    "ind": 49,
+    "ht": 58,
+    "wt": 35,
+    "ht1": 26,
+    "wt1": 54
+  },
+  {
+    "ind": 42,
+    "ht": 12,
+    "wt": 73,
+    "ht1": 24,
+    "wt1": 40
+  },
+  {
+    "ind": 54,
+    "ht": 52,
+    "wt": 30,
+    "ht1": 28,
+    "wt1": 65
+  },
+  {
+    "ind": 55,
+    "ht": 31,
+    "wt": 45,
+    "ht1": 29,
+    "wt1": 53
+  },
+  {
+    "ind": 50,
+    "ht": 24,
+    "wt": 69,
+    "ht1": 55,
+    "wt1": 38
+  },
+  {
+    "ind": 57,
+    "ht": 62,
+    "wt": 20,
+    "ht1": 53,
+    "wt1": 65
+  },
+  {
+    "ind": 46,
+    "ht": 96,
+    "wt": 13,
+    "ht1": 33,
+    "wt1": 62
+  },
+  {
+    "ind": 60,
+    "ht": 27,
+    "wt": 38,
+    "ht1": 34,
+    "wt1": 58
+  },
+  {
+    "ind": 65,
+    "ht": 15,
+    "wt": 53,
+    "ht1": 29,
+    "wt1": 47
+  },
+  {
+    "ind": 49,
+    "ht": 64,
+    "wt": 50,
+    "ht1": 55,
+    "wt1": 16
+  },
+  {
+    "ind": 58,
+    "ht": 90,
+    "wt": 18,
+    "ht1": 68,
+    "wt1": 4
+  },
+  {
+    "ind": 66,
+    "ht": 13,
+    "wt": 54,
+    "ht1": 46,
+    "wt1": 3
+  },
+  {
+    "ind": 69,
+    "ht": 72,
+    "wt": 34,
+    "ht1": 33,
+    "wt1": 75
+  },
+  {
+    "ind": 67,
+    "ht": 85,
+    "wt": 16,
+    "ht1": 55,
+    "wt1": 29
+  },
+  {
+    "ind": 68,
+    "ht": 90,
+    "wt": 66,
+    "ht1": 61,
+    "wt1": 3
+  },
+  {
+    "ind": 57,
+    "ht": 60,
+    "wt": 48,
+    "ht1": 72,
+    "wt1": 49
+  },
+  {
+    "ind": 55,
+    "ht": 38,
+    "wt": 17,
+    "ht1": 44,
+    "wt1": 6
+  },
+  {
+    "ind": 64,
+    "ht": 99,
+    "wt": 67,
+    "ht1": 47,
+    "wt1": 38
+  },
+  {
+    "ind": 76,
+    "ht": 53,
+    "wt": 24,
+    "ht1": 22,
+    "wt1": 75
+  },
+  {
+    "ind": 78,
+    "ht": 83,
+    "wt": 38,
+    "ht1": 70,
+    "wt1": 73
+  },
+  {
+    "ind": 71,
+    "ht": 84,
+    "wt": 66,
+    "ht1": 68,
+    "wt1": 11
+  },
+  {
+    "ind": 74,
+    "ht": 7,
+    "wt": 65,
+    "ht1": 44,
+    "wt1": 30
+  },
+  {
+    "ind": 66,
+    "ht": 43,
+    "wt": 69,
+    "ht1": 28,
+    "wt1": 6
+  },
+  {
+    "ind": 80,
+    "ht": 70,
+    "wt": 40,
+    "ht1": 57,
+    "wt1": 14
+  },
+  {
+    "ind": 75,
+    "ht": 74,
+    "wt": 39,
+    "ht1": 68,
+    "wt1": 36
+  },
+  {
+    "ind": 66,
+    "ht": 84,
+    "wt": 14,
+    "ht1": 75,
+    "wt1": 16
+  },
+  {
+    "ind": 71,
+    "ht": 80,
+    "wt": 54,
+    "ht1": 41,
+    "wt1": 21
+  },
+  {
+    "ind": 74,
+    "ht": 59,
+    "wt": 17,
+    "ht1": 44,
+    "wt1": 18
+  },
+  {
+    "ind": 84,
+    "ht": 23,
+    "wt": 19,
+    "ht1": 32,
+    "wt1": 31
+  },
+  {
+    "ind": 76,
+    "ht": 5,
+    "wt": 68,
+    "ht1": 80,
+    "wt1": 74
+  },
+  {
+    "ind": 89,
+    "ht": 72,
+    "wt": 54,
+    "ht1": 30,
+    "wt1": 13
+  },
+  {
+    "ind": 85,
+    "ht": 83,
+    "wt": 56,
+    "ht1": 45,
+    "wt1": 24
+  },
+  {
+    "ind": 87,
+    "ht": 78,
+    "wt": 33,
+    "ht1": 24,
+    "wt1": 6
+  },
+  {
+    "ind": 89,
+    "ht": 59,
+    "wt": 44,
+    "ht1": 30,
+    "wt1": 39
+  },
+  {
+    "ind": 78,
+    "ht": 33,
+    "wt": 66,
+    "ht1": 81,
+    "wt1": 62
+  },
+  {
+    "ind": 94,
+    "ht": 12,
+    "wt": 37,
+    "ht1": 74,
+    "wt1": 62
+  },
+  {
+    "ind": 82,
+    "ht": 50,
+    "wt": 13,
+    "ht1": 72,
+    "wt1": 42
+  },
+  {
+    "ind": 89,
+    "ht": 73,
+    "wt": 58,
+    "ht1": 70,
+    "wt1": 61
+  },
+  {
+    "ind": 80,
+    "ht": 62,
+    "wt": 41,
+    "ht1": 70,
+    "wt1": 41
+  },
+  {
+    "ind": 93,
+    "ht": 42,
+    "wt": 69,
+    "ht1": 17,
+    "wt1": 11
+  },
+  {
+    "ind": 83,
+    "ht": 95,
+    "wt": 32,
+    "ht1": 47,
+    "wt1": 57
+  }
+]
+
+
+    }
+}

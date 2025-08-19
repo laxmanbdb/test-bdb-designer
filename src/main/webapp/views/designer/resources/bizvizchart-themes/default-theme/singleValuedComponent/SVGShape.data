@@ -1,0 +1,51 @@
+{
+	"SVGShape": {
+		"Properties": {
+			"Object": {
+				"componentType": "svg_shape",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "shape",
+				"objectName": "shape_1",
+				"subElement": "SVGShape",
+				"globalVariableKeyAttribute": "globalkey",
+				"height": "100",
+				"percentheight": "100",
+				"y": "10",
+				"objectType": "SVGShape",
+				"percentwidth": "100",
+				"width": "100",
+				"initialVisibility": "true",
+				"showLocked": "false",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "shapeobj",
+				"x": "10",
+				"SVGShape": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"color": "#0d78bf",
+					"opacity": "1",
+					"stroke": "none",
+					"symbol": "Question",
+					"pathData": "M25.979,12.896,5.979,12.896,5.979,19.562,25.979,19.562z",
+					"tooltip": "",
+					"cursorType": "pointer",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"symbolCategory": "Others"
+				}
+			}
+		}
+	}
+}

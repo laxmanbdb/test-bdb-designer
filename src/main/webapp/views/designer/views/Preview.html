@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>HTML5 Dashboard API</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+	<meta content="utf-8" http-equiv="encoding" />
+	<link href="../../../shared/brand/fonts/font.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+<!-- 	<link href="../../../shared/resources/fonts/google-font/font.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+	<link href="../../../resources/lib/bootstrap/css/bootstrap.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../../resources/lib/bootstrap/css/bootstrap-tour.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	
+	<link href="../../charting/src/bizviz.charting/components/resources/css/charting.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/listswap.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../../resources/lib/jQuery/jquery-ui-1.10.4.custom.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/easyui.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/bdbizviz-font-styles.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/visTimeline.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/leaflet.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/jexcel.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/jsuites.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	
+	<!-- PREVIEW CUSTOM CSS -->
+	<link href="../resources/css/preview.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	
+	<script src="../../../resources/lib/jQuery/jquery-3.6.0.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>	 
+	<script src="../../../resources/lib/jQuery/jquery-ui-1.13.0.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jquery.ui.treemap.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../resources/lib/jQuery/jquery-bizviz-mobile-1.4.5.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../resources/lib/bootstrap/js/bootstrap.bundle.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../resources/lib/bootstrap/js/bootstrap.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../resources/lib/bootstrap/js/bootstrap-tour.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jquery.easyui.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script> 
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jQuery.blockUI.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script> 
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jquery.sparkline.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/leaflet-src.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/Leaflet.MakiMarkers.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/leaflet.markercluster-src.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/leaflet.provider.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jquery.listswap.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/svg.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/xml2json.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/visTimeline.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jexcel.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jsuites.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/sha256.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/echarts.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/echarts-wordcloud.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/visNetwork.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+
+	<script src="../../../shared/model/url-conf.data?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../shared/model/url-api.data?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../shared/app/bizviz-sdk.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../shared/app/bizviz-init.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<!-- Brand setting plugin to configure the loading message, loader overlay css etc -->
+	<script src="../../../shared/brand/script/brand-settings.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<!-- Encryption on Service calling -->
+	<script src="../../../shared/resources/lib/encryption/encryption.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<!-- FrameworkUtil should be loaded to get the charting script urls -->
+	<script src="../build-config/build/appSettings.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.framework/FrameworkUtil.js?v=10.0.0.20250814.113816" type = "text/javascript"></script>
+	<link href="../../../shared/brand/fonts/font.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+<!-- 	<link href="../../../shared/resources/fonts/google-font/font.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+	<link href="../../../resources/lib/bootstrap/css/bootstrap.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../../resources/lib/bootstrap/css/bootstrap-tour.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	
+	<link href="../../charting/src/bizviz.charting/components/resources/css/charting.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/listswap.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../../resources/lib/jQuery/jquery-ui-1.10.4.custom.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/easyui.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/bdbizviz-font-styles.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/visTimeline.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/leaflet.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/jexcel.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<link href="../../charting/src/bizviz.charting/components/resources/css/jsuites.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	
+	<!-- PREVIEW CUSTOM CSS -->
+	<link href="../resources/css/preview.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css"/>
+	<!-- datacenter-widgets -->
+	<!--<script src="../../../resources/lib/fflate/datacenter-widgets/widget.umd.js?v=10.0.0.20250814.113816" type="text/javascript"></script>-->
+	<script src="../../../resources/lib/jQuery/jquery-3.6.0.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>	 
+	<script src="../../../resources/lib/jQuery/jquery-ui-1.13.0.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jquery.ui.treemap.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../resources/lib/jQuery/jquery-bizviz-mobile-1.4.5.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../resources/lib/bootstrap/js/bootstrap.bundle.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../resources/lib/bootstrap/js/bootstrap.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../resources/lib/bootstrap/js/bootstrap-tour.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jquery.easyui.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script> 
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jQuery.blockUI.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script> 
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jquery.sparkline.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/leaflet-src.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/Leaflet.MakiMarkers.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/leaflet.markercluster-src.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/leaflet.provider.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jquery.listswap.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/svg.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/xml2json.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/visTimeline.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/visNetwork.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jexcel.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/jsuites.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/sha256.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/echarts.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.charting/components/resources/js/echarts-wordcloud.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+
+	<script src="../../../shared/model/url-conf.data?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../shared/model/url-api.data?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../shared/app/bizviz-sdk.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../../shared/app/bizviz-init.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<!-- Brand setting plugin to configure the loading message, loader overlay css etc -->
+	<script src="../../../shared/brand/script/brand-settings.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<!-- Encryption on Service calling -->
+	<script src="../../../shared/resources/lib/encryption/encryption.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<!-- FrameworkUtil should be loaded to get the charting script urls -->
+	<script src="../build-config/build/appSettings.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+	<script src="../../charting/src/bizviz.framework/FrameworkUtil.js?v=10.0.0.20250814.113816" type = "text/javascript"></script>
+	<script>
+		/** Take version information from designer side and load scripts **/
+		loadScript( {"urls": (dGlobals.isDevMode) ? dGlobals.src_url_preview.devJS : dGlobals.src_url_preview.prodJS, "type": "script", "async": "false", "cbArgs": "", "eCB": "", "sCB": ""} );
+	</script>
+
+	</head>
+	<body oncontextmenu="return false" class="noselect">
+		<div id="WatermarkDiv" class="noselect">
+			<!-- PREVIEW OF A DASHBOARD -->
+		</div>
+		<script type="text/javascript">
+			var jqEasyUI = jQuery.noConflict(true);
+			$ = jqEasyUI;
+			
+			var dashboardJson = "";
+			var pageInPortal = undefined;
+			
+			/*start window resize*/
+			var timeoutId;
+			function handleResize() {
+				dashboardJson = parent.global.dashboardJSONForPreview;
+				if(dashboardJson["Niv"]["Dashboard"]["AbsoluteLayout"]["scalingEnabled"] == true && dashboardJson["Niv"]["Dashboard"]["AbsoluteLayout"]["enableResize"] == true){
+					//frameworkController.initiateComponents();
+					//sdk.updateGlobalVariable("dashboard", {}, true)
+					/*for(var a = 0;a < dashboardJson["Niv"]["Dashboard"]["AbsoluteLayout"]["Object"].length; a++){
+						var comp = dashboardJson["Niv"]["Dashboard"]["AbsoluteLayout"]["Object"][a]["referenceID"];
+						var comptype = dashboardJson["Niv"]["Dashboard"]["AbsoluteLayout"]["Object"][a]["componentType"];
+						var compObj = sdk.getWidget(comp);
+						if(compObj.visibilityStatus){
+							if(comptype == "hierarchical_combo" || comptype == "radio_filter" || comptype == "list_filter" || comptype == "combo_filter"){
+								sdk.setFilterSelectedIndex(comp, compObj.m_selectedindexarray);
+								compObj.draw();
+							} else {
+								compObj.draw();
+							}
+						}
+					}*/
+					//drawDashboard(dashboardJson);
+					/**@desc resize dashboard as per screen DAS-1248*/
+					frameworkController.resizeRedraw(dashboardJson);
+				}
+			}
+			function debounce(func, delay) {
+				clearTimeout(timeoutId);
+				timeoutId = setTimeout(func, delay);
+			}
+			$(window).resize(function() {
+				windowWH = {"aw": window.innerWidth, "ah": window.innerHeight, 
+						"w": window.innerWidth, "h": window.innerHeight, 
+						"o": window.orientation};
+				debounce(handleResize, 250);
+			});
+			/*end window resize*/
+			
+			$(document).ready(function() {
+				dashboardJson = parent.global.dashboardJSONForPreview;
+				drawDashboard(dashboardJson);
+			});
+			function drawDashboard(dashboardJson) {
+				if(dGlobals.isDevMode){
+					processDrawingDashboard(dashboardJson, parent.BIZVIZ.SDK.getAuthInfo()["user"]);				
+				}else{
+					getUserPropsByToken(dashboardJson);
+				}
+			};
+			 /** @description getUserPropsByToken Service need to be called on every preview as custom field value can be changed in portal tab and in preview it is used **/
+	         function getUserPropsByToken(dashboardJson) {
+	         	var REQ_URL = req_url.designer["getUserInfoByToken"],
+	            	REQ_DATA = { "token": parent.BIZVIZ.SDK.getAuthInfo().authToken },
+	                requestSuccessFn = function(data, success) {
+	                    var prop = (data) ? ((data.users) ? (data.users) : "[]") : "[]";
+	                    if(data.users.success){
+	                    	processDrawingDashboard(dashboardJson, frameworkUtil.convertStringToJson(prop));
+	                    }else{
+	                    	BIZVIZ.SDK.Auth.initSession();
+	                    }
+	                },
+	                requestFailFn = function() {
+	                    console.log("Failed to load user's custom properties!");
+	                    processDrawingDashboard(dashboardJson, parent.BIZVIZ.SDK.getAuthInfo()["user"]);
+	                };
+	            try {
+	                parent.BIZVIZ.SDK.requestServer(REQ_URL, REQ_DATA, requestSuccessFn, requestFailFn);
+	            } catch (e) {
+	                console.log("Error in getting user's custom properties!");
+	            }
+	        };
+	        /** @description start dashboard rendering process **/
+			function processDrawingDashboard(dashboardJson, customProp) {
+				try{
+					setLoggedUserAndCustomProperties(customProp);
+				}catch(e){
+					console.log(e);
+				}
+				frameworkController.setDashboardViewState( true );
+				frameworkController.dashboard = new DashBoard();
+				frameworkController.dashboard.setDashboardJson( dashboardJson );
+				parser.dashboard = frameworkController.dashboard;
+				parser.dashboardJson = dashboardJson;
+				removeExistingDasboardsAndDiv();				
+				parser.parseDashboardJSON();
+				frameworkController.onBeforeDashboardLoad();
+			};
+			/** @description stop dashboard process of pulling data and rendering **/
+			function stopDashboardProcesses(dashboardJson) {
+				if (frameworkController && frameworkController != undefined) {
+					frameworkController.setDashboardViewState( false );
+				}
+				if (dataManager && dataManager != undefined) {
+					dataManager.clearAllTimelyRefresh();
+					dataManager.clearAllHttpRequests();
+					dataManager.clearAllWebSockets();
+					dataManager.clearAllPythonHttpRequests();
+				}
+				removeExistingDasboardsAndDiv();
+			};
+			/** @description removes existing dasboards and residual of components **/
+			function removeExistingDasboardsAndDiv(){
+				$(".panel.combo-p, #ui-datepicker-div").css("display","none");
+				$(".draggablesParentDiv, #toolTipDiv, .dropdown-menu-context-menu, .window-mask, div.panel.window, .panel.combo-p, .window-shadow, .ui-datepicker, .contextMenuShowDataDiv, .PopDisableDiv, #contexleveldiv").remove();
+				$(".tour-backdrop, .tour-step-background, .tour-dashboardTour, .tour-dashboardTour-2").remove();
+			};
+		</script>
+	</body>
+</html>

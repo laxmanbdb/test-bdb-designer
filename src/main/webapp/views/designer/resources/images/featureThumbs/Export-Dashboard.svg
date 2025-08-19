@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+  <g id="Group_1339" data-name="Group 1339" transform="translate(-766 -865)">
+    <g id="Rectangle_4683" data-name="Rectangle 4683" transform="translate(766 865)" fill="none" stroke="#ececec" stroke-width="1">
+      <rect width="54" height="54" rx="6" stroke="none"/>
+      <rect x="0.5" y="0.5" width="53" height="53" rx="5.5" fill="none"/>
+    </g>
+    <path id="Path_2635" data-name="Path 2635" d="M34,28.2v5.9h7.905" transform="translate(752.459 854.086)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.25"/>
+    <path id="Path_2636" data-name="Path 2636" d="M32.3,47.5v5.845h7.905" transform="translate(753.212 845.531)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.25"/>
+    <path id="Path_2637" data-name="Path 2637" d="M36.6,34.118l1.726-2,1.225,1L41.61,31" transform="translate(751.306 852.845)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.25"/>
+    <path id="Path_2638" data-name="Path 2638" d="M44.4,29.767c.056,0,1.447,1.336,1.447,1.336l.111-1.5Z" transform="translate(747.849 853.466)" fill="#fff" stroke="#0d78bf" stroke-width="0.25"/>
+    <path id="Path_2639" data-name="Path 2639" d="M17.851,32.285,17.795,29A3.306,3.306,0,0,0,14.9,32.285a3.35,3.35,0,0,0,3.34,3.34,3.219,3.219,0,0,0,2-.668C19.409,34.122,17.851,32.285,17.851,32.285Z" transform="translate(760.926 853.732)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.25"/>
+    <path id="Path_2640" data-name="Path 2640" d="M21.2,28.2v3.229h3.173A3.405,3.405,0,0,0,21.2,28.2Z" transform="translate(758.133 854.086)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.25"/>
+    <path id="Path_2641" data-name="Path 2641" d="M21.8,35.1l2.171,2.171a2.8,2.8,0,0,0,.891-2.171Z" transform="translate(757.867 851.028)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.25"/>
+    <ellipse id="Ellipse_794" data-name="Ellipse 794" cx="0.724" cy="0.724" rx="0.724" ry="0.724" transform="translate(786.069 893.922)" fill="none" stroke="#0d78bf" stroke-width="0.25"/>
+    <ellipse id="Ellipse_795" data-name="Ellipse 795" cx="0.779" cy="0.779" rx="0.779" ry="0.779" transform="translate(787.127 896.037)" fill="none" stroke="#0d78bf" stroke-width="0.25"/>
+    <ellipse id="Ellipse_796" data-name="Ellipse 796" cx="0.668" cy="0.668" rx="0.668" ry="0.668" transform="translate(789.799 896.315)" fill="none" stroke="#0d78bf" stroke-width="0.25"/>
+    <ellipse id="Ellipse_797" data-name="Ellipse 797" cx="0.501" cy="0.501" rx="0.501" ry="0.501" transform="translate(789.265 894.905) rotate(-4.068)" fill="none" stroke="#0d78bf" stroke-width="0.25"/>
+    <ellipse id="Ellipse_798" data-name="Ellipse 798" cx="0.501" cy="0.501" rx="0.501" ry="0.501" transform="translate(792.27 896.354) rotate(-4.068)" fill="none" stroke="#0d78bf" stroke-width="0.25"/>
+    <ellipse id="Ellipse_799" data-name="Ellipse 799" cx="0.501" cy="0.501" rx="0.501" ry="0.501" transform="translate(791.434 894.18) rotate(-4.068)" fill="none" stroke="#0d78bf" stroke-width="0.25"/>
+    <path id="Path_2642" data-name="Path 2642" d="M31.922,43.749H12.882A2.258,2.258,0,0,1,10.6,41.466V22.482A2.258,2.258,0,0,1,12.882,20.2H31.866a2.258,2.258,0,0,1,2.282,2.282V41.466A2.245,2.245,0,0,1,31.922,43.749Z" transform="translate(762.832 857.633)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <rect id="Rectangle_4925" data-name="Rectangle 4925" width="12.414" height="8.351" transform="translate(800.154 878.278)" fill="#fff" stroke="#0d78bf" stroke-width="0.5"/>
+    <path id="Path_2645" data-name="Path 2645" d="M2.895,0A2.895,2.895,0,1,1,0,2.895,2.895,2.895,0,0,1,2.895,0Z" transform="translate(793.584 889.412)" fill="#fff" stroke="#0d78bf" stroke-width="0.25"/>
+    <rect id="Rectangle_4926" data-name="Rectangle 4926" width="12.414" height="8.351" transform="translate(800.154 887.464)" fill="#fff" stroke="#0d78bf" stroke-width="0.5"/>
+    <rect id="Rectangle_4927" data-name="Rectangle 4927" width="12.414" height="8.351" transform="translate(800.154 896.649)" fill="#fff" stroke="#0d78bf" stroke-width="0.5"/>
+    <path id="Path_2643" data-name="Path 2643" d="M17.887,45,13.6,52.293h8.462Z" transform="translate(761.502 846.639)" fill="none" stroke="#0d78bf" stroke-width="0.25"/>
+    <path id="Path_2644" data-name="Path 2644" d="M48.9,46.484a2.761,2.761,0,0,1,1.67-2.115V43.7s1.614.5,1.781.835c0,0-.835,1.28-1.225,1.392l-.223-.5a1.948,1.948,0,0,0-1.893,1.225C49.011,46.595,48.956,46.706,48.9,46.484Z" transform="translate(745.854 847.215)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.25"/>
+    <text id="XLX" transform="translate(802.467 883.682)" fill="#0d78bf" stroke="#0d78bf" stroke-width="0.25" font-size="4" font-family="MyriadPro-Regular, Myriad Pro"><tspan x="0" y="0">XLX</tspan></text>
+    <text id="PDF" transform="translate(802.29 892.398)" fill="#0d78bf" stroke="#0d78bf" stroke-width="0.25" font-size="4" font-family="MyriadPro-Regular, Myriad Pro"><tspan x="0" y="0">PDF</tspan></text>
+    <text id="PPT" transform="translate(802.467 901.725)" fill="#0d78bf" stroke="#0d78bf" stroke-width="0.25" font-size="4" font-family="MyriadPro-Regular, Myriad Pro"><tspan x="0" y="0">PPT</tspan></text>
+    <line id="Line_385" data-name="Line 385" x2="3" transform="translate(777.833 893.5)" fill="none" stroke="#0d78bf" stroke-width="0.25"/>
+    <line id="Line_386" data-name="Line 386" x2="4" transform="translate(777.333 895.285)" fill="none" stroke="#0d78bf" stroke-width="0.25"/>
+    <line id="Line_387" data-name="Line 387" x2="7" transform="translate(775.833 897.285)" fill="none" stroke="#0d78bf" stroke-width="0.25"/>
+  </g>
+</svg>

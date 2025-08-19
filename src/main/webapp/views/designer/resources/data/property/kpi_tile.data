@@ -1,0 +1,482 @@
+{
+	"Info": [{
+		"class": "KPITile"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "25",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "100",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	},{
+		"label": "Tool Tip : ",
+		"type": "checkbox",
+		"value": "",
+		"attributeName": "enableToolTip",
+		"propertyName": "Chart"
+	}, {
+		"label": "Direction : ",
+		"type": "select",
+		"value": "horizontal",
+		"options": [{
+			"key": "horizontal",
+			"value": "Horizontal"
+		}, {
+			"key": "vertical",
+			"value": "Vertical"
+		}],
+		"attributeName": "kpitileDirection",
+		"propertyName": "Chart"
+	}, {
+		"label": "No. of Rows/Columns : ",
+		"type": "number",
+		"min": "1",
+		"max": "5",
+		"step": "1",
+		"value": "1",
+		"attributeName": "NoofBranches",
+		"propertyName": "Chart"
+	}, {
+		"label": "+ve Trend Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "positiveTrendColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "-ve Trend Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "negativeTrendColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Zero Trend Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "zeroTrendColor",
+		"propertyName": "Chart"
+	},{
+		"label": "SparkLine Color : ",
+		"type": "color",
+		"value": "#006488",
+		"attributeName": "lineColor",
+		"propertyName": "Chart"
+	},{
+		"label": "SparkLine Fill Color : ",
+		"type": "color",
+		"value": "#86dff9",
+		"attributeName": "fillColor",
+		"propertyName": "Chart"
+	}],
+	"Background and Style": [{
+		"label": "Gradient Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "45",
+		"attributeName": "bgGradientRotation",
+		"propertyName": "Chart"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "bgAlpha",
+		"propertyName": "Chart"
+	}, {
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "bgGradients",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showBorder",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "borderColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "5",
+		"attributeName": "borderRadius",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Chart"
+	}, {
+		"label": "Margin Tile : ",
+		"type": "number",
+		"min": "0",
+		"max": "100",
+		"step": "1",
+		"count": 1,
+		"value": "5",
+		"attributeName": "PaddingBetTile",
+		"propertyName": "Chart"
+	}],
+	"Category":[{
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "CategoryFontColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "CategoryFontSize",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "normal",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "CategoryFontStyle",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "normal",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "CategoryFontWeight",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "Verdana",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		}, {
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "CategoryFontFamily",
+		"propertyName": "Chart"
+	}],
+	"Primary Series":[{
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "PrimarySeriesFontColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "28",
+		"step": "1",
+		"value": "12",
+		"attributeName": "PrimarySeriesFontSize",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "normal",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "PrimarySeriesFontStyle",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "normal",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "PrimarySeriesFontWeight",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "Verdana",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		}, {
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "PrimarySeriesFontFamily",
+		"propertyName": "Chart"
+	}],
+	"Secondary Series":[{
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "SecondarySeriesFontColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "SecondarySeriesFontSize",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "normal",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "SecondarySeriesFontStyle",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "normal",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "SecondarySeriesFontWeight",
+		"propertyName": "Chart"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "Verdana",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		}, {
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "SecondarySeriesFontFamily",
+		"propertyName": "Chart"
+	}]
+}

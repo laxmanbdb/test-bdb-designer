@@ -1,0 +1,428 @@
+{
+	"Info": [{
+		"class": "ComboFilter"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, 
+	{
+		"label": "Show Search : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showSearch",
+		"propertyName": "Object"
+	},
+	{
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "25",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "100",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Filter"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Filter"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Filter"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Filter"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Filter"
+	}, {
+		"label": "Selection : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "default",
+			"value": "Default"
+		}, {
+			"key": "singleselect",
+			"value": "Single Select"
+		}, {
+			"key": "multiselect",
+			"value": "Multi Select"
+		}],
+		"attributeName": "SelectionType",
+		"propertyName": "Filter"
+	}, {
+		"label": "Selected Index : ",
+		"type": "text",
+		"value": "",
+		"attributeName": "SelectedIndex",
+		"propertyName": "Filter"
+	}, {
+		"label": "Auto Update GV : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "enableGVAutoUpdate",
+		"propertyName": "Filter"
+	}, {
+		"label": "Notify GV Update : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "notifyGVAutoUpdate",
+		"propertyName": "Filter"
+	}, {
+		"label": "Public Filter : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "publicFilter",
+		"propertyName": "Filter"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Filter"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Filter"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Filter"
+	}, {
+		"label": "Background Color: ",
+		"type": "color",
+		"value": "",
+		"attributeName": "filterbgColor",
+		"propertyName": "Filter"
+	}],
+	"Title": [{
+		"label": "Title Box Color : ",
+		"type": "gradient",
+		"value": "",
+		"attributeName": "GradientColor",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Show Title Box : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "showGradient",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Show Title : ",
+		"type": "checkbox",
+		"attributeName": "showTitle",
+		"propertyName": "Filter.Title"
+	},
+	
+	{
+		"label": "Show Only Title : ",
+		"type": "checkbox",
+		"attributeName": "showOnlyTitle",
+		"propertyName": "Filter.Title"
+	},
+	
+	 {
+		"label": "Title Bar Height : ",
+		"type": "number",
+		"min": "25",
+		"max": "75",
+		"step": "1",
+		"value": "25",
+		"attributeName": "TitleBarHeight",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "Title",
+		"attributeName": "Description",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Align : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "Align",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "TextDecoration",
+		"propertyName": "Filter.Title"
+	}, {
+		"label": "Position : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "top",
+			"value": "Top"
+		}, {
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "Position",
+		"propertyName": "Filter.Title"
+	}],
+	"Dropdown Style": [{
+		"label": "RollOver Color: ",
+		"type": "color",
+		"value": "",
+		"attributeName": "rollOverColor",
+		"propertyName": "Filter"
+	}, {
+		"label": "Selection  Color: ",
+		"type": "color",
+		"value": "",
+		"attributeName": "selectionColor",
+		"propertyName": "Filter"
+	}, {
+		"label": "Background Color: ",
+		"type": "color",
+		"value": "",
+		"attributeName": "chromeColor",
+		"propertyName": "Filter"
+	}]
+}

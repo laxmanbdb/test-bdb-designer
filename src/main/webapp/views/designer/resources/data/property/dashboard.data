@@ -1,0 +1,292 @@
+{
+	"Gradient": [{
+		"label": "Background Colors : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#FFFFFF",
+		"attributeName": "gradients",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"value": "1",
+		"attributeName": "bgAlpha",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Background Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "90",
+		"attributeName": "gradientRotation",
+		"propertyName": "absoluteLayout"
+	}],
+	"Border": [{
+		"label": "Thickness : ",
+		"type": "number",
+		"min": "0",
+		"max": "50",
+		"step": "1",
+		"value": "0",
+		"attributeName": "borderThickness",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "borderColor",
+		"propertyName": "absoluteLayout"
+	}],
+	"Global Font And Themes": [{
+		"label": "Use Global Shadow : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "showShadow",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Use Global Font : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "useGlobalFont",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "Verdana",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Arial Black",
+			"value": "Arial Black"
+		}, {
+			"key": "Calisto MT",
+			"value": "Calisto MT"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Century",
+			"value": "Century"
+		}, {
+			"key": "Cursive",
+			"value": "Cursive"
+		}, {
+			"key": "Georgia",
+			"value": "Georgia"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Impact",
+			"value": "Impact"
+		}, {
+			"key": "Lato",
+			"value": "Lato"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Lucida Console",
+			"value": "Lucida Console"
+		}, {
+			"key": "Lucida Grande",
+			"value": "Lucida Grande"
+		}, {
+			"key": "Lucida Sans Unicode",
+			"value": "Lucida Sans Unicode"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "fontFamily",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Global Properties : ",
+		"type": "globalPropertyDropdown",
+		"value": "",
+		"options": [],
+		"attributeName": "globalProperty",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Designer themes : ",
+		"type": "customThemeMappingDropdown",
+		"value": "",
+		"options": [],
+		"attributeName": "designerTheme",
+		"propertyName": "absoluteLayout"
+	}],
+	"Size": [{
+		"label": "Screen Size : ",
+		"type": "select",
+		"value": "929x566",
+		"options": [{
+			"key": "929x566",
+			"value": "Custom"
+		}, {
+			"key": "768x1024",
+			"value": "Ipad Portrait(768 X 1024)"
+		}, {
+			"key": "1024x768",
+			"value": "Ipad Landscape(1024 X 768)"
+		}, {
+			"key": "414x736",
+			"value": "Iphone Portrait(414 X 736)"
+		}, {
+			"key": "736x414",
+			"value": "Iphone Landscape(736 X 414)"
+		}, {
+			"key": "800x600",
+			"value": "800 X 600"
+		}, {
+			"key": "1280x1024",
+			"value": "1280 X 1024"
+		}, {
+			"key": "1600x900",
+			"value": "1600 X 900"
+		}],
+		"attributeName": "resolution",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "1284",
+		"attributeName": "width",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "588",
+		"attributeName": "height",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Redraw on resize : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "enableResize",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Enable Scaling : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "scalingEnabled",
+		"propertyName": "absoluteLayout"
+	}, {
+		"label": "Scaling View : ",
+		"type": "select",
+		"value": "fitToPage",
+		"options": [{
+			"key": "fitToPage",
+			"value": "Fit to page"
+		}, {
+			"key": "fitToWidth",
+			"value": "Fit to width"
+		}, {
+			"key": "fitToHeight",
+			"value": "Fit to height"
+		}, {
+			"key": "proportionate",
+			"value": "Proportional"
+		}],
+		"attributeName": "scalingView",
+		"propertyName": "absoluteLayout"
+	},{
+	    "label": "Align : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "alignTop",
+			"value": "Align Top"
+		}, {
+			"key": "alignLeft",
+			"value": "Align Left"
+		}, {
+			"key": "none",
+			"value": "None"
+		}],
+		"attributeName": "dashboardAlign",
+		"propertyName": "absoluteLayout"
+	}],
+	"Language Mapping": [{
+		"label": "Enable : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "LanguageMapping.enable",
+		"propertyName": "Dashboard"
+	}, {
+		"label": "Hide Curly Braces : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "LanguageMapping.hideBrackets",
+		"propertyName": "Dashboard"
+	}, {
+		"label": "Select a Mapping: ",
+		"type": "customLanguageMappingDropdown",
+		"value": "",
+		"options": [],
+		"attributeName": "LanguageMapping.mappingId",
+		"propertyName": "Dashboard"
+	}],
+	"Cache": [{
+		"label": "Enable Cache : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "enableCache",
+		"propertyName": "Dashboard"
+	}],
+	"ReportBurst": [{
+		"label": "Enable Report Burst : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "enableReportBurst",
+		"propertyName": "Dashboard"
+	}]
+}

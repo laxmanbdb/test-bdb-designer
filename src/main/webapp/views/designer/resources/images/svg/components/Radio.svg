@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #7c4dff;
+      }
+
+      .cls-2 {
+        stroke: #d3d3d3;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Group_3112">
+        <g id="Rectangle_206">
+          <rect class="cls-1" y="0" width="50" height="50" rx="6" ry="6"/>
+          <rect class="cls-2" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+        </g>
+        <rect id="Rectangle_278" class="cls-3" x="17.7" y="13" width="25" height="7" rx="1" ry="1"/>
+        <rect id="Rectangle_279" class="cls-3" x="17.7" y="22" width="25" height="7" rx="1" ry="1"/>
+        <rect id="Rectangle_280" class="cls-3" x="17.7" y="31" width="25" height="7" rx="1" ry="1"/>
+        <path id="Icon_ionic-md-radio-button-on" class="cls-3" d="M11.1,23.6c-1.1,0-1.9.9-1.9,1.9s.9,1.9,1.9,1.9,1.9-.9,1.9-1.9h0c0-1.1-.9-1.9-1.9-1.9ZM11.1,21.7c-2.1,0-3.8,1.7-3.8,3.8,0,2.1,1.7,3.8,3.8,3.8,2.1,0,3.8-1.7,3.8-3.8,0-2.1-1.7-3.8-3.8-3.8,0,0,0,0,0,0ZM11.1,28.5c-1.7,0-3-1.4-3-3s1.4-3,3-3,3,1.4,3,3h0c0,1.7-1.4,3-3,3Z"/>
+        <path id="Icon_ionic-md-radio-button-off" class="cls-3" d="M11.1,12.3c-2.1,0-3.8,1.7-3.8,3.8,0,2.1,1.7,3.8,3.8,3.8,2.1,0,3.8-1.7,3.8-3.8,0-2.1-1.7-3.8-3.8-3.8,0,0,0,0,0,0ZM11.1,19.1c-1.7,0-3-1.4-3-3s1.4-3,3-3,3,1.4,3,3h0c0,1.7-1.4,3-3,3Z"/>
+        <path id="Icon_ionic-md-radio-button-off-2" class="cls-3" d="M11.1,31.1c-2.1,0-3.8,1.7-3.8,3.8,0,2.1,1.7,3.8,3.8,3.8,2.1,0,3.8-1.7,3.8-3.8,0-2.1-1.7-3.8-3.8-3.8,0,0,0,0,0,0ZM11.1,38c-1.7,0-3-1.4-3-3s1.4-3,3-3,3,1.4,3,3h0c0,1.7-1.4,3-3,3Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

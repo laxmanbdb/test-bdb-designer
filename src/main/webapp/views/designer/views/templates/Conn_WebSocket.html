@@ -1,0 +1,57 @@
+<h1 style="text-align: left; font-size: 30px; margin-bottom: 3%;">Connecting to a Web Socket</h1>
+<p class="contentTextStyle">Click the ‘Data source’ icon provided to the right side of the canvas, and view the database connectivity options.</p>
+<ul class="contentTextStyle">
+<li>Click the ‘Data Source’ icon <img src="views/helpIcons/DataSourceIcon.png"> to display all the available data sources.</li>
+<li>Click the ‘Add’ button <img src="views/helpIcons/PlusSighnDataSource.png"> provided next to the ‘Web Service’ option.</li>
+<li>A new connection will be created.</li>
+<br>	
+<div>
+	<img
+			src="views/helpIcons/WebSocket1.png"
+			 style="width: 400px;padding-left: 30px;"">
+	</div>
+	<br>
+	<li>Click the connection to display the connection specific details.</li>
+	<li>Configure the following information:</li>
+	<ul>
+	<li>a.<b>Name:</b> Name the connection.</li>
+	<li>b. <b>URL :</b> Paste the url from which websocket data should be pulled.</li>
+	<li>c. <b>Load at Start:</b> Enable this option to get up-to-date data / pull the updated data from the data source before loading into charts. </li>
+	</ul>
+	<div>
+	<img
+			src="views/helpIcons/WebSocket2.png"
+			 style="width: 700px;padding-left: 30px;">
+	</div>
+	<!-- <li>Once the data connection is established all the fields available in the data will be displayed under the ‘Field Set’ tab.</li>
+	<br>
+	<div>
+	<img
+			src="views/helpIcons/WebService2a.png"
+			 style="width: 700px;padding-left: 30px;">
+	</div>
+	<br>
+	<li><b>Condition:</b> Use to filter values based on the given condition.
+E.g. As displayed in the following image, ‘Feb’ has been selected from the ‘month’ field. Hence, only data related to the February month will be pulled from the data source.</li>
+<br>
+	<div>
+	<img
+			src="views/helpIcons/WebService2.png"
+			 style="width: 700px;padding-left: 30px;"">
+	</div>
+	<br>
+	<li>Select ‘Script on Load’ to trigger a script to produce some action on a component. </li>
+	-->
+	</ul>
+	<br>
+	<p class="contentTextStyle">Guidelines for using a WebSocket</p>
+	<ul>
+	<li>A valid Web Socket URL should be given.</li>
+	<li>Fields and Filters are not listed since a Web Socket can send data in any structure.</li>
+	<li>To display the reponse in a chart or table, Parse the response and format the data as per the structure. <br>
+	Examples:<br>
+	 var response = sdk.getWebSocketResponse()<br>
+	 response.message.dashboard_1.Device; // can be an array of objects
+	</li>
+	</ul>
+	 

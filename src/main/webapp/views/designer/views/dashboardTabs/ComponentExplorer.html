@@ -1,0 +1,34 @@
+<div id="compBox" ng-app="" class="bizVizRightControlComponentBoxContainer biz-viz-side-window hideBox bvz-invisible">
+	<div class="filter-search-wrapper">
+		<form>
+			<select id="typeCombo" ng-model="cat" ng-change="filterComponentData(cat.value);" 
+				ng-options="type as type.label for type in types" >
+			</select>
+			<input type="text" ng-model="query" placeholder="Search in components" autofocous />
+		</form> 	
+	</div>
+	<div class="bizVizControlBoxBody">
+		<div class="bizVizControlBoxWrapper col-sm-12">
+			<div ng-repeat="component in componentData | filter: isComponentInList | orderBy: 'name'">
+				<div ng-drag="true" ng-drag-data="component" ng-if="component.allowClone !== false" class="col-5" ng-hide="!component.show">
+					<a href="#" class="thumbnail component-thumbnail" title="{{component.name}}">
+						<img ng-src="{{component.icon}}" alt="{{component.name}}" />
+						<span style="overflow:hidden; white-space:nowrap; text-overflow: ellipsis;">
+							{{component.name}}</span></a>
+				</div>
+			</div>
+			<div ng-drag-clone="">
+			    <a href="#" class="thumbnail component-thumbnail" title="{{clonedData.name}}">
+					<img ng-src="{{clonedData.icon}}" alt="{{clonedData.name}}" />
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="bizVizControlBoxFooter">
+		<span class="close-btn pull-left">
+			<i class="glyphicon glyphicon-arrow-right" ng-click="reloadDefault();" ></i>
+		</span>
+		<div class="db-name">{{cat.header}}</div>
+		<div class="clear"></div>
+	</div>
+</div>

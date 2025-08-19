@@ -1,0 +1,516 @@
+{
+	"ScatteredPlotChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "scattered_plot_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "plot",
+				"showLocked": "false",
+				"objectName": "Plot_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "450",
+				"x": "20",
+				"height": "300",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "Plot",
+					"showGradient": "false",
+					"bgGradients": "#ffffff",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+
+					"exportToExcel": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"exportType":"screenshot",
+
+					"showScreenShotButton": "true",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showTooltip": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"showMaximizeButton": "true",
+					"showExcelDownload": "true",
+					"showSubTitle": "false",
+					"showTitle": "true",
+					"GradientColor": "#F5F5F5,#F5F5F5",
+					"showLegends": "false",
+					"legendDirection": "horizontal",
+					"legendfontSize": "10",
+					"legendtextDecoration": "none",
+					"legendfontStyle": "normal",
+					"legendfontColor": "#000000",
+					"legendfontFamily": "Roboto",
+					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+					"hideLegendOnStart": "true",
+					"showcheckboxwithlegend": "false",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"markerColor": "#808080",
+					"markerTransparency": "0.3",
+					"showMarkerLine": "true",
+					"showVerticalMarkerLine": "true",
+					"autoaxisSetup": "true",
+					"minimumAxisValue": "-20",
+					"maximumAxisValue": "110",
+					"baseZero": "false",
+					"zeroMarkerLine": "false",
+					"zeroMarkerColor": "#be4a47",
+					"verticalZeroMarkerLine": "false",
+					"verticalZeroMarkerColor": "#be4a47",
+					"FixedLabel": "false",
+					"Formater": "Currency",
+					"Unit": "none",
+					"SignPosition": "prefix",
+					"Precision": "default",
+					"NumberFormatter": "number",
+					"SecondaryFormater": "Number",
+					"SecondaryUnit": "none",
+					"Globalkey": "",
+					"enableColorFromDrill": "false",
+					"plotWithLabel": "true",
+					"horizontalMinimumAxisValue": "-20",
+					"horizontalAxisAutoAdjust": "true",
+					"horizontalMaximumAxisValue": "110",
+					"horizontalAxisBaseZero": "true",
+					"SecondaryAxisFormater": "Currency",
+					"SecondaryAxisUnit": "none",
+					"SecondaryAxisSecondaryFormatter": "Number",
+					"SecondaryAxisSecondaryUnit": "none",
+					"SecondaryAxisPrecision": "default",
+					"SecondaryAxisSignPosition": "suffix",
+					"SecondaryAxisNumberFormatter": "number",
+					"ChartBase": "gradient",
+					"luminance": "0.5",
+					"transparency": "0.6",
+					"ShowColorBandLegends": "false",
+					"higherValuesAreGood": "true",
+					"showFrequencyBar": "false",
+					"showDynamicRange": "false",
+					"maxRangeColor": "#00b16a",
+					"minRangeColor": "#f89406",
+					"ShowXAxisThreshold": "false",
+					"MinimumXAxisThreshold": "0",
+					"MaximumXAxisThreshold": "50",
+					"ShowYAxisThreshold": "false",
+					"MinimumYAxisThreshold": "0",
+					"MaximumYAxisThreshold": "50",
+					"enableAnimation" : "true",
+					"showSettingMenuButton" : "false",
+					"SolidColorFill": "false",
+					"Legend": {
+						"DisplayName": "Very Low,Low,Medium,High,Very High,Extremely High",
+						"Ranges": "0~20,20~30,30~50,50~70,70~100,100~140",
+						"Colors": "#E74C3C,#DB0A5B,#F7CA18,#F89406,#36D7B7,#26A65B"
+					},
+					"xAxis": {
+						"ShowLineXAxis": "false",
+						"LineXAxisColor": "#ffffff",
+						"Description": "xAxis Title",
+						"LabelFontWeight": "normal",
+						"FontSize": "11",
+						"LabelFontColor": "#808080",
+						"LabelFontStyle": "normal",
+						"TextDecoration": "none",
+						"LabelFontFamily": "Roboto",
+						"Labelrotation": "90",
+						"LabelTilted": "false",
+						"FontColor": "#808080",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "10",
+						"FontStyle": "normal",
+						"FontFamily": "Roboto",
+						"FontWeight": "normal",
+						"TickMarks": "false",
+						"CategoryMarkingColor": "#cccccc"
+					},
+					"yAxis": {
+						"ShowLineYAxis": "false",
+						"LineYAxisColor": "#ffffff",
+						"Description": "yAxis Title",
+						"rightaxisFormater": "false",
+						"LabelFontWeight": "normal",
+						"FontStyle": "normal",
+						"LabelFontColor": "#808080",
+						"FontFamily": "Roboto",
+						"TextDecoration": "none",
+						"LabelFontStyle": "normal",
+						"LabelFontFamily": "Roboto",
+						"FontColor": "#808080",
+						"SecondDiscription": "yaxis",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "10",
+						"FontSize": "11",
+						"leftaxisFormater": "true",
+						"FontWeight": "normal"
+					},
+					"Title": {
+						"FontWeight": "bold",
+						"Description": "Height vs Weight for male and females",
+						"FontSize": "11",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "Roboto",
+						"FontColor": "#808080",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"TitleBarHeight": "40"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "SubTitle",
+						"showSubTitle": "false",
+						"FontSize": "10",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "Roboto",
+						"FontColor": "#808080",
+						"FontStyle": "italic"
+					},
+					"ConditionalColors": {
+						"ConditionalColor": []
+					},
+					"CategoryColors": {
+						"categoryDefaultColor": "",
+						"categoryDefaultColorSet": "",
+						"showColorsFromCategoryName": "false",
+						"CategoryColor": []
+					}
+				}
+			}
+		},
+		"Fields": [{
+				"visible": "true",
+				"Precision": "0",
+				"Type": "YField",
+				"Color": "#f89406",
+				"Name": "y1",
+				"PlotType": "point",
+				"OtherField": "x1",
+				"axis": "none",
+				"DisplayName": "Sales-Expense",
+				"PlotTransparency": "0.8",
+				"PlotRadius": "5"
+			},
+			{
+				"visible": "true",
+				"Precision": "0",
+				"Type": "XField",
+				"Color": "#86dff9",
+				"Name": "x2",
+				"PlotType": "plus",
+				"OtherField": "y2",
+				"axis": "none",
+				"DisplayName": "Expense-Profit",
+				"PlotTransparency": "0.8",
+				"PlotRadius": "5"
+			}
+		],
+		"Data": [{
+				"x1": 28,
+				"y1": 46,
+				"x2": 78,
+				"y2": 39
+			},
+			{
+				"x1": 41,
+				"y1": 46,
+				"x2": 58,
+				"y2": 38
+			},
+			{
+				"x1": 43,
+				"y1": 50,
+				"x2": 34,
+				"y2": 39
+			},
+			{
+				"x1": 47,
+				"y1": 43,
+				"x2": 41,
+				"y2": 48
+			},
+			{
+				"x1": 58,
+				"y1": 46,
+				"x2": 30,
+				"y2": 33
+			},
+			{
+				"x1": 62,
+				"y1": 57,
+				"x2": 76,
+				"y2": 37
+			},
+			{
+				"x1": 64,
+				"y1": 58,
+				"x2": 33,
+				"y2": 36
+			},
+			{
+				"x1": 69,
+				"y1": 53,
+				"x2": 36,
+				"y2": 34
+			},
+			{
+				"x1": 71,
+				"y1": 45,
+				"x2": 107,
+				"y2": 35
+			},
+			{
+				"x1": 75,
+				"y1": 59,
+				"x2": 49,
+				"y2": 30
+			},
+			{
+				"x1": 76,
+				"y1": 48,
+				"x2": 37,
+				"y2": 36
+			},
+			{
+				"x1": 82,
+				"y1": 42,
+				"x2": 47,
+				"y2": 31
+			},
+			{
+				"x1": 86,
+				"y1": 43,
+				"x2": 88,
+				"y2": 30
+			},
+			{
+				"x1": 86,
+				"y1": 46,
+				"x2": 49,
+				"y2": 40
+			},
+			{
+				"x1": 88,
+				"y1": 58,
+				"x2": 86,
+				"y2": 39
+			},
+			{
+				"x1": 93,
+				"y1": 48,
+				"x2": 114,
+				"y2": 33
+			},
+			{
+				"x1": 94,
+				"y1": 56,
+				"x2": 51,
+				"y2": 34
+			},
+			{
+				"x1": 94,
+				"y1": 62,
+				"x2": 33,
+				"y2": 36
+			},
+			{
+				"x1": 97,
+				"y1": 44,
+				"x2": 78,
+				"y2": 29
+			},
+			{
+				"x1": 99,
+				"y1": 65,
+				"x2": 110,
+				"y2": 41
+			},
+			{
+				"x1": 104,
+				"y1": 54,
+				"x2": 45,
+				"y2": 34
+			},
+			{
+				"x1": 104,
+				"y1": 59,
+				"x2": 144,
+				"y2": 37
+			},
+			{
+				"x1": 106,
+				"y1": 52,
+				"x2": 73,
+				"y2": 40
+			},
+			{
+				"x1": 109,
+				"y1": 64,
+				"x2": 55,
+				"y2": 36
+			},
+			{
+				"x1": 111,
+				"y1": 53,
+				"x2": 72,
+				"y2": 41
+			},
+			{
+				"x1": 120,
+				"y1": 61,
+				"x2": 184,
+				"y2": 38
+			},
+			{
+				"x1": 122,
+				"y1": 52,
+				"x2": 54,
+				"y2": 32
+			},
+			{
+				"x1": 127,
+				"y1": 42,
+				"x2": 115,
+				"y2": 42
+			},
+			{
+				"x1": 133,
+				"y1": 60,
+				"x2": 91,
+				"y2": 43
+			},
+			{
+				"x1": 139,
+				"y1": 64,
+				"x2": 68,
+				"y2": 37
+			},
+			{
+				"x1": 144,
+				"y1": 57,
+				"x2": 106,
+				"y2": 38
+			},
+			{
+				"x1": 146,
+				"y1": 54,
+				"x2": 85,
+				"y2": 42
+			},
+			{
+				"x1": 154,
+				"y1": 48,
+				"x2": 139,
+				"y2": 40
+			},
+			{
+				"x1": 157,
+				"y1": 43,
+				"x2": 30,
+				"y2": 42
+			},
+			{
+				"x1": 159,
+				"y1": 67,
+				"x2": 109,
+				"y2": 50
+			},
+			{
+				"x1": 160,
+				"y1": 66,
+				"x2": 88,
+				"y2": 46
+			},
+			{
+				"x1": 170,
+				"y1": 51,
+				"x2": 118,
+				"y2": 38
+			},
+			{
+				"x1": 171,
+				"y1": 63,
+				"x2": 145,
+				"y2": 37
+			},
+			{
+				"x1": 171,
+				"y1": 60,
+				"x2": 37,
+				"y2": 39
+			},
+			{
+				"x1": 180,
+				"y1": 64,
+				"x2": 74,
+				"y2": 41
+			},
+			{
+				"x1": 191,
+				"y1": 47,
+				"x2": 108,
+				"y2": 36
+			},
+			{
+				"x1": 194,
+				"y1": 74,
+				"x2": 61,
+				"y2": 40
+			},
+			{
+				"x1": 194,
+				"y1": 50,
+				"x2": 117,
+				"y2": 39
+			},
+			{
+				"x1": 195,
+				"y1": 65,
+				"x2": 55,
+				"y2": 37
+			},
+			{
+				"x1": 198,
+				"y1": 63,
+				"x2": 78,
+				"y2": 33
+			}
+		]
+	}
+}

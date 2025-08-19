@@ -1,0 +1,122 @@
+{
+	"ProgressChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "progress_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "progress",
+				"showLocked": "false",
+				"objectName": "Progress_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "402",
+				"x": "20",
+				"height": "304",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"showMaximizeButton": "true",
+					"Globalkey": "",
+					"exportToExcel": "true",
+					"exportToCSV": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+
+					"pptHeading": "Heading",
+					"showScreenShotButton": "true",
+					"screenShotMode": "screenshot",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"scrnShotFileName": "dashboard",
+
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+
+					"id": "Obj.A9B8FEE2NDBECNE295N14CEN8532553AF611",
+					"Type": "Progress",
+
+					"showTitle": "true",
+					"showSubTitle": "false",
+					"colorOpacity": "1",
+					"showGradient": "false",
+					"GradientColor": "#EFF0F0,#EFF0F0",
+					"showBorder": "true",
+					"borderColor": "#EFF0F0",
+					"borderRadius": "0",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"showTooltip": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"strokeColor": "0x000fff",
+
+					"bgGradientRotation": "0",
+					"bgAlpha": "1",
+					"bgGradients": "#ffffff",
+
+					"ChartBase": "plane",
+					"ChartType": "circle",
+
+					"Precision": "0",
+					"showText": "true",
+					"FontColor": "#000000",
+					"FontSize": "28",
+					"FontFamily": "BizvizFont",
+					"FontStyle": "normal",
+					"FontWeight": "normal",
+					"textDecoration": "none",
+
+					"percent": "60",
+					"baseColor": "#ECECEC",
+					"valueColor": "#00BCD4",
+					"lineWidth": "25",
+					"lineCap": "butt",
+ 					"updatedDesign": "true",
+					"Title": {
+						"FontWeight": "600",
+						"Description": "Task Completion",
+						"FontSize": "16",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"TitleBarHeight": "48"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "SubTitle",
+						"showSubTitle": "false",
+						"FontSize": "15",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal"
+					}
+				}
+			}
+		}
+	}
+}

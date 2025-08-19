@@ -1,0 +1,56 @@
+{
+	"UrlButton": {
+		"Properties": {
+			"Object": {
+				"componentType": "url_button",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "url",
+				"y": "1097",
+				"objectType": "URLButton",
+				"subElement": "URLButton",
+				"globalVariableKeyAttribute": "globalkey",
+				"height": "44",
+				"initialVisibility": "true",
+				"showLocked": "false",
+				"objectName": "urlButton_22",
+				"unShowHidden": "false",
+				"groupings": "",
+				"width": "125",
+				"objectID": "Obj.B84FD0C3NEA44N1709N980ENE6E87792A37C",
+				"x": "668",
+				"URLButton": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"toolTip": "Visit www.google.com",
+					"encode": "true",
+					"chromeColor": "#EFF0F0",
+					"color": "#000000",
+					"fontWeight": "normal",
+					"fontStyle": "normal",
+					"openDoc": "true",
+					"fontFamily": "BizvizFont",
+					"fontSize": "16",
+					"label": "URL",
+					"url": "//www.google.com",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "0",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+
+					"Params": {
+						"Param": []
+					}
+				}
+			}
+		}
+	}
+}

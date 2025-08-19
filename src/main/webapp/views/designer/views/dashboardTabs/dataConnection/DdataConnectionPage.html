@@ -1,0 +1,265 @@
+<div id="DdataConnection" class="connectionUI data-src connTextStyle" 
+	ng-controller="DdataController" ng-init="onInit()">
+	<div class="row wd100per ht100per">
+		<div class="row form-group connPagePad">
+			<div class="col-md-2 col-sm-2">
+				<p>Name</p>
+			</div>
+			<div class="col-md-8 col-sm-8">
+				<input type="text" 
+					maxlength="20" 
+					id="connectionName" 
+					name="connectionName" 
+					class="propValue connTextStyle" 
+					ng-blur="validateConnection( modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection )" 
+					placeholder="New connection"
+					ng-change="updateConnectionTree( modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection );"
+					ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.connectionName"/>
+			</div>
+			<!--<div class="connectorInfo" style="top: 8px;">
+				<md-button ng-click="openConnectorInfo()" class="md-secondary md-icon-button"> 
+					<md-icon >
+						<img alt="information" src="./resources/images/svg/additional/Information.svg" class="cursor-hand" mat-tooltip="Information" />
+						<i class="material-icons cursor-hand" mat-tooltip="Information">info_outline</i> 
+					</md-icon> 
+				</md-button>
+			</div>-->
+		</div>
+		<div class="row form-group criteria-container connPagePad">
+			<div class="col-md-12" ng-show="displayCriteriaBuilder">
+				<div class="criteria-wrapper">
+					<div class="row" style="padding: 18px 0px;" ng-hide="!displayCriteria">
+						<div class="col-md-11 col-sm-8">
+							<input class="propValue connTextStyle" 
+								placeholder="Criteria"
+								type="text" 
+								ng-model="criteria" 
+								ng-change="onCriteriaChange()"/>
+						</div>
+						<div class="col-md-1 col-sm-4 icon_abs ddata-refreshIcon">
+							<span ng-click="showCriteriaBuilder()">
+							<md-icon class="nt-plus-icon cursor-hand" mat-tooltip="Add Criteria"></md-icon>
+								<!--<img alt="add" src="./resources/images/svg/additional/Add.svg" class="cursor-hand" mat-tooltip="Add Criteria" />-->
+								<!--<i class="material-icons cursor-hand" mat-tooltip="Add Criteria">add</i>-->
+							</span>
+						</div>
+					</div>
+					<div class="row" style="padding: 5px 0px 0px 0px;">
+						<div class="col-md-12" ng-hide="displayCriteria">
+							<div class="row criteria-conn-names">
+								<div class="col-md-4"><span class="col-md-6">{{parentConnection_1.connectionName}}</span></div>
+								<div class="col-md-2"></div>
+								<div class="col-md-4"><span class="col-md-6">{{parentConnection_2.connectionName}}</span></div>
+							</div>
+							<div class="row criteria-conn-fields">
+								<div class="col-md-4">
+									<select ng-model="leftCriteriaOperand" 
+										class="propValue cursor-hand" 
+										ng-change="" 
+										ng-options="field.name for field in parentFields_1" >
+									</select>
+								</div>
+								<div class="col-md-2" style="margin: 0; padding: 0">
+									<select ng-model="selectedCriteriaOperator" 
+										class="propValue cursor-hand" 
+										ng-change="onCriteriaOperatorChange()" 
+										ng-options="cOp.displayName for cOp in conditionalOperator" >
+									</select>
+								</div>
+								<div class="col-md-4">
+									<select ng-model="rightCriteriaOperand" 
+										class="propValue cursor-hand" 
+										ng-change="" 
+										ng-options="field.name for field in parentFields_2" >
+									</select>
+								</div>
+								<div class="col-md-2" style="text-align:center">
+									<span 
+										class="col-md-6" 
+										ng-click="createCriteria()">
+										<i class="material-icons cursor-hand" mat-tooltip="Create Criteria">check</i>
+									</span>
+									<span 
+										ng-click="hideCriteriaBulder()" 
+										class="col-md-6" >
+										<i class="material-icons cursor-hand" mat-tooltip="Cancel">close</i>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row form-group" style="height: calc(100% - 116px); padding: 27px 0px 0px 36px;">
+			<div class="col-md-6 pad0 ht100per">
+				<div class="row" style="height: 50%; margin: 0px 0px 5px 0px;">
+					<div class="col-md-12 ht100per">
+						<div class="fieldContainer ht100per" style="width: 100%; min-height: 100px;">
+							<select ng-model="parentConnection_1" 
+								class="propValue cursor-hand" 
+								ng-change="onFirstConnectionChange( parentConnection_1.id )" 
+								ng-options="connection.connectionName for connection in connectionList" >
+							</select>
+							<div class="field-draggable parent-connection-container">
+								<span class="fade-placeholder" ng-show="!parentConnection_1" >Select a connection (LEFT table in join)</span>
+								<ul class="bvz-list-container">
+									<li class="bvz-list-item" 
+										ng-repeat="field in parentFields_1" 
+										ng-drag="true" 
+										ng-drag-data="field" 
+										ng-drag-success="onFieldDragSuccess( parentConnection_1 )"
+										data-allow-transform="true" 
+										draggable="false" >
+										{{ field.name }}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="height: calc(50% - 5px);">
+					<div class="col-md-12 ht100per">
+						<div class="fieldContainer ht100per" style="width: 100%; min-height: 100px;">
+							<select ng-model="parentConnection_2" 
+								class="propValue cursor-hand" 
+								ng-change="onSecondConnectionChange( parentConnection_2.id )" 
+								ng-options="connection.connectionName for connection in connectionList" >
+							</select>
+							<div class="field-draggable parent-connection-container">
+								<span class="fade-placeholder" ng-show="!parentConnection_2" >Select a connection (RIGHT table in join)</span>
+								<ul class="bvz-list-container">
+									<li class="bvz-list-item" 
+										ng-repeat="field in parentFields_2" 
+										ng-drag="true" 
+										ng-drag-data="field" 
+										ng-drag-success="onFieldDragSuccess( parentConnection_2 )"
+										data-allow-transform="true" 
+										draggable="false" >
+										{{ field.name }}
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 pad0 ht100per">
+	    <md-content class="ht100per setBackground">
+	        <md-tabs class="filed_tabs1 ht100per">
+	            <!--  tab1 -->
+	            <md-tab label="Merged Fields">
+	                <div class="field-draggable" style="height: calc( 100% - 30px );" ng-drop="true" ng-drop-success="onFieldDropSuccess( $data, $event )">
+	                    <md-content class="md-padding setBackground">
+	                        <div id="fieldSetTabDivision" class="tab-pane fade in active">
+	                            <!--  list items -->
+	                            <md-content class="setBackground">
+	                                <md-list flex>
+	                                    <md-list-item ng-hide="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.availableFieldSet.length > 0" ng-click=""> Fields not available ! </md-list-item>
+	                                    <md-list-item ng-click="" ng-repeat="field in modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.availableFieldSet">
+	                                        <div class="md-list-item-text" layout="column">
+	                                            <div class="highlighter" ng-show="dataURL.isUiActive" ng-style="getHighlighterStyle()"></div>
+	                                            <h5 class=" ng-binding" style="padding-left: 15px; font: normal normal 600 12px BizvizFont; letter-spacing: 0px; opacity: 1;"> {{ field.name }} </h5>
+	                                        </div>
+	                                        <md-button class="md-secondary md-icon-button">
+	                                            <md-icon ng-click="removeFromMeargedFieldList( field );" class="nt-close-icon cursor-hand" mat-tooltip="Remove">
+	                                                <!--<i class="material-icons cursor-hand" mat-tooltip="Remove">close</i>-->
+	                                            </md-icon>
+	                                        </md-button>
+	                                        <md-divider></md-divider>
+	                                    </md-list-item>
+	                                </md-list>
+	                            </md-content>
+
+	                            <!--  list items -->
+	                        </div>
+	                    </md-content>
+	                </div>
+	            </md-tab>
+	            <!-- Tab2 -->
+	            <md-tab label="Calculated Fields">
+	                <md-content class="md-padding setBackground">
+	                    <!-- Field Tab -->
+	                    <div id="fieldSetTabDivision">
+	                        <!--  list items -->
+	                        <md-content class="setBackground">
+	                            <md-list flex>
+	                                <md-list-item>
+	                                    <div class="md-list-item-text connTextStyle" layout="column">
+	                                        <h5>Calculated fields</h5>
+	                                    </div>
+	                                    <md-button class="md-secondary md-icon-button">
+	                                        <md-icon ng-click="createNewCalculatedField();" class="nt-plus-icon cursor-hand" mat-tooltip="Add">
+	                                            <!--<img alt="Add" src="./resources/images/svg/additional/Add.svg" mat-tooltip="Add" />-->
+	                                            <!--<i class="material-icons cursor-hand" mat-tooltip="Add">add</i>-->
+	                                        </md-icon>
+	                                    </md-button>
+	                                    <md-divider></md-divider>
+	                                </md-list-item>
+	                                <!--  sub list  -->
+	                                <md-list-item ng-click="" ng-repeat="field in modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.calculatedFieldList">
+	                                    <div class="md-list-item-text" layout="column">
+	                                        <div class="highlighter" ng-show="dataURL.isUiActive" ng-style="getHighlighterStyle()"></div>
+	                                        <h5 class=" ng-binding" style="padding-left: 15px;"> {{ field.name }} </h5>
+	                                    </div>
+	                                    <md-button class="md-secondary md-icon-button">
+	                                        <md-icon ng-click="editCalculatedField(field);" class="nt-edit-icon cursor-hand" mat-tooltip="Edit">
+	                                            <!--<i class="material-icons cursor-hand" mat-tooltip="Edit">edit</i>-->
+	                                        </md-icon>
+	                                    </md-button>
+	                                    <md-button class="md-secondary md-icon-button">
+	                                        <md-icon ng-click="delCalculatedField(field,$event);" class="nt-delete-icon cursor-hand" mat-tooltip="Remove">
+	                                            <!--<i class="material-icons cursor-hand" mat-tooltip="Remove">delete</i>-->
+	                                        </md-icon>
+	                                    </md-button>
+	                                    <md-divider></md-divider>
+	                                </md-list-item>
+	                                <!--  sub list -->
+	                            </md-list>
+	                        </md-content>
+	                    </div>
+	                </md-content>
+	            </md-tab>
+	        </md-tabs>
+	    </md-content>
+	</div>
+		</div>
+	</div>
+	<!-- MODAL DIALOG -->
+	<div id="renameDerivedFields" class="modal fade" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.renameDerivedFields == true">
+		<div class="col-sm-2 col-md-4 col-lg-4"></div>
+		<div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+			<div class="modal-content container-border">
+				<md-toolbar>
+			      <div class="md-toolbar-tools">
+			        <h2>Rename</h2>
+			        <span flex></span>
+			        <md-button class="md-icon-button" ng-click="setModelWatcherStatus('renameDerivedFields', false); cancel()">
+			          <md-icon href="javascript: void( 0 )" data-dismiss="modal"  aria-label="Close dialog"><i class="material-icons cursor-hand">close</i></md-icon>
+			        </md-button>
+			      </div>
+			    </md-toolbar>
+				<div class="modal-Body">
+					<div class="row-height"></div>
+					<div class="row row-height" >
+						<div class="col-sm-12 col-md-12 col-lg-12">
+							<input type="text" 
+								class="renameDashWork" 
+								maxLength="50" 
+								id="fieldName" 
+								ng-keypress="restrictInput( $event, 'fieldName' )"
+								ng-model="dFieldName" />
+						</div>
+					</div>
+					<div class="row-height"></div>
+				</div>
+					
+					<md-dialog-actions layout="row">
+						<span flex="" class="flex"></span>
+						<md-button class="md-raised md-primary" ng-click="setModelWatcherStatus('renameDerivedFields', false); renameField()">Rename</md-button>
+						<md-button data-dismiss="modal" class="md-raised md-warn" ng-click="setModelWatcherStatus('renameDerivedFields', false);">Cancel</md-button>
+					</md-dialog-actions>
+			</div>
+		</div>
+	</div>
+</div>

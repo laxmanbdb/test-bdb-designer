@@ -1,0 +1,1302 @@
+{
+	"wGroups":[
+		{
+			"gId":"CHARTS",
+			"gClass":"ColumnStackChart",
+			"gIcon":"./resources/images/svg/components/Charts.svg",
+			"disabled":false,
+			"gName":"Charts",
+			"gItems":[
+				{
+					"name":"Area",
+					"subClass":"",
+					"type":"chart",
+					"class":"AreaChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/AreaChart.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Bar",
+					"subClass":"",
+					"type":"chart",
+					"class":"BarChart",
+					"show":true,
+					"isDSSupported":true,
+					"datastore":"Data Store is supported",
+					"icon":"./resources/images/svg/components/BarChart.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},			
+				{
+					"name":"Bubble",
+					"subClass":"",
+					"type":"chart",
+					"class":"BubbleChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Bubble.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Circumplex",
+					"subClass":"",
+					"type":"chart",
+					"class":"CircumplexChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Circumplex.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"2",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Column",
+					"subClass":"",
+					"type":"chart",
+					"class":"ColumnStackChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Column.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Funnel",
+					"subClass":"",
+					"type":"chart",
+					"class":"SimpleFunnelChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/SimpleFunnelChart.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Histogram",
+					"subClass":"",
+					"type":"chart",
+					"class":"HistogramChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Histogram.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1 numeric field",
+							"Series":"1 numeric field"
+						}
+					}
+				},
+				{
+					"name":"Inverted Funnel",
+					"subClass":"",
+					"type":"chart",
+					"class":"InvertedFunnelChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/InvertedFunnel.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"KPI Tile",
+					"subClass":"",
+					"type":"chart",
+					"class":"KPITile",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/KPI Tile.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"2"
+						}
+					}
+				},
+				{
+					"name":"Line",
+					"subClass":"",
+					"type":"chart",
+					"class":"LineChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Line.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Map",
+					"subClass":"",
+					"type":"chart",
+					"class":"WorldMapChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/WorldMap.svg",
+					"info":{
+						"enable":"false",
+						"req":{
+							"Category":"1",
+							"Series":"1"
+						}
+					}
+				},
+				{
+					"name":"Mito Plot",
+					"subClass":"",
+					"type":"chart",
+					"class":"MitoPlotChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/MitoPlot.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Mixed",
+					"subClass":"",
+					"type":"chart",
+					"class":"MixedChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Mixed.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Pie",
+					"subClass":"",
+					"type":"chart",
+					"class":"PieChart",
+					"show":true,
+					"isDSSupported":true,
+					"datastore":"Data Store is supported",
+					"icon":"./resources/images/svg/components/Pie.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1"
+						}
+					}
+				},
+				{
+					"name":"Project Timeline",
+					"subClass":"",
+					"type":"chart",
+					"class":"ProjectTimelineChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/ProjectTimeline.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Date":"2"
+						}
+					}
+				},
+				{
+					"name":"Pyramid",
+					"subClass":"",
+					"type":"chart",
+					"class":"PyramidChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Pyramid.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Scatter Plot",
+					"subClass":"",
+					"type":"chart",
+					"class":"ScatteredPlotChart",
+					"show":true,
+					"isDSSupported":true,
+					"datastore":"Data Store is supported",
+					"icon":"./resources/images/svg/components/ScatteredPlot.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1 or more numeric field",
+							"Series":"1 or more numeric field"
+						}
+					}
+				},
+				{
+					"name":"Spark Line",
+					"subClass":"",
+					"type":"chart",
+					"class":"SparkLineChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Sparkline.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Spider",
+					"subClass":"",
+					"type":"chart",
+					"class":"SpiderChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Spider.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Waterfall",
+					"subClass":"",
+					"type":"chart",
+					"class":"WaterfallChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Waterfall.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1"
+						}
+					}
+				}
+			]
+		},
+		{
+			"gId":"GRIDS",
+			"gClass":"ScoreCard",
+			"gIcon":"./resources/images/svg/components/Grid.svg",
+			"disabled":false,
+			"gName":"Grids",
+			"gItems":[
+				{
+					"name":"Data Grid",
+					"subClass":"",
+					"type":"datagrid",
+					"class":"SimpleDataGrid",
+					"show":true,
+					"isDSSupported":true,
+					"datastore":"Data Store is supported",
+					"icon":"./resources/images/svg/components/SimpleDataGrid.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Field":"any number of fields"
+						}
+					}
+				},
+				{
+					"name":"Paging Grid",
+					"subClass":"",
+					"type":"datagrid",
+					"class":"PagingDataGrid",
+					"show":true,
+					"isDSSupported":true,
+					"datastore":"Data Store is supported",
+					"icon":"./resources/images/svg/components/PagingGrid.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Field":"any number of fields"
+						}
+					}
+				},
+				{
+					"name":"Data Sheet",
+					"subClass":"",
+					"type":"datagrid",
+					"class":"JExcelDataGrid",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/DataSheet.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Field":"any number of fields"
+						}
+					}
+				},
+				{
+					"name":"Scorecard",
+					"subClass":"",
+					"type":"datagrid",
+					"class":"ScoreCard",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Score_Card.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Field":"any number of fields"
+						}
+					}
+				},
+				{
+					"name":"Pivot Grid",
+					"subClass":"",
+					"type":"datagrid",
+					"class":"DynamicDataGrid",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/DynamicDataGrid.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Field":"any number of fields"
+						}
+					}
+				}
+			]
+		},
+		{
+			"gId":"FILTERS",
+			"gClass":"CheckboxFilter",
+			"gIcon":"./resources/images/svg/components/Filter.svg",
+			"disabled":false,
+			"gName":"Filters",
+			"gItems":[
+				{
+					"name":"Checkbox",
+					"subClass":"",
+					"type":"filter",
+					"class":"CheckboxFilter",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Checkbox.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Combobox",
+					"subClass":"",
+					"type":"filter",
+					"class":"ComboFilter",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Combo.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Field":"1 or 2"
+						}
+					}
+				},
+				{
+					"name":"Hierarchical Combobox",
+					"subClass":"",
+					"type":"filter",
+					"class":"HierarchicalCombo",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Hierarchical.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Field":"any number of fields"
+						}
+					}
+				},
+				{
+					"name":"List",
+					"subClass":"",
+					"type":"filter",
+					"class":"ListFilter",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/List.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Field":"1 or 2"
+						}
+					}
+				},
+				{
+					"name":"Radio Button",
+					"subClass":"",
+					"type":"filter",
+					"class":"RadioFilter",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Radio.svg",
+					"info":{
+						"enable":"false"
+					}
+				}
+			]
+		},
+		{
+			"gId":"ADV_CHARTS",
+			"gClass":"TimelineChart",
+			"gIcon":"./resources/images/svg/components/Advance.svg",
+			"disabled":false,
+			"gName":"Advanced",
+			"gItems":[
+			{
+		          "name": "Benchmark Analysis",
+		          "subClass": "",
+		          "type": "chart",
+		          "class": "BenchmarkAnalysisChart",
+		          "show": true,
+		          "isDSSupported": false,
+		          "datastore": "Data Store is not supported",
+		          "icon": "./resources/images/svg/components/BenchmarkAnalysis.svg",
+		          "info": {
+		            "enable": "true",
+		            "req": {
+		              "Category": "1",
+		              "Series": "4"
+		            }
+		          }
+		        },	
+				{
+					"name":"Box Plot",
+					"subClass":"",
+					"type":"chart",
+					"class":"BoxPlotChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/BoxPlot.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"5 or more"
+						}
+					}
+				},
+				{
+					"name":"Candle Stick",
+					"subClass":"",
+					"type":"chart",
+					"class":"CandleStickChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/CandleStick.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"4"
+						}
+					}
+				},
+				{
+					"name":"Chevron",
+					"subClass":"",
+					"type":"chart",
+					"class":"ChevronChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Chevron.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1",
+							"Date": "2"
+						}
+					}
+				},
+				{
+					"name":"Data Search",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"DataSearch",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Data_search.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Decision Tree",
+					"subClass":"",
+					"type":"chart",
+					"class":"DecisionTreeChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/DecisionTree.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Group Bar",
+					"subClass":"",
+					"type":"chart",
+					"class":"GroupBarChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/GroupBar.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1 or 2",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name": "GroupColumn",
+					"subClass": "",
+					"type": "chart",
+					"class": "GroupColumnChart",
+					"show": true,
+					"isDSSupported": false,
+					"datastore":"Data Store is not supported",
+					"icon": "./resources/images/svg/components/GroupColumnChart.svg"
+				},
+				{
+					"name":"Heat Map",
+					"subClass":"",
+					"type":"chart",
+					"class":"HeatMapChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/HeatMap.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name": "Sankey",
+					"subClass": "",
+					"type": "chart",
+					"class": "SankeyChart",
+					"show": true,
+					"isDSSupported": false,
+					"datastore":"Data Store is not supported",
+					"icon": "./resources/images/svg/components/SankeyChart.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Text Analyzer",
+					"subClass":"",
+					"type":"chart",
+					"class":"SentimentPlotChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/SentimentPlot.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Time Series",
+					"subClass":"",
+					"type":"chart",
+					"class":"TimelineChart",
+					"show":true,
+					"isDSSupported":true,
+					"datastore":"Data Store is supported",
+					"icon":"./resources/images/svg/components/Timeline.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Widget Chart",
+					"subClass":"",
+					"type":"chart",
+					"class":"WidgetChart",
+					"show":false,
+					"isDSSupported":true,
+					"datastore":"Data Store is supported",
+					"icon":"./resources/images/svg/components/CustomChart.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Decomposition",
+					"subClass":"",
+					"type":"chart",
+					"class":"DecompositionChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/D3DecompositionTree.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Series":"1",
+							"Category":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Knowledge Graph",
+					"subClass":"",
+					"type":"chart",
+					"class":"KnowledgeGraphChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/D3NetworkGraph.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Series":"1",
+							"Category":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Tree Map",
+					"subClass":"",
+					"type":"chart",
+					"class":"TreeMapChart",
+					"show":true,
+					"isDSSupported":true,
+					"datastore":"Data Store is supported",
+					"icon":"./resources/images/svg/components/TreeMap.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1 or more",
+							"Series":"1 or more"
+						}
+					}
+				},
+				{
+					"name":"Trellis",
+					"subClass":"",
+					"type":"chart",
+					"class":"TrellisChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Trellis.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Word Cloud",
+					"subClass":"",
+					"type":"chart",
+					"class":"WordCloudChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/WordCloud.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"2"
+						}
+					}
+				},
+				{
+					"name":"New Word Cloud",
+					"subClass":"",
+					"type":"chart",
+					"class":"NewWordCloudChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/WordCloud.svg",
+					"info":{
+						"enable":"true",
+						"req":{
+							"Category":"1",
+							"Series":"2"
+						}
+					}
+				}
+			]
+		},
+		{
+			"gId":"OTHER",
+			"gClass":"DatePicker",
+			"gIcon":"./resources/images/svg/components/OtherCharts.svg",
+			"disabled":false,
+			"gName":"Other",
+			"gItems":[
+				{
+					"name":"Box",
+					"subClass":"",
+					"type":"container",
+					"class":"Rectangle",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Box.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Bullet",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"Bullet",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Bullets.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Date Picker",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"DatePicker",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Date_Picker.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Export",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"ExportToPPTButton",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Export.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Filter Saver",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"FilterSaver",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Filter_saver.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Gauge",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"Gauge",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/_Guage.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Graphics",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"SVGShape",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Graphics.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Guided Tour",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"GuidedTour",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/GuidedTour.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"H-Slider",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"HSlider",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/H_slider.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Image",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"ImageComponent",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Image.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Info Button",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"InfoButton",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Info_Button.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Input Box",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"InputBox",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Input_box.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Label",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"Label",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/_Label.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Legend",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"Legend",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/_Legend.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"FilterChips",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"FilterChips",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/FilterchipsNew.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Progress Pie",
+					"subClass":"",
+					"type":"chart",
+					"class":"ProgressChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/ProgressPie.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Semi Gauge",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"SemiGauge",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Semi_Guage.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Stepper",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"NumericStepper",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Numeric_Stepper.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"SVG Image",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"SVGImage",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/SVG.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Text Box",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"TextBox",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Text_box.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Trend",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"Trend",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/_Trend.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Url Button",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"UrlButton",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/URL_Button.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Button",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"InputButton",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/InputButton.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"Tab",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"TabComponent",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Tab.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"V-Slider",
+					"subClass":"",
+					"type":"singleValuedComponent",
+					"class":"VSlider",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/V_Slider.svg",
+					"info":{
+						"enable":"false"
+					}
+				}
+			]
+		},
+		{
+			"gId":"CUSTOM",
+			"gClass":"CustomChart",
+			"gIcon":"./resources/images/svg/components/Custom.svg",
+			"disabled":false,
+			"gName":"Custom",
+			"gItems":[
+				{
+					"name":"Custom",
+					"subClass":"",
+					"type":"chart",
+					"class":"CustomChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/Custom_Charts.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"D3 Bar",
+					"subClass":"CustomD3BarChart",
+					"type":"chart",
+					"class":"CustomChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/D3Bar.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"D3 Decomposition Tree",
+					"subClass":"CustomD3DecompositionTree",
+					"type":"chart",
+					"class":"CustomChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/D3DecompositionTree.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"D3 Network",
+					"subClass":"CustomD3NetworkGraph",
+					"type":"chart",
+					"class":"CustomChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/D3NetworkGraph.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"D3 Packed Bubble",
+					"subClass":"CustomD3PackedBubbleChart",
+					"type":"chart",
+					"class":"CustomChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/CustomD3PackedBubbleChart.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"D3 Tree Map",
+					"subClass":"CustomD3TreeMapChart",
+					"type":"chart",
+					"class":"CustomChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/D3TreeMap.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"D3 Violin",
+					"subClass":"CustomD3ViolinChart",
+					"type":"chart",
+					"class":"CustomChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/CustomD3ViolinChart.svg",
+					"info":{
+						"enable":"false"
+					}
+				},{
+					"name":"D3 Multilevel Pie",
+					"subClass":"CustomD3MultilevelPie",
+					"type":"chart",
+					"class":"CustomChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/D3MultilevelPie.svg",
+					"info":{
+						"enable":"false"
+					}
+				},{
+					"name":"D3 Word Cloud",
+					"subClass":"CustomD3WordCloudChart",
+					"type":"chart",
+					"class":"CustomChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/CustomD3WordCloudChart.svg",
+					"info":{
+						"enable":"false"
+					}
+				},
+				{
+					"name":"D3 Line",
+					"subClass":"CustomD3LineChart",
+					"type":"chart",
+					"class":"CustomChart",
+					"show":true,
+					"isDSSupported":false,
+					"datastore":"Data Store is not supported",
+					"icon":"./resources/images/svg/components/CustomD3LineChart.svg",
+					"info":{
+						"enable":"false"
+					}
+				}
+			]
+		}
+	]
+}

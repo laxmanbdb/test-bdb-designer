@@ -1,0 +1,259 @@
+{
+	"ProjectTimelineChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "project_timeline_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "projtimeline",
+				"showLocked": "false",
+				"objectName": "ProjectTimeline_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "350",
+				"percentwidth": "900",
+				"width": "1302",
+				"height": "549",
+				"x": "0",
+				"y": "0",
+				"initialVisibility": "true",
+				"objectID": "card_910188d1-f659-4eb1-84bd-49f6b5fc8937",
+				"Chart": {
+					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "ProjectTimeline",
+					"showGradient": "true",
+					"bgGradients": "#ffffff",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+					"exportToExcel": "true",
+					"exportToCSV": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"exportType":"screenshot",
+					"showScreenShotButton": "true",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showTooltip": "true",
+					"showMaximizeButton": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"showExcelDownload": "true",
+					"showSubTitle": "true",
+					"showTitle": "true",
+					"GradientColor": "#FFFFFF,#FFFFFF",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#EFF0F0",
+					"borderRadius": "0",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"markerColor": "#F5F5F5",
+					"markerTransparency": "0.3",
+					"showMarkerLine": false,
+					"showVerticalMarkerLine": false,
+					"baseZero": "true",
+					"FixedLabel": false,
+					"Formater": "Currency",
+					"Unit": "USD",
+					"SignPosition": "prefix",
+					"Precision": "0",
+					"Globalkey": "",
+					"controlledTooltip": true,
+					"sourceDateFormat": "mm/dd/yyyy",
+					"todayMarkerColor": "#124CA3",
+					"todayMarkerWidth": "2",
+					"milestoneFontColor": "#494950",
+					"milestoneFontSize": 12,
+					"milestoneFontWeight": "600",
+					"milestoneFontFamily": "BizvizFont",
+					"milestoneFontStyle": "normal",
+					"milestoneTextDecoration": "none",
+					"taskFontColor": "#494950",
+					"taskFontSize": 12,
+					"taskFontWeight": "600",
+					"taskFontFamily": "BizvizFont",
+					"taskFontStyle": "normal",
+					"taskTextDecoration": "none",
+					"showMajorLabels": "true",
+					"showMinorLabels": "true",
+					"majorLabelColor": "#494950",
+					"minorLabelColor": "#494950",
+					"minorLabelBorderColor": "#f5f5f5",
+					"axisOrientation": "bottom",
+					"taskItemOverflow": "true",
+					"milestoneBorderWidth": "1",
+					"axisLabelFontSize": 14,
+					"axisLabelFontWeight": "normal",
+					"axisLabelFontStyle": "normal",
+					"axisLabelFontFamily": "BizvizFont",
+					"axisLabelTextDecoration": "none",
+ 					"updatedDesign": "true",
+					"Title": {
+						"FontWeight": "600",
+						"Description": "Tasks and milestones for a project",
+						"FontSize": "17",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"showDatasetDescription": "true",
+						"TitleBarHeight": "48"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "Sub Heading",
+						"showSubTitle": "false",
+						"FontSize": "15",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal"
+					},
+					"TaskDetails": {
+						"TDisplayName": "Commitment Setting,Planning and Readiness,Execute/Asses and Adjust,Quiet Period",
+						"TShape": "rectangle,rectangle,rectangle,rectangle",
+						"TColor": "#00B4FF,#00B4FF,#00B4FF,#00B4FF"
+					},
+					"MileStoneDetails": {
+						"MSDisplayName": "Q1 Review,Q2 Review,Q3 Review,Milestone",
+						"MSShape": "flag,flag,flag,triangle",
+						"MSColor": "#124CA3,#124CA3,#124CA3,#124CA3",
+						"MSBelowPositioned": "false,false,false,true"
+					}
+				},
+				"clickCallBack": ""
+			}
+		},
+		"Fields": [{
+			"DisplayName": "ProjectPhase",
+			"Type": "Category",
+			"visible": "true",
+			"Color": "#ff1a1a",
+			"PlotTransparency": "0.8",
+			"Name": "ProjPhase"
+		}, {
+			"DisplayName": "StartDate",
+			"Type": "startvalue",
+			"visible": "true",
+			"Color": "#29a329",
+			"PlotTransparency": "0.8",
+			"Name": "StartDate"
+		}, {
+			"DisplayName": "EndDate",
+			"Type": "endvalue",
+			"visible": "true",
+			"Color": "#ff3300",
+			"PlotTransparency": "0.8",
+			"Name": "EndDate"
+		}, {
+			"DisplayName": "Shape",
+			"Type": "Marker",
+			"Name": "Shape",
+			"PlotType": "triangle",
+			"visible": "true",
+			"Color": "#CCCCCC",
+			"PlotTransparency": "0.8",
+			"PlotRadius": "10"
+		}],
+		"Data": [{
+			"ProjPhase": "Commitment Setting",
+			"StartDate": "1/1/2016",
+			"EndDate": "2/28/2016",
+			"Shape": "Phase"
+		}, {
+			"ProjPhase": "Planning and Readiness",
+			"StartDate": "2/15/2016",
+			"EndDate": "4/25/2016",
+			"Shape": "Phase"
+		}, {
+			"ProjPhase": "Execute/Asses and Adjust",
+			"StartDate": "4/1/2016",
+			"EndDate": "10/15/2016",
+			"Shape": "Phase"
+		}, {
+			"ProjPhase": "Quiet Period",
+			"StartDate": "10/15/2016",
+			"EndDate": "12/29/2016",
+			"Shape": "Phase"
+		}, {
+			"ProjPhase": "Quota Sign-off",
+			"StartDate": "01/15/2016",
+			"EndDate": "",
+			"Shape": "Triangle"
+		}, {
+			"ProjPhase": "Account Exec Presentations",
+			"StartDate": "03/20/2016",
+			"EndDate": "",
+			"Shape": "Triangle"
+		}, {
+			"ProjPhase": "Fast Start Readiness",
+			"StartDate": "04/25/2016",
+			"EndDate": "",
+			"Shape": "Triangle"
+		}, {
+			"ProjPhase": "Compete Readiness",
+			"StartDate": "05/25/2016",
+			"EndDate": "",
+			"Shape": "Triangle"
+		}, {
+			"ProjPhase": "H1 Commitment Check",
+			"StartDate": "07/05/2016",
+			"EndDate": "",
+			"Shape": "Triangle"
+		}, {
+			"ProjPhase": "Account Exec Get Healthy Plans",
+			"StartDate": "09/15/2016",
+			"EndDate": "",
+			"Shape": "Triangle"
+		}, {
+			"ProjPhase": "Q5 Planning Kickoff",
+			"StartDate": "11/1/2016",
+			"EndDate": "",
+			"Shape": "Triangle"
+		}, {
+			"ProjPhase": "Q1 Review",
+			"StartDate": "4/15/2016",
+			"EndDate": "",
+			"Shape": "Flag"
+		}, {
+			"ProjPhase": "Q2 Review",
+			"StartDate": "7/15/2016",
+			"EndDate": "",
+			"Shape": "Flag"
+		}, {
+			"ProjPhase": "Q3 Review",
+			"StartDate": "10/15/2016",
+			"EndDate": "",
+			"Shape": "Flag"
+		}, {
+			"ProjPhase": "Fiscal Close",
+			"StartDate": "12/31/2016",
+			"EndDate": "",
+			"Shape": "Flag"
+		}]
+	}
+}

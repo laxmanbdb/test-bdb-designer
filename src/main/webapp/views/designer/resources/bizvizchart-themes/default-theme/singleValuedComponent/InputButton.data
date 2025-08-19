@@ -1,0 +1,54 @@
+{
+	"InputButton": {
+		"Properties": {
+			"Object": {
+				"componentType": "input_button",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "Button",
+				"y": "1097",
+				"objectType": "InputButton",
+				"subElement": "InputButton",
+				"globalVariableKeyAttribute": "globalkey",
+				"height": "44",
+				"showLocked": "false",
+				"objectName": "button_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"width": "125",
+				"objectID": "Obj.B84FD0C3NEA44N1709N980ENE6E87792A37C",
+				"x": "668",
+				"initialVisibility": "true",
+				"InputButton": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"encode": "true",
+					"chromeColor": "#EFF0F0",
+					"fontColor": "#000000",
+					"hoverColor": "#cccccc",
+					"fontWeight": "normal",
+					"fontStyle": "normal",
+					"openDoc": "true",
+					"fontFamily": "BizvizFont",
+					"fontSize": "16",
+					"label": "New Button",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"buttonCategory": "Primary",
+					"useOutlinedButtons" : false,
+					"useCustomColor": false,
+					"borderRadius" : "5"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"Legend": {
+		"Properties": {
+			"Object": {
+				"componentType": "legend",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "legend",
+				"showLocked": "false",
+				"subElement": "Legend",
+				"globalVariableKeyAttribute": "globalkey",
+				"y": "894",
+				"objectType": "legend",
+				"width": "125",
+				"initialVisibility": "true",
+				"height": "85",
+				"objectName": "legend",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "Obj.2FD54250N12FAN78FDN9ED4NE6EAD191DE7",
+				"x": "125",
+				"Legend": {
+					"bgAlpha": "1",
+					"bgGradients": "#ffffff",
+					"bgGradientRotation": "90",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"borderAlpha": "",
+					"fontFamily": "Roboto",
+					"fontSize": "12",
+					"fontColor": "#000000",
+					"fontStyle": "normal",
+					"fontWeight": "normal",
+					"textDecoration": "none",
+					"legendDirection": "vertical",
+					"legendTextAlign": "left",
+					"legendCheckbox": "false",
+					"rowpadding" : "4",
+					"columnpadding" : "5",
+					"legendSymbol": "similartoseries",
+					"associatedChartId": "",
+					"legendWidth": "10",
+					"legendHeight": "10",
+					"legendColors": "#f89406,#86dff9,#006488",
+					"legendNames": "Series1,Series2,Series3",
+					"legendShapes": "cube,triangle,point"
+				}
+			}
+		}
+	}
+}

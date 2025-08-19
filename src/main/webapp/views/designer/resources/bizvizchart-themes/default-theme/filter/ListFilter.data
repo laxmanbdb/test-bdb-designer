@@ -1,0 +1,128 @@
+{
+	"ListFilter": {
+		"Properties": {
+			"Object": {
+				"componentType": "list_filter",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "list",
+				"height": "195",
+				"width": "125",
+				"objectID": "Obj.3B47492CN81F6N27B3N15F5NA4A3EB749E2A",
+				"subElement": "Filter",
+				"globalVariableKeyAttribute": "Globalkey",
+				"initialVisibility": "true",
+				"percentheight": "25",
+				"y": "46",
+				"x": "64",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectName": "Check_1",
+				"showLocked": "false",
+				"percentwidth": "130",
+				"objectType": "filter",
+				"showSearch":"true",
+				"Filter": {
+					"SelectedIndex": "0",
+					"enableGVAutoUpdate": "true",
+					"notifyGVAutoUpdate": "false",
+					"publicFilter" : "false",
+					"id": "filter3B47492CN81F6N27B3N15F5NA4A3EB749E2A",
+					"Type": "list",
+					"FontWeight": "normal",
+					"checkBoxSelected": "false",
+					"fieldName": "Value",
+					"FontSize": "15",
+					"showExpandButton": "true",
+					"controlledSelection": "false",
+					"layout": "horizontal",
+					"selectionColor": "#f5f5f5",
+					"selectionFontColor": "#006488",
+					"chromeColor": "#ffffff",
+					"chromeColorOpacity": "1",
+					"ListBorderColor":"#c2c2c2", 
+					"enableBorder":"true",
+					"Name": "filter",
+					"FontStyle": "normal",
+					"FontColor": "#000000",
+					"FontFamily": "BizvizFont",
+					"backgroundColor": "#ffffff",
+					"bgAlpha": "1",
+					"direction": "horizontal",
+					"rollOverColor": "#efefef",
+					"hierarchyLevel": "Single",
+					"textDecoration": "normal",
+					"allowMultipleSelection": false,
+					"enabledualselectionlist": false,
+					"menupanelRowHeight":"32",
+					"actionBarHeight":"25",
+					"menupanelFontColor":"#333333",
+					"Globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"Values": [],
+					"Title": {
+						"FontWeight": "normal",
+						"Description": "Year",
+						"FontSize": "12",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#808080",
+						"FontStyle": "normal",
+						"showTitle": "false",
+						"showGradient": "false",
+						"GradientColor": "#F5F5F5,#F5F5F5",
+						"TitleBarHeight": "25"
+					}
+				}
+			}
+		},
+		"Fields": [{
+			"DisplayField": "Year",
+			"Value": "Sales",
+			"additionalFields": "Year,Sales,QP"
+		}],
+		"Data": [{
+				"Year": "2005",
+				"Sales": "17.1",
+				"QP": "32.54",
+				"Expense": "17.1"
+			},
+			{
+				"Year": "2006",
+				"Sales": "16.4",
+				"QP": "22.76",
+				"Expense": "16.4"
+			},
+			{
+				"Year": "2007",
+				"Sales": "50.32",
+				"QP": "84.654",
+				"Expense": "14.32"
+			},
+			{
+				"Year": "2008",
+				"Sales": "13.24",
+				"QP": "24.9",
+				"Expense": "13.24"
+			},
+			{
+				"Year": "2009",
+				"Sales": "22.24",
+				"QP": "26.9",
+				"Expense": "17.24"
+			}
+		],
+		"autoAddScriptsFromDesigner": "sdk.autoReload();"
+	}
+}

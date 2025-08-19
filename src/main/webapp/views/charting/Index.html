@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+	<TITLE>HTML5 Dashboard API: READ XML AND DRAW DASHBOARD</TITLE>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<link href="src/bizviz.charting/components/resources/css/charting.min.css" rel="stylesheet" type="text/css" />
+	<link href="src/bizviz.charting/components/resources/css/listswap.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" type="text/css" />
+	<link rel="stylesheet" href="src/bizviz.charting/components/resources/css/easyui.min.css" type="text/css" />
+	<link rel="stylesheet" href="src/bizviz.charting/components/resources/css/icon.min.css" type="text/css" />
+	<link rel="stylesheet" href="src/bizviz.charting/components/resources/css/bdbizviz-font-styles.min.css" type="text/css">
+
+	<BODY oncontextmenu="return false">
+		<script type="text/javascript" src="src/bizviz.charting/components/resources/js/jquery-1.10.2.js"></script>
+		<script type="text/javascript" src="src/bizviz.charting/components/resources/js/jquery-ui-1.10.4.custom.min.js"></script>
+		<script type="text/javascript" src="src/bizviz.charting/components/resources/js/jquery.ui.treemap.js"></script>
+		<!--  We are using jquery 1.10.2 in Portal -->
+		<script src="src/url.data"></script>
+		<script src="src/bizviz.charting/Widget.js"></script>
+		<script src="src/bizviz.charting/components/buttons/ExportToPPTButton.js"></script>
+		<script src="src/bizviz.charting/components/buttons/FilterSaver.js"></script>
+		<script src="src/bizviz.charting/components/buttons/ExportPlugin.js"></script>
+		<script src="src/bizviz.charting/components/Chart.js"></script>
+		<script src="src/bizviz.charting/components/charts/AreaChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/BarChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/BoxPlotChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/BubbleChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/CandleStickChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/CandleStickChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/CircumplexChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/ColumnStackChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/CustomChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/DecisionTreeChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/HeatMapChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/KPITile.js"></script>
+		<script src="src/bizviz.charting/components/charts/LineChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/MixedChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/PieChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/ProgressChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/RoadMapChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/ScatteredPlotChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/SentimentPlotChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/SpiderChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/SparkLineChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/TimelineChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/TimeAreaChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/TimeColumnStackChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/MitoPlotChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/TreeMapChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/WordCloudChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/SimpleFunnelChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/InvertedFunnelChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/PyramidChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/TrellisChart.js"></script>
+		<script src="src/bizviz.charting/components/container/Rectangle.js"></script>
+		<script src="src/bizviz.charting/components/container/Tabs.js"></script>
+		<script src="src/bizviz.charting/components/DataGrid.js"></script>
+		<script src="src/bizviz.charting/components/datagrids/DynamicDataGrid.js"></script>
+		<script src="src/bizviz.charting/components/datagrids/SimpleDataGrid.js"></script>
+		<script src="src/bizviz.charting/components/datagrids/PagingDataGrid.js"></script>
+		<script src="src/bizviz.charting/components/datagrids/TreeGrid.js"></script>
+		<script src="src/bizviz.charting/components/datagrids/JExcelDataGrid.js"></script>
+		<script src="src/bizviz.charting/components/Filter.js"></script>
+		<script src="src/bizviz.charting/components/filters/CheckboxFilter.js"></script>
+		<script src="src/bizviz.charting/components/filters/ComboFilter.js"></script>
+		<script src="src/bizviz.charting/components/filters/HierarchicalCombo.js"></script>
+		<script src="src/bizviz.charting/components/filters/ListFilter.js"></script>
+		<script src="src/bizviz.charting/components/filters/MultiSelectComboFilter.js"></script>
+		<script src="src/bizviz.charting/components/filters/RadioFilter.js"></script>
+		<script src="src/bizviz.charting/components/maps/WorldMapChart.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/Bullet.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/DatePicker.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/Gauge.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/GuidedTour.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/HSlider.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/ImageComponent.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/InfoButton.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/Label.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/NumericStepper.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/RefreshButton.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/SemiGauge.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/TextBox.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/Trend.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/UrlButton.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/VSlider.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/FilterChips.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/CheckList.js"></script>
+		<script src="src/bizviz.charting/components/resources/js/xml2json.js"></script>
+		<script src="src/bizviz.charting/components/resources/js/jquery.easyui.min.js"></script>
+		<script src="src/bizviz.charting/components/resources/js/jQuery.blockUI.min.js"></script>
+		<script src="src/bizviz.charting/components/resources/js/jquery.ui.treemap.js"></script>
+		<script src="src/bizviz.framework/Parser.js"></script>
+		<script src="src/bizviz.framework/DataManager.js"></script>
+		<script src="src/bizviz.framework/ServiceManager.js"></script>
+		<script src="src/bizviz.framework/GlobalVariableController.js"></script>
+		<script src="src/bizviz.framework/RendererController.js"></script>
+		<script src="../designer/build-config/build/appSettings.js?v=3.7.0.build003"></script>
+		<script src="src/bizviz.framework/FrameworkUtil.js"></script>
+		<script src="src/bizviz.framework/FrameworkController.js"></script>
+		<script src="src/bizviz.framework/FrameworkComponents.js"></script>
+		<!-- UserScriptExecuter -->
+		<script src="src/bdbizviz.ext/UserScriptExecuter.js"></script>
+		<script src="src/bdbizviz.ext/BizVizDesignUserSDK.js"></script>
+		<div id="WatermarkDiv" style="position: absolute; margin: -8px; height: 100%; width: 100%; background: url(); background-color: #f1f1f1;">
+			<div id="mainDiv" style="position: absolute; display: block; height: 100%; width: 100%; left: 0px; top: 0px;"></div>
+			<div id="toolTipDiv"></div>
+		</div> <span>Please select a niv/bvz file</span>
+		<input type="file" id="files" name="files[]" style="z-index: 100; position: absolute" size="15" />
+		<br>
+		<br>
+		<input type="hidden" id="hiddenInputField" name="" value="xml/bar.niv">
+		<script>
+		var loaderImageSrc = 'images/loading.gif';
+		var jqEasyUI = jQuery.noConflict(true);
+		$ = jqEasyUI;
+		//readXMLAndDrawDashboard();
+		var pageInPortal = undefined;
+
+		function handleFileSelect(evt) {
+			$(".draggablesParentDiv").remove();
+			var files = evt.target.files; // FileList object
+			for (var i = 0, f; f = files[i]; i++) {
+				var reader = new FileReader();
+				var content;
+				reader.onload = (function(theFile) {
+					return function(e) {
+						content = (e.target.result);
+						nivflag = true;
+						var nivContent = decrypt(content);
+						frameworkController.init(nivContent);
+					};
+				})(f);
+				reader.readAsText(f);
+			}
+		};
+
+		function reloadPage() {
+			location.reload()
+		};
+		document.getElementById('files').addEventListener('change', handleFileSelect, reloadPage, false);
+		</script>
+	</BODY>
+</HEAD>
+
+</HTML>

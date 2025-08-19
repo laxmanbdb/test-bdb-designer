@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: #7c4dff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        fill: #7c4dff;
+      }
+
+      .cls-4 {
+        stroke: #d3d3d3;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Group_3122">
+        <g id="Rectangle_302">
+          <rect class="cls-2" width="50" height="50" rx="6" ry="6"/>
+          <rect class="cls-4" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+        </g>
+        <g id="Layer_3">
+          <rect id="Rectangle_372" class="cls-3" x="13.1" y="13.3" width="25.9" height="25.9"/>
+        </g>
+        <g id="Layer_4">
+          <rect id="Rectangle_373" class="cls-1" x="17" y="12.6" width="3.6" height="1.3"/>
+        </g>
+        <g id="Layer_4_copy">
+          <rect id="Rectangle_374" class="cls-1" x="24.3" y="12.6" width="3.6" height="1.3"/>
+        </g>
+        <g id="Layer_4_copy_2">
+          <rect id="Rectangle_375" class="cls-1" x="31.4" y="12.6" width="3.6" height="1.3"/>
+        </g>
+        <g id="Layer_4_copy_5">
+          <rect id="Rectangle_376" class="cls-1" x="16.8" y="38.5" width="3.6" height="1.3"/>
+        </g>
+        <g id="Layer_4_copy_4">
+          <rect id="Rectangle_377" class="cls-1" x="24" y="38.5" width="3.8" height="1.3"/>
+        </g>
+        <g id="Layer_4_copy_3">
+          <rect id="Rectangle_378" class="cls-1" x="31.2" y="38.5" width="3.6" height="1.3"/>
+        </g>
+        <g id="Layer_4_copy_8">
+          <rect id="Rectangle_379" class="cls-1" x="38.4" y="16.9" width="1.3" height="3.8"/>
+        </g>
+        <g id="Layer_4_copy_7">
+          <rect id="Rectangle_380" class="cls-1" x="38.4" y="24.6" width="1.3" height="3.6"/>
+        </g>
+        <g id="Layer_4_copy_6">
+          <rect id="Rectangle_381" class="cls-1" x="38.4" y="31.7" width="1.3" height="3.6"/>
+        </g>
+        <g id="Layer_4_copy_11">
+          <rect id="Rectangle_382" class="cls-1" x="12.5" y="17" width="1.3" height="3.6"/>
+        </g>
+        <g id="Layer_4_copy_10">
+          <rect id="Rectangle_383" class="cls-1" x="12.5" y="24.4" width="1.3" height="3.6"/>
+        </g>
+        <g id="Layer_4_copy_9">
+          <rect id="Rectangle_384" class="cls-1" x="12.5" y="31.5" width="1.3" height="3.6"/>
+        </g>
+        <g id="Layer_17">
+          <rect id="Rectangle_385" class="cls-5" x="11.4" y="11.4" width="4.7" height="4.7"/>
+          <rect id="Rectangle_386" class="cls-5" x="12.1" y="12" width="3.4" height="3.4"/>
+        </g>
+        <g id="Layer_17_copy">
+          <rect id="Rectangle_387" class="cls-5" x="35.8" y="11.4" width="4.7" height="4.7"/>
+          <rect id="Rectangle_388" class="cls-5" x="36.5" y="12" width="3.4" height="3.4"/>
+        </g>
+        <g id="Layer_17_copy_2">
+          <rect id="Rectangle_389" class="cls-5" x="35.7" y="36.5" width="4.7" height="4.7"/>
+          <rect id="Rectangle_390" class="cls-5" x="36.4" y="37.1" width="3.4" height="3.4"/>
+        </g>
+        <g id="Layer_17_copy_3">
+          <rect id="Rectangle_391" class="cls-5" x="11.1" y="36.3" width="4.7" height="4.7"/>
+          <rect id="Rectangle_392" class="cls-5" x="11.8" y="36.9" width="3.4" height="3.4"/>
+        </g>
+        <path id="Union_9" class="cls-5" d="M24.3,34v-11h-5v-4h14v4h-5v11h-4Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

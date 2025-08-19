@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-dasharray: 4.2 4.2 4.2 4.2;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-6, .cls-7 {
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-4, .cls-6 {
+        stroke: #7c4dff;
+      }
+
+      .cls-8 {
+        fill: #ffaf6d;
+      }
+
+      .cls-9 {
+        fill: #7c4dff;
+      }
+
+      .cls-3 {
+        stroke: #026685;
+      }
+
+      .cls-4 {
+        stroke-dasharray: 3.9 3.9 3.9 3.9;
+      }
+
+      .cls-5 {
+        stroke: #d3d3d3;
+      }
+
+      .cls-6 {
+        stroke-dasharray: 5.6 5.6 5.6 5.6;
+      }
+
+      .cls-7 {
+        stroke: #ffaf6d;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Group_3071">
+        <g id="Rectangle_206">
+          <rect class="cls-2" width="50" height="50" rx="6" ry="6"/>
+          <rect class="cls-5" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+        </g>
+        <line id="Line_898" class="cls-2" x1="15.7" y1="9.8" x2="22.6" y2="22.2"/>
+        <line id="Line_899" class="cls-3" x1="15.7" y1="9.8" x2="16.8" y2="11.8"/>
+        <line id="Line_900" class="cls-1" x1="17.4" y1="12.8" x2="22" y2="20.9"/>
+        <line id="Line_901" class="cls-3" x1="21.5" y1="20.2" x2="22.6" y2="22.2"/>
+        <line id="Line_902" class="cls-2" x1="24.4" y1="24.7" x2="39.6" y2="33.3"/>
+        <line id="Line_903" class="cls-3" x1="24.4" y1="24.7" x2="26.4" y2="25.8"/>
+        <line id="Line_904" class="cls-6" x1="28.6" y1="27.1" x2="36.5" y2="31.5"/>
+        <line id="Line_905" class="cls-3" x1="37.6" y1="32.1" x2="39.6" y2="33.3"/>
+        <line id="Line_906" class="cls-7" x1="36.4" y1="11.1" x2="22" y2="25.3"/>
+        <line id="Line_907" class="cls-3" x1="24.6" y1="23.3" x2="22.7" y2="24.5"/>
+        <line id="Line_908" class="cls-4" x1="21.1" y1="25.5" x2="10.2" y2="32.4"/>
+        <circle id="Ellipse_1374" class="cls-9" cx="15.7" cy="10.1" r="2.8"/>
+        <circle id="Ellipse_1375" class="cls-9" cx="10.5" cy="32.5" r="2.1"/>
+        <circle id="Ellipse_1376" class="cls-9" cx="39" cy="32.6" r="2.5"/>
+        <circle id="Ellipse_1377" class="cls-8" cx="36.9" cy="10.7" r="2.3"/>
+        <line id="Line_909" class="cls-7" x1="27.7" y1="39.5" x2="23.8" y2="24.2"/>
+        <circle id="Ellipse_1378" class="cls-8" cx="24.1" cy="24.6" r="5.3"/>
+        <circle id="Ellipse_1379" class="cls-8" cx="27.5" cy="39.2" r="3.6"/>
+      </g>
+    </g>
+  </g>
+</svg>

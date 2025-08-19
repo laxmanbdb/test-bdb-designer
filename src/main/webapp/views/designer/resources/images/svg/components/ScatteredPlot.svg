@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #ffaf6d;
+      }
+
+      .cls-4 {
+        fill: #7c4dff;
+      }
+
+      .cls-5 {
+        fill: #fae872;
+      }
+
+      .cls-2 {
+        stroke: #d3d3d3;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Layer_1-2" data-name="Layer_1">
+        <g id="Group_3114">
+          <g id="Rectangle_208">
+            <rect class="cls-1" width="50" height="50" rx="6" ry="6"/>
+            <rect class="cls-2" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+          </g>
+          <rect id="rect17" class="cls-5" x="9.6" y="23.8" width="34.1" height=".7" transform="translate(-9.3 26) rotate(-45)"/>
+          <circle id="circle20" class="cls-4" cx="19.7" cy="16.7" r="3.3"/>
+          <circle id="circle23" class="cls-4" cx="29.7" cy="31.6" r="2.5"/>
+          <circle id="circle26" class="cls-4" cx="36.6" cy="20.4" r="2.2"/>
+          <circle id="circle29" class="cls-4" cx="21.9" cy="25.4" r="1.1"/>
+          <circle id="circle32" class="cls-3" cx="28.5" cy="21.5" r="3.3"/>
+          <circle id="ellipse35" class="cls-3" cx="18" cy="32.4" r="2.5"/>
+          <circle id="circle38" class="cls-3" cx="36.6" cy="34.5" r="1.6"/>
+          <line id="Line_923" class="cls-2" x1="9.5" y1="10.2" x2="9.5" y2="39.2"/>
+          <line id="Line_924" class="cls-2" x1="41.1" y1="39.2" x2="9.1" y2="39.2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

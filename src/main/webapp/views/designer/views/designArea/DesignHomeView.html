@@ -1,0 +1,327 @@
+ <div id="header-home" class="row bvz-header-home">
+	<div id="header" class="bizviz-toolbar bizviz-header bvz-header" ng-class="modal.dashboardTabs.length == 0 ? 'headerpadding' : 'noheaderpadding'" >
+		<div ng-class="modal.dashboardTabs.length == 0 ? 'col-xs-3 col-sm-3 col-md-3 col-lg-2':''">
+		<div class="bvz-logo">
+			<div ng-click="handleMainMenuClick( $event, { id: 'HOME' } )" >
+				<img ng-src="{{bizVizLogo}}" style="padding: 8px 0px 8px 0px;" ng-if="brandConfig.appShortName != 'BDB'" />
+			<div style="padding: 4px 0px 0px 0px;"><md-icon class="cursor-hand nt-header-logo" style="height:32px;width:60px" ng-if="brandConfig.appShortName == 'BDB'" ></md-icon></div>
+			</div>
+		</div>
+		</div>
+		<div  ng-class="modal.dashboardTabs.length == 0 ? 'col-xs-9 col-sm-9 col-md-9 col-lg-10 nolefpadding':''">
+		<div class="bvz-homeDesigner-dashboardTabDivs">
+			<div class="bvz-home-designer">
+				<a id="designerHomeIcon" class="file-button headerControlIcon" ng-click="toggleMenu();">
+					<div ng-show="!isMainMenuVisible">
+						<img src="./resources/images/featureThumbs/nt-home.svg">
+						<span class="zero-border">{{ "Home" | translate }}
+						</span>
+					</div>
+					<div ng-show="isMainMenuVisible">
+						<img src="./resources/images/featureThumbs/nt-home.svg">
+						<!--<i class="fontIconSpan material-icons">dashboard</i>-->
+						<span>{{ "Dashboard Designer" | translate }}</span>
+					</div>
+				</a>
+			</div>
+			<div class="dashboardTabsDiv" ng-style="modal.dashboardTabs.length == 0 ? {'width': '50px'} : {}">
+				<ul id="dashboardTabs" class="dashboardTabs">
+					<li class="dashboardTab active" ng-repeat="dashboard in modal.dashboardTabs" id="tab{{dashboard.id}}" ng-click="dashboardTabClick(dashboard.id)">
+						<a tabindex="-1" href="#" data-toggle="tab" aria-controls="profile" class="ng-binding" aria-expanded="false">
+							<div class="defaulttab">
+								<span class="name-dashboard-tab">{{dashboard.name}}</span>
+								<span class="close-dashboard-tab icon bd-close" mat-tooltip="Close Dashboard" ng-click="closeDashboard(dashboard.id,$index)">
+								</span>
+							</div>
+						</a>
+					</li>
+					<li class="add-db dashboardTab" ng-hide="modal.dashboardTabs.length == 3">
+						<a tabindex="-1" href="#" ng-click="createNewDashboard( true )">
+							<div class="">
+								<md-icon class="nt-plus-icon cursor-hand" mat-tooltip="New Dashboard"></md-icon>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="dashboardActionsDiv user-header-menu" style="padding: 6px;" ng-show="isMainMenuVisible">
+		<div style="display: inline;">
+		<div class="workspace_select"></div>
+		<a id="designerHomeWorkspace" class="file-button">
+					<div>
+						<span>Workspace : {{selectedWorkspaceName}}</span>
+					</div>
+		</a>			
+		</div>
+	  <div class="user-menu-navigation cursor-hand">
+	  <div class="dropdown">
+        <div ng-click="toggleUserNavigation()">
+          <svg width="18px" height="18px" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M12.6985 11.2269H16.6743V14.9543H12.6985V11.2269ZM6.73473 11.2269H10.7106V14.9543H6.73473V11.2269ZM0.770996 11.2269H4.74682V14.9543H0.770996V11.2269ZM12.6985 5.63593H16.6743V9.36326H12.6985V5.63593ZM6.73473 5.63593H10.7106V9.36326H6.73473V5.63593ZM0.770996 5.63593H4.74682V9.36326H0.770996V5.63593ZM12.6985 0.0449219H16.6743V3.77226H12.6985V0.0449219ZM6.73473 0.0449219H10.7106V3.77226H6.73473V0.0449219ZM0.770996 0.0449219H4.74682V3.77226H0.770996V0.0449219Z" fill="var(--default-text)"></path>
+			</svg>
+		</div>
+        <ul class="dropdown-menu dropdown-menu-end p-3" style="min-width: 350px;"  ng-class="{'show': isUserNavigationOpen}" >
+          <div class="icon-grid">
+            <div class="icon-item" ng-repeat = "menu in headerNavMenu" ng-if="menu.status" ng-click="navigateBy(menu,menu.name);">
+            <md-icon class="cursor-hand {{NavHeaderSvgLists[menu.icon]}}" style="min-height:50px;min-width:50px;" mat-tooltip="{{menu.name}}" ></md-icon>
+            <div>{{menu.name}}</div>
+            </div>
+          </div>
+        </ul>
+        
+      </div>
+      <div class="user-header-divider"></div>
+      </div>
+	<div class="user-notification">
+    <div class="dropdown">
+      <div class="notification-icon" data-bs-toggle="dropdown" aria-expanded="false" ng-click="toggleUserAlertNotification()">
+        <svg width="18px" height="18px" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path id="Vector" d="M8.22212 15.3403H11.4412C11.4412 15.7672 11.2716 16.1765 10.9697 16.4784C10.6679 16.7802 10.2585 16.9498 9.83164 16.9498C9.40477 16.9498 8.99538 16.7802 8.69354 16.4784C8.3917 16.1765 8.22212 15.7672 8.22212 15.3403ZM17.0745 13.7308V14.5355H2.58879V13.7308L4.19831 12.1212V7.29266C4.19831 4.7979 5.83198 2.6009 8.22212 1.89271V1.65933C8.22212 1.23246 8.3917 0.823067 8.69354 0.521223C8.99538 0.219379 9.40477 0.0498047 9.83164 0.0498047C10.2585 0.0498047 10.6679 0.219379 10.9697 0.521223C11.2716 0.823067 11.4412 1.23246 11.4412 1.65933V1.89271C13.8313 2.6009 15.465 4.7979 15.465 7.29266V12.1212L17.0745 13.7308ZM13.8555 7.29266C13.8555 6.22548 13.4315 5.20201 12.6769 4.4474C11.9223 3.69279 10.8988 3.26885 9.83164 3.26885C8.76446 3.26885 7.74099 3.69279 6.98638 4.4474C6.23177 5.20201 5.80783 6.22548 5.80783 7.29266V12.926H13.8555V7.29266ZM16.0685 1.00747L14.9258 2.15023C15.6065 2.82249 16.147 3.62322 16.5158 4.50598C16.8847 5.38874 17.0746 6.33594 17.0745 7.29266H18.684C18.684 4.93471 17.7505 2.66528 16.0685 1.00747ZM0.979263 7.29266H2.58879C2.58879 5.36123 3.36136 3.51028 4.7375 2.15023L3.59474 1.00747C2.76413 1.82959 2.10518 2.80858 1.65618 3.88756C1.20718 4.96654 0.977088 6.12399 0.979263 7.29266Z" fill="var(--default-text)"></path>
+		</svg>
+        <span class="notification-badge">{{unreadmessages}}</span>
+      </div>
+	  <ul class="dropdown-menu" ng-class="{'show': isUserAlertOpen}" >
+	  <div class="seeAll"> Last {{unreadmessages}} Unread Notifications <a mat-tooltip="Notifications" ng-click="userNotification();">See All</a>
+	  </div><!---->
+	  <div ng-repeat="item in unreadnotifications" class="unread-message-list">
+              <li>
+                <span>{{ item.notificationMessageId.subject }}</span>
+                <span>{{ item.notificationMessageId.message }}</span>
+              </li>
+      </div>
+	  </ul>
+    </div>
+    	<div class="user-header-divider"></div>
+  	</div>
+	<div class="user-dropdown">
+        <div class="dropdown-toggle" ng-click="toggleUserDropdown()">
+           <div class="profile-icon">{{modal.AUTH_INFO.user.userName[0].toUpperCase()}}</div>
+            <span class="username">{{modal.AUTH_INFO.user.userName}}</span>
+            <md-icon class="nt-menu-dropdown-icon cursor-hand"></md-icon>
+        </div>
+        <div class="dropdown-menu" ng-class="{'show': isUserDropdownOpen}" >
+            <div class="profile">
+                <div class="profile-pic">{{modal.AUTH_INFO.user.userName[0].toUpperCase()}}</div>
+                <div class="profile-info">
+                    <div class="name">{{modal.AUTH_INFO.user.userName}}</div>
+                    <div class="email">{{modal.AUTH_INFO.user.emailID}}</div>
+                </div>
+            </div>
+            <div class="dropdown-item"><a href="/home/#/myaccount"><md-icon class="nt-user-icon cursor-hand"></md-icon> My Account</a></div>
+            <div class="dropdown-item"><a href="/home/#/home/welcome"><md-icon class="nt-info-icon cursor-hand"></md-icon> About</a></div>
+            <div class="dropdown-item"><a href="/home/#/admin"><md-icon class="nt-settings-icon cursor-hand"></md-icon> Settings</a></div>
+            <div class="dropdown-item logout"><a href="javascript:void;" ng-click="userLogout()"><md-icon class="nt-signout-icon cursor-hand"></md-icon> Sign Out</a></div>
+        </div>
+    </div>
+		</div>
+		<div class="dashboardActionsDiv" ng-show="(modal.dashboardTabs.length > 0) || enablePreviewButton">
+			<ul>
+				<li id="togglePreview" class="dashboardActionIcon pull-right" ng-click="togglePreview()" ng-if="dashboardView.isPreview">
+					<a id="previewBtn" class="headerControlIcon" ng-hide="isMainMenuVisible"  mat-tooltip="{{previewLabel}}" placement = "bottom-end">
+						<md-icon class="{{dashboardView.viewIcon}} cursor-hand"></md-icon>
+					</a>
+				</li>
+				<li id="togglePreview" class="dashboardActionIcon pull-right" ng-click="togglePreview()" ng-if="!dashboardView.isPreview">
+					<a id="previewBtn" class="headerControlIcon" ng-hide="isMainMenuVisible"  mat-tooltip="{{previewLabel}}" placement = "bottom-end">
+						<md-icon class="{{dashboardView.viewIcon}} cursor-hand"></md-icon>
+					</a>
+				</li>
+				<li id="saveDashboard" class="dashboardActionIcon pull-right" ng-controller="MainMenuController" ng-hide="isMainMenuVisible || dashboardView.isPreview" ng-click="saveDashboard()">
+					<a id="saveBtn" class="headerControlIcon">
+					<md-icon class="nt-save-icon cursor-hand" mat-tooltip="Save Dashboard"></md-icon>
+					</a>
+				</li>
+				<li id="saveAsDashboard" class="dashboardActionIcon pull-right" ng-controller="MainMenuController" ng-hide="previewStage" ng-show="modal.selectedDashboard.json.Dashboard.backendId != undefined && modal.selectedDashboard.json.Dashboard.backendId != '' " ng-click="openSaveAsDialog( $event )">
+					<a class="headerControlIcon" ng-hide="isMainMenuVisible">
+					<md-icon class="nt-copy-icon cursor-hand" mat-tooltip="Save to Another Workspace"></md-icon>
+					</a>
+				</li>
+				<li id="exportDashboard" class="dashboardActionIcon pull-right" ng-controller="MainMenuController" ng-hide="previewStage || isMainMenuVisible" ng-click="exportCurrentDashboard();">
+					<a class="headerControlIcon">
+					<md-icon class="nt-export-icon cursor-hand" mat-tooltip="Save to local disk"></md-icon>
+					</a>
+				</li>
+				<li id="dashboardMobileView" class="dashboardActionIcon" ng-hide="previewStage || isMainMenuVisible" ng-click="switchDashboardView( 'Mobile' )">
+					<a class="headerControlIcon">
+						<md-icon class="nt-mobile-icon cursor-hand" mat-tooltip="Mobile"></md-icon>
+					</a>
+				</li>
+				<li id="dashboardTabletView" class="dashboardActionIcon" ng-hide="previewStage || isMainMenuVisible" ng-click="switchDashboardView( 'Tablet' )">
+					<a class="headerControlIcon">
+					<md-icon class="nt-tablet-icon cursor-hand" mat-tooltip="Tablet"></md-icon>
+					</a>
+				</li>
+				<li id="dashboardDesktopView" class="dashboardActionIcon" ng-hide="previewStage || isMainMenuVisible" ng-click="switchDashboardView( 'Desktop' )">
+					<a class="headerControlIcon">
+					<md-icon class="nt-desktop-icon cursor-hand" mat-tooltip="Large Screen"></md-icon>
+					</a>
+				</li>
+			</ul>
+		</div>
+		</div><!-- end colspandiv -->
+	</div>
+</div>
+<!-- CONTEXT MENU OPTIONS -->
+<div id="designerCxtMenuContainer">
+	<ul id="alignmentCxtMenu" class="dropdown-menu d-ctx-menu" role="menu" style="display:none">
+		<li id="alignLeft"><a tabindex="-1" href="#">Align Left</a>
+		</li>
+		<li id="alignRight"><a tabindex="-1" href="#">Align Right</a>
+		</li>
+		<li id="alignTop"><a tabindex="-1" href="#">Align Top</a>
+		</li>
+		<li id="alignBottom"><a tabindex="-1" href="#">Align Bottom</a>
+		</li>
+		<li class="divider"></li>
+		<li id="alignHorizontal" ng-class="{disabled: modal.layoutType != 'AbsoluteLayout'}"><a tabindex="-1" href="#">Align Horizontal</a>
+		</li>
+		<li id="alignVertical"><a tabindex="-1" href="#">Align Vertical</a>
+		</li>
+		<li id="equalHorizontal" ng-class="{disabled: modal.listOfSelectedComponents.length < 3 || modal.layoutType != 'AbsoluteLayout'}">
+			<a tabindex="-1" href="#">Equal Space (Horizontal)</a>
+		</li>
+		<li id="equalVertical" ng-class="{disabled: modal.listOfSelectedComponents.length < 3}">
+			<a tabindex="-1" href="#">Equal Space (Vertical)</a>
+		</li>
+		<li class="divider"></li>
+		<li id="equalHeight"><a tabindex="-1" href="#">Equal Height</a>
+		</li>
+		<li id="equalWidth"><a tabindex="-1" href="#">Equal Width</a>
+		</li>
+		<li id="duplicateComponents" ng-if="modal.layoutType == 'AbsoluteLayout'"><a tabindex="-1" href="#">Duplicate Selected</a>
+		</li>
+		<li class="divider"></li>
+		<li id="manageGroup" ng-class="{disabled: isSelectedDashboardResponsive()}">
+			<a tabindex="-1" href="#">Manage Group<p class="pull-right"></p></a>
+		</li>
+		<li id=lockComp ng-class="{disabled: isSelectedDashboardResponsive()}">
+			<a tabindex="-1" href="#">Lock Selected<p class="pull-right"></p></a>
+		</li>
+		<li id="unLockComp" ng-class="{disabled: isSelectedDashboardResponsive()}">
+			<a tabindex="-1" href="#">Unlock Selected<p class="pull-right"></p></a>
+		</li>		
+		<!-- 
+			<li class="divider"></li>
+			<li id="manageGroup" ><a tabindex="-1" href="#">Manage Group<p class="pull-right">(Ctrl+g)</p></a></li>
+			-->
+		<li class="divider"></li>
+		<li id="deleteAll" ng-if="modal.layoutType == 'AbsoluteLayout'"><a tabindex="-1" href="#">Delete Selected</a>
+		</li>
+	</ul>
+	<ul id="dbCxtMenu" class="dropdown-menu d-ctx-menu" role="menu" ng-if="modal.layoutType == 'AbsoluteLayout'" style="display:none">
+		<li id="doPreview" ng-class="{disabled: modal.selectedDashboard.json.Dashboard.AbsoluteLayout.Object.length == 0}">
+			<a tabindex="-1" href="#">Preview</a>
+		</li>
+		<li class="divider"></li>
+		<li id="dataSources"><a tabindex="-1" href="#">Data Sources</a>
+		</li>
+		<li id="components"><a tabindex="-1" href="#">Components</a>
+		</li>
+		<li id="dashboardObjects"><a tabindex="-1" href="#">Dashboard Objects</a>
+		</li>
+		<li id="componentAttributes"><a tabindex="-1" href="#">Component Attributes</a>
+		</li>
+		<!-- <li id="manageGroup" ><a tabindex="-1" href="#">Manage Group<p class="pull-right">(Ctrl+g)</p></a></li> -->
+		<li class="divider"></li>
+		<li id="selectAll" ng-class="{disabled: modal.selectedDashboard.json.Dashboard.AbsoluteLayout.Object.length == 0}">
+			<a tabindex="-1" href="#">
+				Select All
+				<p class="pull-right">(Ctrl+a)</p>
+			</a>
+		</li>
+		<li id="dbProperties"><a tabindex="-1" href="#">Properties</a>
+		</li>
+	</ul>
+	<ul id="compCxtMenu" class="dropdown-menu d-ctx-menu" role="menu"  style="display:none">
+		<li id="compProperties"><a tabindex="-1" href="#">Properties</a>
+		</li>
+		<li ng-if="modal.isDatasetEnabled" id="dataSets"><a tabindex="-1" href="#">Data Sets</a>
+		</li>
+		<li ng-if="modal.isScriptEnabled" id="scriptOnChange"><a tabindex="-1" href="#">Script on Load</a>
+		</li>
+		<li id="duplicate" ng-if="modal.layoutType == 'AbsoluteLayout'" ng-class="{disabled: isSelectedDashboardResponsive()}"><a tabindex="-1" href="#">Duplicate</a>
+		</li>
+		<li id="copyProperties" ng-if="modal.layoutType == 'AbsoluteLayout'" ng-class="{disabled: isSelectedDashboardResponsive()}"><a tabindex="-1" href="#">Copy Properties</a>
+		</li>
+		<li id="pasteProperties" ng-if="modal.layoutType == 'AbsoluteLayout'" ng-class="{disabled: isSelectedDashboardResponsive()}"><a tabindex="-1" href="#">Paste Properties</a>
+		</li>
+		<li class="divider"></li>
+		<li id="sendToBack" ng-class="{disabled: isSelectedDashboardResponsive()}">
+			<a tabindex="-1" href="#">
+				Send To Back
+				<p class="pull-right">(Ctrl+b)</p>
+			</a>
+		</li>
+		<li id="sendBackward" ng-class="{disabled: isSelectedDashboardResponsive()}">
+			<a tabindex="-1" href="#">
+				Send Backward
+				<p class="pull-right">(Ctrl+Shift+b)</p>
+			</a>
+		</li>
+		<li id="bringToFront" ng-class="{disabled: isSelectedDashboardResponsive()}">
+			<a tabindex="-1" href="#">
+				Bring To Front
+				<p class="pull-right">(Ctrl+f)</p>
+			</a>
+		</li>
+		<li id="bringForward" ng-class="{disabled: isSelectedDashboardResponsive()}">
+			<a tabindex="-1" href="#">
+				Bring Forward
+				<p class="pull-right">(Ctrl+Shift+f)</p>
+			</a>
+		</li>
+		<li class="divider"></li>
+		<li id="manageGroup" ng-class="{disabled: isSelectedDashboardResponsive()}">
+			<a tabindex="-1" href="#">Manage Group<p class="pull-right"></p></a>
+		</li>
+		<li id="lockComp" ng-class="{disabled: isSelectedDashboardResponsive()}">
+			<a tabindex="-1" href="#">Lock<p class="pull-right"></p></a>
+		</li>
+		<li id="unLockComp" ng-class="{disabled: isSelectedDashboardResponsive()}">
+			<a tabindex="-1" href="#">Unlock<p class="pull-right"></p></a>
+		</li>
+		<li class="divider"></li>
+		<li id="compRemove" ng-if="modal.layoutType == 'AbsoluteLayout'">
+			<a tabindex="-1" href="#">
+				Remove
+				<p class="pull-right">(Del)</p>
+			</a>
+		</li>
+	</ul>
+</div>
+<div id="genericModal" class="modal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false">
+	<div class="modal-dialog">
+		<div class="modal-content container-border">
+			<div class="modal-Header">
+				<div class="col-sm-11 col-md-11 col-lg-11">
+					<span class="modal-title">Session Expiry Alert</span>
+				</div>
+				<div class="col-sm-1 col-md-1 col-lg-1">
+					<a href="javascript: void( 0 )" class=" window-action-icon modalCloseButton" data-dismiss="modal">
+						<i class="glyphicon glyphicon-remove closeButtonPos" mat-tooltip="Close" class="refresh-pos"></i>
+					</a>
+				</div>
+			</div>
+			<input type="hidden" id="genericsaveType" value="" />
+			<div class="modal-Body" id="genericmodal-form"></div>
+			<div class="modal-Footer">
+				<div class="col-sm-6 col-md-6 col-lg-6 tAlignLeft"></div>
+				<div class="col-sm-6 col-md-6 col-lg-6">
+					<md-button type="button" class="footer-btn" data-dismiss="modal">
+						Cancel
+					</md-button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="designer-container" class="row">
+	<div biz-mainMenu id="designer-toggle-menu" class="ht100per"></div>
+	<div id="designer-workarea-head" ng-include="importCompSrc"></div>
+	<div biz-dsnContainer id="designer-workarea" class="ht100per"></div>
+	<div biz-mainTab id="dashboard-tabs" class="ht100per"></div>
+	<div id="bizVizPreview" class="bizVizPreview">
+		<iframe id="dashboardViewerFrame" class="wd100per ht100per"> </iframe>
+	</div>
+</div>

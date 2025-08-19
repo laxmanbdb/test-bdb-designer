@@ -1,0 +1,56 @@
+{
+	"TextBox": {
+		"Properties": {
+			"Object": {
+				"componentType": "text_box",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "text",
+				"objectType": "textbox",
+				"subElement": "NividhTextBox",
+				"globalVariableKeyAttribute": "globalkey",
+				"height": "88",
+				"y": "50",
+				"initialVisibility": "true",
+				"showLocked": "false",
+				"width": "341",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "Obj.FF8F8455NC87BN539ANDE84N2FF6176AD4AE",
+				"objectName": "text_2",
+				"x": "100",
+				"NividhTextBox": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"fontFamily": "BizvizFont",
+					"color": "#494950",
+					"text": "Write a Message",
+					"fontWeight": "normal",
+					"fontStyle": "normal",
+					"fontSize": "16",
+					"contentBackgroundAlpha": "0.9",
+					"contentBackgroundColor": "#ffffff",
+					"virtualDataID": "",
+					"virtualDataField": "",
+					"dataRowNumber": "",
+					"editable": "true",
+					"textDecoration": "none",
+					"isDynamic": "false",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#000000",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"borderVisible": "true"
+				}
+			}
+		}
+	}
+}

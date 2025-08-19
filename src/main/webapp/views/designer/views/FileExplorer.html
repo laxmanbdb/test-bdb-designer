@@ -1,0 +1,57 @@
+<div class="d-file-exp-container" 
+	ng-controller="FileExplorerController" >
+	<div class="d-file-exp-wrapper">
+		<div class="d-file-exp-header">
+		</div>
+		<div class="d-file-exp-body">
+			<div class="d-file-exp-breadcrumb-container">
+				<a href="javascript: void( 0 )" class="pull-left" 
+					ng-click="getParentDir( selectedDir )">
+					<i class="material-icons">chevron_left</i>
+					<md-tooltip md-direction="top">Back to parent folder</md-tooltip>
+				</a>
+				<div class="d-selected-dir-wrapper" ng-hide="modal.newDir">
+					<span class="fileName">{{ selectedDir.name }}</span>
+					<a href="javascript: void( 0 )" 
+						class="pull-right"
+						style="margin-left: 10px;" 
+						ng-click="goToRootDir()" 
+						ng-hide="modal.selectedDirToPublish.id == 0">
+						<i class="material-icons">home</i>
+						<md-tooltip md-direction="top">Go to root folder</md-tooltip>
+					</a>
+					<a href="javascript: void( 0 )" 
+						class="pull-right" 
+						ng-click="goToCreateDirMode()"
+						ng-show="selectedDir.id != 0" >
+						<i class="material-icons">add</i>
+						<md-tooltip md-direction="top">Add new folder to [{{selectedDir.name}}]</md-tooltip>
+					</a>
+				</div>
+				<div class="d-new-dir-wrapper" ng-show="modal.newDir" >
+					<input type="text" 
+						class="propValue newDirInput" 
+						placeholder="New folder" 
+						ng-model="newDirName" />
+					<a href="javascript: void( 0 )" 
+						class="pull-right" 
+						ng-click="createNewDir( selectedDir )">
+						<i class="material-icons">done</i>
+						<md-tooltip md-direction="top">Create new folder</md-tooltip>
+					</a>
+				</div>
+			</div>
+			<div class="d-file-exp-main-view" ng-class="{ disabled: modal.newDir }">
+				<div class="d-file" 
+					ng-dblclick="getChildDirs( dir )" ng-repeat="dir in dirList track by $index">
+					<a class="fileIcon" href="javascript: void( 0 )">
+						<i class="material-icons">folder</i>
+					</a>
+					<span class="fileName">{{ dir.name }}</span>
+				</div>
+			</div>
+		</div>
+		<div class="d-file-exp-footer">
+		</div>
+	</div>
+</div>

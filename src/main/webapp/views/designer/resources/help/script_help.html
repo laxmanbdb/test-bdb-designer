@@ -1,0 +1,1854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Dashboard Designer SDK Help</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../../../../shared/resources/img/bizviz-fevico.png?v3.0.0">
+	<link rel="stylesheet" href="../../../../shared/resources/fonts/google-font/font.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/css/bootstrap.css">
+	<script src="../../resources/plugins/jQuery/jquery-3.6.0.min.js"></script>
+	<script src="../../resources/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<style>
+		body,
+		pre {
+			line-height: 1.8;
+			font-family: 'BizvizFont', Roboto, Helvetica Neue, sans-serif, sans-serif, sans-serif;
+			color: #333333;
+		}
+
+		h2 {
+			font-size: 24px;
+			text-transform: uppercase;
+			color: #303030;
+			font-weight: 600;
+			margin-bottom: 30px;
+		}
+
+		h4 {
+			font-size: 19px;
+			line-height: 1.375em;
+			color: #303030;
+			font-weight: 400;
+			padding: 10px;
+			margin: 0px;
+		}
+
+		pre {
+			color: #666666;
+			background: #fafafa;
+			border: 1px solid #eeeeee;
+			border-radius: 0px;
+		}
+
+		.downloadSample {
+			float: right;
+			font-size: 20px;
+			color: #f89406;
+			border: #eeeeee;
+			background: transparent;
+		}
+
+		.downloadSample:hover {
+			color: #006684;
+		}
+		
+		.glyphicon + .tooltip > .tooltip-inner {background-color: #fff;color:#000;}
+		.glyphicon + .tooltip > .tooltip-arrow { border-left-color:#fff;}
+
+		.spl-note {
+			color: #000;
+			font-size: 16px;
+		}
+
+		.sdk-content {
+			margin-top: 21px;
+		}
+
+		.jumbotron {
+			background-color: #f4511e;
+			color: #fff;
+			padding: 100px 25px;
+		}
+
+		.container-fluid {
+			padding: 60px 20px;
+		}
+
+		.bg-grey {
+			background-color: #f6f6f6;
+		}
+
+		.logo-small {
+			color: #f4511e;
+			font-size: 50px;
+		}
+
+		.logo {
+			color: #f4511e;
+			font-size: 200px;
+		}
+
+		.company-logo {
+			background: url(../../../../shared/resources/img/BIZVIZ_logo.png) no-repeat;
+			height: 50px;
+			width: 268px;
+		}
+
+		.thumbnail {
+			padding: 0 0 15px 0;
+			border: none;
+			border-radius: 0;
+		}
+
+		.thumbnail img {
+			width: 100%;
+			height: 100%;
+			margin-bottom: 10px;
+		}
+
+		.carousel-control.right,
+		.carousel-control.left {
+			background-image: none;
+			color: #f4511e;
+		}
+
+		.carousel-indicators li {
+			border-color: #f4511e;
+		}
+
+		.carousel-indicators li.active {
+			background-color: #f4511e;
+		}
+
+		.item h4 {
+			font-size: 19px;
+			line-height: 1.375em;
+			font-weight: 400;
+			font-style: italic;
+			margin: 70px 0;
+		}
+
+		.item span {
+			font-style: normal;
+		}
+
+		.panel {
+			border-bottom: 1px solid rgba(0, 0, 0, 0);
+			border-radius: 0 !important;
+			transition: box-shadow 0.25s;
+		}
+
+		.panel:hover {
+			border-bottom: 1px solid rgba(0, 0, 0, 0);
+			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+			transition: box-shadow 0.25s;
+		}
+
+		.panel-footer .btn:hover {
+			border: 1px solid #f4511e;
+			background-color: #fff !important;
+			color: #f4511e;
+		}
+
+		.panel-heading {
+			color: #fff !important;
+			background-color: #eee !important;
+			padding: 0px;
+			cursor: default;
+			margin: 0px 0px 5px 0px;
+			border-bottom: 1px solid rgba(0,0,0,0.1);
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
+		}
+		
+		.hover-shadow:hover,
+		.subproperty:hover {
+			cursor: pointer;
+			border-bottom: 1px solid rgba(0, 0, 0, 0);
+			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+			transition: box-shadow 0.25s;
+		}
+		.panel-footer {
+			background-color: white !important;
+		}
+
+		.panel-footer h3 {
+			font-size: 32px;
+		}
+
+		.panel-footer h4 {
+			color: #aaa;
+			font-size: 14px;
+		}
+
+		.panel-footer .btn {
+			margin: 15px 0;
+			background-color: #f4511e;
+			color: #fff;
+		}
+
+		.navbar {
+			margin-bottom: 0;
+			background-color: #fff;
+			z-index: 9999;
+			border: 0;
+			font-size: 12px !important;
+			line-height: 1.42857143 !important;
+			letter-spacing: 2px;
+			border-radius: 0;
+			box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+		}
+
+		.navbar li a,
+		.navbar .navbar-brand {
+			color: #333 !important;
+		}
+
+		.navbar-nav li a:hover,
+		.navbar-nav li.active a {
+			color: #f4511e !important;
+			background-color: #fff !important;
+		}
+
+		.navbar-default .navbar-toggle {
+			border-color: transparent;
+			color: #333 !important;
+		}
+
+		.navbar-default .navbar-toggle span {
+			border-color: transparent;
+			color: #333 !important;
+		}
+
+		footer .glyphicon {
+			font-size: 20px;
+			margin-bottom: 20px;
+			color: #333;
+		}
+
+		.slideanim {
+			visibility: hidden;
+		}
+
+		.slide {
+			animation-name: slide;
+			-webkit-animation-name: slide;
+			animation-duration: 1s;
+			-webkit-animation-duration: 1s;
+			visibility: visible;
+		}
+		.subproperty {
+			font-size: 15px;
+			padding: 10px;
+			margin: 3px 20px;
+			border-bottom: 1px solid #eee;
+			background: rgba(238, 238, 238, 0.5);
+		}
+		.propertyTableDiv{
+			padding: 0px 20px;
+		}
+		.gridtable {
+			 text-align: left;
+			 font-size: 12px;
+			 cursor: default;
+		}
+		.gridtable td {
+			 font-size: 12px;
+		}
+
+		.helpPages{
+			cursor: pointer;
+		}
+		@keyframes slide {
+			0% {
+				opacity: 0;
+				transform: translateY(70%);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0%);
+			}
+		}
+
+		@-webkit-keyframes slide {
+			0% {
+				opacity: 0;
+				-webkit-transform: translateY(70%);
+			}
+			100% {
+				opacity: 1;
+				-webkit-transform: translateY(0%);
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			.col-sm-4 {
+				text-align: center;
+				margin: 25px 0;
+			}
+			.btn-lg {
+				width: 100%;
+				margin-bottom: 35px;
+			}
+		}
+
+		@media screen and (max-width: 480px) {
+			.logo {
+				font-size: 150px;
+			}
+		}
+	</style>
+</head>
+
+<body id="BizvizDesignerSDKHelpPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<!-- <div class="navbar-header"> <a class="navbar-brand company-logo" href="#BizvizDesignerSDKHelpPage"></a> </div> -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-left">
+					<li id="scriptinghelp" class="helpPages"><a>Scripting Help</a></li>
+					<li id="advancescripting" class="helpPages"><a>Advanced Scripting</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="sdk-methods" class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12">
+				<div class=" panel-default">
+					<div class="sdk-content">
+						<div id="AutoReload" class="panel">
+							<div class="panel-heading">
+								<h4>1. Auto Reload <button class="downloadSample" onclick='loadHtml("samples/AutoReload.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.autoReload()</span></p>
+								<p>Arguments : Not required </p>
+								<p>This method should be written on Filters/ Grids/ Charts. Those connections will be reloaded automatically which has the filter key in their condition</p>
+							</div>
+						</div>
+						<div id="reloadAll" class="panel">
+							<div class="panel-heading">
+								<h4>2. Reload All Connections <button class="downloadSample" onclick='loadHtml("samples/ReloadAllConnections.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.reloadAll()</span></p>
+								<p>Arguments : Not required </p>
+								<p>All connections will be reloaded</p>
+							</div>
+						</div>
+						<div id="reload" class="panel">
+							<div class="panel-heading">
+								<h4>3. Reload from List <button class="downloadSample" onclick='loadHtml("samples/ReloadFromList.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan"> sdk.reload( [ "C_1", "C_2" ] )</span></p>
+								<p>Arguments : An array of connection id's. Here C_1 and C_2 are the connection id's </p>
+								<p>Reloads those connections which are available in the array </p>
+							</div>
+						</div>
+						<div id="reloadDataset" class="panel">
+							<div class="panel-heading">
+								<h4>4. Reload DataSet <button class="downloadSample" onclick='loadHtml("samples/ReloadDataSet.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.reloadDataset( [ "Bar_1" , "Column_2" ] );</span></p>
+								<p>Arguments : Components id's as array</p>
+								<p>Refresh the datasets of those components which are available in the array</p>
+								<p> NOTE: It will not reload the connection</p>
+							</div>
+						</div>
+						<div id="hideComponent" class="panel">
+							<div class="panel-heading">
+								<h4>5. Hide Component(s) <button class="downloadSample" onclick='loadHtml("samples/HideComponent(s).bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.hideComponent( [ "bar_1", "column_2" ])</span></p>
+								<p>Arguments : An array of component id's. Here bar_1 and column_2 are the component id's </p> <br>
+								<p>Method : <span class="fnSpan">sdk.hideComponent( "bar_1" )</span></p>
+								<p>Argument : Component id as string (Used to hide single component)</p>
+							</div>
+						</div>
+						<div id="showComponent" class="panel">
+							<div class="panel-heading">
+								<h4>6. Show Component(s) <button class="downloadSample" onclick='loadHtml("samples/ShowComponent(s).bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.showComponent( [ "bar_1", "column_2" ])</span></p>
+								<p>Arguments : an array of component id's. Here bar_1 and column_2 are the component id's </p> <br>
+								<p>Method : <span class="fnSpan">sdk.showComponent( "bar_1" )</span></p>
+								<p>Argument : Component id as string (Used to show single component)</p>
+							</div>
+						</div>
+						<div id="hideGroups" class="panel">
+							<div class="panel-heading">
+								<h4>7. Hide Groups <button class="downloadSample" onclick='loadHtml("samples/ToggleGroups.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.hideGroups( [ "grp1", "grp2" ])</span></p>
+								<p>Arguments : An array of group names. Here grp1 and grp2 are the group's name which will be hidden </p> <br>
+								<p>Method : <span class="fnSpan">sdk.hideGroups( "grp1" )</span></p>
+								<p>Argument : Group name as string (Used to hide single group)</p>
+							</div>
+						</div>
+						<div id="showGroups" class="panel">
+							<div class="panel-heading">
+								<h4>8. Show Groups <button class="downloadSample" onclick='loadHtml("samples/ToggleGroups.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.showGroups( [ "grp1", "grp2" ])</span></p>
+								<p>Arguments : An array of group names. Here grp1 and grp2 are the group's name which will be visible </p> <br>
+								<p>Method : <span class="fnSpan">sdk.showGroups( "grp1" )</span></p>
+								<p>Argument : Group name as string (Used to show single Group)</p>
+							</div>
+						</div>
+						<div id="toggleComponents" class="panel">
+							<div class="panel-heading">
+								<h4>9. Toggle Components <button class="downloadSample" onclick='loadHtml("samples/ToggleComponents.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.toggleComponents(["label1", "gauge2", "area3", "datagrid4"], ["label5", "gauge6", "area7", "datagrid8"], "TileAB");<br></span></p>
+								<p>Arguments : An array of first set of components, An array of second set of components, uniqe-key to toggle these sets of components </p>
+							</div>
+						</div>
+						<div id="toggleGroups" class="panel">
+							<div class="panel-heading">
+								<h4>10. Toggle Groups <button class="downloadSample" onclick='loadHtml("samples/ToggleGroups.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.toggleGroups( [ "grp1", "grp2" ], [ "grp3", "grp4" ], "togglekey1")</span></p>
+								<p>Arguments : An array of first group names. An array of second Group names. uniqe-key to toggle these sets of group </p>
+							</div>
+						</div>
+						<div id="hideAllComponentExcept" class="panel">
+							<div class="panel-heading">
+								<h4>11. Hide Except These <button class="downloadSample" onclick='loadHtml("samples/HideExceptThese.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.hideAllComponentExcept( [ "Bar_1", "Column_2" ] )</span></p>
+								<p>Argument : Component id's as array, Here "Bar_1" , "Column_2" are component id's </p>
+								<p>Used for hiding all the components except those which are supplied in argument</p>
+							</div>
+						</div>
+						<div id="showAllComponentExcept" class="panel">
+							<div class="panel-heading">
+								<h4>12. Show Except These <button class="downloadSample" onclick='loadHtml("samples/ShowExceptThese.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.showAllComponentExcept( [ "Bar_1", "Column_2" ] )</span></p>
+								<p>Argument : Component id's as array, Here "Bar_1" , "Column_2" are component id's </p>
+								<p>Used for showing the components except those which are supplied in argument</p>
+							</div>
+						</div>
+						<div id="setValue" class="panel">
+							<div class="panel-heading">
+								<h4>13. Set Single Value <button class="downloadSample" onclick='loadHtml("samples/SetSingleValue.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.setValue( "Comp_ID", Value, TargetValue_Optional )</span></p>
+								<p>Arguments : Component id as string and value as string/integer/float </p>
+								<p>Used for updating single valued components like Gauge/ SemiGauge/ Image/ Label/ Progress Pie/ Sliders/ TextBox/ Trend
+									<p>Target value is optional -> if given it will set the target value in Gauge/ SemiGauge/ bullet component </p>
+							</div>
+						</div>
+						<div id="getValue" class="panel">
+							<div class="panel-heading">
+								<h4>14. Get Value <button class="downloadSample" onclick='loadHtml("samples/GetValue.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.getValue( "Label_1" )</span></p>
+								<p>Argument : Component id as string and value as string/integer/float </p>
+								<p>Used for getting value from the component which holds a data <br>If component is having more than one value, data will be returned in form of array(e.g. Charts / Grids )</p>
+							</div>
+						</div>
+						<div id="setContext" class="panel">
+							<div class="panel-heading">
+								<h4>15. Set Context <button class="downloadSample" onclick='loadHtml("samples/SetGetContext.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.Context( "Key", "Value")</span></p>
+								<p>Arguments : "Key" as any Unique key, "Value" as anything string/number/object etc. </p>
+								<p>Used for adding a key-value pair in the available context-map.</p>
+								<p>sdk.addContext( "Key", "Value"); method also does the same job as sdk.setContext( "Key", "Value") method</p>
+								<p><b>NOTE: Internal properties of Array should not be used as keys.</b> Type [].__proto__ in browser-console to know all those restricted properties </p>
+							</div>
+						</div>
+						<div id="getContext" class="panel">
+							<div class="panel-heading">
+								<h4>16. Get Context <button class="downloadSample" onclick='loadHtml("samples/SetGetContext.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.getContext( "Key" )</span></p>
+								<p>Arguments : "Key" as any Unique key. </p>
+								<p>Used for getting value from the context-map</p>
+							</div>
+						</div>
+						<div id="updateGlobalVariable" class="panel">
+							<div class="panel-heading">
+								<h4>17. Invoke Another Change <button class="downloadSample" onclick='loadHtml("samples/UpdateGlobalVariable.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.updateGlobalVariable( "Bar_1" , {"Year":2015,"Revenue":500,"Expense":380} , false )</span></p>
+								<p>Arguments : Component id as string , Values to update in global variable as javascript object , Flag as boolean</p>
+								<p>Used for initiating another component change, If flag set to true, it executes further change-script written on the component(Bar_1) </p>
+								<p>Another way : <br> var item = { "Year" : 2015 , "Revenue" : 500 , "Expense" : 380 }; <br> sdk.updateGlobalVariable( "Bar_1" , item , false )</p>
+							</div>
+						</div>
+						<div id="executeScript" class="panel">
+							<div class="panel-heading">
+								<h4>18. Execute Change script <button class="downloadSample" onclick='loadHtml("samples/UpdateGlobalVariable.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.executeScript( "Bar_1", {"Year":"2015", "Sales":25645}  );</span></p>
+								<p>Arguments: component id , javascript object of values</p>
+								<p>Used for execute another change script , internally it is calling <b>sdk.updateGlobalVariable()</b> with notifyAnotherChangeFlag as true</p>
+							</div>
+						</div>
+						<div id="changeBGColor" class="panel">
+							<div class="panel-heading">
+								<h4>19. Change Rectangle BG <button class="downloadSample" onclick='loadHtml("samples/ChangeRectangleBG.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.changeBGColor("box_4", "#ffccff")</span></p>
+								<p>Arguments : Component id of box component as string and hexadecimal color code as string </p>
+								<p>Used for updating background color of box component </p>
+							</div>
+						</div>
+						<div id="changeDashboardBGColor" class="panel">
+							<div class="panel-heading">
+								<h4>20. Change Dashboard BG <button class="downloadSample" onclick='loadHtml("samples/ChangeDashboardBG.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.changeDashboardBGColor("#ffcc00")</span></p>
+								<p>Argument : Hexadecimal color code as string </p>
+								<p>Use the function for updating Back ground of dashboard </p>
+							</div>
+						</div>
+						<div id="setTop" class="panel">
+							<div class="panel-heading">
+								<h4>21. Set Top <button class="downloadSample" onclick='loadHtml("samples/SetTop.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.setTop( "Bar_1", 50 );</span></p>
+								<p>Arguments : Component id as string , Top position as integer </p>
+								<p>Used for setting top position of a component </p> <br>
+								<p>If user want to store the original top position , get the current position from getTop() method -> store in context from sdk.addContext() -> get it back from sdk.getContext() when required <br> </p>
+								<pre>
+var originaltop = sdk.getTop("Bar_1");
+sdk.addContext("bar_1_original_top" , oldtop);
+sdk.getContext("bar_1_original_top");
+</pre> </div>
+						</div>
+						<div id="setLeft" class="panel">
+							<div class="panel-heading">
+								<h4>22. Set Left <button class="downloadSample" onclick='loadHtml("samples/SetLeft.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.setLeft( "Bar_1", 50 );</span></p>
+								<p>Arguments : Component id as string , Left position as integer </p>
+								<p>Used for setting left position of a component </p>
+							</div>
+						</div>
+						<div id="getTop" class="panel">
+							<div class="panel-heading">
+								<h4>23. Get Top <button class="downloadSample" onclick='loadHtml("samples/GetTop.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.getTop( "Bar_1" );</span></p>
+								<p>Argument : Component id as string </p>
+								<p>Used for Getting top position of component and saving existing values in context for further usage</p>
+							</div>
+						</div>
+						<div id="getLeft" class="panel">
+							<div class="panel-heading">
+								<h4>24. Get Left <button class="downloadSample" onclick='loadHtml("samples/GetLeft.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.getLeft( "Bar_1" );</span></p>
+								<p>Argument : Component id as string </p>
+								<p>Used for Getting top position of component and saving existing values in context for further usage</p>
+							</div>
+						</div>
+						<div id="setGraphicsProperty" class="panel">
+							<div class="panel-heading">
+								<h4>25. Set Graphics Property <button class="downloadSample" onclick='loadHtml("samples/SetGraphicsProperty.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.setGraphicsProperty("Shape_1", "color", "#ff0000");</span></p>
+								<p>Argument : Component id as string , Property name , Property value</p>
+								<p>Used for changing properties of graphics component </p>
+								<p>e.g.</p>
+								<pre>
+sdk.setGraphicsProperty("Shape_1", "symbol" , "warning");
+</pre> </div>
+						</div>
+						<div id="applyDataSetFilter" class="panel">
+							<div class="panel-heading">
+								<h4>26. Apply Filter <button class="downloadSample" onclick='loadHtml("samples/ApplyDataSetFilter.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.applyDataSetFilter( "bar32", ["Year==2010","Quarter=='Q2'","Sales>=60"])</span></p>
+								<p>Arguments : Component id (e.g "bar32") ,Conditions written in form of array </p>
+								<p>Use the function to filter dataset of a component </p>
+								<p>examples : </p>
+								<pre>
+sdk.applyDataSetFilter("Bar1", ["Year==2010"]);
+sdk.applyDataSetFilter("datagrid3", ["CompanyName=='Google' || CompanyName=='Amazon'" , "ProjectHrs>5000"]);
+sdk.applyDataSetFilter("Bar2", ["Year>=2010", "Month=='February'", "Week=='2'"]);
+sdk.applyDataSetFilter("Bar3", ["Year=={radioYr.Value}", "Week>=2", "Week!=4"]);
+sdk.applyDataSetFilter("Grid2", ["ProjectName=='{filter2.ProjectName}'", "EmployeeCount>={hslider2.Value}"]);
+</pre>
+								<div class="spl-note">If field's name is having space (eg: "Overall Expense" , "Total Profit"):</div>
+								<pre>
+sdk.applyDataSetFilter("Bar1", ["order by [Total Profit] asc"]);             ( if [Total Profit] is category field )
+sdk.applyDataSetFilter("Bar1", ["order by [Total Profit] numasc"]);     ( if [Total Profit] is series field )
+</pre>
+								<div class="spl-note">For string sort (use for Category):</div>
+								<pre>
+sdk.applyDataSetFilter("Bar1", ["order by [City] asc"]);
+sdk.applyDataSetFilter("Bar1", ["order by [City] desc"]);
+</pre>
+								<div class="spl-note">For numeric data sort (use for Series):</div>
+								<pre>
+sdk.applyDataSetFilter("Bar1", ["order by [Total Profit] numasc"]);
+sdk.applyDataSetFilter("Bar1", ["order by [Total Profit] numdesc"]);
+</pre>
+								<div class="spl-note">To Sort the dataset and limit number of records, write condition like this:</div>
+								<pre>
+sdk.applyDataSetFilter("Bar1", ["order by Sales asc", "limit 10"]);
+</pre>
+								<div class="spl-note">All the conditions written in array, are executed with AND(&amp;&amp;) Operator, If you need to use OR(||) operator: Please write the filter conditions like this: </div>
+								<pre>
+sdk.applyDataSetFilter("datagrid3", ["CompanyName=='Google' || CompanyName=='Yahoo'" , "ProjectHrs>5000"]);
+</pre>
+								<p><b>Available Operators are:</b> &gt; , &lt; , == , != , &gt;= , &lt;= , || , &amp;&amp;</p>
+								<p><b>Every Conditions should be enclosed in DOUBLE QUOTES: </b>"CompanyName=='Google'" is a valid condition</p>
+								<p><b>Field name shouldn't be kept in SINGLE QUOTE: </b> "'CompanyName'=='Google'" is invalid condition</p>
+								<p><b>Field Name should be valid javascript variable names</b></p>
+								<div class="spl-note"> Some invalid column names are: </div>
+								<ul>
+									<li> Javascript identifiers ( var, boolean, number, function, prototype, new, try, for, Object, this etc.) </li>
+								</ul>
+								<div class="spl-note"> Preference of operations on dataset : </div>
+								<ol>
+									<li> Calculated fields </li>
+									<li> Append additional rows </li>
+									<li> Automanipulation </li>
+									<li> Filter </li>
+									<li> Aggregation </li>
+								</ol>
+								<div class="spl-note"> Limitations: </div>
+								<ul>
+									<li>
+										<p>If a chart has AutoManipulator enabled, filter is applicable only on GroupBy field and Dynamically-Generated-Fields</p> Valid case:
+										<pre>
+sdk.applyAutoManipulator("column14", "Year", "Month", "Expense", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC");
+sdk.applyDataSetFilter( "column14", ["Year>2011", "Jan>100"] );
+</pre> Invalid Case:
+										<pre>
+sdk.applyAutoManipulator("column14" , "Year", "Month", "Expense", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC");
+sdk.applyDataSetFilter( "column14", ["Year>2011", "Month=='Jan'"] );
+</pre> "Month=='Jan'" is invalid condition here as the field "Month" will not be available in the resultant dataset after automanipulation operation </li>
+								</ul>
+								<ul>
+									<li>
+										<p>If a chart has AutoManipulator disabled, filter is applicable on GroupBy fields and Original-Dataset-Fields which are coming from connection </p> Valid case:
+										<pre>
+sdk.applyAutoManipulator("column14", "Year", "Month", "Expense", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC");
+sdk.applyDataSetFilter( "column14", ["Year>2011", "Month=='Jan'"] );
+</pre> Invalid Case:
+										<pre>
+sdk.applyAutoManipulator("column14", "Year", "Month", "Expense", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC");
+sdk.applyDataSetFilter( "column14", ["Year>2011", "Jan>100"] );
+</pre> "Jan>100" is invalid condition here as the field "Jan" is not coming from the connection </li>
+								</ul>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>27. Remove DataSet Filter<button class="downloadSample" onclick='loadHtml("samples/RemoveDatasetFilterAggregationAutomanipulator.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.removeDataSetFilter( "bar32" )</span></p>
+								<p>Arguments : Component id (e.g "bar32") </p>
+								<p>When all the conditions applied on dataset has to be removed</p>
+								<pre>
+var user = sdk.removeDataSetFilter("bar32");
+</pre> </div>
+						</div>
+						<div id="applyAggregation" class="panel">
+							<div class="panel-heading">
+								<h4>28. Apply Aggregation <button class="downloadSample" onclick='loadHtml("samples/ApplyAggregation.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.applyAggregation("bar32", "Year", "Revenue,Expenses", "SUM,SUM")</span></p>
+								<p>Arguments - Component id (e.g "bar32") , Group by node (e.g "Year") , Fields to be aggregated (e.g. "Sales,Profit") , Operations to be applied (e.g. "COUNT,SUM")</p>
+								<p>Use the function to apply aggregation on dataset of chart/ grid. These are he available aggregation operations - SUM, AVG, MAX, MIN, COUNT </p>
+								<h4>Group By node is optional and configured as following:</h4>
+								<ul>
+									<li>
+										<p>if left blank, only single record will come in result with aggregated values for mentioned Fields</p>
+										<pre>
+sdk.applyAggregation("bar32", "", "Revenue", "SUM");
+</pre> </li>
+									<li>
+										<p>If one group by field is given, result will be grouped according to unique values of the fields(Year in the example) </p>
+										<pre>
+sdk.applyAggregation("bar32", "Year", "Revenue", "SUM");
+</pre> </li>
+									<li>
+										<p>If more then one field is given, result will be grouped by last field(Month field in the example) and then grouped by previous field(Year field in example) </p>
+										<pre>
+sdk.applyAggregation("bar32", "Year,Month", "Revenue", "SUM");
+</pre> </li>
+								</ul>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>29. Remove Aggregation<button class="downloadSample" onclick='loadHtml("samples/RemoveDatasetFilterAggregationAutomanipulator.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.removeAggregation( "bar32" )</span></p>
+								<p>Arguments : Component id (e.g "bar32") </p>
+								<p>When aggregation applied on dataset has to be removed</p>
+								<pre>
+var user = sdk.removeAggregation("bar32");
+</pre> </div>
+						</div>
+						<div id="applyAutoManipulator" class="panel">
+							<div class="panel-heading">
+								<h4>30. Apply AutoManipulator <button class="downloadSample" onclick='loadHtml("samples/ApplyAutoManipulator.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.applyAutoManipulator("bar32", "ProductCategories", "ProductNames", "Sales", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC")</span></p>
+								<p>In case of subCategories: <span class="fnSpan">sdk.applyAutoManipulator("bar32", "ProductCategories,ProductSubCategories", "ProductNames", "Sales", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC")</span></p>
+								<p>Arguments - Component id (e.g "bar32") , Category Group (e.g "ProductCategories") OR (e.g "ProductCategories,ProductSubCategories"), Series Group(e.g. "ProductNames") , Value Field (e.g. "Sales") , SeriesColors <br>[Category Group can be multiple (e.g "ProductCategories,ProductSubCategories")]</p>
+								<p>Use the function to manipulate the dataset - Fields which are dragged in category and series container, will not be considered for drawing if automanipulator is enabled </p>
+								<p>Drag and drop the categoryGroup , SeriesGroup, Value Field in any of the container(Category/Series/Field) </p>
+								<p>Use the above method to configure the automanipulator</p>
+								<p>Apart from this - we need to configure the field colors for the series which will generated dynamically after data manipulation.</p>
+								<p>If colors are less then generated field numbers - colors will be repeated </p>
+								<p>If automanipulator is used in bar/column/mixed chart - Use STACK/OVERLAID/100% type of chart for better view</p>
+								<p>To hide undefined/ null values from tooltip</p>
+								<pre>
+sdk.getWidget("line").m_controlledtooltip = true;
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>31. Remove AutoManipulator<button class="downloadSample" onclick='loadHtml("samples/RemoveDatasetFilterAggregationAutomanipulator.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.removeAutoManipulator( "bar32" )</span></p>
+								<p>Arguments : Component id (e.g "bar32") </p>
+								<p>When automanipulator applied on dataset has to be removed</p>
+								<pre>
+var user = sdk.removeAutoManipulator("bar32");
+</pre> </div>
+						</div>
+						<div id="appendRows" class="panel">
+							<div class="panel-heading">
+								<h4>32. AppendRows <button class="downloadSample" onclick='loadHtml("samples/AppendRows.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.appendRows("bar1", [{"Name": "Total", "Sale": 1000, "Profit": 200}])</span></p>
+								<p>Arguments - Component id (e.g "bar1"), Array of row-objects</p>
+								<p>Use the function to add additional rows in the dataset of a component </p>
+							</div>
+						</div>
+						<div id="getAggregatedData" class="panel">
+							<div class="panel-heading">
+								<h4>33. Get Aggregated Data <button class="downloadSample" onclick='loadHtml("samples/GetAggregatedData.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.getAggregatedDataSet(changedItem.attributes.data, "SUM")</span></p>
+								<p>Arguments - Component id (e.g "bar32") , Operation to be applied (e.g. "COUNT,SUM")</p>
+								<p>Available Operations are - SUM , AVG , MAX , MIN , COUNT </p>
+								<p>Use the function to get aggregated data of dataset .Value can be used in label/gauge/slider etc </p>
+								<p>Return type of this method is a JSON object.</p>
+								<pre>
+var aggrData = sdk.getAggregatedDataSet(changedItem.attributes.data , "SUM");
+sdk.setValue("label2", aggrData.Revenue);
+</pre> <br>It will set the summation of profit values to label component </div>
+						</div>
+						<div id="applyGlobalFont" class="panel">
+							<div class="panel-heading">
+								<h4>34. Apply Global Font Family <button class="downloadSample" onclick='loadHtml("samples/ApplyGlobalFont.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : <span class="fnSpan">sdk.applyGlobalFont({'url': 'https://fonts.googleapis.com/css?family=Roboto', 'fontFamily': 'Roboto', 'useGlobalFont': 'false'})</span></p>
+								<p>Arguments - url: url to get the css of font, fontFamily: name of font, useGlobalVariable: true/false</p>
+								<pre>
+sdk.applyGlobalFont({'url': 'https://fonts.googleapis.com/css?family=Roboto', 'fontFamily': 'Roboto', 'useGlobalFont': 'false'});
+</pre> </div>
+						</div>
+						<div id="LoadOpenDoc" class="panel">
+							<div class="panel-heading">
+								<h4>35. Load Open Doc <button class="downloadSample" onclick='loadHtml("samples/LoadOpenDoc.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : sdk.loadOpenDoc(params, opendDocUrl);</p>
+								<p>Arguments - params: parameters which are required to pass as parameter, ex. var params = {docid:142671892, token:sdk.getContext('dashboard_user').apiToken};</p>
+								<p>Arguments - opendDocUrl: Optional url, if exisiting open doc url gets changed in future </p>
+								<pre class="preTagClass">
+var at = sdk.getContext('dashboard_user').apiToken;
+var params = {docid:142671892, token:at};
+var opendDocUrl = appRootPath + "opendocument.html";
+sdk.loadOpenDoc(params, opendDocUrl);
+</pre> </div>
+						</div>
+						<div id="updateDatasetOperationOrder" class="panel">
+							<div class="panel-heading">
+								<h4>36. Update Dataset Operation Order <button class="downloadSample" onclick='loadHtml("samples/UpdateDatasetOperationOrder.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : sdk.updateDatasetOperationOrder(["bar32", "bar35"], {0: "calcField", 1: "appendRows", 2: "autoManipulator", 3: "filter", 4: "aggregation"});</p>
+								<p>Arguments - Array of Component Id's;</p>
+								<p>Arguments - Object with order of operations </p>
+								<pre class="preTagClass">
+sdk.updateDatasetOperationOrder(["bar32", "bar35"], {0: "calcField", 1: "appendRows", 2: "autoManipulator", 3: "filter", 4: "aggregation"});
+</pre> </div>
+						</div>
+						<div id="getWebSocketResponse" class="panel">
+							<div class="panel-heading">
+								<h4>37. get WebSocket Response <button class="downloadSample" onclick='loadHtml("samples/getWebSocketResponse.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : sdk.getWebSocketResponse();</p>
+								<pre class="preTagClass">
+var response = sdk.getWebSocketResponse();
+if(response.state=="open"){
+  console.log("WS opened");
+}else if(response.state=="message"){
+	switch (response.message) {
+		case "actual_vs_predicted_total":
+			sdk.reload(['C_2']);
+			sdk.setValue("label2", changedItem.attributes.data.socketvalue);
+	    	break;
+		case "wicket_prediction":
+			sdk.reload(['C_3']);
+			sdk.setValue("label3", changedItem.attributes.data.socketvalue);
+	    	break;
+		default:
+			break;
+	}
+}else if(response.state=="close"){
+   console.log("WS Closed");
+}
+</pre> </div>
+						</div>
+						
+						<div id="applyLanguageMapping" class="panel">
+							<div class="panel-heading">
+								<h4>38. apply Language Mapping <button class="downloadSample" onclick='loadHtml("samples/applyLanguageMapping.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Method : sdk.applyLanguageMapping();</p>
+				<p>Arguments - Configuration Object</p>
+				<ul>
+				<li>isEnabled - to enable language setting in that dashboard</li>
+				<li>language - language for a user, this can be set as 'all' or can be taken from user-custom-properties </li>
+				<li>name - name of the Language Setting configuration which is available in the Admin Panel </li>
+				<li>hideBrackets - set true, if {curly brackets} are not required when there are no mapping available for some keys </li>
+				</ul>
+				<p>Details:</p>
+				<ul><li>This method should be written at the dashboard script, Language mapping service will return the mapping json when dashboard loads.</li>
+				<li>Enclose the mapping keys in curly brackets {} wherever required in a component.</li>
+				</ul>
+				<p>Applicable at following places:</p>
+				<ul>
+				<li>Chart - Title, Subtitle, Axis descriptions, Legends, Tooltips</li>
+				<li>Datagrid - headers</li>
+				<li>Bullet/ Filter/ Gauge/ Semi Gauge and Url Button - title</li>
+				<li>Label: <b>Dynamic property should be true</b></li>
+				</ul>
+								<pre class="preTagClass">
+sdk.applyLanguageMapping( {"isEnabled": "true", "language": "hi-IN", "name": "Sales2018Dashboard", hideBrackets: "false"} );
+</pre> </div>
+						</div>
+
+						<div id="setFilterSelectedIndex" class="panel">
+							<div class="panel-heading">
+								<h4>39. set Filter SelectedIndex <button class="downloadSample" onclick='loadHtml("samples/setFilterSelectedIndex.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+				<p>Method : sdk.setFilterSelectedIndex('Comp_ID', ['Indexes']);</p>
+				<p>Arguments - CompID,  Array of selected index</p>
+				<ul>
+				<li>id - Filter component id </li>
+				<li>selectedIndexArray - write the selected index in array </li></ul>
+				<p>Should be written at connection script</p>
+								<pre class="preTagClass">
+sdk.setFilterSelectedIndex( 'filter1', ["1"] );
+sdk.setFilterSelectedIndex( 'filter2', ["1", "2", "4"] );
+sdk.setFilterSelectedIndex( 'hfilter3', ["1", "2", "3"] );
+sdk.setFilterSelectedIndex( 'list4', ["1", "2"] );
+</pre> </div>
+						</div>
+
+						<div id="setFilterSelectedIndex" class="panel">
+							<div class="panel-heading">
+								<h4>40. apply Field Updates <button class="downloadSample" onclick='loadHtml("samples/applyFieldUpdates.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+				<p>Method : sdk.applyFieldUpdates('Comp_ID', [field1_JSON, field2_JSON]);</p>
+				<p>Arguments - CompID,  Array of Fields JSON</p>
+				<ul>
+				<li>id - Component id </li>
+				<li>Array of JSON with properties of each field to be changed</li></ul>
+				<p>Should be followed by reloadDataset to redraw component</p>
+								<pre class="preTagClass">
+sdk.applyFieldUpdates('bar1',[{name:'sales', properties:{visible: "false"}}, {name:'profit', properties:{PlotTransparency : "0.5"}}] );
+sdk.reloadDataset( 'bar1' );
+</pre> </div>
+						</div>
+		
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>SDK methods : Usage and examples</h4>
+							</div>
+							<div class="panel-body">
+								<div class="spl-note">Script can be written at these places</div>
+								<ol>
+									<li>On Component: On click of a data point of charts , click on a row of datagrid, change of filters, click on label/ icon/ rectangle etc.</li>
+									<li>On Connection load: Script will be executed just after the connection fetches the data</li>
+								</ol>
+								<div class="spl-note">Available Javascript Objects in scripting</div>
+								<ol>
+									<li>
+										<h4>sdk</h4> It is a desiger SDK Object which has many inbuilt functions used to achieve various functionalities in dashboard. <br> Syntax and usage of those methods are explained above </li>
+									<li>
+										<h4>changedItem</h4> Javascript Object which contains attributes. <br> i.e if script is written for a LineChart, When we click on a data point, script will be executed and changedItem will be referred to lineChart <br> "changedItem.key": id of the lineChart <br> "changedItem.attributes": associated values to that data point </li>
+								</ol>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Script to use "context" variable <button class="downloadSample" onclick='loadHtml("samples/UseContext.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<ol>
+									<li>Context global variable is used to fetch the properties loaded from portal such as user name,email, custom property etc. Below listed are the available attributes for an user.
+										<ul>
+											<li>dashboard_emailid: "username@domain.com"</li>
+											<li>dashboard_uniqueid: username@domain.com</li>
+											<li>dashboard_id: "user id"</li>
+											<li>dashboard_fullname: "Last Name First Name"</li>
+											<li>dashboard_username: "user name"</li>
+											<li>dashboard_user: Object which has all the user properties</li>
+											<li>Examples:
+												<pre class="preTagClass">var cntx = sdk.getGlobalVariable( "context" );
+var un = cntx.attributes.dashboard_username;
+sdk.setValue("label1", "Welcome " + un);
+var at = cntx.attributes.dashboard_authtype;
+sdk.setValue("label2", "authType " + at);</pre>
+												<pre class="preTagClass">var cntx = sdk.getGlobalVariable( "context" );
+var user = cntx.attributes.dashboard_user;
+sdk.setValue("label3", "Welcome " + user.userName);
+sdk.setValue("label4", "authType " + user.authType);</pre>
+											</li>
+										</ul>
+									</li>
+									<li>If the user is having a custom field in the portal, that also can be fetched in dashboard in the following format
+										<ul>
+											<li>Examples: by method getUserCustomProperty
+												<pre class="preTagClass">
+var cpd = sdk.getUserCustomProperty("Department");
+sdk.setValue("label1", "Dept: " + cpd);
+var cpz = sdk.getUserCustomProperty("ZONE");
+sdk.setValue("label2", "Zone: " + cpz);
+var cpe = sdk.getUserCustomProperty("Emergency Contact Number");
+sdk.setValue("label3", "Emergency Contact Number: " + cpe);</pre>
+											</li>
+											<li>Examples: by key user_CustomPropertyName
+												<pre class="preTagClass">var cntx = sdk.getGlobalVariable( "context" );
+var cpd = cntx.attributes.user_Department;
+sdk.setValue("label1", "Dept: " + cpd);
+var cpz = cntx.attributes.user_ZONE;
+sdk.setValue("label2", "Zone: " + cpz);
+var cpe = cntx.attributes["user_Emergency Contact Number"];
+sdk.setValue("label2", "Emergency Contact Number: " + cpe);</pre>
+											</li>
+										</ul>
+									</li>
+									<li>If the dashboard has Dashboard parameters set from the portal, that also can be fetched in dashboard in the following format
+										<pre class="preTagClass">var cntx = sdk.getContext( "dashboard_dashboardparameters" );
+var dpl = cntx.lang;
+console.log(dpl);</pre>
+									</li>
+								</ol>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Script written on connection change or load</h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+sdk.setValue( "BVZlabel5", changedItem.attributes.data[ 0 ].team );
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Change dashboard color with some condition</h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+var myColors = [ "India": "#0000ff", "US": "#00ff00" ];
+var selectedTeam = changedItem.attributes.team;
+var myColor = myColors[ selectedTeam ];
+sdk.changeDashboardBGColor( myColor );
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>script written on load data</h4>
+							</div>
+							<div class="panel-body">
+								<p>changedItem.attributes.data is an array which hold the data got from webservice, csv or excel connection</p>
+								<pre>
+sdk.setValue( "BVZlabel1", changedItem.attributes.data[ 1 ][ "resourcename" ] );
+</pre> OR
+								<pre>
+var myValue = changedItem.attributes.data[ 1 ][ "subject" ];
+sdk.setValue( "BVZlabel8", myValue );
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Setting value to Gauge<button class="downloadSample" onclick='loadHtml("samples/gauge-update-from-connection-context.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+var hours = changedItem.attributes.data[ 8 ][ "hrs" ];
+sdk.setValue( "BVZgauge1", hours );
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Apply styles using script( for advance users )<button class="downloadSample" onclick='loadHtml("samples/ApplyStylesUsingScript.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>(This is an example for setting style to the label, user need to inspect the elements of html and apply style to respective elements using selectors)</p>
+								<pre>
+sdk.applyStyle( "Selector", "CSS_Property_Name", "CSS_Value" );
+var division = sdk.getDivIdFromComponetId( "label1" );
+sdk.applyStyle( "#" + division + " span", "color", "#ff0000" );
+</pre> This will apply mutiple css styles in one syntax.
+								<pre>
+sdk.applyStyles( "Selector", "CSS_Property_Name_Value_Object" );
+var division = sdk.getDivIdFromComponetId( "label1" );
+sdk.applyStyles( "#" + division + " span", {"color": "#ff0000", "background": "#cccccc", "border-radius": "10px"; "border": "5px solid red"} );
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Giving user details to a label</h4>
+							</div>
+							<div class="panel-body">
+								<p>(This will work only after loading user details service call finished, before that user details will be undefined)</p>
+								<pre>
+var user = sdk.getContext( "dashboard_username" );
+sdk.setValue( "label3", "Welcome " + user + "!" );
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Setting email and user id to a single label by string concatination</h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+var userDetailObject = sdk.getContext( "dashboard_user" );
+var detail = "email - " + userDetailObject.emailID + " userID - " + userDetailObject.id;
+sdk.setValue( "label4", detail );
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Change graphics shape at runtime</h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+sdk.setGraphicsProperty( "shape1", "color", "#ff0000" );
+sdk.setGraphicsProperty( "shape1", "symbol", "twitter" );
+sdk.setGraphicsProperty( "shape1", "symbol", "none" );
+sdk.setGraphicsProperty( "shape1", "pathData", "M11.166,23.963L22.359,17.5c1.43-0.824,1.43-2.175,0-3L11.166,8.037c-1.429-0.826-2.598-0.15-2.598,1.5v12.926C8.568,24.113,9.737,24.789,11.166,23.963z" );
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Collapse all nodes in scorecard<button class="downloadSample" onclick='loadHtml("samples/CollapseNodesInScorecard.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+sdk.getWidget("scorecard1").m_collapseallnode = true;
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>To hide undefined/ null values from tooltip (USEFUL in Automanipulator case)</h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+sdk.getWidget("line").m_controlledtooltip = true;
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Auto hide tooltip after 10 seconds<button class="downloadSample" onclick='loadHtml("samples/HideToolTip.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+sdk.getWidget("area1").m_autotooltiphide = true;
+sdk.getWidget("area1").m_tooltiphidetimeout = 10000;
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Set custom border for a component<button class="downloadSample" onclick='loadHtml("samples/CustomBorderComponent.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+sdk.getWidget("area1").m_bordercolor = "#BDC3C7";
+sdk.getWidget("area1").m_borderradius = "1";
+sdk.getWidget("area1").m_borderthickness = "1";
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Set custom sheet name for a component in export_dashboard_excel <button class="downloadSample" onclick='loadHtml("samples/ScreenshotSheetName.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+sdk.getWidget("area1").m_scrnshotsheetname = "SalesArea";
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Set an image dynamically on dropdown change<button class="downloadSample" onclick='loadHtml("samples/SetImageDynamically.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body"> 1. In "Component Variables and Script" window: Set url/ base64-code in Value field of filter-attribute under "Default Value Attributes" tab. <br> <br> 2. Write the script in Script-window of the connection which is assigned to comboBox <br>
+								<pre>
+var val4 = sdk.getGlobalVariable("filter5").attributes.Value;
+sdk.setValue("image4", val4);
+</pre> 3. Write the script on Script-window of combobox
+								<pre>
+sdk.setValue("image4", changedItem.attributes.Value);
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4> To apply automanipulator in charts <button class="downloadSample" onclick='loadHtml("samples/AutomanipulatorInCharts.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body"> 1. Components which is already having category color (indicator) feature: <br>
+								<pre>
+var chart = sdk.getWidget("column1");
+if(chart.m_categoryColors){
+	chart.m_categoryColors.m_categorydefaultcolor = "#CCCCCC";
+	chart.m_categoryColors.m_categorydefaultcolorset = "#9087ee,#eeeeee,#eff444,#234efe,#543ccc,#9ae343,"#225fcb";
+	chart.m_categoryColors.m_showcolorsfromcategoryname = false;
+	sdk.applyAutoManipulator("column1", "catgp", "sergrp", "val", "");
+}
+</pre> 2. For Bubble/ Area and other charts which doesn't have category color feature: <br>
+								<pre>
+var chart = sdk.getWidget("bubble2");
+if(!chart.m_categoryColors){
+	chart.m_categoryColors = new CategoryColors();
+}
+chart.m_categoryColors.m_categorydefaultcolor = "#CCCCCC";
+chart.m_categoryColors.m_categorydefaultcolorset = "#9087ee,#eeeeee,#eff444,#234efe,#543ccc,#9ae343,"#225fcb";
+chart.m_categoryColors.m_showcolorsfromcategoryname = false;
+sdk.applyAutoManipulator("column1", "catgp", "sergrp", "val", "");
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4> To apply repeater in charts <button class="downloadSample" onclick='loadHtml("samples/Repeater.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>To show the repeater-field-value in title of the repeated chart: [repeaterField]</p>
+								<p>Examples: [repeaterField]</p>
+								<p>Examples: [repeaterField] Any-Global-Variable-Value [checkbox9.Value] Any-Static-String [filter45.Year]</p>
+								<pre>
+var chart = sdk.getWidget("bubble2");
+chart.m_isrepeater = "true";
+chart.m_repeaterfield = "";
+chart.m_repeatercolumns = "3";
+chart.m_repeaterheight = "250";
+chart.m_repeatervmargin = "5";
+chart.m_repeaterhmargin = "5";
+</pre>
+								<p>To hide the empty series values from the tooltip of repeater charts</p>
+								<p>Examples: sdk.getWidget('bubble2').chartJson.controlledTooltip = true;</p>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4> To show Global-Variable values in Title/ Subtitle/ AxisTitles of the components <button class="downloadSample" onclick='loadHtml("samples/Repeater.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>To show any custom value in component's Title/ Subtitle/ AxisDescription, we can use 'context' global-variable </p>
+								<p>Step1: Set key-value pair(s) using setContext() method</p>
+								<p>Step2: Use the 'key' with 'context' global-varibale</p>
+								<pre>
+sdk.setContext("customKey", "customValue1");
+sdk.setContext("thisYear", "2017");
+</pre>
+								<p> [checkbox9.Value] OR [filter45.Year] </p>
+								<p> [context.dashboard_username] OR [context.customKey] OR [context.thisYear]</p>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Export a chart from label or image script <button class="downloadSample" onclick='loadHtml("samples/ExportChart.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+var chart = sdk.getWidget("bubble2");
+chart.plugin.exportToExcel();
+chart.plugin.exportToJPEG();
+chart.plugin.exportToPNG();
+chart.plugin.exportToPDF();
+chart.plugin.exportToPPT();
+chart.plugin.exportToPrint();
+chart.plugin.showData();
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Download dashboard to local directory <button class="downloadSample" onclick='loadHtml("samples/ToggleComponents.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+sdk.exportDashboardJSON();
+</pre>
+								<p>Write it on any label/ image to download the dashboard to local directory.</p>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Show Predictive Workflow summary in text-box <button class="downloadSample" onclick='loadHtml("samples/ShowPAWorkflowSummary.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+sdk.setValue( "text4", changedItem.attributes.FrameworkComponent.status.Summary );
+</pre>
+								<p>Write it on the Script-On-Change of the Predictive-connection which has summary and want to display in a text-box.</p>
+								<pre>
+sdk.setValue( 'text3', sdk.getConnectionSummary( 'C_1') );
+</pre>
+								<p>Get summary of a predictive-connection from anywhere once it is loaded.</p>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Show Predictive Python Workflow Graph in text-box <button class="downloadSample" onclick='loadHtml("samples/ShowPAWorkflowGraph.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p>Write it on the Script-On-Change of the Predictive-connection and update the ID accordingly which returns Graph url </p>
+								<pre>
+var ifr = '&lt;iframe class="graphIframes"  src="'+sdk.getConnectionGraphs( 'C_1')+'" style="width:90%;height:90%;background:#ffffff;border:none;top:5%;left:5%;position:absolute;"&gt;&lt;/iframe&gt;';
+sdk.setValue('text5', ifr);
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Update properties of fields generated dynamically from automanipulator <button class="downloadSample" onclick='loadHtml("samples/SetDynamicFieldPropertiesFromAutomanipulator.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+DataSet.prototype.updateAutoJson = function (json) {
+	if( this.m_id == "mix2" ){
+		switch(json.Name){
+		case "Sale_IOS":
+			json.ChartType = "line";
+			json.PlotType = "point";
+			json.PlotRadius = "8";
+			break;
+		case "Sale_UBUNTU":
+			json.ChartType = "line";
+			json.PlotType = "triangle";
+			json.PlotRadius = "8";
+			break;
+		case "Sale_ANDROID":
+			json.PlotTransparency = "0.4";
+			json.DisplayName = "Hello_Sale_Android";
+			break;
+		}
+	}
+	return json;
+};
+</pre>
+								<p>Write it on the Dashboard Script. this method will update the field's properties for mix2 chart only as we have put an if-check.</p>
+								<p>if we do not put check, these changes will be applicable for all automanipulatored fields, which may not be the ideal scenario </p>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Dataset Filter from multi-select-combobox <button class="downloadSample" onclick='loadHtml("samples/datasetFilterFromMutiSelectCombobox.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+var condition = changedItem.attributes.CompanyName.split(",").map(function(val){
+	return "CompanyName=='"+val+"'";
+}).join("||");
+sdk.applyDataSetFilter( 'datagrid4', [condition] );
+sdk.reloadDataset( [ 'datagrid4' ] );
+</pre>
+								<p>Write it on the Script-On-Change of the Multi-Select-Combobox. </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Heatmap: solid filling for range-colors<button class="downloadSample" onclick='loadHtml("samples/HeatmapSolidColorFilling.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+var ch = sdk.getWidget("heatmap2");
+ch.m_gradientfill = false
+ch.m_defaultfillcolor = "#eee";
+</pre>
+								<p>Write it on the Connection Script.</p>
+								<p> For dynamic-range, this script will not work as dynamic-range will always fills from the min-max gradient color.</p>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Datagrids: write custom CSS to update rows/cols <button class="downloadSample" onclick='loadHtml("samples/DatagridsCustomCSSToUpdateRowsCols.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<pre>
+Widget.prototype.applyAdditionalStyles = function() {
+	var temp = this;
+	if(temp.m_referenceid == "datagrid7"){
+		$("#" + temp.m_componentid).find(".datagrid-row").css("height", temp.m_rowheight+"px");
+	}
+};
+</pre>
+								<p>Write it on the Dashboard Script. this method will set a height to tr-elements of datagrid7 </p>
+							</div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Category Indicator in Pie Chart <button class="downloadSample" onclick='loadHtml("samples/PieIndicatorScript.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p> Write below script on the connection from where the color-data is coming </p>
+								<pre>
+var indicatorArr = [];
+changedItem.attributes.data.map(function(obj){
+	indicatorArr.push( {name: obj.region, color: obj.color} );
+});
+sdk.setContext( 'pieIndicators', indicatorArr );
+sdk.reload( [ 'C_1' ] );
+</pre>
+								<p> Write below script on the connection from where the pie-data is coming </p>
+								<pre>
+sdk.setPieIndicator('pie2', 'Region', sdk.getContext( 'pieIndicators' ), changedItem.attributes.data ) ;
+</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Category Indicator in a Chart <button class="downloadSample" onclick='loadHtml("samples/CategoryIndicatorScript.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p> Write below script on the connection from where the color-data is coming </p>
+								<pre>
+var lineIndicatorObj = {};
+changedItem.attributes.data.map(function(obj){
+	lineIndicatorObj[obj.label] = obj.color2;
+});
+sdk.setContext( 'lineIndicators', lineIndicatorObj );
+sdk.reload( [ 'C_1' ] );
+</pre>
+								<p> Write below script on the connection from where the chart-data is coming </p>
+								<pre>
+sdk.setCategoryColors('line8', sdk.getContext( 'lineIndicators' )  ) ;
+</pre> </div>
+						</div>
+
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Category Color Set in a chart <button class="downloadSample" onclick='loadHtml("samples/setCategoryColorSet.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p> Write below script on the connection from where the data is coming in chart </p>
+								<pre>
+sdk.setCategoryColorSet("timeline2", ["#9B74E2", "#8A5DDE", "#7A46D9", "#692FD4", "#5918d0","#350E7C","#2C0C67","#230953","#1A073E","#110429"]);
+</pre>
+						<p>Note:<br/>
+						1. if color-array-length is less then category-data-length, then colors will be repeated.</p>
+						<p>2. Go to chart dataset panel, click on category field, go to indicator tab, add one Any_Sample_Name indicator.</p>
+						</div>
+</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Callback After Rendering <button class="downloadSample" onclick='loadHtml("samples/CallbackAfterRendering.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p> Write below script on the connection/component </p>
+								<pre>
+sdk.setAfterRenderCallBack( 'label1',function() {
+  	alert("Color Label Dynamic On");
+  	var a = sdk.getDivIdFromComponetId( 'label1' );
+  	sdk.applyStyle('#'+a+' span','backgroundColor','#7ac143');
+  	sdk.applyStyle( '#'+a , 'border' ,'1px',' #878587');
+});
+					</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Mobile/ Tablet Layout script control <button class="downloadSample" onclick='loadHtml("samples/MobileTabletDesktopLayoutScript.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p> Write below script on the connection to write different script for Mobile and Tablet views</p>
+								<pre>
+if(sdk.getLayoutType()=="AbsoluteLayout"){
+	alert("Desktop Layout");
+}if(sdk.getLayoutType()=="MobileLayout"){
+	alert("Mobile Layout");
+}if(sdk.getLayoutType()=="TabletLayout"){
+	alert("Tablet Layout");
+}
+					</pre> </div>
+						</div>
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Skip keys from connection filter <button class="downloadSample" onclick='loadHtml("samples/SkipFilterValues.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p> Write below script on the Dashboard, when the filter has empty, null or any user-defined value then it will not be passed in service calling </p>
+								<pre>
+sdk.setSkipFilterValues( ['C_1', 'C_2', 'C_5'], ["", "null", "All"] );
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Custom ToolTip Width <button class="downloadSample" onclick='loadHtml("samples/CustomToolTipWidth.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p> Write below script on the connection/component </p>
+								<pre>
+sdk.getWidget( 'Column1' ).m_customtooltipwidth = 350;
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Dashboard Guided Tour<button class="downloadSample" onclick='loadHtml("samples/DashboardGuidedTour.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p> Write below script on the label/ image component, on click of label tour will start. </p>
+								<p> Write a name in 'config' object, and create the steps array of any length. </p>
+								<p> Every step should have an HTML Element (Id of the element)on which the information is required, Title and content should be added for that step. </p>
+								<p> Placement and duration is optional. </p>
+								<p> onStart and onEnd are optional and can be used for more custom scripting. </p>
+								<p><a href="//bootstraptour.com/api/" target="_blank">More configuration options</a></p>
+								<pre>
+var config = {
+				name: 'dashboardTour',
+				steps: [
+					{"element": "#" + sdk.getDivIdFromComponetId('datagrid9'), "title": "Yearly Sales grid ", "content": "This grid shows Sales trend by Years < br> Shows Sales in M$ < br> Refresh the grid by selecting different firm from filter", "placement" : "auto", "duration": "1500"},
+					{"element": "#" + sdk.getDivIdFromComponetId('sgauge4'), "title": "Sales Target vs Actual ", "content": "Gauge has target and achieved sales in selected year", "placement" : "bottom", "duration": "2000" },
+					{"element": "#" + sdk.getDivIdFromComponetId('grpbar10'), "title": "Sales Category Chart ", "content": "This chart plots cumulative sum of sales in each segment" }
+				],
+				onStart: function(){},
+				onEnd: function(){}
+};
+sdk.startDashboardTour(config);
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Best Fit Line For Scatter Plot <button class="downloadSample" onclick='loadHtml("samples/SetBestFitLine.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+								<p> Write below script on the connection/component </p>
+								<pre>
+sdk.setBestFitLine('Plot1',[{
+	'FieldName': 'X1',
+	'EnableLine': true,
+	'LineWidth': "2",
+	'LineColor': "#000000",
+	'LineType': 'straight' 	// (dot,dash,dash1)
+}]);
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Tooltip for Mobile <button class="downloadSample" onclick='loadHtml("samples/mobileTooltipStyle.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+<p>a) For Timeline, Bar, Heatmap & Pie mobile specific Tooltip is available.</p>
+<p>b) This Tooltip works only when component is in maximized state.</p>
+<p>c) Default Tooltip can be enabled through script</p>
+								<pre>
+sdk.getWidget( 'ComponentID' ).m_mobiletooltipstyle = "default";
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Refresh cache for data service <button class="downloadSample" onclick='loadHtml("samples/refreshCache.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+<p> Write below script on the connection/component </p>
+								<pre>
+sdk.refreshCache();
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Leaflet Tiles <button class="downloadSample" onclick='loadHtml("samples/LeafletMapTiles.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+<p> Write below script on the connection/dashboard </p>
+								<pre>
+sdk.getWidget( 'map1' ).m_mapoptions.mapvariant = "NASAGIBS.ViirsEarthAtNight2012";
+sdk.getWidget( 'map1' ).m_mapoptions.mapvariant = "OpenSeaMap";
+
+Map Variants:- 
+1) OpenStreetMap: Mapnik,DE,CH,France,HOT,BZH
+2) OpenPtMap
+3) OpenRailwayMap
+4) Thunderforest: OpenCycleMap,Transport,,TransportDark,SpinalMap,Landscape,Outdoors,MobileAtlas
+5) Stamen: Toner,TonerBackground,TonerHybrid,TonerLines,TonerLabels,TonerLite,Watercolor,Terrain
+6) CartoDB: Positron,PositronNoLabels,PositronOnlyLabels,DarkMatter,Voyager,VoyagerLabelsUnder
+7) NASAGIBS: ModisTerraTrueColorCR,ViirsEarthAtNight2012,ModisTerraLSTDay,ModisTerraChlorophyll
+
+To stop zoom in/out on mouse scroll:-
+sdk.getWidget( 'map1' ).m_mapoptions.wheelzoom = false;
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Continuous Line Plot <button class="downloadSample" onclick='loadHtml("samples/ContinuousLinePlot.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+<p> Write below script on the connection/dashboard </p>
+								<pre>
+sdk.getWidget( 'line2').m_continuousline = true;
+
+To change line type of the continuous line, add below script:
+sdk.getWidget( 'line2' ).m_continuouslinetype = {"straight" : "dash" , "dot" : "straight" , "dash" : "straight" , "dash1" : "straight"};
+
+<b>Note:</b> This will support for Line chart and Timeline Chart.
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Export the chart data as TSV or CSV extension <button class="downloadSample" onclick='loadHtml("samples/Export_As_CSV_or_TSV.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+<p> Write below script on the connection/dashboard </p>
+								<pre>
+sdk.getWidget( 'bar1' ).m_excelexportext = 'tsv';
+                 or
+sdk.getWidget( 'bar1' ).m_excelexportext = 'csv';
+
+<b>Note:</b> At once we can export only as one of the file types - Excel or CSV or TSV
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Export Scripts <button class="downloadSample" onclick='loadHtml("samples/ExportChartTo_Image_&_TabularForm.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+<p> Script for exporting chart data as tabular form </p>
+								<pre>
+var a= sdk.getWidget( 'grpbar1' );
+a.m_exporttopdfgrid.exportastable = true; 
+a.m_exporttopdfgrid.theme = "striped"; //supported themes - striped / grid / plain
+a.m_exporttopdfgrid.orientation = "l";  //  l or p
+a.m_exporttopdfgrid.filterdetails = false; // make it as "true" to display filter details if any
+					</pre> 
+<p> Script for exporting chart data as Image & Tabular form in one file </p>
+								<pre>
+   sdk.getWidget( 'grpbar2' ).m_exporttopdfngrid = true;
+					</pre> 
+<p>To Change Heading and Sub-Heading Styling properties </p>
+	<pre>
+var a =sdk.getWidget( 'grpbar1' );
+a.m_pdfheadingcolor = "#006684";
+a.m_pdfsubheadingcolor = "#d62728 ";
+a.m_pdfheadingopacity = 1;
+a.m_pdfsubheadingopacity = 1;
+a.m_pdfhfontcolor = "#d62728";
+a.m_pdfshfontcolor = "#006684";
+					</pre> 
+					</div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Export PDF of Dashboard in multiple pages<button class="downloadSample" onclick='loadHtml("samples/ExportPDFinMultiplePages.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+<p> Write below script on the component on which Export has to be performed </p>
+								<pre>
+sdk.getWidget('label3').m_scrnshotfilename = "Dashboard";
+sdk.getWidget('label3').m_scrnshotorientation = "p";
+sdk.getWidget( 'label3').m_hidemaxnmin = true;
+sdk.getWidget( 'label3').setCustomExportPdf(
+[
+	['box12','bar1','area2','column5','funnel6','pie7','bubble8','progress11','gauge14','sgauge14','svg20','svg21'],
+	['box10','pie7','bubble8','datagrid17','plot18','progress14','gauge15','sgauge16','svg22']
+],[
+	['label18'],
+	['label19']
+]);
+
+<b>Note:</b>
+1. In script setCustomExportPdf method takes two multidimensional arrays, first array is for visible component pages & second is for hidden component pages.
+2. Multidimensional arrays with each array of components represent a page in PDF.
+3. Dimensions of first component will be considered as page dimensions.
+4. Hidden components should be added in same correlated array, first hidden array will export in first page of PDF.
+   Example: In the script above ['label18'] will be exported in first page comprises ['box12','bar1','area2',....]
+5. Filename & orientation scripts are not mandatory, if required should be written before setCustomExport.
+6. To hide Maximize and minimize icons on export value of "m_hidemaxnmin" should be true.
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>FilterChips Script<button class="downloadSample" onclick='loadHtml("samples/FilterChipsSample.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+<p> Script for updating filter chips</p>
+								<pre>
+sdk.updateFilterChips('filterchips1');
+
+1. Apply above script in component which is reloading connection after applying filters.
+					</pre> </div>
+						</div>
+						
+						<div class="panel">
+							<div class="panel-heading">
+								<h4>Filter Saver Cascading <button class="downloadSample" onclick='loadHtml("samples/Cascadingfiltersaver.bvzx")'><i class="glyphicon glyphicon-save" data-toggle="tooltip" data-placement="left" title="Download Sample"></i></button></h4>
+							</div>
+							<div class="panel-body">
+<p> Write below script on the dashboard </p>
+								<pre>
+sdk.getWidget( 'filtersaver1' ).m_filtersavermap = {
+	"popupHeaderText": "Filter Saver",	// to edit the header text of modal pop-up
+	"popupAddCriteriaText": "Add Criteria",	// to edit the Add criteria panel text
+	"popupListCriteriaText": "Criteria List",	// to edit the list criteria panel text
+	"enableCheckBox": "false",	// enable-disable checkbox, false by default
+	"listFilterComponents": ["filter1","filter2"],	// to list only those filters whose value has to be saved.
+	"cascadingDefinition": ["filter2","filter1","filter3"]	// arrange filters in the cascading order.
+}
+
+"listFilterComponents" can be used to list all those filters whose value has to be saved either when checkbox is enabled,disabled or cascading scenario.
+
+<b>Mandatory condition for cascaded filter:</b>
+* Don't use sdk.updateGlobalVariable() script, enable global variable from property palette.
+* "cascadingarraydef" is required when filter are cascaded. In the above definition, index of all the filters(filter3 and filter1) will be updated
+in descending order without redrawing it, redraw will be triggered at last only for the 1st filter mentioned in the definition (ie, filter2) 
+that will result in the redrawing of all cascaded filters. In result, it will avoid the multiple service loading.
+					</pre> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="advance-scripts" class="container-fluid"></div>
+	<footer class="text-center">
+		<a href="#" title="To Top">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+	</footer>
+	<script>
+		function loadHtml(htmlUrl) {
+			/**Added to support IE browser download*/
+			$.ajax({
+				url: htmlUrl,
+				cache: false,
+				success: function(html) {
+					this.htmlData = html;
+					if (this.htmlData) {
+						var dJson = this.htmlData;
+						var dName = "";
+						fileNameArray = htmlUrl.split("/");
+						dName = fileNameArray[fileNameArray.length - 1];
+						fileNameArray = dName.split(".");
+						dName = fileNameArray[0];
+						var link = document.createElement("a");
+						link.setAttribute("id", "anchor");
+						link = document.body.appendChild(link);
+						var iframe = document.createElement("iframe");
+						document.body.appendChild(iframe);
+						iframe.setAttribute("id", "exportIframe");
+						iframe.style = "display: none";
+						iframe.style = "visibility: hidden";
+						if (isIE = /*@cc_on!@*/ false || !!document.documentMode) {
+							/** IE **/
+							var data = dJson;
+							var blobObject = new Blob([data]);
+							window.navigator.msSaveBlob(blobObject, dName + ".bvzx");
+						} else if (isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0) {
+							/** If Safari **/
+							var uri = "data:application/...," + encodeURIComponent(dJson);
+							location.replace(uri);
+						} else {
+							var anchorobj = $("#anchor");
+							var data = dJson;
+							var blob = new Blob([data], {
+								type: "text/plain"
+							}); //new way
+							var bvz_url = URL.createObjectURL(blob);
+							$(anchorobj).attr({
+								"download": dName + ".bvzx",
+								"href": bvz_url
+							});
+							$(anchorobj)[0].click();
+						}
+						$("#exportIframe").remove();
+					}
+				}
+			});
+		};
+		$(document).ready(function() {
+			// Add smooth scrolling to all links in navbar + footer link
+			$(".navbar a, footer a[href='#BizvizDesignerSDKHelpPage']").on("click", function(event) {
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
+					// Store hash
+					var hash = this.hash;
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (1000) specifies the number of milliseconds it takes to scroll to the specified area
+					$("html, body").animate({
+						scrollTop: $(hash).offset().top
+					}, 1000, function() {
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
+			});
+			$(window).scroll(function() {
+				$(".slideanim").each(function() {
+					var pos = $(this).offset().top;
+					var winTop = $(window).scrollTop();
+					if (pos < winTop + 200) {
+						$(this).addClass("slide");
+					}
+				});
+			});
+			$('[data-toggle="tooltip"]').tooltip();
+		})
+		function setAdvanceScripts() {
+		    // get advancescripts data file in json
+		    $.ajax({
+		        url: "../data/advanceScript.data",
+		        cache: true,
+		        success: function(result) {
+		            jsonData = JSON.parse(result);
+		            updateDOM(jsonData);
+		        }
+		    });
+		}
+		
+		function updateDOM(data) {
+		    var parentDiv = document.createElement("div");
+		    parentDiv.setAttribute("id", "accordion");
+		    parentDiv.setAttribute("class", "sdk-content col-sm-12 col-xs-12");
+		    $('#advance-scripts').append(parentDiv);
+		    for (var key in data.type) {
+		        if (key != null) {
+		            var div = document.createElement("div");
+		            div.className = "panel-heading hover-shadow";
+		            var header = document.createElement("h4");
+		            header.innerHTML = key;
+		            header.setAttribute("data-toggle", "collapse");
+		            header.setAttribute("data-target", "." + key);
+		            div.append(header);
+		            $('#accordion').append(div);
+		            for (var propKey in data.type[key]) {
+		                var compDiv = document.createElement("div");
+		                compDiv.style.cursor = "pointer";
+		                compDiv.setAttribute("class", key + " " + "collapse");
+		                var innerDivID = propKey.replace(" ", "");
+		                var innerHeader = document.createElement("h3");
+		                innerHeader.innerHTML = propKey;
+		                innerHeader.setAttribute("data-toggle", "collapse");
+		                innerHeader.setAttribute("data-target", "#" + key + innerDivID);
+		                innerHeader.setAttribute("class", key);
+		                innerHeader.setAttribute("class", "subproperty");
+		                compDiv.append(innerHeader);
+		                compDiv.append(createPropertyDiv(data.type[key][propKey], key + innerDivID));
+		                $('#accordion').append(compDiv);
+		            }
+		        }
+		    }
+		}
+		
+		function createPropertyDiv(tableData, classname) {
+		    var propertyDiv = document.createElement("div");
+		    propertyDiv.setAttribute("id", classname);
+		    propertyDiv.setAttribute("class", "propertyTableDiv collapse");
+		    propertyDiv.append(createTable(tableData));
+		    return propertyDiv;
+		}
+		
+		function createTable(tableData) {
+		    var table = document.createElement("table");
+		    table.classList.add('table', 'table-bordered', 'gridtable', 'table-striped', 'table-hover');
+		    var thead = document.createElement("thead");
+		    var tbody = document.createElement("tbody");
+		    var headRow = document.createElement("tr");
+		    ["Property", "VariableName", "Values", "Description", "Deprecated", "Version"].forEach(function(el) {
+		        var th = document.createElement("th");
+		        th.className = "gridtable";
+		        th.appendChild(document.createTextNode(el));
+		        headRow.appendChild(th);
+		    });
+		    thead.appendChild(headRow);
+		    table.appendChild(thead);
+		
+		    for (var i = 0; i < tableData.length; i++) {
+		        var tr = document.createElement("tr");
+		        for (var key in tableData[i]) {
+		            var td = document.createElement("td");
+		            td.className = "gridtable";
+		            td.appendChild(document.createTextNode(tableData[i][key]))
+		            tr.appendChild(td);
+		        }
+		        tbody.appendChild(tr);
+		    }
+		
+		    table.appendChild(tbody);
+		    return table;
+		}
+		$("#sdk-methods").show();
+		$("#advance-scripts").hide();
+		$('#scriptinghelp').click(function() {
+		    $("#advance-scripts").hide();
+		    $("#sdk-methods").show();
+		});
+		$('#advancescripting').click(function() {
+		    $("#sdk-methods").hide();
+		    if ($("#accordion").length > 0) {
+		        // do nothing
+		    } else {
+		        setAdvanceScripts();
+		    }
+		    $("#advance-scripts").show();
+		});
+	</script>
+</body>
+
+</html>

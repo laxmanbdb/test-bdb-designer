@@ -1,0 +1,870 @@
+{
+    "Dashboard": {
+        "id": "",
+        "backendId": "",
+        "workspaceId": "",
+        "layoutType": "AbsoluteLayout",
+        "enableCache": "false",
+        "enableReportBurst": "true",
+        "reportBurstButtonId": "reportBurstButton",
+        "DashboardOptions": {
+            "publishWSDLServer": "",
+            "expiryDate": "",
+            "hasExpiry": ""
+        },
+        "LanguageMapping": {
+            "enable": "false",
+            "mappingName": "",
+            "mappingId": "",
+            "language": "all",
+            "hideBrackets": "false"
+        },
+        "versionDetails": {
+            "author": "BizViz Technologies Pvt. Ltd.",
+            "edittedBy": "",
+            "lastUpdate": "",
+            "dashboardVersion": "6.0.0",
+            "publishDocId": "",
+            "publishedVersions": [],
+            "lastPublishedVersion": "",
+            "createdDesignerVersion": "",
+            "lastUpdatedDesignerVersion": "6.0.0",
+            "lastUpdatedDesignerDate": "26/02/2021"
+        },
+        "FlashVars": {
+            "Param": []
+        },
+        "AuthProfiles": {
+            "Profile": []
+        },
+        "DataProviders": {
+            "DataURL": [],
+            "queryServiceList": []
+        },
+        "componentGroups": [],
+        "VirtualDataSet": [],
+        "PublicFilters": [],
+        "imports": [],
+        "importsStat": 0,
+        "GlobalVariable": {
+            "Variable": []
+        },
+        "OffLineData": {
+            "Data": []
+        },
+        "DatasetExpressions": {
+            "DatasetExpression": []
+        },
+        "AbsoluteLayout": {
+            "gradientRotation": "0",
+            "gradients": "#ffffff",
+            "bgAlpha": "1",
+            "borderThickness": "1",
+            "borderColor": "#e6e6e6",
+            "showShadow": "false",
+            "shadowColor": "#000000",
+            "shadowOpacity": "0.1",
+            "resolution": "929x566",
+            "width": "900",
+            "height": "600",
+            "useGlobalFont": "false",
+            "fontFamily": "Roboto",
+            "designerTheme": "default-theme",
+            "useFontFromUrl": "false",
+            "isAllLockedComponents": "false",
+            "visibilityEffects": "false",
+            "enableWatermark": "true",
+            "fontUrl": "",
+            "isBootstrap": "false",
+            "scalingEnabled": "false",
+            "scalingView": "fitToPage",
+            "dashboardAlign": "none",
+            "touchEnabled": "false",
+            "Object": [],
+            "globalProperties": {
+                "BackgroundValue": false,
+                "Background": {
+                    "showBorder": true,
+                    "borderColor": "#EFF0F0",
+                    "borderRadius": "0"
+                },
+                "TitleValue": false,
+                "Title": {
+                    "showTitle": true,
+                    "TitleBarHeight": "48",
+                    "FontColor": "#000000",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "17",
+                    "FontStyle": "normal",
+                    "FontWeight": "600",
+                    "TextDecoration": "none",
+                    "Align": "left"
+                },
+                "SubTitleValue": false,
+                "SubTitle": {
+                    "showSubTitle": false,
+                    "FontColor": "#000000",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "17",
+                    "FontStyle": "normal",
+                    "FontWeight": "600",
+                    "TextDecoration": "none",
+                    "Align": "left"
+                },
+                "FormatterValue": false,
+                "Formatter": {
+                    "NumberFormatter": "number",
+                    "Precision": "default",
+                    "Unit": "none",
+                    "SecondaryUnit": "none",
+                    "SignPosition": "prefix"
+                },
+                "LegendValue": false,
+                "Legend": {
+                    "showLegends": false,
+                    "legendfontColor": "#494950",
+                    "legendfontFamily": "BizvizFont",
+                    "legendfontSize": "14",
+                    "legendfontStyle": "normal",
+                    "legendfontWeight": "normal",
+                    "legendtextDecoration": "none",
+                    "hideLegendOnStart": true
+                },
+                "xAxisValue": false,
+                "xAxis": {
+                    "CategoryMarkingColor": "#FFFFFF",
+                    "FontColor": "#494950",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "14",
+                    "FontStyle": "normal",
+                    "FontWeight": "normal",
+                    "LabelFontColor": "#000000",
+                    "LabelFontFamily": "BizvizFont",
+                    "LabelFontSize": "14",
+                    "LabelFontStyle": "normal",
+                    "LabelFontWeight": "normal",
+                    "LabelTextDecoration": "none",
+                    "LabelTilted": false,
+                    "Labelrotation": "90",
+                    "LineXAxisColor": "#859EBE",
+                    "ShowLineXAxis": true,
+                    "TextDecoration": "none",
+                    "TickMarks": true
+                },
+                "yAxisValue": false,
+                "yAxis": {
+                    "FontColor": "#000000",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "14",
+                    "FontStyle": "normal",
+                    "FontWeight": "normal",
+                    "LabelFontColor": "#494950",
+                    "LabelFontFamily": "BizvizFont",
+                    "LabelFontSize": "14",
+                    "LabelFontStyle": "normal",
+                    "LabelFontWeight": "normal",
+                    "LabelTextDecoration": "none",
+                    "LabelTilted": false,
+                    "Labelrotation": "90",
+                    "LineYAxisColor": "#859EBE",
+                    "ShowLineYAxis": true,
+                    "TextDecoration": "none"
+                }
+            }
+        },
+        "MobileLayout": {
+            "gradientRotation": "0",
+            "gradients": "#ffffff",
+            "bgAlpha": "1",
+            "borderThickness": "1",
+            "borderColor": "#e6e6e6",
+            "showShadow": "false",
+            "shadowColor": "#000000",
+            "shadowOpacity": "0.1",
+            "fontColor": "#9370db",
+            "useGlobalFont": "false",
+            "fontFamily": "Roboto",
+            "designerTheme": "default-theme",
+            "useFontFromUrl": "false",
+            "isAllLockedComponents": "false",
+            "visibilityEffects": "false",
+            "enableWatermark": "true",
+            "fontUrl": "",
+            "isBootstrap": "false",
+            "scalingEnabled": "false",
+            "scalingView": "fitToPage",
+            "dashboardAlign": "none",
+            "touchEnabled": "false",
+            "resolution": "375x663",
+            "width": "375",
+            "height": "663",
+            "pinedObject": [],
+            "Object": [],
+            "globalProperties": {
+                "BackgroundValue": false,
+                "Background": {
+                    "showBorder": true,
+                    "borderColor": "#EFF0F0",
+                    "borderRadius": "0",
+                    "showShadow": false,
+                    "shadowColor": "#cccccc",
+                    "shadowOpacity": "0.3"
+                },
+                "TitleValue": false,
+                "Title": {
+                    "showTitle": true,
+                    "TitleBarHeight": "48",
+                    "FontColor": "#000000",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "17",
+                    "FontStyle": "normal",
+                    "FontWeight": "600",
+                    "TextDecoration": "none",
+                    "Align": "left"
+                },
+                "SubTitleValue": false,
+                "SubTitle": {
+                    "showSubTitle": false,
+                    "FontColor": "#000000",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "17",
+                    "FontStyle": "normal",
+                    "FontWeight": "600",
+                    "TextDecoration": "none",
+                    "Align": "left"
+                },
+                "FormatterValue": false,
+                "Formatter": {
+                    "NumberFormatter": "number",
+                    "Precision": "default",
+                    "Unit": "none",
+                    "SecondaryUnit": "none",
+                    "SignPosition": "prefix"
+                },
+                "LegendValue": false,
+                "Legend": {
+                    "showLegends": false,
+                    "legendfontColor": "#494950",
+                    "legendfontFamily": "BizvizFont",
+                    "legendfontSize": "14",
+                    "legendfontStyle": "normal",
+                    "legendfontWeight": "normal",
+                    "legendtextDecoration": "none",
+                    "hideLegendOnStart": true
+                },
+                "xAxisValue": false,
+                "xAxis": {
+                    "CategoryMarkingColor": "#FFFFFF",
+                    "FontColor": "#494950",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "14",
+                    "FontStyle": "normal",
+                    "FontWeight": "normal",
+                    "LabelFontColor": "#000000",
+                    "LabelFontFamily": "BizvizFont",
+                    "LabelFontSize": "14",
+                    "LabelFontStyle": "normal",
+                    "LabelFontWeight": "normal",
+                    "LabelTextDecoration": "none",
+                    "LabelTilted": false,
+                    "Labelrotation": "90",
+                    "LineXAxisColor": "#859EBE",
+                    "ShowLineXAxis": true,
+                    "TextDecoration": "none",
+                    "TickMarks": true
+                },
+                "yAxisValue": false,
+                "yAxis": {
+                    "FontColor": "#000000",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "14",
+                    "FontStyle": "normal",
+                    "FontWeight": "normal",
+                    "LabelFontColor": "#494950",
+                    "LabelFontFamily": "BizvizFont",
+                    "LabelFontSize": "14",
+                    "LabelFontStyle": "normal",
+                    "LabelFontWeight": "normal",
+                    "LabelTextDecoration": "none",
+                    "LabelTilted": false,
+                    "Labelrotation": "90",
+                    "LineYAxisColor": "#859EBE",
+                    "ShowLineYAxis": true,
+                    "TextDecoration": "none"
+                }
+            }
+        },
+        "TabletLayout": {
+            "gradientRotation": "0",
+            "gradients": "#ffffff",
+            "bgAlpha": "1",
+            "borderThickness": "1",
+            "borderColor": "#e6e6e6",
+            "showShadow": "false",
+            "shadowColor": "#000000",
+            "shadowOpacity": "0.1",
+            "fontColor": "#9370db",
+            "useGlobalFont": "false",
+            "fontFamily": "Roboto",
+            "designerTheme": "default-theme",
+            "useFontFromUrl": "false",
+            "isAllLockedComponents": "false",
+            "visibilityEffects": "false",
+            "enableWatermark": "true",
+            "fontUrl": "",
+            "isBootstrap": "false",
+            "scalingEnabled": "false",
+            "scalingView": "fitToPage",
+            "dashboardAlign": "none",
+            "touchEnabled": "false",
+            "resolution": "1024x768",
+            "width": "1024",
+            "height": "768",
+            "pinedObject": [],
+            "Object": [],
+            "globalProperties": {
+                "BackgroundValue": false,
+                "Background": {
+                    "showBorder": true,
+                    "borderColor": "#EFF0F0",
+                    "borderRadius": "0",
+                    "showShadow": false,
+                    "shadowColor": "#cccccc",
+                    "shadowOpacity": "0.3"
+                },
+                "TitleValue": false,
+                "Title": {
+                    "showTitle": true,
+                    "TitleBarHeight": "48",
+                    "FontColor": "#000000",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "17",
+                    "FontStyle": "normal",
+                    "FontWeight": "600",
+                    "TextDecoration": "none",
+                    "Align": "left"
+                },
+                "SubTitleValue": false,
+                "SubTitle": {
+                    "showSubTitle": false,
+                    "FontColor": "#000000",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "17",
+                    "FontStyle": "normal",
+                    "FontWeight": "600",
+                    "TextDecoration": "none",
+                    "Align": "left"
+                },
+                "FormatterValue": false,
+                "Formatter": {
+                    "NumberFormatter": "number",
+                    "Precision": "default",
+                    "Unit": "none",
+                    "SecondaryUnit": "none",
+                    "SignPosition": "prefix"
+                },
+                "LegendValue": false,
+                "Legend": {
+                    "showLegends": false,
+                    "legendfontColor": "#494950",
+                    "legendfontFamily": "BizvizFont",
+                    "legendfontSize": "14",
+                    "legendfontStyle": "normal",
+                    "legendfontWeight": "normal",
+                    "legendtextDecoration": "none",
+                    "hideLegendOnStart": true
+                },
+                "xAxisValue": false,
+                "xAxis": {
+                    "CategoryMarkingColor": "#FFFFFF",
+                    "FontColor": "#494950",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "14",
+                    "FontStyle": "normal",
+                    "FontWeight": "normal",
+                    "LabelFontColor": "#000000",
+                    "LabelFontFamily": "BizvizFont",
+                    "LabelFontSize": "14",
+                    "LabelFontStyle": "normal",
+                    "LabelFontWeight": "normal",
+                    "LabelTextDecoration": "none",
+                    "LabelTilted": false,
+                    "Labelrotation": "90",
+                    "LineXAxisColor": "#859EBE",
+                    "ShowLineXAxis": true,
+                    "TextDecoration": "none",
+                    "TickMarks": true
+                },
+                "yAxisValue": false,
+                "yAxis": {
+                    "FontColor": "#000000",
+                    "FontFamily": "BizvizFont",
+                    "FontSize": "14",
+                    "FontStyle": "normal",
+                    "FontWeight": "normal",
+                    "LabelFontColor": "#494950",
+                    "LabelFontFamily": "BizvizFont",
+                    "LabelFontSize": "14",
+                    "LabelFontStyle": "normal",
+                    "LabelFontWeight": "normal",
+                    "LabelTextDecoration": "none",
+                    "LabelTilted": false,
+                    "Labelrotation": "90",
+                    "LineYAxisColor": "#859EBE",
+                    "ShowLineYAxis": true,
+                    "TextDecoration": "none"
+                }
+            }
+        }
+    },
+    "FlashVars_Param": {
+        "name": "",
+        "value": ""
+    },
+    "AuthProfiles_Profile": {
+        "name": "Georjo",
+        "username": "georjo.johan",
+        "password": "niku3000"
+    },
+    "DataProviders_DataURL": {
+        "FieldSet": [],
+        "WhereClause": {
+            "Con": {
+                "Clause": "",
+                "ClauseMap": {}
+            }
+        },
+        "ClarityOptionalCondition": {
+            "ClaritySort": {
+                "Columns": [
+                    {
+                        "sortField": "",
+                        "sortDirection": ""
+                    }
+                ]
+            },
+            "ClaritySlice": {
+                "sliceIndex": "",
+                "sliceCount": ""
+            }
+        },
+        "dataType": "JSON",
+        "variable": "",
+        "refreshMinutes": 5,
+        "timelyRefresh": "false",
+        "profileName": "",
+        "hasMapping": "false",
+        "offLineDataID": "",
+        "id": "",
+        "DrillWhenDataChanges": "false",
+        "LoadatStartup": "true",
+        "Type": "web",
+        "isLangWebservice": "false",
+        "password": "",
+        "url": "",
+        "queryName": "",
+        "nividhQueryName": "",
+        "dataSourceName": "",
+        "dataSourceType": "",
+        "hostName": "",
+        "databaseName": "",
+        "sheet": "",
+        "rowLimit": "",
+        "PredictiveJsonDef": "",
+        "parentSource": "",
+        "childSource": "",
+        "deriveConditions": {
+            "criteria": [
+                ""
+            ]
+        },
+        "availableFieldSet": [],
+        "allowSessionID": "false",
+        "userID": "",
+        "selectedDataSourceID": "",
+        "selectedServiceID": "",
+        "availableConditionSet": [],
+        "AssociatedDataSet": [],
+        "AssociatedVirtualDataset": [],
+        "query": {
+            "filters": {
+                "value": ""
+            }
+        }
+    },
+    "DataProviders_DataURL_FieldSet": {
+        "name": "",
+        "displayName": "",
+        "type": ""
+    },
+    "DataProviders_DataURL_AssociatedDataSet": {
+        "component": "",
+        "id": ""
+    },
+    "DataProviders_DataURL_AssociatedVirtualDataset": {
+        "component": "",
+        "id": ""
+    },
+    "DatasetExpressions_DatasetExpression": {
+        "name": "",
+        "id": "",
+        "dataSource": "",
+        "variables": {
+            "variable": []
+        },
+        "expressionScript": {
+            "cdata": ""
+        }
+    },
+    "DatasetExpressions_DatasetExpression_variables_variable": {
+        "name": "",
+        "value": ""
+    },
+    "AbsoluteLayout_Object": {
+        "objectType": "chart",
+        "objectID": "",
+        "width": "355",
+        "showLocked": "false",
+        "objectName": "Area_9",
+        "unShowHidden": "false",
+        "groupings": "",
+        "x": "13",
+        "height": "308",
+        "y": "30",
+        "percentheight": "308",
+        "initialVisibility": "true",
+        "percentwidth": "355"
+    },
+    "AbsoluteLayout_Object_Chart_DataSet": {
+        "id": "",
+        "dataSource": "",
+        "Fields": []
+    },
+    "AbsoluteLayout_Object_DataGrid_DataSet": {
+        "id": "",
+        "dataSource": "",
+        "Fields": []
+    },
+    "AbsoluteLayout_Object_Scorecard_DataSet": {
+        "id": "",
+        "dataSource": "",
+        "Fields": []
+    },
+    "AbsoluteLayout_Object_Filter_DataSet": {
+        "id": "",
+        "dataSource": "",
+        "Fields": []
+    },
+    "AbsoluteLayout_Object_Funnel_DataSet": {
+        "id": "",
+        "dataSource": "",
+        "Fields": []
+    },
+    "AbsoluteLayout_Object_Chart_DataSet_Fields": {
+        "DisplayName": "",
+        "Type": "Series",
+        "Name": "",
+        "Color": "#006488",
+        "Opacity": "1",
+        "ChartType": "column",
+        "axis": "left",
+        "visible": "true",
+        "Precision": "default",
+        "PlotType": "point",
+        "LineWidth": "2",
+        "LineType": "straight",
+        "FanSeriesType": "none",
+        "FillTransparency": "0.6",
+        "PlotRadius": "3",
+        "RadiusField": "",
+        "ColorField": "",
+        "AdditionalField": "",
+        "OtherField": "",
+        "OtherFieldDisplayName": "",
+        "RadiusFieldDisplayName": "",
+        "ColorFieldDisplayName": "",
+        "ToolTip": "",
+        "PlotTransparency": "1",
+        "DataSeperator": "~",
+        "hierarchyType": "none",
+        "cellType": "none",
+        "isfixedlabel": "false",
+        "formatter": "Currency",
+        "textAlign": "left",
+        "unitname": "none",
+        "numberFormatter": "number",
+        "signposition": "prefix",
+        "secondformatter": "Number",
+        "secondunitname": "none",
+        "width": "200",
+        "SecondaryUnit": "auto",
+        "Unit": "none",
+        "FieldChartType": "clustered",
+        "Aggregation": "sum",
+        "IndicatorType": "sparkline",
+        "dstype": "sum",
+        "dsdate": "none",
+        "enableFillArea": "true",
+        "FillAreaColor": "#00bcd4",
+        "DataLabelCustomProperties": {
+            "showDataLabel": "false",
+            "hideDataLabel": "false",
+            "hideDataLabelText": "",
+            "useFieldColor": "false",
+            "dataLabelTextAlign": "center",
+            "dataLabelFontColor": "#808080",
+            "dataLabelDefaultFontColor": "#ffffff",
+            "dataLabelRotation": "0",
+            "dataLabelFontSize": "12",
+            "datalabelFontStyle": "normal",
+            "datalabelFontWeight": "normal",
+            "datalabelFontFamily": "Roboto",
+            "datalabelField": "",
+            "datalabelPosition": "Top",
+            "dataLabelUseComponentFormater": true,
+            "datalabelFormaterUnit": "none",
+            "datalabelFormaterPrecision": "default",
+            "datalabelFormaterCurrency": "none",
+            "datalabelFormaterPosition": "suffix",
+            "showPercentValue": "false",
+            "datalabelBackgroundRect": "false",
+            "datalabelBackgroundRectColor": "#ffffff",
+            "datalabelStrokeColor": "#000000"
+        },
+        "LineColor": "gradient",
+        "StripeOpacity": "0.6"
+    },
+    "AbsoluteLayout_Object_DynamicDataGrid_DataSet_Fields": {
+        "parentAggregation": "sum"
+    },
+    "AbsoluteLayout_Object_DataGrid_DataSet_Fields": {
+        "expressionID": "",
+        "secondformatter": "Number",
+        "isfixedlabel": "false",
+        "unitname": "none",
+        "precision": "default",
+        "showTooltip": "false",
+        "Type": "Series",
+        "displayTextStyle": "",
+        "width": "150",
+        "isNumeric": "false",
+        "visible": "true",
+        "frozencolumn": "false",
+        "sorting": "true",
+        "dstype": "sum",
+        "dsdate": "none",
+        "dateformat" : "none",
+        "secondunitname": "none",
+        "formatter": "Currency",
+        "textAlign": "left",
+        "enableColumnStyle": "false",
+        "fontColor": "#000000",
+        "fontSize": "16",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+        "fontFamily": "BizvizFont",
+        "signposition": "suffix",
+        "fieldname": "",
+        "displayname": "",
+        "Name": "",
+        "hierarchyType": "none",
+        "parentAggregation": "sum",
+        "Color": "#006488",
+        "cellType": "none",
+        "numberFormatter": "number",
+        "rowAggregation": "none",
+        "tooltipField": ""
+    },
+    "AbsoluteLayout_Object_DataGrid_Alerts": {
+        "AlertColumn": []
+    },
+    "AbsoluteLayout_Object_DataGrid_Alerts_AlertColumn": {
+        "showAlert": "false",
+        "name": "",
+        "colors": "#F22613,#F7CA18,#2ECC71",
+        "alertType": "colorfill",
+        "texts": "",
+        "fixedValueCompare": "true",
+        "fixedValue": "0",
+        "mode": "Comparison",
+        "compareColumn": "",
+        "ranges": "0~100,101~200,201~500",
+        "staticRange": "0,1,2",
+        "isAlertText": "false",
+        "showData": "true",
+        "operatorName": "<=,==,>=",
+        "alertPosition": "left",
+        "showDynamicRange": "false",
+        "minColor": "#f89406",
+        "maxColor": "#00b16a",
+        "customIcon": "bd-down-arrow,bd-minus,bd-up-arrow"
+    },
+    "AbsoluteLayout_Object_Scorecard_DataSet_Fields": {
+        "expressionID": "",
+        "secondformatter": "Number",
+        "isfixedlabel": "false",
+        "unitname": "none",
+        "hierarchyType": "none",
+        "cellType": "none",
+        "numberFormatter": "number",
+        "precision": "default",
+        "showTooltip": "false",
+        "Type": "Series",
+        "displayTextStyle": "",
+        "width": "150",
+        "isNumeric": "false",
+        "visible": "true",
+        "sorting": "true",
+        "secondunitname": "none",
+        "formatter": "Currency",
+        "textAlign": "left",
+        "signposition": "suffix",
+        "Name": "",
+        "DisplayName": "",
+        "parentAggregation": "none",
+        "enableColumnStyle": "false",
+        "fontColor": "#000000",
+        "fontSize": "16",
+        "fontStyle": "normal",
+        "fontWeight": "normal",
+        "fontFamily": "BizvizFont"
+    },
+    "AbsoluteLayout_Object_Scorecard_Alerts": {
+        "AlertColumn": []
+    },
+    "AbsoluteLayout_Object_Scorecard_Alerts_AlertColumn": {
+        "showAlert": "false",
+        "name": "",
+        "colors": "#F22613,#F7CA18,#2ECC71",
+        "alertType": "colorfill",
+        "texts": "",
+        "fixedValueCompare": "true",
+        "fixedValue": "0",
+        "mode": "Comparison",
+        "compareColumn": "",
+        "ranges": "0~100,101~200,201~500",
+        "isAlertText": "false",
+        "showData": "true",
+        "alertPosition": "left",
+        "showDynamicRange": "false",
+        "minColor": "#f89406",
+        "maxColor": "#00b16a"
+    },
+    "AbsoluteLayout_Object_Funnel_DataSet_Fields": {
+        "Type": "Series",
+        "expressionID": "",
+        "DisplayName": "",
+        "visible": "true",
+        "PlotTransparency": "1",
+        "color": "#006488",
+        "Name": "",
+        "DataLabelCustomProperties": {
+            "showDataLabel": "false",
+            "useFieldColor": "false",
+            "dataLabelTextAlign": "center",
+            "dataLabelFontColor": "#808080",
+            "dataLabelRotation": "0",
+            "dataLabelFontSize": "12",
+            "datalabelFontStyle": "normal",
+            "datalabelFontWeight": "normal",
+            "datalabelFontFamily": "Roboto",
+            "datalabelField": "",
+            "datalabelPosition": "Top",
+            "dataLabelUseComponentFormater": true,
+            "datalabelFormaterUnit": "none",
+            "datalabelFormaterPrecision": "default",
+            "datalabelFormaterCurrency": "none",
+            "datalabelFormaterPosition": "suffix"
+        }
+    },
+    "AbsoluteLayout_Object_Filter_DataSet_Fields": {
+        "Name": "",
+        "DisplayName": "",
+        "Type": "",
+        "defaultChild": "",
+        "hierarchyType": "parent",
+        "dstype": "none",
+        "parentAggregation": "none"
+    },
+    "AbsoluteLayout_Object_Chart_CategoryColors": {
+        "categoryDefaultColor": "",
+        "categoryDefaultColorSet": "",
+        "showColorsFromCategoryName": "",
+        "CategoryColor": []
+    },
+    "AbsoluteLayout_Object_Chart_CategoryColors_CategoryColor": {
+        "categoryName": "",
+        "color": ""
+    },
+    "AbsoluteLayout_Object_Chart_SubCategoryColors": {
+        "subCategoryDefaultColor": "",
+        "subCategoryDefaultColorSet": "",
+        "showColorsFromSubCategoryName": "",
+        "subCategoryColor": []
+    },
+    "AbsoluteLayout_Object_Chart_SubCategoryColors_subCategoryColor": {
+        "subCategoryName": "",
+        "color": ""
+    },
+    "AbsoluteLayout_Object_Chart_ConditionalColors": {
+        "ConditionalColor": []
+    },
+    "AbsoluteLayout_Object_Chart_ConditionalColors_ConditionalColor": {
+        "seriesName": "",
+        "operator": "",
+        "compareTo": "",
+        "color": "",
+        "opacity": ""
+    },
+    "AbsoluteLayout_Object_URLButton_Params": {
+        "name": "",
+        "value": ""
+    },
+    "VirtualDataSet": {
+        "virtualDataID": "",
+        "DataSet": {
+            "id": "",
+            "dataSource": "",
+            "Fields": []
+        },
+        "VisibilityTriggerMap": {
+            "Object": []
+        }
+    },
+    "VirtualDataSet_DataSet_Fields": {
+        "name": "Year"
+    },
+    "VirtualDataSet_VisibilityTriggerMap_Object": {
+        "id": ""
+    },
+    "GlobalVariable_Variable": {
+        "Key": "",
+        "userScript": {
+            "value": ""
+        },
+        "DefaultValues": {
+            "DefaultValue": []
+        }
+    },
+    "GlobalVariable_Variable_DefaultValues_DefaultValue": {
+        "name": "",
+        "text": "",
+        "displayTag": "",
+        "actualTag": ""
+    },
+    "OffLineData_Data": {
+        "id": "",
+        "specifications": {
+            "sheetNumber": "0",
+            "dateHeaders": "",
+            "headerAsFirstRow": "true",
+            "dateFormat": "",
+            "textQualifier": "",
+            "delimiter": ","
+        },
+        "Records": {
+            "Record": []
+        }
+    },
+    "changeStatus": 2
+}

@@ -1,0 +1,4063 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>HTML5 Dashboard API: READ XML AND DRAW DASHBOARD</title>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<meta content="utf-8" http-equiv="encoding" />
+<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu" type="text/css" /> -->
+<link href="../../../resources/fonts/google-font/Ubuntu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css"
+	href="../../charting/src/bizviz.charting/components/resources/css/charting.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../../../resources/plugins/jQuery/jquery-ui-1.10.4.custom.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../../charting/src/bizviz.charting/components/resources/css/easyui.min.css" />
+<link rel="stylesheet" type="text/css"
+	href="../../charting/src/bizviz.charting/components/resources/css/icon.min.css" />
+<link rel="stylesheet" 
+	href="../../charting/src/bizviz.charting/components/resources/css/bdbizviz-font-styles.min.css" >
+<link rel="stylesheet" href="../../../resources/css/bootstrap.css" type="text/css" />
+<!-- PREVIEW CUSTOM CSS -->
+<link rel="stylesheet" type="text/css"
+	href="../resources/css/preview.css" />
+
+<!--  We are using jquery 1.10.2 in Portal -->
+<script type="text/javascript"
+	src="../../../resources/plugins/jQuery/jquery-3.6.0.min.js"></script>
+	<script src="../../../resources/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript"
+	src="../../../resources/plugins/jQuery/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/resources/js/jquery.ui.treemap.js"></script>
+
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/Widget.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/Chart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/buttons/ExportPlugin.js"></script>
+
+
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/buttons/ExportToPPTButton.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/buttons/RefreshButton.js"></script>
+
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/AreaChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/BarChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/BubbleChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/BoxPlotChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/CandleStickChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/ChevronChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/ColumnStackChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/HeatMapChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/InvertedFunnelChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/LineChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/MitoPlotChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/MixedChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/PieChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/ProgressChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/PyramidChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/RoadMapChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/ScatteredPlotChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/SentimentPlotChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/SimpleFunnelChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/SpiderChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/TimelineChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/charts/TreeMapChart.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/maps/WorldMapChart.js"></script>
+
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/container/Rectangle.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/container/Tabs.js"></script>
+
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/DataGrid.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/datagrids/SimpleDataGrid.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/datagrids/PagingDataGrid.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/datagrids/TreeGrid.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/datagrids/JExcelDataGrid.js"></script>
+
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/Filter.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/filters/CheckboxFilter.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/filters/ComboFilter.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/filters/HierarchicalCombo.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/filters/ListFilter.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/filters/MultiSelectComboFilter.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/filters/RadioFilter.js"></script>
+
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/Bullet.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/CheckList.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/ImageComponent.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/DatePicker.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/Gauge.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/SemiGauge.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/GuidedTour.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/HSlider.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/Label.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/NumericStepper.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/TextBox.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/Trend.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/UrlButton.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/VSlider.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/InfoButton.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/SVGShape.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/SVGImage.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/singleValuedComponent/Legend.js"></script>
+
+<script type="text/javascript"
+	src="../../charting/src/bizviz.framework/Parser.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.framework/DataManager.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.framework/ServiceManager.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.framework/GlobalVariableController.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.framework/RendererController.js"></script>
+<script type="text/javascript"
+	src="../../designer/build-config/build/appSettings.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.framework/FrameworkUtil.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.framework/FrameworkController.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.framework/FrameworkComponents.js"></script>
+<script type="text/javascript" 
+	src="../../../model/url.data"></script>
+<script type="text/javascript" 
+	src="../../charting/src/bizviz.charting/components/resources/js/jquery.easyui.min.js"></script> 
+<script type="text/javascript" 
+	src="../../charting/src/bizviz.charting/components/resources/js/jQuery.blockUI.min.js"></script> 
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/resources/js/svg.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/resources/js/svg.import.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bizviz.charting/components/resources/js/svg.parser.js"></script>
+	
+	<script src="../../../resources/js/jstorage.js"></script>
+<!-- <script type="text/javascript" src="../../charting/src/bizviz.charting/components/resources/js/jquery-ui-1.10.4.custom.min.js"></script>
+ -->
+<!-- UserScriptExecuter -->
+<script type="text/javascript"
+	src="../../charting/src/bdbizviz.ext/UserScriptExecuter.js"></script>
+<script type="text/javascript"
+	src="../../charting/src/bdbizviz.ext/BizVizDesignUserSDK.js"></script>
+<style type="text/css">
+
+.bv-col-bs{
+border: 1px solid #2ecc71;
+color: #3498db;
+}
+.bv-row-bs{
+background-color: #ecf0f1;
+
+}
+</style>
+</head>
+<body oncontextmenu="return false" class="noselect">
+	<div id="WatermarkDiv"
+		style="position: absolute; margin: -8px; height: 100%; width: 100%; background: url(); background-color: #f1f1f1;">
+		<div id="mainDiv"
+			style="position: absolute; display: block; height: 100%; width: 100%; left: 0px; top: 0px;"></div>
+		<div id="toolTipDiv"></div>
+	</div>
+	
+	<script>
+			var basepath = window.location.href;
+			var splitArr = basepath.split("/");
+			var path = "";
+			
+			for (var i = 0; i < splitArr.length - 2; i++) {
+				path += splitArr[i] + "/";
+			}
+	
+			var loaderImageSrc = path + "images/loading.gif";
+			
+			var maxsrc = path + "images/maxmize.jpg";
+			var minsrc = path + "images/minimize.jpg";
+			var legendsrc = path + "images/legend.png";
+			var oksrc = path + "images/OK.png";
+			var cancelsrc1 = path + "images/Cancel1.png";
+			var cancelsrc = path + "images/Cancel.png";
+			var redticksrc = path + "images/grid_alert_dots/tick/redtick.png";
+			var greenticksrc = path + "images/grid_alert_dots/tick/greentick.png";
+			var yellowticksrc = path + "images/grid_alert_dots/tick/yellowtick.png";
+			
+			var HappySentimentSrc = path+"images/SentimentImages/Happy.svg" ;
+			var NervousSentimentSrc = path+"images/SentimentImages/Nervous.svg";
+			var AngrySentimentSrc = path+"images/SentimentImages/Angry.svg";
+			var RelaxSentimentSrc = path+"images/SentimentImages/Relax.svg";
+			
+			var jqEasyUI = jQuery.noConflict(true);
+			$ = jqEasyUI;
+			
+			getLoggedUser();
+			
+			var dashboardJson = "";
+			var pageInPortal = undefined;
+			
+			function setDJson(dashboardJson){
+				//dashboardJson = parent.dashboardJSONForPreview;
+				drawDashboard(dashboardJson);
+				}
+			
+			function drawDashboard(dashboardJson) {
+				frameworkController.dashboard = new DashBoard();
+				parser.dashboard = frameworkController.dashboard;
+				parser.dashboardJson = dashboardJson;
+				
+				//remove existing dasboards if opened any
+				removeExistingDasboardsAndDiv();				
+				//console.log(dashboardJson.Niv.Dashboard.AbsoluteLayout.Object);
+				parser.parseDashboardJSON();
+				gvController.init(frameworkController.dashboard);
+				frameworkController.setValuesFromQueryString();
+				frameworkController.registerObserverNotifiers();
+				frameworkController.initiateComponents();
+				setTimeout(function(){
+					frameworkController.drawStaticComponents();
+					frameworkController.initService();					
+				},100);
+
+				
+			};
+			$( window ).resize(function() {
+				frameworkController.redrawObjects();
+				});
+			function stopDashboardProcesses(dashboardJson) {
+				if (dataManager) {
+					if (dataManager != undefined) {
+						dataManager.stopTimelyRefresh();
+					}
+				}
+			}			
+			function removeExistingDasboardsAndDiv()
+			{
+				$(".draggablesParentDiv").remove();
+				$("#toolTipDiv").remove();
+				$(".dropdown-menu-context-menu").remove();
+				$(".window-mask").remove();
+				$("div.panel.window").remove();
+				$(".window-shadow").remove();
+				$(".panel.combo-p").css("display","none");
+				$("#ui-datepicker-div").css("display","none");
+				$(".contextMenuShowDataDiv").remove();
+				$(".PopDisableDiv").remove();
+			}
+			
+			function createJSON(cm)
+			{
+				//var cm=JSON.parse(content);
+				cm=cm.dashboardJson.Dashboard;
+				cm=JSON.stringify(cm);
+				var outputJSON="{\"Niv\":{\"Dashboard\":"+
+					
+					cm
+					
+				+"}}"
+				return JSON.parse(outputJSON);
+			}
+			var dj ={
+					"dashboardJson" : {
+						"Dashboard" : {
+							"id" : "dashboard20151011121328119",
+							"backendId" : "231964673",
+							"workspaceId" : 220397568,
+							"DashboardOptions" : {
+								"publishWSDLServer" : "",
+								"expiryDate" : "",
+								"hasExpiry" : ""
+							},
+							"versionDetails" : {
+								"author" : "",
+								"edittedBy" : "",
+								"lastUpdate" : "",
+								"dashboardVersion" : "2.0",
+								"publishDocId" : 232062977,
+								"lastPublishedVersion" : "",
+								"createdDesignerVersion" : "",
+								"lastUpdatedDesignerVersion" : "",
+								"publishedBy" : 131072,
+								"publishedOn" : 1447244265747,
+								"publishedAt" : 1111
+							},
+							"FlashVars" : {
+								"Param" : [{
+										"name" : "token",
+										"value" : "5777d6ab398a1c842bce5a89192548611111"
+									}
+								]
+							},
+							"AuthProfiles" : {
+								"Profile" : []
+							},
+							"DataProviders" : {
+								"DataURL" : [{
+										"FieldSet" : [{
+												"name" : "Category",
+												"displayName" : "",
+												"type" : "",
+												"added" : true
+											}, {
+												"name" : "val",
+												"displayName" : "",
+												"type" : "",
+												"added" : true
+											}
+										],
+										"WhereClause" : {
+											"Con" : {
+												"Clause" : "",
+												"ClauseMap" : {}
+
+											}
+										},
+										"variable" : {
+											"Key" : "C_1",
+											"dynamicDataProviders" : "",
+											"DataProviderMap" : {
+												"DataProvider" : []
+											},
+											"DataSetMap" : {
+												"DataSet" : []
+											},
+											"VisibilityTriggerMap" : {
+												"Object" : []
+											},
+											"selectedComponents" : {
+												"Component" : []
+											},
+											"ImageMap" : {},
+											"userScript" : {
+												"value" : ""
+											},
+											"DefaultValues" : {
+												"DefaultValue" : []
+											}
+										},
+										"refreshMinutes" : 5,
+										"timelyRefresh" : "false",
+										"profileName" : "",
+										"hasMapping" : "false",
+										"id" : "C_1",
+										"DrillWhenDataChanges" : "false",
+										"LoadatStartup" : "true",
+										"Type" : "offline",
+										"isLangWebservice" : "false",
+										"password" : "",
+										"url" : "pieLongdata.xlsx",
+										"sheet" : "Sheet1",
+										"allowSessionID" : "false",
+										"userID" : "",
+										"selectedDataSourceID" : "",
+										"selectedServiceID" : "",
+										"availableConditionSet" : [{
+												"name" : "Category",
+												"added" : false,
+												"condition" : ""
+											}, {
+												"name" : "val",
+												"added" : false,
+												"condition" : ""
+											}
+										],
+										"AssociatedDataSet" : [{
+												"component" : {
+													"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+													"Type" : "Area",
+													"showGradient" : "false",
+													"bgGradients" : "0xffffff",
+													"bgAlpha" : "1",
+													"bgGradientRotation" : "0",
+													"exportToExcel" : "true",
+													"exportToJPEG" : "true",
+													"exportToPNG" : "true",
+													"exportToPDF" : "true",
+													"exportToPPT" : "true",
+													"exportToPrint" : "true",
+													"showScreenShotButton" : "true",
+													"screenShotMode" : "ppt",
+													"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+													"pptHeading" : "Heading",
+													"pptSubHeading" : "Sub Heading",
+													"subHeading" : "Sub Heading",
+													"scrnShotFileName" : "exportDashboard",
+													"showTooltip" : "true",
+													"showMaximizeButton" : "false",
+													"showExcelDownload" : "true",
+													"showSubTitle" : "false",
+													"showTitle" : "false",
+													"GradientColor" : "#BDC3C7,#BDC3C7",
+													"showLegends" : false,
+													"legendDirection" : "vertical",
+													"legendfontSize" : "10",
+													"legendtextDecoration" : "none",
+													"legendfontStyle" : "normal",
+													"legendfontFamily" : "Ubuntu",
+													"legendfontColor" : "#000000",
+													"legendfontWeight" : "normal",
+													"showcheckboxwithlegend" : "false",
+													"showCheckboxSeprate" : "false",
+													"showBorder" : "false",
+													"borderColor" : "",
+													"borderThickness" : "",
+													"markerColor" : "#666666",
+													"markerTransparency" : 0.2,
+													"showMarkerLine" : true,
+													"showVerticalMarkerLine" : false,
+													"autoaxisSetup" : "true",
+													"minimumAxisValue" : "-20",
+													"maximumAxisValue" : "110",
+													"baseZero" : "true",
+													"FixedLabel" : "true",
+													"Formater" : "none",
+													"Unit" : "",
+													"SignPosition" : "suffix",
+													"Precision" : "0",
+													"SecondaryFormater" : "none",
+													"SecondaryUnit" : "",
+													"Globalkey" : "area1",
+													"enableColorFromDrill" : "false",
+													"showPoint" : "false",
+													"lineForm" : "curve",
+													"fillOpacity" : "0.7",
+													"lineWidth" : "1",
+													"ChartType" : "overlaid",
+													"xAxis" : {
+														"ShowLineXAxis" : "false",
+														"LineXAxisColor" : "#ffffff",
+														"Description" : "",
+														"LabelFontWeight" : "normal",
+														"FontSize" : "12",
+														"LabelFontColor" : "0",
+														"LabelFontStyle" : "normal",
+														"TextDecoration" : "none",
+														"LabelFontFamily" : "Ubuntu",
+														"Labelrotation" : "90",
+														"LabelTilted" : "false",
+														"FontColor" : "0",
+														"LabelTextDecoration" : "none",
+														"LabelFontSize" : "12",
+														"FontStyle" : "normal",
+														"FontFamily" : "Ubuntu",
+														"FontWeight" : "normal",
+														"TickMarks" : "true",
+														"CategoryMarkingColor" : "#cccccc"
+													},
+													"yAxis" : {
+														"ShowLineYAxis" : "false",
+														"LineYAxisColor" : "#ffffff",
+														"Description" : "",
+														"rightaxisFormater" : "false",
+														"LabelFontWeight" : "normal",
+														"FontStyle" : "normal",
+														"LabelFontColor" : "0",
+														"FontFamily" : "Ubuntu",
+														"TextDecoration" : "none",
+														"LabelFontStyle" : "normal",
+														"LabelFontFamily" : "Ubuntu",
+														"FontColor" : "0",
+														"SecondDiscription" : "yaxis",
+														"LabelTextDecoration" : "none",
+														"LabelFontSize" : "12",
+														"FontSize" : "12",
+														"leftaxisFormater" : "true",
+														"FontWeight" : "normal"
+													},
+													"Title" : {
+														"FontWeight" : "normal",
+														"Description" : "Revenue across continents in a decade",
+														"FontSize" : "12",
+														"TextDecoration" : "none",
+														"Align" : "left",
+														"FontFamily" : "Ubuntu",
+														"FontColor" : "#22313f",
+														"FontStyle" : "normal",
+														"showTitle" : "false"
+													},
+													"SubTitle" : {
+														"FontWeight" : "normal",
+														"Description" : "Subtitle Description",
+														"showSubTitle" : "false",
+														"FontSize" : "12",
+														"TextDecoration" : "none",
+														"Align" : "center",
+														"FontFamily" : "Ubuntu",
+														"FontColor" : "0",
+														"FontStyle" : "normal"
+													},
+													"DataSet" : {
+														"id" : "area1",
+														"dataSource" : "C_1",
+														"Fields" : [{
+																"DisplayName" : "Category",
+																"Type" : "Category",
+																"Name" : "Category",
+																"Color" : "#7FFF00",
+																"ChartType" : "column",
+																"axis" : "left",
+																"visible" : "true",
+																"Precision" : "0",
+																"PlotType" : "point",
+																"PlotRadius" : "5",
+																"OtherField" : "",
+																"ToolTip" : "",
+																"PlotTransparency" : "0.8",
+																"DataSeperator" : "~",
+																"hierarchyType" : "none",
+																"fieldType" : "Field",
+																"iconPath" : "./resources/images/svg/Line.svg"
+															}, {
+																"DisplayName" : "val",
+																"Type" : "Series",
+																"Name" : "val",
+																"Color" : "#2CBBB6",
+																"ChartType" : "column",
+																"axis" : "left",
+																"visible" : "true",
+																"Precision" : "0",
+																"PlotType" : "point",
+																"PlotRadius" : "5",
+																"OtherField" : "",
+																"ToolTip" : "",
+																"PlotTransparency" : "0.8",
+																"DataSeperator" : "~",
+																"hierarchyType" : "none",
+																"fieldType" : "Field",
+																"iconPath" : "./resources/images/svg/Column.svg"
+															}
+														]
+													}
+												},
+												"id" : "area1"
+											}, {
+												"component" : {
+													"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+													"Type" : "Bar",
+													"showGradient" : "false",
+													"bgGradients" : "0xffffff",
+													"bgAlpha" : "1",
+													"bgGradientRotation" : "0",
+													"exportToExcel" : "true",
+													"exportToJPEG" : "true",
+													"exportToPNG" : "true",
+													"exportToPDF" : "true",
+													"exportToPPT" : "true",
+													"exportToPrint" : "true",
+													"showScreenShotButton" : "true",
+													"screenShotMode" : "ppt",
+													"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+													"pptHeading" : "Heading",
+													"pptSubHeading" : "Sub Heading",
+													"subHeading" : "Sub Heading",
+													"scrnShotFileName" : "exportDashboard",
+													"showTooltip" : "true",
+													"showMaximizeButton" : "false",
+													"showExcelDownload" : "true",
+													"showSubTitle" : "false",
+													"showTitle" : "false",
+													"GradientColor" : "#BDC3C7,#BDC3C7",
+													"showLegends" : "false",
+													"legendDirection" : "horizontal",
+													"legendfontSize" : "10",
+													"legendtextDecoration" : "none",
+													"legendfontStyle" : "normal",
+													"legendfontColor" : "#000000",
+													"legendfontFamily" : "Ubuntu",
+													"legendfontWeight" : "normal",
+													"showcheckboxwithlegend" : "false",
+													"showCheckboxSeprate" : "false",
+													"showBorder" : "false",
+													"borderColor" : "",
+													"borderThickness" : "",
+													"markerColor" : "#666666",
+													"markerTransparency" : 0.2,
+													"showMarkerLine" : true,
+													"showHorizontalMarkerLine" : false,
+													"autoaxisSetup" : "true",
+													"minimumAxisValue" : "-20",
+													"maximumAxisValue" : "110",
+													"baseZero" : "true",
+													"FixedLabel" : "true",
+													"Formater" : "none",
+													"Unit" : "",
+													"SignPosition" : "suffix",
+													"Precision" : "0",
+													"SecondaryFormater" : "none",
+													"SecondaryUnit" : "",
+													"Globalkey" : "bar2",
+													"enableColorFromDrill" : "false",
+													"ChartType" : "clustered",
+													"ChartBase" : "plane",
+													"xAxis" : {
+														"ShowLineXAxis" : "false",
+														"LineXAxisColor" : "#ffffff",
+														"Description" : "",
+														"LabelFontWeight" : "normal",
+														"FontSize" : "12",
+														"LabelFontColor" : "0",
+														"LabelFontStyle" : "normal",
+														"TextDecoration" : "none",
+														"LabelFontFamily" : "Ubuntu",
+														"Labelrotation" : "90",
+														"LabelTilted" : "false",
+														"FontColor" : "0",
+														"LabelTextDecoration" : "none",
+														"LabelFontSize" : "12",
+														"FontStyle" : "normal",
+														"FontFamily" : "Ubuntu",
+														"FontWeight" : "normal"
+													},
+													"yAxis" : {
+														"ShowLineYAxis" : "false",
+														"LineYAxisColor" : "#ffffff",
+														"Description" : "",
+														"rightaxisFormater" : "false",
+														"LabelFontWeight" : "normal",
+														"FontStyle" : "normal",
+														"LabelFontColor" : "0",
+														"FontFamily" : "Ubuntu",
+														"TextDecoration" : "none",
+														"LabelFontStyle" : "normal",
+														"LabelFontFamily" : "Ubuntu",
+														"FontColor" : "0",
+														"SecondDiscription" : "yaxis",
+														"LabelTextDecoration" : "none",
+														"LabelFontSize" : "12",
+														"FontSize" : "12",
+														"leftaxisFormater" : "true",
+														"FontWeight" : "normal",
+														"TickMarks" : "true",
+														"CategoryMarkingColor" : "#cccccc"
+													},
+													"Title" : {
+														"FontWeight" : "normal",
+														"Description" : "Year wise Expense & Revenue",
+														"FontSize" : "12",
+														"TextDecoration" : "none",
+														"Align" : "left",
+														"FontFamily" : "Ubuntu",
+														"FontColor" : "#22313f",
+														"FontStyle" : "normal",
+														"showTitle" : "false"
+													},
+													"SubTitle" : {
+														"FontWeight" : "normal",
+														"Description" : "SubtitleDescription",
+														"showSubTitle" : "false",
+														"FontSize" : "12",
+														"TextDecoration" : "none",
+														"Align" : "center",
+														"FontFamily" : "Ubuntu",
+														"FontColor" : "0",
+														"FontStyle" : "normal"
+													},
+													"ConditionalColors" : {
+														"ConditionalColor" : []
+													},
+													"CategoryColors" : {
+														"categoryDefaultColor" : "",
+														"categoryDefaultColorSet" : "",
+														"showColorsFromCategoryName" : "false",
+														"CategoryColor" : []
+													},
+													"DataSet" : {
+														"id" : "bar2",
+														"dataSource" : "C_1",
+														"Fields" : [{
+																"DisplayName" : "Category",
+																"Type" : "Category",
+																"Name" : "Category",
+																"Color" : "#7FFF00",
+																"ChartType" : "column",
+																"axis" : "left",
+																"visible" : "true",
+																"Precision" : "0",
+																"PlotType" : "point",
+																"PlotRadius" : "5",
+																"OtherField" : "",
+																"ToolTip" : "",
+																"PlotTransparency" : "0.8",
+																"DataSeperator" : "~",
+																"hierarchyType" : "none",
+																"fieldType" : "Field",
+																"iconPath" : "./resources/images/svg/Line.svg"
+															}, {
+																"DisplayName" : "val",
+																"Type" : "Series",
+																"Name" : "val",
+																"Color" : "#F97566",
+																"ChartType" : "column",
+																"axis" : "left",
+																"visible" : "true",
+																"Precision" : "0",
+																"PlotType" : "point",
+																"PlotRadius" : "5",
+																"OtherField" : "",
+																"ToolTip" : "",
+																"PlotTransparency" : "0.8",
+																"DataSeperator" : "~",
+																"hierarchyType" : "none",
+																"fieldType" : "Field",
+																"iconPath" : "./resources/images/svg/Column.svg"
+															}
+														]
+													}
+												},
+												"id" : "bar2"
+											}, {
+												"component" : {
+													"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+													"Type" : "Line",
+													"showGradient" : "false",
+													"bgGradients" : "0xffffff",
+													"bgAlpha" : "1",
+													"bgGradientRotation" : "0",
+													"exportToExcel" : "true",
+													"exportToJPEG" : "true",
+													"exportToPNG" : "true",
+													"exportToPDF" : "true",
+													"exportToPPT" : "true",
+													"exportToPrint" : "true",
+													"showScreenShotButton" : "true",
+													"screenShotMode" : "ppt",
+													"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+													"pptHeading" : "Heading",
+													"pptSubHeading" : "Sub Heading",
+													"subHeading" : "Sub Heading",
+													"scrnShotFileName" : "exportDashboard",
+													"showTooltip" : "true",
+													"showMaximizeButton" : "false",
+													"showExcelDownload" : "true",
+													"showSubTitle" : "false",
+													"showTitle" : "false",
+													"GradientColor" : "#BDC3C7,#BDC3C7",
+													"showLegends" : "false",
+													"legendDirection" : "horizontal",
+													"legendfontSize" : "10",
+													"legendtextDecoration" : "none",
+													"legendfontStyle" : "normal",
+													"legendfontColor" : "#000000",
+													"legendfontFamily" : "Ubuntu",
+													"legendfontWeight" : "normal",
+													"showcheckboxwithlegend" : "false",
+													"showCheckboxSeprate" : "false",
+													"showBorder" : "false",
+													"borderColor" : "",
+													"borderThickness" : "",
+													"markerColor" : "#666666",
+													"markerTransparency" : 0.2,
+													"showMarkerLine" : true,
+													"showVerticalMarkerLine" : "false",
+													"autoaxisSetup" : "true",
+													"minimumAxisValue" : "-20",
+													"maximumAxisValue" : "110",
+													"baseZero" : "true",
+													"FixedLabel" : "true",
+													"Formater" : "none",
+													"Unit" : "",
+													"SignPosition" : "suffix",
+													"Precision" : "0",
+													"SecondaryFormater" : "none",
+													"SecondaryUnit" : "",
+													"Globalkey" : "line4",
+													"enableColorFromDrill" : "false",
+													"showPoint" : true,
+													"lineForm" : "curve",
+													"ChartType" : "clustered",
+													"ChartBase" : "plane",
+													"showWholeNumberInAxis" : "false",
+													"plotWithLabel" : "true",
+													"showColorBands" : "false",
+													"BandColors" : "",
+													"BandAlphas" : "",
+													"rangeEnabledSeries" : "false",
+													"rangedSeriesColors" : "",
+													"rangesOfSeries" : "",
+													"rangedSeriesDisplayNames" : "",
+													"ColorBandRanges" : "",
+													"ShowColorBandLegends" : "",
+													"backgroundAlpha" : "",
+													"backGroundColor" : "",
+													"enableAutoColors" : "true",
+													"TargetColor" : "0xff0000",
+													"ValueColor" : "0x00ff00",
+													"drillLevel" : "0",
+													"URL" : "",
+													"Name" : "true",
+													"columnNumbers" : "",
+													"NumberOfTicks" : "",
+													"toolTipDateFormat" : "",
+													"fillColor" : "0x00ffff",
+													"strokeColor" : "0x000fff",
+													"declineFillColor" : "0x00ffff",
+													"autoAdjustLayout" : "true",
+													"seriesColor" : "",
+													"useCategoryColor" : "false",
+													"isClickToLink" : "true",
+													"clickLink" : "",
+													"dataAscending" : "true",
+													"sourceDateFormat" : "",
+													"SecondChartType" : "stacked",
+													"secondaryAxisShow" : "false",
+													"secondAxisautoSetup" : "false",
+													"secondAxisminimumValue" : "na",
+													"secondAxismaximumValue" : "na",
+													"secondAxisbaseZero" : "true",
+													"SecondaryAxisFormater" : "Number",
+													"SecondaryAxisUnit" : "Thousand",
+													"SecondaryAxisPrecision" : "0",
+													"SecondaryAxisSignPosition" : "suffix",
+													"horizontalMinimumAxisValue" : "",
+													"horizontalAxisAutoAdjust" : "",
+													"horizontalMaximumAxisValue" : "",
+													"horizontalAxisBaseZero" : "",
+													"lineWidth" : 3,
+													"xAxis" : {
+														"ShowLineXAxis" : "false",
+														"LineXAxisColor" : "#ffffff",
+														"Description" : "",
+														"LabelFontWeight" : "normal",
+														"FontSize" : "12",
+														"LabelFontColor" : "0",
+														"LabelFontStyle" : "normal",
+														"TextDecoration" : "none",
+														"LabelFontFamily" : "Ubuntu",
+														"Labelrotation" : "90",
+														"LabelTilted" : "false",
+														"FontColor" : "0",
+														"LabelTextDecoration" : "none",
+														"LabelFontSize" : "12",
+														"FontStyle" : "normal",
+														"FontFamily" : "Ubuntu",
+														"FontWeight" : "normal",
+														"TickMarks" : "true",
+														"CategoryMarkingColor" : "#cccccc"
+													},
+													"yAxis" : {
+														"ShowLineYAxis" : "false",
+														"LineYAxisColor" : "#ffffff",
+														"Description" : "",
+														"rightaxisFormater" : "false",
+														"LabelFontWeight" : "normal",
+														"FontStyle" : "normal",
+														"LabelFontColor" : "0",
+														"FontFamily" : "Ubuntu",
+														"TextDecoration" : "none",
+														"LabelFontStyle" : "normal",
+														"LabelFontFamily" : "Ubuntu",
+														"FontColor" : "0",
+														"SecondDiscription" : "yaxis",
+														"LabelTextDecoration" : "none",
+														"LabelFontSize" : "12",
+														"FontSize" : "12",
+														"leftaxisFormater" : "true",
+														"FontWeight" : "normal"
+													},
+													"Title" : {
+														"FontWeight" : "normal",
+														"Description" : "Revenue across continents in a decade",
+														"FontSize" : "12",
+														"TextDecoration" : "none",
+														"Align" : "left",
+														"FontFamily" : "Ubuntu",
+														"FontColor" : "#22313f",
+														"FontStyle" : "normal",
+														"showTitle" : "false"
+													},
+													"SubTitle" : {
+														"FontWeight" : "normal",
+														"Description" : "Subtitle Description",
+														"showSubTitle" : "false",
+														"FontSize" : "12",
+														"TextDecoration" : "none",
+														"Align" : "center",
+														"FontFamily" : "Ubuntu",
+														"FontColor" : "0",
+														"FontStyle" : "normal"
+													},
+													"ConditionalColors" : {
+														"ConditionalColor" : []
+													},
+													"CategoryColors" : {
+														"categoryDefaultColor" : "",
+														"categoryDefaultColorSet" : "",
+														"showColorsFromCategoryName" : "false",
+														"CategoryColor" : []
+													},
+													"DataSet" : {
+														"id" : "line4",
+														"dataSource" : "C_1",
+														"Fields" : [{
+																"DisplayName" : "Category",
+																"Type" : "Category",
+																"Name" : "Category",
+																"Color" : "#7FFF00",
+																"ChartType" : "column",
+																"axis" : "left",
+																"visible" : "true",
+																"Precision" : "0",
+																"PlotType" : "point",
+																"PlotRadius" : "5",
+																"OtherField" : "",
+																"ToolTip" : "",
+																"PlotTransparency" : "0.8",
+																"DataSeperator" : "~",
+																"hierarchyType" : "none",
+																"fieldType" : "Field",
+																"iconPath" : "./resources/images/svg/Line.svg"
+															}, {
+																"DisplayName" : "val",
+																"Type" : "Series",
+																"Name" : "val",
+																"Color" : "#A52A2A",
+																"ChartType" : "column",
+																"axis" : "left",
+																"visible" : "true",
+																"Precision" : "0",
+																"PlotType" : "point",
+																"PlotRadius" : "5",
+																"OtherField" : "",
+																"ToolTip" : "",
+																"PlotTransparency" : "0.8",
+																"DataSeperator" : "~",
+																"hierarchyType" : "none",
+																"fieldType" : "Field",
+																"iconPath" : "./resources/images/svg/Column.svg"
+															}
+														]
+													}
+												},
+												"id" : "line4"
+											}, {
+												"component" : {
+													"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+													"Type" : "Column",
+													"showGradient" : "false",
+													"bgGradients" : "0xffffff",
+													"bgAlpha" : "1",
+													"bgGradientRotation" : "0",
+													"exportToExcel" : "true",
+													"exportToJPEG" : "true",
+													"exportToPNG" : "true",
+													"exportToPDF" : "true",
+													"exportToPPT" : "true",
+													"exportToPrint" : "true",
+													"showScreenShotButton" : "true",
+													"screenShotMode" : "ppt",
+													"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+													"pptHeading" : "Heading",
+													"pptSubHeading" : "Sub Heading",
+													"subHeading" : "Sub Heading",
+													"scrnShotFileName" : "exportDashboard",
+													"showTooltip" : "true",
+													"showMaximizeButton" : "false",
+													"showExcelDownload" : "true",
+													"showSubTitle" : "false",
+													"showTitle" : "false",
+													"GradientColor" : "#BDC3C7,#BDC3C7",
+													"showLegends" : "false",
+													"legendDirection" : "horizontal",
+													"legendfontSize" : "10",
+													"legendtextDecoration" : "none",
+													"legendfontStyle" : "normal",
+													"legendfontColor" : "#000000",
+													"legendfontFamily" : "Ubuntu",
+													"legendfontWeight" : "normal",
+													"showcheckboxwithlegend" : "false",
+													"showCheckboxSeprate" : "false",
+													"showBorder" : "false",
+													"borderColor" : "",
+													"borderThickness" : "",
+													"markerColor" : "#666666",
+													"markerTransparency" : 0.2,
+													"showMarkerLine" : true,
+													"showVerticalMarkerLine" : false,
+													"autoaxisSetup" : "true",
+													"minimumAxisValue" : "-20",
+													"maximumAxisValue" : "110",
+													"baseZero" : "true",
+													"FixedLabel" : "true",
+													"Formater" : "none",
+													"Unit" : "",
+													"SignPosition" : "suffix",
+													"Precision" : "0",
+													"SecondaryFormater" : "none",
+													"SecondaryUnit" : "",
+													"Globalkey" : "column3",
+													"enableColorFromDrill" : "false",
+													"ChartType" : "clustered",
+													"ChartBase" : "plane",
+													"xAxis" : {
+														"ShowLineXAxis" : "false",
+														"LineXAxisColor" : "#ffffff",
+														"LabelFontWeight" : "normal",
+														"FontSize" : "12",
+														"LabelFontColor" : "0",
+														"LabelFontStyle" : "normal",
+														"TextDecoration" : "none",
+														"LabelFontFamily" : "Ubuntu",
+														"Labelrotation" : "90",
+														"LabelTilted" : "false",
+														"FontColor" : "0",
+														"LabelTextDecoration" : "none",
+														"LabelFontSize" : "12",
+														"FontStyle" : "normal",
+														"FontFamily" : "Ubuntu",
+														"FontWeight" : "normal",
+														"TickMarks" : "true",
+														"CategoryMarkingColor" : "#cccccc"
+													},
+													"yAxis" : {
+														"ShowLineYAxis" : "false",
+														"LineYAxisColor" : "#ffffff",
+														"rightaxisFormater" : "false",
+														"LabelFontWeight" : "normal",
+														"FontStyle" : "normal",
+														"LabelFontColor" : "0",
+														"FontFamily" : "Ubuntu",
+														"TextDecoration" : "none",
+														"LabelFontStyle" : "normal",
+														"LabelFontFamily" : "Ubuntu",
+														"FontColor" : "0",
+														"SecondDiscription" : "yaxis",
+														"LabelTextDecoration" : "none",
+														"LabelFontSize" : "12",
+														"FontSize" : "12",
+														"leftaxisFormater" : "true",
+														"FontWeight" : "normal"
+													},
+													"Title" : {
+														"FontWeight" : "normal",
+														"Description" : "Year wise Expense & Revenue",
+														"FontSize" : "12",
+														"TextDecoration" : "none",
+														"Align" : "left",
+														"FontFamily" : "Ubuntu",
+														"FontColor" : "#22313f",
+														"FontStyle" : "normal",
+														"showTitle" : "false"
+													},
+													"SubTitle" : {
+														"FontWeight" : "normal",
+														"Description" : "Subtitle Description",
+														"showSubTitle" : "false",
+														"FontSize" : "12",
+														"TextDecoration" : "none",
+														"Align" : "center",
+														"FontFamily" : "Ubuntu",
+														"FontColor" : "0",
+														"FontStyle" : "normal"
+													},
+													"ConditionalColors" : {
+														"ConditionalColor" : []
+													},
+													"CategoryColors" : {
+														"categoryDefaultColor" : "",
+														"categoryDefaultColorSet" : "",
+														"showColorsFromCategoryName" : "false",
+														"CategoryColor" : []
+													},
+													"DataSet" : {
+														"id" : "column3",
+														"dataSource" : "C_1",
+														"Fields" : [{
+																"DisplayName" : "Category",
+																"Type" : "Category",
+																"Name" : "Category",
+																"Color" : "#7FFF00",
+																"ChartType" : "column",
+																"axis" : "left",
+																"visible" : "true",
+																"Precision" : "0",
+																"PlotType" : "point",
+																"PlotRadius" : "5",
+																"OtherField" : "",
+																"ToolTip" : "",
+																"PlotTransparency" : "0.8",
+																"DataSeperator" : "~",
+																"hierarchyType" : "none",
+																"fieldType" : "Field",
+																"iconPath" : "./resources/images/svg/Line.svg"
+															}, {
+																"DisplayName" : "val",
+																"Type" : "Series",
+																"Name" : "val",
+																"Color" : "#A52A2A",
+																"ChartType" : "column",
+																"axis" : "left",
+																"visible" : "true",
+																"Precision" : "0",
+																"PlotType" : "point",
+																"PlotRadius" : "5",
+																"OtherField" : "",
+																"ToolTip" : "",
+																"PlotTransparency" : "0.8",
+																"DataSeperator" : "~",
+																"hierarchyType" : "none",
+																"fieldType" : "Field",
+																"iconPath" : "./resources/images/svg/Column.svg"
+															}
+														]
+													}
+												},
+												"id" : "column3"
+											}, {
+												"component" : {
+													"SelectedIndex" : "0",
+													"allowMultipleSelection" : "false",
+													"textDecoration" : "normal",
+													"hierarchyLevel" : "Single",
+													"rollOverColor" : "0xE8F2FE",
+													"textHoverColor" : "0xE8F2FE",
+													"direction" : "horizontal",
+													"FontFamily" : "Ubuntu",
+													"FontColor" : "#333333",
+													"FontStyle" : "normal",
+													"layout" : "horizontal",
+													"Name" : "filter",
+													"chromeColor" : "0xcccccc",
+													"selectionColor" : "0xE8F2FE",
+													"controlledSelection" : "false",
+													"Type" : "dropdown",
+													"showExpandButton" : "true",
+													"FontSize" : "12",
+													"fieldName" : "Value",
+													"checkBoxSelected" : "false",
+													"FontWeight" : "normal",
+													"Values" : [],
+													"Globalkey" : "filter5",
+													"DataSet" : {
+														"id" : "filter5",
+														"dataSource" : "C_1",
+														"Fields" : [{
+																"Name" : "val",
+																"DisplayName" : "val",
+																"Type" : "Value",
+																"defaultChild" : "",
+																"hierarchyType" : "parent",
+																"fieldType" : "Field",
+																"Color" : "#A52A2A"
+															}, {
+																"Name" : "Category",
+																"DisplayName" : "Category",
+																"Type" : "DisplayField",
+																"defaultChild" : "",
+																"hierarchyType" : "parent",
+																"fieldType" : "Field",
+																"Color" : "#7FFF00"
+															}
+														]
+													}
+												},
+												"id" : "filter5"
+											}
+										],
+										"AssociatedVirtualDataset" : [],
+										"query" : {
+											"filters" : {
+												"value" : ""
+											}
+										},
+										"connectionName" : "Connection-1",
+										"typeSpecifier" : "excel",
+										"calculatedFieldList" : [],
+										"availableFieldSet" : [{
+												"name" : "Category",
+												"displayName" : "",
+												"type" : "",
+												"added" : true
+											}, {
+												"name" : "val",
+												"displayName" : "",
+												"type" : "",
+												"added" : true
+											}
+										]
+									}
+								],
+								"queryServiceList" : [],
+								"selectedConnection" : {
+									"FieldSet" : [{
+											"name" : "Category",
+											"displayName" : "",
+											"type" : "",
+											"added" : true
+										}, {
+											"name" : "val",
+											"displayName" : "",
+											"type" : "",
+											"added" : true
+										}
+									],
+									"WhereClause" : {
+										"Con" : {
+											"Clause" : "",
+											"ClauseMap" : {}
+
+										}
+									},
+									"variable" : {
+										"Key" : "C_1",
+										"dynamicDataProviders" : "",
+										"DataProviderMap" : {
+											"DataProvider" : []
+										},
+										"DataSetMap" : {
+											"DataSet" : []
+										},
+										"VisibilityTriggerMap" : {
+											"Object" : []
+										},
+										"selectedComponents" : {
+											"Component" : []
+										},
+										"ImageMap" : {},
+										"userScript" : {
+											"value" : ""
+										},
+										"DefaultValues" : {
+											"DefaultValue" : []
+										}
+									},
+									"refreshMinutes" : 5,
+									"timelyRefresh" : "false",
+									"profileName" : "",
+									"hasMapping" : "false",
+									"id" : "C_1",
+									"DrillWhenDataChanges" : "false",
+									"LoadatStartup" : "true",
+									"Type" : "offline",
+									"isLangWebservice" : "false",
+									"password" : "",
+									"url" : "pieLongdata.xlsx",
+									"sheet" : "Sheet1",
+									"allowSessionID" : "false",
+									"userID" : "",
+									"selectedDataSourceID" : "",
+									"selectedServiceID" : "",
+									"availableConditionSet" : [{
+											"name" : "Category",
+											"added" : false,
+											"condition" : ""
+										}, {
+											"name" : "val",
+											"added" : false,
+											"condition" : ""
+										}
+									],
+									"AssociatedDataSet" : [{
+											"component" : {
+												"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+												"Type" : "Area",
+												"showGradient" : "false",
+												"bgGradients" : "0xffffff",
+												"bgAlpha" : "1",
+												"bgGradientRotation" : "0",
+												"exportToExcel" : "true",
+												"exportToJPEG" : "true",
+												"exportToPNG" : "true",
+												"exportToPDF" : "true",
+												"exportToPPT" : "true",
+												"exportToPrint" : "true",
+												"showScreenShotButton" : "true",
+												"screenShotMode" : "ppt",
+												"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+												"pptHeading" : "Heading",
+												"pptSubHeading" : "Sub Heading",
+												"subHeading" : "Sub Heading",
+												"scrnShotFileName" : "exportDashboard",
+												"showTooltip" : "true",
+												"showMaximizeButton" : "false",
+												"showExcelDownload" : "true",
+												"showSubTitle" : "false",
+												"showTitle" : "false",
+												"GradientColor" : "#BDC3C7,#BDC3C7",
+												"showLegends" : false,
+												"legendDirection" : "vertical",
+												"legendfontSize" : "10",
+												"legendtextDecoration" : "none",
+												"legendfontStyle" : "normal",
+												"legendfontFamily" : "Ubuntu",
+												"legendfontColor" : "#000000",
+												"legendfontWeight" : "normal",
+												"showcheckboxwithlegend" : "false",
+												"showCheckboxSeprate" : "false",
+												"showBorder" : "false",
+												"borderColor" : "",
+												"borderThickness" : "",
+												"markerColor" : "#666666",
+												"markerTransparency" : 0.2,
+												"showMarkerLine" : true,
+												"showVerticalMarkerLine" : false,
+												"autoaxisSetup" : "true",
+												"minimumAxisValue" : "-20",
+												"maximumAxisValue" : "110",
+												"baseZero" : "true",
+												"FixedLabel" : "true",
+												"Formater" : "none",
+												"Unit" : "",
+												"SignPosition" : "suffix",
+												"Precision" : "0",
+												"SecondaryFormater" : "none",
+												"SecondaryUnit" : "",
+												"Globalkey" : "area1",
+												"enableColorFromDrill" : "false",
+												"showPoint" : "false",
+												"lineForm" : "curve",
+												"fillOpacity" : "0.7",
+												"lineWidth" : "1",
+												"ChartType" : "overlaid",
+												"xAxis" : {
+													"ShowLineXAxis" : "false",
+													"LineXAxisColor" : "#ffffff",
+													"Description" : "",
+													"LabelFontWeight" : "normal",
+													"FontSize" : "12",
+													"LabelFontColor" : "0",
+													"LabelFontStyle" : "normal",
+													"TextDecoration" : "none",
+													"LabelFontFamily" : "Ubuntu",
+													"Labelrotation" : "90",
+													"LabelTilted" : "false",
+													"FontColor" : "0",
+													"LabelTextDecoration" : "none",
+													"LabelFontSize" : "12",
+													"FontStyle" : "normal",
+													"FontFamily" : "Ubuntu",
+													"FontWeight" : "normal",
+													"TickMarks" : "true",
+													"CategoryMarkingColor" : "#cccccc"
+												},
+												"yAxis" : {
+													"ShowLineYAxis" : "false",
+													"LineYAxisColor" : "#ffffff",
+													"Description" : "",
+													"rightaxisFormater" : "false",
+													"LabelFontWeight" : "normal",
+													"FontStyle" : "normal",
+													"LabelFontColor" : "0",
+													"FontFamily" : "Ubuntu",
+													"TextDecoration" : "none",
+													"LabelFontStyle" : "normal",
+													"LabelFontFamily" : "Ubuntu",
+													"FontColor" : "0",
+													"SecondDiscription" : "yaxis",
+													"LabelTextDecoration" : "none",
+													"LabelFontSize" : "12",
+													"FontSize" : "12",
+													"leftaxisFormater" : "true",
+													"FontWeight" : "normal"
+												},
+												"Title" : {
+													"FontWeight" : "normal",
+													"Description" : "Revenue across continents in a decade",
+													"FontSize" : "12",
+													"TextDecoration" : "none",
+													"Align" : "left",
+													"FontFamily" : "Ubuntu",
+													"FontColor" : "#22313f",
+													"FontStyle" : "normal",
+													"showTitle" : "false"
+												},
+												"SubTitle" : {
+													"FontWeight" : "normal",
+													"Description" : "Subtitle Description",
+													"showSubTitle" : "false",
+													"FontSize" : "12",
+													"TextDecoration" : "none",
+													"Align" : "center",
+													"FontFamily" : "Ubuntu",
+													"FontColor" : "0",
+													"FontStyle" : "normal"
+												},
+												"DataSet" : {
+													"id" : "area1",
+													"dataSource" : "C_1",
+													"Fields" : [{
+															"DisplayName" : "Category",
+															"Type" : "Category",
+															"Name" : "Category",
+															"Color" : "#7FFF00",
+															"ChartType" : "column",
+															"axis" : "left",
+															"visible" : "true",
+															"Precision" : "0",
+															"PlotType" : "point",
+															"PlotRadius" : "5",
+															"OtherField" : "",
+															"ToolTip" : "",
+															"PlotTransparency" : "0.8",
+															"DataSeperator" : "~",
+															"hierarchyType" : "none",
+															"fieldType" : "Field",
+															"iconPath" : "./resources/images/svg/Line.svg"
+														}, {
+															"DisplayName" : "val",
+															"Type" : "Series",
+															"Name" : "val",
+															"Color" : "#A52A2A",
+															"ChartType" : "column",
+															"axis" : "left",
+															"visible" : "true",
+															"Precision" : "0",
+															"PlotType" : "point",
+															"PlotRadius" : "5",
+															"OtherField" : "",
+															"ToolTip" : "",
+															"PlotTransparency" : "0.8",
+															"DataSeperator" : "~",
+															"hierarchyType" : "none",
+															"fieldType" : "Field",
+															"iconPath" : "./resources/images/svg/Column.svg"
+														}
+													]
+												}
+											},
+											"id" : "area1"
+										}, {
+											"component" : {
+												"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+												"Type" : "Bar",
+												"showGradient" : "false",
+												"bgGradients" : "0xffffff",
+												"bgAlpha" : "1",
+												"bgGradientRotation" : "0",
+												"exportToExcel" : "true",
+												"exportToJPEG" : "true",
+												"exportToPNG" : "true",
+												"exportToPDF" : "true",
+												"exportToPPT" : "true",
+												"exportToPrint" : "true",
+												"showScreenShotButton" : "true",
+												"screenShotMode" : "ppt",
+												"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+												"pptHeading" : "Heading",
+												"pptSubHeading" : "Sub Heading",
+												"subHeading" : "Sub Heading",
+												"scrnShotFileName" : "exportDashboard",
+												"showTooltip" : "true",
+												"showMaximizeButton" : "false",
+												"showExcelDownload" : "true",
+												"showSubTitle" : "false",
+												"showTitle" : "false",
+												"GradientColor" : "#BDC3C7,#BDC3C7",
+												"showLegends" : "false",
+												"legendDirection" : "horizontal",
+												"legendfontSize" : "10",
+												"legendtextDecoration" : "none",
+												"legendfontStyle" : "normal",
+												"legendfontColor" : "#000000",
+												"legendfontFamily" : "Ubuntu",
+												"legendfontWeight" : "normal",
+												"showcheckboxwithlegend" : "false",
+												"showCheckboxSeprate" : "false",
+												"showBorder" : "false",
+												"borderColor" : "",
+												"borderThickness" : "",
+												"markerColor" : "#666666",
+												"markerTransparency" : 0.2,
+												"showMarkerLine" : true,
+												"showHorizontalMarkerLine" : false,
+												"autoaxisSetup" : "true",
+												"minimumAxisValue" : "-20",
+												"maximumAxisValue" : "110",
+												"baseZero" : "true",
+												"FixedLabel" : "true",
+												"Formater" : "none",
+												"Unit" : "",
+												"SignPosition" : "suffix",
+												"Precision" : "0",
+												"SecondaryFormater" : "none",
+												"SecondaryUnit" : "",
+												"Globalkey" : "bar2",
+												"enableColorFromDrill" : "false",
+												"ChartType" : "clustered",
+												"ChartBase" : "plane",
+												"xAxis" : {
+													"ShowLineXAxis" : "false",
+													"LineXAxisColor" : "#ffffff",
+													"Description" : "",
+													"LabelFontWeight" : "normal",
+													"FontSize" : "12",
+													"LabelFontColor" : "0",
+													"LabelFontStyle" : "normal",
+													"TextDecoration" : "none",
+													"LabelFontFamily" : "Ubuntu",
+													"Labelrotation" : "90",
+													"LabelTilted" : "false",
+													"FontColor" : "0",
+													"LabelTextDecoration" : "none",
+													"LabelFontSize" : "12",
+													"FontStyle" : "normal",
+													"FontFamily" : "Ubuntu",
+													"FontWeight" : "normal"
+												},
+												"yAxis" : {
+													"ShowLineYAxis" : "false",
+													"LineYAxisColor" : "#ffffff",
+													"Description" : "",
+													"rightaxisFormater" : "false",
+													"LabelFontWeight" : "normal",
+													"FontStyle" : "normal",
+													"LabelFontColor" : "0",
+													"FontFamily" : "Ubuntu",
+													"TextDecoration" : "none",
+													"LabelFontStyle" : "normal",
+													"LabelFontFamily" : "Ubuntu",
+													"FontColor" : "0",
+													"SecondDiscription" : "yaxis",
+													"LabelTextDecoration" : "none",
+													"LabelFontSize" : "12",
+													"FontSize" : "12",
+													"leftaxisFormater" : "true",
+													"FontWeight" : "normal",
+													"TickMarks" : "true",
+													"CategoryMarkingColor" : "#cccccc"
+												},
+												"Title" : {
+													"FontWeight" : "normal",
+													"Description" : "Year wise Expense & Revenue",
+													"FontSize" : "12",
+													"TextDecoration" : "none",
+													"Align" : "left",
+													"FontFamily" : "Ubuntu",
+													"FontColor" : "#22313f",
+													"FontStyle" : "normal",
+													"showTitle" : "false"
+												},
+												"SubTitle" : {
+													"FontWeight" : "normal",
+													"Description" : "SubtitleDescription",
+													"showSubTitle" : "false",
+													"FontSize" : "12",
+													"TextDecoration" : "none",
+													"Align" : "center",
+													"FontFamily" : "Ubuntu",
+													"FontColor" : "0",
+													"FontStyle" : "normal"
+												},
+												"ConditionalColors" : {
+													"ConditionalColor" : []
+												},
+												"CategoryColors" : {
+													"categoryDefaultColor" : "",
+													"categoryDefaultColorSet" : "",
+													"showColorsFromCategoryName" : "false",
+													"CategoryColor" : []
+												},
+												"DataSet" : {
+													"id" : "bar2",
+													"dataSource" : "C_1",
+													"Fields" : [{
+															"DisplayName" : "Category",
+															"Type" : "Category",
+															"Name" : "Category",
+															"Color" : "#7FFF00",
+															"ChartType" : "column",
+															"axis" : "left",
+															"visible" : "true",
+															"Precision" : "0",
+															"PlotType" : "point",
+															"PlotRadius" : "5",
+															"OtherField" : "",
+															"ToolTip" : "",
+															"PlotTransparency" : "0.8",
+															"DataSeperator" : "~",
+															"hierarchyType" : "none",
+															"fieldType" : "Field",
+															"iconPath" : "./resources/images/svg/Line.svg"
+														}, {
+															"DisplayName" : "val",
+															"Type" : "Series",
+															"Name" : "val",
+															"Color" : "#A52A2A",
+															"ChartType" : "column",
+															"axis" : "left",
+															"visible" : "true",
+															"Precision" : "0",
+															"PlotType" : "point",
+															"PlotRadius" : "5",
+															"OtherField" : "",
+															"ToolTip" : "",
+															"PlotTransparency" : "0.8",
+															"DataSeperator" : "~",
+															"hierarchyType" : "none",
+															"fieldType" : "Field",
+															"iconPath" : "./resources/images/svg/Column.svg"
+														}
+													]
+												}
+											},
+											"id" : "bar2"
+										}, {
+											"component" : {
+												"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+												"Type" : "Line",
+												"showGradient" : "false",
+												"bgGradients" : "0xffffff",
+												"bgAlpha" : "1",
+												"bgGradientRotation" : "0",
+												"exportToExcel" : "true",
+												"exportToJPEG" : "true",
+												"exportToPNG" : "true",
+												"exportToPDF" : "true",
+												"exportToPPT" : "true",
+												"exportToPrint" : "true",
+												"showScreenShotButton" : "true",
+												"screenShotMode" : "ppt",
+												"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+												"pptHeading" : "Heading",
+												"pptSubHeading" : "Sub Heading",
+												"subHeading" : "Sub Heading",
+												"scrnShotFileName" : "exportDashboard",
+												"showTooltip" : "true",
+												"showMaximizeButton" : "false",
+												"showExcelDownload" : "true",
+												"showSubTitle" : "false",
+												"showTitle" : "false",
+												"GradientColor" : "#BDC3C7,#BDC3C7",
+												"showLegends" : "false",
+												"legendDirection" : "horizontal",
+												"legendfontSize" : "10",
+												"legendtextDecoration" : "none",
+												"legendfontStyle" : "normal",
+												"legendfontColor" : "#000000",
+												"legendfontFamily" : "Ubuntu",
+												"legendfontWeight" : "normal",
+												"showcheckboxwithlegend" : "false",
+												"showCheckboxSeprate" : "false",
+												"showBorder" : "false",
+												"borderColor" : "",
+												"borderThickness" : "",
+												"markerColor" : "#666666",
+												"markerTransparency" : 0.2,
+												"showMarkerLine" : true,
+												"showVerticalMarkerLine" : "false",
+												"autoaxisSetup" : "true",
+												"minimumAxisValue" : "-20",
+												"maximumAxisValue" : "110",
+												"baseZero" : "true",
+												"FixedLabel" : "true",
+												"Formater" : "none",
+												"Unit" : "",
+												"SignPosition" : "suffix",
+												"Precision" : "0",
+												"SecondaryFormater" : "none",
+												"SecondaryUnit" : "",
+												"Globalkey" : "line4",
+												"enableColorFromDrill" : "false",
+												"showPoint" : true,
+												"lineForm" : "curve",
+												"ChartType" : "clustered",
+												"ChartBase" : "plane",
+												"showWholeNumberInAxis" : "false",
+												"plotWithLabel" : "true",
+												"showColorBands" : "false",
+												"BandColors" : "",
+												"BandAlphas" : "",
+												"rangeEnabledSeries" : "false",
+												"rangedSeriesColors" : "",
+												"rangesOfSeries" : "",
+												"rangedSeriesDisplayNames" : "",
+												"ColorBandRanges" : "",
+												"ShowColorBandLegends" : "",
+												"backgroundAlpha" : "",
+												"backGroundColor" : "",
+												"enableAutoColors" : "true",
+												"TargetColor" : "0xff0000",
+												"ValueColor" : "0x00ff00",
+												"drillLevel" : "0",
+												"URL" : "",
+												"Name" : "true",
+												"columnNumbers" : "",
+												"NumberOfTicks" : "",
+												"toolTipDateFormat" : "",
+												"fillColor" : "0x00ffff",
+												"strokeColor" : "0x000fff",
+												"declineFillColor" : "0x00ffff",
+												"autoAdjustLayout" : "true",
+												"seriesColor" : "",
+												"useCategoryColor" : "false",
+												"isClickToLink" : "true",
+												"clickLink" : "",
+												"dataAscending" : "true",
+												"sourceDateFormat" : "",
+												"SecondChartType" : "stacked",
+												"secondaryAxisShow" : "false",
+												"secondAxisautoSetup" : "false",
+												"secondAxisminimumValue" : "na",
+												"secondAxismaximumValue" : "na",
+												"secondAxisbaseZero" : "true",
+												"SecondaryAxisFormater" : "Number",
+												"SecondaryAxisUnit" : "Thousand",
+												"SecondaryAxisPrecision" : "0",
+												"SecondaryAxisSignPosition" : "suffix",
+												"horizontalMinimumAxisValue" : "",
+												"horizontalAxisAutoAdjust" : "",
+												"horizontalMaximumAxisValue" : "",
+												"horizontalAxisBaseZero" : "",
+												"lineWidth" : 3,
+												"xAxis" : {
+													"ShowLineXAxis" : "false",
+													"LineXAxisColor" : "#ffffff",
+													"Description" : "",
+													"LabelFontWeight" : "normal",
+													"FontSize" : "12",
+													"LabelFontColor" : "0",
+													"LabelFontStyle" : "normal",
+													"TextDecoration" : "none",
+													"LabelFontFamily" : "Ubuntu",
+													"Labelrotation" : "90",
+													"LabelTilted" : "false",
+													"FontColor" : "0",
+													"LabelTextDecoration" : "none",
+													"LabelFontSize" : "12",
+													"FontStyle" : "normal",
+													"FontFamily" : "Ubuntu",
+													"FontWeight" : "normal",
+													"TickMarks" : "true",
+													"CategoryMarkingColor" : "#cccccc"
+												},
+												"yAxis" : {
+													"ShowLineYAxis" : "false",
+													"LineYAxisColor" : "#ffffff",
+													"Description" : "",
+													"rightaxisFormater" : "false",
+													"LabelFontWeight" : "normal",
+													"FontStyle" : "normal",
+													"LabelFontColor" : "0",
+													"FontFamily" : "Ubuntu",
+													"TextDecoration" : "none",
+													"LabelFontStyle" : "normal",
+													"LabelFontFamily" : "Ubuntu",
+													"FontColor" : "0",
+													"SecondDiscription" : "yaxis",
+													"LabelTextDecoration" : "none",
+													"LabelFontSize" : "12",
+													"FontSize" : "12",
+													"leftaxisFormater" : "true",
+													"FontWeight" : "normal"
+												},
+												"Title" : {
+													"FontWeight" : "normal",
+													"Description" : "Revenue across continents in a decade",
+													"FontSize" : "12",
+													"TextDecoration" : "none",
+													"Align" : "left",
+													"FontFamily" : "Ubuntu",
+													"FontColor" : "#22313f",
+													"FontStyle" : "normal",
+													"showTitle" : "false"
+												},
+												"SubTitle" : {
+													"FontWeight" : "normal",
+													"Description" : "Subtitle Description",
+													"showSubTitle" : "false",
+													"FontSize" : "12",
+													"TextDecoration" : "none",
+													"Align" : "center",
+													"FontFamily" : "Ubuntu",
+													"FontColor" : "0",
+													"FontStyle" : "normal"
+												},
+												"ConditionalColors" : {
+													"ConditionalColor" : []
+												},
+												"CategoryColors" : {
+													"categoryDefaultColor" : "",
+													"categoryDefaultColorSet" : "",
+													"showColorsFromCategoryName" : "false",
+													"CategoryColor" : []
+												},
+												"DataSet" : {
+													"id" : "line4",
+													"dataSource" : "C_1",
+													"Fields" : [{
+															"DisplayName" : "Category",
+															"Type" : "Category",
+															"Name" : "Category",
+															"Color" : "#7FFF00",
+															"ChartType" : "column",
+															"axis" : "left",
+															"visible" : "true",
+															"Precision" : "0",
+															"PlotType" : "point",
+															"PlotRadius" : "5",
+															"OtherField" : "",
+															"ToolTip" : "",
+															"PlotTransparency" : "0.8",
+															"DataSeperator" : "~",
+															"hierarchyType" : "none",
+															"fieldType" : "Field",
+															"iconPath" : "./resources/images/svg/Line.svg"
+														}, {
+															"DisplayName" : "val",
+															"Type" : "Series",
+															"Name" : "val",
+															"Color" : "#A52A2A",
+															"ChartType" : "column",
+															"axis" : "left",
+															"visible" : "true",
+															"Precision" : "0",
+															"PlotType" : "point",
+															"PlotRadius" : "5",
+															"OtherField" : "",
+															"ToolTip" : "",
+															"PlotTransparency" : "0.8",
+															"DataSeperator" : "~",
+															"hierarchyType" : "none",
+															"fieldType" : "Field",
+															"iconPath" : "./resources/images/svg/Column.svg"
+														}
+													]
+												}
+											},
+											"id" : "line4"
+										}, {
+											"component" : {
+												"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+												"Type" : "Column",
+												"showGradient" : "false",
+												"bgGradients" : "0xffffff",
+												"bgAlpha" : "1",
+												"bgGradientRotation" : "0",
+												"exportToExcel" : "true",
+												"exportToJPEG" : "true",
+												"exportToPNG" : "true",
+												"exportToPDF" : "true",
+												"exportToPPT" : "true",
+												"exportToPrint" : "true",
+												"showScreenShotButton" : "true",
+												"screenShotMode" : "ppt",
+												"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+												"pptHeading" : "Heading",
+												"pptSubHeading" : "Sub Heading",
+												"subHeading" : "Sub Heading",
+												"scrnShotFileName" : "exportDashboard",
+												"showTooltip" : "true",
+												"showMaximizeButton" : "false",
+												"showExcelDownload" : "true",
+												"showSubTitle" : "false",
+												"showTitle" : "false",
+												"GradientColor" : "#BDC3C7,#BDC3C7",
+												"showLegends" : "false",
+												"legendDirection" : "horizontal",
+												"legendfontSize" : "10",
+												"legendtextDecoration" : "none",
+												"legendfontStyle" : "normal",
+												"legendfontColor" : "#000000",
+												"legendfontFamily" : "Ubuntu",
+												"legendfontWeight" : "normal",
+												"showcheckboxwithlegend" : "false",
+												"showCheckboxSeprate" : "false",
+												"showBorder" : "false",
+												"borderColor" : "",
+												"borderThickness" : "",
+												"markerColor" : "#666666",
+												"markerTransparency" : 0.2,
+												"showMarkerLine" : true,
+												"showVerticalMarkerLine" : false,
+												"autoaxisSetup" : "true",
+												"minimumAxisValue" : "-20",
+												"maximumAxisValue" : "110",
+												"baseZero" : "true",
+												"FixedLabel" : "true",
+												"Formater" : "none",
+												"Unit" : "",
+												"SignPosition" : "suffix",
+												"Precision" : "0",
+												"SecondaryFormater" : "none",
+												"SecondaryUnit" : "",
+												"Globalkey" : "column3",
+												"enableColorFromDrill" : "false",
+												"ChartType" : "clustered",
+												"ChartBase" : "plane",
+												"xAxis" : {
+													"ShowLineXAxis" : "false",
+													"LineXAxisColor" : "#ffffff",
+													"LabelFontWeight" : "normal",
+													"FontSize" : "12",
+													"LabelFontColor" : "0",
+													"LabelFontStyle" : "normal",
+													"TextDecoration" : "none",
+													"LabelFontFamily" : "Ubuntu",
+													"Labelrotation" : "90",
+													"LabelTilted" : "false",
+													"FontColor" : "0",
+													"LabelTextDecoration" : "none",
+													"LabelFontSize" : "12",
+													"FontStyle" : "normal",
+													"FontFamily" : "Ubuntu",
+													"FontWeight" : "normal",
+													"TickMarks" : "true",
+													"CategoryMarkingColor" : "#cccccc"
+												},
+												"yAxis" : {
+													"ShowLineYAxis" : "false",
+													"LineYAxisColor" : "#ffffff",
+													"rightaxisFormater" : "false",
+													"LabelFontWeight" : "normal",
+													"FontStyle" : "normal",
+													"LabelFontColor" : "0",
+													"FontFamily" : "Ubuntu",
+													"TextDecoration" : "none",
+													"LabelFontStyle" : "normal",
+													"LabelFontFamily" : "Ubuntu",
+													"FontColor" : "0",
+													"SecondDiscription" : "yaxis",
+													"LabelTextDecoration" : "none",
+													"LabelFontSize" : "12",
+													"FontSize" : "12",
+													"leftaxisFormater" : "true",
+													"FontWeight" : "normal"
+												},
+												"Title" : {
+													"FontWeight" : "normal",
+													"Description" : "Year wise Expense & Revenue",
+													"FontSize" : "12",
+													"TextDecoration" : "none",
+													"Align" : "left",
+													"FontFamily" : "Ubuntu",
+													"FontColor" : "#22313f",
+													"FontStyle" : "normal",
+													"showTitle" : "false"
+												},
+												"SubTitle" : {
+													"FontWeight" : "normal",
+													"Description" : "Subtitle Description",
+													"showSubTitle" : "false",
+													"FontSize" : "12",
+													"TextDecoration" : "none",
+													"Align" : "center",
+													"FontFamily" : "Ubuntu",
+													"FontColor" : "0",
+													"FontStyle" : "normal"
+												},
+												"ConditionalColors" : {
+													"ConditionalColor" : []
+												},
+												"CategoryColors" : {
+													"categoryDefaultColor" : "",
+													"categoryDefaultColorSet" : "",
+													"showColorsFromCategoryName" : "false",
+													"CategoryColor" : []
+												},
+												"DataSet" : {
+													"id" : "column3",
+													"dataSource" : "C_1",
+													"Fields" : [{
+															"DisplayName" : "Category",
+															"Type" : "Category",
+															"Name" : "Category",
+															"Color" : "#7FFF00",
+															"ChartType" : "column",
+															"axis" : "left",
+															"visible" : "true",
+															"Precision" : "0",
+															"PlotType" : "point",
+															"PlotRadius" : "5",
+															"OtherField" : "",
+															"ToolTip" : "",
+															"PlotTransparency" : "0.8",
+															"DataSeperator" : "~",
+															"hierarchyType" : "none",
+															"fieldType" : "Field",
+															"iconPath" : "./resources/images/svg/Line.svg"
+														}, {
+															"DisplayName" : "val",
+															"Type" : "Series",
+															"Name" : "val",
+															"Color" : "#A52A2A",
+															"ChartType" : "column",
+															"axis" : "left",
+															"visible" : "true",
+															"Precision" : "0",
+															"PlotType" : "point",
+															"PlotRadius" : "5",
+															"OtherField" : "",
+															"ToolTip" : "",
+															"PlotTransparency" : "0.8",
+															"DataSeperator" : "~",
+															"hierarchyType" : "none",
+															"fieldType" : "Field",
+															"iconPath" : "./resources/images/svg/Column.svg"
+														}
+													]
+												}
+											},
+											"id" : "column3"
+										}, {
+											"component" : {
+												"SelectedIndex" : "0",
+												"allowMultipleSelection" : "false",
+												"textDecoration" : "normal",
+												"hierarchyLevel" : "Single",
+												"rollOverColor" : "0xE8F2FE",
+												"textHoverColor" : "0xE8F2FE",
+												"direction" : "horizontal",
+												"FontFamily" : "Ubuntu",
+												"FontColor" : "#333333",
+												"FontStyle" : "normal",
+												"layout" : "horizontal",
+												"Name" : "filter",
+												"chromeColor" : "0xcccccc",
+												"selectionColor" : "0xE8F2FE",
+												"controlledSelection" : "false",
+												"Type" : "dropdown",
+												"showExpandButton" : "true",
+												"FontSize" : "12",
+												"fieldName" : "Value",
+												"checkBoxSelected" : "false",
+												"FontWeight" : "normal",
+												"Values" : [],
+												"Globalkey" : "filter5",
+												"DataSet" : {
+													"id" : "filter5",
+													"dataSource" : "C_1",
+													"Fields" : [{
+															"Name" : "val",
+															"DisplayName" : "val",
+															"Type" : "Value",
+															"defaultChild" : "",
+															"hierarchyType" : "parent",
+															"fieldType" : "Field",
+															"Color" : "#A52A2A"
+														}, {
+															"Name" : "Category",
+															"DisplayName" : "Category",
+															"Type" : "DisplayField",
+															"defaultChild" : "",
+															"hierarchyType" : "parent",
+															"fieldType" : "Field",
+															"Color" : "#7FFF00"
+														}
+													]
+												}
+											},
+											"id" : "filter5"
+										}
+									],
+									"AssociatedVirtualDataset" : [],
+									"query" : {
+										"filters" : {
+											"value" : ""
+										}
+									},
+									"connectionName" : "Connection-1",
+									"typeSpecifier" : "excel",
+									"calculatedFieldList" : [],
+									"availableFieldSet" : [{
+											"name" : "Category",
+											"displayName" : "",
+											"type" : "",
+											"added" : true
+										}, {
+											"name" : "val",
+											"displayName" : "",
+											"type" : "",
+											"added" : true
+										}
+									]
+								}
+							},
+							"componentGroups" : [{
+									"gName" : "",
+									"aCompIds" : ["cmp_1", "cmp_2", "cmp_3", "cmp_4"]
+								}
+							],
+							"VirtualDataSet" : [],
+							"imports" : ["AreaChart", "BarChart", "ColumnStackChart", "LineChart", "ComboFilter"],
+							"GlobalVariable" : {
+								"Variable" : [{
+										"Key" : "context",
+										"dynamicDataProviders" : "",
+										"DataProviderMap" : {
+											"DataProvider" : []
+										},
+										"DataSetMap" : {
+											"DataSet" : []
+										},
+										"VisibilityTriggerMap" : {
+											"Object" : []
+										},
+										"selectedComponents" : {
+											"Component" : []
+										},
+										"ImageMap" : {},
+										"userScript" : {
+											"value" : ""
+										},
+										"DefaultValues" : {
+											"DefaultValue" : []
+										}
+									}, {
+										"Key" : "area1",
+										"dynamicDataProviders" : "",
+										"DataProviderMap" : {
+											"DataProvider" : []
+										},
+										"DataSetMap" : {
+											"DataSet" : []
+										},
+										"VisibilityTriggerMap" : {
+											"Object" : []
+										},
+										"selectedComponents" : {
+											"Component" : []
+										},
+										"ImageMap" : {},
+										"userScript" : {
+											"value" : ""
+										},
+										"DefaultValues" : {
+											"DefaultValue" : []
+										}
+									}, {
+										"Key" : "bar2",
+										"dynamicDataProviders" : "",
+										"DataProviderMap" : {
+											"DataProvider" : []
+										},
+										"DataSetMap" : {
+											"DataSet" : []
+										},
+										"VisibilityTriggerMap" : {
+											"Object" : []
+										},
+										"selectedComponents" : {
+											"Component" : []
+										},
+										"ImageMap" : {},
+										"userScript" : {
+											"value" : ""
+										},
+										"DefaultValues" : {
+											"DefaultValue" : []
+										}
+									}, {
+										"Key" : "column3",
+										"dynamicDataProviders" : "",
+										"DataProviderMap" : {
+											"DataProvider" : []
+										},
+										"DataSetMap" : {
+											"DataSet" : []
+										},
+										"VisibilityTriggerMap" : {
+											"Object" : []
+										},
+										"selectedComponents" : {
+											"Component" : []
+										},
+										"ImageMap" : {},
+										"userScript" : {
+											"value" : ""
+										},
+										"DefaultValues" : {
+											"DefaultValue" : []
+										}
+									}, {
+										"Key" : "line4",
+										"dynamicDataProviders" : "",
+										"DataProviderMap" : {
+											"DataProvider" : []
+										},
+										"DataSetMap" : {
+											"DataSet" : []
+										},
+										"VisibilityTriggerMap" : {
+											"Object" : []
+										},
+										"selectedComponents" : {
+											"Component" : []
+										},
+										"ImageMap" : {},
+										"userScript" : {
+											"value" : ""
+										},
+										"DefaultValues" : {
+											"DefaultValue" : []
+										}
+									}, {
+										"Key" : "filter5",
+										"dynamicDataProviders" : "",
+										"DataProviderMap" : {
+											"DataProvider" : []
+										},
+										"DataSetMap" : {
+											"DataSet" : []
+										},
+										"VisibilityTriggerMap" : {
+											"Object" : []
+										},
+										"selectedComponents" : {
+											"Component" : []
+										},
+										"ImageMap" : {},
+										"userScript" : {
+											"value" : "sdk.autoReload();"
+										},
+										"DefaultValues" : {
+											"DefaultValue" : []
+										}
+									}, {
+										"Key" : "C_1",
+										"dynamicDataProviders" : "",
+										"DataProviderMap" : {
+											"DataProvider" : []
+										},
+										"DataSetMap" : {
+											"DataSet" : []
+										},
+										"VisibilityTriggerMap" : {
+											"Object" : []
+										},
+										"selectedComponents" : {
+											"Component" : []
+										},
+										"ImageMap" : {},
+										"userScript" : {
+											"value" : ""
+										},
+										"DefaultValues" : {
+											"DefaultValue" : []
+										}
+									}
+								]
+							},
+							"OffLineData" : {
+								"Data" : [{
+										"id" : "C_1",
+										"specifications" : {
+											"sheetNumber" : "0",
+											"dateHeaders" : "",
+											"headerAsFirstRow" : "true",
+											"dateFormat" : "",
+											"textQualifier" : "",
+											"delimiter" : ","
+										},
+										"Records" : {
+											"Record" : [{
+													"Category" : "India",
+													"val" : 130
+												}, {
+													"Category" : "US",
+													"val" : 250
+												}, {
+													"Category" : "China",
+													"val" : 450
+												}, {
+													"Category" : "Japan",
+													"val" : 111
+												}, {
+													"Category" : "UK",
+													"val" : 90
+												}, {
+													"Category" : "Germany",
+													"val" : 115
+												}
+											]
+										}
+									}
+								]
+							},
+							"DatasetExpressions" : {
+								"DatasetExpression" : []
+							},
+							"Containers" : {
+								"name" : "template1",
+								"id" : "fpd",
+								"bootstrap" : "true",
+								"Container" : [{
+										"id" : "r0",
+										"type" : "div",
+										"parent" : "",
+										"attr" : {
+											"class" : "row",
+											"style" : ""
+										}
+									}, {
+										"id" : "c1-r0",
+										"type" : "div",
+										"parent" : "r0",
+										"pheight":"10",
+										"attr" : {
+											"class" : "col-md-12 ",
+											"style" : ""
+										}
+									}, {
+										"id" : "r1",
+										"type" : "div",
+										"parent" : "",
+										"attr" : {
+											"class" : "row",
+											"style" : ""
+										}
+									}, {
+										"id" : "r2",
+										"type" : "div",
+										"parent" : "",
+										"attr" : {
+											"class" : "row",
+											"style" : ""
+										}
+									}, {
+										"id" : "c1-r1",
+										"type" : "div",
+										"parent" : "r1",
+										"pheight":"45",
+										"attr" : {
+											"class" : "col-md-6",
+											"style" : ""
+										}
+									}, {
+										"id" : "c2-r1",
+										"type" : "div",
+										"parent" : "r1",
+										
+										"attr" : {
+											"class" : "col-md-6",
+											"style" : ""
+										}
+									}, {
+										"id" : "r1-c2-r1",
+										"type" : "div",
+										"parent" : "c2-r1",
+										"attr" : {
+											"class" : "row",
+											"style" : ""
+										}
+									}, {
+										"id" : "c1-r1-c2-r1",
+										"type" : "div",
+										"parent" : "r1-c2-r1",
+										"pheight":"10",
+										
+										"attr" : {
+											"class" : "col-md-4",
+											"style" : ""
+										}
+									}, {
+										"id" : "c2-r1-c2-r1",
+										"type" : "div",
+										"parent" : "r1-c2-r1",
+										"pheight":"10",
+										
+										"attr" : {
+											"class" : "col-md-4",
+											"style" : ""
+										}
+									}, {
+										"id" : "c3-r1-c2-r1",
+										"type" : "div",
+										"parent" : "r1-c2-r1",
+										"pheight":"10",
+										
+										"attr" : {
+											"class" : "col-md-4",
+											"style" : ""
+										}
+									}, {
+										"id" : "r2-c2-r1",
+										"type" : "div",
+										"parent" : "c2-r1",
+										"attr" : {
+											"class" : "row",
+											"style" : ""
+										}
+									}, {
+										"id" : "c1-r2-c2-r1",
+										"type" : "div",
+										"parent" : "r2-c2-r1",
+										"pheight":"35",
+										"attr" : {
+											"class" : "col-md-6",
+											"style" : ""
+										}
+									}, {
+										"id" : "c2-r2-c2-r1",
+										"type" : "div",
+										"parent" : "r2-c2-r1",
+										"pheight":"35",
+										"attr" : {
+											"class" : "col-md-6",
+											"style" : ""
+										}
+									}, {
+										"id" : "c1-r2",
+										"type" : "div",
+										"parent" : "r2",
+										"pheight":"45",
+										"attr" : {
+											"class" : "col-md-12",
+											"style" : ""
+										}
+									}
+								]
+
+							},
+							"AbsoluteLayout" : {
+
+								"resolution" : "929x566",
+								"bgAlpha" : "1",
+								"borderThickness" : 1,
+								"borderColor" : "#08AEA8",
+								"enableWatermark" : "true",
+								"gradients" : "#FFFFFF",
+								"isAllLockedComponents" : "false",
+								"gradientRotation" : "0",
+								"width" : 1534,
+								"visibilityEffects" : "false",
+								"height" : 720,
+								"useGlobalFont" : "false",
+								"fontFamily" : "Ubuntu",
+								"designerTheme" : "default-theme",
+								"useFontFromUrl" : "false",
+								"fontUrl" : "",
+								"Object" : [{
+										"componentType" : "area_chart",
+										"objectType" : "chart",
+										"subElement" : "Chart",
+										"globalVariableKeyAttribute" : "Globalkey",
+										"isDataSetAvailable" : "true",
+										"enableScript" : "true",
+										"referenceID" : "area1",
+										"isValueFieldsAvailable" : "false",
+										"showContextMenu" : "false",
+										"shortName" : "area",
+										"showLocked" : "false",
+										"objectName" : "area1",
+										"unShowHidden" : "false",
+										"percentheight" : "320",
+										"width" : "450",
+										"x" : "44",
+										"height" : "300",
+										"y" : "38",
+										"initialVisibility" : "true",
+										"percentwidth" : "50",
+										"parent" : "c1-r1",
+										"objectID" : "cmp_2",
+										"Chart" : {
+											"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+											"Type" : "Area",
+											"showGradient" : "false",
+											"bgGradients" : "0xffffff",
+											"bgAlpha" : "1",
+											"bgGradientRotation" : "0",
+											"exportToExcel" : "true",
+											"exportToJPEG" : "true",
+											"exportToPNG" : "true",
+											"exportToPDF" : "true",
+											"exportToPPT" : "true",
+											"exportToPrint" : "true",
+											"showScreenShotButton" : "true",
+											"screenShotMode" : "ppt",
+											"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+											"pptHeading" : "Heading",
+											"pptSubHeading" : "Sub Heading",
+											"subHeading" : "Sub Heading",
+											"scrnShotFileName" : "exportDashboard",
+											"showTooltip" : "true",
+											"showMaximizeButton" : "false",
+											"showExcelDownload" : "true",
+											"showSubTitle" : "false",
+											"showTitle" : "false",
+											"GradientColor" : "#BDC3C7,#BDC3C7",
+											"showLegends" : false,
+											"legendDirection" : "vertical",
+											"legendfontSize" : "10",
+											"legendtextDecoration" : "none",
+											"legendfontStyle" : "normal",
+											"legendfontFamily" : "Ubuntu",
+											"legendfontColor" : "#000000",
+											"legendfontWeight" : "normal",
+											"showcheckboxwithlegend" : "false",
+											"showCheckboxSeprate" : "false",
+											"showBorder" : "false",
+											"borderColor" : "",
+											"borderThickness" : "",
+											"markerColor" : "#666666",
+											"markerTransparency" : 0.2,
+											"showMarkerLine" : true,
+											"showVerticalMarkerLine" : false,
+											"autoaxisSetup" : "true",
+											"minimumAxisValue" : "-20",
+											"maximumAxisValue" : "110",
+											"baseZero" : "true",
+											"FixedLabel" : "true",
+											"Formater" : "none",
+											"Unit" : "",
+											"SignPosition" : "suffix",
+											"Precision" : "0",
+											"SecondaryFormater" : "none",
+											"SecondaryUnit" : "",
+											"Globalkey" : "area1",
+											"enableColorFromDrill" : "false",
+											"showPoint" : "false",
+											"lineForm" : "curve",
+											"fillOpacity" : "0.7",
+											"lineWidth" : "1",
+											"ChartType" : "overlaid",
+											"xAxis" : {
+												"ShowLineXAxis" : "false",
+												"LineXAxisColor" : "#ffffff",
+												"Description" : "",
+												"LabelFontWeight" : "normal",
+												"FontSize" : "12",
+												"LabelFontColor" : "0",
+												"LabelFontStyle" : "normal",
+												"TextDecoration" : "none",
+												"LabelFontFamily" : "Ubuntu",
+												"Labelrotation" : "90",
+												"LabelTilted" : "false",
+												"FontColor" : "0",
+												"LabelTextDecoration" : "none",
+												"LabelFontSize" : "12",
+												"FontStyle" : "normal",
+												"FontFamily" : "Ubuntu",
+												"FontWeight" : "normal",
+												"TickMarks" : "true",
+												"CategoryMarkingColor" : "#cccccc"
+											},
+											"yAxis" : {
+												"ShowLineYAxis" : "false",
+												"LineYAxisColor" : "#ffffff",
+												"Description" : "",
+												"rightaxisFormater" : "false",
+												"LabelFontWeight" : "normal",
+												"FontStyle" : "normal",
+												"LabelFontColor" : "0",
+												"FontFamily" : "Ubuntu",
+												"TextDecoration" : "none",
+												"LabelFontStyle" : "normal",
+												"LabelFontFamily" : "Ubuntu",
+												"FontColor" : "0",
+												"SecondDiscription" : "yaxis",
+												"LabelTextDecoration" : "none",
+												"LabelFontSize" : "12",
+												"FontSize" : "12",
+												"leftaxisFormater" : "true",
+												"FontWeight" : "normal"
+											},
+											"Title" : {
+												"FontWeight" : "normal",
+												"Description" : "Revenue across continents in a decade",
+												"FontSize" : "12",
+												"TextDecoration" : "none",
+												"Align" : "left",
+												"FontFamily" : "Ubuntu",
+												"FontColor" : "#22313f",
+												"FontStyle" : "normal",
+												"showTitle" : "false"
+											},
+											"SubTitle" : {
+												"FontWeight" : "normal",
+												"Description" : "Subtitle Description",
+												"showSubTitle" : "false",
+												"FontSize" : "12",
+												"TextDecoration" : "none",
+												"Align" : "center",
+												"FontFamily" : "Ubuntu",
+												"FontColor" : "0",
+												"FontStyle" : "normal"
+											},
+											"DataSet" : {
+												"id" : "area1",
+												"dataSource" : "C_1",
+												"Fields" : [{
+														"DisplayName" : "Category",
+														"Type" : "Category",
+														"Name" : "Category",
+														"Color" : "#7FFF00",
+														"ChartType" : "column",
+														"axis" : "left",
+														"visible" : "true",
+														"Precision" : "0",
+														"PlotType" : "point",
+														"PlotRadius" : "5",
+														"OtherField" : "",
+														"ToolTip" : "",
+														"PlotTransparency" : "0.8",
+														"DataSeperator" : "~",
+														"hierarchyType" : "none",
+														"fieldType" : "Field",
+														"iconPath" : "./resources/images/svg/Line.svg"
+													}, {
+														"DisplayName" : "val",
+														"Type" : "Series",
+														"Name" : "val",
+														"Color" : "#A52A2A",
+														"ChartType" : "column",
+														"axis" : "left",
+														"visible" : "true",
+														"Precision" : "0",
+														"PlotType" : "point",
+														"PlotRadius" : "5",
+														"OtherField" : "",
+														"ToolTip" : "",
+														"PlotTransparency" : "0.8",
+														"DataSeperator" : "~",
+														"hierarchyType" : "none",
+														"fieldType" : "Field",
+														"iconPath" : "./resources/images/svg/Column.svg"
+													}
+												]
+											}
+										},
+										"designData" : {
+											"name" : "Area",
+											"type" : "chart",
+											"class" : "AreaChart",
+											"frameworkClass" : "Area",
+											"show" : true,
+											"icon" : "./resources/images/svg/Area.svg"
+										},
+										"variable" : {
+											"Key" : "area1",
+											"dynamicDataProviders" : "",
+											"DataProviderMap" : {
+												"DataProvider" : []
+											},
+											"DataSetMap" : {
+												"DataSet" : []
+											},
+											"VisibilityTriggerMap" : {
+												"Object" : []
+											},
+											"selectedComponents" : {
+												"Component" : []
+											},
+											"ImageMap" : {},
+											"userScript" : {
+												"value" : ""
+											},
+											"DefaultValues" : {
+												"DefaultValue" : []
+											}
+										},
+										"groupings" : ""
+									}, {
+										"componentType" : "bar_chart",
+										"objectType" : "chart",
+										"subElement" : "Chart",
+										"globalVariableKeyAttribute" : "Globalkey",
+										"isDataSetAvailable" : "true",
+										"enableScript" : "true",
+										"referenceID" : "bar2",
+										"isValueFieldsAvailable" : "false",
+										"showContextMenu" : "false",
+										"shortName" : "bar",
+										"showLocked" : "false",
+										"objectName" : "bar2",
+										"unShowHidden" : "false",
+										"percentheight" : "320",
+										"width" : "450",
+										"x" : "519",
+										"height" : "300",
+										"y" : "37",
+										"initialVisibility" : "true",
+										"percentwidth" : "450",
+										"parent" : "c1-r2-c2-r1",
+										"objectID" : "cmp_1",
+										"Chart" : {
+											"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+											"Type" : "Bar",
+											"showGradient" : "false",
+											"bgGradients" : "0xffffff",
+											"bgAlpha" : "1",
+											"bgGradientRotation" : "0",
+											"exportToExcel" : "true",
+											"exportToJPEG" : "true",
+											"exportToPNG" : "true",
+											"exportToPDF" : "true",
+											"exportToPPT" : "true",
+											"exportToPrint" : "true",
+											"showScreenShotButton" : "true",
+											"screenShotMode" : "ppt",
+											"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+											"pptHeading" : "Heading",
+											"pptSubHeading" : "Sub Heading",
+											"subHeading" : "Sub Heading",
+											"scrnShotFileName" : "exportDashboard",
+											"showTooltip" : "true",
+											"showMaximizeButton" : "false",
+											"showExcelDownload" : "true",
+											"showSubTitle" : "false",
+											"showTitle" : "false",
+											"GradientColor" : "#BDC3C7,#BDC3C7",
+											"showLegends" : "false",
+											"legendDirection" : "horizontal",
+											"legendfontSize" : "10",
+											"legendtextDecoration" : "none",
+											"legendfontStyle" : "normal",
+											"legendfontColor" : "#000000",
+											"legendfontFamily" : "Ubuntu",
+											"legendfontWeight" : "normal",
+											"showcheckboxwithlegend" : "false",
+											"showCheckboxSeprate" : "false",
+											"showBorder" : "false",
+											"borderColor" : "",
+											"borderThickness" : "",
+											"markerColor" : "#666666",
+											"markerTransparency" : 0.2,
+											"showMarkerLine" : true,
+											"showHorizontalMarkerLine" : false,
+											"autoaxisSetup" : "true",
+											"minimumAxisValue" : "-20",
+											"maximumAxisValue" : "110",
+											"baseZero" : "true",
+											"FixedLabel" : "true",
+											"Formater" : "none",
+											"Unit" : "",
+											"SignPosition" : "suffix",
+											"Precision" : "0",
+											"SecondaryFormater" : "none",
+											"SecondaryUnit" : "",
+											"Globalkey" : "bar2",
+											"enableColorFromDrill" : "false",
+											"ChartType" : "clustered",
+											"ChartBase" : "plane",
+											"xAxis" : {
+												"ShowLineXAxis" : "false",
+												"LineXAxisColor" : "#ffffff",
+												"Description" : "",
+												"LabelFontWeight" : "normal",
+												"FontSize" : "12",
+												"LabelFontColor" : "0",
+												"LabelFontStyle" : "normal",
+												"TextDecoration" : "none",
+												"LabelFontFamily" : "Ubuntu",
+												"Labelrotation" : "90",
+												"LabelTilted" : "false",
+												"FontColor" : "0",
+												"LabelTextDecoration" : "none",
+												"LabelFontSize" : "12",
+												"FontStyle" : "normal",
+												"FontFamily" : "Ubuntu",
+												"FontWeight" : "normal"
+											},
+											"yAxis" : {
+												"ShowLineYAxis" : "false",
+												"LineYAxisColor" : "#ffffff",
+												"Description" : "",
+												"rightaxisFormater" : "false",
+												"LabelFontWeight" : "normal",
+												"FontStyle" : "normal",
+												"LabelFontColor" : "0",
+												"FontFamily" : "Ubuntu",
+												"TextDecoration" : "none",
+												"LabelFontStyle" : "normal",
+												"LabelFontFamily" : "Ubuntu",
+												"FontColor" : "0",
+												"SecondDiscription" : "yaxis",
+												"LabelTextDecoration" : "none",
+												"LabelFontSize" : "12",
+												"FontSize" : "12",
+												"leftaxisFormater" : "true",
+												"FontWeight" : "normal",
+												"TickMarks" : "true",
+												"CategoryMarkingColor" : "#cccccc"
+											},
+											"Title" : {
+												"FontWeight" : "normal",
+												"Description" : "Year wise Expense & Revenue",
+												"FontSize" : "12",
+												"TextDecoration" : "none",
+												"Align" : "left",
+												"FontFamily" : "Ubuntu",
+												"FontColor" : "#22313f",
+												"FontStyle" : "normal",
+												"showTitle" : "false"
+											},
+											"SubTitle" : {
+												"FontWeight" : "normal",
+												"Description" : "SubtitleDescription",
+												"showSubTitle" : "false",
+												"FontSize" : "12",
+												"TextDecoration" : "none",
+												"Align" : "center",
+												"FontFamily" : "Ubuntu",
+												"FontColor" : "0",
+												"FontStyle" : "normal"
+											},
+											"ConditionalColors" : {
+												"ConditionalColor" : []
+											},
+											"CategoryColors" : {
+												"categoryDefaultColor" : "",
+												"categoryDefaultColorSet" : "",
+												"showColorsFromCategoryName" : "false",
+												"CategoryColor" : []
+											},
+											"DataSet" : {
+												"id" : "bar2",
+												"dataSource" : "C_1",
+												"Fields" : [{
+														"DisplayName" : "Category",
+														"Type" : "Category",
+														"Name" : "Category",
+														"Color" : "#7FFF00",
+														"ChartType" : "column",
+														"axis" : "left",
+														"visible" : "true",
+														"Precision" : "0",
+														"PlotType" : "point",
+														"PlotRadius" : "5",
+														"OtherField" : "",
+														"ToolTip" : "",
+														"PlotTransparency" : "0.8",
+														"DataSeperator" : "~",
+														"hierarchyType" : "none",
+														"fieldType" : "Field",
+														"iconPath" : "./resources/images/svg/Line.svg"
+													}, {
+														"DisplayName" : "val",
+														"Type" : "Series",
+														"Name" : "val",
+														"Color" : "#A52A2A",
+														"ChartType" : "column",
+														"axis" : "left",
+														"visible" : "true",
+														"Precision" : "0",
+														"PlotType" : "point",
+														"PlotRadius" : "5",
+														"OtherField" : "",
+														"ToolTip" : "",
+														"PlotTransparency" : "0.8",
+														"DataSeperator" : "~",
+														"hierarchyType" : "none",
+														"fieldType" : "Field",
+														"iconPath" : "./resources/images/svg/Column.svg"
+													}
+												]
+											}
+										},
+										"designData" : {
+											"name" : "Bar",
+											"type" : "chart",
+											"class" : "BarChart",
+											"show" : true,
+											"icon" : "./resources/images/svg/Bar.svg"
+										},
+										"variable" : {
+											"Key" : "bar2",
+											"dynamicDataProviders" : "",
+											"DataProviderMap" : {
+												"DataProvider" : []
+											},
+											"DataSetMap" : {
+												"DataSet" : []
+											},
+											"VisibilityTriggerMap" : {
+												"Object" : []
+											},
+											"selectedComponents" : {
+												"Component" : []
+											},
+											"ImageMap" : {},
+											"userScript" : {
+												"value" : ""
+											},
+											"DefaultValues" : {
+												"DefaultValue" : []
+											}
+										},
+										"groupings" : ""
+									}, {
+										"componentType" : "column_stack_chart",
+										"objectType" : "chart",
+										"subElement" : "Chart",
+										"globalVariableKeyAttribute" : "Globalkey",
+										"isDataSetAvailable" : "true",
+										"enableScript" : "true",
+										"referenceID" : "column3",
+										"isValueFieldsAvailable" : "false",
+										"showContextMenu" : "false",
+										"shortName" : "column",
+										"showLocked" : "false",
+										"objectName" : "column3",
+										"unShowHidden" : "false",
+										"percentheight" : "320",
+										"width" : "450",
+										"x" : "27",
+										"height" : "300",
+										"y" : "375",
+										"initialVisibility" : "true",
+										"percentwidth" : "450",
+										"parent" : "c2-r2-c2-r1",
+										"objectID" : "cmp_3",
+										"Chart" : {
+											"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+											"Type" : "Column",
+											"showGradient" : "false",
+											"bgGradients" : "0xffffff",
+											"bgAlpha" : "1",
+											"bgGradientRotation" : "0",
+											"exportToExcel" : "true",
+											"exportToJPEG" : "true",
+											"exportToPNG" : "true",
+											"exportToPDF" : "true",
+											"exportToPPT" : "true",
+											"exportToPrint" : "true",
+											"showScreenShotButton" : "true",
+											"screenShotMode" : "ppt",
+											"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+											"pptHeading" : "Heading",
+											"pptSubHeading" : "Sub Heading",
+											"subHeading" : "Sub Heading",
+											"scrnShotFileName" : "exportDashboard",
+											"showTooltip" : "true",
+											"showMaximizeButton" : "false",
+											"showExcelDownload" : "true",
+											"showSubTitle" : "false",
+											"showTitle" : "false",
+											"GradientColor" : "#BDC3C7,#BDC3C7",
+											"showLegends" : "false",
+											"legendDirection" : "horizontal",
+											"legendfontSize" : "10",
+											"legendtextDecoration" : "none",
+											"legendfontStyle" : "normal",
+											"legendfontColor" : "#000000",
+											"legendfontFamily" : "Ubuntu",
+											"legendfontWeight" : "normal",
+											"showcheckboxwithlegend" : "false",
+											"showCheckboxSeprate" : "false",
+											"showBorder" : "false",
+											"borderColor" : "",
+											"borderThickness" : "",
+											"markerColor" : "#666666",
+											"markerTransparency" : 0.2,
+											"showMarkerLine" : true,
+											"showVerticalMarkerLine" : false,
+											"autoaxisSetup" : "true",
+											"minimumAxisValue" : "-20",
+											"maximumAxisValue" : "110",
+											"baseZero" : "true",
+											"FixedLabel" : "true",
+											"Formater" : "none",
+											"Unit" : "",
+											"SignPosition" : "suffix",
+											"Precision" : "0",
+											"SecondaryFormater" : "none",
+											"SecondaryUnit" : "",
+											"Globalkey" : "column3",
+											"enableColorFromDrill" : "false",
+											"ChartType" : "clustered",
+											"ChartBase" : "plane",
+											"xAxis" : {
+												"ShowLineXAxis" : "false",
+												"LineXAxisColor" : "#ffffff",
+												"LabelFontWeight" : "normal",
+												"FontSize" : "12",
+												"LabelFontColor" : "0",
+												"LabelFontStyle" : "normal",
+												"TextDecoration" : "none",
+												"LabelFontFamily" : "Ubuntu",
+												"Labelrotation" : "90",
+												"LabelTilted" : "false",
+												"FontColor" : "0",
+												"LabelTextDecoration" : "none",
+												"LabelFontSize" : "12",
+												"FontStyle" : "normal",
+												"FontFamily" : "Ubuntu",
+												"FontWeight" : "normal",
+												"TickMarks" : "true",
+												"CategoryMarkingColor" : "#cccccc"
+											},
+											"yAxis" : {
+												"ShowLineYAxis" : "false",
+												"LineYAxisColor" : "#ffffff",
+												"rightaxisFormater" : "false",
+												"LabelFontWeight" : "normal",
+												"FontStyle" : "normal",
+												"LabelFontColor" : "0",
+												"FontFamily" : "Ubuntu",
+												"TextDecoration" : "none",
+												"LabelFontStyle" : "normal",
+												"LabelFontFamily" : "Ubuntu",
+												"FontColor" : "0",
+												"SecondDiscription" : "yaxis",
+												"LabelTextDecoration" : "none",
+												"LabelFontSize" : "12",
+												"FontSize" : "12",
+												"leftaxisFormater" : "true",
+												"FontWeight" : "normal"
+											},
+											"Title" : {
+												"FontWeight" : "normal",
+												"Description" : "Year wise Expense & Revenue",
+												"FontSize" : "12",
+												"TextDecoration" : "none",
+												"Align" : "left",
+												"FontFamily" : "Ubuntu",
+												"FontColor" : "#22313f",
+												"FontStyle" : "normal",
+												"showTitle" : "false"
+											},
+											"SubTitle" : {
+												"FontWeight" : "normal",
+												"Description" : "Subtitle Description",
+												"showSubTitle" : "false",
+												"FontSize" : "12",
+												"TextDecoration" : "none",
+												"Align" : "center",
+												"FontFamily" : "Ubuntu",
+												"FontColor" : "0",
+												"FontStyle" : "normal"
+											},
+											"ConditionalColors" : {
+												"ConditionalColor" : []
+											},
+											"CategoryColors" : {
+												"categoryDefaultColor" : "",
+												"categoryDefaultColorSet" : "",
+												"showColorsFromCategoryName" : "false",
+												"CategoryColor" : []
+											},
+											"DataSet" : {
+												"id" : "column3",
+												"dataSource" : "C_1",
+												"Fields" : [{
+														"DisplayName" : "Category",
+														"Type" : "Category",
+														"Name" : "Category",
+														"Color" : "#7FFF00",
+														"ChartType" : "column",
+														"axis" : "left",
+														"visible" : "true",
+														"Precision" : "0",
+														"PlotType" : "point",
+														"PlotRadius" : "5",
+														"OtherField" : "",
+														"ToolTip" : "",
+														"PlotTransparency" : "0.8",
+														"DataSeperator" : "~",
+														"hierarchyType" : "none",
+														"fieldType" : "Field",
+														"iconPath" : "./resources/images/svg/Line.svg"
+													}, {
+														"DisplayName" : "val",
+														"Type" : "Series",
+														"Name" : "val",
+														"Color" : "#A52A2A",
+														"ChartType" : "column",
+														"axis" : "left",
+														"visible" : "true",
+														"Precision" : "0",
+														"PlotType" : "point",
+														"PlotRadius" : "5",
+														"OtherField" : "",
+														"ToolTip" : "",
+														"PlotTransparency" : "0.8",
+														"DataSeperator" : "~",
+														"hierarchyType" : "none",
+														"fieldType" : "Field",
+														"iconPath" : "./resources/images/svg/Column.svg"
+													}
+												]
+											}
+										},
+										"designData" : {
+											"name" : "Column",
+											"type" : "chart",
+											"class" : "ColumnStackChart",
+											"show" : true,
+											"icon" : "./resources/images/svg/Column.svg"
+										},
+										"variable" : {
+											"Key" : "column3",
+											"dynamicDataProviders" : "",
+											"DataProviderMap" : {
+												"DataProvider" : []
+											},
+											"DataSetMap" : {
+												"DataSet" : []
+											},
+											"VisibilityTriggerMap" : {
+												"Object" : []
+											},
+											"selectedComponents" : {
+												"Component" : []
+											},
+											"ImageMap" : {},
+											"userScript" : {
+												"value" : ""
+											},
+											"DefaultValues" : {
+												"DefaultValue" : []
+											}
+										},
+										"groupings" : ""
+									}, {
+										"componentType" : "line_chart",
+										"objectType" : "chart",
+										"subElement" : "Chart",
+										"globalVariableKeyAttribute" : "Globalkey",
+										"isDataSetAvailable" : "true",
+										"enableScript" : "true",
+										"referenceID" : "line4",
+										"isValueFieldsAvailable" : "false",
+										"showContextMenu" : "false",
+										"shortName" : "line",
+										"showLocked" : "false",
+										"objectName" : "line4",
+										"unShowHidden" : "false",
+										"percentheight" : "320",
+										"width" : "450",
+										"x" : "527",
+										"height" : "300",
+										"y" : "386",
+										"initialVisibility" : "true",
+										"percentwidth" : "450",
+										"parent" : "c1-r2",
+										"objectID" : "cmp_4",
+										"Chart" : {
+											"id" : "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+											"Type" : "Line",
+											"showGradient" : "false",
+											"bgGradients" : "0xffffff",
+											"bgAlpha" : "1",
+											"bgGradientRotation" : "0",
+											"exportToExcel" : "true",
+											"exportToJPEG" : "true",
+											"exportToPNG" : "true",
+											"exportToPDF" : "true",
+											"exportToPPT" : "true",
+											"exportToPrint" : "true",
+											"showScreenShotButton" : "true",
+											"screenShotMode" : "ppt",
+											"pptServiceURL" : "http://bdbizviz.com/PPT/Parser",
+											"pptHeading" : "Heading",
+											"pptSubHeading" : "Sub Heading",
+											"subHeading" : "Sub Heading",
+											"scrnShotFileName" : "exportDashboard",
+											"showTooltip" : "true",
+											"showMaximizeButton" : "false",
+											"showExcelDownload" : "true",
+											"showSubTitle" : "false",
+											"showTitle" : "false",
+											"GradientColor" : "#BDC3C7,#BDC3C7",
+											"showLegends" : "false",
+											"legendDirection" : "horizontal",
+											"legendfontSize" : "10",
+											"legendtextDecoration" : "none",
+											"legendfontStyle" : "normal",
+											"legendfontColor" : "#000000",
+											"legendfontFamily" : "Ubuntu",
+											"legendfontWeight" : "normal",
+											"showcheckboxwithlegend" : "false",
+											"showCheckboxSeprate" : "false",
+											"showBorder" : "false",
+											"borderColor" : "",
+											"borderThickness" : "",
+											"markerColor" : "#666666",
+											"markerTransparency" : 0.2,
+											"showMarkerLine" : true,
+											"showVerticalMarkerLine" : "false",
+											"autoaxisSetup" : "true",
+											"minimumAxisValue" : "-20",
+											"maximumAxisValue" : "110",
+											"baseZero" : "true",
+											"FixedLabel" : "true",
+											"Formater" : "none",
+											"Unit" : "",
+											"SignPosition" : "suffix",
+											"Precision" : "0",
+											"SecondaryFormater" : "none",
+											"SecondaryUnit" : "",
+											"Globalkey" : "line4",
+											"enableColorFromDrill" : "false",
+											"showPoint" : true,
+											"lineForm" : "curve",
+											"ChartType" : "clustered",
+											"ChartBase" : "plane",
+											"showWholeNumberInAxis" : "false",
+											"plotWithLabel" : "true",
+											"showColorBands" : "false",
+											"BandColors" : "",
+											"BandAlphas" : "",
+											"rangeEnabledSeries" : "false",
+											"rangedSeriesColors" : "",
+											"rangesOfSeries" : "",
+											"rangedSeriesDisplayNames" : "",
+											"ColorBandRanges" : "",
+											"ShowColorBandLegends" : "",
+											"backgroundAlpha" : "",
+											"backGroundColor" : "",
+											"enableAutoColors" : "true",
+											"TargetColor" : "0xff0000",
+											"ValueColor" : "0x00ff00",
+											"drillLevel" : "0",
+											"URL" : "",
+											"Name" : "true",
+											"columnNumbers" : "",
+											"NumberOfTicks" : "",
+											"toolTipDateFormat" : "",
+											"fillColor" : "0x00ffff",
+											"strokeColor" : "0x000fff",
+											"declineFillColor" : "0x00ffff",
+											"autoAdjustLayout" : "true",
+											"seriesColor" : "",
+											"useCategoryColor" : "false",
+											"isClickToLink" : "true",
+											"clickLink" : "",
+											"dataAscending" : "true",
+											"sourceDateFormat" : "",
+											"SecondChartType" : "stacked",
+											"secondaryAxisShow" : "false",
+											"secondAxisautoSetup" : "false",
+											"secondAxisminimumValue" : "na",
+											"secondAxismaximumValue" : "na",
+											"secondAxisbaseZero" : "true",
+											"SecondaryAxisFormater" : "Number",
+											"SecondaryAxisUnit" : "Thousand",
+											"SecondaryAxisPrecision" : "0",
+											"SecondaryAxisSignPosition" : "suffix",
+											"horizontalMinimumAxisValue" : "",
+											"horizontalAxisAutoAdjust" : "",
+											"horizontalMaximumAxisValue" : "",
+											"horizontalAxisBaseZero" : "",
+											"lineWidth" : 3,
+											"xAxis" : {
+												"ShowLineXAxis" : "false",
+												"LineXAxisColor" : "#ffffff",
+												"Description" : "",
+												"LabelFontWeight" : "normal",
+												"FontSize" : "12",
+												"LabelFontColor" : "0",
+												"LabelFontStyle" : "normal",
+												"TextDecoration" : "none",
+												"LabelFontFamily" : "Ubuntu",
+												"Labelrotation" : "90",
+												"LabelTilted" : "false",
+												"FontColor" : "0",
+												"LabelTextDecoration" : "none",
+												"LabelFontSize" : "12",
+												"FontStyle" : "normal",
+												"FontFamily" : "Ubuntu",
+												"FontWeight" : "normal",
+												"TickMarks" : "true",
+												"CategoryMarkingColor" : "#cccccc"
+											},
+											"yAxis" : {
+												"ShowLineYAxis" : "false",
+												"LineYAxisColor" : "#ffffff",
+												"Description" : "",
+												"rightaxisFormater" : "false",
+												"LabelFontWeight" : "normal",
+												"FontStyle" : "normal",
+												"LabelFontColor" : "0",
+												"FontFamily" : "Ubuntu",
+												"TextDecoration" : "none",
+												"LabelFontStyle" : "normal",
+												"LabelFontFamily" : "Ubuntu",
+												"FontColor" : "0",
+												"SecondDiscription" : "yaxis",
+												"LabelTextDecoration" : "none",
+												"LabelFontSize" : "12",
+												"FontSize" : "12",
+												"leftaxisFormater" : "true",
+												"FontWeight" : "normal"
+											},
+											"Title" : {
+												"FontWeight" : "normal",
+												"Description" : "Revenue across continents in a decade",
+												"FontSize" : "12",
+												"TextDecoration" : "none",
+												"Align" : "left",
+												"FontFamily" : "Ubuntu",
+												"FontColor" : "#22313f",
+												"FontStyle" : "normal",
+												"showTitle" : "false"
+											},
+											"SubTitle" : {
+												"FontWeight" : "normal",
+												"Description" : "Subtitle Description",
+												"showSubTitle" : "false",
+												"FontSize" : "12",
+												"TextDecoration" : "none",
+												"Align" : "center",
+												"FontFamily" : "Ubuntu",
+												"FontColor" : "0",
+												"FontStyle" : "normal"
+											},
+											"ConditionalColors" : {
+												"ConditionalColor" : []
+											},
+											"CategoryColors" : {
+												"categoryDefaultColor" : "",
+												"categoryDefaultColorSet" : "",
+												"showColorsFromCategoryName" : "false",
+												"CategoryColor" : []
+											},
+											"DataSet" : {
+												"id" : "line4",
+												"dataSource" : "C_1",
+												"Fields" : [{
+														"DisplayName" : "Category",
+														"Type" : "Category",
+														"Name" : "Category",
+														"Color" : "#7FFF00",
+														"ChartType" : "column",
+														"axis" : "left",
+														"visible" : "true",
+														"Precision" : "0",
+														"PlotType" : "point",
+														"PlotRadius" : "5",
+														"OtherField" : "",
+														"ToolTip" : "",
+														"PlotTransparency" : "0.8",
+														"DataSeperator" : "~",
+														"hierarchyType" : "none",
+														"fieldType" : "Field",
+														"iconPath" : "./resources/images/svg/Line.svg"
+													}, {
+														"DisplayName" : "val",
+														"Type" : "Series",
+														"Name" : "val",
+														"Color" : "#A52A2A",
+														"ChartType" : "column",
+														"axis" : "left",
+														"visible" : "true",
+														"Precision" : "0",
+														"PlotType" : "point",
+														"PlotRadius" : "5",
+														"OtherField" : "",
+														"ToolTip" : "",
+														"PlotTransparency" : "0.8",
+														"DataSeperator" : "~",
+														"hierarchyType" : "none",
+														"fieldType" : "Field",
+														"iconPath" : "./resources/images/svg/Column.svg"
+													}
+												]
+											}
+										},
+										"designData" : {
+											"name" : "Line",
+											"type" : "chart",
+											"class" : "LineChart",
+											"show" : true,
+											"icon" : "./resources/images/svg/Line.svg"
+										},
+										"variable" : {
+											"Key" : "line4",
+											"dynamicDataProviders" : "",
+											"DataProviderMap" : {
+												"DataProvider" : []
+											},
+											"DataSetMap" : {
+												"DataSet" : []
+											},
+											"VisibilityTriggerMap" : {
+												"Object" : []
+											},
+											"selectedComponents" : {
+												"Component" : []
+											},
+											"ImageMap" : {},
+											"userScript" : {
+												"value" : ""
+											},
+											"DefaultValues" : {
+												"DefaultValue" : []
+											}
+										},
+										"groupings" : ""
+									}, {
+										"componentType" : "label",
+										"isDataSetAvailable" : "false",
+										"enableScript" : "true",
+										"referenceID" : "label1",
+										"isValueFieldsAvailable" : "false",
+										"showContextMenu" : "false",
+										"shortName" : "label",
+										"x" : 144,
+										"objectID" : "label_1",
+										"globalVariableKeyAttribute" : "globalkey",
+										"height" : 61,
+										"width" : 154,
+										"subElement" : "Label",
+										"unShowHidden" : "false",
+										"objectName" : "label1",
+										"showLocked" : "false",
+										"initialVisibility" : "true",
+										"y" : 221,
+										"parent" : "c2-r1-c2-r1",
+										"objectType" : "label",
+										"Label" : {
+											"fieldName" : "Value",
+											"fieldValue" : "",
+											"alignmentBaseline" : "useDominantBaseline",
+											"text" : "$150,253",
+											"fontSize" : 35,
+											"fontWeight" : "normal",
+											"textAlign" : "left",
+											"fontFamily" : "Ubuntu",
+											"verticalAlign" : "middle",
+											"textDecoration" : "none",
+											"color" : "#000000",
+											"fontStyle" : "normal",
+											"backgroundColor" : "#ffffff",
+											"backgroundAlpha" : "1",
+											"dataRowNumber" : "",
+											"isDynamic" : "false",
+											"virtualDataID" : "",
+											"virtualDataField" : "",
+											"globalKey" : ""
+										},
+										"designData" : {
+											"name" : "Label",
+											"type" : "singleValuedComponent",
+											"class" : "Label",
+											"show" : true,
+											"icon" : "./resources/images/svg/Label.svg"
+										},
+										"variable" : {
+											"Key" : "label1",
+											"dynamicDataProviders" : "",
+											"DataProviderMap" : {
+												"DataProvider" : []
+											},
+											"DataSetMap" : {
+												"DataSet" : []
+											},
+											"VisibilityTriggerMap" : {
+												"Object" : []
+											},
+											"selectedComponents" : {
+												"Component" : []
+											},
+											"ImageMap" : {},
+											"userScript" : {
+												"value" : ""
+											},
+											"DefaultValues" : {
+												"DefaultValue" : []
+											}
+										}
+									}, {
+										"componentType" : "label",
+										"isDataSetAvailable" : "false",
+										"enableScript" : "true",
+										"referenceID" : "label2",
+										"isValueFieldsAvailable" : "false",
+										"showContextMenu" : "false",
+										"shortName" : "label",
+										"x" : "385",
+										"objectID" : "label_2",
+										"globalVariableKeyAttribute" : "globalkey",
+										"height" : 61,
+										"width" : 154,
+										"subElement" : "Label",
+										"unShowHidden" : "false",
+										"objectName" : "label2",
+										"showLocked" : "false",
+										"initialVisibility" : "true",
+										"y" : "221",
+										"parent" : "c1-r1-c2-r1",
+										"objectType" : "label",
+										"Label" : {
+											"fieldName" : "Value",
+											"fieldValue" : "",
+											"alignmentBaseline" : "useDominantBaseline",
+											"text" : "$665,457",
+											"fontSize" : 35,
+											"fontWeight" : "normal",
+											"textAlign" : "left",
+											"fontFamily" : "Ubuntu",
+											"verticalAlign" : "middle",
+											"textDecoration" : "none",
+											"color" : "#000000",
+											"fontStyle" : "normal",
+											"backgroundColor" : "#ffffff",
+											"backgroundAlpha" : "1",
+											"dataRowNumber" : "",
+											"isDynamic" : "false",
+											"virtualDataID" : "",
+											"virtualDataField" : "",
+											"globalKey" : ""
+										},
+										"designData" : {
+											"name" : "Label",
+											"type" : "singleValuedComponent",
+											"class" : "Label",
+											"show" : true,
+											"icon" : "./resources/images/svg/Label.svg"
+										},
+										"variable" : {
+											"Key" : "label2",
+											"dynamicDataProviders" : "",
+											"DataProviderMap" : {
+												"DataProvider" : []
+											},
+											"DataSetMap" : {
+												"DataSet" : []
+											},
+											"VisibilityTriggerMap" : {
+												"Object" : []
+											},
+											"selectedComponents" : {
+												"Component" : []
+											},
+											"ImageMap" : {},
+											"userScript" : {
+												"value" : ""
+											},
+											"DefaultValues" : {
+												"DefaultValue" : []
+											}
+										}
+									}, {
+										"componentType" : "label",
+										"isDataSetAvailable" : "false",
+										"enableScript" : "true",
+										"referenceID" : "label3",
+										"isValueFieldsAvailable" : "false",
+										"showContextMenu" : "false",
+										"shortName" : "label",
+										"x" : "581",
+										"objectID" : "label_3",
+										"globalVariableKeyAttribute" : "globalkey",
+										"height" : 61,
+										"width" : 154,
+										"subElement" : "Label",
+										"unShowHidden" : "false",
+										"objectName" : "label3",
+										"showLocked" : "false",
+										"initialVisibility" : "true",
+										"y" : "221",
+										"parent" : "c3-r1-c2-r1",
+										"objectType" : "label",
+										"Label" : {
+											"fieldName" : "Value",
+											"fieldValue" : "",
+											"alignmentBaseline" : "useDominantBaseline",
+											"text" : "$450,255",
+											"fontSize" : 35,
+											"fontWeight" : "normal",
+											"textAlign" : "center",
+											"fontFamily" : "Ubuntu",
+											"verticalAlign" : "middle",
+											"textDecoration" : "none",
+											"color" : "#000000",
+											"fontStyle" : "normal",
+											"backgroundColor" : "#ffffff",
+											"backgroundAlpha" : "1",
+											"dataRowNumber" : "",
+											"isDynamic" : "false",
+											"virtualDataID" : "",
+											"virtualDataField" : "",
+											"globalKey" : ""
+										},
+										"designData" : {
+											"name" : "Label",
+											"type" : "singleValuedComponent",
+											"class" : "Label",
+											"show" : true,
+											"icon" : "./resources/images/svg/Label.svg"
+										},
+										"variable" : {
+											"Key" : "label3",
+											"dynamicDataProviders" : "",
+											"DataProviderMap" : {
+												"DataProvider" : []
+											},
+											"DataSetMap" : {
+												"DataSet" : []
+											},
+											"VisibilityTriggerMap" : {
+												"Object" : []
+											},
+											"selectedComponents" : {
+												"Component" : []
+											},
+											"ImageMap" : {},
+											"userScript" : {
+												"value" : ""
+											},
+											"DefaultValues" : {
+												"DefaultValue" : []
+											}
+										}
+									},
+									{
+										"componentType" : "label",
+										"isDataSetAvailable" : "false",
+										"enableScript" : "true",
+										"referenceID" : "label4",
+										"isValueFieldsAvailable" : "false",
+										"showContextMenu" : "false",
+										"shortName" : "label",
+										"x" : "581",
+										"objectID" : "label_4",
+										"globalVariableKeyAttribute" : "globalkey",
+										"height" : 90,
+										"width" : 400,
+										"subElement" : "Label",
+										"unShowHidden" : "false",
+										"objectName" : "label4",
+										"showLocked" : "false",
+										"initialVisibility" : "true",
+										"y" : "221",
+										"parent" : "c1-r0",
+										"objectType" : "label",
+										"Label" : {
+											"fieldName" : "Value",
+											"fieldValue" : "",
+											"alignmentBaseline" : "useDominantBaseline",
+											"text" : "Finance Template",
+											"fontSize" : 35,
+											"fontWeight" : "normal",
+											"textAlign" : "center",
+											"fontFamily" : "Ubuntu",
+											"verticalAlign" : "middle",
+											"textDecoration" : "none",
+											"color" : "#000000",
+											"fontStyle" : "normal",
+											"backgroundColor" : "#ffffff",
+											"backgroundAlpha" : "1",
+											"dataRowNumber" : "",
+											"isDynamic" : "false",
+											"virtualDataID" : "",
+											"virtualDataField" : "",
+											"globalKey" : ""
+										},
+										"designData" : {
+											"name" : "Label",
+											"type" : "singleValuedComponent",
+											"class" : "Label",
+											"show" : true,
+											"icon" : "./resources/images/svg/Label.svg"
+										},
+										"variable" : {
+											"Key" : "label3",
+											"dynamicDataProviders" : "",
+											"DataProviderMap" : {
+												"DataProvider" : []
+											},
+											"DataSetMap" : {
+												"DataSet" : []
+											},
+											"VisibilityTriggerMap" : {
+												"Object" : []
+											},
+											"selectedComponents" : {
+												"Component" : []
+											},
+											"ImageMap" : {},
+											"userScript" : {
+												"value" : ""
+											},
+											"DefaultValues" : {
+												"DefaultValue" : []
+											}
+										}
+									}
+
+								]
+							},
+							"name" : "4chart"
+						},
+						"FlashVars_Param" : {
+							"name" : "",
+							"value" : ""
+						},
+						"AuthProfiles_Profile" : {
+							"name" : "Georjo",
+							"username" : "georjo.johan",
+							"password" : "niku3000"
+						},
+						"DataProviders_DataURL" : {
+							"FieldSet" : [],
+							"WhereClause" : {
+								"Con" : {
+									"Clause" : "",
+									"ClauseMap" : {}
+
+								}
+							},
+							"variable" : "",
+							"refreshMinutes" : 5,
+							"timelyRefresh" : "false",
+							"profileName" : "",
+							"hasMapping" : "false",
+							"offLineDataID" : "",
+							"id" : "",
+							"DrillWhenDataChanges" : "false",
+							"LoadatStartup" : "true",
+							"Type" : "web",
+							"isLangWebservice" : "false",
+							"password" : "",
+							"url" : "",
+							"sheet" : "",
+							"allowSessionID" : "false",
+							"userID" : "",
+							"selectedDataSourceID" : "",
+							"selectedServiceID" : "",
+							"availableConditionSet" : [],
+							"AssociatedDataSet" : [],
+							"AssociatedVirtualDataset" : [],
+							"query" : {
+								"filters" : {
+									"value" : ""
+								}
+							}
+						},
+						"DataProviders_DataURL_FieldSet" : {
+							"name" : "",
+							"displayName" : "",
+							"type" : ""
+						},
+						"DataProviders_DataURL_AssociatedDataSet" : {
+							"component" : "",
+							"id" : ""
+						},
+						"DataProviders_DataURL_AssociatedVirtualDataset" : {
+							"component" : "",
+							"id" : ""
+						},
+						"DatasetExpressions_DatasetExpression" : {
+							"name" : "",
+							"id" : "",
+							"dataSource" : "",
+							"variables" : {
+								"variable" : []
+							},
+							"expressionScript" : {
+								"cdata" : ""
+							}
+						},
+						"DatasetExpressions_DatasetExpression_variables_variable" : {
+							"name" : "",
+							"value" : ""
+						},
+						"AbsoluteLayout_Object" : {
+							"objectType" : "chart",
+							"objectID" : "",
+							"width" : "355",
+							"showLocked" : "false",
+							"objectName" : "Area_9",
+							"unShowHidden" : "false",
+							"x" : "13",
+							"height" : "308",
+							"y" : "30",
+							"percentheight" : "308",
+							"initialVisibility" : "true",
+							"percentwidth" : "355"
+						},
+						"AbsoluteLayout_Object_Chart_DataSet" : {
+							"id" : "",
+							"dataSource" : "",
+							"Fields" : []
+						},
+						"AbsoluteLayout_Object_DataGrid_DataSet" : {
+							"id" : "",
+							"dataSource" : "",
+							"Fields" : []
+						},
+						"AbsoluteLayout_Object_Scorecard_DataSet" : {
+							"id" : "",
+							"dataSource" : "",
+							"Fields" : []
+						},
+						"AbsoluteLayout_Object_Filter_DataSet" : {
+							"id" : "",
+							"dataSource" : "",
+							"Fields" : []
+						},
+						"AbsoluteLayout_Object_Funnel_DataSet" : {
+							"id" : "",
+							"dataSource" : "",
+							"Fields" : []
+						},
+						"AbsoluteLayout_Object_Chart_DataSet_Fields" : {
+							"DisplayName" : "",
+							"Type" : "Series",
+							"Name" : "",
+							"Color" : "#08aea8",
+							"ChartType" : "column",
+							"axis" : "left",
+							"visible" : "true",
+							"Precision" : "0",
+							"PlotType" : "point",
+							"PlotRadius" : "5",
+							"OtherField" : "",
+							"ToolTip" : "",
+							"PlotTransparency" : "0.8",
+							"DataSeperator" : "~",
+							"hierarchyType" : "none"
+						},
+						"AbsoluteLayout_Object_DataGrid_DataSet_Fields" : {
+							"expressionID" : "",
+							"secondformatter" : "none",
+							"isfixedlabel" : "true",
+							"unitname" : "",
+							"precision" : "2",
+							"Type" : "Series",
+							"displayTextStyle" : "",
+							"width" : "150",
+							"isNumeric" : "false",
+							"visible" : "true",
+							"secondunitname" : "",
+							"formatter" : "none",
+							"textAlign" : "center",
+							"signposition" : "suffix",
+							"fieldname" : "",
+							"displayname" : "",
+							"Name" : ""
+						},
+						"AbsoluteLayout_Object_DataGrid_Alerts" : {
+							"AlertColumn" : []
+						},
+						"AbsoluteLayout_Object_DataGrid_Alerts_AlertColumn" : {
+							"showAlert" : "false",
+							"name" : "",
+							"colors" : "#F22613,#F7CA18,#2ECC71",
+							"alertType" : "bar",
+							"texts" : "",
+							"fixedValueCompare" : "true",
+							"fixedValue" : "0",
+							"mode" : "Comparison",
+							"compareColumn" : "",
+							"ranges" : "0~100,101~200,201~500",
+							"isAlertText" : "false",
+							"showData" : "false",
+							"alertPosition" : "left",
+							"showTooltip" : "false"
+						},
+						"AbsoluteLayout_Object_Scorecard_DataSet_Fields" : {
+							"expressionID" : "",
+							"secondformatter" : "none",
+							"isfixedlabel" : "true",
+							"unitname" : "",
+							"hierarchyType" : "none",
+							"precision" : "2",
+							"Type" : "Series",
+							"displayTextStyle" : "",
+							"width" : "150",
+							"isNumeric" : "false",
+							"visible" : "true",
+							"secondunitname" : "",
+							"formatter" : "none",
+							"textAlign" : "center",
+							"signposition" : "suffix",
+							"Name" : "",
+							"DisplayName" : ""
+						},
+						"AbsoluteLayout_Object_Scorecard_Alerts" : {
+							"AlertColumn" : []
+						},
+						"AbsoluteLayout_Object_Scorecard_Alerts_AlertColumn" : {
+							"showAlert" : "false",
+							"name" : "",
+							"colors" : "#F22613,#F7CA18,#2ECC71",
+							"alertType" : "bar",
+							"texts" : "",
+							"fixedValueCompare" : "true",
+							"fixedValue" : "0",
+							"mode" : "Comparison",
+							"compareColumn" : "",
+							"ranges" : "0~100,101~200,201~500",
+							"isAlertText" : "false",
+							"showData" : "false",
+							"alertPosition" : "left",
+							"showTooltip" : "false"
+						},
+						"AbsoluteLayout_Object_Funnel_DataSet_Fields" : {
+							"Type" : "Series",
+							"expressionID" : "",
+							"DisplayName" : "",
+							"visible" : "true",
+							"color" : "#08aea8",
+							"Name" : ""
+						},
+						"AbsoluteLayout_Object_Filter_DataSet_Fields" : {
+							"Name" : "",
+							"DisplayName" : "",
+							"Type" : "",
+							"defaultChild" : "",
+							"hierarchyType" : "parent"
+						},
+						"AbsoluteLayout_Object_Chart_CategoryColors" : {
+							"categoryDefaultColor" : "",
+							"categoryDefaultColorSet" : "",
+							"showColorsFromCategoryName" : "",
+							"CategoryColor" : []
+						},
+						"AbsoluteLayout_Object_Chart_CategoryColors_CategoryColor" : {
+							"categoryName" : "",
+							"color" : ""
+						},
+						"AbsoluteLayout_Object_Chart_ConditionalColors" : {
+							"ConditionalColor" : []
+						},
+						"AbsoluteLayout_Object_Chart_ConditionalColors_ConditionalColor" : {
+							"seriesName" : "",
+							"operator" : "",
+							"compareTo" : "",
+							"color" : "",
+							"opacity" : ""
+						},
+						"AbsoluteLayout_Object_URLButton_Params" : {
+							"name" : "",
+							"value" : ""
+						},
+						"VirtualDataSet" : {
+							"virtualDataID" : "",
+							"DataSet" : {
+								"id" : "",
+								"dataSource" : "",
+								"Fields" : []
+							},
+							"VisibilityTriggerMap" : {
+								"Object" : []
+							}
+						},
+						"VirtualDataSet_DataSet_Fields" : {
+							"name" : "Year"
+						},
+						"VirtualDataSet_VisibilityTriggerMap_Object" : {
+							"id" : ""
+						},
+						"GlobalVariable_Variable" : {
+							"Key" : "",
+							"dynamicDataProviders" : "",
+							"DataProviderMap" : {
+								"DataProvider" : []
+							},
+							"DataSetMap" : {
+								"DataSet" : []
+							},
+							"VisibilityTriggerMap" : {
+								"Object" : []
+							},
+							"selectedComponents" : {
+								"Component" : []
+							},
+							"ImageMap" : {},
+							"userScript" : {
+								"value" : ""
+							},
+							"DefaultValues" : {
+								"DefaultValue" : []
+							}
+						},
+						"GlobalVariable_Variable_DataProviderMap_DataProvider" : {
+							"id" : ""
+						},
+						"GlobalVariable_Variable_DataProviderMap_DataSet" : {
+							"id" : ""
+						},
+						"GlobalVariable_Variable_VisibilityTriggerMap_Object" : {
+							"id" : ""
+						},
+						"GlobalVariable_Variable_selectedComponents_Component" : {
+							"id" : ""
+						},
+						"GlobalVariable_Variable_DefaultValues_DefaultValue" : {
+							"name" : "",
+							"text" : "",
+							"displayTag" : "",
+							"actualTag" : ""
+						},
+						"OffLineData_Data" : {
+							"id" : "",
+							"specifications" : {
+								"sheetNumber" : "0",
+								"dateHeaders" : "",
+								"headerAsFirstRow" : "true",
+								"dateFormat" : "",
+								"textQualifier" : "",
+								"delimiter" : ","
+							},
+							"Records" : {
+								"Record" : []
+							}
+						},
+						"changeStatus" : 0
+					}
+				}
+
+
+;
+
+			
+			//COMMENT THIS TO RENDER CONTAINER TEMPLATE
+			var outputJSON=createJSON(dj);
+		setDJson(outputJSON)
+			//UNCOMMENT THIS TO RENDER CONTAINER TEMPLATE and add styles in json  column= bv-col-bs row = bv-row-bs
+		
+	
+// 			var containerTemplate={"Containers":{"name":"template2","id":"fbs","bootstrap":"true","Container":[{"id":"bvbsdiv1","type":"div","parent":"","pheight":"","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv2","type":"div","parent":"bvbsdiv1","pheight":"10","attr":{"class":"col-md-12 bv-col-bs","style":""}},{"id":"bvbsdiv3","type":"div","parent":"","pheight":"","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv4","type":"div","parent":"bvbsdiv3","pheight":"","attr":{"class":"col-md-3 bv-col-bs","style":""}},{"id":"bvbsdiv5","type":"div","parent":"bvbsdiv4","pheight":"","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv6","type":"div","parent":"bvbsdiv5","pheight":"22.5","attr":{"class":"col-md-12 bv-col-bs","style":""}},{"id":"bvbsdiv7","type":"div","parent":"bvbsdiv4","pheight":"22.5","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv8","type":"div","parent":"bvbsdiv7","pheight":"22.5","attr":{"class":"col-md-12 bv-col-bs","style":""}},{"id":"bvbsdiv9","type":"div","parent":"bvbsdiv4","pheight":"","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv10","type":"div","parent":"bvbsdiv9","pheight":"22.5","attr":{"class":"col-md-12 bv-col-bs","style":""}},{"id":"bvbsdiv11","type":"div","parent":"bvbsdiv4","pheight":"","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv12","type":"div","parent":"bvbsdiv11","pheight":"22.5","attr":{"class":"col-md-12 bv-col-bs","style":""}},{"id":"bvbsdiv13","type":"div","parent":"bvbsdiv3","pheight":"","attr":{"class":"col-md-6 bv-col-bs","style":""}},{"id":"bvbsdiv14","type":"div","parent":"bvbsdiv13","pheight":"","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv15","type":"div","parent":"bvbsdiv14","pheight":"45","attr":{"class":"col-md-12 bv-col-bs","style":""}},{"id":"bvbsdiv16","type":"div","parent":"bvbsdiv13","pheight":"","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv17","type":"div","parent":"bvbsdiv16","pheight":"45","attr":{"class":"col-md-12 bv-col-bs","style":""}},{"id":"bvbsdiv18","type":"div","parent":"bvbsdiv3","pheight":"","attr":{"class":"col-md-3 bv-col-bs","style":""}},{"id":"bvbsdiv19","type":"div","parent":"bvbsdiv18","pheight":"","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv20","type":"div","parent":"bvbsdiv19","pheight":"30","attr":{"class":"col-md-12 bv-col-bs","style":""}},{"id":"bvbsdiv21","type":"div","parent":"bvbsdiv18","pheight":"","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv22","type":"div","parent":"bvbsdiv21","pheight":"30","attr":{"class":"col-md-12 bv-col-bs","style":""}},{"id":"bvbsdiv23","type":"div","parent":"bvbsdiv18","pheight":"","attr":{"class":"row bv-row-bs","style":""}},{"id":"bvbsdiv24","type":"div","parent":"bvbsdiv23","pheight":"30","attr":{"class":"col-md-12 bv-col-bs","style":""}}]}};
+// 			var cn=new Containers();
+// 	cn.m_containersArray=containerTemplate["Containers"]["Container"];
+// 	cn.create("mainDiv");
+// 	setTimeout(function(){
+// 		$( ".bv-col-bs" ).each(function( index ) {
+// 			$( this ).append(this.id+"; "+this.style.height)
+// 			});
+				
+	
+// 	},1000)
+	
+			
+		</script>
+</body>
+</html>

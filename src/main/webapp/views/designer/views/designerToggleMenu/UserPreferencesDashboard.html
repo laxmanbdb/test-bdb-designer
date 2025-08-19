@@ -1,0 +1,244 @@
+<div class="col-sm-2 col-md-2 col-lg-2"></div>
+<div class="pref-card-container col-sm-8 col-md-8 col-lg-8">
+	<md-toolbar>
+    <div class="md-toolbar-tools">
+        <h2>Preferences</h2>
+        <span flex></span>
+    </div>
+	</md-toolbar>
+	<md-card class="card-body margNull paddingNull col-sm-12 col-md-12 col-lg-12">
+  		<md-card-actions class="margNull card-body-content-container">
+ 			<div class="card-body-content">
+				<div class="row-height col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>
+							Show Grid Lines
+						</span>
+					</div>
+					<div class="col-sm-3 col-md-6 col-lg-6">
+						<md-checkbox md-no-ink aria-label="No Ink Effects" class="margNull md-primary"
+							ng-change="onPreferenceChange()" 
+							ng-model="modal.userPreference.showGridLines" >
+						</md-checkbox>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>
+							Snap to Grid Size
+						</span>
+					</div>
+					<div class="col-sm-3 col-md-6 col-lg-6">
+						<select class="propValue cursor-hand pull-left" 
+				      		ng-change="onSnapToGridPreferenceChange()" 
+				      		ng-model="modal.userPreference.snapToGrid.size">
+				      		<option value=1>None</option>
+				      		<option value=5>5</option>
+				      		<option value=10>10</option>
+				      		<option value=15>15</option>
+				      	</select>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>
+							Notification on Success
+						</span>
+					</div>
+					<div class="col-sm-3 col-md-6 col-lg-6">
+						<md-checkbox md-no-ink aria-label="No Ink Effects" class="margNull md-primary" 
+							ng-change="onPreferenceChange()" 
+							ng-model="modal.userPreference.defaultSettings.notifyOnSuccess"  >
+						</md-checkbox>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>
+							Block Notification
+						</span>
+					</div>
+					<div class="col-sm-3 col-md-6 col-lg-6">
+						<md-checkbox md-no-ink aria-label="No Ink Effects" class="margNull md-primary" 
+							ng-change="onPreferenceChange()" 
+							ng-model="modal.userPreference.defaultSettings.blockNotificaton"  >
+						</md-checkbox>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12">
+				 	<div class="col-sm-9 col-md-6 col-lg-6">
+						Show Settings Button
+					</div>
+					<div class="col-sm-3 col-md-6 col-lg-6">
+						<md-checkbox md-no-ink aria-label="No Ink Effects" class="margNull md-primary" 
+							ng-change="onPreferenceChange()" 
+							ng-model="modal.userPreference.defaultSettings.showSettingsButton"  >
+						</md-checkbox>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>
+							Selection Color
+						</span>
+					</div>
+					<div class="prefDivTop col-sm-3 col-md-6 col-lg-6">
+						<input class="" 
+							ng-model="modal.userPreference.compSelcOpts.color" 
+							type="color"/>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>	
+							Selection Thickness
+						</span>
+					</div>
+					<div class="prefDivTop col-sm-3 col-md-6 col-lg-6">
+						<bvz-number-spinner
+		           			ng-model="modal.userPreference.compSelcOpts[ 'thickness' ]" 
+		           			ng-keypress="restrictInput( $event, 'positiveNumberOnly' )" 
+		           			ng-keyup="validateInput( $event, 'borderThickness' )"
+		           			bvz-step="1"
+		           			bvz-max="10"
+		           			bvz-min="1" >
+						</bvz-number-spinner>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12"> 
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>	
+							Show Border
+						</span>
+					</div>
+					<div class="col-sm-3 col-md-6 col-lg-6">
+						<md-checkbox md-no-ink aria-label="No Ink Effects" class="margNull md-primary" 
+							ng-model="modal.userPreference.defaultSettings.showDashboardBorder"  >
+						</md-checkbox>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>
+							Border Color
+						</span>
+					</div>
+					<div class="prefDivTop col-sm-3 col-md-6 col-lg-6">
+						<input class="pull-left" 
+						ng-model="modal.userPreference.defaultSettings.dashboardBorderColor" 
+						type="color" />
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>
+							Background Color
+						</span>
+					</div>
+					<div class="prefDivTop col-sm-3 col-md-6 col-lg-6">
+						<input class="pull-left"
+							ng-model="modal.userPreference.defaultSettings.dashboardBackgroundColor" 
+							type="color" />
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12"> 
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>	
+							Hide Shadow
+						</span>
+					</div>
+					<div class="col-sm-3 col-md-6 col-lg-6">
+						<md-checkbox md-no-ink aria-label="No Ink Effects" class="margNull md-primary" 
+							ng-model="modal.userPreference.defaultSettings.hideShadow"  >
+						</md-checkbox>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12"> 
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>	
+							Sync Component Property
+						</span>
+					</div>
+					<div class="col-sm-3 col-md-6 col-lg-6">
+						<md-checkbox md-no-ink aria-label="No Ink Effects" class="margNull md-primary" 
+							ng-model="modal.userPreference.defaultSettings.syncComponentProperty"  >
+						</md-checkbox>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12"> 
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>	
+							Enable Multiple Drag
+						</span>
+					</div>
+					<div class="col-sm-3 col-md-6 col-lg-6">
+						<md-checkbox md-no-ink aria-label="No Ink Effects" class="margNull md-primary" 
+							ng-model="modal.userPreference.defaultSettings.enableMultipleDrag"  >
+						</md-checkbox>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>	
+							Fixed Dimension
+						</span>
+					</div>
+					<div class="col-sm-3 col-md-6 col-lg-6">
+						<md-checkbox md-no-ink aria-label="No Ink Effects" class="margNull md-primary" 
+							ng-change="onPreferenceChange()" 
+							ng-model="modal.userPreference.defaultSettings.fixedDashboardDimensions" 
+							value="{{modal.userPreference.defaultSettings.fixedDashboardDimensions}}" >
+						</md-checkbox>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12" ng-show="modal.userPreference.defaultSettings.fixedDashboardDimensions">
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>
+							Dashboard Width
+						</span>
+					</div>
+					<div class="prefDivTop col-sm-3 col-md-6 col-lg-6">
+						<bvz-number-spinner
+							class="pull-left fullWidth"
+							ng-model="modal.userPreference.defaultSettings.dashboardWidth" 
+		    	   			ng-keypress="restrictInput( $event, 'positiveNumberOnly' )"
+		    	   			type="text" />
+						</bvz-number-spinner>
+					</div>
+				</div>
+				<div class="row-height col-sm-12 col-md-12 col-lg-12" ng-show="modal.userPreference.defaultSettings.fixedDashboardDimensions"> 
+					<div class="col-sm-9 col-md-6 col-lg-6">
+						<span>
+							Dashboard Height
+						</span>
+					</div>
+					<div class="prefDivTop col-sm-3 col-md-6 col-lg-6">
+						<bvz-number-spinner
+							class="pull-left fullWidth"
+							ng-model="modal.userPreference.defaultSettings.dashboardHeight" 
+		    	   			ng-keypress="restrictInput( $event, 'positiveNumberOnly' )"
+		    	   			type="text" />
+						</bvz-number-spinner>
+					</div>
+				</div>
+				
+				<!-- <div class="modal-Footer col-sm-12 col-md-12 col-lg-12 padding-lr0">
+					<div class="col-sm-6 col-md-6 col-lg-6"></div>
+					<div class="col-sm-6 col-md-6 col-lg-6">
+						<button class="footer-btn" 
+							ng-click="saveUserPrefs();">
+							Save
+						</button>
+					</div>
+				</div> -->
+			</div>
+    	</md-card-actions>
+    	<md-card-footer class="card-footer" layout="row">
+    				<span flex="" class="flex"></span>
+    						<md-button type="button" class="md-raised md-primary" ng-click="saveUserPrefs()">
+        						Save
+    						</md-button>
+				</md-card-footer>
+  	</md-card>
+</div>
+<div class="col-sm-2 col-md-2 col-lg-2"></div>

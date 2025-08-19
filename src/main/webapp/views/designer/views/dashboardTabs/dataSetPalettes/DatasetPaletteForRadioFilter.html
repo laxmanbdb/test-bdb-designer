@@ -1,0 +1,36 @@
+<div class="row radio-dataset-controls" >
+	<div class="col-md-6 pad-0-5" ng-click="addRowAndValueField()" style="display: flex; width: 100%;">
+		<span class="cursor-hand" style="margin-top: 4px;">Add new label</span>
+		<span>
+			<i class="bvz-btn-icon material-icons cursor-hand" mat-tooltip="Add">add</i>
+		</span>
+	</div>
+</div>
+<div class="row radioDatasetHeader">
+	<div class="col-md-5 pad-0-5 radioDatasetControlBtnHeader ">Label</div>
+	<div class="col-md-5 pad-0-5 radioDatasetControlBtnHeader ">Value</div>
+	<div class="col-md-2 pad-0-5 rd-delete radioDatasetControlBtnHeader ">
+		<span ng-click="deleteAllRowAndValueField()" >
+			<i class="bvz-btn-icon material-icons cursor-hand" mat-tooltip="Delete all">delete</i>
+			</span>
+	</div>
+</div>
+<div class="row radio-dataset-body">
+	<div class="radio-dataset-wrapper">
+		<div class="row radio-unit" ng-repeat="v in availableValues track by $index">
+			<div class="col-md-5 pad-0-5">
+				<input type="text" class="propValue" 
+					ng-model="v.label" ng-change="redrawRadioFilter();" />
+			</div>
+			<div class="col-md-5 pad-0-5">
+				<input type="text" class="propValue" 
+					ng-model="v.value" ng-change="redrawRadioFilter();" />
+			</div>
+			<div class="col-md-2 pad-0-5 rd-delete">
+				<span ng-click="deleteRowAndValueField(v)" >
+					<i class="bvz-btn-icon material-icons cursor-hand" mat-tooltip="Delete">delete</i>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,822 @@
+{
+	"Info": [{
+		"class": "DynamicDataGrid"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "300",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Max Button : ",
+		"type": "checkbox",
+		"value": "",
+		"attributeName": "showMaximizeButton",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "First Column Width ",
+		"type": "number",
+		"min": "10",
+		"max": "10000",
+		"step": "1",
+		"value": "200",
+		"attributeName": "firstcolumnwidth",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Fit Columns : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "fitColumns",
+		"propertyName": "DataGrid"
+	}],
+	"Background": [{
+		"label": "Gradient Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "45",
+		"attributeName": "bgGradientRotation",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "bgAlpha",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "bgGradients",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Border : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showBorder",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "borderColor",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "5",
+		"attributeName": "borderRadius",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "DataGrid"
+	}],
+	"Title": [{
+		"label": "Title Box Color : ",
+		"type": "gradient",
+		"value": "",
+		"attributeName": "GradientColor",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Show Title Box : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "showGradient",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Show Title : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showTitle",
+		"propertyName": "DataGrid.Title"
+	}, {
+		"label": "Title Bar Height : ",
+		"type": "number",
+		"min": "25",
+		"max": "75",
+		"step": "1",
+		"value": "25",
+		"attributeName": "TitleBarHeight",
+		"propertyName": "DataGrid.Title"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "Description",
+		"attributeName": "Description",
+		"propertyName": "DataGrid.Title"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "DataGrid.Title"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "DataGrid.Title"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "DataGrid.Title"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "DataGrid.Title"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "DataGrid.Title"
+	}, {
+		"label": "Align : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "Align",
+		"propertyName": "DataGrid.Title"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "underline"
+		}],
+		"attributeName": "TextDecoration",
+		"propertyName": "DataGrid.Title"
+	}, {
+		"label": "Show Dataset Description : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showDatasetDescription",
+		"propertyName": "DataGrid.Title"
+	}],
+	"Sub Title": [{
+		"label": "Show Sub Title : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showSubTitle",
+		"propertyName": "DataGrid.SubTitle"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "SubTitle",
+		"attributeName": "Description",
+		"propertyName": "DataGrid.SubTitle"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "DataGrid.SubTitle"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "20",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "DataGrid.SubTitle"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "DataGrid.SubTitle"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "DataGrid.SubTitle"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "DataGrid.SubTitle"
+	}, {
+		"label": "Align : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "Align",
+		"propertyName": "DataGrid.SubTitle"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "TextDecoration",
+		"propertyName": "DataGrid.SubTitle"
+	}],
+	"Header Style": [{
+		"label": "Header Text Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "headerFontColor",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "headerFontSize",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "headerFontStyle",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "headerFontWeight",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "headerFontFamily",
+		"propertyName": "DataGrid"
+	},{
+		"label": "Use Field Color : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "useFieldColorAsHeader",
+		"propertyName": "DataGrid"
+	},{
+		"label": "Background Color : ",
+		"type": "color",
+		"value": "#fffff",
+		"attributeName": "headerchromeColor",
+		"propertyName": "DataGrid"
+	},{
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "headerTextDecoration",
+		"propertyName": "DataGrid"
+	}],
+	"Row Style": [{
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#fffff",
+		"attributeName": "labelFontColor",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "labelFontSize",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "labelFontStyle",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "labelFontWeight",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "labelFontFamily",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "labelTextDecoration",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Text Wrap : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "textWrap",
+		"propertyName": "DataGrid"
+	},
+	{
+		"label": "Row Height : ",
+		"type": "number",
+		"min": "25",
+		"max": "250",
+		"step": "1",
+		"value": "25",
+		"attributeName": "RowHeight",
+		"propertyName": "DataGrid"
+	}],
+	"Styles": [{
+		"label": "Roll Over Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "rollOverColor",
+		"propertyName": "DataGrid.DatagridStyles"
+	},{
+		"label": "Text Hover Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "textHoverColor",
+		"propertyName": "DataGrid.DatagridStyles"
+	}, {
+		"label": "Selection Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "selectionColor",
+		"propertyName": "DataGrid.DatagridStyles"
+	}, {
+		"label": "Horizontal Grid Lines : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showhorizontalGridLines",
+		"propertyName": "DataGrid.DatagridStyles"
+	}, {
+		"label": "Horizontal Line Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "horizontalGridLineColor",
+		"propertyName": "DataGrid.DatagridStyles"
+	}, {
+		"label": "Vertical Line Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "verticalGridLineColor",
+		"propertyName": "DataGrid.DatagridStyles"
+	}, {
+		"label": "Grid Colors : ",
+		"heading": "Grid Colors",
+		"type": "customGridColor",
+		"value": "",
+		"attributeName": "alternateRowsColor",
+		"propertyName": "DataGrid.DatagridStyles"
+	}],
+	"Export Options": [{
+		"label": "Enable Context Menu : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showContextMenu",
+		"propertyName": "Object"
+	}, {
+		"label": "Export Excel : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToExcel",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Export CSV : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToCSV",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Export JPEG : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToJPEG",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Export PNG : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPNG",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Export PPT : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPPT",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Export PDF : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPDF",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Show Print : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToPrint",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Export Heading : ",
+		"type": "text",
+		"value": "PPT Heading",
+		"maxLength": "50",
+		"attributeName": "pptHeading",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Export Sub Heading : ",
+		"type": "text",
+		"value": "PPT SubHeading",
+		"maxLength": "30",
+		"attributeName": "pptSubHeading",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Export File Name : ",
+		"type": "text",
+		"value": "File Name",
+		"maxLength": "30",
+		"attributeName": "scrnShotFileName",
+		"propertyName": "DataGrid"
+	}, {
+		"label": "Global Export Type : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "screenshot",
+			"value": "ScreenShot"
+		}, {
+			"key": "tabular",
+			"value": "Tabular"
+		}],
+		"attributeName": "exportType",
+		"propertyName": "DataGrid"
+	}]
+}

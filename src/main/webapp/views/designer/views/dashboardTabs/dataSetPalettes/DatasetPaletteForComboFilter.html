@@ -1,0 +1,60 @@
+<div class="row-fluid" id="filterDataSet" >
+	<div class="visible-fields">
+		<div class="fieldContainer" >
+			<div class="fieldHeader">
+				<input type="text" placeholder="Search" autofocus 
+					autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" 
+					class="dataset-field-search" ng-model="modal.FieldsSearchkey" />
+				<span title="Clear Search"
+                   	ng-click="modal.FieldsSearchkey = ''" ng-show="modal.FieldsSearchkey.length > 0" >
+                    <i class="material-icons cursor-hand md-16" mat-tooltip="Clear">close</i>
+			</div>
+			<div class="field-draggable">
+				<ul class="bvz-list-container">
+					<li class="bvz-list-item cursor-move" data-allow-transform="true"
+						ng-repeat="field in datasetFieldList | orderBy: 'name' | filter: isFieldInList "  
+						ng-drag="true" ng-drag-data="field" ng-drag-success="onDragSuccess( $data, $event )" 
+						ng-mouseover="setDraggedField( $event, field )">
+						<span class="fieldName" title="{{ field.name }}">
+							{{ field.name }}
+						</span>
+					</li>
+					<li ng-drag-clone="" class="bvz-list-item" >
+						{{ draggedField.name }}
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="field-droping-wrapper">
+			<div class="{{field.CSSClass}}" 
+				ng-repeat="field in fieldContainer track by $index" >
+				<div class="fieldHeader">
+					<p class="talign-left">
+						{{field.Label}}
+					</p>
+				</div>
+				<div class="field-dropable" ng-drop="true"  
+					ng-drop-success="onDropSuccessForFilterField( $data, $event, field.Type )"  
+					ondrop="drop(event)" >
+					<ul class="bvz-list-container" >
+						<li class="bvz-list-item" 
+							ng-style="{ background: f.fieldJson.Color }" 
+							ng-repeat="f in field.Fields track by $index" 
+							ng-click="setSelectedField( f )">
+							<span class="fieldName" title="{{ f.name }}">
+								{{ f.name }}
+							</span>
+							<span class="icon-removeField">
+								<span ng-click="removeField( f, field.Type )">
+									<i class="bvz-btn-icon material-icons cursor-hand md-16" mat-tooltip="Remove">close</i>
+									</span>
+							</span>
+						</li>
+					</ul>
+					<span class="default-window-status" ng-hide="field.Fields.length > 0">Drop fields here</span>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+</div>

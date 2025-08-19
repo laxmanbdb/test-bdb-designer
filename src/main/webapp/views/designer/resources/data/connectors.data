@@ -1,0 +1,93 @@
+[
+    {
+        "name": "csv",
+        "text": "CSV",
+        "id": "csv_connection",
+        "parent": "#",
+        "order": 0,
+		"enabled": true,
+        "type": "offline",
+        "htmlFile": "./views/dashboardTabs/dataConnection/CSVConnectionPage.html",
+        "icon": "./resources/images/svg/csvConnection.svg",
+        "iconClass": "nt-csv-icon",
+        "iconImg": "./resources/images/svg/additional/CSV.svg"
+    },
+    {
+        "name": "excel",
+        "text": "Excel",
+        "id": "excel_connection",
+        "parent": "#",
+        "order": 1,
+		"enabled": true,
+        "type": "offline",
+        "htmlFile": "./views/dashboardTabs/dataConnection/ExcelConnectionPage.html",
+        "icon": "./resources/images/svg/excelConnection.svg",
+        "iconClass": "nt-excel-icon",
+        "iconImg": "./resources/images/svg/additional/Excel.svg"
+    },
+    {
+        "name": "web",
+        "text": "Data Service",
+        "id": "webservice_connection",
+        "order": 2,
+		"enabled": true,
+        "type": "web",
+        "parent": "#",
+        "htmlFile": "./views/dashboardTabs/dataConnection/WebserviceConnectionPage.html",
+        "icon": "./resources/images/svg/webConnection.svg",
+        "iconClass": "nt-data-service-icon",
+        "iconImg": "./resources/images/svg/additional/Data_service.svg"
+    },
+    {
+        "name": "ds",
+        "text": "Data Store",
+        "id": "datastore_connection",
+        "order": 4,
+		"enabled": true,
+        "type": "ds",
+        "parent": "#",
+        "htmlFile": "./views/dashboardTabs/dataConnection/DSConnectionPage.html",
+        "icon": "./resources/images/svg/webConnection.svg",
+        "iconClass": "nt-data-store-icon",
+        "iconImg": "./resources/images/svg/additional/Data_store.svg"
+    },
+    {
+        "name": "datasheet",
+        "text": "Data Sheet",
+        "id": "sheetdata_connection",
+        "order": 5,
+		"enabled": true,
+        "type": "datasheet",
+        "parent": "#",
+        "htmlFile": "./views/dashboardTabs/dataConnection/DataSheetConnectionPage.html",
+        "icon": "./resources/images/svg/webConnection.svg",
+        "iconClass": "nt-data-sheet-icon",
+        "iconImg": "./resources/images/svg/additional/Data_Sheet.svg"
+    },
+    {
+        "name": "ws",
+        "text": "Web Socket",
+        "id": "websocket_connection",
+        "order": 6,
+		"enabled": true,
+        "type": "ws",
+        "parent": "#",
+        "htmlFile": "./views/dashboardTabs/dataConnection/WSConnectionPage.html",
+        "icon": "./resources/images/svg/webConnection.svg",
+        "iconClass": "nt-web-socket-icon",
+        "iconImg": "./resources/images/svg/additional/websocket.svg"
+    },
+    {
+        "name": "derived",
+        "text": "Merged Data",
+        "id": "ddata_connection",
+        "order": 7,
+		"enabled": true,
+        "type": "derived",
+        "parent": "#",
+        "htmlFile": "./views/dashboardTabs/dataConnection/DdataConnectionPage.html",
+        "icon": "./resources/images/svg/DdataConnection.svg",
+        "iconClass": "nt-merged-data-icon",
+        "iconImg": "./resources/images/svg/additional/Merged_data.svg"
+    }
+]

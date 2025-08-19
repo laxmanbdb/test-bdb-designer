@@ -1,0 +1,1197 @@
+ {
+ 	"type": {
+ 		"Charts": {
+ 			"Axis Setup": [
+	 			{"title" : "Auto Axis Setup","property":"m_autoaxissetup","values":"true, false","description":"enable/disable auto axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Base Zero","property":"m_basezero","values":"true, false","description":"enable/disable base zero","deprecated":"false","version":"3.80"},
+	 			{"title" : "Min Value","property":"m_minimumaxisvalue","values":"any numeric value","description":"set min value for axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Max Value","property":"m_maximumaxisvalue","values":"any numeric value","description":"set max value for axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Horizontal Marker Line","property":"m_showmarkerline","values":"true, false","description":"enable/disable horizontal marker line","deprecated":"false","version":"3.80"},
+	 			{"title" : "Vertical Marker Line","property":"m_showverticalmarkerline","values":"true, false","description":"enable/disable vertical marker line","deprecated":"false","version":"3.80"},
+	 			{"title" : "Zero Marker Line","property":"m_zeromarkerline","values":"true, false","description":"enable/disable zero marker line","deprecated":"false","version":"3.80"},
+	 			{"title" : "Zero Marker Color","property":"m_zeromarkercolor","values":"any hexadecimal color","description":"used to control zero marker line color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Marker Line Color","property":"m_markercolor","values":"any hexadecimal color","description":"used to control zero marker line color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Color Opacity","property":"m_markertransparency","values":"any value from 0-1","description":"used to control color opacity","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Background": [
+ 			 	{"title" : "Gradient Rotation","property":"m_bggradientrotation","values":"any value from 0-360","description":"used to control background color rotation","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Opacity","property":"m_bgalpha","values":"any value from 0-1","description":"used to control background color opacity","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Gradient","property":"m_bggradients","values":"any hexadecimal colors","description":"used to add colors for background","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Border","property":"m_showborder","values":"true, false","description":"enable/disable component border","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Border Color","property":"m_bordercolor","values":"any hexadecimal color","description":"used to control border color","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Border Radius","property":"m_borderradius","values":"any value from 0-25","description":"used to control border radius","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Shadow","property":"m_showshadow","values":"true, false","description":"enable/disable component shadow","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Shadow Color","property":"m_shadowcolor","values":"any hexadecimal color","description":"used to control component shadow color","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Shadow Transparency","property":"m_shadowopacity","values":"any value from 0-1","description":"used to control component shadow opacity","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Export Options": [
+ 				{"title" : "Enable Context Menu","property":"m_showcontextmenu","values":"true, false","description":"enable/disable context menu on right click of component","deprecated":"false","version":"3.80"},
+				{"title" : "Enable Excel","property":"m_exporttoexcel","values":"true, false","description":"enable/disable export excel option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Enable JPEG","property":"m_exporttojpeg","values":"true, false","description":"enable/disable export jpeg option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Enable PNG","property":"m_exporttopng","values":"true, false","description":"enable/disable export png option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Enable PPT","property":"m_exporttoppt","values":"true, false","description":"enable/disable export ppt option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Enable PDF","property":"m_exporttopdf","values":"true, false","description":"enable/disable export pdf option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Show Print","property":"m_exporttoprint","values":"true, false","description":"enable/disable show print option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Export Heading","property":"m_pptheading","values":"any text content","description":"option to control pdf heading text","deprecated":"false","version":"3.80"},
+				{"title" : "Export Sub Heading","property":"m_pptsubheading","values":"any text content","description":"option to control sub pdf heading text","deprecated":"false","version":"3.80"},
+				{"title" : "Export File Name","property":"m_scrnshotfilename","values":"any text content","description":"option to control downloaded file name","deprecated":"false","version":"3.80"},
+				{"title" : "Export Background Color","property":"m_exportdefaultbgcolor","values":"any hexadecimal color","description":"used to control default export background color when chart-bg-opacity is less than 1","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Formatter": [
+ 				{"title" : "Unit","property":"m_secondaryunit","values":"none,auto,Percent,Thousand,Million,Billion,Trillion,Quadrillion,Lac,Crore","description":"used to set unit formatter in y axis markers","deprecated":"false","version":"3.80"},
+ 				{"title" : "Precision","property":"m_precision","values":"default,none,1,2,3,4,6,8","description":"uused to set precision in y axis markers","deprecated":"false","version":"3.80"},
+ 				{"title" : "Currency","property":"m_unit","values":"none,Cent,Euro,Rupees,Pound,USD,Yen","description":"used to set currency in y axis markers","deprecated":"false","version":"3.80"},
+ 				{"title" : "Position","property":"m_signposition","values":"prefix, suffix","description":"used to set positon of currency in y axis markers","deprecated":"false","version":"3.80"},
+ 				{"title" : "Number Formatter","property":"m_numberformatter","values":"none, indiannumber, number","description":"used to set number formmater type in y axis markers","deprecated":"false","version":"3.80"}
+ 			],
+ 			"General": [
+ 				{"title" : "Initial Visibility","property":"m_initialvisibility","values":"true, false","description":"enable/disable initial visibility of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Max Button","property":"m_showmaximizebutton","values":"true, false","description":"enable/disable maximize button of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Color from Drill","property":"m_enablecolorfromdrill","values":"true, false","description":"enable/disable color from drill of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Chart Type","property":"m_charttype","values":"clustered,stacked,overlaid,100%","description":"used to change chart type of component","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Legend": [
+ 				{"title" : "Show Legend","property":"m_showlegends","values":"true, false","description":"used to enable/disable legend from component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Color","property":"m_legendfontcolor","values":"any heaxdecimal color","description":"used to control legend names font color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Weight","property":"m_legendfontweight","values":"normal, bold","description":"used to control legend names font weight","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Size","property":"m_legendfontsize","values":"any value from 0-24","description":"used to control legend names font size","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_legendfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control legend names font family","deprecated":"false","version":"3.80"},
+ 				{"title" :  "Font Style","property":"m_legendfontstyle","values":"normal, italic","description":"used to control legend names font style","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Decoration","property":"m_legendtextdecoration","values":"none, underline","description":"used to enable/disable text decoration of legend names","deprecated":"false","version":"3.80"},
+ 				{"title" : "Hide on Load","property":"m_hidelegendonstart","values":"true, false","description":"used to show/hide legends on load","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Title": [
+ 				{"title" : "Show Title","property":"m_title.m_showtitle","values":"true, false","description":"used to show or hide the title of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Description","property":"m_title.m_description","values":"any text content","description":"used to show desired text content in title of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Size","property":"m_title.m_fontsize","values":"any value from 0-24","description":"used to control size of title font","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Color","property":"m_title.m_fontcolor","values":"any hexadecimal color","description":"used to control color of title font","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Style","property":"m_title.m_fontstyle","values":"normal, italic","description":"used to control font style of title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_title.m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Weight","property":"m_title.m_fontweight","values":"normal, bold","description":"used to control font weight of title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Decoration","property":"m_title.m_textdecoration","values":"none, underline","description":"used to control text decoration of title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Align","property":"m_title.m_align","values":"left, center, right","description":"used to control alignment of title text","deprecated":"false","version":"3.80"},
+ 				{"title" : "Title Bar Height","property":"m_title.m_titlebarheight","values":"any value from 25-75","description":"used to control the height of title box","deprecated":"false","version":"3.80"}
+ 			],
+ 			"SubTitle": [
+ 				{"title" : "Show Sub Title","property":"m_subTitle.m_showsubtitle","values":"true, false","description":"used to show or hide the sub title of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Description","property":"m_subTitle.m_description","values":"any text content","description":"used to show desired text content in sub title of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Size","property":"m_subTitle.m_fontsize","values":"any value from 0-24","description":"used to control sub title font size","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Color","property":"m_subTitle.m_fontcolor","values":"any hexadecimal color","description":"used to control sub title font color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Style","property":"m_subTitle.m_fontstyle","values":"normal, italic","description":"used to control sub title font style","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_subTitle.m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of sub title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Weight","property":"m_subTitle.m_fontweight","values":"normal, bold","description":"used to control font weight of sub title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Decoration","property":"m_subTitle.m_textdecoration","values":"none, underline","description":"used to control text decoration of sub title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Align","property":"m_subTitle.m_align","values":"left, center, right","description":"used to control alignment of sub title text","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Tooltip": [
+ 				{"title" : "Show Tool Tip","property":"m_customtextboxfortooltip.dataTipType","values":"Default,Custom,None","description":"used to select type of tooltip in component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Background Color","property":"m_tooltipbackgroundcolor","values":"any hexadecimal color","description":"used to set background color for tooltip","deprecated":"false","version":"3.80"},
+ 				{"title" : "Opacity","property":"m_tooltipbackgroundtransparency","values":"any value from 0-1","description":"used to set background color opacity for tooltip","deprecated":"false","version":"3.80"},
+ 				{"title" : "Border Color","property":"m_tooltipbordercolor","values":"any hexadecimal color","description":"used to set border color for tooltip","deprecated":"false","version":"3.80"},
+ 				{"title" : "Tooltip Font Size","property":"m_tooltipfontsize","values":"any value from 0-24","description":"used to set font size for the tooltip content","deprecated":"false","version":"3.80"},
+ 				{"title" : "Box Width","property":"m_customtooltipwidth","values":"auto,100,200,300,400,500,600,1000","description":"used to set box width of tooltip content","deprecated":"false","version":"3.80"},
+ 				{"title" : "Precision","property":"m_tooltipprecision","values":"default,0,1,2,3,4,6,8","description":"used to set precision for tooltip data values","deprecated":"false","version":"3.80"},
+ 				{"title" : "Highlighter","property":"m_tooltiphighlighter","values":"true, false","description":"used to highlight the mouseover point in tooltip","deprecated":"false","version":"3.80"}
+ 			],
+ 			"X-Axis": [
+	 			{"title" : "Show X-Axis Line","property":"m_xAxis.m_showlinexaxis","values":"true, false","description":"used to show or hide the x axis line of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "X-Axis Line Color","property":"m_xAxis.m_linexaxiscolor","values":"any hexadecimal color","description":"used to control color of x axis line","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Color","property":"m_xAxis.m_labelfontcolor","values":"any hexadecimal color","description":"used to control color of x axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Size","property":"m_xAxis.m_labelfontsize","values":"any value from 0-24","description":"used to control size of x axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Style","property":"m_xAxis.m_labelfontstyle","values":"normal, italic","description":"used to control style of x axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Weight","property":"m_xAxis.m_labelfontweight","values":"normal, bold","description":"used to control font weight of x axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Family","property":"m_xAxis.m_labelfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of x axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Decoration","property":"m_xAxis.m_labeltextdecoration","values":"none, underline","description":"used to control decoration of x axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Rotation","property":"m_xAxis.m_labelrotation","values":"any value from 0-90","description":"used to control rotation of x axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tilted Label","property":"m_xAxis.m_labeltilted","values":"true, false","description":"used to enable,disable label rotation of x axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Description","property":"m_xAxis.m_description","values":"any text content","description":"used to show desired text content in x-axis description of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_xAxis.m_fontcolor","values":"any hexadecimal color","description":"used to control x-axis description font color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_xAxis.m_fontsize","values":"any value from 0-24","description":"used to control x-axis description font size","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_xAxis.m_fontstyle","values":"normal, italic","description":"used to control x-axis description font style","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_xAxis.m_fontweight","values":"normal, bold","description":"used to control x-axis description font weight","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_xAxis.m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control x-axis description font family","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Decoration","property":"m_xAxis.m_textdecoration","values":"none, underline","description":"used to control text decoration of x-axis description decoration","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Y-Axis": [
+	 			{"title" : "Show Y-Axis Line","property":"m_yAxis.m_showlineyaxis","values":"true, false","description":"used to show or hide the y axis line of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Y-Axis Line Color","property":"m_yAxis.m_lineyaxiscolor","values":"any hexadecimal color","description":"used to control color of y axis line","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Color","property":"m_yAxis.m_labelfontcolor","values":"any hexadecimal color","description":"used to control color of y axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Size","property":"m_yAxis.m_labelfontsize","values":"any value from 0-24","description":"used to control size of y axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Style","property":"m_yAxis.m_labelfontstyle","values":"normal, italic","description":"used to control style of y axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Weight","property":"m_yAxis.m_labelfontweight","values":"normal, bold","description":"used to control font weight of y axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Family","property":"m_yAxis.m_labelfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of y axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Decoration","property":"m_yAxis.m_labeltextdecoration","values":"none, underline","description":"used to control decoration of y axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Rotation","property":"m_yAxis.m_labelrotation","values":"any value from 0-90","description":"used to control rotation of y axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tilted Label","property":"m_yAxis.m_labeltilted","values":"true, false","description":"used to enable,disable label rotation of y axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Description","property":"m_yAxis.m_description","values":"any text content","description":"used to show desired text content in y-axis description of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_yAxis.m_fontcolor","values":"any hexadecimal color","description":"used to control y-axis description font color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_yAxis.m_fontsize","values":"any value from 0-24","description":"used to control y-axis description font size","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_yAxis.m_fontstyle","values":"normal, italic","description":"used to control y-axis description font style","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_yAxis.m_fontweight","values":"normal, bold","description":"used to control y-axis description font weight","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_yAxis.m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control y-axis description font family","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Decoration","property":"m_yAxis.m_textdecoration","values":"none, underline","description":"used to control text decoration of y-axis description decoration","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Area": {
+ 			"General": [
+ 				{"title" : "Line Form","property":"m_lineform","values":"curve,segment","description":"used to control the line form","deprecated":"false","version":"3.80"},
+ 				{"title" : "Chart Type","property":"m_charttype","values":"stacked,overlaid,100%","description":"used to control the type of chart","deprecated":"false","version":"3.80"},
+ 				{"title" : "Points","property":"m_showpoint","values":"true,false","description":"used to enable or disable the points on area","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Bar": {
+	 		"Background": [
+	 			{"title" : "Stack Border Color","property":"m_stackbordercolor","values":"any hexadecimal color","description":"used to control stack border color of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Stack Border Width","property":"m_stackborderwidth","values":"any value from 0-20","description":"used to control stack border width of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Stack Border Radius","property":"m_stackborderradius","values":"any value from 0-30","description":"used to control stack radius color of component","deprecated":"false","version":"3.80"}
+			],
+ 			"General": [
+ 				{"title" : "Base Type","property":"m_chartbase","values":"plane,chevron,rectangle,gradient1,gradient2,gradient3","description":"used to control the type of bar should be rendered","deprecated":"false","version":"3.80"},
+ 				{"title" : "Bar Size","property":"m_barwidth","values":"any value from 0-100","description":"used to control bar size of stacks","deprecated":"false","version":"3.80"},
+ 				{"title" : "Actions","property":"m_showsettingmenubutton","values":"true,false","description":"used to enable or disable actions menu icon of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Animation","property":"m_enableanimation","values":"true,false","description":"used to enable or disable animation of component","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"BoxPlot": {
+ 			"General": [
+ 				{"title" : "Fill Colors","property":"m_boxgroupnames","values":"any hexadecimal color and opacity","description":"used to fill lower box upper box color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Stroke Color","property":"m_strokecolor","values":"any hexadecimal color","description":"used to fit stroke color of box","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Bubble": {
+	 		"Alerts": [
+	 			{"title" : "Enable Color Bands","property":"m_showcolorbands","values":"true,false","description":"enable/disable color bands","deprecated":"false","version":"3.80"},
+	 			{"title" : "Band Properties","property":"m_bandcolors","values":"any hexadecimal colors","description":"used to control band colors","deprecated":"false","version":"3.80"}
+			],
+ 			"General": [
+ 				{"title" : "Shadow","property":"m_shadowvisible","values":"true,false","description":"enable/disable shadow of bubbles in component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Base Type","property":"m_chartbase","values":"plane,gradient,ring","description":"used to control type of bubble to be rendered","deprecated":"false","version":"3.80"},
+ 				{"title" : "Luminance","property":"m_luminance","values":"any value from 0-1","description":"used to control opacity of bubble in component","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"CandleStick": {
+ 			"General": [
+ 				{"title" : "Rise Color","property":"m_fillcolor","values":"any hexadecimal color","description":"used to set rise color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Decline Color","property":"m_declinefillcolor","values":"any hexadecimal color","description":"used to set decline color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Stroke Color","property":"m_strokecolor","values":"any hexadecimal color","description":"used to set box border color","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Chevron": {
+ 			"General": [
+ 				{"title" : "Show Y-Axis Line","property":"m_showlineyaxis","values":"true,false","description":"used to show or hide y axis line","deprecated":"false","version":"3.80"},
+ 				{"title" : "Y-Axis Line Color","property":"m_lineyaxiscolor","values":"any hexadecimal color","description":"used to set y axis line color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Date Formating","property":"m_sourcedateformat","values":"dd-mm-yy,mm-dd-yy,dd-mm-yyyy,mm-dd-yyyy,yyyy-mm-dd,dd/mm/yy,mm/dd/yy,dd/mm/yyyy,mm/dd/yyyy","description":"used to set source date format","deprecated":"false","version":"3.80"},
+ 				{"title" : "Current Phase Color","property":"m_currentphasebordercolor","values":"any hexadecimal color","description":"used to set current phase border color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Series Colors","property":"m_seriescolor","values":"any hexadecimal color","description":"used to set series color","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Column": {
+ 			"General": [
+ 				{"title" : "Base Type","property":"m_chartbase","values":"plane,chevron,rectangle,gradient1,gradient2,gradient3","description":"used to control the type of bar should be rendered","deprecated":"false","version":"3.80"},
+ 				{"title" : "Bar Size","property":"m_barwidth","values":"any value from 0-100","description":"used to control bar size of stacks","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Circumplex": {
+ 			"General": [
+ 				{"title" : "Axis Line Width","property":"m_axislinewidth","values":"any numeric value","description":"used to update axis line width.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Category Line Width","property":"m_categorylinewidth","values":"any numeric value","description":"used to update category line width.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Overlaid Spacing","property":"m_overlaidspacing","values":"any numeric value","description":"used to control spacing between overlaid stacks.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Polygon Line Width","property":"m_polylinewidth","values":"any numeric value","description":"used to control polygon line width.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Animation Duration","property":"m_animationduration","values":"any numeric value","description":"used to control animation duration.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Axis Stroke Color","property":"m_axisstrokecolor","values":"any hexadecimal colors","description":"used to update axis line color.","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"CustomChart": {
+ 			"General": [
+ 				{"title" : "JSPaths","property":"m_jspaths","values":"array of script paths","description":"dependent JS source paths","deprecated":"false","version":"3.80"},
+ 				{"title" : "CSSPaths","property":"m_csspaths","values":"array of css paths","description":"dependent CSS source paths","deprecated":"false","version":"3.80"},
+ 				{"title" : "JSContent","property":"m_jscontent","values":"stringified js configuration code","description":"JS source code which is used to configure custom chart","deprecated":"false","version":"3.80"},
+ 				{"title" : "CSSContent","property":"m_csscontent","values":"strigified css configuration code","description":"CSS source code to configure inline styles","deprecated":"false","version":"3.80"},
+ 				{"title" : "HTMLContent","property":"m_htmlcontent","values":"strigified HTML configuration code","description":"HTML source code where chart renders","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"DataSearch": {
+	 		"General": [
+	 			{"title" : "Associate Chart","property":"m_associateddschartid","values":"any chart id","description":"used to associate chart ","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any text value","description":"used to pass any value on drill","deprecated":"false","version":"3.80"}
+			],
+ 			"Style": [
+ 				{"title" : "Background Color","property":"m_backgroundcolor","values":"any hexadecimal color","description":"used to set component background color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Opacity","property":"m_bgalpha","values":"any value from 0-1","description":"used to set background color opacity","deprecated":"false","version":"3.80"},
+ 				{"title" : "Border Radius","property":"m_borderradius","values":"any value from 0-30","description":"used to set component border radius","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Color","property":"m_fontcolor","values":"any hexadecimal color","description":"used to set font color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Size","property":"m_fontsize","values":"any value from 0-17","description":"used to set font size","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Style","property":"m_fontstyle","values":"normal,italic","description":"used to set font style","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Weight","property":"m_fontweight","values":"normal,bold","description":"used to set font weight","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to set font family","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Decoration","property":"m_textdecoration","values":"none,underline","description":"used to set underline font","deprecated":"false","version":"3.80"},
+ 				{"title" : "Icon Font Size","property":"m_paneliconfontsize","values":"any value from 0-30","description":"used to control, size of control icons","deprecated":"false","version":"3.80"},
+ 				{"title" : "Panel Height","property":"m_panelheight","values":"any value from 0-1000","description":"used to control component panel height","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"DecisionTree": {
+ 			"Styling Properties": [
+ 				{"title" : "Node Color","property":"m_noderectfillcolor","values":"any hexadecimal color","description":"used to set node background color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Node Transparency","property":"m_noderecttrasparency","values":"any value from 0-1","description":"used to set node background color opacity","deprecated":"false","version":"3.80"},
+ 				{"title" : "Node Border Color","property":"m_noderectstrokecolor","values":"any hexadecimal color","description":"used to set node border color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Node Opacity","property":"m_noderectopacity","values":"any value from 0-1","description":"used to set node border opacity","deprecated":"false","version":"3.80"},
+ 				{"title" : "Percent Box Color","property":"m_percentcolor","values":"any hexadecimal color","description":"used to set percent box background color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Percent Box Opacity","property":"m_opacity","values":"any value from 0-1","description":"used to set percent box background opacity","deprecated":"false","version":"3.80"},
+ 				{"title" : "Percent Border Opacity","property":"m_opacityforpercentrect","values":"any value from 0-1","description":"used to set percent box border opacity","deprecated":"false","version":"3.80"},
+ 				{"title" : "Line Color","property":"m_linestrokecolor","values":"any hexadecimal color","description":"used to set header line color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Line Opacity","property":"m_lineopacity","values":"any value from 0-1","description":"used to set header line opacity","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Color","property":"m_textstrokecolor","values":"any hexadecimal color","description":"used to set all label colors","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control label text font family","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Funnels": {
+ 			"General": [
+ 				{"title" : "Show Percentage","property":"m_showlayervalue","values":"true,false","description":"enable/disable percentage in data labels","deprecated":"false","version":"3.80"},
+ 				{"title" : "Series Colors","property":"m_seriescolor","values":"any hexadecimal colors","description":"used to set colors for series data in order","deprecated":"false","version":"3.80"},
+ 				{"title" : "Chart Type","property":"m_charttype","values":"inverted,identicalStack","description":"used to control type of funnel chart","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"GroupBar": {
+ 			"General": [
+ 				{"title" : "Base Type","property":"m_chartbase","values":"plane,chevron,rectangle,gradient1,gradient2,gradient3","description":"used to control the type of bar should be rendered","deprecated":"false","version":"3.80"},
+ 				{"title" : "Chart Type","property":"m_charttype","values":"stacked,100%,clustered","description":"use to control type of chart","deprecated":"false","version":"3.80"},
+ 				{"title" : "Sub Category Orientation","property":"m_subcategoryorientation","values":"left,right","description":"used to control sub category orientation of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Merge Sub Category","property":"m_mergesubcategory","values":"true,false","description":"used to enable or disable mere sub category icon of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Bar Size","property":"m_barwidth","values":"any value from 0-100","description":"used to control bar size of stacks","deprecated":"false","version":"3.80"},
+ 				{"title" : "Animation","property":"m_enableanimation","values":"true,false","description":"used to enable or disable animation of component","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Heatmap": {
+ 			"Cell Styles": [
+ 				{"title" : "Range Colors","property":"m_displayname","values":"any hexadecimal color","description":"used to control the type of stack should be rendered","deprecated":"false","version":"3.80"},
+ 				{"title" : "Solid Color","property":"m_solidcolorfill","values":"true, false","description":"used to enable/disable color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Opacity","property":"m_coloropacity","values":"any value from 0-1","description":"used to control the opacity of range colors","deprecated":"false","version":"3.80"},
+ 				{"title" : "High Values Are Goodr","property":"m_highervaluesaregood","values":"true, false","description":"used to enable/disable color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Base Type","property":"m_chartbase","values":"plane,gradient1,gradient2,gradient3,gradient4","description":"used to control the color gradient of box","deprecated":"false","version":"3.80"},
+ 				{"title" : "Show Frequency Bar","property":"m_showfrequencybar","values":"true, false","description":"used to enable/disable range color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Show Text On Cell","property":"m_showcelltext","values":"true, false","description":"used to control the text on the cell","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Color","property":"m_celltextcolor","values":"any hexadecimal color","description":"used to control text font color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Font Size","property":"m_celltextfontsize","values":"value from 0 to 24","description":"used to control the font size of text","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Font Style","property":"m_celltextfontstyle","values":"normal,italic","description":"used to set style of text","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Font Weight","property":"m_celltextfontweight","values":"normal, bold","description":"used to control weight of text ","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Font Family","property":"m_celltextfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to enable/disable color","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Histogram": {
+ 			"General": [
+ 				{"title" : "Base Type","property":"m_chartbase","values":"plane,cylinder,rectangle,gradient1,gradient2,gradient3","description":"used to control the type of stack should be rendered","deprecated":"false","version":"3.80"},
+ 				{"title" : "Border Color","property":"m_borderstrokecolor","values":"any hexadecimal color","description":"used to control border color","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Range": [
+	 			{"title" : "Auto Range","property":"m_range","values":"true,false","description":"enable/disable x-axis range","deprecated":"false","version":"3.80"},
+	 			{"title" : "Range","property":"m_maximumrange","values":"any numeric value","description":"used to control x-axis range","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"Line": {
+	 		"General": [
+	 			{"title" : "Line Form","property":"m_lineform","values":"curve,segment,step,reversestep,horizontal,vertical","description":"used to control the line form","deprecated":"false","version":"3.80"},
+	 			{"title" : "Points","property":"m_showpoint","values":"true,false","description":"used to enable or disable the points on line","deprecated":"false","version":"3.80"}
+			],
+ 			"Repeater": [
+ 				{"title" : "Repeater","property":"m_isrepeater","values":"true,false","description":"used to control enable or disable the repeater chart","deprecated":"false","version":"3.80"},
+ 				{"title" : "Group By Field","property":"m_repeaterfield","values":"dataset field name","description":"used to set repeater field","deprecated":"false","version":"3.80"},
+ 				{"title" : "No. of Columns","property":"m_repeatercolumns","values":"any value from 1-10","description":"used to set number of column repeater","deprecated":"false","version":"3.80"},
+ 				{"title" : "Row Height","property":"m_repeaterheight","values":"any numeric value","description":"used to set height of repeater","deprecated":"false","version":"3.80"},
+ 				{"title" : "Column Margin","property":"m_repeaterhmargin","values":"any numeric value","description":"used to set repeater horizontal margin","deprecated":"false","version":"3.80"},
+ 				{"title" : "Row Margin","property":"m_repeatervmargin","values":"any numeric value","description":"used to set repeater vertical margin","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Map": {
+ 			"General": [
+ 				{"title" : "Map Type","property":"m_svgtype","values":"svg,leaflet","description":"used to set type of map","deprecated":"false","version":"3.80"},
+ 				{"title" : "Select Map","property":"m_maptype","values":"world,usa,india,canada,europe,asia,middleEast,australia,asiaPacific","description":"used to set selct map pf region","deprecated":"false","version":"3.80"},
+ 				{"title" : "Geometry Type","property":"m_geometrytype","values":"marker,line,polygon,clustered","description":"used to set type of geometry","deprecated":"false","version":"3.80"},
+ 				{"title" : "Default Color","property":"m_defaultfillcolor","values":"any hexadecimal color","description":"used to set default color for region","deprecated":"false","version":"3.80"},
+ 				{"title" : "Roll Over Color","property":"m_rollovercolor","values":"any hexadecimal color","description":"used to roll over color for region","deprecated":"false","version":"3.80"},
+ 				{"title" : "Outline Color","property":"m_outlinecolor","values":"any hexadecimal color","description":"used to set outline color for region","deprecated":"false","version":"3.80"},
+ 				{"title" : "Color Ranges","property":"m_rangesofseries,m_rangedcolors,m_rangedseriesdisplaynames","values":"numeric ranges,any hexadecimal colors,any text content","description":"used to set static and dynamic range","deprecated":"false","version":"3.80"},
+ 				{"title" : "Solid Color","property":"m_solidcolorfill","values":"true,false","description":"enable/disable solid fill color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Opacity","property":"m_coloropacity","values":"any value from 0-1","description":"used to control opacity of colors in chart","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"MitoPlot": {
+ 			"General": [
+ 				{"title" : "Line Width","property":"m_linewidth","values":"any numeric value","description":"Slice width can be increase or decrease.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Stroke Color","property":"m_strokecolor","values":"any hexadecimal color","description":"Used to update the stroke color.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Stroke Line Width","property":"m_strokelinewidth","values":"any numeric value","description":"Used to update the stroke line width.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Data label Marker Length","property":"m_datalabelmarkerlength","values":"any numeric value","description":"Used to control datalabel marker length.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Series Colors of RNA type","property":"m_seriescolors['RNA_Type']","values":"any hexadecimal color","description":"Used to provide different colors to different RNA type.","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Mixed": {
+ 			"Axis Setup": [
+	 			{"title" : "2nd Axis Zero Marker","property":"m_secondaxiszeromarkerline","values":"true,false","description":"enable/disable second axis line","deprecated":"false","version":"3.80"},
+	 			{"title" : "2nd Axis Zero Marker Color","property":"m_secondaxiszeromarkercolor","values":"any hexadecimal color","description":"used to control second axis line color","deprecated":"false","version":"3.80"}
+			],
+ 			"General": [
+ 				{"title" : "Points","property":"m_showpoint","values":"true,false","description":"used to enable/disable point in line form of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Base Type","property":"m_chartbase","values":"rectangle,cylinder,plane,gradient1,gradient2,gradient3","description":"used to control the type of columns should be rendered","deprecated":"false","version":"3.80"},
+ 				{"title" : "Chart Type","property":"m_charttype","values":"clustered,stacked,overlaid,100%","description":"used to control the type of columns","deprecated":"false","version":"3.80"},
+ 				{"title" : "Line Form","property":"m_lineform","values":"curve, segment","description":"used to control the line form of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Bar Size","property":"m_barwidth","values":"any value from 0-100","description":"used to control bar size of stacks","deprecated":"false","version":"3.80"}
+ 			],
+			"Second Axis": [
+	 			{"title" : "Second Axis","property":"m_secondaryaxisshow","values":"true, false","description":"enable/disable second axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Unit","property":"m_secondaryaxissecondaryunit","values":"none,auto,Percent,Thousand,Million,Billion,Trillion,Quadrillion,Lac,Crore","description":"used to control unit of second axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Precision","property":"m_secondaryaxisprecision","values":"default,none,1,2,3,4,6,8","description":"used to control precision of second axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Currency","property":"m_secondaryaxisunit","values":"none,Cent,Euro,Rupees,Pound,USD,Yen","description":"used to control currency of second axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Position","property":"m_secondaryaxissignposition","values":"prefix, suffix","description":"used to control currency position of second axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Number Formatter","property":"m_secondaryaxisnumberformatter","values":"none, indiannumber, number","description":"used to control number formatter of second axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Auto Axis Setup","property":"m_secondaxisautosetup","values":"true, false","description":"enable/disable auto axis for second axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Base Zero ","property":"m_secondaxisbasezero","values":"true, false","description":"enable/disable base zero for second axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Min Value","property":"m_secondaxisminimumvalue","values":"any numeric value","description":"used to control second axis minimum value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Max Value","property":"m_secondaxismaximumvalue","values":"any numeric value","description":"used to control second axis maximum value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Second Axis Desc","property":"m_secondaxisdiscription","values":"any text content","description":"used to control second axis description","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_secondaxisfontcolor","values":"any hexadecimal color","description":"used to control second axis description font color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_secondaxisfontsize","values":"any value from 0-24","description":"used to control second axis description font size","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_secondaxisfontstyle","values":"normal, italic","description":"used to control second axis description font style","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_secondaxisfontweight","values":"normal, bold","description":"used to control second axis description font weight","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_secondaxisfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control second axis description font family","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Decoration","property":"m_secondaxistextdecoration","values":"none, underline","description":"used to control text decoration of second axis description decoration","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Pie": {
+	 		"General": [
+ 				{"title" : "Series Colors","property":"m_seriescolor","values":"any hexadecimal colors","description":"used to set colors for series data in order","deprecated":"false","version":"3.80"},
+ 				{"title" : "Opacity","property":"m_coloropacity","values":"any value from 0-1","description":"used to control series colors opacity of slices","deprecated":"false","version":"3.80"},
+ 				{"title" : "Chart Type","property":"m_charttype","values":"Pie,Doughnut,SemiDoughnut","description":"used to control type of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Show Percentage","property":"m_showslicevalue","values":"true,false","description":"enable/disable percentage in data labels","deprecated":"false","version":"3.80"},
+ 				{"title" : "Animation","property":"m_enableanimation","values":"true,false","description":"used to enable or disable animation of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Show Limited Slices","property":"m_slicelimit","values":"true,false","description":"used to enable or disable limited slices","deprecated":"false","version":"3.80"},
+ 				{"title" : "Maximum Slices","property":"m_noofslices","values":"any value from 1-100","description":"used to control number of slices,dependent on show limited slices","deprecated":"false","version":"3.80"},
+ 				{"title" : "Doughnut Width","property":"m_linewidth","values":"any value from 10-100","description":"used to control doughnut width when doughnut type is selected","deprecated":"false","version":"3.80"},
+ 				{"title" : "Chart Alignment","property":"m_chartalignment","values":"left,center,right","description":"used to align chart rendering in component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Actions","property":"m_showsettingmenubutton","values":"true,false","description":"used to enable or disable actions menu icon of component","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"ProjectTimeline": {
+ 			"MileStones Styles": [
+ 				{"title" : "MileStone Names","property":"m_msdisplayname","values":"any text names","description":"used to specify milestones names","deprecated":"false","version":"3.80"},
+ 				{"title" : "MileStone Colors","property":"m_mscolor","values":"any hexadecimal colors","description":"used to specify milestones colors","deprecated":"false","version":"3.80"},
+ 				{"title" : "MileStone Shapes","property":"m_msshape","values":"any shapes from shape browser","description":"used to specify milestones shapes","deprecated":"false","version":"3.80"},
+ 				{"title" : "Border width","property":"m_milestoneborderwidth","values":"any value from 1 to 5","description":"used to control milestones border width","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Color","property":"m_milestonefontcolor","values":"any hexadecimal color","description":"used to control milestones font color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Size","property":"m_milestonefontsize","values":"0 to 24","description":"used to control milestones font size","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Weight","property":"m_milestonefontweight","values":"normal,bold","description":"used to control milestones font weight","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_milestonefontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control milestones font family","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Style","property":"m_milestonefontstyle","values":"normal,italic","description":"used to control milestones font style","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Task Styles": [
+	 			{"title" : "Task Names","property":"m_tdisplayname","values":"any text names","description":"enable/disable value text","deprecated":"false","version":"3.80"},
+	 			{"title" : "Task Colors","property":"m_tcolor","values":"any hexadecimal colors","description":"used to control precision of value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Overflow Text","property":"m_taskitemoverflow","values":"true,false","description":"enable/disable text overflow","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_taskfontcolor","values":"any hexadecimal color","description":"used to control task font color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_taskfontsize","values":"0 to 24","description":"used to control task font size","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_taskfontweight","values":"normal,bold","description":"used to control task font weght","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_taskfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control task font family","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_taskfontstyle","values":"normal,italic","description":"used to control task font style","deprecated":"false","version":"3.80"}
+			],
+			"Timeline Styles": [
+	 			{"title" : "Timeline Position","property":"m_axisorientation","values":"none,top,bottom,both","description":"used to control position of timeline","deprecated":"false","version":"3.80"},
+	 			{"title" : "Today Marker Color","property":"m_todaymarkercolor","values":"any hexadecimal color","description":"used to control today's marker color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Today Marker Size","property":"m_todaymarkerwidth","values":"any value from 0 to 10","description":"used to control today's marker width","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Major Labels","property":"m_showmajorlabels","values":"true,false","description":"enable/disable major labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Minor Labels","property":"m_showminorlabels","values":"true,false","description":"enable/disable minor labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Marker Border Color","property":"m_minorlabelbordercolor","values":"any hexadecimal color","description":"used to control minor label marker color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_minorlabelcolor","values":"any hexadecimal color","description":"used to control minor label font color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_axislabelfontsize","values":"0 to 24","description":"used to control minor label font size","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_axislabelfontweight","values":"normal,bold","description":"used to control minor label font weght","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_axislabelfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control minor label font family","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_axislabelfontstyle","values":"normal,italic","description":"used to control minor label font style","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"Progress": {
+ 			"General": [
+ 				{"title" : "Base Color","property":"m_basecolor","values":"any hexadecimal color","description":"base color of progress pie","deprecated":"false","version":"3.80"},
+ 				{"title" : "Value Color","property":"m_valuecolor","values":"any hexadecimal color","description":"color for area covered by value","deprecated":"false","version":"3.80"},
+ 				{"title" : "Opacity","property":"m_coloropacity","values":"0 to 1","description":"used to control color opacity of progress","deprecated":"false","version":"3.80"},
+ 				{"title" : "Percent","property":"m_percent","values":"0 to 100","description":"used to control value of progress pie","deprecated":"false","version":"3.80"},
+ 				{"title" : "Chart Type","property":"m_charttype","values":"circle,HBar,VBar","description":"used to control the type of progress component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Line Width","property":"m_linewidth","values":"10 to 50","description":"used to control internal radius","deprecated":"false","version":"3.80"},
+ 				{"title" : "Line Cap","property":"m_linecap","values":"butt,round","description":"used to enable radius for value area","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Label": [
+	 			{"title" : "Show Label","property":"m_showtext","values":"true,false","description":"enable/disable value text","deprecated":"false","version":"3.80"},
+	 			{"title" : "Precision","property":"m_precision","values":"0 to 10","description":"used to control precision of value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_fontcolor","values":"any hexadecimal color","description":"text color of value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_fontsize","values":"0 to 24","description":"used to control size of text","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_fontstyle","values":"normal,italic","description":"used to control style of text","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_fontweight","values":"normal,bold","description":"used to control weight of text","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_fontweight","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of text","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"SentimentPlot": {
+ 			"General": [
+ 				{"title" : "Range Bar","property":"m_showrangecolorbar","values":"true, false","description":"used to display range bar color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Axis Color","property":"m_axiscolor","values":"any hexadecimal color","description":"used to set axis line color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Emoticon Size","property":"m_emoticonwidth","values":"8 to 22","description":"used to set emotion icon size","deprecated":"false","version":"3.80"},
+ 				{"title" : "Emoticon Opacity","property":"m_emoticonalpha","values":"0 to 1","description":"used to control emotion icon opacity","deprecated":"false","version":"3.80"},
+ 				{"title" : "Base Type","property":"m_chartbase","values":"plane,gradient","description":"used to set bubble color base","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Scattered": {
+ 			"Axis Setup": [
+	 			{"title" : "Vertical Zero Marker Line","property":"m_verticalzeromarkerline","values":"true,false","description":"enable/disable vertical zero marker line","deprecated":"false","version":"3.80"},
+	 			{"title" : "Vertical Zero Marker Color","property":"m_verticalzeromarkercolor","values":"any hexadecimal color","description":"used to control vertical zero marker line color","deprecated":"false","version":"3.80"}
+			],
+	 		"General": [
+ 				{"title" : "Base Type","property":"m_chartbase","values":"plane,gradient","description":"used to control the type of scatterd chart","deprecated":"false","version":"3.80"},
+ 				{"title" : "Luminance","property":"m_luminance","values":"any value from 0-1","description":"used to control series colors opacity for gradient","deprecated":"false","version":"3.80"},
+ 				{"title" : "Animation","property":"m_enableanimation","values":"true,false","description":"used to enable or disable animation of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Actions","property":"m_showsettingmenubutton","values":"true,false","description":"used to enable or disable actions menu icon of component","deprecated":"false","version":"3.80"}
+ 			],
+ 			"X-Axis": [
+	 			{"title" : "Horizontal Auto Axis","property":"m_horizontalaxisautoadjust","values":"true, false","description":"enable/disable horizontal auto axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Horizontal Base Zero","property":"m_horizontalaxisbasezero","values":"true, false","description":"enable/disable horizontal base zero","deprecated":"false","version":"3.80"},
+	 			{"title" : "Horizontal Min Value","property":"m_horizontalminimumaxisvalue","values":"any numeric value","description":"set min value for horizontal axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Horizontal Max Value","property":"m_horizontalmaximumaxisvalue","values":"any numeric value","description":"set max value for horizontal axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Unit","property":"m_secondaryaxissecondaryunit","values":"none,auto,Percent,Thousand,Million,Billion,Trillion,Quadrillion,Lac,Crore","description":"used to control unit of horizontal axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Precision","property":"m_secondaryaxisprecision","values":"default,none,1,2,3,4,6,8","description":"used to control precision of horizontal axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Currency","property":"m_secondaryaxisunit","values":"none,Cent,Euro,Rupees,Pound,USD,Yen","description":"used to control currency of horizontal axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Position","property":"m_secondaryaxissignposition","values":"prefix, suffix","description":"used to control currency position of horizontal axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Number Formatter","property":"m_secondaryaxisnumberformatter","values":"none, indiannumber, number","description":"used to control number formatter of horizontal axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "X-Axis Threshold","property":"m_showxaxisthreshold","values":"true, false","description":"enable/disable x axis threshold","deprecated":"false","version":"3.80"},
+	 			{"title" : "Minimum Threshold","property":"m_minimumxaxisthreshold","values":"any numeric value","description":"used to control x axis threshold minimum value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Maximum Threshold","property":"m_maximumxaxisthreshold","values":"any numeric value","description":"used to control x axis threshold maximum value","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Y-Axis": [
+	 			{"title" : "Y-Axis Threshold","property":"m_showyaxisthreshold","values":"true, false","description":"enable/disable y axis threshold","deprecated":"false","version":"3.80"},
+	 			{"title" : "Minimum Threshold","property":"m_minimumyaxisthreshold","values":"any numeric value","description":"used to control y axis threshold minimum value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Maximum Threshold","property":"m_maximumyaxisthreshold","values":"any numeric value","description":"used to control y axis threshold maximum value","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Spider": {
+	 		"General": [
+ 				{"title" : "Animation Duration","property":"m_animationduration","values":"any numeric value","description":"used to set animation duration.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Hover Radius","property":"m_hovershape","values":"any numeric value","description":"used to update on hover radius, for hover effect only.","deprecated":"false","version":"3.80"}
+ 			]
+		},
+ 		"SparkLine": {
+	 		"General": [
+ 				{"title" : "Type","property":"m_sparklinetype","values":"line,bar,tristate","description":"used to change the type of sparkline","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Bar": [
+	 			{"title" : "Bar Spacing","property":"m_barspacing","values":"1 to 10","description":"to give space between two consecutive bar","deprecated":"false","version":"3.80"},
+	 			{"title" : "Zero Axis","property":"m_barzeroaxis","values":"true, false","description":"to show -ve stack from zero axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Positive Color","property":"m_barcolor","values":"any hexadecimal color","description":"set +ve stack color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Negative Color","property":"m_negbarcolor","values":"any hexadecimal color","description":"set -ve stack color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Zero Color","property":"m_zerobarcolor","values":"any hexadecimal color","description":"set color for zero value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Auto Axis","property":"m_autoaxissetup","values":"true/false","description":"used to set auto y-axis range","deprecated":"false","version":"4.20"},
+	 			{"title" : "Min Y-Axis Range","property":"m_minimumaxisvalue","values":"any numeric value","description":"used to set y-axis range","deprecated":"false","version":"4.20"}
+ 			],
+ 			"Line": [
+	 			{"title" : "Line Color","property":"m_linecolor","values":"any hexadecimal color","description":"to set line color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Fill Color","property":"m_fillcolor","values":"any hexadecimal color","description":"to set line area space color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Opacity","property":"m_fillcoloropacity","values":"0 to 1","description":"used to control color opacity of line area space","deprecated":"false","version":"3.80"},
+	 			{"title" : "Line Width","property":"m_linewidth","values":"0 to 10","description":"to set line width","deprecated":"false","version":"3.80"},
+	 			{"title" : "Spot Color","property":"m_spotcolor","values":"any hexadecimal color","description":"to set last point color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Min Spot Color","property":"m_minspotcolor","values":"any hexadecimal color","description":"to set minimum point color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Max Spot Color","property":"m_maxspotcolor","values":"any hexadecimal color","description":"to set maximum point color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Highlight Spot Color","property":"m_highlightspotcolor","values":"any hexadecimal color","description":"to highlight color on hover on point","deprecated":"false","version":"3.80"},
+	 			{"title" : "Highlight Line Color","property":"m_highlightlinecolor","values":"any hexadecimal color","description":"to highlight horizontal line color on hover","deprecated":"false","version":"3.80"},
+	 			{"title" : "Spot Radius","property":"m_spotradius","values":"1 to 10","description":"to set size of point","deprecated":"false","version":"3.80"},
+	 			{"title" : "Min Normal Value","property":"m_normalrangemin","values":"numeric value","description":"to set minimum point to shade region","deprecated":"false","version":"3.80"},
+	 			{"title" : "Max Normal Value","property":"m_normalrangemax","values":"numeric value","description":"to set maximum point to shade region","deprecated":"false","version":"3.80"},
+	 			{"title" : "Normal Color","property":"m_normalrangecolor","values":"any hexadecimal color","description":"to set color of shaded region","deprecated":"false","version":"3.80"},
+	 			{"title" : "Min/Max Data Label","property":"m_datalabel","values":"true, false","description":"enable/disable data label","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Tristate": [
+	 			{"title" : "Bar Spacing","property":"m_tristatebarspacing","values":"0 to 10","description":"to give space between two consecutive bar","deprecated":"false","version":"3.80"},
+	 			{"title" : "Positive Color","property":"m_tristateposbarcolor","values":"any hexadecimal color","description":"set +ve stack color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Negative Color","property":"m_tristatenegbarcolor","values":"any hexadecimal color","description":"set -ve stack color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Zero Color","property":"m_tristatezerobarcolor","values":"any hexadecimal color","description":"set color for zero value","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"TimeSeries": {
+ 			"Axis Setup": [
+	 			{"title" : "2nd Axis Zero Marker","property":"m_secondaxiszeromarkerline","values":"true,false","description":"enable/disable second axis line","deprecated":"false","version":"3.80"},
+	 			{"title" : "2nd Axis Zero Marker Color","property":"m_secondaxiszeromarkercolor","values":"any hexadecimal color","description":"used to control second axis line color","deprecated":"false","version":"3.80"}
+			],
+			"Background": [
+	 			{"title" : "Stack Border Color","property":"m_stackbordercolor","values":"any hexadecimal color","description":"used to control stack border color of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Stack Border Width","property":"m_stackborderwidth","values":"any value from 0-20","description":"used to control stack border width of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Stack Border Radius","property":"m_stackborderradius","values":"any value from 0-30","description":"used to control stack radius color of component","deprecated":"false","version":"3.80"}
+			],
+ 			"General": [
+ 				{"title" : "Fill Area","property":"m_fillarea","values":"true,false","description":"used to enable or disable fill area under the lines of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Animation","property":"m_enableanimation","values":"true,false","description":"used to enable or disable animation of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Chart Type","property":"m_charttype","values":"timeseries, advanced, fanchart","description":"used to control the type of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Column Type","property":"m_columntype","values":"clustered,stacked,overlaid,100%","description":"used to control the type of columns","deprecated":"false","version":"3.80"},
+ 				{"title" : "Line Form","property":"m_lineform","values":"curve, segment","description":"used to control the line form of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Bar Size","property":"m_barwidth","values":"any value from 0-100","description":"used to control bar size of stacks","deprecated":"false","version":"3.80"},
+ 				{"title" : "Actions","property":"m_showsettingmenubutton","values":"true,false","description":"used to enable or disable actions menu icon of component","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Legend": [
+	 			{"title" : "Fixed Legend","property":"m_fixedlegend","values":"true,false","description":"enable/disable fixed legend of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Position","property":"m_legendposition","values":"horizontalTopLeft,horizontalTopCenter,horizontalTopRight","description":"used to control position of floating legend","deprecated":"false","version":"3.80"},
+	 			{"title" : "Background Color","property":"m_legendbackgroundcolor","values":"any hexadecimal color","description":"used to control background color of floating legend","deprecated":"false","version":"3.80"},
+	 			{"title" : "Background Opacity","property":"m_legendbackgroundtransparency","values":"any value from 0-1","description":"used to control background color opacity of floating legend","deprecated":"false","version":"3.80"}
+			],
+			"Second Axis": [
+	 			{"title" : "Show Axis Line","property":"m_showlinesecondaxis","values":"true, false","description":"enable/disable second axis line of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Axis Line Color","property":"m_linesecondaxiscolor","values":"any hexadecimal color","description":"used to control color of second axis line","deprecated":"false","version":"3.80"},
+	 			{"title" : "Second Axis","property":"m_secondaryaxisshow","values":"true, false","description":"enable/disable second axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Unit","property":"m_secondaryaxissecondaryunit","values":"none,auto,Percent,Thousand,Million,Billion,Trillion,Quadrillion,Lac,Crore","description":"used to control unit of second axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Precision","property":"m_secondaryaxisprecision","values":"default,none,1,2,3,4,6,8","description":"used to control precision of second axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Currency","property":"m_secondaryaxisunit","values":"none,Cent,Euro,Rupees,Pound,USD,Yen","description":"used to control currency of second axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Position","property":"m_secondaryaxissignposition","values":"prefix, suffix","description":"used to control currency position of second axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Number Formatter","property":"m_secondaryaxisnumberformatter","values":"none, indiannumber, number","description":"used to control number formatter of second axis labels","deprecated":"false","version":"3.80"},
+	 			{"title" : "Auto Axis Setup","property":"m_secondaxisautosetup","values":"true, false","description":"enable/disable auto axis for second axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Base Zero ","property":"m_secondaxisbasezero","values":"true, false","description":"enable/disable base zero for second axis","deprecated":"false","version":"3.80"},
+	 			{"title" : "Min Value","property":"m_secondaxisminimumvalue","values":"any numeric value","description":"used to control second axis minimum value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Max Value","property":"m_secondaxismaximumvalue","values":"any numeric value","description":"used to control second axis maximum value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Second Axis Desc","property":"m_secondaxisdiscription","values":"any text content","description":"used to control second axis description","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_secondaxisfontcolor","values":"any hexadecimal color","description":"used to control second axis description font color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_secondaxisfontsize","values":"any value from 0-24","description":"used to control second axis description font size","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_secondaxisfontstyle","values":"normal, italic","description":"used to control second axis description font style","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_secondaxisfontweight","values":"normal, bold","description":"used to control second axis description font weight","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_secondaxisfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control second axis description font family","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Decoration","property":"m_secondaxistextdecoration","values":"none, underline","description":"used to control text decoration of second axis description decoration","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Slider": [
+ 				{"title" : "Show Slider","property":"m_showslider","values":"true,false","description":"enable/disable slider from timeline chart","deprecated":"false","version":"3.80"},
+ 				{"title" : "Slider Color","property":"m_sliderbordercolor","values":"any hexadecimal color","description":"used to set slider fill color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Slider Position","property":"m_sliderposition","values":"default,left,right","description":"used to set intial slider position on load","deprecated":"false","version":"3.80"},
+ 				{"title" : "Border Opacity","property":"m_sliderborderopacity","values":"any value from 0-1","description":"used to set border opacity of slider","deprecated":"false","version":"3.80"},
+ 				{"title" : "Selection Opacity","property":"m_slideropacityselection","values":"any value from 0-1","description":"used to set selcted part opacity of slider","deprecated":"false","version":"3.80"},
+ 				{"title" : "Container Opacity","property":"m_slideropacitycontainer","values":"any value from 0-1","description":"used to set opacity of slider container","deprecated":"false","version":"3.80"},
+ 				{"title" : "Show Range Selector","property":"m_showrangeselector","values":"true,false","description":"enable/disable range selector in component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Range Selector Opacity","property":"m_rangeselectoropacity","values":"any value from 0-1","description":"used to set opacity of range selector","deprecated":"false","version":"3.80"},
+ 				{"title" : "Default Slider Size","property":"m_sliderrange","values":"auto,25,50,75,100","description":"used to set default slider size on load","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"TreeMap": {
+	 		"General": [
+ 				{"title" : "Default Fill Color","property":"m_defaultfillcolor","values":"any hexadecimal color","description":"used to set animation duration.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Left Padding for Data label","property":"m_leftpadding","values":"any numeric value","description":"used to set left padding","deprecated":"false","version":"3.80"},
+ 				{"title" : "Right Padding for Data label","property":"m_rightpadding","values":"any numeric value","description":"used to set right padding","deprecated":"false","version":"3.80"},
+ 				{"title" : "Top Padding for Data label","property":"m_toppadding","values":"any numeric value","description":"used to set top padding","deprecated":"false","version":"3.80"},
+ 				{"title" : "Bottom Padding for Data label","property":"m_bottompadding","values":"any numeric value","description":"used to set bottom padding.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Show Parent Data label","property":"m_showparentdatalabel","values":"true,false","description":"used to show/hide datalabel.","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Trellis": {
+	 		"General": [
+ 				{"title" : "Row Height","property":"m_rowheight","values":"any value from 0 to 25","description":"used to set range color bar width","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Waterfall": {
+	 		"General": [
+ 				{"title" : "Positive Color","property":"m_positivecolor","values":"any hexadecimal color","description":"used to set positive stack color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Negative Color","property":"m_negativecolor","values":"any hexadecimal color","description":"used to set negative stack color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Total Color","property":"m_totalcolor","values":"any hexadecimal color","description":"used to set total stack color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Net Column Name","property":"m_calculatedname","values":"any string value","description":"used to set label of total stack","deprecated":"false","version":"3.80"},
+ 				{"title" : "Bar Size","property":"m_barwidth","values":"0 to 100","description":"used to set bar width.","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"WordCloud": {
+	 		"General": [
+ 				{"title" : "Range Bar Width","property":"m_rangecolorbarwidth","values":"any value from 0 to 25","description":"used to set range color bar width","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Word Styles": [
+ 				{"title" : "Text Opacity","property":"m_fillopacity","values":"any value from 0 to 1","description":"used to set opacity of text","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_wordfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to set font family of text","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Max Font Size","property":"m_maxvaluefontsize","values":"any value from 1 to 100","description":"used to set largest font size of text","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Min Font Size","property":"m_minvaluefontsize","values":"any value from 1 to 100","description":"used to set smallest font size of text","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Shuffle Text","property":"m_shuffledtext","values":"true, false","description":"used to shuffle text position on load","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Rotate Text","property":"m_rotatetext","values":"true, false","description":"used to align text horizontally/vertically","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Show Limited Words","property":"m_showntext","values":"true, false","description":"used to enable/disable the text limit","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "No. of Words to show","property":"m_nthtextvalue","values":"any value from 1 to 10000","description":"used to assign number of text to be displayed","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Exclude Pronouns","property":"m_excludepronouns","values":"true, false","description":"used to ","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Words to Exclude","property":"m_excludedwords","values":"any text value","description":"used to filter out unwanted words","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Fill With Random Colors","property":"m_userandomcolor","values":"true, false","description":"used to fill random text color on every load","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Show Range Bar","property":"m_showrangebar","values":"true, false","description":"enable/disable range bar on component","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Range Colors","property":"m_displayname","values":"true, false","description":"used to enable/disable the text limit","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Highlight Color","property":"m_highlightcolor","values":"any hexadecimal colors","description":"used to set range color","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Convert to Case","property":"m_wordcase","values":"none,lower,upper,title","description":"used to convert text to upper,lower etc","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Grids": {
+ 			"Background": [
+ 			 	{"title" : "Gradient Rotation","property":"m_bggradientrotation","values":"any value from 0-360","description":"used to control background color rotation","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Opacity","property":"m_bgalpha","values":"any value from 0-1","description":"used to control background color opacity","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Gradient","property":"m_bggradients","values":"any hexadecimal colors","description":"used to add colors for background","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Border","property":"m_showborder","values":"true, false","description":"enable/disable component border","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Border Color","property":"m_bordercolor","values":"any hexadecimal color","description":"used to control border color","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Border Radius","property":"m_borderradius","values":"any value from 0-25","description":"used to control border radius","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Shadow","property":"m_showshadow","values":"true, false","description":"enable/disable component shadow","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Shadow Color","property":"m_shadowcolor","values":"any hexadecimal color","description":"used to control component shadow color","deprecated":"false","version":"3.80"},
+ 			 	{"title" : "Shadow Transparency","property":"m_shadowopacity","values":"any value from 0-1","description":"used to control component shadow opacity","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Export Options": [
+ 				{"title" : "Enable Context Menu","property":"m_showcontextmenu","values":"true, false","description":"enable/disable context menu on right click of component","deprecated":"false","version":"3.80"},
+				{"title" : "Enable Excel","property":"m_exporttoexcel","values":"true, false","description":"enable/disable export excel option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Enable JPEG","property":"m_exporttojpeg","values":"true, false","description":"enable/disable export jpeg option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Enable PNG","property":"m_exporttopng","values":"true, false","description":"enable/disable export png option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Enable PPT","property":"m_exporttoppt","values":"true, false","description":"enable/disable export ppt option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Enable PDF","property":"m_exporttopdf","values":"true, false","description":"enable/disable export pdf option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Show Print","property":"m_exporttoprint","values":"true, false","description":"enable/disable show print option from context menu","deprecated":"false","version":"3.80"},
+				{"title" : "Export Heading","property":"m_pptheading","values":"any text content","description":"option to control pdf heading text","deprecated":"false","version":"3.80"},
+				{"title" : "Export Sub Heading","property":"m_pptsubheading","values":"any text content","description":"option to control sub pdf heading text","deprecated":"false","version":"3.80"},
+				{"title" : "Export File Name","property":"m_scrnshotfilename","values":"any text content","description":"option to control downloaded file name","deprecated":"false","version":"3.80"},
+				{"title" : "Export Background Color","property":"m_exportdefaultbgcolor","values":"any hexadecimal color","description":"used to control default export background color when chart-bg-opacity is less than 1","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Header Style": [
+ 				{"title" : "Header Text Color","property":"m_headerfontcolor","values":"any hexadecimal color","description":"used to set header text color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Size","property":"m_headerfontsize","values":"any value from 0-24","description":"used to set header font size","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Style","property":"m_headerfontstyle","values":"normal,italic","description":"used to set header font style","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Weight","property":"m_headerfontweight","values":"normal,bold","description":"used to set header font weight","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_headerfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to set header font family","deprecated":"false","version":"3.80"},
+ 				{"title" : "Use Field Color","property":"m_usefieldcolorasheader","values":"true,false","description":"used to enable or disable use field color on header","deprecated":"false","version":"3.80"},
+ 				{"title" : "Background Color","property":"m_headerchromeColor","values":"any hexadecimal color","description":"used to set header background color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Decoration","property":"m_headertextdecoration","values":"none,underline","description":"used to set font decoration","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Row Style": [
+ 				{"title" : "Font Color","property":"m_labelfontcolor","values":"any hexadecimal color","description":"used to set header text color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Size","property":"m_labelfontsize","values":"any value from 0-24","description":"used to set header font size","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Style","property":"m_labelfontstyle","values":"normal,italic","description":"used to set header font style","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Weight","property":"m_labelfontweight","values":"normal,bold","description":"used to set header font weight","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_labelfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to set header font family","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Decoration","property":"m_labeltextdecoration","values":"none,underline","description":"used to set font decoration","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Wrap","property":"m_textwrap","values":"true,false","description":"used to enable or disable text wrap","deprecated":"false","version":"3.80"},
+ 				{"title" : "Row Height","property":"m_rowheight","values":"any value from 25-250","description":"used to set grid row height(Note: This property not in Pivot Grid)","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Styles": [
+ 				{"title" : "Roll Over Color","property":"m_rollovercolor","values":"any heaxdecimal color","description":"used to set grid roll over color","deprecated":"false","version":"3.80"},
+				{"title" : "Text Hover Color","property":"m_texthovercolor","values":"any heaxdecimal color","description":"used to set grid text hover color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Selection Color","property":"m_selectioncolor","values":"any heaxdecimal color","description":"used to set grid selection color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Horizontal Grid Lines","property":"m_showhorizontalgridlines","values":"true,false","description":"used to show/hide grid horizontal lines","deprecated":"false","version":"3.80"},
+ 				{"title" : "Horizontal Line Color","property":"m_horizontalgridlinecolor","values":"any heaxdecimal color","description":"used to set grid horizontal lines color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Vertical Line Color","property":"m_verticalgridlinecolor","values":"any heaxdecimal color","description":"used to set grid vertical lines color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Grid Color","property":"m_alternaterowscolor","values":"any heaxdecimal color","description":"used to set grid row and alternate row color","deprecated":"false","version":"3.80"}
+ 			],
+ 			"Title": [
+ 				{"title" : "Show Title","property":"m_title.m_showtitle","values":"true, false","description":"used to show or hide the title of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Description","property":"m_title.m_description","values":"any text content","description":"used to show desired text content in title of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Size","property":"m_title.m_fontsize","values":"any value from 0-24","description":"used to control size of title font","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Color","property":"m_title.m_fontcolor","values":"any hexadecimal color","description":"used to control color of title font","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Style","property":"m_title.m_fontstyle","values":"normal, italic","description":"used to control font style of title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_title.m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Weight","property":"m_title.m_fontweight","values":"normal, bold","description":"used to control font weight of title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Decoration","property":"m_title.m_textdecoration","values":"none, underline","description":"used to control text decoration of title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Align","property":"m_title.m_align","values":"left, center, right","description":"used to control alignment of title text","deprecated":"false","version":"3.80"},
+ 				{"title" : "Title Bar Height","property":"m_title.m_titlebarheight","values":"any value from 25-75","description":"used to control the height of title box","deprecated":"false","version":"3.80"}
+ 			],
+ 			"SubTitle": [
+ 				{"title" : "Show Sub Title","property":"m_subTitle.m_showsubtitle","values":"true, false","description":"used to show or hide the sub title of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Description","property":"m_subTitle.m_description","values":"any text content","description":"used to show desired text content in sub title of component","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Size","property":"m_subTitle.m_fontsize","values":"any value from 0-24","description":"used to control sub title font size","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Color","property":"m_subTitle.m_fontcolor","values":"any hexadecimal color","description":"used to control sub title font color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Style","property":"m_subTitle.m_fontstyle","values":"normal, italic","description":"used to control sub title font style","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Family","property":"m_subTitle.m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of sub title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Font Weight","property":"m_subTitle.m_fontweight","values":"normal, bold","description":"used to control font weight of sub title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Text Decoration","property":"m_subTitle.m_textdecoration","values":"none, underline","description":"used to control text decoration of sub title","deprecated":"false","version":"3.80"},
+ 				{"title" : "Align","property":"m_subTitle.m_align","values":"left, center, right","description":"used to control alignment of sub title text","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"PagingGrid": {
+			"Styles": [
+	 			{"title" : "Pagination Bar Color","property":"m_pagerbackgroundcolor","values":"any hexadecimal color","description":"used to set pager background color","deprecated":"false","version":"3.80"},
+				{"title" : "Pagination Font Color","property":"m_linkbarcolor","values":"any hexadecimal color","description":"used to set link bar color","deprecated":"false","version":"3.80"},
+				{"title" : "Row Count","property":"m_rowcount","values":"any value from 1 to 100","description":"used to control row count in grid","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"PivotGrid": {
+			"General": [
+	 			{"title" : "Fit Columns","property":"m_fitcolumns","values":"true,false","description":"used to enable or disable grid fit columns","deprecated":"false","version":"3.80"},
+				{"title" : "First Column Width","property":"m_firstcolumnwidth","values":"any value from 10 to 10000","description":"used to set grid first column width","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"ScoreCardGrid": {
+			"General": [
+	 			{"title" : "Fit Columns","property":"m_fitcolumns","values":"true,false","description":"used to enable or disable grid fit columns","deprecated":"false","version":"3.80"},
+	 			{"title" : "Hierarchy Level","property":"m_hierarchylevel","values":"single,multiple","description":"used to set hierarchy level in grid","deprecated":"false","version":"3.80"},
+				{"title" : "Tree Field","property":"m_treefield","values":"any text value","description":"used to set tree field name of grid","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"SimpleGrid": {
+			"General": [
+	 			{"title" : "Fit Columns","property":"m_fitcolumns","values":"true,false","description":"used to enable or disable grid fit columns","deprecated":"false","version":"3.80"},
+	 			{"title" : "Scroll View","property":"m_scrollviewlimit","values":"0,10,30,50,100","description":"used to control limit of loading data in grid","deprecated":"false","version":"3.80"}
+			]
+		},
+ 		"Filter": {
+	 		"General": [
+ 				{"title" : "Hide 'Ok' Buttot","property":"m_hideokbutton","values":"true,false","description":"used to hide OK button","deprecated":"false","version":"3.80"},
+				{"title" : "Searchbox Placeholder","property":"m_searchboxuiobj.placeholder","values":"any text content","description":"used to provide search box placeholder","deprecated":"false","version":"3.80"},
+ 				{"title" : "Searchbox Border","property":"m_searchboxuiobj.border","values":"any numeric value","description":"used to update searchbox border","deprecated":"false","version":"3.80"},
+ 				{"title" : "Searchbox Border style","property":"m_searchboxuiobj.borderStyle","values":"solid,hidden,dashed,none etc.","description":"used to update searchbox border style","deprecated":"false","version":"3.80"},
+ 				{"title" : "Searchbox Border Color","property":"m_searchboxuiobj.borderColor","values":"any hexadecimal color","description":"used to update searchbox border color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Searchbox Background Color","property":"m_searchboxuiobj.backgroundColor","values":"any hexadecimal color","description":"used to update searchbox background color","deprecated":"false","version":"3.80"},
+ 				{"title" : "Searchbox Margin","property":"m_searchboxuiobj.margin","values":"any numeric value","description":"used to set searchbox margin","deprecated":"false","version":"3.80"},
+ 				{"title" : "Searchbox Padding","property":"m_searchboxuiobj.padding","values":"any numeric value","description":"used to set searchbox padding","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Checkbox": {
+	 		"General": [
+ 		 		{"title" : "Cursor Type","property":"m_cursortype","values":"pointer, auto, cell, copy etc.","description":"used to set cursor type.","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"ComboFilter": {
+	 		"General": [
+ 				{"title" : "Arrow Width","property":"m_arrowwidth","values":"any numeric value","description":"used to update arrow width.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Row Height","property":"m_menupanelrowheight","values":"any numeric value.","description":"used to update row height.","deprecated":"false","version":"3.80"},
+ 				{"title" : "All Display Value","property":"m_allvaluesdisplay.enable","values":"true,false","description":"used to add one additional field for All values","deprecated":"false","version":"3.80"},
+ 				{"title" : "All Display Value text","property":"m_allvaluesdisplay.text","values":"any text content","description":"used to give display name dynamically.","deprecated":"false","version":"3.80"},
+ 				{"title" : "All Display Value passing value","property":"m_allvaluesdisplay.value","values":"any numeric value or text.","description":"used to give value.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Cursor Type","property":"m_cursortype","values":"pointer, auto, cell, copy etc.","description":"used to set cursor type.","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"HierarchicalComboFilter": {
+	 		"General": [
+ 				{"title" : "Searchbox border color for Advance theme","property":"m_advanceproperties.borderColor","values":"any hexadecimal color","description":"used to set Searchbox border color for Advance theme.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Ok/Cancel color for Advance theme","property":"m_advanceproperties.iconColor","values":"any hexadecimal color","description":"used to Ok/Cancel color for Advance theme.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Searchbox border radius for Advance theme","property":"m_advanceproperties.borderRadius","values":"any numeric value","description":"used to set Searchbox border radius for Advance theme","deprecated":"false","version":"3.80"},
+ 				{"title" : "Ok/Cancel right padding","property":"m_advanceproperties.rightIconPadding","values":"any numeric value","description":"used to set Ok/Cancel right padding for Advance theme.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Searchbox border width for Advance theme","property":"m_advanceproperties.borderWidth","values":"any numeric value","description":"used to Searchbox border width for Advance theme.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Show Parent checkbox","property":"m_advanceproperties.showParentCheckbox","values":"true,false","description":"used to Show Parent checkbox for Advance theme.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Highlighter Color","property":"m_advancehighlighter.borderColor","values":"any hexadecimal color","description":"used to set highlighter color for Advance theme.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Highlighter Width","property":"m_advancehighlighter.borderWidth","values":"any numeric value","description":"used to set highlighter width for Advance theme.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Highlighter Style","property":"m_advancehighlighter.borderStyle","values":"solid,hidden,dashed,none etc.","description":"used to set highlighter width for Advance theme.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Highlighter Style","property":"m_advancehighlighter.borderStyle","values":"solid,hidden,dashed,none etc.","description":"used to set highlighter width for Advance theme.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Selection Limit Box border color","property":"m_showselectionlimitui.borderColor","values":"any hexadecimal color","description":"used to set Selection limit box border color.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Selection Limit Box border radius","property":"m_showselectionlimitui.borderRadius","values":"any numeric value","description":"used to set Selection limit box border radius.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Selection Limit Box border width","property":"m_showselectionlimitui.borderWidth","values":"any numeric value","description":"used to set Selection limit box border width.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Selection Limit Box width","property":"m_showselectionlimitui.width","values":"any numeric value","description":"used to set Selection limit box width.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Childnode background color","property":"m_childnodeproperties.backgroundColor","values":"any hexadecimal color","description":"used to set Childnode background color.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Childnode fontColor","property":"m_childnodeproperties.fontColor","values":"any hexadecimal color","description":"used to set Childnode font color.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Childnode selection Color","property":"m_childnodeproperties.selectionColor","values":"any hexadecimal color","description":"used to set Childnode selection color.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Childnode selection Font Color","property":"m_childnodeproperties.selectionFontColor","values":"any hexadecimal color","description":"used to set Childnode selection font color.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Childnode Rollover Color","property":"m_childnodeproperties.rolloverColor","values":"any hexadecimal color","description":"used to set Childnode rollover color.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Childnode Rollover Font Color","property":"m_childnodeproperties.rolloverFontColor","values":"any hexadecimal color","description":"used to set Childnode rollover font color.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Expand Collapse Icon Size","property":"m_expandiconsize","values":"any hexadecimal color","description":"used to set expand collapse font icons size.","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"List": {
+	 		"General": [
+ 				{"title" : "Action Bar Height","property":"m_actionbarheight","values":"any numeric value","description":"used to set Action Bar height.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Row Height","property":"m_menupanelrowheight","values":"any numeric value","description":"used to update row height.","deprecated":"false","version":"3.80"},
+ 				{"title" : "List Element Box Shadow","property":"m_listelementproperty.boxShadow","values":"example: 1px 1px #efefef","description":"used to set Box shadow of List Filter.","deprecated":"false","version":"3.80"},
+ 				{"title" : "List Element Border Radius","property":"m_listelementproperty.borderRadius","values":"any numeric value","description":"used to set border radius of List element.","deprecated":"false","version":"3.80"},
+ 				{"title" : "List Element Border Width","property":"m_listelementproperty.borderWidth","values":"any numeric value.","description":"used to set border width of List element.","deprecated":"false","version":"3.80"},
+ 				{"title" : "List Element Border Style","property":"m_listelementproperty.borderStyle","values":"solid,hidden,dashed,none etc.","description":"used to set border style for List element.","deprecated":"false","version":"3.80"},
+ 				{"title" : "List Element Border Margin","property":"m_listelementproperty.margin","values":"any numeric value.","description":"used to set margin for List Element.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Cursor Type","property":"m_cursortype","values":"pointer, auto, cell, copy etc.","description":"used to set cursor type.","deprecated":"false","version":"3.80"}
+ 			]
+ 		},
+ 		"Radio": {
+	 		"General": [
+ 				{"title" : "Cursor Type","property":"m_cursortype","values":"pointer, auto, cell, copy etc.","description":"used to set cursor type.","deprecated":"false","version":"3.80"},
+ 				{"title" : "Button Padding","property":"m_buttonpadding","values":"any numeric value.","description":"used to set and adjust padding.","deprecated":"false","version":"3.80"}
+ 			]
+		},
+ 		"DatePicker": {
+			"General": [
+	 			{"title" : "Enable Year Navigation","property":"m_yearnavigationenabled","values":"true,false","description":"used to enable or disable year navigation","deprecated":"false","version":"3.80"},
+	 			{"title" : "Enable Date Range","property":"m_enabledaterange","values":"true,false","description":"used to enable or disable date range selection","deprecated":"false","version":"3.80"},
+	 			{"title" : "Date from","property":"m_todate","values":"any date","description":"used to set start date in date range","deprecated":"false","version":"3.80"},
+	 			{"title" : "Date up to","property":"m_fromdate","values":"any date","description":"used to set end date in date range","deprecated":"false","version":"3.80"},
+	 			{"title" : "Default Date","property":"m_defaultdate","values":"any date","description":"used to set default date","deprecated":"false","version":"3.80"},
+	 			{"title" : "Date Format","property":"m_formatString","values":"dd-mm-yy,mm-dd-yy,dd-mm-yyyy,mm-dd-yyyy,yyyy-mm-dd,dd/mm/yy,mm/dd/yy,dd/mm/yyyy,mm/dd/yyyy","description":"used to set input date format","deprecated":"false","version":"3.80"},
+	 			{"title" : "Output Format","property":"m_outputformat","values":"dd-mm-yy,mm-dd-yy,dd-mm-yyyy,mm-dd-yyyy,yyyy-mm-dd,dd/mm/yy,mm/dd/yy,dd/mm/yyyy,mm/dd/yyyy","description":"used to set output date","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any text content","description":"used to control click value content","deprecated":"false","version":"3.80"}
+			],
+			"Style": [
+				{"title" : "Header Color","property":"m_chromecolor","values":"any hexadecimal color","description":"used to control header color","deprecated":"false","version":"3.80"},
+				{"title" : "Selection Color","property":"m_selectioncolor","values":"any hexadecimal color","description":"used to control selection color","deprecated":"false","version":"3.80"},
+				{"title" : "Roll Over Color","property":"m_rollovercolor","values":"any hexadecimal color","description":"used to control rollover color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_color","values":"any hexadecimal color","description":"used to control font color of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_fontsize","values":"any value from 0 to 24","description":"used to control font size of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_fontstyle","values":"normal, italic","description":"used to control font style of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_fontweight","values":"normal, bold","description":"used to control font weight of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of component","deprecated":"false","version":"3.80"}	
+	 		]
+ 		},
+		"Export": {
+			"General": [
+	 			{"title" : "Export Window","property":"m_exportwindow","values":"true,false","description":"used to enable/disable export window","deprecated":"false","version":"3.80"},
+	 			{"title" : "Mode","property":"m_mode","values":"bvzx,excel,pdf,ppt,screenshot","description":"used to select type of export","deprecated":"false","version":"3.80"},
+	 			{"title" : "Heading","property":"m_pptheading","values":"any text content","description":"used to control heading in pdf","deprecated":"false","version":"3.80"},
+	 			{"title" : "Sub Heading","property":"m_pptsubheading","values":"any text content","description":"used to control subheading in pdf","deprecated":"false","version":"3.80"},
+	 			{"title" : "Export File Name","property":"m_fileName","values":"any text content","description":"used to control filename in pdf export","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tool Tip","property":"m_tooltip","values":"any text content","description":"used to control tooltip value content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any text content","description":"used to control click value content","deprecated":"false","version":"3.80"}
+			],
+			"Style": [
+	 			{"title" : "Background Color","property":"m_chromecolor","values":"any hexadecimal color","description":"used to control background color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Border Radius","property":"m_borderradius","values":"any value from 0 to 100","description":"used to control border radius of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_color","values":"any hexadecimal color","description":"used to control font color of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_fontsize","values":"any value from 0 to 24","description":"used to control font size of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_fontstyle","values":"normal, italic","description":"used to control font style of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_fontweight","values":"normal, bold","description":"used to control font weight of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of component","deprecated":"false","version":"3.80"}	
+	 		]
+ 		},
+ 		"Box": {
+ 			"Style": [
+	 			{"title" : "Fill Opacity","property":"m_alpha","values":"any value from 0 to 1","description":"used to control opacity of graphic","deprecated":"false","version":"3.80"},
+	 			{"title" : "Border Color","property":"m_bordercolor","values":"any hexadecimal color","description":"used to set border color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Border Radius","property":"m_borderradius","values":"any value from 0 to 25","description":"used to set border radius","deprecated":"false","version":"3.80"},
+	 			{"title" : "Border Thickness","property":"m_borderthickness","values":"any value from 0 to 10","description":"used to set border thickness","deprecated":"false","version":"3.80"}
+			]
+		},
+		"Bullet": {
+ 			"General": [
+	 			{"title" : "Show Markers","property":"m_showticks","values":"true, false","description":"used to enable marker","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Actual Value","property":"m_showvalue","values":"true, false","description":"used to show actual value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Target Value","property":"m_showtargetvalue","values":"true, false","description":"used to show the target value on the top","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Title","property":"m_showtext","values":"true, false","description":"used to show bullet title","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title Description","property":"m_labeltext","values":"any text content","description":"used to set title text","deprecated":"false","version":"3.80"},
+	 			{"title" : "Bullet Type","property":"m_bullettype","values":"horizontal, vertical","description":"used to set alignment of bullet box","deprecated":"false","version":"3.80"},
+	 			{"title" : "Orientation","property":"m_orientation","values":"normal,reverse","description":"used to set bullet display order","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any value","description":"used to update value on click","deprecated":"false","version":"3.80"}
+			],
+			"Indicators": [
+	 			{"title" : "Ranges Properties","property":"m_rangedSeriesDisplayNames","values":"any hexadecimal color","description":"used to set color range indicator","deprecated":"false","version":"3.80"},
+	 			{"title" : "Actual Value","property":"m_actualValue","values":"any numeric value","description":"used to set actual value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Target Value","property":"m_targetvalue","values":"any numeric value","description":"used to set target value","deprecated":"false","version":"3.80"}
+			],
+			"Style": [
+	 			{"title" : "Border Color","property":"m_bordercolor","values":"any hexadecimal color","description":"used to set the border color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Measure Color","property":"m_facecolor","values":"any hexadecimal color","description":"used to set progress range color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Target Color","property":"m_targetcolor","values":"any hexadecimal color","description":"used to set target color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Marker Color","property":"m_tickscolor","values":"any hexadecimal color","description":"used to set marker tick color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Marker Font Color","property":"m_markertextcolor","values":"any hexadecimal color","description":"used to set marker font color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_fontcolor","values":"any hexadecimal color","description":"used to set font color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Actual Meter Size","property":"m_actualmetersize","values":"value from 0 to 1","description":"used to set meter height","deprecated":"false","version":"3.80"},
+	 			{"title" : "Target Meter Size","property":"m_targetmetersize","values":"value from 0 to 1","description":"used to set target meter height","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_fontsize","values":"value from 8 to 20","description":"used to set marker font size","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_labelfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to set marker font size","deprecated":"false","version":"3.80"}
+	 		]
+		},
+ 		"FilterSaver": {
+			"General": [
+	 			{"title" : "Label","property":"m_label","values":"any text content","description":"used to set component label","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tool Tip","property":"m_tooltip","values":"any text content","description":"used to control tooltip value content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any text content","description":"used to control click value content","deprecated":"false","version":"3.80"}
+			],
+			"Style": [
+	 			{"title" : "Background Color","property":"m_chromecolor","values":"any hexadecimal color","description":"used to control background color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Border Radius","property":"m_borderradius","values":"any value from 0 to 100","description":"used to control border radius of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_color","values":"any hexadecimal color","description":"used to control font color of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_fontsize","values":"any value from 0 to 24","description":"used to control font size of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_fontstyle","values":"normal, italic","description":"used to control font style of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_fontweight","values":"normal, bold","description":"used to control font weight of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of component","deprecated":"false","version":"3.80"}	
+	 		]
+ 		},
+ 		"Gauge": {
+			"General": [
+	 			{"title" : "Show Ticks","property":"m_showticks","values":"true, false","description":"enable/disable the white space between meter","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Range","property":"m_showminmax","values":"true, false","description":"enable/disable the range text of meter","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Title","property":"m_showtitle","values":"true, false","description":"enable/disable title on the meter","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title","property":"m_title","values":"any string value","description":"used to set the title on the meter","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any string value","description":"used to update value on meter click","deprecated":"false","version":"3.80"}
+			],
+			"Indicators": [
+	 			{"title" : "Ranges","property":"m_colors","values":"any hexadecimal color","description":"used to control background color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Value Variable","property":"m_valuevariable","values":"any numeric value","description":"used to set any value in between the given range","deprecated":"false","version":"3.80"},
+	 			{"title" : "Target Value","property":"m_targetvalue","values":"any numeric value","description":"used to set the target point between the given range","deprecated":"false","version":"3.80"},
+	 			{"title" : "Minimum Range","property":"m_minvalue","values":"any numeric value","description":"used to set the minimum range area","deprecated":"false","version":"3.80"},
+	 			{"title" : "Maximum Range","property":"m_maxvalue","values":"any numeric value","description":"used to the maximum range area","deprecated":"false","version":"3.80"}
+	 		],
+			"Style": [
+				{"title" : "Speedometer Width","property":"m_speedometerwidth","values":"any value from 5 to 100","description":"used to set meter width","deprecated":"false","version":"3.80"},
+	 			{"title" : "Needle Width","property":"m_needlewidth","values":"any value from 2 to 10","description":"used to set width of needle","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tick Color","property":"m_tickscolor","values":"any hexadecimal color","description":"used to set the color between the range gap","deprecated":"false","version":"3.80"},
+	 			{"title" : "Needle Color","property":"m_pointercolor","values":"any hexadecimal color","description":"used to set the needle color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Pointer Color","property":"m_pointercolor","values":"any hexadecimal color","description":"used to the meter arrow color","deprecated":"false","version":"3.80"},
+				{"title" : "Center Color","property":"m_centercolor","values":"any hexadecimal color","description":"used to set the color of center pin","deprecated":"false","version":"3.80"},
+				{"title" : "Target Color","property":"m_targetcolor","values":"any hexadecimal color","description":"used to set the target pointer color","deprecated":"false","version":"3.80"},
+				{"title" : "Range Font Color","property":"m_rangefontcolor","values":"any hexadecimal color","description":"used to set the target text color","deprecated":"false","version":"3.80"},
+				{"title" : "Label Font Color","property":"m_fontcolor","values":"any hexadecimal color","description":"used to set the text value","deprecated":"false","version":"3.80"},
+				{"title" : "Title Font Color","property":"m_titlefontcolor","values":"any hexadecimal color","description":"used to set the title text color","deprecated":"false","version":"3.80"},
+				{"title" : "Marker Font Family","property":"m_markerfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to set marker font family","deprecated":"false","version":"3.80"},
+				{"title" : "Label Font Family","property":"m_valuefontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to set label font family","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title Font Family","property":"m_titlefontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to set title text font","deprecated":"false","version":"3.80"},
+				{"title" : "Title Font Size","property":"m_titlefontsize","values":"any numeric value from 0 to 20","description":"used to set the font size of title","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Size","property":"m_fontsize","values":"any numeric value from 0 to 20","description":"used to set the font size of label","deprecated":"false","version":"3.80"},
+	 			{"title" : "Range Font Size","property":"m_markerfontsize","values":"any numeric value from 0 to 20","description":"used to set the target text font size","deprecated":"false","version":"3.80"}
+	 		]
+ 		},
+ 		"Graphics": {
+ 			"General": [
+	 			{"title" : "Category","property":"m_symbolcategory","values":"Animals,Art,Building,..","description":"used to select category of graphic","deprecated":"false","version":"3.80"},
+	 			{"title" : "Symbol","property":"m_symbol","values":"Dove,Palette,Brush,..","description":"used to select symbol from category of graphic","deprecated":"false","version":"3.80"},
+	 			{"title" : "Color","property":"m_color","values":"any hexadecimal color","description":"used to control color of graphic","deprecated":"false","version":"3.80"},
+	 			{"title" : "Fill Opacity","property":"m_opacity","values":"any value from 0 to 1","description":"used to control opacity of graphic","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tool Tip","property":"m_tooltip","values":"any text content","description":"used to control tooltip value content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any text content","description":"used to control click value content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Cursor Style","property":"m_cursortype","values":"default,pointer,help,not-allowed,progress","description":"used to control type of cursor","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"GuidedTour": {
+ 			"General": [
+	 			{"title" : "Text","property":"m_text","values":"any string value","description":"used to set label of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Associate Tour","property":"m_associatedtour","values":"modal pop up","description":"used to set tour description","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tour Type","property":"m_tourtype","values":"text,image","description":"used to set text or image on component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Browse Image","property":"m_cdata","values":"image data","description":"used to set the image file/url","deprecated":"false","version":"3.80"}
+			],
+			"Style": [
+	 			{"title" : "Background Color","property":"m_backgroundcolor","values":"any hexadecimal color","description":"used to control background color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Opacity","property":"m_backgroundalpha","values":"any value from 0 to 1","description":"used to control opacity of background color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Border Radius","property":"m_borderradius","values":"any value from 0 to 100","description":"used to control border radius of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Padding","property":"m_padding","values":"any value from 0 to 100","description":"used to control padding of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_color","values":"any hexadecimal color","description":"used to control font color of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_fontsize","values":"any value from 0 to 24","description":"used to control font size of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_fontstyle","values":"normal, italic","description":"used to control font style of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_fontweight","values":"normal, bold","description":"used to control font weight of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Decoration","property":"m_textdecoration","values":"none, underline","description":"used to control font decoration","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Align","property":"m_textalign","values":"left,center,right","description":"used to control the label alignment","deprecated":"false","version":"3.80"},
+	 			{"title" : "Vertical Align","property":"m_verticalalign","values":"middle,top,bottom","description":"used to control the vertical alignment of label","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Rotation","property":"m_labeltextrotation","values":"horizontal, vertical","description":"used to control the label rotation","deprecated":"false","version":"3.80"},
+	 			{"title" : "Cursor Style","property":"m_cursortype","values":"default, pointer,help,not-allowed,progress","description":"used to control font decoration","deprecated":"false","version":"3.80"}
+	 		],
+	 		"ScriptProperties": [
+	 			{"title" : "TourEvents","property":"m_tourevents.start, m_tourevents.end, m_tourevents.pause","values":"any sdk methods in form of function. eg: m_tourevents.start = function() { sdk.hideComponent('bar1'); }","description":"used to perform events on tour start, end and pause","deprecated":"false","version":"4.2"}
+	 		]
+ 		},
+ 		"HSlider": {
+ 			"General": [
+	 			{"title" : "Show Markers","property":"m_showmarkers","values":"true,false","description":"Show/Hide max and min limit","deprecated":"false","version":"3.80"},
+	 			{"title" : "Maximum","property":"m_minimum","values":"any numeric value","description":"used to set max limit of slider","deprecated":"false","version":"3.80"},
+	 			{"title" : "Minimum","property":"m_maximum","values":"any numeric value","description":"used to set min limit of slider","deprecated":"false","version":"3.80"},
+	 			{"title" : "Interval","property":"m_snapinterval","values":"any numeric value","description":"used to set step limit when slider draggaed","deprecated":"false","version":"3.80"},
+	 			{"title" : "Chrome Color","property":"m_chromecolor","values":"any hexadecimal color","description":"used to control color of slider bar","deprecated":"false","version":"3.80"},
+	 			{"title" : "Circle Color","property":"m_handlecolor","values":"any hexadecimal color","description":"used to control color of circle","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Value","property":"m_showticks","values":"true,false","description":"Show/Hide the value label on circle","deprecated":"false","version":"3.80"},
+	 			{"title" : "Circle Radius","property":"m_handleradius","values":"any value between 5-20","description":"used to control circle radius","deprecated":"false","version":"3.80"},
+	 			{"title" : "Thickness","property":"m_scaleheight","values":"any value between 1-30","description":"used to control slider bar thickness","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"Image": {
+ 			"General": [
+	 			{"title" : "Maintain Aspect Ratio","property":"m_maintainaspectratio","values":"true,false","description":"enable/disable aspect ratio","deprecated":"false","version":"3.80"},
+	 			{"title" : "Rollover Glow ","property":"m_rolloverglowenable","values":"true,false","description":"enable/disable rollover glow","deprecated":"false","version":"3.80"},
+	 			{"title" : "Glow Color","property":"m_rolloverglowcolor","values":"any hexadecimal color","description":"used to control rolloverglow color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Opacity","property":"m_alpha","values":"any value from 0 to 1","description":"used to control opacity of image","deprecated":"false","version":"3.80"},
+	 			{"title" : "Border Radius","property":"m_borderradius","values":"any value from 0 to 100","description":"used to control border radius of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tool Tip","property":"m_tooltip","values":"any text content","description":"used to control tooltip value content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any text content","description":"used to control click value content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Cursor Style","property":"m_cursortype","values":"default,pointer,help,not-allowed,progress","description":"used to control type of cursor","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"Info": {
+ 			"General": [
+	 			{"title" : "Label","property":"m_label","values":"any text content","description":"used to control text content in label of info","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tool Tip","property":"m_tooltip","values":"any text content","description":"used to control text content in tooltip of info","deprecated":"false","version":"3.80"},
+	 			{"title" : "Display Text","property":"m_information","values":"any text content","description":"used to control text content in popup window of info","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title","property":"m_informationtitle","values":"any text content","description":"used to control text content in title in popup window","deprecated":"false","version":"3.80"},
+	 			{"title" : "Window Width","property":"m_informationwindowwidth","values":"any numeric value from 0","description":"used to control width of popup window","deprecated":"false","version":"3.80"},
+	 			{"title" : "Window Height","property":"m_informationwindowheight","values":"any numeric value from 0","description":"used to control height of popup window","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any text content","description":"used to control click value content","deprecated":"false","version":"3.80"}
+			],
+			"Style": [
+	 			{"title" : "Light Color","property":"m_lightcolor","values":"any hexadecimal color","description":"used to control light color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Dark Color ","property":"m_darkcolor","values":"any hexadecimal color","description":"used to control dark color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Color","property":"m_textcolor","values":"any hexadecimal color","description":"used to control label font color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Window Title Color","property":"m_windowchromecolor","values":"any hexadecimal color","description":"used to control window title bg color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title Font Color","property":"m_titlefontcolor","values":"any hexadecimal color","description":"used to control window title color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title Font Size","property":"m_titlefontsize","values":"any value from 0 to 24","description":"used to control window title font size","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_fontstyle","values":"normal, italic","description":"used to control font style in window popup content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_fontweight","values":"normal, bold","description":"used to control font weight in window popup content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font weight in window popup content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Decoration","property":"m_textdecoration","values":"none, underline","description":"used to control font decoration in window popup content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Window Font Size","property":"m_fontsize","values":"any value from 0 to 24","description":"used to control font size in window popup content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Window Font Color","property":"m_color","values":"any hexadecimal color","description":"used to control font color in window popup content","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"KPITile": {
+			"General": [
+	 			{"title" : "Tooltip","property":"m_enabletooltip","values":"true,false","description":"used to show/hide tooltip","deprecated":"false","version":"3.80"},
+	 			{"title" : "KPI Tile Direction","property":"m_kpitiledirection","values":"horizontal,vertical","description":"Alignment of tiles when multi record kpi tile is rendered","deprecated":"false","version":"3.80"},
+	 			{"title" : "No. of Branches","property":"m_noofbranches","values":"any numeric value","description":"creates number of column/rows based on the direction","deprecated":"false","version":"3.80"},
+	 			{"title" : "Positive Trend Color","property":"m_positivetrendcolor","values":"any hexadecimal color","description":"used to control positive trend color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Negative Trend Color","property":"m_negativetrendcolor","values":"any hexadecimal color","description":"used to control negative trend color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Zero Trend Color","property":"m_zerotrendcolor","values":"any hexadecimal color","description":"used to control zero trend color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Sparkline Color","property":"m_linecolor","values":"any hexadecimal color","description":"used to control sparkline color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Sparkline Fill Color","property":"m_fillcolor","values":"any hexadecimal color","description":"used to control sparkline fill color","deprecated":"false","version":"3.80"}
+			],
+			"Background Style": [
+				{"title" : "Margin Tile","property":"m_paddingbettile","values":"any value between 0-100","description":"Padding from border and between tiles","deprecated":"false","version":"3.80"}
+			],
+			"Category": [
+				{"title" : "Font Color","property":"m_categoryfontcolor","values":"any hexadecimal color","description":"used to control font color of category value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title Font Size","property":"m_categoryfontsize","values":"any value from 0 to 24","description":"used to control font size of category value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_categoryfontstyle","values":"normal, italic","description":"used to control font style of category value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_categoryfontweight","values":"normal, bold","description":"used to control font weight of category value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_categoryfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font weight of category value","deprecated":"false","version":"3.80"}
+			],
+			"Primary Series": [
+				{"title" : "Font Color","property":"m_primaryseriesfontcolor","values":"any hexadecimal color","description":"used to control font color of primary series value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title Font Size","property":"m_primaryseriesfontsize","values":"any value from 0 to 24","description":"used to control font size of primary series value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_primaryseriesfontstyle","values":"normal, italic","description":"used to control font style of primary series value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_primaryseriesfontweight","values":"normal, bold","description":"used to control font weight of primary series value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_primaryseriesfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font weight of primary series value","deprecated":"false","version":"3.80"}
+			],
+			"Secondary Series": [
+				{"title" : "Font Color","property":"m_secondaryseriesfontcolor","values":"any hexadecimal color","description":"used to control font color of secondary series value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title Font Size","property":"m_secondaryseriesfontsize","values":"any value from 0 to 24","description":"used to control font size of secondary series value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_secondaryseriesfontstyle","values":"normal, italic","description":"used to control font style of secondary series value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_secondaryseriesfontweight","values":"normal, bold","description":"used to control font weight of secondary series value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_secondaryseriesfontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font weight of secondary series value","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"Label": {
+ 			"Formatter": [
+ 				{"title" : "Unit","property":"m_secondaryunit","values":"none,auto,Percent,Thousand,Million,Billion,Trillion,Quadrillion,Lac,Crore","description":"used to set unit formatter in y axis markers","deprecated":"false","version":"3.80"},
+ 				{"title" : "Precision","property":"m_precision","values":"default,none,1,2,3,4,6,8","description":"uused to set precision in y axis markers","deprecated":"false","version":"3.80"},
+ 				{"title" : "Currency","property":"m_unit","values":"none,Cent,Euro,Rupees,Pound,USD,Yen","description":"used to set currency in y axis markers","deprecated":"false","version":"3.80"},
+ 				{"title" : "Position","property":"m_signposition","values":"prefix, suffix","description":"used to set positon of currency in y axis markers","deprecated":"false","version":"3.80"},
+ 				{"title" : "Number Formatter","property":"m_numberformatter","values":"none, indiannumber, number","description":"used to set number formmater type in y axis markers","deprecated":"false","version":"3.80"}
+ 			],
+			"General": [
+	 			{"title" : "Dynamic","property":"m_isdynamic","values":"true,false","description":"used to enable or disable dynamically value updation of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text","property":"m_text","values":"any text content","description":"used to set label value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any text content","description":"used to control click value content","deprecated":"false","version":"3.80"}
+			],
+			"Style": [
+	 			{"title" : "Background Color","property":"m_backgroundcolor","values":"any hexadecimal color","description":"used to control background color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Opacity","property":"m_backgroundalpha","values":"any value from 0 to 1","description":"used to control opacity of background color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Border Radius","property":"m_borderradius","values":"any value from 0 to 100","description":"used to control border radius of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Padding","property":"m_padding","values":"any value from 0 to 100","description":"used to control padding of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_color","values":"any hexadecimal color","description":"used to control font color of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_fontsize","values":"any value from 0 to 24","description":"used to control font size of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_fontstyle","values":"normal, italic","description":"used to control font style of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_fontweight","values":"normal, bold","description":"used to control font weight of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Decoration","property":"m_textdecoration","values":"none, underline","description":"used to control font decoration","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Align","property":"m_textalign","values":"left,center,right","description":"used to control the label alignment","deprecated":"false","version":"3.80"},
+	 			{"title" : "Vertical Align","property":"m_verticalalign","values":"middle,top,bottom","description":"used to control the vertical alignment of label","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Rotation","property":"m_labeltextrotation","values":"horizontal, vertical","description":"used to control the label rotation","deprecated":"false","version":"3.80"},
+	 			{"title" : "Cursor Style","property":"m_cursortype","values":"default, pointer,help,not-allowed,progress","description":"used to control font decoration","deprecated":"false","version":"3.80"}
+	 		]
+ 		},
+ 		"Legend": {
+ 			"General": [
+	 			{"title" : "Show Checkbox","property":"m_legendcheckbox","values":"true,false","description":"used to enable/disable check boxes in legend","deprecated":"false","version":"3.80"},
+	 			{"title" : "Associate Chart","property":"m_associatedchartid","values":"any component name","description":"used to control associated component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Static Legends","property":"m_legendnames,m_legendcolors","values":"any text content,any hexadecimal colors","description":"used to control field names and colors for static legends","deprecated":"false","version":"3.80"},
+	 			{"title" : "Direction","property":"m_legenddirection","values":"horizontal,vertical","description":"used to control type of alignment","deprecated":"false","version":"3.80"},
+	 			{"title" : "Legend Shape","property":"m_legendsymbol","values":"defaultshape,similartoseries","description":"used to control shape from series or default","deprecated":"false","version":"3.80"}
+			],
+			"Style": [
+				{"title" : "Font Size","property":"m_fontsize","values":"any value from 0 to 24","description":"used to control font size of legend names","deprecated":"false","version":"3.80"},
+				{"title" : "Font Color","property":"m_fontcolor","values":"any hexadecimal color","description":"used to control font color of legend names","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_fontstyle","values":"normal, italic","description":"used to control font style of legend names","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_fontweight","values":"normal, bold","description":"used to control font weight of legend names","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of legend names","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Align","property":"m_legendtextalign","values":"left,center,right","description":"used to control text align of legend names","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Decoration","property":"m_textdecoration","values":"none, underline","description":"used to control text decoration of legend names","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"NStepper": {
+ 			"General": [
+	 			{"title" : "Maximum","property":"m_minimum","values":"any numeric value","description":"used to set max limit","deprecated":"false","version":"3.80"},
+	 			{"title" : "Minimum","property":"m_maximum","values":"any numeric value","description":"used to set min limit","deprecated":"false","version":"3.80"},
+	 			{"title" : "Step Size","property":"m_stepsize","values":"any numeric value","description":"used to set increment decrement stepper","deprecated":"false","version":"3.80"}
+			],
+			"Style": [
+				{"title" : "Chrome Color","property":"m_chromecolor","values":"any hexadecimal color","description":"used to control color of slider bar","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"SemiGauge": {
+			"General": [
+	 			{"title" : "Show Ticks","property":"m_showticks","values":"true, false","description":"enable/disable the white space between meter","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Range","property":"m_showminmax","values":"true, false","description":"enable/disable the range text of meter","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Title","property":"m_showtitle","values":"true, false","description":"enable/disable title on the meter","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title","property":"m_title","values":"any string value","description":"used to set the title on the meter","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any string value","description":"used to update value on meter click","deprecated":"false","version":"3.80"}
+			],
+			"Indicators": [
+	 			{"title" : "Ranges","property":"m_colors","values":"any hexadecimal color","description":"used to control background color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Value Variable","property":"m_valuevariable","values":"any numeric value","description":"used to set any value in between the given range","deprecated":"false","version":"3.80"},
+	 			{"title" : "Target Value","property":"m_targetvalue","values":"any numeric value","description":"used to set the target point between the given range","deprecated":"false","version":"3.80"},
+	 			{"title" : "Minimum Range","property":"m_minvalue","values":"any numeric value","description":"used to set the minimum range area","deprecated":"false","version":"3.80"},
+	 			{"title" : "Maximum Range","property":"m_maxvalue","values":"any numeric value","description":"used to the maximum range area","deprecated":"false","version":"3.80"}
+	 		],
+			"Style": [
+	 			{"title" : "Bezel Color","property":"m_bezelcolor","values":"any hexadecimal color","description":"used to set circle color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Face Color","property":"m_facecolor","values":"any hexadecimal color","description":"used to set circle inside area","deprecated":"false","version":"3.80"},
+	 			{"title" : "Face Shadow Color","property":"m_faceshadowcolor","values":"any hexadecimal color","description":"used to set the shadow face color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tick Color","property":"m_tickscolor","values":"any hexadecimal color","description":"used to set the color between the range gap","deprecated":"false","version":"3.80"},
+	 			{"title" : "Pointer Color","property":"m_pointercolor","values":"any hexadecimal color","description":"used to the meter arrow color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Center Color","property":"m_centercolor","values":"any hexadecimal color","description":"used to set the color of center pin","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Color","property":"m_fontcolor","values":"any hexadecimal color","description":"used to set the text value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Target Color","property":"m_targetcolor","values":"any hexadecimal color","description":"used to set the target pointer color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title Font Color","property":"m_titlefontcolor","values":"any hexadecimal color","description":"used to set the title text color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Range Font Color","property":"m_rangefontcolor","values":"any hexadecimal color","description":"used to set the target text color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Color Opacity","property":"m_coloropacity","values":"any numeric value from 0 to 1","description":"used to set the opacity of face color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Family","property":"m_valuefontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to set label font family","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title Font Family","property":"m_titlefontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to set title text font","deprecated":"false","version":"3.80"},
+	 			{"title" : "Title Font Size","property":"m_titlefontsize","values":"any numeric value from 0 to 20","description":"used to set the font size of title","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label Font Size","property":"m_fontsize","values":"any numeric value from 0 to 20","description":"used to set the font size of label","deprecated":"false","version":"3.80"},
+	 			{"title" : "Range Font Size","property":"m_markerfontsize","values":"any numeric value from 0 to 20","description":"used to set the target text font size","deprecated":"false","version":"3.80"}
+	 		]
+ 		},
+ 		"SVGImage": {
+ 			"General": [
+	 			{"title" : "Opacity","property":"m_opacity","values":"any value from 0 to 1","description":"used to control opacity of svgimage","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tool Tip","property":"m_tooltip","values":"any text content","description":"used to control text content in tooltip of svgimage","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any text content","description":"used to control click value content","deprecated":"false","version":"3.80"},
+	 			{"title" : "Cursor Style ","property":"m_cursortype","values":"default,pointer,help,not-allowed,progress","description":"used to control type of cursor","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"URL": {
+			"General": [
+	 			{"title" : "Tool Tip","property":"m_tooltip","values":"any text content","description":"used to set component tooltip","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any text content","description":"used to control click value of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Label","property":"m_label","values":"any text content","description":"used to set component label","deprecated":"false","version":"3.80"},
+	 			{"title" : "URL Link","property":"m_url","values":"url text","description":"used to control set url path on component click","deprecated":"false","version":"3.80"},
+	 			{"title" : "Parameters","property":"m_params","values":"name,value","description":"used to set parameters in url","deprecated":"false","version":"3.80"}
+			],
+			"Style": [
+	 			{"title" : "Background Color","property":"m_chromecolor","values":"any hexadecimal color","description":"used to control background color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Border Radius","property":"m_borderradius","values":"any value from 0 to 100","description":"used to control border radius of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Color","property":"m_color","values":"any hexadecimal color","description":"used to control font color of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Size","property":"m_fontsize","values":"any value from 0 to 24","description":"used to control font size of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Style","property":"m_fontstyle","values":"normal, italic","description":"used to control font style of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Weight","property":"m_fontweight","values":"normal, bold","description":"used to control font weight of component","deprecated":"false","version":"3.80"},
+	 			{"title" : "Font Family","property":"m_fontfamily","values":"Arial,Cambria,Helvetica,Lucida Bright,Monotype Corsiva,Papyrus,Raleway,Roboto,Times New Roman,Ubuntu,Verdana","description":"used to control font family of component","deprecated":"false","version":"3.80"}	
+	 		]
+ 		},
+ 		"VSlider": {
+ 			"General": [
+	 			{"title" : "Show Markers","property":"m_showmarkers","values":"true,false","description":"Show/Hide max and min limit","deprecated":"false","version":"3.80"},
+	 			{"title" : "Maximum","property":"m_minimum","values":"any numeric value","description":"used to set max limit of slider","deprecated":"false","version":"3.80"},
+	 			{"title" : "Minimum","property":"m_maximum","values":"any numeric value","description":"used to set min limit of slider","deprecated":"false","version":"3.80"},
+	 			{"title" : "Interval","property":"m_snapinterval","values":"any numeric value","description":"used to set step limit when slider draggaed","deprecated":"false","version":"3.80"},
+	 			{"title" : "Chrome Color","property":"m_chromecolor","values":"any hexadecimal color","description":"used to control color of slider bar","deprecated":"false","version":"3.80"},
+	 			{"title" : "Circle Color","property":"m_handlecolor","values":"any hexadecimal color","description":"used to control color of circle","deprecated":"false","version":"3.80"},
+	 			{"title" : "Show Value","property":"m_showticks","values":"true,false","description":"Show/Hide the value label on circle","deprecated":"false","version":"3.80"},
+	 			{"title" : "Circle Radius","property":"m_handleradius","values":"any value between 5-20","description":"used to control circle radius","deprecated":"false","version":"3.80"},
+	 			{"title" : "Thickness","property":"m_scaleheight","values":"any value between 1-30","description":"used to control slider bar thickness","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"TextBox": {
+ 			"General": [
+	 			{"title" : "Dynamic","property":"m_isdynamic","values":"true, false","description":"enable/disable dynamic data update","deprecated":"false","version":"3.80"},
+	 			{"title" : "Text Editable","property":"m_editable","values":"true, false","description":"enable/disable text dynamic","deprecated":"false","version":"3.80"},
+	 			{"title" : "Display Content","property":"m_text","values":"any string value","description":"used to set text on display","deprecated":"false","version":"3.80"},
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any string value","description":"used to set value on click","deprecated":"false","version":"3.80"}
+			]
+ 		},
+ 		"Trend": {
+ 			"General": [
+	 			{"title" : "Click Value","property":"m_fieldvalue","values":"any string value","description":"used to set value on click","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tool Tip","property":"m_enabletooltip","values":"true, false","description":"enable/disable tool tip","deprecated":"false","version":"3.80"},
+	 			{"title" : "Tool Tip Title","property":"m_fielddisplayname","values":"true, false","description":"enable/disable title on tool tip","deprecated":"false","version":"3.80"},
+	 			{"title" : "Value","property":"m_value","values":"any numeric value","description":"used to set value","deprecated":"false","version":"3.80"},
+	 			{"title" : "Base Range","property":"m_baserange","values":"pop up value","description":"used to set range of trend","deprecated":"false","version":"3.80"},
+	 			
+	 			{"title" : "+ve Trend Color","property":"m_positivetrendcolor","values":"any hexadecimal color","description":"used to set positive trend bgcolor","deprecated":"false","version":"3.80"},
+	 			{"title" : "+ve Symbol Color","property":"m_positivesymbolcolor","values":"any hexadecimal color","description":"used to set positive trend symbol color","deprecated":"false","version":"3.80"},
+	 			{"title" : "-ve Trend Color","property":"m_negativetrendcolor","values":"any hexadecimal color","description":"used to set negative trend bgcolor","deprecated":"false","version":"3.80"},
+	 			{"title" : "-ve Symbol Color","property":"m_negativesymbolcolor","values":"any hexadecimal color","description":"used to set negative trend symbol color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Zero Trend Color","property":"m_zerotrendcolor","values":"any hexadecimal color","description":"used to set zero trend bg color","deprecated":"false","version":"3.80"},
+	 			{"title" : "Zero Symbol Color","property":"m_zerosymbolcolor","values":"any hexadecimal color","description":"used to set zero trend symbol color","deprecated":"false","version":"3.80"}
+			]
+ 		}
+ 	}
+ }

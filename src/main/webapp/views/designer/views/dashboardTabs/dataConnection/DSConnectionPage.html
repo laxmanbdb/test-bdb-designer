@@ -1,0 +1,237 @@
+<div id="DSConnection" class="connectionUI data-src connTextStyle"
+	ng-controller="DSController" ng-init="onInit()">
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Name</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<input type="text" id="connectionName" name="connectionName" placeholder="New connection" 
+				class="propValue connTextStyle" maxlength="20" 
+				ng-blur="validateConnection( modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection )" 
+				ng-change="updateConnectionTree( modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection );"
+				ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.connectionName">
+		</div>
+		<!--<div class="connectorInfo" style="top: 8px;">
+			<md-button ng-click="openConnectorInfo()" class="md-secondary md-icon-button"> 
+				<md-icon >
+					<img alt="Information" src="./resources/images/svg/additional/Information.svg" class="cursor-hand" mat-tooltip="Information" />
+					<i class="material-icons cursor-hand" mat-tooltip="Information">info_outline</i> 
+				</md-icon> 
+			</md-button>
+		</div>-->
+	</div>
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Data Store</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<div class="icon_abs ds-refreshIcon">
+				<i class="material-icons cursor-hand" ng-click="loadUserDataSourceList(true);" mat-tooltip="Reload DataStores">refresh</i>
+			</div>
+			<select id="d-ds-datasources" style="width: 100%;" class="connTextStyle"
+				ui-select2="select2options" 
+				ng-model="selectedDataSource.ds" 
+				data-placeholder="Select a connector" 
+				ng-change="listQueries()"
+				ng-options="datasource.name for datasource in modal.userDataSourceList.ds">
+				<option value=""></option>
+			</select>
+		</div>
+	</div>
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Load at Start</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<div class="toggle-btn-grp css-ver">
+				<div style="width: 42px; margin-right: 32px;">
+					<input type="radio" name="radioGRPloadAtStart" value="true" 
+						ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.LoadatStartup" />
+					<label class="toggle-btn connTextStyle" >Yes</label>
+				</div>
+				<div style="width: 42px; margin-right: 32px;">
+					<input type="radio" name="radioGRPloadAtStart" value="false" 
+						ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.LoadatStartup" />
+					<label class="toggle-btn connTextStyle">No</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Timely Refresh</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<div class="toggle-btn-grp css-ver">
+				<div style="width: 42px; margin-right: 32px;">
+					<input type="radio" name="radioGRPtimelyRefresh" value="true" 
+						ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.timelyRefresh" />
+					<label class="toggle-btn connTextStyle">Yes</label>
+				</div>
+				<div style="width: 42px; margin-right: 32px;">
+					<input type="radio" name="radioGRPtimelyRefresh" value="false"  
+						ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.timelyRefresh" />
+					<label class="toggle-btn connTextStyle">No</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row" ng-show="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.timelyRefresh+''=='true'" style="padding: 27px 0px 0px 36px;" >
+		<div class="col-md-2 col-sm-2">
+			<p>Refresh Interval</p>
+		</div>
+		<div class="col-md-7 col-sm-7 connTextStyle">
+			<bvz-number-spinner 
+				ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.refreshMinutes" 
+				bvz-step="0.25"
+				bvz-max="525600"
+				bvz-min="0.25" 
+				onkeypress="return checkValidNumber(event)">
+			</bvz-number-spinner>
+		</div>
+		<div class="col-md-3 col-sm-3 connTextStyle">
+			<p>Minute(s)</p>
+		</div>
+	</div>
+	<!--  tabs -->
+	<div class="row form-group dsMaxHeight margin">
+		<md-content class="ht100per setBackground">
+			<md-tabs class="filed_tabs1 ht100per">
+				<!--  tab1 -->
+				<md-tab label="Field Set">
+					<md-content class="md-padding setBackground">
+						<!-- Field Tab -->
+						<div id="webservicefieldSetTabDivision">
+							<!--  list items -->
+							<md-content class="setBackground">
+								<md-list flex>
+									<md-list-item ng-click="" 
+										ng-repeat="field in modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.availableFieldSet">
+										<div class="md-list-item-text" layout="column">
+											<div class="highlighter" ng-show="dataURL.isUiActive" ng-style="getHighlighterStyle()"></div>
+											<h5 class=" ng-binding textStyle" style="padding-left: 15px;"> {{ field.name }} </h5>
+										</div>
+										<md-divider ></md-divider>
+									</md-list-item>
+								</md-list>
+							</md-content>
+							<!--  list items -->
+						</div>
+					</md-content>
+				</md-tab>
+				<!-- Tab2 -->
+				<md-tab label="Calculated Fields">
+					<md-content class="md-padding setBackground">
+						<!-- Field Tab -->
+						<div id="fieldSetTabDivision">
+							<!--  list items -->
+							<md-content class="setBackground">
+								<md-list flex>
+									<md-list-item>
+										<div class="md-list-item-text connTextStyle" layout="column">
+											<h5>Calculated fields</h5>
+										</div>
+										<md-button class="md-secondary md-icon-button">
+											<md-icon  ng-click="createNewCalculatedField();" class="nt-plus-icon cursor-hand" mat-tooltip="Add">
+												<!--<img alt="Add" src="./resources/images/svg/additional/Add.svg" mat-tooltip="Add" />-->
+												<!--<i class="material-icons" mat-tooltip="Add">add</i>-->
+											</md-icon>
+										</md-button>
+										<md-divider ></md-divider>
+									</md-list-item>
+									<!--  sub list  -->
+									<md-list-item ng-click="" 
+										ng-repeat="field in modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.calculatedFieldList">
+										<div class="md-list-item-text" layout="column">
+											<div class="highlighter" ng-show="dataURL.isUiActive" ng-style="getHighlighterStyle()"></div>
+											<h5 class="connTextStyle ng-binding" style="padding-left: 15px;"> {{ field.name }} </h5>
+										</div>
+										<md-button class="md-secondary md-icon-button">
+											<md-icon ng-click="editCalculatedField(field);" class="nt-edit-icon cursor-hand" mat-tooltip="Edit">
+												<!--<i class="material-icons" mat-tooltip="Edit">edit</i>-->
+											</md-icon>
+										</md-button>
+										<md-button class="md-secondary md-icon-button">
+											<md-icon   ng-click="delCalculatedField(field,$event);" class="nt-trash-icon cursor-hand" mat-tooltip="Remove">
+												<!--<i class="material-icons" mat-tooltip="Remove">delete</i>-->
+											</md-icon>
+										</md-button>
+										<md-divider ></md-divider>
+									</md-list-item>
+									<!--  sub list -->
+								</md-list>
+							</md-content>
+						</div>
+					</md-content>
+				</md-tab>
+				<!-- Tab3 -->
+				<md-tab label="Condition">
+					<md-content class="md-padding setBackground">
+						<div id="webserviceconditionTabDivision">
+							<div class="col-md-12 conditionFieldHeader headerDivShadow">
+								<div class="row">
+									<div class="col-md-4 col-sm-4">
+										<p> Fields </p>
+									</div>
+									<div class="col-md-4 col-sm-4">
+										<p> Conditions </p>
+									</div>
+									<div class="col-md-4 col-sm-4">
+										<p > Actions </p>
+									</div>
+								</div>
+							</div>
+							<div class="navbar ht100per d-c-nb">
+								<ul class="list-group d-list-group ht100per" style="height: 350px; max-height: 350px;">
+									<li class="list-group-item d-list-item w-list ng-scope" ng-click="" 
+										ng-repeat="conditionField in modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.availableConditionSet">
+										<div class="row">
+											<div class="col-md-4 col-sm-4" title="{{conditionField.name}}">
+												<p class="ws-name-list" style="display: inline-block; margin: 0px 0px 0px; width: 100%;">
+													{{conditionField.name}}
+												</p>
+											</div>
+											<div class="col-md-4 col-sm-4">
+												<input type="text" id="conditionText" class="propValue"  
+													ng-model="conditionField.condition" 
+													ng-change="onConditionTextBoxUpdate(conditionField)"/>
+												<span class="bvz-condition-dd-btn" ng-click="toggleGlobalVarOptions( $event, conditionField, $index)">
+												<i class="condition-gv-picker material-icons cursor-hand">arrow_drop_down</i>
+												</span>
+												<div class="bvz-condition-select-options-container" ng-if="setSelectedItem == conditionField.name + $index" ng-show="displayOptions">
+													<div class="bvz-search-wrapper">
+														<input ng-model="defValQuery" class="bvz-search propValue" type="text" placeholder="Search" />
+													</div>
+													<div class="bvz-no-match-found" ng-show="defValFilterList.length == 0 || defValFilterList == undefined">
+														No item found
+													</div>
+													<ul class="bvz-select-options-wrapper" role="menu">
+														<li class="bvz-select-options-list condition-select-li" ng-model="conditionField" ng-click="updateSelectedValue($event, item, conditionField)" 
+															ng-repeat="item in defValFilterList = ( defaultValueList | advSearch: defValQuery : 'objectName' )">
+															<h5 class="options-pre-info">{{ getCompName(item) }}</h5>
+															<h6 class="options-sec-info">{{ item.actualTag }}</h6>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-4">
+												<input type="checkbox" 
+													ng-model="conditionField.added" 
+													ng-change="onConditionCheckBoxClick(conditionField)"/>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-md-offset-6">
+									<div gvar-search-tool></div>
+								</div>
+							</div>
+						</div>
+					</md-content>
+				</md-tab>
+			</md-tabs>
+		</md-content>
+	</div>
+</div>

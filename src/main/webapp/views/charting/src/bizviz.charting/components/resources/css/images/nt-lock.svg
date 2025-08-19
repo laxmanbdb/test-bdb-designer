@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Group_2972" data-name="Group 2972" transform="translate(-311.006 -1105.017)">
+    <rect id="Rectangle_7101" data-name="Rectangle 7101" width="20" height="20" transform="translate(311.006 1105.017)" fill="#e8e8e8" opacity="0"/>
+    <g id="Icon_feather-lock" data-name="Icon feather-lock" transform="translate(309.085 1103.771)">
+      <path id="Path_6453" data-name="Path 6453" d="M6.149,16H17.694a2.152,2.152,0,0,1,2.149,2.149v5.772a2.152,2.152,0,0,1-2.149,2.149H6.149A2.152,2.152,0,0,1,4,23.922V18.149A2.152,2.152,0,0,1,6.149,16Zm11.545,9.071a1.151,1.151,0,0,0,1.149-1.149V18.149A1.151,1.151,0,0,0,17.694,17H6.149A1.151,1.151,0,0,0,5,18.149v5.772a1.151,1.151,0,0,0,1.149,1.149Z" transform="translate(0 -6.078)" fill="#525252"/>
+      <path id="Path_6454" data-name="Path 6454" d="M18.746,10.922a.5.5,0,0,1-.5-.5v-3.3a3.623,3.623,0,0,0-7.246,0v3.3a.5.5,0,1,1-1,0v-3.3a4.623,4.623,0,0,1,9.246,0v3.3A.5.5,0,0,1,18.746,10.922Z" transform="translate(-2.701)" fill="#525252"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,60 @@
+{
+	"InfoButton": {
+		"Properties": {
+			"Object": {
+				"componentType": "info_button",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "info",
+				"y": "98",
+				"objectType": "info",
+				"subElement": "InfoButton",
+				"globalVariableKeyAttribute": "globalkey",
+				"width": "32",
+				"height": "32",
+				"initialVisibility": "true",
+				"showLocked": "false",
+				"objectName": "Info_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "Obj.885C9951NFCBBN36AEN4B57NB98302C922C6",
+				"x": "196",
+				"InfoButton": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"darkColor": "#0bd5cf",
+					"informationTitle": "Component Information",
+					"radius": "79.5",
+					"lightColor": "#ffffff",
+					"windowChromeColor": "1677764",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"toolTip": "Click For Information",
+					"informationWindowWidth": "250",
+					"label": "i",
+					"informationWindowHeight": "150",
+					"information": "This is information box",
+					"titleFontColor": "#000000",
+					"color": "#000000",
+					"fontStyle": "normal",
+					"fontWeight": "normal",
+					"fontFamily": "BizvizFont",
+					"textDecoration": "none",
+					"fontSize": "14",
+					"textcolor": "#000000",
+					"titleFontSize": "12"
+				}
+			}
+		}
+	}
+}

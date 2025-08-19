@@ -1,0 +1,1010 @@
+{
+	"SentimentPlotChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "sentiment_plot_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "sentiment",
+				"showLocked": "false",
+				"objectName": "TextAnalyzer_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "643",
+				"x": "20",
+				"height": "536",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "SentimentPlot",
+					"showGradient": "true",
+					"bgGradients": "#ffffff",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+
+					"exportToExcel": "true",
+					"exportToCSV": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"exportType":"screenshot",
+
+					"showScreenShotButton": "true",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showMaximizeButton": "true",
+					"showTooltip": "false",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"showExcelDownload": "true",
+					"showSubTitle": "false",
+					"showTitle": "true",
+					"GradientColor": "#FFFFFF,#FFFFFF",
+					"showLegends": "false",
+					"legendDirection": "horizontal",
+					"legendfontSize": "14",
+					"legendtextDecoration": "none",
+					"legendfontStyle": "normal",
+					"legendfontColor": "#000000",
+					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+					"showcheckboxwithlegend": "false",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"axisColor": "#CCCCCC",
+					"autoaxisSetup": "true",
+					"minimumAxisValue": "-20",
+					"maximumAxisValue": "110",
+					"baseZero": "true",
+					"FixedLabel": "false",
+					"Formater": "Currency",
+					"Unit": "none",
+					"SignPosition": "prefix",
+					"Precision": "0",
+					"SecondaryFormater": "Number",
+					"SecondaryUnit": "none",
+					"Globalkey": "",
+					"enableColorFromDrill": "false",
+					"showRangeColorBar": "true",
+					"emoticonWidth": "12",
+					"emoticonAlpha": "1",
+					"ChartBase": "gradient",
+					"luminance": "0.4",
+					"transparency": "0.7",
+					"showAllDataPointsInTooltip": "false",
+ 					"updatedDesign": "true",
+					"xAxis": {
+						"Description": "",
+						"LabelFontWeight": "normal",
+						"LabelFontColor": "#333333",
+						"LabelFontStyle": "normal",
+						"TextDecoration": "none",
+						"LabelFontFamily": "BizvizFont",
+						"Labelrotation": "90",
+						"LabelTilted": "false",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "14",
+						"FontColor": "#333333",
+						"FontSize": "14",
+						"FontStyle": "normal",
+						"FontFamily": "BizvizFont",
+						"FontWeight": "normal"
+					},
+					"Title": {
+						"FontWeight": "600",
+						"Description": "Sentiment plot",
+						"FontSize": "17",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"TitleBarHeight": "48"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "Sentiment",
+						"showSubTitle": "false",
+						"FontSize": "15",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal"
+					}
+				}
+			}
+		},
+		"Fields": [{
+			"DisplayName": "Option",
+			"Type": "XField",
+			"visible": "true",
+			"PlotRadius": "PlotRadius",
+			"Name": "Option",
+			"Color": "ColorOpacity",
+			"ToolTip": "Tooltip",
+			"OtherField": "Count",
+			"axis": "none",
+			"Precision": "0",
+			"ChartType": "none"
+		}],
+		"Data": [{
+				"Count": "7.02",
+				"Option": "5.3",
+				"ColorOpacity": "1.9575750304905275",
+				"PlotRadius": "3.218875824868201",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "7.43",
+				"Option": "4.57",
+				"ColorOpacity": "1.802054383197133",
+				"PlotRadius": "5.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "3.450359281437126",
+				"Option": "4.327559322033899",
+				"ColorOpacity": "1.9200149734062282",
+				"PlotRadius": "4.13549421592915",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "7.677883384794379",
+				"Option": "5.299412582658673",
+				"ColorOpacity": "2.2975343507492876",
+				"PlotRadius": "6.730099782973574",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "6.39",
+				"Option": "6.62",
+				"ColorOpacity": "3.038852579510891",
+				"PlotRadius": "5.276666119016055",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.38",
+				"Option": "6.55",
+				"ColorOpacity": "2.787844149158988",
+				"PlotRadius": "5.31748811353631",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.429281314168378",
+				"Option": "5.501456953642385",
+				"ColorOpacity": "2.6356645557563594",
+				"PlotRadius": "7.016157159698354",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.752894168466522",
+				"Option": "6.254558823529413",
+				"ColorOpacity": "2.2619403582027293",
+				"PlotRadius": "7.0473721790462776",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.752894168466522",
+				"Option": "6.254558823529413",
+				"ColorOpacity": "2.2619403582027293",
+				"PlotRadius": "7.0473721790462776",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.752894168466522",
+				"Option": "6.254558823529413",
+				"ColorOpacity": "2.2619403582027293",
+				"PlotRadius": "7.0473721790462776",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "6.275879518072289",
+				"Option": "2.6976144578313255",
+				"ColorOpacity": "2.7791626815167385",
+				"PlotRadius": "5.30406509320417",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.33",
+				"Option": "5.19",
+				"ColorOpacity": "1.6048520181001122",
+				"PlotRadius": "4.688879454113936",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "2.752894168466522",
+				"Option": "3.254558823529413",
+				"ColorOpacity": "2.2619403582027293",
+				"PlotRadius": "7.0473721790462776",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.752894168466522",
+				"Option": "6.254558823529413",
+				"ColorOpacity": "2.2619403582027293",
+				"PlotRadius": "7.0473721790462776",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.752894168466522",
+				"Option": "6.254558823529413",
+				"ColorOpacity": "2.2619403582027293",
+				"PlotRadius": "7.0473721790462776",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.198964510588233",
+				"Option": "5.3344474191823075",
+				"ColorOpacity": "2.003175069465301",
+				"PlotRadius": "4.178053830347945",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.303869460861486",
+				"Option": "4.652595562259358",
+				"ColorOpacity": "2.7104779080855144",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.794702549575071",
+				"Option": "6.819546742209631",
+				"ColorOpacity": "2.1431376308567285",
+				"PlotRadius": "3.1972245773362196",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "6.578200000000001",
+				"Option": "7.5699999999999985",
+				"ColorOpacity": "2.2477971016085925",
+				"PlotRadius": "7.0473721790462776",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "3.653156565656565",
+				"Option": "5.721320754716981",
+				"ColorOpacity": "2.3483533120525073",
+				"PlotRadius": "4.931825632724326",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.349910514541387",
+				"Option": "5.6555525606469",
+				"ColorOpacity": "2.269457597784026",
+				"PlotRadius": "5.04305126783455",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.612004555808656",
+				"Option": "6.572842809364548",
+				"ColorOpacity": "2.3085783859665736",
+				"PlotRadius": "7.214608098422191",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.750023255813954",
+				"Option": "6.604222222222223",
+				"ColorOpacity": "2.31870954812224",
+				"PlotRadius": "5.2626798770413155",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "7.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.116684747750554",
+				"Option": "5.800462568193279",
+				"ColorOpacity": "2.3862684081681245",
+				"PlotRadius": "4.258096538021482",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.98",
+				"Option": "7.17",
+				"ColorOpacity": "2.0983624567743284",
+				"PlotRadius": "4.044522437723423",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.64",
+				"Option": "5.31",
+				"ColorOpacity": "2.43591358631623",
+				"PlotRadius": "8.377133712833954",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.116896551724138",
+				"Option": "4.847310344827586",
+				"ColorOpacity": "1.5738064805711507",
+				"PlotRadius": "5.605170185988092",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.38",
+				"Option": "6.55",
+				"ColorOpacity": "2.787844149158988",
+				"PlotRadius": "5.31748811353631",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "3.94",
+				"Option": "4.99",
+				"ColorOpacity": "1.27327334064607",
+				"PlotRadius": "2.9459101490553135",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.38",
+				"Option": "6.55",
+				"ColorOpacity": "2.787844149158988",
+				"PlotRadius": "5.31748811353631",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.91",
+				"Option": "6.58",
+				"ColorOpacity": "2.363022429009084",
+				"PlotRadius": "4.737669618283368",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.69",
+				"Option": "7.65",
+				"ColorOpacity": "1.9860639466039363",
+				"PlotRadius": "4.663561646129646",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.38",
+				"Option": "6.55",
+				"ColorOpacity": "2.787844149158988",
+				"PlotRadius": "5.31748811353631",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.661532091863494",
+				"Option": "7.112785260163962",
+				"ColorOpacity": "2.471942156235816",
+				"PlotRadius": "4.433987204485146",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.818963210702341",
+				"Option": "6.6243478260869555",
+				"ColorOpacity": "1.930198410103703",
+				"PlotRadius": "7.214608098422191",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "6.445517241379311",
+				"Option": "7.4847457627118645",
+				"ColorOpacity": "2.061958772596524",
+				"PlotRadius": "7.016157159698354",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "3.8",
+				"Option": "4.87",
+				"ColorOpacity": "1.5861352401355944",
+				"PlotRadius": "6.7430031878094825",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.838742138364779",
+				"Option": "7.504999999999999",
+				"ColorOpacity": "2.1948784283794143",
+				"PlotRadius": "6.932245187448011",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.38",
+				"Option": "6.55",
+				"ColorOpacity": "2.787844149158988",
+				"PlotRadius": "5.31748811353631",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "3.98",
+				"Option": "6.3",
+				"ColorOpacity": "1.9440164608356594",
+				"PlotRadius": "1",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.69",
+				"Option": "7.65",
+				"ColorOpacity": "1.5185519418182565",
+				"PlotRadius": "4.663561646129646",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.49",
+				"Option": "3.12",
+				"ColorOpacity": "1.982126383457927",
+				"PlotRadius": "2.6094379124341005",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.6616542664386325",
+				"Option": "5.184583767930032",
+				"ColorOpacity": "2.470326661776235",
+				"PlotRadius": "6.683579767338681",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.95",
+				"Option": "7.25",
+				"ColorOpacity": "2.1505813167606584",
+				"PlotRadius": "3.3978952727983707",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "6.02",
+				"Option": "7.3",
+				"ColorOpacity": "1.9575750304905275",
+				"PlotRadius": "4.218875824868201",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.578200000000001",
+				"Option": "7.5699999999999985",
+				"ColorOpacity": "2.2477971016085925",
+				"PlotRadius": "7.0473721790462776",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.668711440715656",
+				"Option": "7.019788443603879",
+				"ColorOpacity": "2.037457304321579",
+				"PlotRadius": "5.859812404361672",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.498233890214797",
+				"Option": "2.960447761194029",
+				"ColorOpacity": "2.1743425587809186",
+				"PlotRadius": "6.318119993844216",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "6.550149253731344",
+				"Option": "7.41044776119403",
+				"ColorOpacity": "1.7724216147648497",
+				"PlotRadius": "3.9444389791664403",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.2260037174721194",
+				"Option": "5.891937952430196",
+				"ColorOpacity": "2.2885768981621166",
+				"PlotRadius": "5.7535901911063645",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.787165354330709",
+				"Option": "5.802369077306732",
+				"ColorOpacity": "2.6083729890079166",
+				"PlotRadius": "5.248495242049359",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "6.85",
+				"Option": "3.03",
+				"ColorOpacity": "2.8312894588861806",
+				"PlotRadius": "5.897839799950911",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "3.91",
+				"Option": "7.52",
+				"ColorOpacity": "2.738480418042093",
+				"PlotRadius": "4.58351893845611",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.466254699954919",
+				"Option": "2.813962146818323",
+				"ColorOpacity": "2.1299107131472943",
+				"PlotRadius": "6.153291594497779",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.48",
+				"Option": "7.1",
+				"ColorOpacity": "2.741596250362187",
+				"PlotRadius": "5.8283137373023015",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.13183908045977",
+				"Option": "7.262657807308971",
+				"ColorOpacity": "2.0213818569663706",
+				"PlotRadius": "6.537334267018537",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.516148181879839",
+				"Option": "3.907576711784596",
+				"ColorOpacity": "2.3377116040267003",
+				"PlotRadius": "5.962844630259907",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.94",
+				"Option": "7.94",
+				"ColorOpacity": "2.533081127796739",
+				"PlotRadius": "4.58351893845611",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.492477876106195",
+				"Option": "6.9888919667590015",
+				"ColorOpacity": "2.4307834802800685",
+				"PlotRadius": "5.174387269895637",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.425698509816019",
+				"Option": "6.470806688151215",
+				"ColorOpacity": "2.2204532816760163",
+				"PlotRadius": "5.584967478670572",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.38",
+				"Option": "6.55",
+				"ColorOpacity": "2.787844149158988",
+				"PlotRadius": "5.31748811353631",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.064163838794248",
+				"Option": "4.59446341004759",
+				"ColorOpacity": "1.9142793735317147",
+				"PlotRadius": "7.2878585601617845",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.558178694158076",
+				"Option": "6.254501718213058",
+				"ColorOpacity": "2.122166452115565",
+				"PlotRadius": "5.343805421853684",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.587169022650146",
+				"Option": "5.131965714739713",
+				"ColorOpacity": "2.018517605554943",
+				"PlotRadius": "4.465735902799727",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.338261802575108",
+				"Option": "7.069693251533741",
+				"ColorOpacity": "2.2467367926863933",
+				"PlotRadius": "7.056784013228625",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.262069832707658",
+				"Option": "5.516205302154592",
+				"ColorOpacity": "2.6232786077068146",
+				"PlotRadius": "6.929589143389895",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.219926528380943",
+				"Option": "5.529269860995402",
+				"ColorOpacity": "2.0092886777826338",
+				"PlotRadius": "5.997212273764115",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.418130066803798",
+				"Option": "2.9509798076785287",
+				"ColorOpacity": "2.1978614821735727",
+				"PlotRadius": "6.60947179518496",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.964138656060201",
+				"Option": "6.417781564941284",
+				"ColorOpacity": "2.1623620659854432",
+				"PlotRadius": "6.598421958998375",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.38",
+				"Option": "6.55",
+				"ColorOpacity": "2.787844149158988",
+				"PlotRadius": "5.31748811353631",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.47",
+				"Option": "7.78",
+				"ColorOpacity": "1.7766611944881336",
+				"PlotRadius": "5.736198448394496",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "6.02",
+				"Option": "7.3",
+				"ColorOpacity": "1.9575750304905275",
+				"PlotRadius": "4.218875824868201",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.82",
+				"Option": "6.08",
+				"ColorOpacity": "1.6351758315239373",
+				"PlotRadius": "4.828641396489095",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.04",
+				"Option": "6.39",
+				"ColorOpacity": "1.7365554986812255",
+				"PlotRadius": "6.916202062607435",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "6.029191374663072",
+				"Option": "7.984718614718615",
+				"ColorOpacity": "2.010515281376844",
+				"PlotRadius": "7.021023349349527",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.26",
+				"Option": "2.76",
+				"ColorOpacity": "2.186343980255624",
+				"PlotRadius": "5.060443010546419",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.94",
+				"Option": "7.94",
+				"ColorOpacity": "2.533081127796739",
+				"PlotRadius": "4.58351893845611",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.7169890109890105",
+				"Option": "6.362744186046512",
+				"ColorOpacity": "2.3997036325465557",
+				"PlotRadius": "4.713572066704308",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.368235294117647",
+				"Option": "7.551156716417911",
+				"ColorOpacity": "2.4773089623893267",
+				"PlotRadius": "7.042632833682381",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.422074977661996",
+				"Option": "4.294480095447307",
+				"ColorOpacity": "2.721662108279611",
+				"PlotRadius": "4.258096538021482",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "7.0",
+				"Option": "4.04",
+				"ColorOpacity": "3.0004166377355",
+				"PlotRadius": "2.386294361119891",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.069243387123606",
+				"Option": "6.76883923389437",
+				"ColorOpacity": "2.2401837373877997",
+				"PlotRadius": "6.68697535633982",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.57",
+				"ColorOpacity": "1.802054383197133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.26",
+				"Option": "7.24",
+				"ColorOpacity": "2.186343980255624",
+				"PlotRadius": "5.060443010546419",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.260840662095239",
+				"Option": "5.5522015498441375",
+				"ColorOpacity": "2.4619993484417217",
+				"PlotRadius": "5.787491742782046",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.977416578724416",
+				"Option": "7.50347845501228",
+				"ColorOpacity": "2.0588534002390557",
+				"PlotRadius": "6.680172609017068",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "4.38",
+				"Option": "6.55",
+				"ColorOpacity": "2.787844149158988",
+				"PlotRadius": "5.31748811353631",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.166881893954351",
+				"Option": "6.768314019095094",
+				"ColorOpacity": "2.1499035098690102",
+				"PlotRadius": "4.258096538021482",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.57",
+				"ColorOpacity": "1.802054383197133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.43",
+				"Option": "7.47",
+				"ColorOpacity": "2.4805039810490133",
+				"PlotRadius": "7.693323668269949",
+				"Tooltip": "SentimentPlot"
+			},
+			{
+				"Count": "5.69",
+				"Option": "7.65",
+				"ColorOpacity": "1.9860639466039363",
+				"PlotRadius": "4.663561646129646",
+				"Tooltip": "SentimentPlot"
+			}
+		]
+	}
+}

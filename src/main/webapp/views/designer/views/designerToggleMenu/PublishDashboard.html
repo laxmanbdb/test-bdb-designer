@@ -1,0 +1,48 @@
+<div class="col-sm-9">
+	<div class="col-sm-7 flat-card">
+	<h4 class="pad10">Publish Dashboard</h4>
+	<span class="pad10">
+		Workspace : 
+		<select ng-model="selectedWorkspace" 
+			ng-options="workspace.dashboardName for workspace in modal.wsObj.wsList track by workspace.dashboardId|filter:!workspace.isDashboard">
+		</select>
+		<span>
+			<i class="cursor-hand glyphicon glyphicon-refresh" ng-click="reloadWorkSpaces();"></i>
+		</span>
+	</span>
+	<div class="object-search-field pad10">
+		<input type="text" placeholder="Search"	ng-model="workSpaceAndDashboardSearch" />
+	</div>
+	<div>
+		<span>Location :</span>
+		<a href="#" style=" border-radius: 1px;  border-color: darkgrey;" class=" dropdown-toggle" data-toggle="dropdown" ng-click="updateFolderPathDropDown()">{{selectedFolderToPublish.title}} <span class="caret"></span></a>
+		<ul class="folder-dropdown-menu" id="folderPath"></ul>
+	</div>
+	<div style="height:300px;overflow:auto" class="bvz-table">
+		<!-- HEADER ROW -->
+		<div class="bvz-row">
+			<div class="ds-name-in-tree bvz-h-col wd50per">
+				<span>Dashboard Name</span>
+			</div>
+			<div class="bvz-h-col">
+				<span>Publish</span>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+		<!-- DATA ROW -->
+		<div class="bvz-row" ng-show="selectedWorkspace.dashboardId != undefined"
+			ng-repeat="n in modal.wsObj.dbList | filter:workSpaceAndDashboardSearch track by $index" ng-if="n.isDashboard && n.parentId==selectedWorkspace.dashboardId" >
+			<div title="{{n.dashboardName}}" class="ds-name-in-tree bvz-d-col wd50per">
+				<span>{{n.dashboardName}}</span>
+			</div>
+			<div class="bvz-d-col">
+			<div class="div-btn" style="padding-left: 0px;" ng-click="publishToPortal(n);">
+					<i class="cursor-hand glyphicon glyphicon-send" ></i>
+				</span>
+				</div>
+			</div>
+			<div style="clear: both"></div>
+		</div>
+	</div>
+</div>
+</div>

@@ -1,0 +1,53 @@
+<div class="row ht100per" style="overflow:auto;">
+	<!-- Template Header Panel -->
+	<div class="ht100per col-sm-12 col-md-12 col-lg-12 no-pad" style="height:45px;">
+		<div class="row header-bg templatebar">
+			<div class="col-sm-6 col-md-6 col-lg-6 padding-lr0">
+				<div class="mw-wsdb-header templhomeheader">
+					<span class="pull-left"> Dashboard Templates</span>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-6 padding-lr0">
+				<div  class="pull-right templateContainerDiv templinputmargin">
+			        <i class="material-icons cursor-hand" mat-tooltip="Search in Dashboards">search</i>
+			        <input ng-model="filterTemplates" placeholder="Search Folder" class="templinputmargin propValue">
+			        
+		        </div>
+			</div>
+		</div>
+	</div>
+	<!-- Template Folder Panel -->
+	<div class="templbodystyle">
+	<!-- 
+		<div class="cardPixel cardmeasure" ng-repeat="workspace in modal.templObj.templDbList | filter:filterTemplates" ng-click="listContainingTemplates(workspace.dashboardId)">
+			<md-card class="templcard templcardbg" ng-class="{'templovercss':hovertempl}" ng-mouseenter="hovertempl=true" ng-mouseleave="hovertempl=false">
+				<md-card-content class="templhomecardcontent">
+					<img class="templhomeimage" src="views/helpIcons/templateFolder.png"></img>
+					<h6 class="templhometext">{{ workspace.dashboardName }}</h6>
+					<div class="templlistheader">
+						<div style="width:80%"><b>{{ templ.dashboardName }}</b></div>
+						<div class="templisticons"><i class="material-icons cursor-hand" ng-click="OpenTemplateDasboard( templ, $event )" mat-tooltip = "Open as Dashboard">open_in_browser</i></div>
+						<div class="templisticons"><i class="material-icons cursor-hand" ng-click="previewFromManagePage( templ, $event )" mat-tooltip = "Preview Template">desktop_mac</i></div>
+					</div>
+				</md-card-content>
+			</md-card>
+		</div>-->
+		
+		<div class="example templDbmeasure" ng-repeat="templ in modal.templObj.templDbList | filter:filterTemplates">
+			<md-card class="templcard" ng-class="{'templovercss':hovertempl}" ng-mouseenter="hovertempl=true" ng-mouseleave="hovertempl=false">
+				<md-card-content class="content{{templ.templateJson.dashboardTemplateJson.templId}}" style="height:inherit;" ng-dblclick="OpenTemplateDasboard( templ, $event )" ng-mouseleave="onleaveTemplates(templ)" ng-mouseover="onhoverTemplates(templ)">
+					<div style="margin-top: 10px;margin-bottom: 10px; height:50%"><md-icon class="nt-template-folder-icon cursor-hand" style="width:100%;height:100%"></md-icon><!--<img class="templhomeimage"  src="views/helpIcons/Template_dashboard.svg"></img>--></div>
+					
+					<div class="templlistheader" mat-tooltip = "{{ templ.dashboardName }}">
+						<div class="templateTitle" >{{ templ.dashboardName }}</div>
+					</div>
+					<div class="templlistheadericon">
+						<div class="templisticons"><md-icon class="nt-template-open-icon cursor-hand" ng-click="OpenTemplateDasboard( templ, $event )" mat-tooltip = "Open as Dashboard"></md-icon></div>
+						<div class="templisticons"><md-icon class="nt-template-preview-icon cursor-hand" ng-click="previewFromManagePage( templ, $event )" mat-tooltip = "Preview Template"></md-icon></div>
+					</div>
+					
+				</md-card-content>
+			</md-card>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,152 @@
+<div id="dash-prop-tab" class="row ht100per dash-prop-tab" ng-show="modal.dashboardTabs.length > 0">
+	<ul>
+		<li id="toggleHeader" class="mainTabIcon" ng-click="toggleHeader()" >
+			<div>
+	  		<a href="#tab_e" data-toggle="pill" class="bd-icon-container">
+	  		<md-icon class="nt-expand-icon cursor-hand" mat-tooltip="Full Screen" placement = "bottom-end"></md-icon>
+	  		</a>
+	  		</div>
+	  	</li>
+		<li id="toggleDatasource" class="mainTabIcon" ng-hide="modal.layoutType != 'AbsoluteLayout'" ng-click="toggleDataSource()" >
+			<div>
+	  		<a href="#tab_a" data-toggle="pill" class="bd-icon-container">
+				<!-- <i class="icon bd-data-base-1" mat-tooltip="Data Connectors" placement = "bottom-end"></i>-->
+				<md-icon class="nt-data-connectors-icon cursor-hand" mat-tooltip="Data Connectors" placement = "bottom-end"></md-icon>
+			</a>
+			</div>
+	  	</li>
+	  	<li id="toggleCompContainer" class="mainTabIcon" ng-hide="modal.layoutType != 'AbsoluteLayout'" ng-click="toggleComponents();" >
+			<div>
+	  		<a href="#tab_b" data-toggle="pill" class="bd-icon-container">
+	  		<md-icon class="nt-charts-icon cursor-hand" mat-tooltip="Component Library" placement = "bottom-end"></md-icon>
+				<!-- <i class="material-icons cursor-hand" mat-tooltip="Component Library" placement = "bottom-end">pie_chart</i> -->
+			</a>
+			</div>
+	  	</li>
+	  	<li id="toggleObjectBrowser" class="mainTabIcon" ng-click="objectBrowserWindow();" >
+			<div>
+	  		<a href="#tab_c" data-toggle="pill" class="bd-icon-container">
+	  		<md-icon class="nt-components-icon cursor-hand" mat-tooltip="Manage Dashboard Components" placement = "bottom-end"></md-icon>
+	  			<!-- <i class="material-icons cursor-hand" mat-tooltip="Manage Dashboard Components" placement = "bottom-end">format_line_spacing</i> -->
+	  		</a>
+	  		</div>
+	  	</li>
+	  	<li id="toggleVarWin" class="mainTabIcon" ng-hide="modal.layoutType != 'AbsoluteLayout'" ng-click="toggleVariableWindow();">
+			<div>
+	  		<a href="#tab_d" data-toggle="pill" class="bd-icon-container">
+	  		<md-icon class="nt-script-icon cursor-hand" mat-tooltip="Component Variables and Script" placement = "bottom-end"></md-icon>
+	  			<!--<i class="material-icons cursor-hand" mat-tooltip="Component Variables and Script" placement = "bottom-end">developer_mode</i>-->
+	  		</a>
+	  		</div>
+	  	</li>
+	  	<li id="deleteMobileView" class="mainTabIcon" ng-hide="modal.layoutType != 'MobileLayout'" ng-click="deleteLayoutModalPopup('MobileLayout');" >
+			<div>
+	  		<a href="#tab_e" data-toggle="pill" class="bd-icon-container">
+	  		<md-icon class="nt-delete-icon cursor-hand" mat-tooltip="Delete Mobile View" placement = "bottom-end"></md-icon>
+	  			<!--<i class="material-icons cursor-hand"  mat-tooltip="Delete Mobile View" placement = "bottom-end">delete</i> -->
+	  		</a>
+	  		</div>
+	  	</li>
+	  	<li id="deleteTabletView" class="mainTabIcon" ng-hide="modal.layoutType != 'TabletLayout'" ng-click="deleteLayoutModalPopup('TabletLayout');" >
+			<div>
+	  		<a href="#tab_f" data-toggle="pill" class="bd-icon-container">
+	  		<md-icon class="nt-delete-icon cursor-hand" mat-tooltip="Delete Tablet View" placement = "bottom-end"></md-icon>
+	  			<!-- <i class="material-icons cursor-hand" mat-tooltip="Delete Tablet View" placement = "bottom-end">delete</i> -->
+	  		</a>
+	  		</div>
+	  	</li>
+	  	<li id="designerViewTour" class="mainTabIcon" ng-click="startTour('designerView');" >
+			<div>
+	  		<a href="#tab_f" data-toggle="pill" class="bd-icon-container">
+	  		<md-icon class="nt-bulb-icon cursor-hand" mat-tooltip="Guided Tour" placement = "bottom-end"></md-icon>
+	  			<!-- <i class="material-icons cursor-hand" mat-tooltip="Guided Tour" placement = "bottom-end">lightbulb_outline</i> -->
+	  		</a>
+	  		</div>
+	  	</li>
+<!--
+		<li id="toggleDashboardPropertyPalette" class="mainTabIcon" ng-click="toggleDashboardPropertyPalette();" >
+			<div>
+	  		<a href="#tab_g" data-toggle="pill" class="bd-icon-container">
+	  			<i class="material-icons cursor-hand">more_horiz</i>
+	  		</a>
+	  		<md-tooltip md-direction="left">Dashboard Properties</md-tooltip>
+	  		</div>
+	  	</li>
+-->
+	</ul>	
+</div>
+
+<!--------------------------------delete mobile layout modal ---------------------------------------->
+ <div id="deleteMobileViewConfirmation" class="modal fade" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.deleteMobileViewConfirmation == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Delete Mobile View</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteMobileViewConfirmation', false); cancel()">
+                            <md-icon aria-label="Close dialog" mat-tooltip="Close"><i class="material-icons cursor-hand">close</i>
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height"></div>
+                    <div class="row-height">
+                        <span class="col-sm-12 col-md-12 col-lg-12">
+                    		Do you want to delete Mobile View of this dashboard
+                    	</span>
+                    </div>
+                    <div class="row-height"></div>
+                </div>
+
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteMobileViewConfirmation', false); deleteLayout($event, 'MobileLayout')">
+                        Yes
+                    </md-button>
+                    <md-button type="button" class="md-raised md-warn" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteMobileViewConfirmation', false); deleteLayout($event, 'NO')">
+                        No
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>
+<!-------------------------------- delete tablet layout modal ---------------------------------------->
+ <div id="deleteTabletViewConfirmation" class="modal fade" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.deleteTabletViewConfirmation == true">
+        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+            <div class="modal-content container-border">
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <h2>Delete Tablet View</h2>
+                        <span flex></span>
+                        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteTabletViewConfirmation', false); cancel()">
+                            <md-icon aria-label="Close dialog" mat-tooltip="Close"><i class="material-icons cursor-hand">close</i>
+                            </md-icon>
+                        </md-button>
+                    </div>
+                </md-toolbar>
+                <div class="modal-Body">
+                    <div class="row-height"></div>
+                    <div class="row-height">
+                        <span class="col-sm-12 col-md-12 col-lg-12">
+                    		Do you want to delete Tablet View of this dashboard
+                    	</span>
+                    </div>
+                    <div class="row-height"></div>
+                </div>
+
+                <md-dialog-actions layout="row">
+                    <span flex="" class="flex"></span>
+                    <md-button type="button" class="md-raised md-primary" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteTabletViewConfirmation', false); deleteLayout($event, 'TabletLayout')">
+                        Yes
+                    </md-button>
+                    <md-button type="button" class="md-raised md-warn" data-dismiss="modal" ng-click="setModelWatcherStatus('deleteTabletViewConfirmation', false); deleteLayout($event, 'NO')">
+                        No
+                    </md-button>
+                </md-dialog-actions>
+            </div>
+        </div>
+    </div>

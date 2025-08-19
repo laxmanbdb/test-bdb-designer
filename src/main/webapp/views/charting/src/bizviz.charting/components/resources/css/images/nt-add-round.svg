@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_2941" data-name="Group 2941" transform="translate(-24.724 -23.708)">
+    <rect id="Rectangle_6931" data-name="Rectangle 6931" width="24" height="24" transform="translate(24.724 23.708)" fill="#efefef" opacity="0"/>
+    <path id="Line_886" data-name="Line 886" d="M.75,14.318H-.75V0H.75Z" transform="translate(36.858 28.604)" fill="#525252"/>
+    <path id="Line_887" data-name="Line 887" d="M14.607.75H0V-.75H14.607Z" transform="translate(29.555 35.763)" fill="#525252"/>
+    <path id="Ellipse_1333" data-name="Ellipse 1333" d="M10.055,1.5a8.555,8.555,0,1,0,8.555,8.555A8.564,8.564,0,0,0,10.055,1.5m0-1.5A10.055,10.055,0,1,1,0,10.055,10.055,10.055,0,0,1,10.055,0Z" transform="translate(26.416 25.708)" fill="#525252"/>
+  </g>
+</svg>

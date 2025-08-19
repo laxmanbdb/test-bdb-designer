@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+  <g id="Group_1334" data-name="Group 1334" transform="translate(-394 -373)">
+    <g id="Group_1333" data-name="Group 1333">
+      <g id="Group_1244" data-name="Group 1244" transform="translate(406.541 385.68)">
+        <rect id="Rectangle_4859" data-name="Rectangle 4859" width="12.965" height="12.965" fill="none"/>
+        <g id="Group_1243" data-name="Group 1243">
+          <path id="Path_2518" data-name="Path 2518" d="M41.152,41.5v.552H40.6" transform="translate(-28.131 -29.031)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_337" data-name="Line 337" x1="3.807" transform="translate(7.558 13.02)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_338" data-name="Line 338" x1="5.959" transform="translate(1.103 13.02)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2519" data-name="Path 2519" d="M18.552,42.052H18V41.5" transform="translate(-18 -29.031)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_339" data-name="Line 339" y1="3.752" transform="translate(0 7.614)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_340" data-name="Line 340" y1="5.959" transform="translate(0 1.103)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2520" data-name="Path 2520" d="M18,19.452V18.9h.552" transform="translate(-18 -18.9)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_341" data-name="Line 341" x2="3.752" transform="translate(1.655)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_342" data-name="Line 342" x2="5.959" transform="translate(5.959)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2521" data-name="Path 2521" d="M40.6,18.9h.552v.552" transform="translate(-28.131 -18.9)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_343" data-name="Line 343" y2="3.807" transform="translate(13.02 1.655)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_344" data-name="Line 344" y2="5.959" transform="translate(13.02 5.959)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+        </g>
+      </g>
+      <g id="Group_1246" data-name="Group 1246" transform="translate(422.596 385.459)">
+        <rect id="Rectangle_4860" data-name="Rectangle 4860" width="12.965" height="12.965" transform="translate(0)" fill="none"/>
+        <g id="Group_1245" data-name="Group 1245" transform="translate(0)">
+          <path id="Path_2522" data-name="Path 2522" d="M70.152,41v.552H69.6" transform="translate(-57.186 -28.586)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_345" data-name="Line 345" x1="3.807" transform="translate(7.558 12.965)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_346" data-name="Line 346" x1="5.903" transform="translate(1.103 12.965)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2523" data-name="Path 2523" d="M47.652,41.552H47.1V41" transform="translate(-47.1 -28.586)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_347" data-name="Line 347" y1="3.807" transform="translate(0 7.558)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_348" data-name="Line 348" y1="5.903" transform="translate(0 1.103)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2524" data-name="Path 2524" d="M47.1,19.052V18.5h.552" transform="translate(-47.1 -18.5)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_349" data-name="Line 349" x2="3.807" transform="translate(1.6)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_350" data-name="Line 350" x2="5.903" transform="translate(5.959)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2525" data-name="Path 2525" d="M69.6,18.5h.552v.552" transform="translate(-57.186 -18.5)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_351" data-name="Line 351" y2="3.807" transform="translate(12.965 1.6)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_352" data-name="Line 352" y2="5.903" transform="translate(12.965 5.959)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+        </g>
+      </g>
+      <g id="Group_1248" data-name="Group 1248" transform="translate(423.148 401.735)">
+        <rect id="Rectangle_4861" data-name="Rectangle 4861" width="12.965" height="12.965" transform="translate(0 0)" fill="none"/>
+        <g id="Group_1247" data-name="Group 1247" transform="translate(0 0)">
+          <path id="Path_2526" data-name="Path 2526" d="M71.152,70.5v.552H70.6" transform="translate(-58.186 -58.086)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_353" data-name="Line 353" x1="3.807" transform="translate(7.558 12.965)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_354" data-name="Line 354" x1="5.903" transform="translate(1.103 12.965)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2527" data-name="Path 2527" d="M48.652,71.052H48.1V70.5" transform="translate(-48.1 -58.086)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_355" data-name="Line 355" y1="3.807" transform="translate(0 7.558)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_356" data-name="Line 356" y1="5.903" transform="translate(0 1.103)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2528" data-name="Path 2528" d="M48.1,48.552V48h.552" transform="translate(-48.1 -48)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_357" data-name="Line 357" x2="3.752" transform="translate(1.655)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_358" data-name="Line 358" x2="5.959" transform="translate(5.959)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2529" data-name="Path 2529" d="M70.6,48h.552v.552" transform="translate(-58.186 -48)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_359" data-name="Line 359" y2="3.807" transform="translate(12.965 1.6)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_360" data-name="Line 360" y2="5.903" transform="translate(12.965 5.959)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+        </g>
+      </g>
+      <g id="Group_1250" data-name="Group 1250" transform="translate(406.1 401.735)">
+        <rect id="Rectangle_4862" data-name="Rectangle 4862" width="12.965" height="12.965" transform="translate(0 0)" fill="none"/>
+        <g id="Group_1249" data-name="Group 1249" transform="translate(0 0)">
+          <path id="Path_2530" data-name="Path 2530" d="M40.352,70.5v.552H39.8" transform="translate(-27.331 -58.086)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_361" data-name="Line 361" x1="3.752" transform="translate(7.614 12.965)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_362" data-name="Line 362" x1="5.959" transform="translate(1.103 12.965)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2531" data-name="Path 2531" d="M17.752,71.052H17.2V70.5" transform="translate(-17.2 -58.086)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_363" data-name="Line 363" y1="3.807" transform="translate(0 7.558)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_364" data-name="Line 364" y1="5.903" transform="translate(0 1.103)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2532" data-name="Path 2532" d="M17.2,48.552V48h.552" transform="translate(-17.2 -48)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_365" data-name="Line 365" x2="3.752" transform="translate(1.655)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_366" data-name="Line 366" x2="5.959" transform="translate(5.959)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+          <path id="Path_2533" data-name="Path 2533" d="M39.8,48h.552v.552" transform="translate(-27.331 -48)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+          <line id="Line_367" data-name="Line 367" y2="3.807" transform="translate(13.02 1.6)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959"/>
+          <line id="Line_368" data-name="Line 368" y2="5.903" transform="translate(13.02 5.959)" fill="none" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75" stroke-dasharray="1.959 1.959 1.959 1.959 1.959 1.959"/>
+        </g>
+      </g>
+      <rect id="Rectangle_4863" data-name="Rectangle 4863" width="18.372" height="14.676" transform="translate(412.61 394.838)" fill="#0d78bf" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+      <path id="Path_2534" data-name="Path 2534" d="M35.9,49.607,39.376,41l3.531,5.959,2.262-2.7,3.09,5.352Z" transform="translate(380.517 356.873)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.75"/>
+    </g>
+    <g id="Rectangle_5260" data-name="Rectangle 5260" transform="translate(394 373)" fill="none" stroke="#ececec" stroke-width="1">
+      <rect width="54" height="54" rx="6" stroke="none"/>
+      <rect x="0.5" y="0.5" width="53" height="53" rx="5.5" fill="none"/>
+    </g>
+  </g>
+</svg>

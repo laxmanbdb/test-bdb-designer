@@ -1,0 +1,463 @@
+{
+	"Info": [{
+		"class": "Label"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "25",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "100",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Tool Tip : ",
+		"type": "text",
+		"value": "",
+		"attributeName": "toolTip",
+		"propertyName": "Label"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "Label"
+	}, {
+		"label": "Dynamic : ",
+		"type": "checkbox",
+		"value": "",
+		"attributeName": "isDynamic",
+		"propertyName": "Label"
+	}, {
+		"label": "Text : ",
+		"type": "text",
+		"value": "",
+		"attributeName": "text",
+		"propertyName": "Label"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Label"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Label"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Label"
+	}],
+	"Formatter": [{
+		"label": "Unit : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "auto",
+			"value": "Auto"
+		}, {
+			"key": "Percent",
+			"value": "%"
+		}, {
+			"key": "Thousand",
+			"value": "K"
+		}, {
+			"key": "Million",
+			"value": "M"
+		}, {
+			"key": "Billion",
+			"value": "B"
+		}, {
+			"key": "Trillion",
+			"value": "T"
+		}, {
+			"key": "Quadrillion",
+			"value": "Q"
+		}, {
+			"key": "Lac",
+			"value": "Lacs"
+		}, {
+			"key": "Crore",
+			"value": "Cr"
+		}],
+		"attributeName": "SecondaryUnit",
+		"propertyName": "Label"
+	}, {
+			"label": "Precision :",
+			"type": "select",
+			"value": "default",
+			"options": [{
+				"key": "default",
+				"value": "Default"
+			}, {
+				"key": "0",
+				"value": "None"
+			}, {
+				"key": "1",
+				"value": ".0"
+			}, {
+				"key": "2",
+				"value": ".00"
+			}, {
+				"key": "3",
+				"value": ".000"
+			}, {
+				"key": "4",
+				"value": ".0000"
+			}, {
+				"key": "6",
+				"value": ".000000"
+			}, {
+				"key": "8",
+				"value": ".00000000"
+			}],
+			"attributeName": "Precision",
+			"propertyName": "Label"
+		}, {
+		"label": "Currency : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "Cent",
+			"value": "CENT"
+		}, {
+			"key": "Euro",
+			"value": "EURO"
+		}, {
+			"key": "Rupees",
+			"value": "INR"
+		}, {
+			"key": "Pound",
+			"value": "POUND"
+		}, {
+			"key": "USD",
+			"value": "USD"
+		}, {
+			"key": "Yen",
+			"value": "YEN"
+		}],
+		"attributeName": "Unit",
+		"propertyName": "Label"
+	}, {
+		"label": "Position : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "prefix",
+			"value": "Prefix"
+		}, {
+			"key": "suffix",
+			"value": "Suffix"
+		}],
+		"attributeName": "SignPosition",
+		"propertyName": "Label"
+	}, {
+		"label": "Number Formatter : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "indiannumber",
+			"value": "Indian"
+		}, {
+			"key": "number",
+			"value": "International"
+		}],
+		"attributeName": "NumberFormatter",
+		"propertyName": "Label"
+	}],
+	"Style": [{
+		"label": "Background Color : ",
+		"type": "color",
+		"value": "",
+		"attributeName": "backgroundColor",
+		"propertyName": "Label"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "10",
+		"attributeName": "backgroundAlpha",
+		"propertyName": "Label"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "10",
+		"attributeName": "borderRadius",
+		"propertyName": "Label"
+	},  {
+		"label": "Label Padding : ",
+		"type": "number",
+		"min": "0",
+		"max": "100",
+		"step": "1",
+		"value": "5",
+		"attributeName": "labelPadding",
+		"propertyName": "Label"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "color",
+		"propertyName": "Label"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "100",
+		"step": "1",
+		"value": "12",
+		"attributeName": "fontSize",
+		"propertyName": "Label"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "fontStyle",
+		"propertyName": "Label"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "fontWeight",
+		"propertyName": "Label"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "fontFamily",
+		"propertyName": "Label"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "textDecoration",
+		"propertyName": "Label"
+	}, {
+		"label": "Text Align : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "textAlign",
+		"propertyName": "Label"
+	}, {
+		"label": "Vertical Align : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "middle",
+			"value": "Middle"
+		}, {
+			"key": "top",
+			"value": "Top"
+		}, {
+			"key": "bottom",
+			"value": "Bottom"
+		}],
+		"attributeName": "verticalAlign",
+		"propertyName": "Label"
+	}, {
+		"label": "Text Rotation : ",
+		"type": "select",
+		"value": "horizontal",
+		"options": [{
+			"key": "horizontal",
+			"value": "Horizontal"
+		}, {
+			"key": "vertical",
+			"value": "Vertical"
+		}],
+		"attributeName": "labelTextRotation",
+		"propertyName": "Label"
+	}, {
+		"label": "Enable Hover : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "hoverEnabled",
+		"propertyName": "Label"
+	}, {
+		"label": "Hover Color : ",
+		"type": "color",
+		"value": "#dddddd",
+		"attributeName": "hoverColor",
+		"propertyName": "Label"
+	}, {
+		"label": "Border Thickness : ",
+		"type": "number",
+		"min": "0",
+		"max": "10",
+		"step": "1",
+		"value": "10",
+		"attributeName": "borderWidth",
+		"propertyName": "Label"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000",
+		"attributeName": "borderColor",
+		"propertyName": "Label"
+	}, {
+		"label": "Cursor Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "default",
+			"value": "Default"
+		}, {
+			"key": "pointer",
+			"value": "Pointer"
+		}, {
+			"key": "help",
+			"value": "Help"
+		}, {
+			"key": "not-allowed",
+			"value": "Blocked"
+		}, {
+			"key": "progress",
+			"value": "Progress"
+		}],
+		"attributeName": "cursorType",
+		"propertyName": "Label"
+	}]
+}

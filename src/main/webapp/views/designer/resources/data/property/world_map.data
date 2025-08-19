@@ -1,0 +1,723 @@
+{
+	"Info": [{
+		"class": "WorldMapChart"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "300",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Max Button : ",
+		"type": "checkbox",
+		"value": "",
+		"attributeName": "showMaximizeButton",
+		"propertyName": "Chart"
+	},{
+		"label": "Map Type: ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "svg",
+			"value": "Svg"
+		}, {
+			"key": "leaflet",
+			"value": "Leaflet"
+		}],
+		"attributeName": "svgType",
+		"propertyName": "Chart"
+	}, {
+		"label": "Select Map : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "world",
+			"value": "World"
+		}, {
+			"key": "usa",
+			"value": "USA"
+		}, {
+			"key": "india",
+			"value": "India"
+		}, {
+			"key": "canada",
+			"value": "Canada"
+		}, {
+			"key": "europe",
+			"value": "Europe"
+		}, {
+			"key": "asia",
+			"value": "Asia"
+		}, {
+			"key": "middleEast",
+			"value": "Middle East"
+		}, {
+			"key": "australia",
+			"value": "Australia"
+		}, {
+			"key": "asiaPacific",
+			"value": "Asia Pacific"
+		}, {
+			"key": "southAfrica",
+			"value": "South Africa"
+		}],
+		"attributeName": "mapType",
+		"propertyName": "Chart"
+	},{
+		"label": "Geometry Type: ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "marker",
+			"value": "Marker"
+		}, {
+			"key": "line",
+			"value": "Line"
+		}, {
+			"key": "polygon",
+			"value": "Polygon"
+		}, {
+			"key": "clustered",
+			"value": "Clustered"
+		}, {
+			"key": "trail",
+			"value": "Trail"
+		}, {
+			"key": "trip",
+			"value": "Trip"
+		}],
+		"attributeName": "geometryType",
+		"propertyName": "Chart"
+	},{
+		"label": "Line Type: ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "straight",
+			"value": "Straight"
+		}, {
+			"key": "dash",
+			"value": "Dash"
+		},{
+			"key": "dot",
+			"value": "Dot"
+		}],
+		"attributeName": "lineType",
+		"propertyName": "Chart"
+	}, {
+		"label": "Line Thickness : ",
+		"type": "number",
+		"min": "1",
+		"max": "10",
+		"step": "1",
+		"value": "3",
+		"attributeName": "lineThickness",
+		"propertyName": "Chart"
+	}, {
+		"label": "Default Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "DefaultFillColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Roll Over Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "RollOverColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Outline Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "OutlineColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Color Ranges : ",
+		"heading": "Range Properties",
+		"type": "customRangeIndicatorWindow",
+		"value": "",
+		"attributes": {
+			"names": "rangedSeriesDisplayNames",
+			"ranges": "rangesOfSeries",
+			"colors": "rangedColors"
+		},
+		"attributeName": "rangedSeriesDisplayNames",
+		"propertyName": "Chart"
+	}, {
+		"label": "Solid Color : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "SolidColorFill",
+		"propertyName": "Chart"
+	},{
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "1",
+		"attributeName": "colorOpacity",
+		"propertyName": "Chart"
+	}, {
+		"label": "Random Color : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "RandomColorFill",
+		"propertyName": "Chart"
+	}],
+	"Tooltip": [{
+		"label": "Show Tool Tip : ",
+		"heading": "Tool Tip Configuration",
+		"type": "customTextBoxForToolTip",
+		"value": "500",
+		"showcustom": "true",
+		"attributeName": "CustomTextBoxForToolTip",
+		"propertyName": "Chart"
+	}, {
+		"label": "Background Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "tooltipBackgroundColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "tooltipBackgroundTransparency",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "tooltipBorderColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Tooltip Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "tooltipFontSize",
+		"propertyName": "Chart"
+	}, {
+		"label": "Box Width :",
+		"type": "select",
+		"value": "default",
+		"options": [{
+			"key": "auto",
+			"value": "Auto"
+		}, {
+			"key": "100",
+			"value": "100px"
+		}, {
+			"key": "200",
+			"value": "200px"
+		}, {
+			"key": "300",
+			"value": "300px"
+		}, {
+			"key": "400",
+			"value": "400px"
+		}, {
+			"key": "500",
+			"value": "500px"
+		}, {
+			"key": "600",
+			"value": "600px"
+		}, {
+			"key": "1000",
+			"value": "1000px"
+		}],
+		"attributeName": "customTooltipWidth",
+		"propertyName": "Chart"
+	}, {
+		"label": "Precision :",
+		"type": "select",
+		"value": "default",
+		"options": [{
+			"key": "default",
+			"value": "Default"
+		}, {
+			"key": "0",
+			"value": "None"
+		}, {
+			"key": "1",
+			"value": ".0"
+		}, {
+			"key": "2",
+			"value": ".00"
+		}, {
+			"key": "3",
+			"value": ".000"
+		}, {
+			"key": "4",
+			"value": ".0000"
+		}, {
+			"key": "6",
+			"value": ".000000"
+		}, {
+			"key": "8",
+			"value": ".00000000"
+		}],
+		"attributeName": "tooltipPrecision",
+		"propertyName": "Chart"
+	}],
+	"Background": [{
+		"label": "Gradient Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "45",
+		"attributeName": "bgGradientRotation",
+		"propertyName": "Chart"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "bgAlpha",
+		"propertyName": "Chart"
+	}, {
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "bgGradients",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showBorder",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "borderColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "5",
+		"attributeName": "borderRadius",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Chart"
+	}],
+	"Title": [{
+		"label": "Title Box Color : ",
+		"type": "gradient",
+		"value": "",
+		"attributeName": "GradientColor",
+		"propertyName": "Chart"
+	}, {
+		"label": "Show Title Box : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "showGradient",
+		"propertyName": "Chart"
+	}, {
+		"label": "Show Title : ",
+		"type": "checkbox",
+		"attributeName": "showTitle",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Title Bar Height : ",
+		"type": "number",
+		"min": "25",
+		"max": "75",
+		"step": "1",
+		"value": "25",
+		"attributeName": "TitleBarHeight",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "Title",
+		"attributeName": "Description",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Align : ",
+		"type": "select",
+		"value": "left",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "Align",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "TextDecoration",
+		"propertyName": "Chart.Title"
+	}, {
+		"label": "Show Dataset Description : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showDatasetDescription",
+		"propertyName": "Chart.Title"
+	}],
+	"Sub Title": [{
+		"label": "Show Sub Title : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showSubTitle",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Description : ",
+		"type": "text",
+		"value": "Description",
+		"attributeName": "Description",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "FontColor",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Font Size: ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "FontSize",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "FontStyle",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "FontWeight",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "FontFamily",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Align : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "left",
+			"value": "Left"
+		}, {
+			"key": "center",
+			"value": "Center"
+		}, {
+			"key": "right",
+			"value": "Right"
+		}],
+		"attributeName": "Align",
+		"propertyName": "Chart.SubTitle"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "TextDecoration",
+		"propertyName": "Chart.SubTitle"
+	}],
+	"Export Options": [{
+		"label": "Enable Context Menu : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showContextMenu",
+		"propertyName": "Object"
+	}, {
+		"label": "Export Excel : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToExcel",
+		"propertyName": "Chart"
+	}, {
+		"label": "Export CSV : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "exportToCSV",
+		"propertyName": "Chart"
+	}, {
+		"label": "Export File Name : ",
+		"type": "text",
+		"value": "File Name",
+		"maxLength": "30",
+		"attributeName": "scrnShotFileName",
+		"propertyName": "Chart"
+	}, {
+		"label": "Global Export Type : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "screenshot",
+			"value": "ScreenShot"
+		}, {
+			"key": "tabular",
+			"value": "Tabular"
+		}],
+		"attributeName": "exportType",
+		"propertyName": "Chart"
+	}]
+}

@@ -1,0 +1,143 @@
+{
+	"Info": [{
+		"class": "Trend"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "86",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "86",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Tool Tip : ",
+		"type": "checkbox",
+		"value": "",
+		"attributeName": "enableToolTip",
+		"propertyName": "Trend"
+	}, {
+		"label": "Tool Tip Title : ",
+		"type": "text",
+		"value": "Trend",
+		"attributeName": "fieldDisplayName",
+		"propertyName": "Trend"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "Trend"
+	}, {
+		"label": "Value : ",
+		"type": "text",
+		"value": "",
+		"attributeName": "value",
+		"propertyName": "Trend"
+	}, {
+		"label": "Base Range : ",
+		"heading": "Base Range",
+		"type": "customTrendRangeWindow",
+		"value": "",
+		"attributeName": "baseRange",
+		"propertyName": "Trend"
+	}, {
+		"label": "+ve Trend Color : ",
+		"type": "color",
+		"value": "#00BCD4",
+		"attributeName": "positiveTrendColor",
+		"propertyName": "Trend"
+	}, {
+		"label": "+ve Symbol Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "positiveSymbolColor",
+		"propertyName": "Trend"
+	}, {
+		"label": "-ve Trend Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "negativeTrendColor",
+		"propertyName": "Trend"
+	}, {
+		"label": "-ve Symbol Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "negativeSymbolColor",
+		"propertyName": "Trend"
+	}, {
+		"label": "Zero Trend Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "zeroTrendColor",
+		"propertyName": "Trend"
+	}, {
+		"label": "Zero Symbol Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "zeroSymbolColor",
+		"propertyName": "Trend"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Trend"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Trend"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Trend"
+	}]
+}

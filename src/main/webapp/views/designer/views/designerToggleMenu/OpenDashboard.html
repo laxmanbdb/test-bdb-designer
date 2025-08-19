@@ -1,0 +1,51 @@
+<div class="col-sm-9">
+	<div class="col-sm-7 flat-card">
+		<h4 class="pad10">Open Dashboard</h4>
+		<div class="pad3">
+			<span >
+				Import from local directory :   
+				<i class="cursor-hand glyphicon glyphicon-import" title="Browse a .bvzx dashboard" ng-click="HandleBrowseClick('browseBVZXDashboard');"></i>
+				<input type="file" style="display:none"	id="browseBVZXDashboard" accept=".bvzx" on-read-file="browseBVZXDashboard($file);">
+			</span>
+		</div>
+		<span class="pad10">
+			Workspace : 
+			<select ng-model="selectedWorkspace" 
+				ng-options="workspace.dashboardName for workspace in modal.wsObj.wsList track by workspace.dashboardId|filter:!workspace.isDashboard">
+			</select>
+				<span>
+					<i class="cursor-hand glyphicon glyphicon-refresh" title="Reload workspaces" ng-click="reloadWorkSpaces();"></i>
+				</span>
+		</span>
+			<div class="object-search-field pad10">
+				<input type="text" placeholder="Search"	ng-model="workSpaceAndDashboardSearch" />
+			</div>
+			<div style="height:300px;overflow:auto" class="bvz-table">
+				<!-- HEADER ROW -->
+				<div class="bvz-row">
+					<div class="ds-name-in-tree bvz-h-col wd50per">
+						<span>Dashboard Name</span>
+					</div>
+					<div class="bvz-h-col">
+						<span>Open</span>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				<!-- DATA ROW -->
+				<div class="bvz-row" ng-show="selectedWorkspace.dashboardId != undefined"
+					ng-repeat="n in modal.wsObj.dbList | filter:workSpaceAndDashboardSearch track by $index" ng-if="n.isDashboard && n.parentId==selectedWorkspace.dashboardId" >
+					<div title="{{n.dashboardName}}" class="ds-name-in-tree bvz-d-col wd50per">
+						<span>{{n.dashboardName}}</span>
+					</div>
+					<div class="bvz-d-col">
+					<div class="div-btn" style="padding-left: 0px;" ng-click="OpenDasboard( n, $event );">
+						<span>
+							<i class="cursor-hand glyphicon glyphicon-edit" ></i>
+						</span>
+					</div>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+			</div>
+	</div>
+</div>

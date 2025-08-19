@@ -1,0 +1,279 @@
+{
+	"Info": [{
+		"class": "Bullet"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Show Markers : ",
+		"type": "checkbox",
+		"value": false,
+		"attributeName": "showTicks",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Show Actual Value : ",
+		"type": "checkbox",
+		"value": false,
+		"attributeName": "showValue",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Show Target Value : ",
+		"type": "checkbox",
+		"value": false,
+		"attributeName": "showTargetValue",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Show Title : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "ShowText",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Title Description : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "LabelText",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Bullet Type : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "horizontal",
+			"value": "Horizontal"
+		}, {
+			"key": "vertical",
+			"value": "Vertical"
+		}],
+		"attributeName": "BulletType",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Orientation : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "reverse",
+			"value": "Reverse"
+		}],
+		"attributeName": "orientation",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "Bullet"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "Bullet"
+	}],
+	"Indicators": [{
+		"label": "Ranges Properties : ",
+		"heading": "Range Properties",
+		"type": "customBulletBandWindow",
+		"value": "",
+		"attributes": {
+			"names": "rangedSeriesDisplayNames",
+			"ranges": "rangesOfSeries",
+			"colors": "rangedColors"
+		},
+		"attributeName": "rangedSeriesDisplayNames",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Actual Value : ",
+		"type": "number",
+		"min": "",
+		"max": "",
+		"step": "1",
+		"value": "50",
+		"attributeName": "actualValue",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Target Value : ",
+		"type": "number",
+		"min": "",
+		"max": "",
+		"step": "1",
+		"value": "50",
+		"attributeName": "targetValue",
+		"propertyName": "Bullet"
+	}],
+	"Style": [{
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "borderColor",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Measure Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "faceColor",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Target Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "targetColor",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Marker Color : ",
+		"type": "color",
+		"value": "#666666",
+		"attributeName": "ticksColor",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Marker Font Color : ",
+		"type": "color",
+		"value": "#fbfbfb",
+		"attributeName": "markerTextColor",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "fontColor",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Actual Meter Size : ",
+		"type": "number",
+		"min": "0.1",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "actualMeterSize",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Target Meter Size : ",
+		"type": "number",
+		"min": "0.1",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "targetMeterSize",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "8",
+		"max": "20",
+		"step": "1",
+		"value": "12",
+		"attributeName": "fontSize",
+		"propertyName": "Bullet"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "labelFontFamily",
+		"propertyName": "Bullet"
+	}]
+}

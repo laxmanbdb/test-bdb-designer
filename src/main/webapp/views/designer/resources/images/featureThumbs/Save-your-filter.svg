@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 54 54">
+  <g id="Group_1340" data-name="Group 1340" transform="translate(-394 -865)">
+    <g id="Rectangle_4683" data-name="Rectangle 4683" transform="translate(394 865)" fill="none" stroke="#ececec" stroke-width="1">
+      <rect width="54" height="54" rx="6" stroke="none"/>
+      <rect x="0.5" y="0.5" width="53" height="53" rx="5.5" fill="none"/>
+    </g>
+    <ellipse id="Ellipse_788" data-name="Ellipse 788" cx="2.645" cy="2.645" rx="2.645" ry="2.645" transform="translate(412.342 883.006)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <ellipse id="Ellipse_789" data-name="Ellipse 789" cx="1.251" cy="1.251" rx="1.251" ry="1.251" transform="translate(419.509 882.861)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <ellipse id="Ellipse_790" data-name="Ellipse 790" cx="1.443" cy="1.443" rx="1.443" ry="1.443" transform="translate(422.491 886.373)" fill="#124ca3" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <ellipse id="Ellipse_791" data-name="Ellipse 791" cx="1.732" cy="1.732" rx="1.732" ry="1.732" transform="translate(425.04 881.948)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <ellipse id="Ellipse_792" data-name="Ellipse 792" cx="2.453" cy="2.453" rx="2.453" ry="2.453" transform="translate(418.307 876.128)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <ellipse id="Ellipse_793" data-name="Ellipse 793" cx="0.914" cy="0.914" rx="0.914" ry="0.914" transform="translate(425.858 878.34)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <path id="Path_2629" data-name="Path 2629" d="M43.187,38H23.9l7.407,9.187V52h5.1V47.091Z" transform="translate(386.855 850.633)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <rect id="Rectangle_4922" data-name="Rectangle 4922" width="21.885" height="3.511" transform="translate(410.13 886.036)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <path id="Path_2630" data-name="Path 2630" d="M26.052,67.13H23.07V61.166h1.106v2.79h3.511v-2.79h.337l.818.77v1.106h.673V61.5l-1.2-1.2H22.3v7.6h4.473Z" transform="translate(387.686 839.059)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <path id="Path_2631" data-name="Path 2631" d="M32.376,67.9v2.116H30.5l2.4,2.742,2.6-2.742H33.771V67.9Z" transform="translate(383.429 835.115)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <rect id="Rectangle_4923" data-name="Rectangle 4923" width="0.818" height="2.164" transform="translate(413.785 900.129)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <path id="Path_2632" data-name="Path 2632" d="M55.511,66.53h2.934V60.566H57.387v2.79H53.828v-2.79h-.337l-.77.77V62.49H52V60.9l1.2-1.2h6.06v7.6H54.79Z" transform="translate(372.271 839.37)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <path id="Path_2633" data-name="Path 2633" d="M51.626,67.3v2.116H53.5l-2.453,2.742L48.5,69.416h1.683V67.3Z" transform="translate(374.087 835.426)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+    <rect id="Rectangle_4924" data-name="Rectangle 4924" width="0.818" height="2.164" transform="translate(427.714 902.05) rotate(180)" fill="#fff" stroke="#0d78bf" stroke-miterlimit="10" stroke-width="0.5"/>
+  </g>
+</svg>

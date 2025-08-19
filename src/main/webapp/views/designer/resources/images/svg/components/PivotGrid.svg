@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="21.5" height="25" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_258" data-name="Group 258" transform="translate(-1166.335 -232)">
+    <g id="Rectangle_206" data-name="Rectangle 206" transform="translate(1166.335 232)" fill="#fff" stroke="#ececec" stroke-width="1">
+      <rect width="50" height="50" rx="6" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="49" rx="5.5" fill="none"/>
+    </g>
+    <rect id="Rectangle_260" data-name="Rectangle 260" width="22" height="6" transform="translate(1185.064 241.75)" fill="#00a0f0"/>
+    <rect id="Rectangle_262" data-name="Rectangle 262" width="22" height="6" transform="translate(1182.064 250.75) rotate(90)" fill="#00a0f0"/>
+    <rect id="Rectangle_261" data-name="Rectangle 261" width="7" height="6" transform="translate(1176.064 241.75)" fill="#00a0f0"/>
+    <line id="Line_25" data-name="Line 25" y2="25" transform="translate(1186.564 249.25)" fill="none" stroke="#0d78bf" stroke-width="0.5"/>
+    <line id="Line_25-2" data-name="Line 25" y2="25" transform="translate(1191.564 249.25)" fill="none" stroke="#0d78bf" stroke-width="0.5"/>
+    <line id="Line_25-3" data-name="Line 25" y2="25" transform="translate(1196.564 249.25)" fill="none" stroke="#0d78bf" stroke-width="0.5"/>
+    <line id="Line_25-4" data-name="Line 25" y2="25" transform="translate(1201.564 249.25)" fill="none" stroke="#0d78bf" stroke-width="0.5"/>
+    <line id="Line_25-5" data-name="Line 25" y2="25" transform="translate(1206.564 249.25)" fill="none" stroke="#0d78bf" stroke-width="0.5"/>
+    <g id="Repeat_Grid_2" data-name="Repeat Grid 2" transform="translate(1208.605 251.25) rotate(90)" clip-path="url(#clip-path)">
+      <g transform="translate(-2504.25 -170.5)">
+        <line id="Line_25-6" data-name="Line 25" y2="25" transform="translate(2504.5 170.5)" fill="none" stroke="#0d78bf" stroke-width="0.5"/>
+      </g>
+      <g transform="translate(-2499.25 -170.5)">
+        <line id="Line_25-7" data-name="Line 25" y2="25" transform="translate(2504.5 170.5)" fill="none" stroke="#0d78bf" stroke-width="0.5"/>
+      </g>
+      <g transform="translate(-2494.25 -170.5)">
+        <line id="Line_25-8" data-name="Line 25" y2="25" transform="translate(2504.5 170.5)" fill="none" stroke="#0d78bf" stroke-width="0.5"/>
+      </g>
+      <g transform="translate(-2489.25 -170.5)">
+        <line id="Line_25-9" data-name="Line 25" y2="25" transform="translate(2504.5 170.5)" fill="none" stroke="#0d78bf" stroke-width="0.5"/>
+      </g>
+      <g transform="translate(-2484.25 -170.5)">
+        <line id="Line_25-10" data-name="Line 25" y2="25" transform="translate(2504.5 170.5)" fill="none" stroke="#0d78bf" stroke-width="0.5"/>
+      </g>
+    </g>
+    <path id="Path_108" data-name="Path 108" d="M2488.3,182.556l-5.109,5.844,5.109,5v-3.9h13.267V177.028h3.317l-5.054-4.32-4.738,4.32h3.53v9.421H2488.3Z" transform="translate(-1297.823 78.947)" fill="#e17d00"/>
+  </g>
+</svg>

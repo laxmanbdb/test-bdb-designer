@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #7c4dff;
+        stroke-width: 2px;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #ececec;
+      }
+
+      .cls-4 {
+        fill: #ffaf6d;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Group_3095">
+        <g id="Rectangle_172">
+          <rect class="cls-3" width="50" height="50" rx="6" ry="6"/>
+          <rect class="cls-2" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+        </g>
+        <g id="Layer_6">
+          <rect id="Rectangle_363" class="cls-4" x="22.1" y="23.4" width="5.6" height="10.2"/>
+        </g>
+        <g id="Layer_7">
+          <circle id="Ellipse_47" class="cls-4" cx="25" cy="18.5" r="2.9"/>
+        </g>
+        <g id="Ellipse_53">
+          <circle class="cls-3" cx="25" cy="24" r="15"/>
+          <circle class="cls-1" cx="25" cy="24" r="14"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

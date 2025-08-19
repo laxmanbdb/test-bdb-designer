@@ -1,0 +1,91 @@
+<div id="WSConnection" class="connectionUI data-src connTextStyle" 
+	ng-controller="WSController" ng-init="onInit()">
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Name</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<input type="text" id="connectionName" name="connectionName" placeholder="New connection" 
+				class="propValue connTextStyle" maxlength="20" 
+				ng-blur="validateConnection( modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection )" 
+				ng-change="updateConnectionTree( modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection );"
+				ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.connectionName"/>
+		</div>
+		<!--<div class="connectorInfo" style="top: 8px;">
+			<md-button ng-click="openConnectorInfo()" class="md-secondary md-icon-button"> 
+				<md-icon >
+					<img alt="information" src="./resources/images/svg/additional/Information.svg" class="cursor-hand" mat-tooltip="Information" />
+					<i class="material-icons cursor-hand" mat-tooltip="Information">info_outline</i> 
+				</md-icon> 
+			</md-button>
+		</div>-->
+	</div>
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>URL</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<input type="text" id="connectionURL" name="connectionURL" placeholder="Web socket URL" 
+				class="propValue connTextStyle" maxlength="200" 
+				ng-blur="" 
+				ng-change=""
+				ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.url"/>
+		</div>
+	</div>
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>guid</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<input type="text" id="connectionguid" name="connectionguid" placeholder="guid" 
+				class="propValue connTextStyle" maxlength="200" 
+				ng-blur="" 
+				ng-change=""
+				ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.guid"/>
+		</div>
+	</div>
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Ingestion ID</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<input type="text" id="connectionigid" name="connectionigid" placeholder="Ingestion ID" 
+				class="propValue connTextStyle" maxlength="200" 
+				ng-blur="" 
+				ng-change=""
+				ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.igid"/>
+		</div>
+	</div>
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Ingestion Secret</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<input type="text" id="connectionigs" name="connectionigs" placeholder="Ingestion Secret" 
+				class="propValue connTextStyle" maxlength="200" 
+				ng-blur="" 
+				ng-change=""
+				ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.igs"/>
+		</div>
+	</div>
+	
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Load at Start</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<div class="toggle-btn-grp css-ver">
+				<div style="width: 42px; margin-right: 32px;">
+					<input type="radio" name="radioGRPloadAtStartws" value="true"
+						ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.LoadatStartup" />
+					<label onclick="" class="toggle-btn connTextStyle">Yes</label>
+				</div>
+				<div style="width: 42px; margin-right: 32px;">
+					<input type="radio" name="radioGRPloadAtStartws" value="false"
+						ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.LoadatStartup" />
+					<label onclick="" class="toggle-btn connTextStyle">No</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,41 @@
+<div id="searchObjectTool" class="bvz-select-wrapper" 
+	ng-click="toggleObjOptions( $event )">
+	<div class="bvz-display">
+		<label class="bvz-display-placeholder" 
+			ng-show="selectedObj == undefined || selectedObj == ''">
+			Select object
+		</label>
+		<label class="bvz-display can-select" 
+			ng-show="selectedObj != undefined && selectedObj != ''">
+			{{ selectedObj.objectName }}
+		</label>
+	</div>
+	<span class="bvz-dd-btn">
+		<i class="glyphicon glyphicon-triangle-bottom"></i>
+	</span>
+	<div class="bvz-select-options-container" 
+		ng-show="displayObjOptions" >
+		<div class="bvz-search-wrapper">
+			<input ng-model="objSearchKey" 
+				class="bvz-search propValue searchKeyText" 
+				type="text" 
+				placeholder="Search Dashboard Objects" />
+		</div>
+		<div class="bvz-no-match-found" 
+			ng-show="objSearchList == 0 && connSearchList.length == 0">
+			No item found
+		</div>
+		<ul class="bvz-select-options-wrapper">
+			<li class="paste-element"
+				ng-click="pasteTextFromSearchObjects( $event, obj.referenceID, true )"  
+				ng-repeat="obj in objSearchList = ( modal.selectedDashboard.json.Dashboard.AbsoluteLayout.Object | filter: objSearchKey )">
+				{{ obj.objectName }}
+			</li>
+			<li class="paste-element"
+				ng-click="pasteTextFromSearchObjects( $event, conn.id, true )"  
+				ng-repeat="conn in connSearchList = ( modal.selectedDashboard.json.Dashboard.DataProviders.DataURL | filter: objSearchKey )">
+				{{ conn.connectionName }}
+			</li>
+		</ul>
+	</div>
+</div>

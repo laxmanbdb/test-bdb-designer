@@ -1,0 +1,231 @@
+<link rel="stylesheet" href="./resources/css/prism.min.css" type="text/css" />
+<!-- <script src="./resources/plugins/xlsxReader/lodash.min.js" async></script> -->
+<!-- <script src="./resources/plugins/xlsxReader/jszip.js" async></script> -->
+<!-- <script src="./resources/plugins/xlsxReader/xlsx.js" async></script> -->
+<!-- <script src="./resources/plugins/xlsxReader/xlsx-reader.js" async></script> -->
+<div id="ExcelConnection" class="connectionUI data-src connTextStyle" 
+	ng-controller="ExcelController" ng-init="onInitExcel()">
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Name</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<input type="text" id="connectionName" name="connectionName" placeholder="New connection" 
+				class="propValue connTextStyle" maxlength="20" 
+				ng-blur="validateConnection( modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection )" 
+				ng-change="updateConnectionTree( modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection );"
+				ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.connectionName">
+		</div>
+		<!--<div class="connectorInfo" style="top: 8px;">
+			<md-button ng-click="openConnectorInfo()" class="md-secondary md-icon-button"> 
+				<md-icon >
+					<img alt="Information" src="./resources/images/svg/additional/Information.svg" class="cursor-hand" mat-tooltip="Information" />
+					<i class="material-icons cursor-hand" mat-tooltip="Information">info_outline</i> 
+				</md-icon> 
+			</md-button>
+		</div>-->
+	</div>
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Browse</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<span>
+				<input type="file" name="excel_file" required="true" 
+					id="{{modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.id}}"
+					class="propValue fileUploadWithOuterLabel  ng-pristine ng-untouched ng-valid"
+					style="display: none;" accept=".xlsx"  
+					onchange="angular.element(this).scope().fileChanged(this.files);" />
+				<md-tooltip md-direction="top">Browse an Excel File</md-tooltip>
+			</span>
+			<input type="text" id="filename" placeholder="Browse an excel file" readonly="true" 
+				class="propValue cursor-hand connTextStyle" 
+				value="{{modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.url}}" 
+				ng-click="HandleBrowseClick(modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.id);"/>
+			<input type="button" id="fakeBrowse" value=".." ng-hide="true" 
+				ng-click="HandleBrowseClick(modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.id);" />
+		</div>
+		<div class="col-md-2 col-sm-2 browse-btn">
+			<span 
+				class="file-button cursor-hand pull-right bizviz-btn-icon-container browseButton" 
+				ng-click="HandleBrowseClick(modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.id);" >
+				<md-icon class="nt-upload-12-icon cursor-hand" mat-tooltip="Browse an Excel file"></md-icon>
+				<!--<img alt="upload" src="./resources/images/svg/additional/Upload.svg" class="\cursor-hand"  mat-tooltip="Browse an Excel File" />
+				<i class="material-icons cursor-hand"  mat-tooltip="Browse an Excel File">file_upload</i>-->
+			</span>
+		</div>
+	</div>
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Sheet Name</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<select id="sheet_name" class="propValue cursor-hand connTextStyle" required="true" ng-required="true" 
+				ng-change="updateSheet(this)" 
+				ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.sheet" 
+				ng-options="sheetName as sheetName for (sheetName, sheetData) in sheetsMap[modal.selectedDashboard.id+modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.id]">
+			</select>
+		</div>
+	</div>
+	<div class="row form-group connPagePad">
+		<div class="col-md-2 col-sm-2">
+			<p>Load At Start</p>
+		</div>
+		<div class="col-md-8 col-sm-8">
+			<div class="toggle-btn-grp css-ver">
+				<div style="width: 42px; margin-right: 32px;">
+					<input type="radio" name="radioGRPloadAtStartexcel" value="true"
+						ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.LoadatStartup" />
+					<label onclick="" class="toggle-btn connTextStyle">Yes</label>
+				</div>
+				<div style="width: 42px; margin-right: 32px;">
+					<input type="radio" name="radioGRPloadAtStartexcel" value="false"
+						ng-model="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.LoadatStartup" />
+					<label onclick="" class="toggle-btn connTextStyle">No</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--  tabs  -->
+	<div class="row form-group excelMaxHeight margin">
+		<md-content class="ht100per setBackground tabDesign">
+			<md-tabs class="filed_tabs1 ht100per">
+				<!--  tab1 -->
+				<md-tab label="Field Set">
+					<md-content class="md-padding setBackground">
+						<div id="fieldSetTabDivision" class="tab-pane fade in active">
+							<!--  list items -->
+							<md-content class="setBackground">
+								<md-list flex>
+									<md-list-item class="connBodytxtStyle" ng-hide="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.availableFieldSet.length > 0" ng-click="" > Fields not available ! </md-list-item>
+									<md-list-item ng-click="" 
+										ng-repeat="field in modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.availableFieldSet">
+										<div class="md-list-item-text" layout="column">
+											<div class="highlighter" ng-show="dataURL.isUiActive" ng-style="getHighlighterStyle()"></div>
+											<h5 class=" ng-binding textStyle" style="padding-left: 15px;"> {{ field.name }} </h5>
+										</div>
+										<md-divider ></md-divider>
+									</md-list-item>
+								</md-list>
+							</md-content>
+							<!--  list items -->
+						</div>
+					</md-content>
+				</md-tab>
+				<!-- Tab2 -->
+				<md-tab label="Calculated Fields">
+					<md-content class="md-padding setBackground">
+						<!-- Field Tab -->
+						<div id="fieldSetTabDivision">
+							<!--  list items -->
+							<md-content class="setBackground">
+								<md-list flex>
+									<md-list-item>
+										<div class="md-list-item-text connTextStyle" layout="column">
+											<h5>Calculated fields</h5>
+										</div>
+										<md-button class="md-secondary md-icon-button">
+											<md-icon  ng-click="createNewCalculatedField();" class="nt-plus-icon cursor-hand" mat-tooltip="Add">
+												<!--<img alt="Add" src="./resources/images/svg/additional/Add.svg" class="cursor-hand" mat-tooltip="Add" />-->
+												<!--<i class="material-icons cursor-hand" mat-tooltip="Add">add</i>-->
+											</md-icon>
+										</md-button>
+										<md-divider ></md-divider>
+									</md-list-item>
+									<!--  sub list  -->
+									<md-list-item ng-click="" 
+										ng-repeat="field in modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.calculatedFieldList">
+										<div class="md-list-item-text" layout="column">
+											<div class="highlighter" ng-show="dataURL.isUiActive" ng-style="getHighlighterStyle()"></div>
+											<h5 class=" ng-binding" style="padding-left: 15px;"> {{ field.name }} </h5>
+										</div>
+										<md-button class="md-secondary md-icon-button">
+											<md-icon ng-click="editCalculatedField(field);" class="nt-edit-icon cursor-hand" mat-tooltip="Edit">
+												<!--<i class="material-icons cursor-hand" mat-tooltip="Edit">edit</i>-->
+											</md-icon>
+										</md-button>
+										<md-button class="md-secondary md-icon-button">
+											<md-icon   ng-click="delCalculatedField(field,$event);" class="nt-trash-icon cursor-hand" mat-tooltip="Remove">
+												<!--<i class="material-icons cursor-hand" mat-tooltip="Remove">delete</i>-->
+											</md-icon>
+										</md-button>
+										<md-divider ></md-divider>
+									</md-list-item>
+									<!--  sub list -->
+								</md-list>
+							</md-content>
+						</div>
+					</md-content>
+				</md-tab>
+				<!-- Tab3 -->				 
+				<md-tab label="Condition">
+					<md-content class="md-padding setBackground">
+						<div id="conditionTabDivision">
+							<div class="col-md-12 conditionFieldHeader headerDivShadow">
+								<div class="row">
+									<div class="col-md-4 col-sm-4">
+										<p> Fields </p>
+									</div>
+									<div class="col-md-4 col-sm-4">
+										<p> Conditions </p>
+									</div>
+									<div class="col-md-4 col-sm-4">
+										<p > Actions </p>
+									</div>
+								</div>
+							</div>
+							<div class="navbar ht100per d-c-nb">
+								<ul class="list-group d-list-group ht100per" style="height: 350px;max-height: 350px;">
+									<li class="list-group-item d-list-item w-list ng-scope" ng-click="" 
+										ng-repeat="conditionField in modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.availableConditionSet">
+										<div class="row">
+											<div class="col-md-4 col-sm-4" title="{{conditionField.name}}" >
+												<p class="ws-name-list" style="display: inline-block; margin: 0px 0px 0px; width: 100%;">
+													{{conditionField.name}}
+												</p>
+											</div>
+											<div class="col-md-4 col-sm-4">
+												<input type="text" id="conditionText" class="propValue" 
+													ng-model="conditionField.condition" 
+													ng-change="onConditionTextBoxUpdate(conditionField)"/>
+												<span class="bvz-condition-dd-btn" ng-click="toggleGlobalVarOptions( $event, conditionField, $index)">
+												<i class="condition-gv-picker material-icons cursor-hand">arrow_drop_down</i>
+												</span>
+												<div class="bvz-condition-select-options-container" ng-if="setSelectedItem == conditionField.name + $index" ng-show="displayOptions">
+													<div class="bvz-search-wrapper">
+														<input ng-model="defValQuery" class="bvz-search propValue" type="text" placeholder="Search" />
+													</div>
+													<div class="bvz-no-match-found" ng-show="defValFilterList.length == 0 || defValFilterList == undefined">
+														No item found
+													</div>
+													<ul class="bvz-select-options-wrapper" role="menu">
+														<li class="bvz-select-options-list condition-select-li" ng-model="conditionField" ng-click="updateSelectedValue($event, item, conditionField)" 
+															ng-repeat="item in defValFilterList = ( defaultValueList | advSearch: defValQuery : 'objectName' )">
+															<h5 class="options-pre-info">{{ getCompName(item) }}</h5>
+															<h6 class="options-sec-info">{{ item.actualTag }}</h6>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="col-md-4 col-sm-4">
+												<input type="checkbox" 
+													ng-model="conditionField.added"  
+													ng-change="onConditionCheckBoxClick(conditionField)"/>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="row">
+								<div class="col-md-6 col-md-offset-6">
+									<div gvar-search-tool></div>
+								</div>
+							</div>
+						</div>
+					</md-content>
+				</md-tab>
+				<!-- tab2 -->
+			</md-tabs>
+		</md-content>
+	</div>
+</div>

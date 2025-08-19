@@ -1,0 +1,284 @@
+{
+	"Info": [{
+		"class": "HSlider"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Freeze Handle : ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "freezeHandle",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Unit : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "auto",
+			"value": "Auto"
+		}, {
+			"key": "percent",
+			"value": "Percent"
+		}],
+		"attributeName": "unit",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Show Markers : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showMarkers",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Maximum : ",
+		"type": "number",
+		"min": "",
+		"max": "",
+		"step": "1",
+		"value": "100",
+		"attributeName": "maximum",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Minimum : ",
+		"type": "number",
+		"min": "",
+		"max": "",
+		"step": "1",
+		"value": "10",
+		"attributeName": "minimum",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Interval : ",
+		"type": "number",
+		"min": "0.1",
+		"max": "",
+		"step": "0.1",
+		"value": "5",
+		"attributeName": "snapInterval",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Chrome Color : ",
+		"type": "color",
+		"value": "5",
+		"attributeName": "chromeColor",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Circle Color : ",
+		"type": "color",
+		"value": "5",
+		"attributeName": "handlecolor",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Show Value : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showTicks",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Thickness : ",
+		"type": "number",
+		"min": "1",
+		"max": "30",
+		"step": "1",
+		"value": "16",
+		"attributeName": "scaleHeight",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Circle Radius : ",
+		"type": "number",
+		"min": "5",
+		"max": "20",
+		"step": "1",
+		"value": "18",
+		"attributeName": "handleradius",
+		"propertyName": "HSlider"
+	},{
+		"label": "Enhanced Slider : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "enhancedHSlider",
+		"propertyName": "HSlider"
+	}],
+	"Background": [{
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "color",
+		"value": "#ffffff",
+		"attributeName": "backgroundColor",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "backgroundAlpha",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "HSlider"
+	}],
+	"Label": [{
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#494950",
+		"attributeName": "labelColor",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "14",
+		"attributeName": "labelFontSize",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "labelFontStyle",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "labelFontWeight",
+		"propertyName": "HSlider"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "labelFontFamily",
+		"propertyName": "HSlider"
+	}]
+}

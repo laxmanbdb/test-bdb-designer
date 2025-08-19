@@ -1,0 +1,67 @@
+{
+    "name": "temp_2x2",
+    "id": "temp_2x2",
+    "bootstrap": "true",
+    "Container": [
+        {
+            "id": "r1",
+            "type": "div",
+            "parent": "",
+            "attr": {
+                "name": "",
+                "class": "bv-row-bs row",
+                "style": ""
+            }
+        },
+        {
+            "id": "r1-c1",
+            "type": "div",
+            "parent": "r1",
+            "pheight": "50",
+            "attr": {
+                "class": "bv-col-bs col-sm-12 col-md-6 col-lg-6",
+                "style": ""
+            }
+        },
+        {
+            "id": "r1-c2",
+            "type": "div",
+            "parent": "r1",
+            "pheight": "50",
+            "attr": {
+                "class": "bv-col-bs col-sm-12 col-md-6 col-lg-6",
+                "style": ""
+            }
+        },
+        {
+            "id": "r2",
+            "type": "div",
+            "parent": "",
+            "attr": {
+                "name": "",
+                "class": "bv-row-bs row",
+                "style": ""
+            }
+        },
+        {
+            "id": "r2-c1",
+            "type": "div",
+            "parent": "r2",
+            "pheight": "50",
+            "attr": {
+                "class": "bv-col-bs col-sm-12 col-md-6 col-lg-6",
+                "style": ""
+            }
+        },
+        {
+            "id": "r2-c2",
+            "type": "div",
+            "parent": "r2",
+            "pheight": "50",
+            "attr": {
+                "class": "bv-col-bs col-sm-12 col-md-6 col-lg-6",
+                "style": ""
+            }
+        }
+    ]
+}

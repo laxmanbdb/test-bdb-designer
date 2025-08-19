@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 20">
+  <g id="Group_2973" data-name="Group 2973" transform="translate(-365 -1105)">
+    <rect id="Rectangle_7101" data-name="Rectangle 7101" width="20" height="20" transform="translate(365 1105)" fill="#e8e8e8" opacity="0"/>
+    <g id="Icon_feather-file" data-name="Icon feather-file" transform="translate(365.94 1105.041)">
+      <path id="Path_6455" data-name="Path 6455" d="M7.325,2.5h4.638a.5.5,0,0,1,.348.141l4.638,4.494a.5.5,0,0,1,.152.359v7.061a1.807,1.807,0,0,1-1.825,1.784H7.325A1.807,1.807,0,0,1,5.5,14.555V4.284A1.807,1.807,0,0,1,7.325,2.5Zm4.436,1H7.325a.806.806,0,0,0-.825.784V14.555a.806.806,0,0,0,.825.784h7.951a.806.806,0,0,0,.825-.784V7.705Z" fill="#525252"/>
+      <path id="Path_6456" data-name="Path 6456" d="M24.138,8.138H19.5a.5.5,0,0,1-.5-.5V3a.5.5,0,1,1,1,0V7.138h4.138a.5.5,0,0,1,0,1Z" transform="translate(-7.537)" fill="#525252"/>
+    </g>
+    <path id="Path_6457" data-name="Path 6457" d="M320.617,1109.153c-.85,0-1.668-.008-2.21-.031a2.4,2.4,0,0,1-2.12-2.516v-9.338a.5.5,0,0,1,1,0v9.317c0,.106.082,1.493,1.162,1.539,1.557.066,5.614,0,5.654,0h.008a.5.5,0,0,1,.008,1C324.009,1109.124,322.255,1109.153,320.617,1109.153Z" transform="translate(53.129 14)" fill="#525252"/>
+  </g>
+</svg>

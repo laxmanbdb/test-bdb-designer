@@ -1,0 +1,192 @@
+{
+	"HierarchicalCombo": {
+		"Properties": {
+			"Object": {
+				"componentType": "hierarchical_combo",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "hfilter",
+				"objectType": "filter",
+				"width": "200",
+				"showLocked": "false",
+				"subElement": "Filter",
+				"globalVariableKeyAttribute": "Globalkey",
+				"objectName": "HierCombo_28",
+				"unShowHidden": "false",
+				"groupings": "",
+				"x": "515",
+				"height": "44",
+				"y": "1034",
+				"initialVisibility": "true",
+				"objectID": "Obj.20557C44NF460N6F63NB8D0NE6E98BC3E664",
+				"Filter": {
+					"SelectedIndex": "0",
+					"enableGVAutoUpdate": "true",
+					"notifyGVAutoUpdate": "false",
+					"publicFilter" : "false",
+					"allowMultipleSelection": "false",
+					"textDecoration": "none",
+					"hierarchyLevel": "Multiple",
+					"rollOverColor": "#d9d7d8",
+					"direction": "horizontal",
+					"FontFamily": "BizvizFont",
+					"Globalkey": "none",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"filterBorderRadius": "0",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"advanceTheme": "default",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"FontColor": "0",
+					"menuPanelFontColor":"0",
+					"FontStyle": "normal",
+					"layout": "horizontal",
+					"Name": "filter",
+					"chromeColor": "#EFF0F0",
+					"chromeColorPanel":"#f2f2f2",
+					"panelBorderRadius":"0",
+					"id": "Obj.20557C44NF460N6F63NB8D0NE6E98BC3E664",
+					"selectionColor": "#BDC3C7",
+					"Description": "filter",
+					"controlledSelection": "false",
+					"Type": "ComboTree",
+					"showExpandButton": "true",
+					"selectionLimit": "0",
+                    "customSelection": "false",
+                    "showSelectionLimit": "false",
+					"FontSize": "16",
+					"fieldName": "Value",
+					"checkBoxSelected": "false",
+					"FontWeight": "normal"
+				}
+			}
+		},
+		"Fields": [{
+				"Name": "childid",
+				"hierarchyType": "none",
+				"DisplayName": "childid",
+				"visible": "false"
+			},
+			{
+				"Name": "parentid",
+				"hierarchyType": "none",
+				"DisplayName": "parentid",
+				"visible": "false"
+			},
+			{
+				"Name": "obsname",
+				"hierarchyType": "child",
+				"DisplayName": "obsname",
+				"visible": "false"
+			}
+		],
+		"Data": [{
+				"childid": "2123001",
+				"parentid": "0",
+				"obsname": "All Business Units"
+			},
+			{
+				"childid": "2123102",
+				"parentid": "2123001",
+				"obsname": "Business Operations"
+			},
+			{
+				"childid": "2123103",
+				"parentid": "2123001",
+				"obsname": "IT Services"
+			},
+			{
+				"childid": "2123104",
+				"parentid": "2123001",
+				"obsname": "Development"
+			},
+			{
+				"childid": "2123105",
+				"parentid": "2123001",
+				"obsname": "Corporate"
+			},
+			{
+				"childid": "2123106",
+				"parentid": "2123102",
+				"obsname": "Financial Systems"
+			},
+			{
+				"childid": "2123107",
+				"parentid": "2123102",
+				"obsname": "Operational Systems"
+			},
+			{
+				"childid": "2123108",
+				"parentid": "2123103",
+				"obsname": "Data Management"
+			},
+			{
+				"childid": "2123109",
+				"parentid": "2123103",
+				"obsname": "Network Services"
+			},
+			{
+				"childid": "2123110",
+				"parentid": "2123104",
+				"obsname": "Business Liasons"
+			},
+			{
+				"childid": "2123111",
+				"parentid": "2123104",
+				"obsname": "Team"
+			},
+			{
+				"childid": "2123112",
+				"parentid": "2123105",
+				"obsname": "IT"
+			},
+			{
+				"childid": "2123113",
+				"parentid": "2123105",
+				"obsname": "NPD"
+			},
+			{
+				"childid": "2123114",
+				"parentid": "2123106",
+				"obsname": "Portfolio"
+			},
+			{
+				"childid": "2123115",
+				"parentid": "2123106",
+				"obsname": "Finance"
+			},
+			{
+				"childid": "2123116",
+				"parentid": "2123108",
+				"obsname": "Team"
+			},
+			{
+				"childid": "2123117",
+				"parentid": "2123113",
+				"obsname": "Sponsor"
+			},
+			{
+				"childid": "2123118",
+				"parentid": "2123104",
+				"obsname": "Finance"
+			},
+			{
+				"childid": "2123119",
+				"parentid": "2123110",
+				"obsname": "Portfolio"
+			},
+			{
+				"childid": "2123120",
+				"parentid": "2123109",
+				"obsname": "CORP IT"
+			}
+		],
+		"autoAddScriptsFromDesigner": "sdk.autoReload();"
+	}
+}

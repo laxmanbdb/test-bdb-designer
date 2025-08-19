@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+	<body oncontextmenu="return false">
+		<div class="demo hide" id="resizer-demo" style="position: absolute; width: 100%;"></div>
+		<div id="WatermarkDiv">
+			<!-- Loader animation -->
+			<div class='bvz-loader-container'>
+				<div class='bvz-loader'>
+					<div class='bvz-loader--text' data-content="Please wait, Your dashboard is loading"></div>
+				</div>
+			</div>
+			<div id="mainDiv"></div>
+			<div id="toolTipDiv"></div>
+		</div>
+		<input type="hidden" id="hiddenInputField" name="hiddenInputField" value="">
+		<input type="hidden" id="hiddenFilter" name="hiddenFilter" value="">
+<!-- 		<button class="hide" id="bizDocBtn" onclick="screenshotClip('body')"></button> -->
+	</body>
+	<head>
+		<title>BDB Dashboards</title>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<!-- 		<link rel="stylesheet" type="text/css" href="../../resources/file/fonts.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+		<link href="../../shared/brand/fonts/font.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+<!-- 		<link href="../../shared/resources/fonts/google-font/font.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="../../resources/lib/bootstrap/css/bootstrap.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="../../resources/lib/bootstrap/css/bootstrap-tour.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="../designer/resources/css/bvz-loader.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="src/bizviz.charting/components/resources/css/easyui.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="src/bizviz.charting/components/resources/css/jquery-smoothness-ui.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+		<link href="build-config/build/bizviz.charting/resources/css/chartingDependencies.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+		<link href="src/bizviz.charting/components/resources/css/bdbizviz-font-styles.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+		<link href="src/bizviz.charting/components/resources/css/charting.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+	 	<link href="../../shared/brand/styles/brand-styles.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+		<!-- Necessary plugins -->
+		<script src="src/bizviz.charting/components/resources/js/jquery-3.6.0.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<!-- Brand setting plugin to configure the loading message, loader overlay css etc -->
+		<script src="../../shared/brand/script/brand-settings.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+<!-- 		<link rel="stylesheet" type="text/css" href="../../resources/file/fonts.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+		<link href="../../shared/brand/fonts/font.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+<!-- 		<link href="../../shared/resources/fonts/google-font/font.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="../../resources/lib/bootstrap/css/bootstrap.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="../../resources/lib/bootstrap/css/bootstrap-tour.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="../designer/resources/css/bvz-loader.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="src/bizviz.charting/components/resources/css/easyui.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<link href="src/bizviz.charting/components/resources/css/jquery-smoothness-ui.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+		<link href="build-config/build/bizviz.charting/resources/css/chartingDependencies.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+		<link href="src/bizviz.charting/components/resources/css/bdbizviz-font-styles.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+		<link href="src/bizviz.charting/components/resources/css/charting.min.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+	 	<link href="../../shared/brand/styles/brand-styles.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" />
+		<!-- Necessary plugins -->
+		<script src="src/bizviz.charting/components/resources/js/jquery-3.6.0.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<!-- Brand setting plugin to configure the loading message, loader overlay css etc -->
+		<script src="../../shared/brand/script/brand-settings.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script type="text/javascript">
+			/** @description updates the loader text
+			@param { string } msg : message to be displayed **/
+			var showInLoader = function( msg ) {
+				$( ".bvz-loader--text" ).empty().append( msg ).css({"font-family": "BizvizFont, Roboto, Raleway, Helvetica, Verdana"});
+			};
+			showInLoader( (app_brand_cfg && app_brand_cfg.dashboardLoaderMessage) ? app_brand_cfg.dashboardLoaderMessage : '<span>Please wait !</span> <br> <span class=bvz-loader-bdb-text>BDB</span> <span> dashboard is loading</span>' );
+		</script>
+		<script src="src/bizviz.charting/components/resources/js/jquery-ui.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="src/bizviz.charting/components/resources/js/jquery-bizviz-mobile-1.4.5.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="src/bizviz.charting/components/resources/js/jQuery.blockUI.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../resources/lib/bootstrap/js/bootstrap.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../resources/lib/bootstrap/js/bootstrap-tour.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="src/bizviz.charting/components/resources/js/jquery.easyui.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<!-- Platform dependency -->
+		<script src="../../shared/model/url-conf.data?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../shared/model/url-api.data?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../resources/js/jstorage.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../shared/app/bizviz-sdk.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../shared/app/bizviz-init.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<!-- Encryption of dataservices -->
+		<script src="../../shared/resources/lib/encryption/encryption.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<!-- Capture dashboard to use in Play -->
+<!-- 		<link href="../../resources/lib/capture/croppie.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<script src="../../resources/lib/capture/croppie.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script> -->
+<!-- 		<script src="../../resources/lib/capture/captureDashboard.js?v=10.0.0.20250814.113816" type="text/javascript"></script> -->
+		<!-- Necessary utils for dashboard functioning -->
+		<script src="../designer/build-config/build/appSettings.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="src/bizviz.framework/FrameworkUtil.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="src/bizviz.charting/components/resources/js/jquery-ui.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="src/bizviz.charting/components/resources/js/jquery-bizviz-mobile-1.4.5.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="src/bizviz.charting/components/resources/js/jQuery.blockUI.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../resources/lib/bootstrap/js/bootstrap.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../resources/lib/bootstrap/js/bootstrap-tour.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="src/bizviz.charting/components/resources/js/jquery.easyui.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<!-- Platform dependency -->
+		<script src="../../shared/model/url-conf.data?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../shared/model/url-api.data?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../resources/js/jstorage.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../shared/app/bizviz-sdk.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../../shared/app/bizviz-init.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<!-- Encryption of dataservices -->
+		<script src="../../shared/resources/lib/encryption/encryption.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<!-- Capture dashboard to use in Play -->
+<!-- 		<link href="../../resources/lib/capture/croppie.css?v=10.0.0.20250814.113816" rel="stylesheet" type="text/css" /> -->
+<!-- 		<script src="../../resources/lib/capture/croppie.min.js?v=10.0.0.20250814.113816" type="text/javascript"></script> -->
+<!-- 		<script src="../../resources/lib/capture/captureDashboard.js?v=10.0.0.20250814.113816" type="text/javascript"></script> -->
+		<!-- Necessary utils for dashboard functioning -->
+		<script src="../designer/build-config/build/appSettings.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="src/bizviz.framework/FrameworkUtil.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../charting/src/bizviz.charting/components/resources/js/echarts.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../charting/src/bizviz.charting/components/resources/js/echarts-wordcloud.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script src="../charting/src/bizviz.charting/components/resources/js/visNetwork.js?v=10.0.0.20250814.113816" type="text/javascript"></script>
+		<script>
+			/*start window resize*/
+			var timeoutId;
+			function handleResize() {
+				dashboardJson = frameworkController.dashboard.m_dashboardjson;
+				if(dashboardJson["Niv"]["Dashboard"]["AbsoluteLayout"]["scalingEnabled"] == true && dashboardJson["Niv"]["Dashboard"]["AbsoluteLayout"]["enableResize"] == true){
+					frameworkController.resizeRedraw(dashboardJson);
+				}
+			}
+			function debounce(func, delay) {
+				clearTimeout(timeoutId);
+				timeoutId = setTimeout(func, delay);
+			}
+			$(window).resize(function() {
+				windowWH = {"aw": window.innerWidth, "ah": window.innerHeight, 
+						"w": window.innerWidth, "h": window.innerHeight, 
+						"o": window.orientation};
+				debounce(handleResize, 250);
+			});
+			/*end window resize*/
+			loadScript( {"urls": (dGlobals.isDevMode) ? dGlobals.src_url_requiredPlugin_devJS: dGlobals.src_url_requiredPlugin_prodJS, "type": "script", "async": "false", "cbArgs": "", "eCB": "", "sCB": function(){
+				loadScript( {"urls": (dGlobals.isDevMode) ? dGlobals.src_url_dashboardhome.devJS : dGlobals.src_url_dashboardhome.prodJS, "type": "script", "async": "false", "cbArgs": "", "eCB": "", "sCB": loadDashboardAfterDocReady });
+			}});
+		</script>
+	</head>
+</html>

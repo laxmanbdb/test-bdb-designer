@@ -1,0 +1,321 @@
+<div id="objectBrowser" ng-controller="ObjectBrowserController" class="bizVizRightControlComponentBoxContainer biz-viz-side-window hideBox bvz-invisible ht100per" ng-init="initObjectBrowser()">
+    <form class="filter-search-wrapper" style="padding: 5px;">
+        <div ng-show="modal.isActiveBox">
+        	<!--ng-show="modal.isActiveBox"-->
+            <input class="we-search-input propValue pull-left" type="text" placeholder="Search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="objecBrowserSearchkey" style="width:90%;" />
+            <!-- <img alt="search" src="./resources/images/svg/additional/Search.svg" class="cursor-hand pos_search objBrowseSrch" /> -->
+            <md-icon class="nt-search-icon cursor-hand objBrowseSrch" mat-tooltip="Search" style="margin-top: -3px;position:absolute;"></md-icon>
+            <!--<i class="material-icons cursor-hand pos_search" style="right:1%;">search</i>-->
+            <span class="we-clear-search objBrowseClose" ng-click="clearObjectSearch()" ng-show="objecBrowserSearchkey.length > 0">
+           		<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Clear Search"></md-icon>
+         	</span>
+        </div>
+        <span class="add-group-button" id="" ng-click="createDashboardGroup();" ng-hide="modal.isActiveBox" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''">
+               <!-- <img alt="Add Group" src="./resources/images/svg/additional/Add.svg" class="cursor-hand" mat-tooltip="Add Group" />-->
+               <md-icon class="nt-add-icon cursor-hand" mat-tooltip="Add Group" style="margin-top:-3px;"></md-icon>
+               <!--<i class="material-icons cursor-hand" mat-tooltip="Add Group">add</i>-->
+               <span>Add Group</span>
+        </span>
+        <span class="window-action-icon manageGrpBtn we-switch-view pull-right manage-panel-btn" 
+        	ng-show="modal.isActiveBox" 
+        	ng-click="showAddToGroup();">
+        		<!--<img alt="Manage Group" class="cursor-hand" src="./resources/images/svg/additional/Group.svg" mat-tooltip="Manage Group" />-->
+               <md-icon class="nt-managegroup-12-icon cursor-hand" mat-tooltip="Manage Group" style="margin-top:-3px;"></md-icon>
+               <!--<i class="material-icons cursor-hand" mat-tooltip="Manage Group">layers</i>-->
+               <span>Manage Group</span>
+            </span>
+        <span class="window-action-icon manageCompBtn we-switch-view pull-right manage-panel-btn" ng-hide="modal.isActiveBox" ng-click="showAddToGroup();">
+               <!--<img alt="Manage Component" src="./resources/images/svg/additional/Mangegroup.svg" mat-tooltip="Manage Component" class="cursor-hand" style="margin-top: 3px; margin-left: 4px; float: left;" />-->
+               <md-icon class="nt-managecomponent-12-icon cursor-hand" mat-tooltip="Manage Component" style="margin-top:-3px;float: left;margin-left: -5px;"></md-icon>
+               <!--<i class="material-icons cursor-hand" mat-tooltip="Manage Component">menu</i>-->
+                <span>Manage Component</span>
+            </span>
+        <span class="window-action-icon close-button manage-panel-btn" ng-click="reloadDefault();" style="border: none !important; position: absolute;">
+               <!--<img alt="Close Window" src="./resources/images/svg/additional/Cross.svg" class="cursor-hand" mat-tooltip="Close Window" style="width: 12px; height: 12px; margin-right: -20px; margin-top: 8px" />-->
+               <i class="closePalletPos material-icons cursor-hand" name=" " style="right: 0px;" mat-tooltip="Close Window">close</i>
+            </span>
+    </form>
+    <div class="bizVizControlBoxBody ht100per" style="margin-top: 15%;">
+        <div class="manage-comp-list" ng-show="modal.isActiveBox ">
+            <div class="row objectListHeader">
+                <div class="col-lg-6 col-md-6 objControlBtnHeader ">
+                    <span class="c-l-n-h ">Objects ({{activeCompList.length}})</span>
+                </div>
+                <div class="col-lg-6 col-md-6 objControlBtnHeaderIcons no-pad">
+                    <ul class="objControllBtns">
+                        <li class="col-lg-3 col-md-3 ">
+                            <span class="cursor-hand objects-action-icon" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''" ng-click="hideAllComponent(componentsList ); ">
+                        <!--<img alt="hideEye" src="./resources/images/svg/additional/Eye_Hide.svg" class="cursor-hand" mat-tooltip="{{hide_showAllToolTip}}" />-->
+                        <md-icon class="{{hideShowGlyph}} cursor-hand" mat-tooltip="{{hide_showAllToolTip}}"></md-icon>
+                        <!-- <i class="material-icons cursor-hand styleShape" style="margin-top: 5px;" mat-tooltip="{{hide_showAllToolTip}}">{{hideShowGlyph}}</i> -->
+                     </span>
+                        </li>
+                        <li class="col-lg-3 col-md-3 ">
+                            <span class="cursor-hand objects-action-icon" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''" ng-click="lockAllComponent(componentsList ); ">
+                        <!--<img alt="Lock" src="./resources/images/svg/additional/Lock.svg" class="cursor-hand" mat-tooltip="{{lock_unlockAllToolTip}}" />-->
+                        <md-icon class="nt-lock-icon cursor-hand" mat-tooltip="{{lock_unlockAllToolTip}}"></md-icon>
+                        <!--<i class="material-icons cursor-hand" mat-tooltip="{{lock_unlockAllToolTip}}">{{lockMoveGlyph}}</i>-->
+                     </span>
+                        </li>
+                        <li class="col-lg-3 col-md-3 ">
+                            <span class="cursor-hand objects-action-icon" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''" ng-click="deleteAllComponent(componentsList ); ">
+                        <!--<img alt="Remove" src="./resources/images/svg/additional/Delete.svg" class="cursor-hand" mat-tooltip="Remove" />-->
+                        <md-icon class="nt-delete-icon cursor-hand" mat-tooltip="Remove"></md-icon>
+                        <!--<i class="material-icons cursor-hand" mat-tooltip="Remove">delete</i>-->
+                     </span>
+                        </li>
+                        <li class="col-lg-3 col-md-3 " ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''">
+                            <span class="objects-action-icon">
+                        <!-- <img alt="Duplicate" src="./resources/images/svg/additional/Copy.svg" class="cursor-hand" mat-tooltip="Duplicate" />-->
+                        <md-icon class="nt-copy-icon cursor-hand" mat-tooltip="Duplicate"></md-icon>
+                        <!--<i class="material-icons" mat-tooltip="Duplicate">content_copy</i>-->
+                     </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="objectListContainer">
+                <div class="objectListWrapper full-height" jq-sortable sort-cfg="objectSortCfg">
+                    <div class="row list-component" ng-click="prepareComponentSelectionFromObjExp( comp.objectID, false, $event, true );" ng-repeat="comp in activeCompList = ( componentsList | advSearch :objecBrowserSearchkey :'objectName' )" >
+                        <div class="object-list-selected" ng-style="getHighlighterStyle()" ng-show="comp.objectID == modal.selectedComponentId">
+                        </div>
+                        <div class="col-lg-6 col-md-6 obj-name-holder"  ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'mobile-view-li' : ''">
+                            <div class="objectName" ng-hide="enableInputBox" ng-model="comp.objectName" ng-dblclick="renameComp(); enableInputBox = true;"> 
+                            	<h5 class="primary-info">{{comp.objectName}}</h5>
+                            	<h6 class="secondary-info ">{{comp.referenceID}}</h6>
+                            </div>
+                           	<input type="text" class="objectName" ng-show="enableInputBox" ng-model="comp.objectName" value="comp.objectName" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="20"/>
+                            	<span class="objectList-inputOk-btn" ng-show="enableInputBox" ng-click="onChangeComponentName($event, comp); enableInputBox = false;">
+	                        		<i class="comp-appearance-icon material-icons cursor-hand" mat-tooltip="Ok">check</i>
+                        		</span>
+                            <div class= "objectList-action-btn" ng-if="comp.objectID == modal.selectedComponentId" ng-hide="enableInputBox">
+                            	<md-icon data-toggle="popover" class="comp-appearance-icon nt-more-dot-icon cursor-hand" ng-click="handlePopover( $event )" mat-tooltip="Action"></md-icon>
+                            </div>
+                        </div>
+                       <!--  <div class="col-lg-6 col-md-6 obj-name-holder" ng-if="enableInputBox"" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'mobile-view-li' : ''">
+                            <div class="objectName" ng-model="comp.objectName" ng-bind="comp.objectName" ng-dblclick="renameComp(); enableInputBox = true;"></div>
+                        </div> -->
+                        <div class="compReorderDragDiv cursor-move"></div>
+                        <div class="pinUnpinIcon" ng-show="modal.layoutType != 'AbsoluteLayout'" ng-switch="comp.pinedComponent" ng-click="pinUnpinComp($event, comp)">
+                        	  <div ng-switch-when="false" style="height: 24px;">
+                        	  	<i class="material-icons cursor-hand" mat-tooltip="pin">add_circle</i>
+                        	  </div>
+                              <div  ng-switch-when="true" style="height: 24px;">
+                              	<i class="material-icons cursor-hand" mat-tooltip="unpin">remove_circle</i>
+                              </div>
+                        </div>
+                       
+                        <div class="col-lg-6 col-md-6 no-pad" style="padding: 8px 10px 0px 0px !important;">
+                            <ul class="objControllBtns">
+                                <li class="col-lg-3 col-md-3 objControlBtnList" mat-tooltip="Hide">
+                                    <span class="objControlBtnOuter" ng-class="(modal.layoutType != 'AbsoluteLayout' && comp.pinedComponent == false) ? 'mobile-view-hide-btn' : ''">
+                              <input type="checkbox" unchecked id="{{'ob-hideComp-checkbox' + comp.objectID}} checkboxid" name="HIDE_BTN" ng-model="comp.hideComponent" value="comp.objectName" 
+                                 ng-click="hideComponent( $event, comp );"  />
+                           </span>
+                                </li>
+                                <li class="col-lg-3 col-md-3 objControlBtnList" mat-tooltip="Lock">
+                                    <span class="objControlBtnOuter" ng-class="(modal.layoutType != 'AbsoluteLayout' && comp.pinedComponent == false) ? 'mobile-view-hide-btn' : ''">
+                              <input type="checkbox" name="LOCK_BTN" ng-model="comp.lockComponent" value="comp.objectName" 
+                                 ng-click="lockComponent( $event, comp );"  />
+                           </span>
+                                </li>
+                                <li class="col-lg-3 col-md-3 objControlBtnList">
+                                    <span class="objControlBtnOuter" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''" ng-click="deleteComponent( $event, comp );">
+                              <md-icon class="nt-delete-icon cursor-hand" mat-tooltip="Delete"></md-icon>
+                           </span>
+                                </li>
+                                <li class="col-lg-3 col-md-3 objControlBtnList">
+                                    <span class="objControlBtnOuter" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''" ng-click="createDuplicate( $event, comp)">
+                              <md-icon class="nt-copy-shade-icon cursor-hand" mat-tooltip="Duplicate"></md-icon>
+                           </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div ng-show="activeCompList.length === 0 && componentsList.length > 0" class="not-found" style="text-align: center; font: normal normal 600 13px BizvizFont; letter-spacing: 0px; color: #434344; opacity: 1; margin-top: 33px;">
+                        <span class="ng-binding">No match found !</span>
+                    </div>
+                    <div ng-show="componentsList.length === 0" class="not-found" style="text-align: center; font: normal normal 600 13px BizvizFont; letter-spacing: 0px; color: #434344; opacity: 1; margin-top: 33px;">
+                        <span class="ng-binding">Empty dashboard !</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="group-panel" ng-hide="modal.isActiveBox">
+            <div class="row objectListHeader">
+                <div class="col-lg-6 col-md-6 objControlBtnHeader" style="margin-right: 35%;">
+                    <span class="c-l-n-h ">Groups ({{modal.selectedDashboard.json.Dashboard.componentGroups.length}})</span>
+                </div>
+                <div class="col-lg-6 col-md-6 objControlBtnHeaderIcons" ng-show="modal.selectedDashboard.json.Dashboard.componentGroups.length > 0" style="width: 0%; float: right; padding-right: 55px;">
+                    <ul class="objControllBtns">
+                        <li class="col-lg-3 col-md-3 ">
+                            <span class="cursor-hand " ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''" ng-click="deleteAllDbGroupsDialog( $event )">
+	                        <!--<img alt="Remove" src="./resources/images/svg/additional/Delete.svg" class="cursor-hand" mat-tooltip="Remove All" />-->
+	                        <md-icon class="nt-delete-10-icon cursor-hand" mat-tooltip="Remove All"></md-icon>
+	                        <!--<i class="material-icons cursor-hand" mat-tooltip="Remove All">delete</i>-->
+	                     </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row" id="groupListContainer">
+                <div ng-hide="modal.selectedDashboard.json.Dashboard.componentGroups.length > 0" style="text-align: center; font: normal normal 600 13px BizvizFont; letter-spacing: 0px; color: #434344; opacity: 1; margin-top: 33px;">
+                    <span>Click on '+' icon to create a group!</span>
+                </div>
+                <div class="" ng-repeat="g in modal.selectedDashboard.json.Dashboard.componentGroups">
+                    <div id="{{g.gName}}" class="cursor-hand c-group" ng-click="selectGroup( $event ,g.gName )" style="background-color: #fafafa;">
+                        <span class="group-list-heading-icon" ng-if="!editing && g.gName == selectedGroup" ng-hide="g.gName == selectedGroup">
+                     	<i class="material-icons cursor-hand">expand_more</i>
+                     </span>
+                        <span class="group-list-heading-icon" ng-if="!editing && g.gName == selectedGroup" ng-show="g.gName == selectedGroup">
+                    	 <i class="material-icons cursor-hand">expand_less</i>
+                     </span>
+                        <span ng-hide="editing && g.gName == selectedGroup" id="group-name">{{ g.gName }}</span>
+                        <div class="col-lg-6 col-md-6 obj-name-holder" ng-show="editing && g.gName == selectedGroup" ng-click="$event.stopPropagation();" style="width: 98%;">
+                            <input type="text" class="groupName" ng-model="groupNameUpadte" maxlength="20" autocomplete="off" value="" maxautocorrect="off" autocapitalize="off" spellcheck="false" autocapitalize="off" />
+                            <span class="we-clear-search" id="group-rename-ok" ng-click="updateGroupName($event, groupNameUpadte );editing = false">
+                        <i class="material-icons cursor-hand" mat-tooltip="Ok">check</i>
+                     </span>
+                        </div>
+                        <span class="w-list-option" id="group-list-options" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''" ng-click="deleteGroup( $event, g.gName  );">
+                     <!-- <img alt="Delete" src="./resources/images/svg/additional/Delete.svg" class="cursor-hand" mat-tooltip="Delete Group" />-->
+                     <md-icon class="nt-delete-10-icon cursor-hand" mat-tooltip="Delete Group"></md-icon>
+                     <!--<i class="material-icons cursor-hand" style="font-size: 20px;" mat-tooltip="Delete Group">delete</i>-->
+                  </span>
+                        <span class="w-list-option" id="group-list-options"  headerName="Rename" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''" ng-click="renameGroup($event);editing = true">
+                     <!--<img alt="Rename" src="./resources/images/svg/additional/Edit_manage.svg" class="cursor-hand" mat-tooltip="Rename" />-->
+                     <md-icon class="nt-edit-10-icon cursor-hand" mat-tooltip="Rename"></md-icon>
+                     <!--<i class="material-icons cursor-hand" style="font-size: 20px;" mat-tooltip="Rename">edit</i>-->
+                  </span>
+                        <span class="w-list-option" id="group-list-options" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''" ng-click="addSelectedComponentToSelectedGroup($event);">
+                     <!-- <img alt="Select" src="./resources/images/svg/additional/Add.svg" class="cursor-hand" mat-tooltip="Add Selected Components"  />-->
+                     <md-icon class="nt-add-icon cursor-hand" mat-tooltip="Add Selected Components"></md-icon>
+                     <!--<i class="material-icons cursor-hand" style="font-size: 20px;" mat-tooltip="Add Selected Components">add</i>-->
+                  </span>
+                        <span class="w-list-option" id="group-list-options" ng-switch="g.gCompHidden" ng-click="hideAllGroupComponent($event, g ); ">
+                      <md-icon class="nt-eye-close-10-icon cursor-hand" ng-switch-when="false" mat-tooltip="{{g.tooltip}}"></md-icon>
+                      <!--<img alt="eye_hide" src="./resources/images/svg/additional/Eye_Hide.svg" class="cursor-hand" ng-switch-when="false" mat-tooltip="{{g.tooltip}}" />-->
+                      <!--<i class="material-icons cursor-hand" ng-switch-when="false" style="font-size: 20px;" mat-tooltip="{{g.tooltip}}">visibility_off</i>-->
+                      <md-icon class="nt-eye-open-10-icon cursor-hand" ng-switch-when="true" mat-tooltip="{{g.tooltip}}"></md-icon>
+                      <!-- <img alt="eye_open" src="./resources/images/svg/additional/eye_open.svg" class="cursor-hand styleShape" ng-switch-when="true" mat-tooltip="{{g.tooltip}}" /> -->
+                      <!--<i class="material-icons cursor-hand" ng-switch-when="true" style="font-size: 20px;" mat-tooltip="{{g.tooltip}}">visibility</i>-->
+                  </span>
+                        <span class="w-list-option" id="group-list-options" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''" ng-if="(modal.layoutType == 'AbsoluteLayout')" ng-click="duplicateGroup( $event, g.gName )">
+                      <!--<img alt="Select" src="./resources/images/svg/additional/Copy.svg" class="cursor-hand" mat-tooltip="Duplicate All Components"  />-->
+                      <md-icon class="nt-copy-shade-12-icon cursor-hand" mat-tooltip="Duplicate All Components"></md-icon>
+                      <!--<i class="material-icons cursor-hand" style="font-size: 20px;" mat-tooltip="Duplicate Selected group">add</i>-->
+                  </span>
+                    </div>
+                    <div class="a-comps cursor-arrow-point" ng-repeat="c in g.aCompIds" ng-click="setSelectedVariable( $event, getComponentbyId( c ), 'Component' )" ng-show="fromExistingGroup" ng-if="g.gName == selectedGroup && getComponentbyId( c ).objectName">
+                        <span class="group-object-name">{{ getComponentbyId( c ).objectName }}</span>
+                        <span class="pull-right" ng-click="removeComponentFromDashboardGroup( c, g.gName )" ng-class="(modal.layoutType != 'AbsoluteLayout') ? 'disableListEvent' : ''">
+                     <i class="material-icons cursor-hand" mat-tooltip="Delete from Group">close</i>
+                  </span>
+                        <div class="group-comp-setting-icon" ng-if="c == modal.selectedComponentId">
+                            <ul id="obc-settings-main" class="ca-settings-list" id="group-comp-setting-icon">
+                                <li ng-show="addDatasetBtnOnComponents(c)" aria-label="Dataset" aria-hidden="false" mat-tooltip="Dataset">
+                                <md-icon class="nt-data_settings-icon comp-settings-btn" name="dataSettings"></md-icon>
+                                    <!-- <img src="./resources/images/svg/data_settings.svg" name="dataSettings" class="comp-settings-btn"> -->
+                                </li>
+                                <li aria-label="Appearance" mat-tooltip="Properties">
+                                <md-icon class="nt-properties-icon comp-settings-btn" name="appearance"></md-icon>
+                                    <!-- <img src="./resources/images/svg/Properties.svg" name="appearance" class="comp-settings-btn" > -->
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div ng-show="g.aCompIds.length === 0 && g.gName == selectedGroup" class="empty-group" style="text-align: center; color: #46b8da">
+                        <span class="ng-binding">Empty group !</span>
+                    </div>
+                    <div id="deleteGroupModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" >
+                        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+                        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+                            <div class="modal-content container-border modal-container">
+                                <md-toolbar class="">
+                                    <div class="md-toolbar-tools noPadding">
+                                        <h2 id="updateModelTitle" data-q_id="21627" >Remove Group</h2>
+                                        <span flex></span>
+                                        <md-button class="md-icon-button" data-dismiss="modal" ng-click="cancel()">
+                                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand icon-color" mat-tooltip="Close">
+                                                <!--<i class="material-icons cursor-hand icon-color" mat-tooltip="Close">close</i>-->
+                                            </md-icon>
+                                        </md-button>
+                                    </div>
+                                </md-toolbar>
+                                <div class="modal-Body">
+                                    <div class="row-height"></div>
+                                    <div class="row-height">
+                                        <div class="col-sm-12 col-md-12">
+                                            <span >{{deleteWarning}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row-height"></div>
+                                </div>
+                                <md-dialog-actions layout="row" class="md-footer">
+                                    <span flex="" class="flex"></span>
+                                    <md-button type="button" class="md-raised md-primary box-shadow" data-dismiss="modal" ng-click="removeGroup( $event, getGroupByGroupName(selectedGroup) )">
+                                        Remove
+                                    </md-button>
+                                    <md-button type="button" class="md-raised box-shadow" data-dismiss="modal">
+                                        Cancel
+                                    </md-button>
+                                </md-dialog-actions>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="deleteAllGroupModalDialog" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" >
+                        <div class="col-sm-2 col-md-4 col-lg-4"></div>
+                        <div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+                            <div class="modal-content container-border modal-container">
+                                <md-toolbar class="">
+                                    <div class="md-toolbar-tools noPadding">
+                                        <h2 id="updateModelTitle" data-q_id="21627" >Remove All Groups</h2>
+                                        <span flex></span>
+                                        <md-button class="md-icon-button" data-dismiss="modal" ng-click="cancel()">
+                                            <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip="Close">
+                                                <!--<i class="material-icons cursor-hand icon-color" mat-tooltip="Close">close</i>-->
+                                            </md-icon>
+                                        </md-button>
+                                    </div>
+                                </md-toolbar>
+                                <div class="modal-Body">
+                                    <div class="row-height"></div>
+                                    <div class="row-height">
+                                        <div class="col-sm-12 col-md-12">
+                                            <span >{{deleteAllWarning}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row-height"></div>
+                                </div>
+                                <md-dialog-actions layout="row" class="md-footer">
+                                    <span flex="" class="flex"></span>
+                                    <md-button type="button" class="md-raised md-primary box-shadow" data-dismiss="modal" ng-click="deleteAllDbGroups( $event );">
+                                        Yes
+                                    </md-button>
+                                    <md-button type="button" class="md-raised box-shadow" data-dismiss="modal">
+                                        No
+                                    </md-button>
+                                </md-dialog-actions>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="obc-settings">
+    <ul id="obc-settings-main" class="obc-settings-list">
+        <li class="cursor-hand" mat-tooltip="Properties">
+            <img src="./resources/images/svg/Properties.svg" name="appearance" />
+        </li>
+        <li class="cursor-hand" ng-show="modal.isDatasetEnabled" mat-tooltip="Dataset">
+            <img src="./resources/images/svg/data_settings.svg" name="dataSettings" />
+        </li>
+        <li class="cursor-hand" mat-tooltip="Script on Load">
+            <img src="./resources/images/svg/f_x.svg" name="fx"/>
+        </li>
+    </ul>
+</div>

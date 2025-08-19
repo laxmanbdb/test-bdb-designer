@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="43.552" height="37.376" viewBox="0 0 43.552 37.376">
+  <g id="Group_1475" data-name="Group 1475" transform="translate(-4849.448 -505)">
+    <path id="Union_2" data-name="Union 2" d="M1,5.435a1,1,0,0,1-1-1v-.6a1,1,0,0,1,1-1H2.69L4.726,0h7.688l2.194,2.835H16.55a1,1,0,0,1,1,1v.6a1,1,0,0,1-1,1Z" transform="translate(4862.774 536.941)" fill="#0d78bf"/>
+    <g id="Rectangle_5622" data-name="Rectangle 5622" transform="translate(4849.448 505)" fill="none" stroke="#0d78bf" stroke-width="2">
+      <rect width="43.552" height="32.501" rx="5" stroke="none"/>
+      <rect x="1" y="1" width="41.552" height="30.501" rx="4" fill="none"/>
+    </g>
+    <g id="Icon_ionic-ios-pie" data-name="Icon ionic-ios-pie" transform="translate(4855.953 510.86)">
+      <path id="Path_2993" data-name="Path 2993" d="M10.082,4.6v5.08a.184.184,0,0,1-.139.179L5.562,10.99a.094.094,0,0,0-.063.125,4.827,4.827,0,1,0,4.681-6.6A.092.092,0,0,0,10.082,4.6Z" transform="translate(-4.423 -3.767)" fill="#0d78bf"/>
+      <path id="Path_2994" data-name="Path 2994" d="M2.25,7.058A5.444,5.444,0,0,0,2.6,8.939a.091.091,0,0,0,.107.051L7.2,7.837a.208.208,0,0,0,.148-.19v-5.3A.093.093,0,0,0,7.26,2.25,4.721,4.721,0,0,0,2.25,7.058Z" transform="translate(-2.25 -2.25)" fill="#0d78bf"/>
+    </g>
+    <rect id="Rectangle_5629" data-name="Rectangle 5629" width="2.6" height="18.201" transform="translate(4885.2 512.8)" fill="#0d78bf"/>
+    <rect id="Rectangle_5626" data-name="Rectangle 5626" width="2.6" height="10.4" transform="translate(4881.3 520.601)" fill="#0d78bf"/>
+    <rect id="Rectangle_5627" data-name="Rectangle 5627" width="2.6" height="14.301" transform="translate(4876.749 516.7)" fill="#0d78bf"/>
+    <rect id="Rectangle_5628" data-name="Rectangle 5628" width="2.6" height="5.2" transform="translate(4872.849 525.801)" fill="#0d78bf"/>
+    <rect id="Rectangle_5623" data-name="Rectangle 5623" width="2.6" height="13.001" transform="translate(4867.649 525.151) rotate(90)" fill="#0d78bf"/>
+    <rect id="Rectangle_5624" data-name="Rectangle 5624" width="2.6" height="13.001" transform="translate(4867.649 529.051) rotate(90)" fill="#0d78bf"/>
+  </g>
+</svg>

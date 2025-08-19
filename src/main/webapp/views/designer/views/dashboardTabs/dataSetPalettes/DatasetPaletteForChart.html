@@ -1,0 +1,343 @@
+<div class="row-fluid ht100per">
+<small style="color:red;" ng-if="component.objectType=='scorecard'">Note: state/name/id fields name are not supported</small>
+<small style="color:red;" ng-if="component.objectType=='datagrid'">Note: length field name are not supported</small>
+	<div class="visible-fields">
+		<div class="fieldContainer" >
+			<div class="fieldHeader">
+				<input type="text" placeholder="Search" autofocus 
+					autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" 
+					class="dataset-field-search" ng-model="modal.FieldsSearchkey" />
+				<span title="Clear Search"
+                   	ng-click="modal.FieldsSearchkey = ''" ng-show="modal.FieldsSearchkey.length > 0" >
+                    <i class="material-icons cursor-hand md-16" mat-tooltip="Clear">close</i>
+			</div>
+			<div class="field-draggable">
+				<ul class="bvz-list-container">
+					<li class="bvz-list-item cursor-move" data-allow-transform="true" 
+						ng-repeat="field in datasetFieldList | orderBy: 'name' | filter: isFieldInList "  
+						ng-drag="true" ng-drag-data="field" ng-drag-success="onDragSuccess( $data, $event )" 
+						ng-mouseover="setDraggedField( $event, field )">
+						<span class="fieldName" title="{{ field.name }}">
+							{{ field.name }}
+						</span>
+					</li>
+					<li ng-drag-clone="" class="bvz-list-item" >
+						{{ draggedField.name }}
+					</li>
+				</ul>
+				<span class="default-window-status" ng-hide="selectedDatasource != undefined && selectedDatasource != ''">Select a connection</span>
+				<span class="default-window-status" ng-show="selectedDatasource && datasetFieldList.length == 0">Select another connection which has some fields</span>
+			</div>
+		</div>
+		<div class="field-droping-wrapper">
+			<div class="{{field.CSSClass}}" 
+				ng-repeat="field in fieldContainer track by $index" >
+				<div class="fieldHeader">
+					<p class="talign-left">
+						{{field.Label}}
+					</p>
+				</div>
+				<div class="field-dropable" ng-drop="true"  
+					ng-drop-success="onDropSuccess( $data, $event, field.Type )"  
+					ondrop="drop(event)" >
+					<ul class="bvz-list-container" ng-init="fieldSortCfg = getFieldSortCfg($index)" 
+                       jq-sortable sort-cfg="fieldSortCfg">
+						<li class="bvz-list-item" 
+							ng-style="{ background: f.fieldJson.Color }" 
+							ng-repeat="f in field.Fields" 
+							ng-click="setSelectedField( f )">
+							<span class="fieldName" title="{{ f.name }}">
+								{{ f.name }}
+							</span>
+							<span class="icon-removeField">
+								<span ng-click="removeField( f, field.Type )">
+									<i class="bvz-btn-icon material-icons cursor-hand md-16" mat-tooltip="Remove">close</i>
+								</span>
+							</span>
+						</li>
+					</ul>
+					<span class="default-window-status" ng-hide="field.Fields.length > 0">Drop fields here</span>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+	<ul class="dataSourceTypeTabs nav nav-tabs" 
+		ng-if="datasetDesignProperties[component.designData.class].dataSetTabs.length > 0">
+		<li class="ng-scope dataSourceTypeTab" id="{{tab.containerId}}"  
+			ng-repeat="tab in datasetDesignProperties[component.designData.class].dataSetTabs track by $index" 
+			ng-click='updateTabSelectionById($event)' 
+			ng-class="{'active': $index==0,'tab100':datasetDesignProperties[component.designData.class].dataSetTabs.length == 1,'tab50':datasetDesignProperties[component.designData.class].dataSetTabs.length == 2,'tab33':datasetDesignProperties[component.designData.class].dataSetTabs.length == 3}">
+				<a href="#{{tab.containerId}}" class="ng-binding" 
+					data-toggle="tab" aria-controls="profile" aria-expanded="false">
+					{{tab.tabName}}</a>
+		</li>
+	</ul>
+	<div class="dataSourceTypeTabsContent tab-content ht100per">
+		<div id="field-properties" class="tab-pane active ht100per" style="margin-top: 5px;" >
+			<div class="row-data-scrollable" ng-class="{'scroll-with-tab': datasetDesignProperties[component.designData.class].dataSetTabs.length > 0}">
+				<div class="bvz-row"
+					ng-repeat="prop in selectedField.fieldProperties" ng-show="checkPropVisibilityForContainer(selectedField,prop)">
+					<div class="bvz-d-col">
+						<span class="cursor-arrow-point">{{ prop.label }}</span>
+					</div>
+					<div class="bvz-d-col">
+						<span>
+							<input ng-change="onFieldPropertyChange( prop );" 
+								class="propValue " 
+								ng-model="prop.value" 
+								ng-if="prop.type == 'text'" 
+								ng-disabled="{{prop.readOnly}}" 
+								type="{{prop.type}}" 
+								maxLength="{{prop.maxLength}}"/>
+					      	<input ng-change="onFieldPropertyChange( prop );" 
+					      		class="propValue" 
+					      		ng-model="prop.value" 
+					      		ng-if="prop.type == 'color'" 
+					      		type="{{prop.type}}" value="{{prop.value}}" />
+					      	<bvz-number-spinner 
+					      		ng-change="onFieldPropertyChange(prop )"
+					      		ng-model="prop.value"
+					      		ng-if="prop.type == 'number'"   	 
+				            	bvz-step="prop.step"
+				            	bvz-max="prop.max"
+				            	bvz-min="prop.min"
+				            	onkeypress="return checkValidNumber(event)" >
+							</bvz-number-spinner> 
+					      	<input ng-change="onFieldPropertyChange( prop );" 
+					      		class="propValue" 
+					      		ng-model="prop.value" 
+					      		ng-if="prop.type == 'checkbox'" 
+					      		ng-checked="prop.value == true" 
+					      		type="{{prop.type}}" />
+					      	<input ng-change="onFieldPropertyChange( prop );" 
+					      		class="propValue" 
+					      		ng-model="prop.value" 
+					      		ng-if="prop.type == 'customColor'" 
+					      		type="button" />
+					      	<i class="material-icons cursor-hand"
+								ng-click="onClickCustomDataLabel( prop )" 
+								ng-model="prop.value" 
+								ng-if="prop.type == 'customDataLabel'">settings</i>
+							<i class="material-icons cursor-hand"
+								ng-click="onClickCustomCellMerge( prop )" 
+								ng-model="prop.value" 
+								ng-if="prop.type == 'customCellMerge'">settings</i>
+							<i class="material-icons cursor-hand"
+								ng-click="onClickCustomRadiusRange( prop )" 
+								ng-model="prop.value" 
+								ng-if="prop.type == 'customRadiusRange'">settings</i>
+					      	<select ng-change="onFieldPropertyChange( prop );" 
+					      		class="propValue cursor-hand" 
+					      		ng-model="prop.value" 
+					      		ng-options="opt as opt.value for opt in prop.options" 
+					      		ng-if="prop.type == 'select'">
+					      	</select>
+					      	<div class="propValue"
+					      		 ng-if="prop.type == 'customSelectTextBox'"
+					      		 style="width:100%">
+							      <input ng-change="onFieldPropertyChange( prop );"
+							      		ng-model="prop.value.key" 
+							      		style="width:81%; float:left; border:0px solid; border-right:1px solid #ccc"/>
+							      <select ng-change="onChangeCustomSelect( prop );" 
+						      			class="propValue cursor-hand" 
+						      			ng-model="prop.value"
+						      			ng-options="opt as opt.value for opt in prop.options" 
+						      			style="float:right; width:19%">
+						      	 </select>
+					      	</div>
+					      	<select ng-change="onFieldPropertyChange( prop );" 
+					      		class="propValue cursor-hand" 
+					      		ng-model="prop.value" 
+					      		ng-options="opt as opt.value for opt in prop.options" 
+					      		ng-if="prop.type == 'customSelect'">
+					      	</select>
+					      	<select class="propValue pull-left cursor-hand" 
+					      		ng-change="updateCascadedParent(prop);onFieldPropertyChange( prop );" 
+					      		ng-model="prop.value" 
+					      		ng-options="opt as opt.value for opt in prop.options" 
+					      		ng-if="prop.type == 'CascadedParentSelect'" >
+					      	</select>
+					      	<select class="propValue pull-left cursor-hand" 
+					      		ng-change="onFieldPropertyChange( prop );" 
+					      		ng-model="prop.value" 
+					      		ng-options="opt as opt.value for opt in cascadedParentsChild[prop.attributeName]" 
+					      		ng-if="prop.type == 'CascadedChildSelect'" >
+					      	</select>
+						</span>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="alert-properties" class="tab-pane ht100per" >
+			<div class="row-data-scrollable" ng-class="{'scroll-with-tab': datasetDesignProperties[component.designData.class].dataSetTabs.length > 0}">
+				<div class="bvz-row"
+					ng-repeat="prop in alertFieldProperties" >
+					<div class="bvz-d-col">
+						<span class="cursor-arrow-point">{{ prop.label }}</span>
+					</div>
+					<div class="bvz-d-col">
+						<span>
+							<input ng-change="onAlertPropertyChange( prop );" 
+								class="propValue " 
+								ng-model="prop.value" 
+								ng-if="prop.type == 'text'" 
+								ng-disabled="{{prop.readOnly}}"
+								type="{{prop.type}}" />
+					      	<input ng-change="onAlertPropertyChange( prop );" 
+					      		class="propValue" 
+					      		ng-model="prop.value" 
+					      		ng-if="prop.type == 'color'" 
+					      		type="{{prop.type}}" value="{{prop.value}}" />
+					      	<bvz-number-spinner 
+					      		ng-if="prop.type == 'number'" 
+					      		ng-change="onAlertPropertyChange(prop )" 
+								onkeypress="return checkValidNumber(event)" 
+				            	ng-model="prop.value" 
+				            	bvz-step="prop.step"
+				            	bvz-max="prop.max"
+				            	bvz-min="prop.min" >
+							</bvz-number-spinner>
+					      	<input ng-change="onAlertPropertyChange( prop );" 
+					      		class="propValue" 
+					      		ng-model="prop.value" 
+					      		ng-if="prop.type == 'checkbox'" 
+					      		ng-checked="prop.value == true" 
+					      		type="{{prop.type}}" />
+							<i class="material-icons cursor-hand"
+								ng-click="onClickCustomAlertColor( prop )" 
+								ng-model="prop.value" 
+								ng-if="prop.type == 'customColorRange'">settings</i>
+					      	<select ng-change="onAlertPropertyChange( prop );" 
+					      		class="propValue cursor-hand" 
+					      		ng-model="prop.value"
+					      		ng-if="prop.type == 'select'" 
+					      		ng-options="opt.value as opt.value for opt in prop.options">
+					      		<!-- <option ng-repeat="opt in  prop.options" value="{{opt}}" id="greet" ng-selected="opt==prop.value">{{opt.value}}</option> -->
+					      		<!-- ng-init="prop.value=prop.options[0].value"  -->
+					      	</select>
+					      	<input ng-click="saveAlert( selectedField.alertProperties );" 
+					      		class="propValue" 
+					      		ng-model="prop.value" 
+					      		value="Save"
+					      		ng-if="prop.type == 'button'" 
+					      		type="button"  />
+						</span>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="conditionalColor-properties" class="tab-pane ht100per" >
+			<div ng-show="selectedField=='' ||selectedField.fieldJson.Type=='Series' || selectedField.fieldJson.Type=='YField' || selectedField.fieldJson.Type=='XField' " class="type-ser ht100per">
+				<div class="bvz-row bvz-header-row">
+					<div class="bvz-h-col">
+						<span>Conditions</span>
+					</div>
+					<div class="bvz-h-col">
+						<span>
+							<i class="material-icons cursor-hand" ng-click="createNewConditionalColorIndicator();" mat-tooltip="Add new condition">add</i>
+						</span>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				
+				<div class="row-data-scrollable" ng-class="{'scroll-with-tab': datasetDesignProperties[component.designData.class].dataSetTabs.length > 0}">
+					<div class="bvz-row" ng-show="list.seriesName == selectedField.name"  
+						ng-repeat="list in component[component.subElement].ConditionalColors.ConditionalColor track by $index" >
+						<div ng-show="list.seriesName == selectedField.name">
+							<div class="bvz-d-col" title="{{list.seriesName + ' ' + list.operator + ' ' + list.compareTo}}">
+								<span class="fieldName ind-condition">{{ list.seriesName }}</span>
+								<span class="fieldName ind-condition ind-operator">{{ list.operator }}</span>
+								<span class="fieldName ind-condition">{{list.compareTo}}</span>
+							</div>
+							<div class="bvz-d-col">
+								<span>
+									<input type="color" class="propValue" ng-model="list.color" />
+								</span>
+								<span>
+									<i class="material-icons cursor-hand" ng-model="comp.Delete" ng-click="editChartIndicator(list);" mat-tooltip="Edit" >mode_edit</i>
+								</span>
+								<span>
+									<i class="material-icons cursor-hand" ng-model="comp.Delete" ng-click="deleteConditionalIndicator(list);" mat-tooltip="Delete">delete</i>
+								</span>
+							</div>
+						</div>
+						<div style="clear: both"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div ng-show="selectedField.fieldJson.Type=='Category'" class="type-cat ht100per" >
+				<div class="bvz-row bvz-header-row">
+					<div class="bvz-h-col">
+						<span>Category value</span>
+					</div>
+					<div class="bvz-h-col">
+						<span>
+							<i class="material-icons cursor-hand" ng-click="createNewCategoryColorIndicator();" mat-tooltip="Add new category">add</i>
+						</span>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				<div class="row-data-scrollable" ng-class="{'scroll-with-tab': datasetDesignProperties[component.designData.class].dataSetTabs.length > 0}">
+					<div class="bvz-row" 
+						ng-repeat="list in component[component.subElement].CategoryColors.CategoryColor track by $index" >
+						<div class="bvz-d-col">
+							<span>
+								<input type="text" placeholder="Category name" value="{{list.categoryName}}" 
+									class="propValue" ng-model="list.categoryName" />
+							</span>
+						</div>
+						<div class="bvz-d-col">
+							<span>
+								<input type="color" class="propValue" ng-model="list.color" />
+							</span>
+							<span>
+									<i class="material-icons cursor-hand" ng-model="comp.Delete" ng-click="deleteCategoryIndicator(list);" mat-tooltip="Delete">delete</i>
+							</span>
+						</div>
+						<div style="clear: both"></div>
+					</div>
+				</div>
+			</div>
+			
+			<div ng-show="selectedField.fieldJson.Type=='SubCategory'" class="type-cat ht100per" >
+				<div class="bvz-row bvz-header-row">
+					<div class="bvz-h-col">
+						<span>Sub Category value</span>
+					</div>
+					<div class="bvz-h-col">
+						<span title="Add an alert">
+							<i class="material-icons cursor-hand" ng-click="createNewSubCategoryColorIndicator();" mat-tooltip="Add new sub category">add</i>
+						</span>
+					</div>
+					<div style="clear: both"></div>
+				</div>
+				<div class="row-data-scrollable" ng-class="{'scroll-with-tab': datasetDesignProperties[component.designData.class].dataSetTabs.length > 0}">
+					<div class="bvz-row" 
+						ng-repeat="list in component[component.subElement].SubCategoryColors.subCategoryColor track by $index" >
+						<div class="bvz-d-col">
+							<span>
+								<input type="text" placeholder="Sub category name" value="{{list.subCategoryName}}"  
+									class="propValue" ng-model="list.subCategoryName" />
+							</span>
+						</div>
+						<div class="bvz-d-col">
+							<span>
+								<input type="color" class="propValue" ng-model="list.color" />
+							</span>
+							<span>
+									<i class="material-icons cursor-hand" ng-model="comp.Delete" ng-click="deleteSubCategoryIndicator(list);" mat-tooltip="Delete">delete</i>
+							</span>
+						</div>
+						<div style="clear: both"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

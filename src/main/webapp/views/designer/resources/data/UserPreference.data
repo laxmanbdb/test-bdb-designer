@@ -1,0 +1,33 @@
+{
+    "showGridLines": "false",
+	"snapToGrid": {
+		"enable": "true",
+		"size": "1"
+	},
+    "compSelcOpts": {
+    	"thickness": 1,
+		"color": "#999999"
+    },
+    "defaultSettings": {
+    	"language": "en-US",
+    	"notifyOnSuccess": true,
+    	"blockNotificaton": true,
+    	"showSettingsButton": true,
+        "hideShadow": true,
+        "syncComponentProperty": false,
+        "enableMultipleDrag": false,
+        "gridLinesColor": "#CCCCCC",
+        "dashboardHeight": "566",
+        "dashboardWidth": "929",
+        "showDashboardBorder": true,
+        "dashboardBorderThickness": "1",
+        "dashboardBorderColor": "#e6e6e6",
+        "fixedDashboardDimensions": false,
+        "dashboardBackgroundColor": "#FFFFFF"
+    },
+	"defaultLimitConfigs": {
+		"excelFile": "3145728",
+		"imgFile": "3145728",
+		"bvzxFile": "5242880"
+	}
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-5 {
+        fill: #ffaf6d;
+      }
+
+      .cls-1, .cls-4 {
+        stroke: #ffaf6d;
+      }
+
+      .cls-6 {
+        stroke: #ececec;
+      }
+
+      .cls-6, .cls-7, .cls-8, .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-7, .cls-2 {
+        stroke: #7c4dff;
+      }
+
+      .cls-9 {
+        fill: #7c4dff;
+      }
+
+      .cls-3 {
+        stroke: #026685;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Group_3077">
+        <g id="Rectangle_206">
+          <rect class="cls-8" width="50" height="50" rx="6" ry="6"/>
+          <rect class="cls-6" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+        </g>
+        <line id="Line_30" class="cls-8" x1="17.9" y1="14.3" x2="23.5" y2="24.4"/>
+        <line id="Line_31" class="cls-3" x1="17.9" y1="14.3" x2="18.8" y2="16"/>
+        <line id="Line_33" class="cls-3" x1="22.6" y1="22.8" x2="23.5" y2="24.4"/>
+        <line id="Line_34" class="cls-2" x1="25" y1="26.5" x2="37.4" y2="33.5"/>
+        <line id="Line_35" class="cls-3" x1="25" y1="26.5" x2="26.6" y2="27.4"/>
+        <line id="Line_37" class="cls-3" x1="35.7" y1="32.5" x2="37.4" y2="33.5"/>
+        <line id="Line_38" class="cls-4" x1="34.8" y1="15.4" x2="23" y2="26.9"/>
+        <circle id="Ellipse_66" class="cls-5" cx="35.2" cy="15.1" r="2.8"/>
+        <line id="Line_41" class="cls-4" x1="27.7" y1="38.5" x2="24.5" y2="26.1"/>
+        <circle id="Ellipse_68" class="cls-5" cx="27.5" cy="38.3" r="1.7"/>
+        <path id="Path_337" class="cls-7" d="M17.9,14.5l6.7,11.6-10.8,6.8"/>
+        <path id="Path_338" class="cls-7" d="M25,26.3l11.4,6.5"/>
+        <circle id="Ellipse_102" class="cls-9" cx="17.9" cy="14.5" r="2.3"/>
+        <circle id="Ellipse_103" class="cls-9" cx="13.6" cy="32.9" r="3.3"/>
+        <circle id="Ellipse_104" class="cls-9" cx="36.9" cy="32.9" r="3.6"/>
+        <circle id="Ellipse_105" class="cls-1" cx="24.5" cy="26.1" r="4.3"/>
+      </g>
+    </g>
+  </g>
+</svg>

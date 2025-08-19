@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>HTML5 Charting</TITLE>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<link href="src/bizviz.charting/components/resources/css/charting.min.css" rel="stylesheet" type="text/css" />
+		<link href="src/bizviz.charting/components/resources/css/bdbizviz-font-styles.min.css" rel="stylesheet" type="text/css"/>
+		<link href="src/bizviz.charting/components/resources/css/easyui.min.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="src/bizviz.charting/components/resources/js/jquery-1.10.2.js"></script>
+		<script src="src/bizviz.charting/components/resources/js/jQuery.blockUI.min.js?v=3.6.0.20180607.110328"></script>
+		<script src="../../shared/model/url-conf.data"></script>
+		<script src="../../shared/model/url-api.data"></script>
+		<script src="src/bizviz.charting/components/buttons/ExportPlugin.js"></script>
+		<script src="src/bizviz.charting/Widget.js"></script>
+		<script src="src/bizviz.charting/components/Chart.js"></script>
+		<script src="../designer/build-config/build/appSettings.js"></script>
+		<script src="src/bizviz.framework/FrameworkUtil.js"></script>
+		<script src="src/bizviz.charting/components/charts/PieChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/TimelineChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/BarChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/HeatMapChart.js"></script>
+		<script src="src/bizviz.charting/components/resources/js/jquery-ui-1.10.4.custom.min.js"></script>
+		<script src="src/bizviz.charting/components/resources/js/jquery.easyui.min.js"></script>
+		<script src="src/bizviz.charting/components/resources/js/jquery.ui.treemap.js"></script>
+		<script src="src/bizviz.charting/components/charts/TreeMapChart.js"></script>
+		<script src="src/bizviz.charting/components/charts/ColumnStackChart.js"></script>
+		<script src="src/bizviz.charting/components/singleValuedComponent/Legend.js"></script>
+		<style>
+			#mainDiv{
+				position: absolute; 
+				display: block; 
+				height: calc(100% - 40px); 
+				width: 100%; 
+				left: 0px; 
+				top: 40px;
+				background:#cccccc;
+			}
+			.draggableWidgetDiv{
+				box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.1) !important;
+			}
+			label{
+				cursor: pointer;
+			}
+			
+			.minMax{
+				margin: 13px 8px 8px 8px;
+			}
+			.minMax[placement^=bottom]:before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+			    top: 10px;
+			    left: 40%;
+			    border-width: 0 14px 14px;
+			    border-color: transparent transparent #ffffff transparent;
+			    border-style: solid;
+			}
+			.toolTipDiv {
+				border: none !important;			
+			    background: none!important;
+			}
+			
+			.toolTipDiv[placement^=top]:before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+				left: 40%;
+				
+			    border-width: 0 14px 14px;
+			    border-style: solid;
+			    border-width: 14px 14px 0;
+				border-top-color: #ffffff;
+				color: transparent;
+			}
+			.toolTipDiv[placement^=top-left]:before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+				left: 10%;
+				
+			    border-width: 0 14px 14px;
+			    border-style: solid;
+			    border-width: 14px 14px 0;
+				border-top-color: #ffffff;
+				color: transparent;
+			}
+			.toolTipDiv[placement^=top-right]:before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+				left: 70%;
+				
+			    border-width: 0 14px 14px;
+			    border-style: solid;
+			    border-width: 14px 14px 0;
+				border-top-color: #ffffff;
+				color: transparent;
+			}
+			
+			.toolTipDiv[placement^=bottom]:after {
+				content: "";
+				display: inline-block;
+				position: absolute;
+			    top: 0px;
+			    left: 40%;
+			    border-width: 0 14px 14px;
+			    border-color: transparent transparent #ffffff transparent;
+			    border-style: solid;
+			}
+			.toolTipDiv[placement^=bottom-left]:after {
+				content: "";
+				display: inline-block;
+				position: absolute;
+			    top: 0px;
+			    left: 10%;
+			    border-width: 0 14px 14px;
+			    border-color: transparent transparent #ffffff transparent;
+			    border-style: solid;
+			}
+			.toolTipDiv[placement^=bottom-right]:after {
+				content: "";
+				display: inline-block;
+				position: absolute;
+			    top: 0px;
+			    left: 70%;
+			    border-width: 0 14px 14px;
+			    border-color: transparent transparent #ffffff transparent;
+			    border-style: solid;
+			}
+			
+			table.chart-tooltip.bdtooltip {
+				border: none !important;
+				background: none !important;
+			}
+			
+			.toolTipDiv[placement^=top]>.chart-tooltip.bdtooltip {
+				margin: 8px 8px 13px 8px;
+			}
+			
+			.toolTipDiv[placement^=bottom]>.chart-tooltip.bdtooltip {
+				margin: 13px 8px 8px 8px;
+			}
+			
+			table {
+			  border-collapse: collapse !important;
+			  border-style: hidden !important;
+			}
+			table td {
+			  border: 1px solid rgb(224, 223, 223) !important;
+			}
+			
+			.toolTipDiv table tbody {
+				background: #ffffff !important;
+				box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+				-webkit-box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+    			-moz-box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+			}
+		</style>
+	</HEAD>
+	<BODY oncontextmenu="return false">
+		<div>
+			<input type="radio" class="chartName" id="PieChart" name="chartName" value="PieChart"checked="checked"><label for="PieChart">PieChart</label>
+		    <input type="radio" class="chartName" id="TimelineChart" name="chartName" value="TimelineChart"><label for="TimelineChart">TimelineChart</label>
+		    <input type="radio" class="chartName" id="BarChart" name="chartName" value="BarChart"><label for="BarChart">BarChart</label>
+		    <input type="radio" class="chartName" id="HeatMapChart" name="chartName" value="HeatMapChart"><label for="HeatMapChart">HeatMapChart</label>
+		    <input type="radio" class="chartName" id="TreeMapChart" name="chartName" value="TreeMapChart"><label for="TreeMapChart">TreeMapChart</label>
+		    <input type="radio" class="chartName" id="ColumnStackChart" name="chartName" value="ColumnStackChart"><label for="ColumnStackChart">ColumnStackChart</label>
+		</div>
+		<div id="mainDiv"></div>
+		<div id="toolTipDiv"></div>
+		<script>
+			var jqEasyUI = jQuery.noConflict( true );
+			$ = jqEasyUI;
+			function getLegend(chartName, chartData, chartObj, scb){
+				$.ajax({url: "../designer/resources/bizvizchart-themes/default-theme/singleValuedComponent/"+chartName+".data", success: function(data){
+					var data = JSON.parse(data)[chartName];
+					var	container = $('#mainDiv'), 
+					zIndex = 10, 
+					chart = ReflectUtil.newInstance(chartName, container, zIndex);
+					data.Properties.Object.x = 640;
+					data.Properties.Object.y = 10;
+					data.Properties.Object.width = 175;
+					data.Properties.Object.height = 300;
+					data.Properties.Object.legendCheckbox = true;
+					data.Properties.Object.associatedChartId = chartData.Properties.Object.objectID;
+					data.Properties.Object.Legend.showBorder = true;
+					chart.associatedChartObject = chartObj;
+					chart.getAssociatedChartObject = function() {
+						return chartObj;
+					}
+					chart.setProperty( data.Properties );
+					chart.draw();
+					scb && scb(data, chart);
+				}});
+			};
+			function draw(chartName){
+				$(".draggableWidgetDiv").remove();
+				$.ajax({url: "../designer/resources/bizvizchart-themes/default-theme/chart/"+chartName+".data", success: function(data){
+					var data = JSON.parse(data)[chartName];
+					var	container = $('#mainDiv'), 
+					zIndex = 10, 
+					chart = ReflectUtil.newInstance(chartName, container, zIndex);
+					getLegend("Legend", data, chart, function(legendData, legendObj){
+						data.Properties.Object.Chart.associatedLegendId = legendData.Properties.Object.objectID;
+						chart.getLegendComponentObj = function() {
+							return legendObj;
+						}
+						chart.setProperty( data.Properties );
+						chart.setDataProvider( data.Data );
+						chart.setFields( data.Fields );
+						chart.draw();
+					});
+				}});
+			}
+			draw("PieChart");
+			$(".chartName").change(function(){
+				draw(this.value);
+			});
+		</script>
+	</BODY>
+</HTML>

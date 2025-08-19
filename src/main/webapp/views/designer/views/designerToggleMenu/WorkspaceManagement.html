@@ -1,0 +1,120 @@
+<!-- 
+    Don't delete this comment to avoid confusion.
+    This is the old page and we are not using it anymore.
+-->
+<div class="col-sm-9 ">
+	<div class="col-sm-7 flat-card">
+		<span><h4 class="pad10 inline-block" >Workspace</h4>
+					<i class="cursor-hand glyphicon glyphicon-refresh" title="Refresh" ng-click="reloadWorkSpaces();"></i>
+				</span>
+		<div class="object-search-field">
+			<input type="text" placeholder="Search"
+				ng-model="workSpaceAndDashboardSearch" />
+		</div>
+		<div style="height: 400px; overflow: auto;">
+			<div class="">
+				<!-- This will repeat for each Workspace -->
+				<div class="ds-connector">
+					<div ng-repeat="workspace in modal.wsObj.wsList" class="cursor-hand">
+						<div class="ws-node work-space" ng-click="setSelectedStyles($event,workspace)">
+							<span class="ds-node-icon" ng-click="handleCollapseExpand( $event )" >
+								<i class="glyphicon glyphicon-folder-close" />
+							</span>
+							<div title="{{ workspace.dashboardName }}" 
+								class="ds-name-in-tree ds-node-name">
+									{{ workspace.dashboardName }}
+							</div>
+							<span class="ws-edit-opt pull-right">
+								<i class="glyphicon glyphicon-pencil" 
+									title="Rename" 
+									ng-click="updateDashboard($event,workspace,'renameWorkspace')" />
+								<i class="glyphicon glyphicon-trash" 
+									title="Remove" 
+									ng-click="updateDashboard($event,workspace,'deleteWorkspace')" />
+							</span>
+							<span class="ws-lock-opt pull-right">
+								<i class="glyphicon glyphicon-lock" title="Workspace in use" />
+							</span>
+						</div>
+						<div class="dash-boards" style="display: none" >
+							<div class="" 
+								ng-repeat="dashboard in modal.wsObj.dbList | filter:workSpaceAndDashboardSearch"
+								ng-if="workspace.dashboardId==dashboard.parentId">
+								<!-- This will repeat for Connections -->
+								<div class="ds-connection ws-node"
+									ng-click="setSelectedStyles($event,dashboard )">
+									<span class="ds-node-icon">
+										<i class="glyphicon glyphicon-file" />
+									</span>
+									<div title="{{ dashboard.dashboardName }}" 
+										class="ds-name-in-tree ds-node-name">
+											{{ dashboard.dashboardName }}
+									</div>
+									<span class="ws-edit-opt pull-right">
+										<i class="glyphicon glyphicon-pencil" 
+											title="Rename" 
+											ng-click="updateDashboard($event,dashboard,'renameDashboard')" />
+										<i class="glyphicon glyphicon-edit" 
+											title="Open Dashboard"
+											ng-click="OpenDasboard( dashboard, $event )" />
+										<i class="glyphicon glyphicon-level-up"
+											title="Move To Another workspace"
+											ng-click="updateDashboard($event,dashboard,'moveDashboard')" />
+										<i class="glyphicon glyphicon-trash" 
+											title="Remove"
+											ng-click="updateDashboard($event,dashboard,'deleteDashboard')" />
+									</span>
+									<span class="ws-lock-opt pull-right">
+										<i class="glyphicon glyphicon-lock"
+											title="Currently opened in designer" />
+									</span>
+								</div>
+								<!-- Repeat Ends of Dashboards -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="updateModalDialog" class="modal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.updateModalDialog == true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" ng-click="setModelWatcherStatus('updateModalDialog', false);" aria-hidden="true" />
+						<h4 class="modal-title" id="updateModelTitle">
+							{{updateModalHeader}}</h4>
+					</div>
+					<div class="modal-body">
+						<form role="form">
+							<div class="form-group"
+								ng-show="updateDashAction=='renameDashboard'||updateDashAction=='renameWorkspace'">
+								<label for="text">{{dashboardNameLabel}}</label> <input
+									type="text" class="form-control" id="dashboardName"
+									ng-model="modal.dashActionConfig.nameOfDashboardToUpdate" ng-pattern-restrict="^[A-Za-z0-9 ~`!@#$%^&()_+;,.]*$" >
+							</div>
+							<div class="form-group"
+								ng-show="updateDashAction=='moveDashboard'">
+								<label for="text">Workspace :</label> <select
+									ng-model="modal.dashActionConfig.nameOfWorkspaceToUpdate"
+									ng-options="ws as ws.dashboardName for ws in modal.wsObj.wsList">
+								</select>
+							</div>
+							<div class="form-group"
+								ng-show="updateDashAction=='deleteDashboard'||updateDashAction=='deleteWorkspace'">
+								<p class="text-warning">{{deleteWarning}}</p>
+							</div>
+
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-sm btn-primary"
+							data-dismiss="modal" ng-click="setModelWatcherStatus('updateModalDialog', false); updateDashboardOrWorkspace()">
+							{{updateBtnLabel}}</button>
+						<button type="button" class="btn btn-sm btn-default"
+							data-dismiss="modal" ng-click="setModelWatcherStatus('updateModalDialog', false);">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

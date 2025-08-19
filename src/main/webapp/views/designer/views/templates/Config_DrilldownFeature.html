@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>drilldown feature</title>
+</head>
+<body>
+<h1>Drilldown Feature</h1>
+	<h2>Creating Data source Connections for Charts</h2>
+	<p class="contentTextStyle">i) Go to the Dashboard Designer Home Screen.
+								From the Apps drop-down menu, select Dashboard Designer.</p>
+	<p class="contentTextStyle">ii) After Selecting ‘Dashboard Designer’, you will be directed to the Dashboard Designer home screen .</p>
+	<p class="contentTextStyle">iii) Click on the ‘New +’ drop-down menu. You will be presented with 2 options:
+				<ul>	
+					<li><p class="contentTextStyle">Workspace: A folder that is used to contain dashboards</p></li>
+					<li><p class="contentTextStyle">Dashboard: A canvas used for dashboard design and development</p></li>
+				</ul>
+	</p>
+	<p class="contentTextStyle">iv)Select ‘Dashboard’ to create a new dashboard</p>
+	<p class="contentTextStyle">v) After selecting ‘Dashboard’ a canvas (blank working area) will open.</p>
+	<p class="contentTextStyle">vi) Click on the ‘Data source’ icon
+				provided on the right side of the canvas,
+				and view the data connectivity options (ex: CSV, Excel, etc.,).</p>
+	<p class="contentTextStyle">vii) Click on the icon to create a new connection. In this how-to guide, we are 
+			selecting an Excel data connection.</p>
+	<p class="contentTextStyle">Note:
+Since we wish to perform drill down analysis where we can select a piece of the pie-chart and
+the column chart will change to reflect that, we need to create two data sources (i.e. Pie and
+Column)
+	<p class="contentTextStyle">Fill the following details:</p>
+	<ul>
+		<li><p class="contentTextStyle">Name: Name the connection</p></li>
+		<li><p class="contentTextStyle">Browse: Navigate to the Excel file that you wish to use as a data-source.</p></li>
+		<li><p class="contentTextStyle">Sheet Name: Select the sheet you wish to use from the Excel file you have selected.</p></li>
+		<li><p class="contentTextStyle">Load at Start: Enabling this option refreshes the data-source before opening the charts</p></li>
+	</ul>
+	</p>
+	<p class="contentTextStyle">viii)Click on ‘Charts’ icon
+			provided on the right side of the canvas.
+			A list of available components will be displayed.
+			Drag and drop the Column chart component onto the canvas.</p>
+	<div style="padding-top: 5px;">
+	<img
+			src="views/helpIcons/DrillDownPage1.png"
+			style="padding-left: 30px; padding-right: 30px;"
+			class="img-responsive center-block" height="320" width="1080">
+	</div>
+	<p class="contentTextStyle">ix) Connect the Column chart component to an existing data connection:</p>
+		<ul>
+			<li><p class="contentTextStyle">Click on the Dataset at appears next to the chart.</p></li>
+			<li><p class="contentTextStyle">Select a connection from the ‘Available Connections’ dropdown menu (ex:Column)</p></li>
+			<li><p class="contentTextStyle">Drag and drop the fields to their respective series and categories.</p></li>
+		</ul>
+		<p class="contentTextStyle">x)Connect the Pie chart to an existing data connection:</p>
+		<ul>
+			<li><p class="contentTextStyle">Click on the Dataset at appears next to the chart.</p></li>
+			<li><p class="contentTextStyle">Select a connection from the ‘Available Connections’ dropdown (Ex: Pie)</p></li>
+			<li><p class="contentTextStyle">Drag and drop the fields to their respective series and categories.</p></li>
+		</ul>
+		<br>
+	<h2>Enabling Drilldown Option</h2>
+		<p class="contentTextStyle">Apply the following actions:</p>
+			<ul>
+				<li><p class="contentTextStyle">Click on the ‘Script on Load’ tab and apply ‘Auto Reload’ function</p>
+					<div style="padding-top: 5px;">
+					<img
+							src="views/helpIcons/ScriptDrillDown.png"
+							style="padding-left: 30px; padding-right: 30px;"
+							class="img-responsive center-block" height="420" width="1080">
+					</div>
+					<div style="padding-top: 5px;">
+					<img
+							src="views/helpIcons/AutoReload.png"
+							style="padding-left: 30px; padding-right: 30px;"
+							class="img-responsive center-block" height="420" width="1080">
+					</div>
+				</li>
+				<li><p class="contentTextStyle">Click on the ‘Data Connectors’ icon
+			provided to the right side of canvas.Select ‘Column’
+			data source which is listed under ‘Excel’ data source .Select the ‘Condition’ tab and in the Conditions text area,
+			 type the field name which you wish to use to filter data.</p>
+						<div style="padding-top: 5px;">
+						<img
+								src="views/helpIcons/DrillDownConnectionPage.png"
+								style="padding-left: 30px; padding-right: 30px;"
+								class="img-responsive center-block" height="420" width="1080">
+						</div>
+				</li>
+				<li><p class="contentTextStyle">Select the condition from dropdown list and enable the ‘Action’ checkbox (as shown in the above
+									image)</p></li>
+				<li><p class="contentTextStyle">Click on the ‘Preview’ button
+								to perform drilldown analysis.</p>
+					<div style="padding-top: 5px;">
+					<img
+							src="views/helpIcons/DrillDownPreview.png"
+							style="padding-left: 30px; padding-right: 30px;"
+							class="img-responsive center-block" height="420" width="1080">
+					</div>		
+				</li>
+			</ul>
+</body>
+</html>

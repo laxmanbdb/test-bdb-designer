@@ -1,0 +1,520 @@
+{
+	"Info": [{
+		"class": "SemiGauge"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Show Ticks : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showTicks",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Show Range : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showMinMax",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Show Title : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showTitle",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Title : ",
+		"type": "text",
+		"value": "Gauge",
+		"maxLength": "15",
+		"attributeName": "title",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "SemiGauge"
+	}],
+	"Background": [{
+		"label": "Gradient Rotation : ",
+		"type": "number",
+		"min": "0",
+		"max": "360",
+		"step": "1",
+		"value": "45",
+		"attributeName": "bgGradientRotation",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": ".1",
+		"count": 1,
+		"value": "1",
+		"attributeName": "bgAlpha",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Gradient : ",
+		"heading": "Background gradient colors",
+		"type": "customColor",
+		"value": "#000000",
+		"attributeName": "bgGradients",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Border : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showBorder",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Border Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "borderColor",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Border Radius : ",
+		"type": "number",
+		"min": "0",
+		"max": "25",
+		"step": "1",
+		"value": "5",
+		"attributeName": "borderRadius",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "SemiGauge"
+	}],
+	"Indicators": [{
+			"label": "Ranges : ",
+			"heading": "Indicators",
+			"type": "customGaugeAlertWindow",
+			"value": "",
+			"attributeName": "colors",
+			"propertyName": "SemiGauge"
+		}, {
+			"label": "Value Variable : ",
+			"type": "textNumeric",
+			"value": "50",
+			"max": "20",
+			"attributeName": "valueVariable",
+			"propertyName": "SemiGauge"
+		}, {
+			"label": "Target Value : ",
+			"type": "textNumeric",
+			"value": "50",
+			"max": "20",
+			"attributeName": "targetvalue",
+			"propertyName": "SemiGauge"
+		}, {
+			"label": "Minimum Range : ",
+			"type": "text",
+			"value": "0",
+			"attributeName": "minValue",
+			"propertyName": "SemiGauge"
+		}, {
+			"label": "Maximum Range : ",
+			"type": "text",
+			"value": "100",
+			"attributeName": "maxValue",
+			"propertyName": "SemiGauge"
+		}
+
+	],
+	"Style": [{
+		"label": "Speedometer Width : ",
+		"type": "number",
+		"min": "5",
+		"max": "100",
+		"step": "1",
+		"value": "10",
+		"attributeName": "speedometerwidth",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Needle Width : ",
+		"type": "number",
+		"min": "2",
+		"max": "10",
+		"step": "1",
+		"value": "3",
+		"attributeName": "needlewidth",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Tick Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "ticksColor",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Needle Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "pointerColor",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Center Color : ",
+		"type": "color",
+		"value": "#fbfbfb",
+		"attributeName": "centerColor",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Target Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "targetcolor",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Range Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "markerfontColor",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Label Font Color : ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "fontColor",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Title Font Color : ",
+		"type": "color",
+		"value": "#fbfbfb",
+		"attributeName": "titleFontColor",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Marker Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "markerfontFamily",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Label Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "fontFamily",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Title Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "titleFontFamily",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Title Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "20",
+		"step": "1",
+		"value": "12",
+		"attributeName": "titlefontSize",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Label Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "fontSize",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Range Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "24",
+		"step": "1",
+		"value": "12",
+		"attributeName": "markerfontSize",
+		"propertyName": "SemiGauge"
+	}],
+	"Formatter": [{
+		"label": "Unit : ",
+		"type": "select",
+		"value": "none",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "auto",
+			"value": "Auto"
+		}, {
+			"key": "Percent",
+			"value": "%"
+		}, {
+			"key": "Thousand",
+			"value": "K"
+		}, {
+			"key": "Million",
+			"value": "M"
+		}, {
+			"key": "Billion",
+			"value": "B"
+		}, {
+			"key": "Trillion",
+			"value": "T"
+		}, {
+			"key": "Quadrillion",
+			"value": "Q"
+		}],
+		"attributeName": "SecondaryUnit",
+		"propertyName": "SemiGauge"
+	}, {
+			"label": "Precision :",
+			"type": "select",
+			"value": "default",
+			"options": [{
+				"key": "default",
+				"value": "Default"
+			}, {
+				"key": "0",
+				"value": "None"
+			}, {
+				"key": "1",
+				"value": ".0"
+			}, {
+				"key": "2",
+				"value": ".00"
+			}, {
+				"key": "3",
+				"value": ".000"
+			}, {
+				"key": "4",
+				"value": ".0000"
+			}, {
+				"key": "6",
+				"value": ".000000"
+			}, {
+				"key": "8",
+				"value": ".00000000"
+			}],
+			"attributeName": "Precision",
+			"propertyName": "SemiGauge"
+		}, {
+		"label": "Currency : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "Cent",
+			"value": "CENT"
+		}, {
+			"key": "Euro",
+			"value": "EURO"
+		}, {
+			"key": "Rupees",
+			"value": "IND"
+		}, {
+			"key": "Pound",
+			"value": "POUND"
+		}, {
+			"key": "USD",
+			"value": "USD"
+		}, {
+			"key": "Yen",
+			"value": "YEN"
+		}],
+		"attributeName": "Unit",
+		"propertyName": "SemiGauge"
+	}, {
+		"label": "Position : ",
+		"type": "select",
+		"value": "suffix",
+		"options": [{
+			"key": "prefix",
+			"value": "Prefix"
+		}, {
+			"key": "suffix",
+			"value": "Suffix"
+		}],
+		"attributeName": "SignPosition",
+		"propertyName": "SemiGauge"
+	}]
+}

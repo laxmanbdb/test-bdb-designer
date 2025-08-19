@@ -1,0 +1,876 @@
+{
+"helpMenus": [
+	{
+		"id": "HelpIntroduction",
+		"title": "Introduction",
+		"isActive": false,
+		"enabled": true,
+		"Url":"./views/templates/HelpIntroduction.html"
+	},
+	{
+		"id": "HowTo",
+		"title": "How to ?",
+		"isActive": false,
+		"enabled": true,
+		"subMenu": [{
+				"id": "OpenAndCloseDashboardDesigner",
+				"title": "Open & Close Dashboard Designer",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"Url":"./views/templates/OpenAndCloseDashboardDesigner.html"
+			},
+			{
+				"id": "CreateANewDashboard",
+				"title": "Create a New Dashboard",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"Url":"./views/templates/CreateANewDashboard.html"
+			},
+			{
+				"id": "ConnectingToData",
+				"title": "Connecting to Data",
+				"enabled": true,
+				"isActive": false,
+				"iconClass": "",
+				"Url":"./views/templates/ConnectingToData.html"
+			},
+			{
+				"id": "DashboardObjects",
+				"title": "Dashboard Objects",
+				"enabled": true,
+				"isActive": false,
+				"iconClass": "",
+				"Url":"./views/templates/DashboardObjects.html"
+			},
+			{
+				"id": "ManageAndSharingOptions",
+				"title": "Manage and Sharing Options",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"Url":"./views/templates/ManageAndSharingOptions.html"
+			}
+		]
+	},
+	{
+		"id": "COMPONENTGALLERY",
+		"title": "Component Gallery",
+		"isActive": false,
+		"enabled": true,
+		"subMenu": [{
+				"id": "HelpCharts",
+				"title": "Charts",
+				"isActive": false,
+				"enabled": true,
+				"childSubMenu": [{
+						"id": "HelpArea",
+						"title": "Area",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/areachart.html"
+					},
+					{
+						"id": "HelpBar",
+						"title": "Bar",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/barchart.html"
+					},
+					{
+						"id": "HelpBoxPlot",
+						"title": "Box Plot",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/boxplotchart.html"
+					},
+					{
+						"id": "HelpBubble",
+						"title": "Bubble",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/bubblechart.html"
+					},
+					{
+						"id": "HelpBullet",
+						"title": "Bullet",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/bulletchart.html"
+					},
+					{
+						"id": "HelpCandlestick",
+						"title": "Candlestick",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/candlestickchart.html"
+					},
+					{
+						"id": "HelpChevron",
+						"title": "Chevron",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/chevronchart.html"
+					},
+					{
+						"id": "HelpCircumplex",
+						"title": "Circumplex",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/circumplexchart.html"
+					},
+					{
+						"id": "HelpGroupBar",
+						"title": "Group Bar",
+						"enabled": false,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/groupbarchart.html"
+					},
+					{
+						"id": "HelpHeatMap",
+						"title": "Heat Map",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/heatmapchart.html"
+					},
+					{
+						"id": "HelpMixed",
+						"title": "Mixed",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/mixedchart.html"
+					},
+					{
+						"id": "HelpPie",
+						"title": "Pie",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/piechart.html"
+					},
+					{
+						"id": "HelpProjectTimeline",
+						"title": "Project Timeline",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/projecttimelinechart.html"
+					},
+					{
+						"id": "HelpPyramid",
+						"title": "Pyramid",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/pyramidchart.html"
+					},
+					{
+						"id": "HelpScatterPlot",
+						"title": "Scatter Plot",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/scatterplotchart.html"
+					},
+					{
+						"id": "HelpSpider",
+						"title": "Spider",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/spiderchart.html"
+					},
+					{
+						"id": "HelpTextAnalyzer",
+						"title": "Text Analyzer",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/textanalyzerchart.html"
+					},
+					{
+						"id": "HelpTimeLine",
+						"title": "Time Line",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/timelinechart.html"
+					},
+					{
+						"id": "HelpTreemap",
+						"title": "Treemap",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/treemapchart.html"
+					},
+					{
+						"id": "HelpTrellis",
+						"title": "Trellis",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/trellischart.html"
+					},
+					{
+						"id": "HelpWordCloud",
+						"title": "Word Cloud",
+						"enabled": false,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/wordcloudchart.html"
+					}
+				]
+			}, {
+				"id": "HelpGrids",
+				"title": "Grids",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"childSubMenu": [{
+						"id": "HelpDataGrid",
+						"title": "DataGrid",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/datagrid.html"
+					},
+					{
+						"id": "HelpPagingDataGrid",
+						"title": "Paging Datagrid",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/pagingDataGrids.html"
+					},
+					{
+						"id": "HelpScorecard",
+						"title": "Scorecard",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/scorecards.html"
+					},
+					{
+						"id": "HelpPivot",
+						"title": "Pivot Grid",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/pivotgrid.html"
+					}
+				]
+			},
+			{
+				"id": "HelpFilters",
+				"title": "Filters",
+				"enabled": true,
+				"isActive": false,
+				"iconClass": "",
+				"childSubMenu": [{
+						"id": "HelpCheckBox",
+						"title": "Check Box",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/checkBox.html"
+					},
+					{
+						"id": "HelpComboBox",
+						"title": "Combo Box",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/comboBox.html"
+					},
+					{
+						"id": "HelpHierarchicalComboBox",
+						"title": "Hierarchical Combo Box",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/hierarchicalComboBox.html"
+					},
+					{
+						"id": "HelpListBox",
+						"title": "List Box",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/listBox.html"
+					},
+					{
+						"id": "HelpRadioButton",
+						"title": "Radio Button",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/radioButton.html"
+					}
+				]
+			},
+			{
+				"id": "HelpOthers",
+				"title": "Others",
+				"enabled": true,
+				"isActive": false,
+				"iconClass": "",
+				"childSubMenu": [{
+						"id": "HelpGauge",
+						"title": "Gauge",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/gauge.html"
+					},
+					{
+						"id": "HelpGraphics",
+						"title": "Graphics",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/graphics.html"
+					},
+					{
+						"id": "HelpSVGImage",
+						"title": "SVG Image",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/svgImage.html"
+					},
+					{
+						"id": "HelpURL",
+						"title": "URL",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/url.html"
+					},
+					{
+						"id": "HelpHslider",
+						"title": "H-Slider/V-Slider",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/slider.html"
+					}, {
+						"id": "HelpInfoButton",
+						"title": "Info Button",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/infoButton.html"
+					},
+					{
+						"id": "HelpTextBox",
+						"title": "Text Box",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/textBox.html"
+					},
+					{
+						"id": "HelpTrend",
+						"title": "Trend",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/trend.html"
+					},
+					{
+						"id": "HelpLabel",
+						"title": "Label",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/label.html"
+					},
+					{
+						"id": "HelpDatePicker",
+						"title": "Date Picker",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/datePicker.html"
+					}, {
+						"id": "HelpStepper",
+						"title": "Stepper",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/stepper.html"
+					},
+					{
+						"id": "HelpImage",
+						"title": "Image",
+						"isActive": false,
+						"enabled": true,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/image.html"
+					},
+					{
+						"id": "HelpExportButton",
+						"title": "Export Button",
+						"enabled": true,
+						"isActive": false,
+						"iconClass": "",
+						"Url":"./views/templates/Comp/exportButton.html"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "CONFIGURATION",
+		"title": "Configuration",
+		"isActive": false,
+		"enabled": true,
+		"subMenu": [{
+				"id": "AlertInScorecard",
+				"title": "Alert in Scorecard",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"Url":"./views/templates/Config_AlertInScorecard.html"
+			},
+			{
+				"id": "DrilldownFeature",
+				"title": "Drilldown Feature",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"Url":"./views/templates/Config_DrilldownFeature.html"
+			},
+			{
+				"id": "DynamicVisibility",
+				"title": "Dynamic Visibility",
+				"enabled": true,
+				"isActive": false,
+				"iconClass": "",
+				"Url":"./views/templates/Config_DynamicVisibility.html"
+			},
+			{
+				"id": "PublishDashboard",
+				"title": "Publish Dashboard",
+				"enabled": true,
+				"isActive": false,
+				"iconClass": "",
+				"Url":"./views/templates/Config_PublishDashboard.html"
+			},
+			{
+				"id": "ToolTip",
+				"title": "Tooltip",
+				"enabled": true,
+				"isActive": false,
+				"iconClass": "",
+				"Url":"./views/templates/Config_ToolTip.html"
+			}
+		]
+	},
+	{
+		"id": "CONNECTION",
+		"title": "Connection",
+		"isActive": false,
+		"enabled": true,
+		"subMenu": [{
+				"id": "CSVDataConnection",
+				"title": "CSV Connector",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"Url":"./views/templates/Conn_CSVDataConnection.html"
+			},
+			{
+				"id": "ExcelDataConnection",
+				"title": "Excel Connector",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"Url":"./views/templates/Conn_ExcelDataConnection.html"
+			},
+			{
+				"id": "WebService",
+				"title": "Data Service",
+				"enabled": true,
+				"isActive": false,
+				"iconClass": "",
+				"Url":"./views/templates/Conn_WebService.html"
+			},
+			{
+				"id": "PredictiveService",
+				"title": "Predictive Service",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"Url":"./views/templates/Conn_PredictiveService.html"
+			},
+			{
+				"id": "DataStore",
+				"title": "Data Store",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"Url":"./views/templates/Conn_DataStore.html"
+			},
+			{
+				"id": "WebSocket",
+				"title": "Web Socket",
+				"isActive": false,
+				"enabled": true,
+				"iconClass": "",
+				"Url":"./views/templates/Conn_WebSocket.html"
+			},
+			{
+				"id": "MergedData",
+				"title": "Merged Data",
+				"enabled": true,
+				"isActive": false,
+				"iconClass": "",
+				"Url":"./views/templates/Conn_MergedData.html"
+			}
+		]
+	},
+	{
+		"id": "SCRIPTANDSAMPLES",
+		"title": "Script & Samples",
+		"isActive": false,
+		"enabled": true,
+		"Url":"./views/templates/SCRIPTANDSAMPLES.html"
+	},
+	{
+		"id": "UTILITY",
+		"title": "Keyboard Shortcuts",
+		"isActive": false,
+		"enabled": true,
+		"Url":"./views/templates/Utility.html"
+	},
+	{
+		"id": "REFERENCES",
+		"title": "References",
+		"isActive": false,
+		"enabled": true,
+		"Url":"./views/templates/REFERENCES.html"
+	},
+	{
+		"id": "ONLINESUPPORT",
+		"title": "Online Support",
+		"isActive": false,
+		"enabled": true,
+		"Url" :"./views/templates/ONLINESUPPORT.html"
+	}
+],
+"helpMenus_UTILITY_Data": [
+		{"key": "ALT+CTRL+N", "status": "active", "description": "Create new dashboard."},
+		{"key": "CTRL+O", "status": "active", "description": "Open a dashboard from local machine."},
+		{"key": "CTRL+S", "status": "active", "description": "Save dashboard."},
+		{"key": "CTRL+SHIFT+S", "status": "active", "description": "SaveAs dashboard (Save to another workspace)."},
+		{"key": "ALT+CTRL+S", "status": "active", "description": "Save to local disk."},
+		{"key": "CTRL+G", "status": "disabled", "description": "Manage component groups."},
+		{"key": "CTRL+J", "status": "active", "description": "Copy component JSON."},
+		{"key": "CTRL+Z", "status": "active", "description": "Undo the property change."},
+		{"key": "CTRL+Y", "status": "active", "description": "Redo the property change."},
+		{"key": "CTRL+A", "status": "active", "description": "Select all components."},
+		{"key": "Delete", "status": "active", "description": "Delete selected component(s)."},
+		{"key": "LEFT", "status": "active", "description": "Move selected component left by one pixel."},
+		{"key": "RIGHT", "status": "active", "description": "Move selected component right one pixel."},
+		{"key": "UP", "status": "active", "description": "Move selected component up one pixel."},
+		{"key": "DOWN", "status": "active", "description": "Move selected component down one pixel."},
+		{"key": "CTRL+B", "status": "active", "description": "Send selected component back one step."},
+		{"key": "CTRL+SHIFT+B", "status": "active", "description": "Send selected component backward at the end."},
+		{"key": "CTRL+F", "status": "active", "description": "Bring selected component to front one step."},
+		{"key": "CTRL+SHIFT+F", "status": "active", "description": "Bring selected component forward at the front."}
+	],
+"helpMenus_REFERENCES_Data": [
+	{
+		"Plugin": "jquery",
+		"Version": "1.10.2",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/jquery/jquery",
+		"Details": ""
+	},
+	{
+		"Plugin": "jquery-ui",
+		"Version": "1.10.2",
+		"LicenceType": "MIT",
+		"Source": "http://jqueryui.com",
+		"Details": ""
+	},
+	{
+		"Plugin": "jQuery.blockUI",
+		"Version": "2.66.0",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/malsup/blockui/",
+		"Details": ""
+	},
+	{
+		"Plugin": "jquery.easyui",
+		"Version": "1.4.1",
+		"LicenceType": "FL/ CL",
+		"Source": "http://www.jeasyui.com/license_freeware.php",
+		"Details": "http://www.jeasyui.com/download/index.php"
+	},
+	{
+		"Plugin": "jquery.ui.treemap",
+		"Version": "1.0.0",
+		"LicenceType": "EPL",
+		"Source": "https://github.com/evancarey/jsTreemap/blob/master/js/jquery.ui.treemap.js",
+		"Details": "https://www.eclipse.org/legal/epl-v10.html"
+	},
+	{
+		"Plugin": "jquery.listswap",
+		"Version": "1.0.0",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/phedde/listSwap/blob/master/jquery.listswap.js",
+		"Details": "http://phedde.github.io/listswap/"
+	},{
+		"Plugin": "BDB Fonts",
+		"Version": "3.0.0",
+		"LicenceType": "BDB",
+		"Source": "//app.bdb.ai/designer/views/charting/src/bizviz.charting/components/resources/font-icons.html",
+		"Details": ""
+	},
+	{
+		"Plugin": "Spectrum Colorpicker",
+		"Version": "1.7.0",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/bgrins/spectrum",
+		"Details": ""
+	},
+	{
+		"Plugin": "Select2",
+		"Version": "4.0.0",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/select2/select2",
+		"Details": ""
+	},
+	{
+		"Plugin": "Modernizr",
+		"Version": "2.8.3",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/Modernizr/Modernizr",
+		"Details": ""
+	},
+	{
+		"Plugin": "AngularJS",
+		"Version": "1.3.13",
+		"LicenceType": "MIT",
+		"Source": "http://angularjs.org",
+		"Details": ""
+	},
+	{
+		"Plugin": "AngularJS(Sanitize)",
+		"Version": "1.3.13",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/angular/bower-angular-sanitize",
+		"Details": ""
+	},
+	{
+		"Plugin": "angular-translate",
+		"Version": "2.8.1",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/angular-translate/angular-translate",
+		"Details": ""
+	},
+	{
+		"Plugin": "angular-translate(static loader files)",
+		"Version": "2.8.1",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/angular-translate/bower-angular-translate-loader-static-files",
+		"Details": ""
+	},
+	{
+		"Plugin": "AngularJS angularRoute",
+		"Version": "1.3.10",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/angular/bower-angular-route",
+		"Details": ""
+	},
+	{
+		"Plugin": "angular-hotkeys",
+		"Version": "1.4.5",
+		"LicenceType": "MIT",
+		"Source": "https://chieffancypants.github.io/angular-hotkeys",
+		"Details": ""
+	},
+	{
+		"Plugin": "angular-drag-and-drop-lists",
+		"Version": "1.2.0",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/marceljuenemann/angular-drag-and-drop-lists",
+		"Details": ""
+	},
+	{
+		"Plugin": "angular-select2",
+		"Version": "4.0.3",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/angular-ui/ui-select2",
+		"Details": ""
+	},
+	{
+		"Plugin": "angular-notify",
+		"Version": "2.5.0",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/cgross/angular-notify",
+		"Details": ""
+	},
+	{
+		"Plugin": "ngDraggable",
+		"Version": "0.1.8",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/fatlinesofcode/ngDraggable",
+		"Details": ""
+	},
+	{
+		"Plugin": "codemirror",
+		"Version": "5.5.1",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/codemirror/codemirror",
+		"Details": ""
+	},
+	{
+		"Plugin": "codemirror javascript",
+		"Version": "5.5.1",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/codemirror/codemirror",
+		"Details": ""
+	},
+	{
+		"Plugin": "codemirror showhint",
+		"Version": "5.5.1",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/codemirror/codemirror",
+		"Details": ""
+	},
+	{
+		"Plugin": "ui-codemirror",
+		"Version": "0.3.0",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/angular-ui/ui-codemirror",
+		"Details": ""
+	},
+	{
+		"Plugin": "Bootstrap",
+		"Version": "3.3.2",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/twbs/bootstrap",
+		"Details": ""
+	},
+	{
+		"Plugin": "ui-bootstrap",
+		"Version": "0.12.0",
+		"LicenceType": "MIT",
+		"Source": "http://angular-ui.github.io/bootstrap/",
+		"Details": ""
+	},
+	{
+		"Plugin": "jStorage",
+		"Version": "0.4.8",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/andris9/jStorage",
+		"Details": ""
+	},
+	{
+		"Plugin": "Spline",
+		"Version": "1.3.0",
+		"LicenceType": "MIT",
+		"Source": "http://www.codeproject.com/script/Articles/ArticleVersion.aspx?aid=562175&av=941890",
+		"Details": ""
+	},
+	{
+		"Plugin": "XDate",
+		"Version": "0.8.0",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/arshaw/xdate",
+		"Details": ""
+	},
+	{
+		"Plugin": "svg.import.js",
+		"Version": "1.0.11",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/wout/svg.import.js/blob/master/svg.import.js",
+		"Details": ""
+	},
+	{
+		"Plugin": "svg.js",
+		"Version": "2.2.5",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/wout/svg.js",
+		"Details": ""
+	},
+	{
+		"Plugin": "xml2json.js",
+		"Version": "1.2.0",
+		"LicenceType": "Apache",
+		"Source": "https://github.com/abdmob/x2js",
+		"Details": ""
+	},
+	{
+		"Plugin": "jsPDF",
+		"Version": "0.9.0",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/MrRio/jsPDF",
+		"Details": ""
+	},
+	{
+		"Plugin": "html2canvas",
+		"Version": "0.4.01",
+		"LicenceType": "MIT",
+		"Source": "http://html2canvas.hertzen.com/",
+		"Details": ""
+	},
+	{
+		"Plugin": "FileSaver.js",
+		"Version": "1.3.0",
+		"LicenceType": "MIT",
+		"Source": "http://purl.eligrey.com/github/FileSaver.js/blob/master/FileSaver.js",
+		"Details": ""
+	},
+	{
+		"Plugin": "xlsx.js",
+		"Version": "0.8.0",
+		"LicenceType": "Apache",
+		"Source": "https://github.com/SheetJS/js-xlsx",
+		"Details": ""
+	},
+	{
+		"Plugin": "jszip.js",
+		"Version": "3.3.01",
+		"LicenceType": "MIT",
+		"Source": "http://stuk.github.io/jszip/",
+		"Details": ""
+	},
+	{
+		"Plugin": "Blob.js",
+		"Version": "NA",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/eligrey/Blob.js",
+		"Details": ""
+	},
+	{
+		"Plugin": "arraybuffer.js",
+		"Version": "0.1.5",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/niklasvh/base64-arraybuffer",
+		"Details": ""
+	},
+	{
+		"Plugin": "lodash.js",
+		"Version": "4.13.1",
+		"LicenceType": "MIT",
+		"Source": "https://github.com/lodash/lodash/tree/4.13.1",
+		"Details": ""
+	}]
+}

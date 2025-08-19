@@ -1,0 +1,45 @@
+{
+	"Rectangle": {
+		"Properties": {
+			"Object": {
+				"componentType": "rectangle",
+				"isDataSetAvailable": "false",
+				"themeType": "default-theme",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "box",
+				"showLocked": "false",
+				"subElement": "Rectangle",
+				"globalVariableKeyAttribute": "globalKey",
+				"y": "894",
+				"objectType": "rectangle",
+				"width": "200",
+				"initialVisibility": "true",
+				"height": "100",
+				"objectName": "rect",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "Obj.2FD54250N12FAN78FDN9ED4NE6EAD191DE07",
+				"x": "125",
+				"Rectangle": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"alpha": "1",
+					"gradients": "#EFF0F0,#EFF0F0",
+					"gradientRotation": "0",
+					"globalKey": "",
+					"borderAlpha": "1",
+					"borderRadius": "0",
+					"showBorder": "false",
+					"borderColor": "#EFF0F0",
+					"borderThickness": "0",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.1"
+				}
+			}
+		}
+	}
+}

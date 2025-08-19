@@ -1,0 +1,27 @@
+<!-- <div id="searchGvarTool" class="bvz-select-wrapper" ng-click="toggleGlobalVarOptions( $event )">
+	<div class="bvz-display">
+		<label class="bvz-display-placeholder" ng-show="selectedGlobalVariable.actualTag == undefined">Select options</label>
+		<label class="bvz-display can-select" ng-show="selectedGlobalVariable.actualTag != undefined">{{ selectedGlobalVariable.actualTag }}</label>
+	</div>
+	<span class="bvz-dd-btn">
+		<i class="glyphicon glyphicon-triangle-bottom"></i>
+	</span>
+	<div class="bvz-select-options-container" ng-show="displayOptions" >
+		<div class="bvz-search-wrapper">
+			<input ng-model="defValQuery" 
+				class="bvz-search propValue" 
+				type="text" 
+				placeholder="Search" />
+		</div>
+		<div class="bvz-no-match-found" 
+			ng-show="defValFilterList.length == 0 || defValFilterList == undefined">
+			No item found
+		</div>
+		<ul class="bvz-select-options-wrapper">
+			<li ng-click="updateSelectedValueInSearch( $event, item )" 
+				ng-repeat="item in defValFilterList = ( defaultValueList | filter: defValQuery )">
+				{{ item.displayTag }}
+			</li>
+		</ul>
+	</div>
+</div> -->

@@ -1,0 +1,1522 @@
+<div class="row ht100per" style="overflow:auto;">
+	<md-content class="can-select">
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">1. Auto Reload</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/AutoReload.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/AutoReload.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>					</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.autoReload()</p>
+				<p>Arguments : Not required</p>
+				<p>This method should be written on Filters/ Grids/ Charts. Those connections will be reloaded automatically which has the filter key in their condition</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--2. Reload All Connections -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">2. Reload All Connections</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ReloadAllConnections.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ReloadAllConnections.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.reloadAll()</p>
+				<p>Arguments : Not required</p>
+				<p>All connections will be reloaded</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--3. Reload From List -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">3. Reload from List</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ReloadFromList.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ReloadFromList.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.reload( [ "C_1", "C_2" ] )</p>
+				<p>Arguments : An array of connection id's. Here C_1 and C_2 are the connection id's</p>
+				<p>Reloads those connections which are available in the array</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--4. Reload DataSet -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">4. Reload DataSet</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ReloadDataSet.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ReloadDataSet.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.reloadDataset( [ "Bar_1" , "Column_2" ] );</p>
+				<p>Arguments : Components id's as array</p>
+				<p>Refresh the datasets of those components which are available in the array</p>
+				<p>NOTE: It will not reload the connection</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--5. Hide Component(s) -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">5. Hide Component(s)</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/HideComponent(s).bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/HideComponent(s).bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.hideComponent( [ "bar_1", "column_2" ])</p>
+				<p>Arguments : An array of component id's. Here bar_1 and column_2 are the component id's</p><br>
+				<p>Method : sdk.hideComponent( "bar_1" )</p>
+				<p>Arguments : Component id as string (Used to hide single component)</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--6. Show Component(s)-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">6. Show Component(s)</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ShowComponent(s).bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ShowComponent(s).bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.showComponent( [ "bar_1", "column_2" ])</p>
+				<p>Arguments : An array of component id's. Here bar_1 and column_2 are the component id's</p><br>
+				<p>Method : sdk.showComponent( "bar_1" )</p>
+				<p>Arguments : Component id as string (Used to show single component)</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--7. Hide Groups-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">7. Hide Groups</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ToggleGroups.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ToggleGroups.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.hideGroups( [ "grp1", "grp2" ])</p>
+				<p>Arguments : An array of group names. Here grp1 and grp2 are the group's name which will be hidden</p><br>
+				<p>Method : sdk.hideGroups( "grp1" )</p>
+				<p>Arguments : Group name as string (Used to hide single group)</p>
+			</md-card-content>
+		</md-card>
+		
+		<!-- 8. Show Groups-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">8. Show Groups</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ToggleGroups.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ToggleGroups.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method :  sdk.showGroups( [ "grp1", "grp2" ])</p>
+				<p>Arguments : An array of group names. Here grp1 and grp2 are the group's name which will be visible</p><br>
+				<p>Method : sdk.showGroups( "grp1" )</p>
+				<p>Arguments : Group name as string (Used to show single Group)</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--9. Toggle Components-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">9. Toggle Components</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ToggleComponents.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ToggleComponents.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.toggleComponents(["label1", "gauge2", "area3", "datagrid4"], ["label5", "gauge6", "area7", "datagrid8"], "TileAB");</p>
+				<p>Arguments :An array of first set of components, An array of second set of components, uniqe-key to toggle these sets of components</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--10. Toggle Groups-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">10. Toggle Groups</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ToggleGroups.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ToggleGroups.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.toggleGroups( [ "grp1", "grp2" ], [ "grp3", "grp4" ], "togglekey1")</p>
+				<p>Arguments :  An array of first group names. An array of second Group names. uniqe-key to toggle these sets of group</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--11.  Hide Except These-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">11.  Hide Except These</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/HideExceptThese.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/HideExceptThese.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method :  sdk.hideAllComponentExcept( [ "Bar_1", "Column_2" ] )</p>
+				<p>Arguments : Component id's as array, Here "Bar_1" , "Column_2" are component id's</p>
+				<p>Used for hiding all the components except those which are supplied in argument</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--12. Show Except These-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">12. Show Except These</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ShowExceptThese.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ShowExceptThese.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.showAllComponentExcept( [ "Bar_1", "Column_2" ] )</p>
+				<p>Arguments : Component id's as array, Here "Bar_1" , "Column_2" are component id's</p>
+				<p>Used for showing the components except those which are supplied in argument</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--13. Set Single Value-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">13. Set Single Value</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/SetSingleValue.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/SetSingleValue.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.setValue( "Comp_ID", Value, TargetValue_Optional )</p>
+				<p>Arguments :Component id as string and value as string/integer/float</p>
+				<p>Used for updating single valued components like Gauge/ SemiGauge/ Image/ Label/ Progress Pie/ Sliders/ TextBox/ Trend</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--14. Get Value-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">14. Get Value</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/GetValue.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/GetValue.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.getValue( "Label_1" )</p>
+				<p>Arguments : Component id as string and value as string/integer/float</p>
+				<p>Used for getting value from the component which holds a data </p>
+				<p>If component is having more than one value, data will be returned in form of array(e.g. Charts / Grids )</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--15. Set Context-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">15. Set Context</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/SetGetContext.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/SetGetContext.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.Context( "Key", "Value")</p>
+				<p>Arguments : "Key" as any Unique key, "Value" as anything string/number/object etc.</p>
+				<p>Used for adding a key-value pair in the available context-map.</p>
+				<p>sdk.addContext( "Key", "Value"); method also does the same job as sdk.setContext( "Key", "Value") method</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--16. Get Context-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">16. Get Context</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/SetGetContext.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/SetGetContext.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.getContext( "Key" )</p>
+				<p>Arguments : "Key" as any Unique key.</p>
+				<p>Used for getting value from the context-map</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--17.Invoke Another Change-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">17.Invoke Another Change</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/UpdateGlobalVariable.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/UpdateGlobalVariable.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method :  sdk.updateGlobalVariable("Bar_1", {"Year":2015,"Revenue":500, "Expense":380} , false )</p>
+				<p>Arguments : Component id as string , Values to update in global variable as javascript object , Flag as boolean</p>
+				<p>Used for initiating another component change, If flag set to true, it executes further change-script written on the component(Bar_1)</p><br>
+				<p>Another way:</p>
+				<p>var item = { "Year" : 2015 , "Revenue" : 500 , "Expense" : 380 }; </p>
+				<p>sdk.updateGlobalVariable( "Bar_1" , item , false )</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--18. Execute Change script-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">18. Execute Change script</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/UpdateGlobalVariable.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/UpdateGlobalVariable.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.executeScript( "Bar_1", {"Year":"2015", "Sales":25645} );</p>
+				<p>Arguments : component id , javascript object of values</p>
+				<p>Used for execute another change script , internally it is calling sdk.updateGlobalVariable() with notifyAnotherChangeFlag as true</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--19. Change Rectangle BG-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">19. Change Rectangle BG</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ChangeRectangleBG.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ChangeRectangleBG.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.changeBGColor("box_4", "#ffccff")</p>
+				<p>Arguments : Component id of box component as string and hexadecimal color code as string</p>
+				<p>Used for updating background color of box component</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--20. Change Dashboard BG-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">20. Change Dashboard BG</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ChangeDashboardBG.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ChangeDashboardBG.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.changeDashboardBGColor ("#ffcc00")</p>
+				<p>Arguments :Hexadecimal color code as string</p>
+				<p>Use the function for updating Back ground of dashboard</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--21. Set Top-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">21. Set Top</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/SetTop.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/SetTop.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.setTop( "Bar_1", 50 );</p>
+				<p>Arguments : Component id as string , Top position as integer/p>
+				<p>Used for setting top position of a component</p><br>
+				<p>If user want to store the original top position , get the current position from getTop() method -> store in context from sdk.addContext() -> get it back from sdk.getContext() when required</p>
+<pre class="preTagClass">
+var originaltop = sdk.getTop("Bar_1");
+sdk.addContext("bar_1_original_top" , oldtop);
+sdk.getContext("bar_1_original_top");
+</pre>
+			</md-card-content>
+		</md-card>
+		
+		<!--22. Set Left -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">22. Set Left</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/SetLeft.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/SetLeft.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.setLeft( "Bar_1", 50 );</p>
+				<p>Arguments : Component id as string , Left position as integer</p>
+				<p>Used for setting left position of a component</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--23.Get Top-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">23.Get Top</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/GetTop.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/GetTop.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.getTop( "Bar_1" );</p>
+				<p>Arguments : Component id as string</p>
+				<p>Used for Getting top position of component and saving existing values in context for further usage</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--24.Get Left-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">24.Get Left</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/GetLeft.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/GetLeft.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method :sdk.getLeft( "Bar_1" );</p>
+				<p>Arguments :  Component id as string</p>
+				<p>Used for Getting top position of component and saving existing values in context for further usage</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--25.Set Graphics Property-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">25.Set Graphics Property</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/SetGraphicsProperty.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/SetGraphicsProperty.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.setGraphicsProperty("Shape_1", "color", "#ff0000");</p>
+				<p>Arguments : Component id as string , Property name , Property value</p>
+				<p>Used for changing properties of graphics component</p>
+				<p>e.g.</p>
+<pre class="preTagClass">
+sdk.setGraphicsProperty("Shape_1", "symbol" , "warning");
+</pre>			
+		</md-card-content>
+	</md-card>
+		
+		<!--26. Apply Filter-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">26. Apply Filter</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ApplyDataSetFilter.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ApplyDataSetFilter.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.applyDataSetFilter( "bar32",["Year==2010", "Quarter=='Q2'","Sales>=60"]))</p>
+				<p>Arguments :  Component id (e.g "bar32") ,Conditions written in form of array</p>
+				<p>Use the function to filter dataset of a component</p>
+				<p>examples:</p>
+<pre class="preTagClass">
+sdk.applyDataSetFilter("Bar1", ["Year==2010"]);
+sdk.applyDataSetFilter("datagrid3", ["CompanyName=='Google' || CompanyName=='Yahoo'" , "ProjectHrs>5000"]);
+sdk.applyDataSetFilter("Bar2", ["Year>=2010", "Month=='Feb'", "Week=='2'"]);
+sdk.applyDataSetFilter("Bar3", ["Year=={radioYr.Value}", "Week>=2", "Week<=3"]);
+sdk.applyDataSetFilter("Grid2", ["ProjectName=='{filter2.ProjectName}'", "EmployeeCount>={hslider2.Value}"]);
+</pre>
+				<p>To Sort the dataset and limit number of records, write condition like this:</p>
+<pre class="preTagClass">
+sdk.applyDataSetFilter("Bar1", ["order by Sales asc", "limit 10"]);
+</pre>				<p>All the conditions written in array, are executed with AND(&&) Operator, If you need to use OR(||) operator: Please write the filter conditions like this:</p>
+<pre class="preTagClass">
+sdk.applyDataSetFilter("datagrid3", ["CompanyName=='Google' || CompanyName=='Yahoo'" , "ProjectHrs>5000"]);
+</pre>			
+				<p>Available Operators are - "> , < , == , != , >= , <= , || , && "</p>
+				<p>Every Conditions should be enclosed in DOUBLE QUOTES: "CompanyName=='Google'" is a valid condition</p>
+				<p>Field name shouldn't be kept in SINGLE QUOTE: "'CompanyName'=='Google'" is invalid condition</p>
+				<p>Field Name should be valid javascript variable names</p>
+				<p>Some invalid column names are:
+					<ul>
+						<li>Javascript identifiers ( var, boolean, number, function, prototype, new, try, for, Object, this etc.)</li>
+					</ul>
+				</p>
+				<p>Preference of operations on dataset :
+					<ol>
+						<li>Calculated fields</li>
+						<li>Append additional rows</li>
+						<li>Automanipulation</li>
+						<li>Filter</li>
+						<li>Aggregation</li>
+					</ol>
+				</p>
+				<p>Limitations:
+					<ul>
+						<li>If a chart has AutoManipulator enabled, filter is applicable only on GroupBy field and Dynamically-Generated-Fields
+							<p>Valid case:</p>
+<pre class="preTagClass">
+sdk.applyAutoManipulator("column14", "Year", "Month", "Expense", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC");
+sdk.applyDataSetFilter( "column14", ["Year>2011", "Jan>100"] );
+</pre>
+							Invalid Case:
+<pre class="preTagClass">
+sdk.applyAutoManipulator("column14" , "Year", "Month", "Expense", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC");
+sdk.applyDataSetFilter( "column14", ["Year>2011", "Month=='Jan'"] );
+</pre>
+							<p>"Month=='Jan'" is invalid condition here as the field "Month" will not be available in the resultant dataset after automanipulation operation</p>						
+						</li>
+						<li>If a chart has AutoManipulator disabled, filter is applicable on GroupBy fields and Original-Dataset-Fields which are coming from connection
+							<p>Valid case:</p>
+<pre class="preTagClass">
+sdk.applyAutoManipulator("column14", "Year", "Month", "Expense", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC");
+sdk.applyDataSetFilter( "column14", ["Year>2011", "Month=='Jan'"] );
+</pre>
+							Invalid Case:
+<pre class="preTagClass">
+sdk.applyAutoManipulator("column14", "Year", "Month", "Expense", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89,#4ECDC4,#F5D76E,#BF55EC");
+sdk.applyDataSetFilter( "column14", ["Year>2011", "Jan>100"] );
+</pre>							
+							<p>"Jan>100" is invalid condition here as the field "Jan" is not coming from the connection</p>
+						</li>
+					</ul>
+				</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--27.Remove DataSet Filter-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">27.Remove DataSet Filter</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/RemoveDatasetFilterAggregationAutomanipulator.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/RemoveDatasetFilterAggregationAutomanipulator.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.removeDataSetFilter( "bar32" )</p>
+				<p>Arguments :  Component id (e.g "bar32")</p>
+				<p>When all the conditions applied on dataset has to be removed</p>
+<pre class="preTagClass">
+var user = sdk.removeDataSetFilter("bar32");
+</pre>			
+			</md-card-content>
+		</md-card>
+		
+		<!--28. Apply Aggregation-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">28. Apply Aggregation</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ApplyAggregation.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ApplyAggregation.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.applyAggregation("bar32", "Year", "Revenue,Expenses", "SUM,SUM")</p>
+				<p>Arguments : Component id (e.g "bar32") , Group by node (e.g "Year") , Fields to be aggregated (e.g. "Sales,Profit") , Operations to be applied (e.g. "COUNT,SUM")</p>
+				<p>Use the function to apply aggregation on dataset of chart/ grid. These are he available aggregation operations - SUM, AVG, MAX, MIN, COUNT	</p>
+				<label>Group By node is optional and configured as following:</label>
+				<ul>
+					<li>if left blank, only single record will come in result with aggregated values for mentioned Fields
+<pre class="preTagClass">
+sdk.applyAggregation("bar32", "", "Revenue", "SUM");
+</pre>					</li>
+					<li>If one group by field is given, result will be grouped according to unique values of the fields(Year in the example)
+<pre class="preTagClass">
+sdk.applyAggregation("bar32", "Year", "Revenue", "SUM");
+</pre>					</li>
+					<li>If more then one field is given, result will be grouped by last field(Month field in the example) and then grouped by previous field(Year field in example)
+<pre class="preTagClass">
+sdk.applyAggregation("bar32", "Year,Month", "Revenue", "SUM");
+</pre>					</li>
+				</ul>
+			</md-card-content>
+		</md-card>
+		
+		<!--29. Remove Aggregation-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">29. Remove Aggregation</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/RemoveDatasetFilterAggregationAutomanipulator.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+							<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/RemoveDatasetFilterAggregationAutomanipulator.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.removeAggregation( "bar32" )</p>
+				<p>Arguments : Component id (e.g "bar32")</p>
+				<p>When aggregation applied on dataset has to be removed</p>
+<pre class="preTagClass">
+var user = sdk.removeAggregation("bar32");
+</pre>			
+			</md-card-content>
+		</md-card>
+		
+		<!--30.Apply AutoManipulator-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">30.Apply AutoManipulator</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ApplyAutoManipulator.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+							<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ApplyAutoManipulator.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method :sdk.applyAutoManipulator("bar32", "ProductCategories", "ProductNames", "Sales", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89, #4ECDC4,#F5D76E,#BF55EC")</p>
+				<p>In case of subCategories: sdk.applyAutoManipulator("bar32", "ProductCategories,ProductSubCategories", "ProductNames", "Sales", "#A0D468,#9087EE,#F89406,#EF4836,#6C7A89, #4ECDC4,#F5D76E,#BF55EC")</p>
+				<p>Arguments : Component id (e.g "bar32") , Category Group (e.g "ProductCategories") OR (e.g "ProductCategories,ProductSubCategories"), Series Group(e.g. "ProductNames") , Value Field (e.g. "Sales") , SeriesColors 
+[Category Group can be multiple (e.g "ProductCategories,ProductSubCategories")]</p>
+				<p>Use the function to manipulate the dataset - Fields which are dragged in category and series container, will not be considered for drawing if automanipulator is enabled</p>
+				<p>Drag and drop the categoryGroup , SeriesGroup, Value Field in any of the container(Category/Series/Field)</p>
+				<p>Use the above method to configure the automanipulator</p>
+				<p>Apart from this - we need to configure the field colors for the series which will generated dynamically after data manipulation.</p>
+				<p>If colors are less then generated field numbers - colors will be repeated</p>
+				<p>If automanipulator is used in bar/column/mixed chart - Use STACK/OVERLAID/100% type of chart for better view</p>
+				<p>To hide undefined/ null values from tooltip</p>
+<pre class="preTagClass">
+sdk.getWidget("line").m_controlledtooltip = true;
+</pre>			
+			</md-card-content>
+		</md-card>
+		
+		<!--31. Remove AutoManipulator-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">31. Remove AutoManipulator</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/RemoveDatasetFilterAggregationAutomanipulator.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/RemoveDatasetFilterAggregationAutomanipulator.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method :  sdk.removeAutoManipulator( "bar32" )</p>
+				<p>Arguments : Component id (e.g "bar32")</p>
+				<p>When automanipulator applied on dataset has to be removed</p>
+<pre class="preTagClass">
+var user = sdk.removeAutoManipulator("bar32");
+</pre>			
+			</md-card-content>
+		</md-card>
+		
+		<!--32. AppendRows-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">32. AppendRows</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/AppendRows.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/AppendRows.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method :  sdk.appendRows("bar1", [{"Name": "Total", "Sale": 1000, "Profit": 200}])</p>
+				<p>Arguments : Component id (e.g "bar1"), Array of row-objects</p>
+				<p>Use the function to add additional rows in the dataset of a component</p>
+			</md-card-content>
+		</md-card>
+		
+		<!--33. Get Aggregated Data-->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">33. Get Aggregated Data</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/GetAggregatedData.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/GetAggregatedData.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.getAggregatedDataSet(changedItem.attributes.data, "SUM")</p>
+				<p>Arguments : Component id (e.g "bar32") , Operation to be applied (e.g. "COUNT,SUM")</p>
+				<p>Available Operations are - SUM , AVG , MAX , MIN , COUNT</p>
+				<p>Use the function to get aggregated data of dataset .Value can be used in label/gauge/slider etc</p>
+				<p>Return type of this method is a JSON object.</p>
+<pre class="preTagClass">
+var aggrData = sdk.getAggregatedDataSet(changedItem.attributes.data , "SUM");
+sdk.setValue("label2", aggrData.Revenue);
+</pre>				
+				<p>It will set the summation of profit values to label component</p>
+			</md-card-content>
+		</md-card>
+		<!--34. Apply Global font -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">34. Apply Global Font</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ApplyGlobalFont.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ApplyGlobalFont.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.applyGlobalFont({'url': '', 'fontFamily': '', 'useGlobalFont': ''});</p>
+				<p>Arguments - url: url to get the css of font, fontFamily: name of font, useGlobalVariable: true/false.</p>
+<pre class="preTagClass">
+sdk.applyGlobalFont({'url': 'https://fonts.googleapis.com/css?family=Roboto', 'fontFamily': 'Roboto', 'useGlobalFont': 'false'});
+</pre>				
+			</md-card-content>
+		</md-card>
+		<!--35. Load OpenDoc -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">35. Load Open Doc</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/LoadOpenDoc.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/LoadOpenDoc.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.loadOpenDoc(params, opendDocUrl);</p>
+				<p>Arguments - params: parameters which are required to pass as parameter, ex. var params = {docid:142671892, token:sdk.getContext('dashboard_user').apiToken};</p>
+				<p>Arguments - opendDocUrl: Optional url, if exisiting open doc url gets changed in future </p>
+<pre class="preTagClass">
+var at = sdk.getContext('dashboard_user').apiToken;
+var params = {docid:142671892, token:at};
+var opendDocUrl = appRootPath + "opendocument.html";
+sdk.loadOpenDoc(params, opendDocUrl);
+</pre>				
+			</md-card-content>
+		</md-card>
+<!--36. Update Dataset Operation Order -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">36. Update Dataset Operation Order</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/UpdateDatasetOperationOrder.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/UpdateDatasetOperationOrder.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.updateDatasetOperationOrder(["bar32", "bar35"], {0: "calcField", 1: "appendRows", 2: "autoManipulator", 3: "filter", 4: "aggregation"});</p>
+				<p>Arguments - Array of Component Id's;</p>
+				<p>Arguments - Object with order of operations </p>
+<pre class="preTagClass">
+sdk.updateDatasetOperationOrder(["bar32", "bar35"], {0: "calcField", 1: "appendRows", 2: "autoManipulator", 3: "filter", 4: "aggregation"});
+</pre>
+			</md-card-content>
+		</md-card>
+<!--37. getWebSocketResponse -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">37. get WebSocket Response</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/getWebSocketResponse.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/getWebSocketResponse.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.getWebSocketResponse();</p>
+<pre class="preTagClass">
+var response = sdk.getWebSocketResponse();
+if(response.state=="open"){
+  console.log("WS opened");
+}else if(response.state=="message"){
+	switch (response.message) {
+		case "actual_vs_predicted_total":
+			sdk.reload(['C_2']);
+			sdk.setValue("label2", changedItem.attributes.data.socketvalue);
+	    	break;
+		case "wicket_prediction":
+			sdk.reload(['C_3']);
+			sdk.setValue("label3", changedItem.attributes.data.socketvalue);
+	    	break;
+		default:
+			break;
+	}
+}else if(response.state=="close"){
+   console.log("WS Closed");
+}
+</pre>
+			</md-card-content>
+		</md-card>	
+<!--38. applyLanguageMapping -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">38. apply Language Mapping</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/applyLanguageMapping.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/applyLanguageMapping.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.applyLanguageMapping();</p>
+				<p>Arguments - Configuration Object</p>
+				<p>isEnabled - to enable language setting in that dashboard</p>
+				<p>language - language for a user, this can be set as 'all' or can be taken from user-custom-properties </p>
+				<p>name - name of the Language Setting configuration which is available in the Admin Panel </p>
+				<p>hideBrackets - set true, if {curly brackets} are not required when there are no mapping available for some keys </p>
+				<p>Should be written at dashboard script, Language mapping service will return the mapping json when dashboard loads </p>
+				<p> Enclose the mapping keys in curly brackets {} wherever required </p>
+				<p><ul>
+				<li>Chart - Title, Subtitle, Axis descriptions, Legends, Tooltips</li>
+				<li>Datagrid - headers</li>
+				<li>Bullet/ Filter/ Gauge/ Semi Gauge, Label and Url Button - title</li>
+				</ul></p>
+<pre class="preTagClass">
+sdk.applyLanguageMapping( {"isEnabled": "true", "language": "all", "name": "Sales2018Dashboard", hideBrackets: "false"} );
+</pre>
+			</md-card-content>
+		</md-card>
+<!--39. setFilterSelectedIndex -->
+		<md-card class="mdCard">
+			<div>
+				<md-card-header class="mdCardHeader">
+					<md-card-header-text class="mdCardHeaderText">38. set Filter SelectedIndex</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/setFilterSelectedIndex.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/setFilterSelectedIndex.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+				</md-card-header>
+			</div>
+			<md-card-content>
+				<p>Method : sdk.setFilterSelectedIndex('Comp_ID', ['Indexes']);</p>
+				<p>Arguments - CompID,  Array of selected index</p>
+				<p>id - Filter component id </p>
+				<p>selectedIndexArray - write the selected index in array </p>
+				<p>Should be written at connection script</p>
+<pre class="preTagClass">
+sdk.setFilterSelectedIndex( 'filter1', ["1"] );
+sdk.setFilterSelectedIndex( 'filter2', ["1", "2", "4"] );
+sdk.setFilterSelectedIndex( 'hfilter3', ["1", "2", "3"] );
+sdk.setFilterSelectedIndex( 'list4', ["1", "2"] );
+</pre>
+			</md-card-content>
+		</md-card>
+		
+		<!--SDK methods : Usage and examples-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">SDK methods : Usage and examples</md-card-header-text>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+				<p>Script can be written at these places</p>
+				<ol>
+					<li>On Component: On click of a data point of charts , click on a row of datagrid, change of filters, click on label/ icon/ rectangle etc.</li>
+					<li>On Connection load: Script will be executed just after the connection fetches the data</li>
+				</ol>
+				<p>Available Javascript Objects in scripting</p>
+				<ol>
+					<li><label>sdk</label>
+						<p>It is a desiger SDK Object which has many inbuilt functions used to achieve various functionalities in dashboard.</p>
+						<p>Syntax and usage of those methods are explained abovea</p>
+					</li>
+					<li><label>changedItem</label>
+						<p>Javascript Object which contains attributes.</p>
+						<p>i.e if script is written for a LineChart, When we click on a data point, script will be executed and changedItem will be refered to lineChart</p>
+						<p>"changedItem.key": id of the lineChart</p>
+						<p>"changedItem.attributes": assosiated values to that data point</p>
+					</li>
+				</ol>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Script to use "context" variable-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Script to use "context" variable</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/UseContext.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/UseContext.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+	        	<ol>
+					<li>Context global variable is used to fetch the properties loaded from portal such as user name,email, custom property etc. Below listed are the available attributes for an user.
+						<ul>
+							<li>dashboard_emailid: "username@domain.com"</li>
+							<li>dashboard_uniqueid: username@domain.com</li>
+							<li>dashboard_id: "user id"</li>
+							<li>dashboard_fullname: "Last Name First Name"</li>
+							<li>dashboard_username: "user name"</li>
+							<li>dashboard_user: Object which has all the user properties</li>
+							<li>Examples: 
+								<pre class="preTagClass">var cntx = sdk.getGlobalVariable( "context" );
+var un = cntx.attributes.dashboard_username;
+sdk.setValue("label1", "Welcome " + un);
+var at = cntx.attributes.dashboard_authtype;
+sdk.setValue("label2", "authType " + at);</pre>
+								<pre class="preTagClass">var cntx = sdk.getGlobalVariable( "context" );
+var user = cntx.attributes.dashboard_user;
+sdk.setValue("label3", "Welcome " + user.userName);
+sdk.setValue("label4", "authType " + user.authType);</pre></li>
+						</ul>
+					</li>
+					<li>If the user is having a custom field in the portal, that also can be fetched in dashboard in the following format
+						<ul>
+							<li>Examples: by method getUserCustomProperty
+								<pre class="preTagClass">
+var cpd = sdk.getUserCustomProperty("Department");
+sdk.setValue("label1", "Dept: " + cpd);
+var cpz = sdk.getUserCustomProperty("ZONE");
+sdk.setValue("label2", "Zone: " + cpz);
+var cpe = sdk.getUserCustomProperty("Emergency Contact Number");
+sdk.setValue("label3", "Emergency Contact Number: " + cpe);</pre>
+							</li>
+							<li>Examples: by key user_CustomPropertyName
+								<pre class="preTagClass">var cntx = sdk.getGlobalVariable( "context" );
+var cpd = cntx.attributes.user_Department;
+sdk.setValue("label1", "Dept: " + cpd);
+var cpz = cntx.attributes.user_ZONE;
+sdk.setValue("label2", "Zone: " + cpz);
+var cpe = cntx.attributes["user_Emergency Contact Number"];
+sdk.setValue("label2", "Emergency Contact Number: " + cpe);</pre>
+							</li>
+						</ul>
+					</li>
+					<li>If the dashboard has Dashboard parameters set from the portal, that also can be fetched in dashboard in the following format, this will give valid values in portal or opendoc only not in designer preview.
+						<pre class="preTagClass">var cntx = sdk.getContext( "dashboard_dashboardparameters" );
+var dpl = cntx.lang;
+console.log(dpl);</pre>
+					</li>
+				</ol>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Script written on connection change or load-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Script written on connection change or load</md-card-header-text>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">sdk.setValue( "BVZlabel5", changedItem.attributes.data[ 0 ].team );</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Change dashboard color with some condition-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Change dashboard color with some condition</md-card-header-text>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">var myColors = [ "India": "#0000ff", "US": "#00ff00" ];
+var selectedTeam = changedItem.attributes.team;
+var myColor = myColors[ selectedTeam ];
+sdk.changeDashboardBGColor( myColor );</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--script written on load data-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">script written on load data</md-card-header-text>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+				<p>changedItem.attributes.data is an array which hold the data got from webservice, csv or excel connection</p>
+					<pre class="preTagClass">sdk.setValue( "BVZlabel1", changedItem.attributes.data[ 1 ][ "resourcename" ] );</pre>
+				<p>OR</p>
+					<pre class="preTagClass">var myValue = changedItem.attributes.data[ 1 ][ "subject" ];
+sdk.setValue( "BVZlabel8", myValue );</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Setting value to Guage-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Setting value to Guage</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/gauge-update-from-connection-context.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/gauge-update-from-connection-context.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">var hours = changedItem.attributes.data[ 8 ][ "hrs" ];				
+sdk.setValue( "BVZgauge1", hours );</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Apply styles using script( for advance users )-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Apply styles using script( for advance users )</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ApplyStylesUsingScript.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ApplyStylesUsingScript.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+				<p>(This is an example for setting style to the label, user need to inspect the elements of html and apply style to respective elements using selectors)</p>
+					<pre class="preTagClass">sdk.applyStyle( "Selector", "CSS_Property_Name", "CSS_Value" );
+var division = sdk.getDivIdFromComponetId( "label1" );
+sdk.applyStyle( "#" + division + " span", "color", "#ff0000" );</pre>
+				<p>This will apply mutiple css styles in one syntax.</p>
+					<pre class="preTagClass">sdk.applyStyles( "Selector", "CSS_Property_Name_Value_Object" );
+var division = sdk.getDivIdFromComponetId( "label1" );
+sdk.applyStyles( "#" + division + " span", {"color": "#ff0000", "background": "#cccccc", "border-radius": "10px"; "border": "5px solid red"} );</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Giving user details to a label-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Giving user details to a label</md-card-header-text>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+				<p>(This will work only after loading user details service call finished, before that user details will be undefined)</p>
+					<pre class="preTagClass">var user = sdk.getContext( "dashboard_username" );
+sdk.setValue( "label3", "Welcome " + user + "!" );</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Setting email and user id to a single label by string concatination-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Setting email and user id to a single label by string concatination</md-card-header-text>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">var userDetailObject = sdk.getContext( "dashboard_user" );
+var detail = "email - " + userDetailObject.emailID + " userID - " + userDetailObject.id;
+sdk.setValue( "label4", detail );</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Change graphics shape at runtime-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Change graphics shape at runtime</md-card-header-text>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">sdk.setGraphicsProperty( "shape1", "color", "#ff0000" );
+sdk.setGraphicsProperty( "shape1", "symbol", "twitter" );
+sdk.setGraphicsProperty( "shape1", "symbol", "none" );
+sdk.setGraphicsProperty( "shape1", "pathData", "M11.166,23.963L22.359,17.5c1.43-0.824,1.43-2.175,0-3L11.166, 
+8.037c-1.429-0.826-2.598-0.15-2.598,1.5v12.926C8.568,24.113,9.737,24.789,11.166,23.963z" );</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Collapse all nodes in scorecard-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Collapse all nodes in scorecard</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/CollapseNodesInScorecard.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/CollapseNodesInScorecard.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">sdk.getWidget("scorecard1").m_collapseallnode = true;</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--To hide undefined/ null values from tooltip (USEFUL in Automanipulator case)-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">To hide undefined/ null values from tooltip (USEFUL in Automanipulator case)</md-card-header-text>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">sdk.getWidget("line").m_controlledtooltip = true;</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Auto hide tooltip after 10 seconds-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Auto hide tooltip after 10 seconds</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/HideToolTip.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/HideToolTip.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">sdk.getWidget("area1").m_autotooltiphide = true;
+sdk.getWidget("area1").m_tooltiphidetimeout = 10000;</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Set custom border for a component-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Set custom border for a component</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/CustomBorderComponent.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/CustomBorderComponent.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">sdk.getWidget("area1").m_bordercolor = "#BDC3C7";
+sdk.getWidget("area1").m_borderradius = "1";
+sdk.getWidget("area1").m_borderthickness = "1";</pre>	
+			</md-card-content>				
+		</md-card>
+		
+		<!--Set custom sheet name for a component in export_dashboard_excel-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Set custom sheet name for a component in export_dashboard_excel</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ScreenshotSheetName.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ScreenshotSheetName.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">sdk.getWidget("area1").m_scrnshotsheetname = "SalesArea";</pre>
+			</md-card-content>				
+		</md-card>
+		
+		<!--Set an image dynamically on dropdown change-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Set an image dynamically on dropdown change</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/SetImageDynamically.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/SetImageDynamically.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+				<ol>
+					<li>In "Component Variables and Script" window: Set url/ base64-code in Value field of filter-attribute under "Default Value Attributes" tab.</li>
+					<li>Write the script in Script-window of the connection which is assigned to comboBox
+							<pre class="preTagClass">var val4 = sdk.getGlobalVariable("filter5").attributes.Value;
+sdk.setValue("image4", val4);</pre>	
+					</li>
+					<li>Write the script on Script-window of combobox
+							<pre class="preTagClass">sdk.setValue("image4", changedItem.attributes.Value);</pre>
+					</li>
+				</ol>			
+			</md-card-content>				
+		</md-card>
+		
+		<!--To apply automanipulator in charts-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">To apply automanipulator in charts</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/AutomanipulatorInCharts.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/AutomanipulatorInCharts.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+				<ol>
+					<li>Components which alredy have category color (indicator) feature:
+						<pre class="preTagClass">var chart = sdk.getWidget("column1");
+if(chart.m_categoryColors){
+	chart.m_categoryColors.m_categorydefaultcolor = "#CCCCCC";
+	chart.m_categoryColors.m_categorydefaultcolorset = "#9087ee,#eeeeee,#eff444,#234efe,#543ccc,#9ae343,"#225fcb";
+	chart.m_categoryColors.m_showcolorsfromcategoryname = false;
+	sdk.applyAutoManipulator("column1", "catgp", "sergrp", "val", "");
+}</pre>
+					</li>
+					<li>For Bubble/ Area and other charts which doesn't have category color feature:
+						<pre class="preTagClass">var chart = sdk.getWidget("bubble2");
+if(!chart.m_categoryColors){
+	chart.m_categoryColors = new CategoryColors();
+}
+chart.m_categoryColors.m_categorydefaultcolor = "#CCCCCC";
+chart.m_categoryColors.m_categorydefaultcolorset = "#9087ee,#eeeeee,#eff444,#234efe,#543ccc,#9ae343,"#225fcb";
+chart.m_categoryColors.m_showcolorsfromcategoryname = false;
+sdk.applyAutoManipulator("column1", "catgp", "sergrp", "val", "");
+						</pre>
+					</li>
+				</ol>
+			</md-card-content>				
+		</md-card>
+		
+		<!--To apply repeater in charts-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">To apply repeater in charts</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/Repeater.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/Repeater.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>.
+				<p>To show the repeater-field-value in title of the repeated chart: [repeaterField]</p>
+				<p>Examples: [repeaterField]</p>
+				<p>Examples: [repeaterField] Any-Global-Variable-Value [checkbox9.Value] Any-Static-String [filter45.Year]</p>
+				<pre class="preTagClass">var chart = sdk.getWidget("bubble2");
+chart.m_isrepeater = "true";
+chart.m_repeaterfield = "";
+chart.m_repeatercolumns = "3";
+chart.m_repeaterheight = "250";
+chart.m_repeatervmargin = "5";
+chart.m_repeaterhmargin = "5";
+				</pre>			
+			</md-card-content>				
+		</md-card>
+		
+		<!--Export a chart from label or image script-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Export a chart from label or image script</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ExportChart.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ExportChart.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>				
+					<pre class="preTagClass">var chart = sdk.getWidget("bubble2");
+chart.plugin.exportToExcel();
+chart.plugin.exportToJPEG();
+chart.plugin.exportToPNG();
+chart.plugin.exportToPDF();
+chart.plugin.exportToPPT();
+chart.plugin.exportToPrint();
+chart.plugin.showData();</pre>
+				</div>				
+			</md-card-content>				
+		</md-card>
+		
+		<!--Download dashboard to local directory-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Download dashboard to local directory</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ToggleComponents.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ToggleComponents.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">sdk.exportDashboardJSON();</pre>
+				<p>Write it on any label/ image to download the dashboard to local directory</p>			
+			</md-card-content>				
+		</md-card>
+		
+		<!--Show Predictive Workflow summary in text-box-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Show Predictive Workflow summary in text-box</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ShowPAWorkflowSummary.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ShowPAWorkflowSummary.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">sdk.setValue( "text4", changedItem.attributes.FrameworkComponent.status.Summary );</pre>
+				<p>Write it on the Script-On-Change of the Predictive-connection.</p>	
+			</md-card-content>				
+		</md-card>
+		
+		<!--Show Predictive Workflow Graph in text-box-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Show Predictive Workflow Graph in text-box</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/ShowPAWorkflowGraph.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/ShowPAWorkflowGraph.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+					<pre class="preTagClass">var ifr = '&lt;iframe class="graphIframes"  src="'+sdk.getConnectionGraphs( 'C_1')+'" style="width:90%;height:90%;background:#ffffff;border:none;top:5%;left:5%;position:absolute;"&gt;&lt;/iframe&gt;';
+sdk.setValue('text5', ifr);</pre>
+				<p>Write it on the Script-On-Change of the Predictive-connection and update the ID accordingly which returns Graph url</p>	
+			</md-card-content>				
+		</md-card>
+		
+		<!--Update properties of fields generated dynamically from automanipulator-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Update properties of fields generated dynamically from automanipulator</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/SetDynamicFieldPropertiesFromAutomanipulator.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/SetDynamicFieldPropertiesFromAutomanipulator.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+				<pre class="preTagClass">DataSet.prototype.updateAutoJson = function (json) {
+	if( this.m_id == "mix2" ){
+		switch(json.Name){
+		case "Sale_IOS":
+			json.ChartType = "line";
+			json.PlotType = "point";
+			json.PlotRadius = "8";
+			break;
+		case "Sale_UBUNTU":
+			json.ChartType = "line";
+			json.PlotType = "triangle";
+			json.PlotRadius = "8";
+			break;
+		case "Sale_ANDROID":
+			json.PlotTransparency = "0.4";
+			json.DisplayName = "Hello_Sale_Android";
+			break;
+		}
+	}
+	return json;
+};</pre>
+				<p>Write it on the Dashboard Script. this method will update the field's properties for mix2 chart only as we have put an if-check.</p>
+				<p>if we do not put check, these changes will be applicable for all automanipulatored fields, which may not be the ideal scenario</p>				
+			</md-card-content>				
+		</md-card>
+		
+		<!--Dataset Filter from multi-select-combobox-->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Dataset Filter from multi-select-combobox</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/datasetFilterFromMutiSelectCombobox.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/datasetFilterFromMutiSelectCombobox.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+				<pre class="preTagClass">var condition = changedItem.attributes.CompanyName.split(",").map(function(val){
+	return "CompanyName=='"+val+"'";
+}).join("||");
+sdk.applyDataSetFilter( 'datagrid4', [condition] );
+sdk.reloadDataset( [ 'datagrid4' ] );</pre>	
+				<p>Write it on the Script-On-Change of the Multi-Select-Combobox.</p>	
+				</md-card-content>				
+		</md-card>
+		
+		<!--Heatmap: solid filling for range-colors-->
+				<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Heatmap: solid filling for range-colors</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/HeatmapSolidColorFilling.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/HeatmapSolidColorFilling.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<pre class="preTagClass">
+var ch = sdk.getWidget("heatmap2");
+ch.m_gradientfill = false
+ch.m_defaultfillcolor = "#eee";
+</pre>				
+						<p>Write it on the Connection Script.</p>
+                         <p> For dynamic-range, this script will not work as dynamic-range will always fills from the min-max gradient color.</p>
+				</md-card-content>				
+		</md-card>
+				 
+				 <!--Datagrids: write custom CSS to update rows/cols-->
+				 <md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Datagrids: write custom CSS to update rows/cols</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/DatagridsCustomCSSToUpdateRowsCols.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/DatagridsCustomCSSToUpdateRowsCols.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<pre class="preTagClass">
+Widget.prototype.applyAdditionalStyles = function() {
+	var temp = this;
+	if(temp.m_referenceid == "datagrid7"){
+		$("#" + temp.m_componentid).find(".datagrid-row").css("height", temp.m_rowheight+"px");
+	}
+};
+</pre>
+                         <p>Write it on the Dashboard Script. this method will set a height to tr-elements of datagrid7 </p>
+    				</md-card-content>				
+		</md-card>
+				 
+      <!-- Category Indicator in Pie Chart  -->
+                  <md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Category Indicator in Pie Chart</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/PieIndicatorScript.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/PieIndicatorScript.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<p> Write below script on the connection from where the color-data is coming </p>
+<pre class="preTagClass">
+var indicatorArr = [];
+changedItem.attributes.data.map(function(obj){
+	indicatorArr.push( {name: obj.region, color: obj.color} );
+});
+sdk.setContext( 'pieIndicators', indicatorArr );
+sdk.reload( [ 'C_1' ] );
+</pre>
+						<p> Write below script on the connection from where the pie-data is coming </p>
+<pre class="preTagClass">
+sdk.setPieIndicator('pie2', 'Region', sdk.getContext( 'pieIndicators' ), changedItem.attributes.data ) ;
+</pre>
+    				</md-card-content>				
+		</md-card>
+
+      <!-- Category Indicator in a Chart  -->
+                  <md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Category Indicator in a Chart</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/CategoryIndicatorScript.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/CategoryIndicatorScript.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<p> Write below script on the connection from where the color-data is coming </p>
+<pre class="preTagClass">
+var lineIndicatorObj = {};
+changedItem.attributes.data.map(function(obj){
+	lineIndicatorObj[obj.label] = obj.color2;
+});
+sdk.setContext( 'lineIndicators', lineIndicatorObj );
+sdk.reload( [ 'C_1' ] );
+</pre>
+						<p> Write below script on the connection from where the chart-data is coming </p>
+<pre class="preTagClass">
+sdk.setCategoryColors('line8', sdk.getContext( 'lineIndicators' )  ) ;
+</pre>
+    				</md-card-content>				
+		</md-card>
+		
+		      <!-- CallBack after rendering a component  -->
+                  <md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Callback After Rendering</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/CallbackAfterRendering.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/CallbackAfterRendering.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<p> Write below script on the connection/component  </p>
+					<pre class="preTagClass">
+sdk.setAfterRenderCallBack( 'label1',function() {
+  	alert("Color Label Dynamic On");
+  	var a = sdk.getDivIdFromComponetId( 'label1' );
+  	sdk.applyStyle('#'+a+' span','backgroundColor','#7ac143');
+  	sdk.applyStyle( '#'+a , 'border' ,'1px',' #878587');
+});
+					</pre>
+    				</md-card-content>				
+		</md-card>
+		
+		<!-- CallBack after rendering a componenSkip some keys from a connection filter  -->
+                  <md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Skip keys from connection filter</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/SkipFilterValues.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/SkipFilterValues.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<p> Write below script on the Dashboard, when the filter has empty, null or any user-defined value then it will not be passed in service calling </p>
+				<pre class="preTagClass">
+sdk.setSkipFilterValues( ['C_1', 'C_2', 'C_5'], ["", "null", "All"] );
+					</pre> 
+    				</md-card-content>				
+		</md-card> 
+		
+		<!-- CallBack after rendering a component  -->
+                  <md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Custom ToolTip Width</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/CustomToolTipWidth.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/CustomToolTipWidth.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<p> Write below script on the connection/component </p>
+				<pre class="preTagClass">
+sdk.getWidget( 'Column1' ).m_customtooltipwidth = 350;
+					</pre> 
+    				</md-card-content>				
+		</md-card> 
+		
+		<!-- CallBack after rendering a component  -->
+                  <md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Dashboard Guided Tour</md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/DashboardGuidedTour.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/DashboardGuidedTour.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<p> Write below script on the label/ image component, on click of label tour will start. </p>
+<p> Write a name in 'config' object, and create the steps array of any length. </p>
+<p> Every step should have an HTML Element (Id of the element)on which the information is required, Title and content should be added for that step. </p>
+<p> Placement and duration is optional. </p>
+<p><a href="//bootstraptour.com/api/" target="_blank">More configuration options</a></p>
+				<pre class="preTagClass">
+var config = {
+				name: 'dashboardTour',
+				steps: [
+					{"element": "#" + sdk.getDivIdFromComponetId('datagrid9'), "title": "Yearly Sales grid ", "content": "This grid shows Sales trend by Years <br> Shows Sales in M$ <br> Refresh the grid by selecting different firm from filter", "placement" : "auto", "duration": "1500"},
+					{"element": "#" + sdk.getDivIdFromComponetId('sgauge4'), "title": "Sales Target vs Actual ", "content": "Gauge has target and achieved sales in selected year", "placement" : "bottom", "duration": "2000" },
+					{"element": "#" + sdk.getDivIdFromComponetId('grpbar10'), "title": "Sales Category Chart ", "content": "This chart plots cumulative sum of sales in each segment" }
+				]
+};
+sdk.startDashboardTour(config);
+					</pre> 
+    				</md-card-content>				
+		</md-card>
+		
+		<!-- Mobile Tooltip  -->
+                  <md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Tooltip for Mobile</md-card-header-text>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<p>a) For Timeline, Bar, Heatmap & Pie mobile specific Tooltip is available.</p>
+<p>b) This Tooltip workes only when component is in maximized state.</p>
+<p>c) Default Tooltip can be enable through this script--> sdk.getWidget( 'ComponentID' ).m_mobiletooltipstyle = "default"; </p>
+				<pre class="preTagClass">
+sdk.getWidget( 'ComponentID' ).m_mobiletooltipstyle = "default";
+					</pre> 
+    				</md-card-content>				
+		</md-card>
+		<!-- Best Fit line  -->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Best Fit Line For Scatter Plot </md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/SetBestFitLine.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/SetBestFitLine.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<p> Write below script on the connection/component </p>
+				<pre class="preTagClass">
+sdk.setBestFitLine('Plot1',[{
+	'FieldName': 'X1',
+	'EnableLine': true,
+	'LineWidth': "2",
+	'LineColor': "#000000",
+	'LineType': 'straight' 	// (dot,dash,dash1)
+}]);
+					</pre> 
+    				</md-card-content>				
+		</md-card> 	
+		
+		<!-- Mobile tooltip  -->
+		<md-card class="mdCard">
+			<div>
+			 <md-card-header class="mdCardHeader">
+			 	<md-card-header-text class="mdCardHeaderText">Tooltip for Mobile </md-card-header-text>
+					<a class="downloadSample" ng-click="tryItHelpFeature($event,'./resources/help/samples/mobileTooltipStyle.bvzx')"><i class="material-icons cursor-hand">open_in_new</i><md-tooltip md-direction="top">Try in designer</md-tooltip></a>
+					<a class="downloadSample" ng-click="downloadHelpFeature($event,'./resources/help/samples/mobileTooltipStyle.bvzx')"><i class="material-icons cursor-hand">file_download</i><md-tooltip md-direction="top">Download Sample</md-tooltip></a>
+			 </md-card-header>
+			</div>
+			<md-card-content>
+<p>a) For Timeline, Bar, Heatmap & Pie mobile specific Tooltip is available.</p>
+<p>b) This Tooltip works only when component is in maximized state.</p>
+<p>c) Default Tooltip can be enabled through script</p>
+				<pre class="preTagClass">
+sdk.getWidget( 'ComponentID' ).m_mobiletooltipstyle = "default";
+					</pre> 
+    				</md-card-content>				
+		</md-card> 	
+		   
+	</md-content>
+	<!--Content area end -->
+</div>

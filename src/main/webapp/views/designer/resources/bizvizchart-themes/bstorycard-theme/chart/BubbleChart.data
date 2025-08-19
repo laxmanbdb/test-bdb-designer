@@ -1,0 +1,288 @@
+{
+    "BubbleChart": {
+        "Properties": {
+            "Object": {
+                "componentType": "bubble_chart",
+                "objectType": "chart",
+                "subElement" :"Chart",
+                "globalVariableKeyAttribute" :"Globalkey",
+                "isDataSetAvailable":"true",
+                "enableScript": "true",
+                "referenceID":"",
+                "isValueFieldsAvailable":"false",
+                "showContextMenu":"false",
+                "shortName":"Bubble",
+                "showLocked": "false",
+                "objectName": "Bubble_1",
+                "unShowHidden": "false",
+ 				"groupings" : "",
+                "percentheight": "320",
+                "width": "480",
+                "x": "20",
+                "height": "180",
+                "y": "10",
+                "initialVisibility": "true",
+                "percentwidth": "450",
+                "objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+                "Chart": {
+         
+			        "id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+			        "Type": "Bubble",
+			        "showGradient": "false",
+			        "bgGradients": "0xffffff",
+			        "bgAlpha": "1",
+			        "bgGradientRotation": "0",
+			        "exportToExcel": "true",
+			        "exportToJPEG": "true",
+			        "exportToPNG": "true",
+			        "exportToPDF": "true",
+			        "exportToPPT": "true",
+			        "exportToPrint": "true",
+			        "showScreenShotButton": "true",
+			        "screenShotMode": "ppt",
+			        "pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+			        "pptHeading": "Heading",
+			        "pptSubHeading": "Sub Heading",
+			        "subHeading": "Sub Heading",
+			        "scrnShotFileName": "exportDashboard",
+			        "showTooltip": "true",
+ 					"tooltipBackgroundColor": "#FFFFFF",
+ 					"tooltipBackgroundTransparency": "1",
+ 					"tooltipBorderColor": "#E0DFDF",
+ 					"customTooltipWidth": "auto",
+ 					"tooltipPrecision": "default",
+ 					"tooltipHighlighter": "true",
+			        "showMaximizeButton": "false",
+			        "showExcelDownload": "true",
+			        "showSubTitle": "false",
+			        "showTitle": "false",
+			        "GradientColor": "#BDC3C7,#BDC3C7",
+			        "showLegends": "false",
+			        "hideLegendOnStart": "true",
+			        "legendDirection": "horizontal",
+			        "legendfontSize": "10",
+			        "legendtextDecoration": "none",
+			        "legendfontStyle": "normal",
+			        "legendfontColor": "#000000",
+			        "legendfontWeight": "normal",
+			        "showcheckboxwithlegend": "false",
+			        "showCheckboxSeprate": "false",
+					"showBorder": "false",
+					"borderColor": "#BDC3C7",
+			        "borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#000000",
+					"shadowOpacity": "0.1",
+			        "axisColor": "#ffffff",
+			        "markerColor": "#7e8585",
+			        "markerTransparency": 0.2,
+			        "showMarkerLine": false,
+			        "showVerticalMarkerLine":"false",
+			        "autoaxisSetup": "true",
+			        "minimumAxisValue": "-20",
+			        "maximumAxisValue": "110",
+			        "baseZero": "true",
+			        "zeroMarkerLine" : "false",
+					"zeroMarkerColor" : "#CCCCCC",
+			        "FixedLabel": "false",
+			        "Formater": "Currency",
+			        "Unit": "none",
+			        "SignPosition": "prefix",
+			        "Precision": "default",
+			        "NumberFormatter": "number",
+			        "SecondaryFormater": "Number",
+			        "SecondaryUnit": "none",
+			        "Globalkey": "",
+			        "enableColorFromDrill": "false",
+			        "showColorBands": "false",
+			        "BandDisplayNames": "Low,Mid,High",
+			        "ColorBandRanges": "10,30,50",
+			        "BandColors": "#F22613,#F89406,#00B16A",
+			        "BandAlphas": "0.8,0.8,0.8",
+			        "ShowColorBandLegends": "false",
+			        "rangedSeriesColors": "#F22613,#F89406,#00B16A",
+			        "rangesOfSeries": "0~20,20~40,40~100",
+			        "rangedSeriesDisplayNames": "Low,Mid,High",
+					"showDynamicRange" : "false",
+					"maxRangeColor" : "#00b16a",
+					"minRangeColor" : "#f89406",
+			        "ChartBase": "gradient",
+			        "luminance": 0.3,
+			        "shadowVisible": "false",
+			        "SolidColorFill": "false",
+			        "transparency": 0.9,
+			        "xAxis": {
+			            "Description": "",
+			            "LabelFontWeight": "normal",
+			            "FontSize": "0",
+			            "LabelFontColor": "0",
+			            "LabelFontStyle": "normal",
+			            "TextDecoration": "none",
+			            "LabelFontFamily": "BizvizFont",
+			            "Labelrotation": "90",
+			            "LabelTilted": "false",
+			            "FontColor": "0",
+			            "LabelTextDecoration": "none",
+			            "LabelFontSize": "0",
+			            "FontStyle": "normal",
+			            "FontFamily": "BizvizFont",
+			            "FontWeight": "normal",
+			            "TickMarks": "false",
+			            "CategoryMarkingColor":"#333333"
+			        },
+			        "yAxis": {
+			            "Description": "",
+			            "rightaxisFormater": "false",
+			            "LabelFontWeight": "normal",
+			            "FontStyle": "normal",
+			            "LabelFontColor": "0",
+			            "FontFamily": "BizvizFont",
+			            "TextDecoration": "none",
+			            "LabelFontStyle": "normal",
+			            "LabelFontFamily": "BizvizFont",
+			            "FontColor": "0",
+			            "SecondDiscription": "yaxis",
+			            "LabelTextDecoration": "none",
+			            "LabelFontSize": "0",
+			            "FontSize": "12",
+			            "leftaxisFormater": "true",
+			            "FontWeight": "normal"
+			        },
+			        "Title": {
+			            "FontWeight": "normal",
+			            "Description": "Title",
+			            "FontSize": "12",
+			            "TextDecoration": "none",
+			            "Align": "left",
+			            "FontFamily": "BizvizFont",
+			            "FontColor": "#22313f",
+			            "FontStyle": "normal",
+			            "showTitle": "false",
+			            "TitleBarHeight" : "25"
+			        },
+			        "SubTitle": {
+			            "FontWeight": "normal",
+			            "Description": "SubtitleDescription",
+			            "showSubTitle": "false",
+			            "FontSize": "12",
+			            "TextDecoration": "none",
+			            "Align": "center",
+			            "FontFamily": "BizvizFont",
+			            "FontColor": "0",
+			            "FontStyle": "normal"
+			        }
+                }
+            }
+        },
+        "Fields": [
+            {
+                "DisplayName": "Year",
+                "Type": "Category",
+                "visible": "true",
+                "PlotRadius": "0",
+                "Name": "Category",
+                "Color": "#fcdb96",
+                "axis": "none",
+                "Precision": "0",
+                "ChartType": "none"
+            },
+            {
+                "DisplayName": "Sales",
+                "Type": "Series",
+                "visible": "true",
+                "PlotRadius": "0",
+                "Name": "S1",
+                 "Color": "#797979",
+                "axis": "none",
+                "Precision": "0",
+                "ChartType": "none",
+                "RadiusField":"S3"
+            },
+            {
+                "DisplayName": "QP",
+                "Type": "Series",
+                "visible": "true",
+                "PlotRadius": "0",
+                "Name": "S2",
+                 "Color": "#38d3a9",
+                "axis": "none",
+                "Precision": "0",
+                "ChartType": "none"
+                
+            }
+        ],
+        "Data": [{
+		"Category" : "10",
+		"S1" : 9,
+		"S2" : 10,
+		"S3" : 63
+	}, {
+		"Category" : "15",
+		"S1" : 98,
+		"S2" : 5,
+		"S3" : 89
+	}, {
+		"Category" : "20",
+		"S1" : 51,
+		"S2" : 50,
+		"S3" : 73
+	}, {
+		"Category" : "25",
+		"S1" : 41,
+		"S2" : 22,
+		"S3" : 14
+	}, {
+		"Category" : "30",
+		"S1" : 58,
+		"S2" : 24,
+		"S3" : 20
+	}, {
+		"Category" : "35",
+		"S1" : 78,
+		"S2" : 37,
+		"S3" : 34
+	}, {
+		"Category" : "40",
+		"S1" : 55,
+		"S2" : 56,
+		"S3" : 53
+	}, {
+		"Category" : "45",
+		"S1" : 18,
+		"S2" : 45,
+		"S3" : 70
+	}, {
+		"Category" : "50",
+		"S1" : 88,
+		"S2" : 56,
+		"S3" : 10
+	}, {
+		"Category" : "55",
+		"S1" : 30,
+		"S2" : 47,
+		"S3" : 49
+	}, {
+		"Category" : "60",
+		"S1" : 57,
+		"S2" : 62,
+		"S3" : 98
+	}, {
+		"Category" : "65",
+		"S1" : 4,
+		"S2" : 16,
+		"S3" : 16
+	}, {
+		"Category" : "70",
+		"S1" : 46,
+		"S2" : 10,
+		"S3" : 11
+	}, {
+		"Category" : "75",
+		"S1" : 22,
+		"S2" : 87,
+		"S3" : 89
+	}
+]
+
+    }
+}

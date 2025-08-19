@@ -1,0 +1,63 @@
+{
+	"HSlider": {
+		"Properties": {
+			"Object": {
+				"componentType": "h_slider",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "hslider",
+				"height": "85",
+				"y": "929",
+				"objectType": "hslider",
+				"subElement": "HSlider",
+				"globalVariableKeyAttribute": "globalkey",
+				"width": "300",
+				"initialVisibility": "true",
+				"showLocked": "false",
+				"objectName": "Hslider_32",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "Obj.A067B496ND13ENF9EAN33ABNE6EA7E2AEBBE",
+				"x": "226",
+				"HSlider": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"ticksColor": "16777215",
+					"labelFontStyle": "normal",
+					"labelFontWeight": "normal",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"freezeHandle" : "false",
+					"unit" : "auto",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"labelColor": "#494950",
+					"handlecolor": "#FFFFFF",
+					"scaleHeight": "10",
+					"handleradius": "12",
+					"snapInterval": "1",
+					"numberOfTicks": "5",
+					"chromeColor": "#434344",
+					"backgroundColor": "#FFFFFF",
+					"backgroundAlpha": "1",
+					"showTicks": "false",
+					"showMarkers": "true",
+					"labelFontFamily": "BizvizFont",
+					"minimum": "0",
+					"maximum": "100",
+					"tickAlpha": "1",
+					"labelFontSize": "14",
+					"enhancedHSlider": "true"
+				}
+			}
+		}
+	}
+}

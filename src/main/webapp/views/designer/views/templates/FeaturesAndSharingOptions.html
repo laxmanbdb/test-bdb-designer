@@ -1,0 +1,76 @@
+<h1
+	style="text-align: left; font-size: 30px; margin-left: 15px; margin-bottom: 3%;">Features
+	and Sharing Options</h1>
+
+<p class="contentTextStyle">
+	BDB Designer has scripting functionality, which can be used to customize
+	dashboards. Even complex dashboards can easily be created with
+	scripting. Users need to have basic scripting knowledge to utilize this
+	functionality.<br>
+</p>
+<h3>Scripting Window</h3>
+<p class="contentTextStyle">
+	In this tutorial, we will provide a basic understanding of writing
+	scripts and their functionality. <br> Scenario: We wish to have a
+	check box which, when enabled, will show a column chart, and when
+	disabled, will show an area chart. This concept is called 'Dynamic
+	Visibility'.
+<ul style="list-style: none">
+	<li>i) Select <b>'Dashboard'</b> to create a new dashboard
+	</li><br>
+	<li>ii) After selecting <b>'Dashboard'</b>, a web page will open.
+	</li><br>
+	<li>iii) Click on the Charts icon and drag and drop the 'Check Box',
+			'Column Chart', and 'Area Chart' components into the canvas.
+	</li><br>
+	<li>iv) Click on the <b>'Appearance'</b> icon next to the label
+		component (shown below in the yellow box) and set <b>Checked Value
+			to '0'</b> and <b>Unchecked Value to '1'</b> (as shown below).
+	</li><br>
+	<li>v) Create data connections for the Column chart and Area
+		chart. (<b>Ref Creating Data Source Connection for Charts</b>)
+		</li><br>
+	<li>vi) Click on the <b>'Script-on-change'</b> icon which is
+		provided next to the label component (as shown below).<br>
+	</li><br>
+	<li>vii) After clicking on the icon, a 'Change Script' window will
+		be displayed where the user needs to write a script by using the
+		functions provided in the dropdown menu.</li><br>
+		<ul>
+			<li>First, pass the 'Combo Box' value to the script 'if'
+				function. <br> To accomplish this, click on the 'Component
+				Attributes' icon on the right edge of the screen, and copy the
+				'Dialog Tag' as shown below.</li><br>
+			<li>We will now pass the 'Display Tag' value to the 'if'
+				function of the 'Check Box' Change Script window (as shown below).</li><br>
+			<li>We will now select the 'Show and Hide' function from the
+				'Function' dropdown menu</li><br>
+			<li>If the 'Value == 1' (in other words, if the check box is
+				enabled) the Column chart should be displayed. For this to occur, we
+				need to place the 'Show Component' function under the 'if' function,
+				as shown below.</li><br>
+			<li>We now need to pass the 'Column chart' value to the 'show
+				Component' function which we have placed under the 'if' statement,
+				as shown in above.</li><br>
+			<p>To accomplish this, the user has to search for the Column
+				chart in the Search box provided and select the 'PasteID' icon for
+				the Column chart ( as shown below).</p><br>
+			<li>Now when the Column chart is passed to the 'Show Component'
+				function, we need to make sure that area chart is hidden. To do
+				this, we will pass the area chart value to the 'Hide Component'
+				function, as shown below (similar to what we did for the Column
+				chart).</li><br>
+			<li>If the 'Value == 0' (in other words, if the check box is
+				disabled), we need do the reverse of the function we used earlier;
+				So that when the user unchecks the Check Box, the 'Area chart' will
+				be displayed and 'Column chart' will be hidden.</li><br>
+				<p>To accomplish this, we need to write the following script:</p>
+			<li>After entering the above script successfully, click on the 'Preview' icon 
+					to view the results.</li><br>
+			<li>In the below screen capture, since the 'Check Box' is checked,
+				the 'Column Chart' is displayed.</li><br>
+			<li>Unchecking the 'Check Box' will cause the 'Area Chart' to be
+				displayed.</li><br>
+		</ul>
+	</li>
+</ul>

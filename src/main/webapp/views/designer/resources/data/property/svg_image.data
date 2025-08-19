@@ -1,0 +1,126 @@
+{
+	"Info": [{
+		"class": "SVGImage"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.5",
+		"attributeName": "opacity",
+		"propertyName": "SVGImage"
+	}, {
+		"label": "Tool Tip : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "tooltip",
+		"propertyName": "SVGImage"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "SVGImage"
+	}, {
+		"label": "Cursor Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "default",
+			"value": "Default"
+		}, {
+			"key": "pointer",
+			"value": "Pointer"
+		}, {
+			"key": "help",
+			"value": "Help"
+		}, {
+			"key": "not-allowed",
+			"value": "Blocked"
+		}, {
+			"key": "progress",
+			"value": "Progress"
+		}],
+		"attributeName": "cursorType",
+		"propertyName": "SVGImage"
+	}, {
+		"label": "Browse SVG : ",
+		"heading": "Browse SVG",
+		"type": "customFile",
+		"value": "",
+		"attributeName": "imgData",
+		"propertyName": "SVGImage"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "SVGImage"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "SVGImage"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "SVGImage"
+	}]
+}

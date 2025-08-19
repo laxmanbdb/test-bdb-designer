@@ -1,0 +1,272 @@
+<div id="DataSourceContainer" ng-app="datasource-manager" ng-init="initDataManager()" class="ht100per bizVizRightControlDataSourceContainer hideBox bvz-invisible biz-viz-side-window container">
+	<div class="row table-row ht100per bizVizControlBoxBody ds-body">
+		<!-- Connections list -->
+		<div class="col-sm-3 ht100per d-scrollable connector-list no-pad backgroundWhite">
+			<!--  list items -->
+			<md-content> 
+				<md-list flex ng-repeat="connector in modal.connectorConfig.connectors" ng-if="connector.enabled"> <md-list-item style="height: 45px;">
+					<div class="md-list-item-text" layout="row">
+						<!-- <img alt="{{ connector.id }}" ng-src="{{connector.iconImg}}" style="width: 18px; height: 15px; margin: 12px 9px 0px 15px;" /> -->
+						<md-icon class="{{ connector.iconClass }} cursor-hand" style="margin-right:9px;" ></md-icon>
+						<h5 style="text-align: left; font: normal normal 600 14px BizvizFont; letter-spacing: 0px; color: #434344; opacity: 1;">{{ connector.text }}</h5>
+					</div>
+					<md-button aria-label="NewConnection" ng-if="connector.name !== 'pa'" ng-click="addNewConnection(connector)" class="md-secondary md-icon-button"> 
+						<md-icon >
+							<!-- <img alt="Create New Connection" src="./resources/images/svg/additional/Add.svg" class="cursor-hand" mat-tooltip="Create New Connection" style="margin-bottom: 15px;" /> -->
+							<md-icon class="nt-plus-icon cursor-hand" mat-tooltip="Create New Connection" placement = "bottom-end"></md-icon>
+							<!--<i class="material-icons cursor-hand" mat-tooltip="Create New Connection">add</i>--> 
+						</md-icon> 
+					</md-button>
+					<md-divider></md-divider> 
+				</md-list-item> 
+				<!--  sub list  --> 
+				<md-list-item id="UI_{{dataURL.id}}" ng-if="dataURL.typeSpecifier==connector.name"
+						ng-repeat="dataURL in modal.selectedDashboard.json.Dashboard.DataProviders.DataURL" ng-click="setConnectionSelected(dataURL);setSelectedConnList( $event, dataURL );setSelectedVariable( $event, dataURL, 'Connection' )">
+					<div class="md-list-item-text" layout="column">
+						<div class="highlighter" ng-show="dataURL.isUiActive" ng-style="getHighlighterStyle()"></div>
+						<h5 style="padding-left: 15px; text-align: left; font: normal normal 600 14px BizvizFont; letter-spacing: 0px; color: #434344;">
+							{{ dataURL.connectionName }} <span class="ca-conn-id pull-right">[ {{dataURL.id}} ]</span>
+						</h5>
+					</div>
+					<md-button aria-label="toggleWindow" class="md-secondary md-icon-button" ng-show="dataURL.isUiActive" ng-click="toggleVariableWindow('1')"> 
+						<md-icon class="nt-script-20-icon cursor-hand" mat-tooltip="Script on Load">
+							<!-- <img alt="developer_mode" src="./resources/images/svg/additional/Script icon.svg" class="cursor-hand" mat-tooltip="Script on Load" style="margin-bottom: 15px;" />-->
+							<!--<i class="material-icons cursor-hand" mat-tooltip="Script on Load">developer_mode</i>-->
+						</md-icon> 
+					</md-button> 
+					<md-button aria-label="DeleteConnection" class="md-secondary md-icon-button" ng-click="doYouWantToDeleteConn(dataURL, $event);"> 
+						<md-icon class="nt-delete-icon cursor-hand" mat-tooltip="Remove">
+						<!-- <img alt="Remove" src="./resources/images/svg/additional/Delete.svg" class="cursor-hand" mat-tooltip="Remove" style="margin-bottom: 15px;" /> -->
+						<!--<i class="material-icons cursor-hand" mat-tooltip="Remove">delete</i>--> 
+						</md-icon>
+					</md-button> 
+					<md-divider></md-divider> 
+				</md-list-item> 
+				<!--  sub list --> 
+				</md-list> 
+			</md-content>
+			<!--  list items -->
+		</div>
+		
+		<!-- Connection configuration -->
+		<div class="col-sm-9 ht100per no-pad">
+			<div class="animate-switch-container ht100per pad-top-25 backgroundWhite" ng-switch on="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.typeSpecifier">
+				<div class="animate-switch ht100per" ng-switch-when="csv">
+					<csv-connection></csv-connection>
+				</div>
+				<div class="animate-switch ht100per" ng-switch-when="excel">
+					<excel-connection></excel-connection>
+				</div>
+				<div class="animate-switch ht100per" ng-switch-when="web">
+					<webservice-connection></webservice-connection>
+				</div>
+				<div class="animate-switch ht100per" ng-switch-when="pa">
+					<pa-connection></pa-connection>
+				</div>
+				<div class="animate-switch ht100per" ng-switch-when="ds">
+					<ds-connection></ds-connection>
+				</div>
+				<div class="animate-switch ht100per" ng-switch-when="ws">
+					<ws-connection></ws-connection>
+				</div>
+				<div class="animate-switch ht100per" ng-switch-when="datasheet">
+					<datasheet-connection></datasheet-connection>
+				</div>
+				<div class="animate-switch ht100per" ng-switch-when="derived">
+					<ddata-connection></ddata-connection>
+				</div>
+				<div class="animate-switch ht100per" ng-switch-default>
+					<div class="col-lg-12 col-md-12 default-window-status">
+						<div ng-show="modal.selectedDashboard.json.Dashboard.DataProviders.DataURL.length > 0">
+							<h4>Please select a connection !</h4></div>
+						<div ng-hide="modal.selectedDashboard.json.Dashboard.DataProviders.DataURL.length > 0">
+							<h4>Please create a connection !</h4></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--Information Icon-->
+		<div class="connectorInfo" style="margin-right: 33px;" ng-if="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.typeSpecifier">
+			<md-button ng-click="openConnectorInfo()" class="md-secondary md-icon-button"> 
+				<md-icon class="nt-info-icon cursor-hand" mat-tooltip="Information">
+					<!--<img alt="Information" src="./resources/images/svg/additional/Information.svg" class="material-icons cursor-hand" mat-tooltip="Information" />-->
+					
+				</md-icon> 
+			</md-button>
+		</div>
+		<!-- Close window icon -->
+		<span class="window-action-icon close-button" ng-click="reloadDefault();" style="margin: 5px 26px 0px 0px !important;">
+		  	<!--<img alt="Close Window" src="./resources/images/svg/additional/Cross.svg" class="cursor-hand" mat-tooltip="Close Window" />-->
+			<md-icon class="nt-close-icon cursor-hand" mat-tooltip="Close Window"></i>
+		</span>
+	</div>
+
+	<!-- Footer to show the window name -->
+	<!-- 	<div class="bizVizControlBoxFooter">Datasources</div>  -->
+
+	<!-- Calculated Field window -->
+	<div id="calculatedFieldModel" class="modal vcsmodal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.calculatedFieldModel == true">
+		<div class="col-sm-2 col-md-4 col-lg-4"></div>
+		<div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+			<div class="modal-content container-border">
+                <md-toolbar>
+			      <div class="md-toolbar-tools">
+			        <h2>Calculated Field Editor</h2>
+			        <span flex></span>
+			        <md-button class="md-icon-button" data-dismiss="modal" ng-click="setModelWatcherStatus('calculatedFieldModel', false); cancel()">
+			          <md-icon href="javascript: void( 0 )"  aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip="Close"><!-- <i class="material-icons cursor-hand" mat-tooltip="Close">close</i> --></md-icon>
+			        </md-button>
+			      </div>
+			    </md-toolbar>
+				<div class="modal-Body">
+					<div class="row-height sub-section">
+						<div class="col-sm-6 col-md-4 col-lg-3">Name</div>
+						<div class="col-sm-6 col-md-8 col-lg-9">
+							<input class="propValue" ng-keyup="checkExist($event,modal.calcFieldConfig.selectedDataSetExpressionRename)" ng-model="modal.calcFieldConfig.selectedDataSetExpressionRename" type="text" maxlength="50" ng-pattern-restrict="^[A-Za-z0-9 _]*$" >
+						</div>
+					</div>
+					<div class="row-height sub-section">
+						<span class="col-sm-6 col-md-4 col-lg-3">Script Editor</span>
+
+						<div class="col-sm-6 col-md-8 col-lg-9 custom-textbox-area-TB">
+							<form role="form">
+								<textarea ng-model="modal.calcFieldConfig.selectedDataSetExpressionScript" class="calcFieldTextBox jsonComponentBox"></textarea>
+							</form>
+						</div>
+					</div>
+					<div class="row-height sub-section">
+						<span class="col-sm-12 col-md-12 col-lg-12"><md-icon class="ng-scope nt-info-icon" aria-label="Information">
+							<!--<i class="material-icons cursor-arrow-point">info_outline</i>--></md-icon>
+						</span>
+						<ul>
+							<li>Enclose field names in square brackets: <i>[total_sales]/[number_of_items] </i></li>
+							<li>Enclose global variable in curly braces: <i>{bar1.profit}*2+[profit_jan] </i></li>
+						</ul>
+					</div>
+				</div>
+
+				<md-dialog-actions layout="row">
+					<span flex="" class="flex"></span>
+					<md-button class="md-raised md-default" 
+							ng-show="calcFieldMode == 'Create'" ng-disabled="modal.calcFieldConfig.alreadyExist" ng-click="updateCalculatedFieldList(modal.calcFieldConfig.selectedDataSetExpressionRename); setModelWatcherStatus('calculatedFieldModel', false);">Create</md-button>
+					<md-button class="md-raised md-default" 
+							ng-show="calcFieldMode == 'Update'" ng-disabled="modal.calcFieldConfig.alreadyExist" ng-click="updateCalculatedFieldList(modal.calcFieldConfig.selectedDataSetExpressionRename); setModelWatcherStatus('calculatedFieldModel', false);">Update</md-button>
+					<md-button data-dismiss="modal" class="md-raised md-primary" ng-click="setModelWatcherStatus('calculatedFieldModel', false);">Cancel</md-button>
+				</md-dialog-actions>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Connector Information box -->
+	<div id="connectorInfoBox" class="vcsmodal modal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false" ng-if="modal.modelPopupStatus.connectorInfoBox == true">
+		<div class="col-sm-2 col-md-4 col-lg-4"></div>
+		<div class="modal-dialog col-sm-10 col-md-8 col-lg-8">
+			<div class="modal-content container-border">
+	            <md-toolbar>
+	                <div class="md-toolbar-tools">
+	                    <md-button class="md-icon-button" ng-click="goToScriptHelp()">
+	                        <md-icon><i class="material-icons cursor-hand closeButtonPos" mat-tooltip="Open Script Help">open_in_new</i>
+	                        </md-icon>
+	                    </md-button>
+	                    <span flex></span>
+	                    <h2 fxLayoutAlign="center">{{modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.text}} Connector Information</h2>
+	                    <span flex></span>
+	                    <md-button data-dismiss="modal" class="md-icon-button" ng-click="setModelWatcherStatus('connectorInfoBox', false); cancel()">
+	                        <md-icon aria-label="Close dialog" class="nt-close-icon cursor-hand" mat-tooltip="Close">
+	                            <!--<i class="material-icons cursor-hand" mat-tooltip="Close">close</i>-->
+	                        </md-icon>
+	                    </md-button>
+	                </div>
+	            </md-toolbar>
+				<div class="modal-Body">
+					<div class="animate-switch-container ht100per" ng-switch on="modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.typeSpecifier">
+						<div class="animate-switch ht100per" ng-switch-when="csv">
+							<ul class="contentTextStyle">
+								<li>Browse and select a file with Comma separated values</li>
+								<li>CSV file can be upto 3MB in size</li>
+								<li>CSV file should not have javascript reserved words as column names such as 'length', 'new', '_proto' etc. </li>
+							</ul>
+						</div>
+						<div class="animate-switch ht100per" ng-switch-when="excel">
+							<ul class="contentTextStyle">
+								<li>Browse and select a file with XLSX extension</li>
+								<li>XLSX file can be upto 3MB in size</li>
+								<li>XLSX file should not have javascript reserved words as column names such as 'length', 'new', '_proto' etc. </li>
+							</ul>
+						</div>
+						<div class="animate-switch ht100per" ng-switch-when="web">
+							<ul class="contentTextStyle">
+								<li>All the connectors listed in dropdown has atleast one published service</li>
+								<li>Select a data service from drop down will list all its fields and filters</li>
+								<li>You can choose the filter keys by checking the checkbox.</li>
+								<li>If the Filter Value is empty, Filter key will be skipped from the filter parameters which are passed inservice call.</li>
+								<li>Pass static values directly in filter. eg. year: 2010, month: Jan</li>
+								<li>Dynamic values should be enclosed in curly brackets. eg. year - {filter1.year}, month - {filter2.month}</li>
+								<li>You can create calculated field from available fields, enclose field names in [square brackets] always. eg. ([sum of sales]/[number of items])</li>
+							</ul>
+						</div>
+						<div class="animate-switch ht100per" ng-switch-when="pa">
+							<ul class="contentTextStyle">
+								<li>Published workflows of R, Spark and Python kind are listed in dropdown</li>
+								<li>Data can be directly visualized in charts or datagrids</li>
+								<li>If a workflow has summary information and visual details then it can be plotted in TEXTBOX component.</li>
+							</ul>
+						</div>
+						<div class="animate-switch ht100per" ng-switch-when="datasheet">
+							<ul class="contentTextStyle">
+								<li>All the published datasheet service are listed in the dropdown</li>
+								<li>Data can be directly visualized in charts or datagrids</li>
+								<li>Data can be modified from Jexcel component</li>
+							</ul>
+						</div>
+						<div class="animate-switch ht100per" ng-switch-when="ds">
+							<ul class="contentTextStyle">
+								<li>A Data Store connector should be used in only one component to pull the data</li>
+								<li>Using same connection in multiple components are not advised to prevent confusion while scripting</li>
+								<li>Calculated Field: 
+									<ul>
+										<li>Edit the calculated field name by adding operator as prefix(which is set in the component dataset). e.g. 'sum_CalcField1', 'avg_CalcField2' etc.</i></li>
+										<li>Prefix 'sum_', 'avg_', 'min_' etc. to the field names and enclose in square brackets when used in the calculation: <i>[sum_totalSales]/[sum_numberOfItems]</i></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="animate-switch ht100per" ng-switch-when="ws">
+							<ul class="contentTextStyle">
+								<li>A valid Web Socket URL should be given</li>
+								<li>Fields and filters are not listed since a Web Socket can send data in any structure</li>
+								<li>Parse the response and format the data as per your requirement to show in chart or labels</li>
+							</ul>
+						</div>
+						<div class="animate-switch ht100per" ng-switch-when="derived">
+							<ul class="contentTextStyle">
+								<li>Merged connector can merge two connections by performing a LEFT join based on given criteria.</li>
+								<li>Define a condition via the 'Criteria' section.<br> Select a field from connection 1, select operator 'Equal' or 'Not Equal' and select a field from connection 2.</li>
+								<li>Fields for the Merged data connection will be displayed on the right side of the panel.</li>
+								<li>You can add a calculated fields also, based on the columns from left or right table.</li>
+								<li>Always select Connection 1 first, then Connection 2, if there are columns with same name then suffix "_R" will be added.</li>
+								<li>User can 'Rename' or 'Remove' the field names.</li>
+								<li>If Column namesYou can 'Rename' or 'Remove' the field names.</li>
+								<li><b>Recommendation: Since this is a client side processing, only those connections should be merged which have less than 200 records and not more then 10 columns.</b></li>
+							</ul>
+						</div>
+					</div>
+					<div class="animate-switch-container ht100per" ng-switch on="!modal.selectedDashboard.json.Dashboard.DataProviders.selectedConnection.typeSpecifier">
+						<div class="animate-switch ht100per">
+						<ul class="contentTextStyle">
+								<li>You haven't selected any Data Connector category.</li>
+								<li>Please select a category to see the related information.</li>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Loader in Dataource window -->
+	<div id="web-conn-loader">
+		<div class="la-ball-clip-rotate la-dark la-lg">
+			<div></div>
+		</div>
+	</div>
+</div>

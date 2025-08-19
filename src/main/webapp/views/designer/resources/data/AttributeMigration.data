@@ -1,0 +1,109 @@
+var
+	AttributeMigration = {
+		"chart": [
+			"Chart"
+		],
+		"checklist": [
+			"CheckList"
+		],
+		"filter": [
+			"Filter"
+		],
+		"rectangle": [
+			"Rectangle"
+		],
+		"legend": [
+			"Legend"
+		],
+		"exportppt": [
+			"Exportppt"
+		],
+		"filtersaver": [
+			"Filtersaver"
+		],
+		"datagrid": [
+			"DataGrid"
+		],
+		"dataSearch": [
+			"dataSearch"
+		],
+		"date": [
+			"Date"
+		],
+		"vslider": [
+			"VSlider"
+		],
+		"hslider": [
+			"HSlider"
+		],
+		"funnel": [
+			"Funnel"
+		],
+		"image": [
+			"Image"
+		],
+		"label": [
+			"Label"
+		],
+		"numericstepper": [
+			"NumericStepper"
+		],
+		"bullet": [
+			"Bullet"
+		],
+		"gauge": [
+			"Gauge"
+		],
+		"guidedtour": [
+			"GuidedTour"
+		],
+		"semigauge": [
+			"Semigauge"
+		],
+		"refreshbutton": [
+			"RefreshButton"
+		],
+		"info": [
+			"InfoButton"
+		],
+		"scorecard": [
+			"Scorecard"
+		],
+		"tabs": [
+			"Tabs"
+		],
+		"trend": [
+			"Trend"
+		],
+		"textbox": [
+			"TextBox"
+		],
+		"inputbox": [
+			"InputBox"
+		],
+		"URLButton": [
+			"URLButton"
+		],
+		"InputButton": [
+			"InputButton"
+		],
+		"SVGShape": [
+			"SVGShape"
+		],
+		"SVGImage": [
+			"SVGImage"
+		],
+		"filterchips":[
+			"FilterChips"
+		],
+		"TabComponent":[
+			"TabComponent"
+		],
+		"WidgetChart":[
+			"WidgetChart"
+		]
+	}
+	
+	var componentClassPropertyMap = {
+	"Chart" : "obj"
+	}	

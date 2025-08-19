@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+  <g id="Group_3280" data-name="Group 3280" transform="translate(-1295 -266)">
+    <g id="Rectangle_171" data-name="Rectangle 171" transform="translate(1295 266)" fill="#7c4dff" stroke="#ececec" stroke-width="1">
+      <rect width="25" height="25" rx="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="24" height="24" rx="3.5" fill="none"/>
+    </g>
+    <g id="Group_126" data-name="Group 126" transform="translate(7 177.481)">
+      <rect id="Rectangle_89" data-name="Rectangle 89" width="1.428" height="7.803" transform="translate(1302.559 99.331)" fill="#fff"/>
+      <rect id="Rectangle_90" data-name="Rectangle 90" width="1.428" height="7.197" transform="translate(1297.962 99.937)" fill="#fff"/>
+      <rect id="Rectangle_91" data-name="Rectangle 91" width="1.428" height="3.658" transform="translate(1300.172 103.476)" fill="#fff"/>
+      <rect id="Rectangle_92" data-name="Rectangle 92" width="1.428" height="3.111" transform="translate(1295.418 104.023)" fill="#fff"/>
+      <path id="Path_2" data-name="Path 2" d="M20.5,27.616l.715.789,3.622-3.482,2.63,2.3,4.176-4.271-.854-.65-3.322,3.319L25,23.321Z" transform="translate(1274.057 72.315)" fill="#fff"/>
+      <g id="Layer_3" transform="translate(1301.874 100.857)">
+        <path id="Path_70" data-name="Path 70" d="M60.385,50.709h4.4v1.683H60.4v1.35l-2.5-2.23L60.385,49.3Z" transform="translate(-57.9 -49.3)" fill="#fff" stroke="#7c4dff" stroke-miterlimit="10" stroke-width="0.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

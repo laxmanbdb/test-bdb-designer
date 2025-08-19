@@ -1,0 +1,45 @@
+<div id="FnWindow" 
+	style="height: auto;"
+	class="bizVizRightControlComponentBoxContainer biz-viz-side-window hideBox bvz-invisible ht100per" 
+	ng-init="loadInbuiltFunctions()">
+	<div class="bizVizControlBoxBody" style="max-height: 500px; overflow: auto;">
+		<div class="row">
+			<div class="col-lg-12 pad0" style="margin: -15px 0px">
+				<div class="bvz-fn-text full-size" style="margin: 15px 0;">
+					<textarea class="user-script-text-area" 
+						id="txt_UserScript_comp" 
+						placeholder="Script to be executed on change" 
+						wrap="off" 
+						spellcheck="false" 
+						rows="10" 
+						ng-model="userScript.value" >
+					</textarea>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<div class="col-lg-12">
+							<div fn-search-tool></div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-lg-12">
+							<div bvz-search-objects></div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="bizVizControlBoxFooter">
+		<span class="close-btn pull-left">
+			<i class="glyphicon glyphicon-arrow-right" 
+				ng-click="reloadDefault();" >
+			</i>
+		</span>
+		{{'Change Script [ '+scriptOf+' ]'}}
+	</div>
+</div>

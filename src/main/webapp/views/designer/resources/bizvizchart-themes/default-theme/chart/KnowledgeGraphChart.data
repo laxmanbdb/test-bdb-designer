@@ -1,0 +1,242 @@
+ {
+ 	"KnowledgeGraphChart": {
+ 		"Properties": {
+ 			"Object": {
+ 				"componentType": "knowledge_graph_chart",
+ 				"objectType": "chart",
+ 				"subElement": "Chart",
+ 				"themeType": "default-theme",
+ 				"globalVariableKeyAttribute": "Globalkey",
+ 				"isDataSetAvailable": "true",
+ 				"enableScript": "true",
+ 				"referenceID": "",
+ 				"isValueFieldsAvailable": "false",
+ 				"showContextMenu": "false",
+ 				"shortName": "knowledge",
+ 				"showLocked": "false",
+ 				"objectName": "Knowledge_1",
+ 				"unShowHidden": "false",
+ 				"groupings": "",
+ 				"percentheight": "320",
+ 				"width": "643",
+ 				"x": "200",
+ 				"height": "536",
+ 				"y": "10",
+ 				"initialVisibility": "true",
+ 				"percentwidth": "50",
+ 				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+ 				"Chart": {
+ 					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+ 					"Type": "KnowledgeGraph",
+ 					"showGradient": "true",
+ 					"bgGradients": "#ffffff",
+ 					"bgAlpha": "1",
+ 					"bgGradientRotation": "0",
+ 					"exportToExcel": "true",
+ 					"exportToCSV": "true",
+ 					"exportToJPEG": "true",
+ 					"exportToPNG": "true",
+ 					"exportToPDF": "true",
+ 					"exportToPPT": "true",
+ 					"exportToPrint": "true",
+ 					"exportType":"screenshot",
+ 					"showScreenShotButton": "true",
+ 					"screenShotMode": "ppt",
+ 					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+ 					"pptHeading": "Heading",
+ 					"pptSubHeading": "Sub Heading",
+ 					"subHeading": "Sub Heading",
+ 					"scrnShotFileName": "exportDashboard",
+ 					"showTooltip": "true",
+ 					"tooltipBackgroundColor": "#FFFFFF",
+ 					"tooltipBackgroundTransparency": "1",
+ 					"tooltipBorderColor": "#E0DFDF",
+ 					"customTooltipWidth": "auto",
+ 					"tooltipPrecision": "default",
+ 					"tooltipHighlighter": "true",
+ 					"tooltipFontSize": "12",
+ 					"repeaterCommonMarker": "false",
+ 					"showMaximizeButton": "true",
+ 					"showExcelDownload": "true",
+ 					"showSubTitle": "true",
+ 					"showTitle": "true",
+ 					"GradientColor": "#FFFFFF,#FFFFFF",
+ 					"showLegends": "false",
+ 					"hideLegendOnStart": "true",
+ 					"legendDirection": "vertical",
+ 					"legendfontSize": "14",
+ 					"legendtextDecoration": "none",
+ 					"legendfontStyle": "normal",
+ 					"legendfontFamily": "BizvizFont",
+ 					"legendfontColor": "#494950",
+ 					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+ 					"showcheckboxwithlegend": "false",
+ 					"showCheckboxSeprate": "false",
+ 					"showBorder": "true",
+ 					"borderColor": "#EFF0F0",
+ 					"borderRadius": "0",
+ 					"borderThickness": "1",
+ 					"showShadow": "false",
+ 					"shadowColor": "#cccccc",
+ 					"shadowOpacity": "0.3",
+ 					"Globalkey": "",
+ 					"enableColorFromDrill": "false",
+ 					"hierarchialLayuot": "false",
+ 					"hierarchyDirection": "UD",
+ 					"maxNodes" : "10",
+ 					"updatedDesign": "true",
+ 					"nodeShape": "dot", 
+ 					"nodeColor": "#124ca3",
+ 					"nodeSize": "20",
+ 					"nodeBorderColor": "#124ca3",
+ 					"nodeOpacity": "1",
+ 					"nodeHoverColor": "#eeeeee",
+ 					"nodeFontColor": "#000000",
+ 					"nodeFontSize": "17",
+ 					"nodeFontStyle": "normal",
+ 					"nodeFontWeight": "normal",
+ 					"nodeFontFamily": "BizvizFont",
+ 					"nodeTextAlign": "left",
+ 					"useCustomShapes": "false",
+ 					"useCustomColors": "false",
+ 					"shapeType": "Default",
+ 					"shapeIndicatorType": "type",
+ 					"colorIndicatorType": "type",
+ 					"customNodeTypeColors": "#E08283,#38d3a9,#797979,#eeeeee",
+ 					"customNodeRangeColors": "#E08283,#38d3a9,#797979,#eeeeee",
+			   	 	"nodeTypes": "Type1,Type2,Type3,Type4",
+			   	 	"colorTypes": "Type1,Type2,Type3,Type4",
+			   	 	"customNodeTypeShapes": "dot,box,ellipsis,star",
+			   	 	"customNodeRangeShapes": "dot,box,ellipsis,star",
+ 					"shapeDisplayName": "Low,Medium,High,Very High",
+ 					"colorDisplayName": "Low,Medium,High,Very High",
+					"customShapeRange": "0~5,5~10,10~20,20~30",
+					"customColorRange": "0~5,5~10,10~20,20~30",
+					"shapeLevel":"Level1,Level2,Level3",
+					"colorLevel":"Level1,Level2,Level3",
+					"customNodeLevelShapes":"dot,star,square",
+					"customNodeLevelColors":"#E08283,#38d3a9,#797979",
+					"svgShape": false,
+ 					"edgeColorInherit": "default",
+ 					"edgeColor": "#808080",
+ 					"edgeFontColor": "#000000",
+ 					"edgeFontSize": "12",
+ 					"edgeFontStyle": "normal",
+ 					"edgeFontWeight": "normal",
+ 					"edgeFontFamily": "BizvizFont",
+ 					"edgeLabelAlign": "horizontal",	
+ 					"edgeFontPadding": "0",	
+ 					"showArrows": true,
+ 					"dashedEdge": false,	
+ 					"Title": {
+ 						"FontWeight": "600",
+ 						"Description": "Revenue across continents in a decade",
+ 						"FontSize": "17",
+ 						"TextDecoration": "none",
+ 						"Align": "left",
+ 						"FontFamily": "BizvizFont",
+ 						"FontColor": "#000000",
+ 						"FontStyle": "normal",
+ 						"showTitle": "true",
+ 						"TitleBarHeight": "48"
+ 					},
+ 					"SubTitle": {
+ 						"FontWeight": "normal",
+ 						"Description": "Sub Heading",
+ 						"showSubTitle": "false",
+ 						"FontSize": "15",
+ 						"TextDecoration": "none",
+ 						"Align": "left",
+ 						"FontFamily": "BizvizFont",
+ 						"FontColor": "#000000",
+ 						"FontStyle": "normal"
+ 					}
+ 				}
+ 			}
+ 		},
+ 		"Fields": [{
+ 			"DisplayName": "Parent",
+ 			"Type": "Source",
+ 			"visible": "true",
+ 			"Name": "Parent"
+ 		}, {
+ 			"DisplayName": "Child",
+ 			"Type": "Target",
+ 			"visible": "true",
+ 			"Name": "Child"			
+ 		}, {
+ 			"DisplayName": "Relationship",
+ 			"Type": "Edge",
+ 			"visible": "true",
+ 			"Name": "Relationship" 			
+ 		}],
+ 		"Data": [{
+ 				"Parent": "Product 26",
+ 				"Child": "question",
+ 				"Relationship": "submitting"
+ 			},
+ 			{
+ 				"Parent": "Product 4",
+ 				"Child": "side effect side Product",
+ 				"Relationship": "back"
+ 			},
+ 			{
+ 				"Parent": "Product 4",
+ 				"Child": "many  cavities",
+ 				"Relationship": "heard"
+ 			},
+ 			{
+ 				"Parent": "Product 4",
+ 				"Child": "ever  Product",
+ 				"Relationship": "like"
+ 			},
+ 			{
+ 				"Parent": "Product 1",
+ 				"Child": "when safety medication",
+ 				"Relationship": "Product"
+ 			},
+ 			{
+ 				"Parent": "Product 9",
+ 				"Child": "Product",
+ 				"Relationship": "have about"
+ 			},
+ 			{
+ 				"Parent": "Product 8",
+ 				"Child": "emptying  problems",
+ 				"Relationship": "Product"
+ 			},
+ 			{
+ 				"Parent": "Product 8",
+ 				"Child": "8",
+ 				"Relationship": "Product"
+ 			},
+ 			{
+ 				"Parent": "Product 8",
+ 				"Child": "disease",
+ 				"Relationship": "take"
+ 			},
+ 			{
+ 				"Parent": "Product 8",
+ 				"Child": "8 inquiry ?",
+ 				"Relationship": "asked"
+ 			},
+ 			{
+ 				"Parent": "Product 8",
+ 				"Child": "cause rash cause rash",
+ 				"Relationship": "Product"
+ 			},
+ 			{
+ 				"Parent": "Product 8",
+ 				"Child": "8",
+ 				"Relationship": "take"
+ 			},
+ 			{
+ 				"Parent": "Product 8",
+ 				"Child": "urine odor urine odor",
+ 				"Relationship": "saw"
+ 			}
+ 		]
+ 	}
+ }

@@ -1,0 +1,17 @@
+<div class="b-n-s-container">
+	<div class="b-n-s-wrapper">
+		<div class="b-n-z-val-wrapper">
+			<input type="text" max="{{bvzMax}}" min="{{bvzMin}}" ng-disabled=bvzDisable ng-model="ngModel" />
+		</div>
+		<div class="b-n-s-buttons" ng-if=!bvzDisable>
+			<div><a href="javascript: void( 0 )" 
+				ng-mousedown="changeValue( $event, 'UP' )" >
+				<i class="glyphicon glyphicon-triangle-top"></i>
+			</a></div>
+			<div><a href="javascript: void( 0 )" 
+				ng-mousedown="changeValue( $event, 'DOWN' )" >
+				<i class="glyphicon glyphicon-triangle-bottom"></i>
+			</a></div>
+		</div>
+	</div>
+</div>

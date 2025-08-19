@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #ffaf6d;
+      }
+
+      .cls-4 {
+        fill: #7c4dff;
+      }
+
+      .cls-5 {
+        fill: #d3d3d3;
+      }
+
+      .cls-6 {
+        fill: #fae872;
+      }
+
+      .cls-2 {
+        stroke: #d3d3d3;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Group_3116">
+        <g id="Rectangle_172">
+          <rect class="cls-1" width="50" height="50" rx="6" ry="6"/>
+          <rect class="cls-2" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+        </g>
+        <g id="Layer_4">
+          <path id="Path_1611" class="cls-3" d="M33.7,18.4c-4.7-4.9-12.4-5-17.3-.3h0l-2.8-2.9c6.5-6.2,16.7-6.1,23,.4h0l-2.9,2.8Z"/>
+        </g>
+        <path id="Path_1613" class="cls-4" d="M13.6,38.2c-6.3-6.4-6.2-16.7.1-23h0l2.8,2.9c-4.8,4.7-4.9,12.5-.2,17.3h0l-2.9,2.9h.2Z"/>
+        <path id="Path_1614" class="cls-6" d="M36.6,38.1l-2.9-2.8c4.7-4.9,4.5-12.6-.3-17.3h0l2.8-2.9c6.5,6.2,6.7,16.5.5,23h0Z"/>
+        <path id="Union_23" class="cls-5" d="M20.8,26.6c0-2.4,2-4.4,4.4-4.4s.6,0,.9.1l7.2-13.4s0-.8,1,0l-6.5,14.2c1.1.8,1.8,2.1,1.8,3.5,0,2.4-2,4.4-4.4,4.4s-4.4-2-4.4-4.4Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

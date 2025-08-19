@@ -1,0 +1,55 @@
+<div id="DatasetPalette" class="bizVizRightControlObjectContainer biz-viz-side-window hideBox bvz-invisible ht100per whiteBG">
+	<div class="col-sm-12 ht100per" style="padding: 0;">
+		<div class="bizVizControlBoxFooter">
+			<div class="property-window-name" ng-class="((modal.isDatasetEnabled && modal.isScriptEnabled) ? 'propPallSibDataScriptCloseDiv' : (modal.isScriptEnabled ? 'propPallSibScriptCloseDiv' : 'propPallSibCloseDiv'))">
+				<span>{{ component.objectName | titlecase }}</span>
+				<i class="closePalletPos material-icons cursor-hand" name="HideWindow" mat-tooltip="Close Window" ng-click="reloadDefault();">close</i>
+			</div>
+			<div class="propertyDivIcons" 
+				ng-class="((modal.isDatasetEnabled && modal.isScriptEnabled) ? 'propPallDataScriptCloseWidth' : (modal.isScriptEnabled ? 'propPallScriptClose' : 'propPallCloseWidth'))">
+		    	<ul id="obc-settings-main">
+		    	    <li class="propPallDataScriptWidth dataset-btn cursor-hand" ng-if="modal.isDatasetEnabled||modal.isScriptEnabled" ng-class="{ groupDisabled: modal.isDatasetEnabled }" id="dataSettings" mat-tooltip="Appearance">
+		    	        <img src="./resources/images/svg/additional/Properties.svg" name="appearance"/>
+		    	        <span>
+		    	        	Properties
+		    	        </span>
+		    	    </li>
+		    	    <li ng-if="modal.isDatasetEnabled" class="propPallDataScriptWidth dataset-btn cursor-hand" ng-class="{ groupDisabled: !modal.isDatasetEnabled }" id="dataSettings" mat-tooltip="Dataset">
+                    	<img src="./resources/images/svg/additional/Data_set.svg" name="dataSettings" />
+                    	<span>
+		    	        	Dataset
+		    	        </span>
+                	</li>
+		    	    <li class="cursor-hand" id="fx" ng-class="(modal.isDatasetEnabled) ? 'propPallDataScriptWidth' : 'propPallScriptCloseWidth'; {groupDisabled: modal.isDatasetEnabled}" mat-tooltip="Script on Load">
+		    	        <img src="./resources/images/svg/additional/Script_board.svg" name="fx" />
+		    	        <span>
+		    	        	Script on Board
+		    	        </span>
+		    	    </li>
+		    	    <!--<li class="closePropPallete cursor-hand pull-left" ng-click="reloadDefault();" id="HideWindow" 
+		    	    	ng-class="((modal.isDatasetEnabled && modal.isScriptEnabled) ? 'propPallDataScriptClose' : (modal.isScriptEnabled ? 'propPallScriptCloseWidth' : propPallClose)); {groupDisabled: modal.isDatasetEnabled}">
+						<i class="closePalletPos material-icons cursor-hand" name="HideWindow" mat-tooltip="Close Window">close</i> 
+					</li>-->
+		    	</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="bizVizControlBoxBody ht100per">
+			<div class="row dataset-conn-selector"
+				ng-show=" component.isValueFieldsAvailable == false || component.isValueFieldsAvailable == 'false'">
+				<div class="col-md-4">Connections</div>
+				<div class="col-md-6">
+					<select class="propValue" ng-model="selectedDatasource" ng-change="changeDatasource()"
+						ng-options="connection.connectionName for connection in modal.selectedDashboard.json.Dashboard.DataProviders.DataURL">
+					</select>
+				</div>
+				<div class="col-md-2">
+					<span>
+						<i class="material-icons cursor-hand" ng-click="refreshConnection();" mat-tooltip="Clear dataset">refresh</i>
+					</span>
+				</div>
+			</div>
+			<div class="row-fluid pad10 ht100per" ng-include="datasetDesignProperties[component.designData.class]['DataSetPage']"></div>
+		</div>
+	</div>
+</div>

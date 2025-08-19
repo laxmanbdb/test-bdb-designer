@@ -1,0 +1,54 @@
+{
+	"Trend": {
+		"Properties": {
+			"Object": {
+				"componentType": "trend",
+				"themeType": "default-theme",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "trend",
+				"initialVisibility": "true",
+				"subElement": "Trend",
+				"globalVariableKeyAttribute": "globalkey",
+				"y": "358",
+				"objectID": "Obj.AE6BA3FEN3DA7N40AFNACEFN2BAECA85350F",
+				"objectType": "trend",
+				"height": "86",
+				"showLocked": "false",
+				"objectName": "Trend Icon",
+				"unShowHidden": "false",
+				"groupings": "",
+				"width": "86",
+				"x": "380",
+				"Trend": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"positiveTrendColor": "#00BCD4",
+					"negativeTrendColor": "#F22613",
+					"zeroTrendColor": "#F7CA18",
+					"baseRange": "-1,1",
+					"virtualDataID": "",
+					"enableToolTip": "true",
+					"zeroSymbolColor": "#ffffff",
+					"virtualDataField": "",
+					"positiveSymbolColor": "#ffffff",
+					"dataRowNumber": "",
+					"negativeSymbolColor": "#ffffff",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"fieldDisplayName": "Trend",
+					"value": "2"
+				}
+			}
+		}
+	}
+}

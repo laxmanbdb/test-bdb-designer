@@ -1,0 +1,433 @@
+{
+	"Info": [{
+		"class": "SVGShape"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "200",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	}, {
+		"label": "Category : ",
+		"type": "CascadedParentSelect",
+		"value": "Animals",
+		"options": [{
+			"key": "none",
+			"value": "None",
+			"child": []
+		}, {
+			"key": "Animals",
+			"value": "Animals",
+			"child": [{
+				"key": "Dove",
+				"value": "Dove"
+			}]
+		}, {
+			"key": "Art",
+			"value": "Art",
+			"child": [{
+				"key": "Palette",
+				"value": "Palette"
+			}, {
+				"key": "Brush",
+				"value": "Brush"
+			}]
+		}, {
+			"key": "Building",
+			"value": "Building",
+			"child": [{
+				"key": "CityBuilding",
+				"value": "CityBuilding"
+			}]
+		}, {
+			"key": "Business",
+			"value": "Business",
+			"child": [{
+				"key": "Trend",
+				"value": "Trend"
+			}]
+		}, {
+			"key": "Commerce",
+			"value": "Commerce",
+			"child": [{
+				"key": "ShoppingCart",
+				"value": "ShoppingCart"
+			}, {
+				"key": "ShoppingBag",
+				"value": "ShoppingBag"
+			}]
+		}, {
+			"key": "Education",
+			"value": "Education",
+			"child": [{
+				"key": "College",
+				"value": "College"
+			}, {
+				"key": "Book",
+				"value": "Book"
+			}]
+		}, {
+			"key": "Food",
+			"value": "Food",
+			"child": [{
+				"key": "Plate",
+				"value": "Plate"
+			}, {
+				"key": "Bread",
+				"value": "Bread"
+			}]
+		}, {
+			"key": "Interface",
+			"value": "Interface",
+			"child": [{
+				"key": "Add",
+				"value": "Add"
+			}, {
+				"key": "Settings",
+				"value": "Settings"
+			}, {
+				"key": "User",
+				"value": "User"
+			}]
+		}, {
+			"key": "Medical",
+			"value": "Medical",
+			"child": [{
+				"key": "Tooth",
+				"value": "Tooth"
+			}, {
+				"key": "Stethesope",
+				"value": "Stethesope"
+			}, {
+				"key": "Pills",
+				"value": "Pills"
+			}]
+		}, {
+			"key": "Others",
+			"value": "Others",
+			"child": [{
+					"key": "Question",
+					"value": "Question"
+				}, {
+					"key": "Up",
+					"value": "Up"
+				},
+
+				{
+					"key": "Down",
+					"value": "Down"
+				}, {
+					"key": "LeftArrow",
+					"value": "LeftArrow"
+				}, {
+					"key": "RightArrow",
+					"value": "RightArrow"
+				}, {
+					"key": "UpArrow",
+					"value": "UpArrow"
+				}, {
+					"key": "DownArrow",
+					"value": "DownArrow"
+				},
+
+				{
+					"key": "Mail",
+					"value": "Mail"
+				}, {
+					"key": "Key",
+					"value": "Key"
+				}, {
+					"key": "Power",
+					"value": "Power"
+				}, {
+					"key": "marker",
+					"value": "marker"
+				},
+
+				{
+					"key": "Flag",
+					"value": "Flag"
+				}, {
+					"key": "Heart",
+					"value": "Heart"
+				}, {
+					"key": "Favourite",
+					"value": "Favourite"
+				}, {
+					"key": "Callout",
+					"value": "Callout"
+				}, {
+					"key": "Callout-question",
+					"value": "Callout-question"
+				}, {
+					"key": "Callout-warn",
+					"value": "Callout-warn"
+				}, {
+					"key": "Mobile",
+					"value": "Mobile"
+				}, {
+					"key": "Tablet",
+					"value": "Tablet"
+				}, {
+					"key": "Pc",
+					"value": "Pc"
+				}, {
+					"key": "Warning",
+					"value": "Warning"
+				}, {
+					"key": "Dollar",
+					"value": "Dollar"
+				}, {
+					"key": "Piechart",
+					"value": "Pie chart"
+				}, {
+					"key": "Linechart",
+					"value": "Line chart"
+				}, {
+					"key": "Columnchart",
+					"value": "Column chart"
+				}, {
+					"key": "Car",
+					"value": "Car"
+				}, {
+					"key": "Filter",
+					"value": "Filter"
+				}, {
+					"key": "Grid",
+					"value": "Grid"
+				}
+			]
+		}, {
+			"key": "People",
+			"value": "People",
+			"child": [{
+				"key": "FemaleUser",
+				"value": "FemaleUser"
+			}, {
+				"key": "People",
+				"value": "People"
+			}]
+		}, {
+			"key": "Social",
+			"value": "Social",
+			"child": [{
+					"key": "Facebook",
+					"value": "Facebook"
+				}, {
+					"key": "YouTube",
+					"value": "YouTube"
+				}, {
+					"key": "WhatsApp",
+					"value": "WhatsApp"
+				}, {
+					"key": "LinkedIn",
+					"value": "LinkedIn"
+				}, {
+					"key": "Like",
+					"value": "Like"
+				},
+
+				{
+					"key": "Dislike",
+					"value": "Dislike"
+				}
+			]
+		}, {
+			"key": "Sentiments",
+			"value": "Sentiments",
+			"child": [{
+				"key": "Angry",
+				"value": "Angry"
+			}, {
+				"key": "Alert",
+				"value": "Alert"
+			}, {
+				"key": "Calm",
+				"value": "Calm"
+			}, {
+				"key": "Depressed",
+				"value": "Depressed"
+			}, {
+				"key": "Nervous",
+				"value": "Nervous"
+			}, {
+				"key": "Sad",
+				"value": "Sad"
+			}]
+		}, {
+			"key": "Sports",
+			"value": "Sports",
+			"child": [{
+				"key": "Football",
+				"value": "Football"
+			}, {
+				"key": "Trophy",
+				"value": "Trophy"
+			}]
+		}, {
+			"key": "Technology",
+			"value": "Technology",
+			"child": [{
+				"key": "Antivirus",
+				"value": "Antivirus"
+			}]
+		}, {
+			"key": "Transport",
+			"value": "Transport",
+			"child": [{
+				"key": "Airplane",
+				"value": "Airplane"
+			}, {
+				"key": "Truck",
+				"value": "Truck"
+			}, {
+				"key": "Car",
+				"value": "Car"
+			}]
+		}, {
+			"key": "Weather",
+			"value": "Weather",
+			"child": [{
+				"key": "Cloud",
+				"value": "Cloud"
+			}, {
+				"key": "Umbrella",
+				"value": "Umbrella"
+			}, {
+				"key": "Drop",
+				"value": "Drop"
+			}]
+		}],
+		"cascadedChild": "symbol",
+		"attributeName": "symbolCategory",
+		"propertyName": "SVGShape"
+	}, {
+		"label": "Symbol : ",
+		"type": "CascadedChildSelect",
+		"value": "",
+		"options": [],
+		"attributeName": "symbol",
+		"propertyName": "SVGShape"
+	}, {
+		"label": "Color : ",
+		"type": "color",
+		"value": "#ffcc00",
+		"attributeName": "color",
+		"propertyName": "SVGShape"
+	}, {
+		"label": "Fill Opacity : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.5",
+		"attributeName": "opacity",
+		"propertyName": "SVGShape"
+	}, {
+		"label": "Tool Tip : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "tooltip",
+		"propertyName": "SVGShape"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "SVGShape"
+	}, {
+		"label": "Cursor Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "default",
+			"value": "Default"
+		}, {
+			"key": "pointer",
+			"value": "Pointer"
+		}, {
+			"key": "help",
+			"value": "Help"
+		}, {
+			"key": "not-allowed",
+			"value": "Blocked"
+		}, {
+			"key": "progress",
+			"value": "Progress"
+		}],
+		"attributeName": "cursorType",
+		"propertyName": "SVGShape"
+	}, {
+		"label": "SVG Path String : ",
+		"heading": "SVG Path String (in case of symbol = none)",
+		"type": "customText",
+		"value": "300",
+		"attributeName": "pathData",
+		"propertyName": "SVGShape"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "SVGShape"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "SVGShape"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "SVGShape"
+	}]
+}

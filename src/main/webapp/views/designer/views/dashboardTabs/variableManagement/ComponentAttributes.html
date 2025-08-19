@@ -1,0 +1,330 @@
+<div id="variableBox" 
+	class="ht100per bizVizRightControlVariableBoxContainer biz-viz-side-window hideBox bvz-invisible"
+	ng-controller="ComponentAttributeController" ng-init="initComponentAttribute()">
+	<!-- BODY  -->
+	<div class="bizVizControlBoxBody row ht100per">
+		<div class="col-lg-3 col-md-4 ht100per no-pad scriptnav">
+			<!-- Component List panel -->
+			<md-content class="ht100per">
+    <md-tabs class="ht100per" md-border-bottom>
+      <md-tab label="Components" class="ht100per" md-dynamic-height md-active="!selectedtab">
+        <md-content class="ht100per" md-dynamic-height>
+         	<!--  tab1 content -->
+         	
+			      <md-list flex id="compAttributesCompUl" class="no-pad">
+			      <md-list-item class="backgroundWhite">
+			      		<div class="col-xs-12 no-pad comp_search  no-pad" >
+							<input type="text" id="vCompSearch" placeholder="Search"   
+								class="propValue objectBrowserSearch"
+								
+								ng-model="compSearch" ng-show="showCompSearch"  />
+							<span class="pull-right" ng-click="showSearchField( 'COMPONENT' );">
+								<md-icon class="nt-search-icon cursor-hand"  mat-tooltip="Search"></md-icon>
+							</span>
+						</div>
+						<md-divider ></md-divider>
+			      </md-list-item>
+			        <md-list-item
+			        	id="compAttributesDashboard"
+			        	ng-click="setSelectedVariable( $event,undefined,'Dashboard' );">
+			        	 <div class="highlighter" ng-show="uiActive.dashboard" ng-style="getHighlighterStyle()"> </div>
+			          <div class="md-list-item-text" layout="column"  ng-binding>
+			            <h5 class="textStyle" ng-class="{'changeColor' : uiActive.dashboard}">Dashboard</h5>
+			          </div>
+			          <md-button  aria-label="PropertiesButton" id="obc-settings-main" class="md-secondary md-icon-button"   
+			           	ng-click="dashboardPropertiesBtnClickHandler()">
+			            <md-icon mat-tooltip="Appearance" class="nt-properties-icon cursor-hand comp-settings-btn"><!-- <img src="./resources/images/svg/Properties.svg" class="comp-settings-btn" /> --></md-icon>
+			          </md-button>
+			          <md-divider ></md-divider>
+			        </md-list-item>
+			         <md-list-item
+			         		class="backgroundWhite"
+					  		id="compAttributesCompLi_{{comp.referenceID}}" 
+					  		ng-repeat="comp in modal.selectedDashboard.json.Dashboard[modal.layoutType].Object | advSearch: compSearch :'objectName'" 
+					  		ng-click="setSelectedVariable( $event, comp, 'Component' );dmUiActive.conn.isUiActive = false">
+						<!-- For components Script -->
+						    	<div class="highlighter"  ng-show="comp.isUiActiveCA" ng-style="getHighlighterStyle()"> </div>
+						    	<div class="ws-name-list textStyle cursor-hand ng-binding" style="width:70%;">
+						    	<div class="comp-list"  mat-tooltip="{{comp.objectName | titlecase}}" ng-class="{'changeColor' : comp.isUiActiveCA}">{{comp.objectName | titlecase }}</div>
+						    	<span  class="ca-comp-id" ng-class="{'changeColor' : comp.isUiActiveCA}">[ {{comp.referenceID}} ]</span>
+						    	</div>	
+						    	
+						    	<div class="ca-settings-list" ng-if="comp.objectID == modal.selectedComponentId" style="position: absolute;right: 25px;">
+									<md-icon ng-show="addDatasetBtnOnComponents(comp.objectID) || comp.isUiActiveCA"  mat-tooltip="Dataset" name="dataSettings" class="nt-data_settings-icon cursor-hand comp-settings-btn">
+									
+									<!--<img src="./resources/images/svg/data_settings.svg" name="dataSettings"  ng-show="comp.isUiActiveCA" style="width: 20px; height: 20px; margin-bottom: 5px;" "class="comp-settings-btn" />-->
+									</md-icon>
+								<md-icon mat-tooltip="Appearance" name="appearance" ng-show="comp.isUiActiveCA" class="nt-properties-icon cursor-hand comp-settings-btn">
+								<!--<img src="./resources/images/svg/Properties.svg" name="Properties"  ng-show="comp.isUiActiveCA" class="comp-settings-btn" />-->
+	                             </md-icon>
+								</div>
+					    <md-divider ></md-divider>
+					    </md-list-item>
+			        
+			        </md-list>
+			     
+         	<!--  tab 1 content -->
+         </md-content>
+      </md-tab>
+      <md-tab label="Connections" class="ht100per" md-dynamic-height md-active="selectedtab">
+        <md-content class="ht100per" md-dynamic-height>
+        <!--  tab 2 content -->       
+					<md-list  id="compAttributesCompUl" class="no-pad">	
+					<md-list-item class="backgroundWhite">
+			      	<div class="col-xs-12 no-pad comp_search" 
+							style="padding: 0;">
+							<input type="text" id="vConnSearch" placeholder="Search"
+								class="propValue objectBrowserSearch" 
+								style="width: 80%;" 
+								ng-model="connSearch" ng-show="showConnSearch" />
+							<span class="pull-right" ng-click="showSearchField( 'CONNECTION' );">
+								<i class="material-icons cursor-hand"  mat-tooltip="Search">search</i>
+							</span>
+						</div>
+						<md-divider ></md-divider>
+			      </md-list-item>
+			      </md-list>
+			      <md-list  jq-sortable sort-cfg="connSortCfg">
+			     <md-list-item id="compAttributesConnLi_{{conn.id}}"
+					  		ng-repeat="conn in modal.selectedDashboard.json.Dashboard.DataProviders.DataURL | advSearch: connSearch :'connectionName'" 
+					  		ng-click="setConnectionSelected( conn );setSelectedConnList( $event, conn );setSelectedVariable( $event, conn, 'Connection' )" >
+					    		<div class="connReorderDragDiv cursor-move"></div>
+						    	<div class="highlighter" ng-show="conn.isUiActive" ng-style="getHighlighterStyle()"></div>
+						    	<div class="ws-name-list cursor-hand ng-binding" 
+						    		style="width:80%"
+						    		ng-class="{'changeColor' : comp.isUiActiveCA}">
+							    	{{conn.connectionName}} 
+							    	<span class="ca-conn-id pull-right" ng-class="{'changeColor' : comp.isUiActiveCA}">[ {{conn.id}} ]</span>
+						    	</div>
+						    	
+						    	<div id="obc-settings-main"  class="ca-settings-list-wrapper" ng-show="conn.isUiActive" ng-click="toggleDataSource()" style="position: absolute;right: 25px;">
+									
+								<md-icon mat-tooltip="Connection Settings" class="nt-data-connectors-icon cursor-hand" style="vertical-align: text-bottom;">
+								<!--<i class="icon bd-data-base-1"></i>-->
+	                             </md-icon>
+								</div>
+     							<md-divider ></md-divider>
+				 </md-list-item>	
+				 </md-list>
+        <!--  tab2 content  -->
+        </md-content>
+      </md-tab>
+             <md-tab label="Scripts" class="ht100per" md-dynamic-height md-active="selectedtab">
+        <md-content class="ht100per" md-dynamic-height>
+         	<!--  tab3 content  -->
+              <!--  this tab is used to search scripts in components & connections -->
+         	     <md-list  id="compAttributesCompUl" class="no-pad">	
+						<md-list-item class="backgroundWhite">
+			      	<div class="col-xs-12 no-pad comp_search" 
+							style="padding: 0;">
+							<input type="text" placeholder="Keyword Search in Scripts"
+								class="propValue objectBrowserSearch" 
+								style="width: 80%;" 
+								ng-model="scriptSearch"/>
+							<!-- <span class="pull-right" ng-click="showSearchField( 'CONNECTION' );">
+								<i class="material-icons cursor-hand">search</i>
+								<md-tooltip md-direction="top">Search</md-tooltip>
+							</span> -->
+						</div>
+						<md-divider ></md-divider>
+			      </md-list-item>
+			      </md-list>
+			      
+			      <md-list class="no-pad">   <!-- jq-sortable sort-cfg="connSortCfg" -->
+			      <md-list-item
+			        	id="compAttributesDashboard"
+			        	ng-click="setSelectedVariable( $event,undefined,'Dashboard' );" >
+ 			        	 <div class="highlighter" ng-show="uiActive.dashboard" ng-style="getHighlighterStyle()"> </div> 
+			          <div class="md-list-item-text" layout="column"  ng-binding>
+			            <h5 class="textStyle" ng-class="{'changeColor' : uiActive.dashboard}">Dashboard</h5>
+			          </div>
+			          <md-button aria-label="PropertiesButton" id="obc-settings-main" class="md-secondary md-icon-button"   
+			           	ng-click="dashboardPropertiesBtnClickHandler()">
+			            <md-icon mat-tooltip="Appearance" class="nt-properties-icon cursor-hand comp-settings-btn"><!-- <img src="./resources/images/svg/Properties.svg" class="comp-settings-btn" /> --></md-icon>
+			          </md-button>
+			          <md-divider ></md-divider>
+			        </md-list-item>
+			     <md-list-item class="backgroundWhite" id="compAttributesConnLi_{{conn.id}}"
+					  		ng-repeat="conn in modal.selectedDashboard.json.Dashboard.DataProviders.DataURL | scriptSearch: scriptSearch : 'value'" 
+					  		ng-click="setConnectionSelected( conn );setSelectedConnList( $event, conn );setSelectedVariable( $event, conn, 'Connection' )" >
+					    		<div ></div>    <!-- class="connReorderDragDiv cursor-move" -->
+						    	 <!--<div class="highlighter" ng-show="conn.isUiActive" ng-style="getHighlighterStyle()"></div>--> 
+						    	<div class="ws-name-list cursor-hand ng-binding" 
+						    		style="width:80%">
+							    	{{conn.connectionName}} 
+							    	<span class="ca-conn-id pull-right">[ {{conn.id}} ]</span>
+						    	</div>
+						    	
+						    	<div id="obc-settings-main"  class="ca-settings-list-wrapper" ng-show="conn.isUiActive" ng-click="toggleDataSource()" style="position: absolute;right: 25px;">
+									
+								<md-icon mat-tooltip="Connection Settings" class="nt-data-connectors-icon cursor-hand" style="vertical-align: text-bottom;">
+								<!--<i class="icon bd-data-base-1"></i>-->
+	                             </md-icon>
+								</div>
+     							<md-divider ></md-divider>
+				 </md-list-item>	
+
+			         <md-list-item
+			         		class="backgroundWhite"
+					  		id="compAttributesCompLi_{{comp.referenceID}}"
+					  		ng-repeat="comp in modal.selectedDashboard.json.Dashboard[modal.layoutType].Object | scriptSearch: scriptSearch : 'value'" 
+					  		ng-click="setSelectedVariable( $event, comp, 'Component' );dmUiActive.conn.isUiActive = false">
+						<!-- For components Script -->
+						    	 <div class="highlighter"  ng-show="comp.isUiActiveCA" ng-style="getHighlighterStyle()"> </div> 
+						    	<div class="ws-name-list textStyle cursor-hand ng-binding" style="width:70%;" mat-tooltip="{{comp.objectName | titlecase}}">
+						    	<div class="comp-list" ng-class="{'changeColor' : comp.isUiActiveCA}">{{comp.objectName | titlecase }}</div>
+						    	<span  class="ca-comp-id" ng-class="{'changeColor' : comp.isUiActiveCA}">[ {{comp.referenceID}} ]</span>
+						    	</div>	
+						    	
+						    	<div class="ca-settings-list" ng-if="comp.objectID == modal.selectedComponentId" style="position: absolute;right: 25px;">
+									<md-icon ng-show="addDatasetBtnOnComponents(comp.objectID) || comp.isUiActiveCA" name="dataSettings" mat-tooltip="Dataset" class="nt-data_settings-icon cursor-hand comp-settings-btn">
+									
+									<!--<img src="./resources/images/svg/data_settings.svg" name="dataSettings"   ng-show="comp.isUiActiveCA" class="comp-settings-btn" />-->
+									</md-icon>
+								<md-icon mat-tooltip="Appearance" class="nt-properties-icon cursor-hand comp-settings-btn" name="appearance" ng-show="comp.isUiActiveCA">
+								<!--<img src="./resources/images/svg/Properties.svg" name="appearance"  ng-show="comp.isUiActiveCA" class="comp-settings-btn" />-->
+	                             </md-icon>
+								</div>
+					    <md-divider ></md-divider>
+					    </md-list-item>
+			        
+			        </md-list>
+			     
+         	<!--  tab 3 content -->
+         </md-content>
+      </md-tab>
+      </md-tabs>
+      </md-content>
+      
+		</div>
+		 
+		<div class="col-lg-9 col-md-8 ht100per no-pad box-shadow script-container" style="/*padding-left: 20px !important;*/">
+			<div class="row" ng-show="modal.scriptFor == ''">
+				<div class="col-lg-12 col-md-12 default-window-status">
+					<h4 class="textStyle" style="font-size: 18px; /*color: #999999;*/">Please select an item from Components or Connections panel !</h4>
+				</div>
+			</div>
+			
+			
+		 <ul class="dataSourceTypeTabs nav nav-tabs" ng-show="modal.scriptFor != ''">
+				<li class="col-lg-6 col-md-6 dataSourceTypeTab" id="script" >
+					<a href="#scriptContent" data-toggle="tab" aria-controls="profile" aria-expanded="false" >
+						<div class="col-sm-12 col-md-12 col-lg-12 padding5 textStyle" style="font-size: 14px required;">Script</div></a>
+				</li>
+				<li class="col-lg-6 col-md-6 dataSourceTypeTab" id="defFieldVal" 
+					ng-show="varAs === 'COMPONENT'">					
+					<a href="#defFieldValContent" data-toggle="tab" aria-controls="profile" aria-expanded="false" >
+						<div class="col-sm-12 col-md-12 col-lg-12 padding1 textStyle" style="font-size: 14px required;">Default field values</div></a>
+				</li>
+			</ul>
+			<div class="tab-content ca-script-area" 
+				ng-show="modal.scriptFor != ''" >
+				<div class="row tab-pane ht100per" id="defFieldValContent">
+					<div class="col-lg-12 col-md-12 ht100per">
+						<div class="row headerDivShadow componentAttributeHeader">
+							<div class="col-lg-4 col-md-4 padding5">
+								<span>Attribute</span>
+							</div>
+							<div class="col-lg-4 col-md-4 padding5">
+								<span>Value</span>
+							</div>
+							<div class="col-lg-4 col-md-4 padding5">
+								<span>Display Tag</span>
+							</div>
+						</div>
+						<div class="navbar ht100per">
+							<ul class="list-group d-list-group ht100per">
+							  	<li class="list-group-item d-list-item w-list" 
+							  		ng-repeat="attr in modal.selectedVariableDefaultValue" 
+							  		ng-click="" >
+							  		<div class="row" >
+							  			<div class="col-lg-4 col-md-4">
+											<p class="ws-name-list" style="display: inline-block; margin: 0px 0px 0px">
+												{{ attr.name }}
+											</p>
+										</div>
+										<div class="col-lg-4 col-md-4">
+											<input type="text"
+												class="propValue" 
+												ng-model="attr.text"
+												placeholder="" />
+										</div>
+										<div class="col-lg-4 col-md-4">
+											<input type="text" 
+												class="propValue" 
+												ng-model="attr.displayTag" 
+												title="Name Displayed in conditions" />
+										</div>
+							  		</div>
+							    </li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row tab-pane ht100per" id="scriptContent" ng-controller="UserScriptController" >
+					<div class="col-lg-12 col-md-12 ht100per no-pad">
+						<textarea style="height: 520px"
+							ui-codemirror="{ onLoad : onLoadScriptEditor }" 
+							ng-model="userScript.value" 
+							ui-refresh="true" 
+							ui-codemirror-opts="scriptEditorOptions" >
+						</textarea>
+						<span class="scriptFor">{{modal.scriptFor}}</span>
+						<span class="ctrl-space-assistance">Use Ctrl+Space for assistance or <a class="cursor-hand" target="_blank" ng-click="goToScriptHelp()">visit help section</a> for SDK method details</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="scriptinfo" style="margin-top: 5px;">
+			<span ng-click="goToScriptHelp()" class="window-action-icon close-button">
+				<md-icon class="nt-info-icon cursor-hand"  mat-tooltip="Help"></md-icon>
+			</span></span>
+		<span 
+			style="margin-top: 5px;"
+			class="window-action-icon close-button" 
+			ng-click="reloadDefault();">
+			<md-icon class="nt-close-icon cursor-hand"  mat-tooltip="Close Window"></md-icon>
+		</span>
+		
+		<!-- MODAL DIALOG BOX -->
+		<div id="gvarAddAttrModal" class="modal" ng-if="modal.modelPopupStatus.gvarAddAttrModal == true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<md-toolbar>
+				      <div class="md-toolbar-tools">
+				        <h2>Add Attribute</h2>
+				        <span flex></span>
+				        <md-button class="md-icon-button" ng-click="setModelWatcherStatus('gvarAddAttrModal', false); cancel()">
+				          <md-icon href="javascript: void( 0 )" data-dismiss="modal"  aria-label="Close dialog"><i class="material-icons cursor-hand">close</i></md-icon>
+				        </md-button>
+				      </div>
+				    </md-toolbar>
+				
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input placeholder="Attribute Name" maxlength="25" type="text"
+										class="form-control" ng-model="newAttributeName" />
+								</div>
+								<div class="col-lg-6 col-md-6 col-sm-6">
+									<input placeholder="Attribute value" maxlength="100"
+										type="text" class="form-control" ng-model="newAttributeValue" />
+								</div>
+							</div>
+						</form>
+					</div>
+					
+					<md-dialog-actions layout="row">
+						<span flex="" class="flex"></span>
+						<md-button class="md-raised md-primary" ng-click="setModelWatcherStatus('gvarAddAttrModal', false); onNewAttributeAdd()">Add</md-button>
+								
+						<md-button data-dismiss="modal" class="md-raised md-warn" ng-click="setModelWatcherStatus('gvarAddAttrModal', false);">Cancel</md-button>
+					</md-dialog-actions>
+				</div>
+			</div>
+		</div>
+		<!-- MODAL DIALOG BOX ENDS -->		
+	</div>
+	<!-- BODY ENDS -->	
+</div>

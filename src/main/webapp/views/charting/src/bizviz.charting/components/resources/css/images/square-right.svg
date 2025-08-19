@@ -1,0 +1,7 @@
+<svg id="square" xmlns="http://www.w3.org/2000/svg" width="38" height="32">
+	<rect x="0" width="22" height="32" fill="rgba(0, 0, 0, 0.05)" />
+  	<clipPath id="cut-offf">
+        <rect x="22" y="0" width="16" height="32"/>
+    </clipPath>
+    <circle cx="22" cy="16" r="16" fill="rgba(0, 0, 0, 0.05)" clip-path="url(#cut-offf)" />
+</svg>

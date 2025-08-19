@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_306" data-name="Group 306" transform="translate(-1254.67 -232)">
+    <g id="Rectangle_302" data-name="Rectangle 302" transform="translate(1254.67 232)" fill="#fff" stroke="#ececec" stroke-width="1">
+      <rect width="50" height="50" rx="6" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="49" rx="5.5" fill="none"/>
+    </g>
+    <circle id="Ellipse_69" data-name="Ellipse 69" cx="14.832" cy="14.832" r="14.832" transform="translate(1264.227 242.487)" fill="#0d78bf"/>
+    <circle id="Ellipse_70" data-name="Ellipse 70" cx="9.66" cy="9.66" r="9.66" transform="translate(1264.877 249.166)" fill="#e17d00"/>
+    <circle id="Ellipse_71" data-name="Ellipse 71" cx="3.22" cy="3.22" r="3.22" transform="translate(1276.695 243.343)" fill="#039def"/>
+    <circle id="Ellipse_72" data-name="Ellipse 72" cx="2.809" cy="2.809" r="2.809" transform="translate(1283.271 248.584)" fill="#039def"/>
+    <circle id="Ellipse_73" data-name="Ellipse 73" cx="4.35" cy="4.35" r="4.35" transform="translate(1284.471 254.338)" fill="#039def"/>
+    <circle id="Ellipse_74" data-name="Ellipse 74" cx="3.22" cy="3.22" r="3.22" transform="translate(1282.175 263.039)" fill="#039def"/>
+    <circle id="Ellipse_75" data-name="Ellipse 75" cx="5.344" cy="5.344" r="5.344" transform="translate(1265.014 254.51)" fill="#ff9f57"/>
+    <circle id="Ellipse_76" data-name="Ellipse 76" cx="2.192" cy="2.192" r="2.192" transform="translate(1274.468 262.525)" fill="#ff9f57"/>
+    <circle id="Ellipse_77" data-name="Ellipse 77" cx="2.192" cy="2.192" r="2.192" transform="translate(1274.16 251.084)" fill="#ff9f57"/>
+    <circle id="Ellipse_78" data-name="Ellipse 78" cx="1.233" cy="1.233" r="1.233" transform="translate(1277.551 244.234)" fill="#ccdef2"/>
+    <circle id="Ellipse_79" data-name="Ellipse 79" cx="3.905" cy="3.905" r="3.905" transform="translate(1275.976 254.921)" fill="#ff9f57"/>
+    <circle id="Ellipse_80" data-name="Ellipse 80" cx="1.233" cy="1.233" r="1.233" transform="translate(1280.154 245.33)" fill="#ccdef2"/>
+    <circle id="Ellipse_81" data-name="Ellipse 81" cx="0.891" cy="0.891" r="0.891" transform="translate(1278.066 247.841) rotate(-42.228)" fill="#ccdef2"/>
+    <circle id="Ellipse_82" data-name="Ellipse 82" cx="0.822" cy="0.822" r="0.822" transform="translate(1284.119 252.158) rotate(-79.631)" fill="#ccdef2"/>
+    <circle id="Ellipse_83" data-name="Ellipse 83" cx="0.822" cy="0.822" r="0.822" transform="translate(1286.286 251.324)" fill="#ccdef2"/>
+    <circle id="Ellipse_84" data-name="Ellipse 84" cx="0.617" cy="0.617" r="0.617" transform="translate(1284.902 252.879) rotate(-38.969)" fill="#ccdef2"/>
+    <circle id="Ellipse_85" data-name="Ellipse 85" cx="0.617" cy="0.617" r="0.617" transform="translate(1285.477 249.96) rotate(-38.969)" fill="#ccdef2"/>
+    <circle id="Ellipse_86" data-name="Ellipse 86" cx="1.233" cy="1.233" r="1.233" transform="translate(1285.43 257.592)" fill="#ccdef2"/>
+    <circle id="Ellipse_87" data-name="Ellipse 87" cx="1.233" cy="1.233" r="1.233" transform="translate(1287.382 255.64)" fill="#ccdef2"/>
+    <circle id="Ellipse_88" data-name="Ellipse 88" cx="1.233" cy="1.233" r="1.233" transform="translate(1289.917 256.942)" fill="#ccdef2"/>
+    <circle id="Ellipse_89" data-name="Ellipse 89" cx="0.891" cy="0.891" r="0.891" transform="translate(1287.961 259.824) rotate(-42.228)" fill="#ccdef2"/>
+    <circle id="Ellipse_90" data-name="Ellipse 90" cx="0.993" cy="0.993" r="0.993" transform="translate(1283.029 265.242) rotate(-11.256)" fill="#ccdef2"/>
+    <circle id="Ellipse_91" data-name="Ellipse 91" cx="0.993" cy="0.993" r="0.993" transform="translate(1285.424 266.117) rotate(-16.991)" fill="#ccdef2"/>
+    <circle id="Ellipse_92" data-name="Ellipse 92" cx="0.719" cy="0.719" r="0.719" transform="matrix(0.793, -0.609, 0.609, 0.793, 1283.833, 267.801)" fill="#ccdef2"/>
+    <circle id="Ellipse_93" data-name="Ellipse 93" cx="0.719" cy="0.719" r="0.719" transform="matrix(0.793, -0.609, 0.609, 0.793, 1284.972, 264.591)" fill="#ccdef2"/>
+  </g>
+</svg>

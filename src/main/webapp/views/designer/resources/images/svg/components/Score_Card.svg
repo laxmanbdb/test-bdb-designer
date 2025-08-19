@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #7c4dff;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-4 {
+        fill: #ffaf6d;
+      }
+
+      .cls-5 {
+        fill: #7c4dff;
+      }
+
+      .cls-3 {
+        stroke: #d3d3d3;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.6, SVG Export Plug-In . SVG Version: 1.2.0 Build 188)  -->
+  <g>
+    <g id="Layer_1">
+      <g id="Group_3115">
+        <g id="Rectangle_172">
+          <rect class="cls-2" width="50" height="50" rx="6" ry="6"/>
+          <rect class="cls-3" x=".5" y=".5" width="49" height="49" rx="5.5" ry="5.5"/>
+        </g>
+        <rect id="Rectangle_244" class="cls-4" x="23.2" y="13" width="5" height="5"/>
+        <rect id="Rectangle_245" class="cls-4" x="23.2" y="20" width="5" height="5"/>
+        <rect id="Rectangle_246" class="cls-4" x="23.2" y="27" width="5" height="5"/>
+        <rect id="Rectangle_247" class="cls-4" x="23.2" y="34" width="5" height="5"/>
+        <rect id="Rectangle_248" class="cls-4" x="30.2" y="13" width="5" height="5"/>
+        <rect id="Rectangle_249" class="cls-4" x="30.2" y="20" width="5" height="5"/>
+        <rect id="Rectangle_250" class="cls-4" x="30.2" y="27" width="5" height="5"/>
+        <rect id="Rectangle_251" class="cls-4" x="30.2" y="34" width="5" height="5"/>
+        <rect id="Rectangle_252" class="cls-4" x="37.2" y="13" width="5" height="5"/>
+        <rect id="Rectangle_253" class="cls-4" x="37.2" y="20" width="5" height="5"/>
+        <rect id="Rectangle_254" class="cls-4" x="37.2" y="27" width="5" height="5"/>
+        <rect id="Rectangle_255" class="cls-4" x="37.2" y="34" width="5" height="5"/>
+        <path id="Path_106" class="cls-1" d="M9.7,15.1v21.5h4.1"/>
+        <path id="Path_107" class="cls-1" d="M13.7,29.5h-4.4"/>
+        <rect id="Rectangle_256" class="cls-5" x="7.2" y="13" width="5" height="5"/>
+        <rect id="Rectangle_257" class="cls-5" x="13.2" y="27" width="5" height="5"/>
+        <rect id="Rectangle_258" class="cls-5" x="13.2" y="34" width="5" height="5"/>
+        <line id="Line_24" class="cls-1" x1="20.7" y1="13.5" x2="20.7" y2="39.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

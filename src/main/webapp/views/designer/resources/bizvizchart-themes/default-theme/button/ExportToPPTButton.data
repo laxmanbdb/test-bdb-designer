@@ -1,0 +1,53 @@
+{
+	"ExportToPPTButton": {
+		"Properties": {
+			"Object": {
+				"componentType": "export_to_ppt_button",
+				"isDataSetAvailable": "false",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "ppt",
+				"showLocked": "false",
+				"globalVariableKeyAttribute": "globalkey",
+				"subElement": "ExportPPTButton",
+				"objectName": "exportPPT_1",
+				"y": "82",
+				"unShowHidden": "false",
+				"groupings": "",
+				"width": "100",
+				"initialVisibility": "true",
+				"objectType": "exportppt",
+				"objectID": "Obj.213AA581N8A53N40EEN640FNA626F1EA0287",
+				"height": "25",
+				"x": "85",
+				"ExportPPTButton": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"fontFamily": "Roboto",
+					"fileName": "Dashboard",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"chromeColor": "#3dc5b8",
+					"label": "Export",
+					"toolTip": "Click to Export",
+					"fontWeight": "normal",
+					"fontStyle": "normal",
+					"fontSize": 14,
+					"color": "#ffffff",
+					"mode": "ppt",
+					"globalkey": "ppt1",
+					"pptSubHeading": "Sub Heading",
+					"pptHeading": "Dashboard",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.1"
+				}
+			}
+		}
+	}
+}

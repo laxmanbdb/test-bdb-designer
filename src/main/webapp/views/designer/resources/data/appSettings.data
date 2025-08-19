@@ -1,0 +1,10 @@
+{
+  "global": {
+    "preference": "",
+    "componetIDPrefix": "BVZ",
+    "versionLabel": "4.5.0",
+    "versionDetail": "10.0.0",
+    "buildDate": "August 14, 11:38",
+    "isDevMode": false
+  }
+}

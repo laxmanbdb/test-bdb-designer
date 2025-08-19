@@ -1,0 +1,48 @@
+{
+	"SVGImage": {
+		"Properties": {
+			"Object": {
+				"componentType": "svg_image",
+				"isDataSetAvailable": "false",
+				"themeType": "default-theme",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "svg",
+				"objectName": "svg_1",
+				"subElement": "SVGImage",
+				"globalVariableKeyAttribute": "globalkey",
+				"height": "100",
+				"percentheight": "100",
+				"y": "10",
+				"objectType": "SVGImage",
+				"percentwidth": "100",
+				"width": "100",
+				"initialVisibility": "true",
+				"showLocked": "false",
+				"unShowHidden": "false",
+				"groupings": "",
+				"objectID": "svgimgobj",
+				"x": "10",
+				"SVGImage": {
+					"fieldName": "Value",
+					"fieldValue": "",
+					"opacity": "1",
+					"tooltip": "",
+					"cursorType": "pointer",
+					"globalkey": "",
+					"showBorder": "false",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"symbol": "none",
+					"imgData": "<?xml version=\"1.0\" standalone=\"no\"?>\r\n<!DOCTYPE svg>\r\n<svg version=\"1.1\" baseProfile=\"full\"  xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" preserveAspectRatio=\"xMidYMid meet\" \r\n   id=\"Test File\"\r\n   viewBox=\"-21 -21 42 42\"\r\n   width=\"800\"\r\n   height=\"800\">\r\n<circle r=\"20\" fill=\"#006684\"\/>\r\n<circle r=\"20\" fill=\"#006684\"\/>\r\n<g id=\"right\">\r\n  <ellipse rx=\"2.5\" ry=\"4\" cx=\"-6\" cy=\"-7\" fill=\"#ffffff\"\/>\r\n  <path fill=\"none\" stroke=\"#ffffff\" stroke-width=\".5\" stroke-linecap=\"round\" d=\"M 10.6,2.7 a 4,4,0 0,0 4,3\"\/>\r\n<\/g>\r\n<use xlink:href=\"#right\" transform=\"scale(-1,1)\"\/>\r\n<path fill=\"none\" stroke=\"#ffffff\" stroke-width=\".75\" d=\"M -12,5 A 13.5,13.5,0 0,0 12,5 A 13,13,0 0,1 -12,5\"\/>\r\n<\/svg>\r\n"
+				}
+			}
+		}
+	}
+}

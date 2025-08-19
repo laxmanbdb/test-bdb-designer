@@ -1,0 +1,364 @@
+{
+	"Info": [{
+		"class": "DatePicker"
+	}],
+	"General": [{
+		"label": "Component Name : ",
+		"type": "text",
+		"value": "Component Name",
+		"maxLength": "20",
+		"attributeName": "objectName",
+		"propertyName": "Object"
+	}, {
+		"label": "Left : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "x",
+		"propertyName": "Object"
+	}, {
+		"label": "Top : ",
+		"type": "number",
+		"min": "0",
+		"max": "10000",
+		"step": "1",
+		"value": "10",
+		"attributeName": "y",
+		"propertyName": "Object"
+	}, {
+		"label": "Width : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "100",
+		"attributeName": "width",
+		"propertyName": "Object"
+	}, {
+		"label": "Height : ",
+		"type": "number",
+		"min": "0",
+		"max": "",
+		"step": "1",
+		"value": "100",
+		"attributeName": "height",
+		"propertyName": "Object"
+	}, {
+		"label": "Initial Visibility : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "initialVisibility",
+		"propertyName": "Object"
+	},{
+		"label": "Enable Month Navigation: ",
+		"type": "checkbox",
+		"value": "false",
+		"attributeName": "monthNavigationEnabled",
+		"propertyName": "DateSelector"
+	},{
+		"label": "Enable Year Navigation: ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "yearNavigationEnabled",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Year Range: ",
+		"type": "number",
+		"min": "1",
+		"max": "10",
+		"step": "1",
+		"value": "10",
+		"attributeName":"yearRange",
+		"propertyName": "DateSelector"
+	},{
+		"label": "Associate Date : ",
+		"heading": "Associated Datepicker",
+		"type": "customAssignDateWindow",
+		"value": "",
+		"attributeName": "associatecomp",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Date Type : ",
+		"type": "select",
+		"value": "None",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		},{
+			"key": "start",
+			"value": "Start"
+		}, {
+			"key": "end",
+			"value": "End"
+		}],
+		"attributeName": "datetype",
+		"propertyName": "DateSelector"
+	},{
+		"label": "Start Range Color: ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "startdatecolor",
+		"propertyName": "DateSelector"
+	},{
+		"label": "End Range Color: ",
+		"type": "color",
+		"value": "#000000",
+		"attributeName": "enddatecolor",
+		"propertyName": "DateSelector"
+	},{
+		"label": "Enable Date Range: ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "enabledaterange",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Date From : ",
+		"type": "date",
+		"value": "",
+		"attributeName": "todate",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Date Upto : ",
+		"type": "date",
+		"value": "",
+		"attributeName": "fromdate",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Default Date : ",
+		"type": "date",
+		"value": "",
+		"attributeName": "defaultdate",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Date Format : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "dd-mm-yy",
+			"value": "DD-MM-YYYY"
+		}, {
+			"key": "dd-yy-mm",
+			"value": "DD-YYYY-MM"
+		}, {
+			"key": "mm-dd-yy",
+			"value": "MM-DD-YYYY"
+		}, {
+			"key": "mm-yy-dd",
+			"value": "MM-YYYY-DD"
+		}, {
+			"key": "yy-dd-mm",
+			"value": "YYYY-DD-MM"
+		}, {
+			"key": "yy-mm-dd",
+			"value": "YYYY-MM-DD"
+		}, {
+			"key": "dd/mm/yy",
+			"value": "DD/MM/YYYY"
+		}, {
+			"key": "dd/yy/mm",
+			"value": "DD/YYYY/MM"
+		}, {
+			"key": "mm/dd/yy",
+			"value": "MM/DD/YYYY"
+		}, {
+			"key": "mm/yy/dd",
+			"value": "MM/YYYY/DD"
+		}, {
+			"key": "yy/dd/mm",
+			"value": "YYYY/DD/MM"
+		}, {
+			"key": "yy/mm/dd",
+			"value": "YYYY/MM/DD"
+		}],
+		"attributeName": "formatString",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Output Format : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "dd-mm-yy",
+			"value": "DD-MM-YYYY"
+		}, {
+			"key": "dd-yy-mm",
+			"value": "DD-YYYY-MM"
+		}, {
+			"key": "mm-dd-yy",
+			"value": "MM-DD-YYYY"
+		}, {
+			"key": "mm-yy-dd",
+			"value": "MM-YYYY-DD"
+		}, {
+			"key": "yy-dd-mm",
+			"value": "YYYY-DD-MM"
+		}, {
+			"key": "yy-mm-dd",
+			"value": "YYYY-MM-DD"
+		}, {
+			"key": "dd/mm/yy",
+			"value": "DD/MM/YYYY"
+		}, {
+			"key": "dd/yy/mm",
+			"value": "DD/YYYY/MM"
+		}, {
+			"key": "mm/dd/yy",
+			"value": "MM/DD/YYYY"
+		}, {
+			"key": "mm/yy/dd",
+			"value": "MM/YYYY/DD"
+		}, {
+			"key": "yy/dd/mm",
+			"value": "YYYY/DD/MM"
+		}, {
+			"key": "yy/mm/dd",
+			"value": "YYYY/MM/DD"
+		}],
+		"attributeName": "outputFormat",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Click Value : ",
+		"type": "text",
+		"value": "Value",
+		"attributeName": "fieldValue",
+		"propertyName": "DateSelector"
+	}],
+	"Background": [{
+		"label": "Shadow : ",
+		"type": "checkbox",
+		"value": "true",
+		"attributeName": "showShadow",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Shadow Color : ",
+		"type": "color",
+		"attributeName": "shadowColor",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Shadow Transparency : ",
+		"type": "number",
+		"min": "0",
+		"max": "1",
+		"step": "0.1",
+		"value": "0.1",
+		"attributeName": "shadowOpacity",
+		"propertyName": "DateSelector"
+	}],
+	"Style": [{							
+		"label": "Background Color : ",
+		"type": "color",
+		"value": "#dddddd",
+		"attributeName": "backgroundColor",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Font Color : ",
+		"type": "color",
+		"value": "#A31919",
+		"attributeName": "color",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Font Size : ",
+		"type": "number",
+		"min": "0",
+		"max": "17",
+		"step": "1",
+		"value": "10",
+		"attributeName": "fontSize",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Font Style : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "italic",
+			"value": "Italic"
+		}],
+		"attributeName": "fontStyle",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Font Weight : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "normal",
+			"value": "Normal"
+		}, {
+			"key": "bold",
+			"value": "Bold"
+		}, {
+			"key": "300",
+			"value": "300"
+		}, {
+			"key": "600",
+			"value": "600"
+		}, {
+			"key": "900",
+			"value": "900"
+		}],
+		"attributeName": "fontWeight",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Font Family : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "Arial",
+			"value": "Arial"
+		}, {
+			"key": "BizvizFont",
+			"value": "BizvizFont"
+		}, {
+			"key": "BizvizFontRegular",
+			"value": "BizvizFontRegular"
+		}, {
+			"key": "Cambria",
+			"value": "Cambria"
+		}, {
+			"key": "Helvetica",
+			"value": "Helvetica"
+		}, {
+			"key": "Lucida Bright",
+			"value": "Lucida Bright"
+		}, {
+			"key": "Monotype Corsiva",
+			"value": "Monotype Corsiva"
+		}, {
+			"key": "Papyrus",
+			"value": "Papyrus"
+		}, {
+			"key": "'Raleway', sans-serif",
+			"value": "Raleway"
+		},{
+			"key": "Roboto",
+			"value": "Roboto"
+		}, {
+			"key": "Times New Roman",
+			"value": "Times New Roman"
+		}, {
+			"key": "Ubuntu",
+			"value": "Ubuntu"
+		}, {
+			"key": "Verdana",
+			"value": "Verdana"
+		}],
+		"attributeName": "fontFamily",
+		"propertyName": "DateSelector"
+	}, {
+		"label": "Text Decoration : ",
+		"type": "select",
+		"value": "",
+		"options": [{
+			"key": "none",
+			"value": "None"
+		}, {
+			"key": "underline",
+			"value": "Underline"
+		}],
+		"attributeName": "textDecoration",
+		"propertyName": "DateSelector"
+	}]
+}

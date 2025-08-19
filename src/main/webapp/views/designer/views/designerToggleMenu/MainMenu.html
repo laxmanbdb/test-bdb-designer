@@ -1,0 +1,101 @@
+<div class="file-menu showSM wd100per" ng-controller="MainMenuController" ng-init="onInitMainMenu()">
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 ht100per d-nav-container nt-nav-conatiner ntpt16 ">
+		<nav class="navbar navbar-inverse sidebar ntleftBar" role="navigation">
+			<div class="collapse navbar-collapse"
+				id="bs-sidebar-navbar-collapse-1">
+				<ul class="nav navbar-nav" id="main-menu">
+					<li ng-repeat="menu in mainMenuList" 
+					   repeat-end="afterMenuReady()" 
+					   ng-if="menu.enabled" 
+					   id="{{ menu.id }}" 
+					   ng-class="{ 'dropdown': menu.subMenu.length > 0}">
+					   
+                        <a ng-class="{ 'dropdown-toggle' : menu.subMenu.length > 0 ,'nt-main-menu-higlighter':menu.isUiActive}" 
+                            data-toggle="dropdown" 
+					  		ng-click="handleMainMenuToggle( $event, menu ,true);handleMainMenuClick( $event, menu ); myStyle={color:'#7286F3 !important'};"    
+                            href="javascript: void( 0 )">
+                            <md-icon ng-class="menu.iconClass" class="mainMenuSpan hidden-xs showopacity cursor-hand"></md-icon>
+                            
+                            <span ng-class="{ changeColor : menu.isUiActive || menu.isActive }">{{ menu.title | translate }}</span>
+                            <span class="careta nt-dropdown-icon" ng-if="menu.subMenu.length > 0"></span>
+                            
+                        </a>
+                        <ul ng-if="menu.subMenu.length > 0" 
+                            class="dropdown-menu forAnimate" role="menu">
+                            <li ng-repeat="subMenu in menu.subMenu" 
+                                ng-if="subMenu.enabled"  
+                                id="{{ subMenu.id }}">
+                                <a href="javascript: void( 0 )"
+                                ng-click="handleMainMenuToggle( $event, menu ,false);handleMainMenuClick( $event, subMenu );">
+                                    {{ subMenu.title | translate }}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+				</ul>
+				
+
+			</div>
+			
+			<!--<div class="left-menu-footer">
+      <label class="nt-switch">
+        <input
+          type="checkbox"
+          ng-model="currentTheme"
+          ng-change="toggleDarkMode()" ng-true-value="'dark'" ng-false-value="'light'"  />
+        <span class="nt-slider"></span>
+      </label>&nbsp;&nbsp;Dark mode
+    </div>-->
+		</nav>
+	</div>
+	<div class="col-xs-9 col-sm-9 col-md-9 col-lg-10 ht100per " style="background: transparent linear-gradient(180deg, #E8E8F0 0%, #DEDEFE 100%) 0% 0% no-repeat padding-box; padding:0px;">
+		<div id="menuContentDiv" ng-switch="modal.mainMenuSelectedWindow" class="ht100per {{modal.mainMenuSelectedWindow}} ntpt12 ntbgcolor">
+			<!-- WORKSPACE MANAGEMENT FORM -->
+			<bizviz-workspace-management ng-switch-when="workspaceManagement"></bizviz-workspace-management>
+			<!-- OPEN DASHBOARD FORM -->
+			<bizviz-open-dashboard ng-switch-when="openDashboard"></bizviz-open-dashboard>
+			<!-- SAVE DASHBOARD FORM -->
+			<bizviz-export-dashboard ng-switch-when="exportDashboard"></bizviz-export-dashboard>
+			<!-- PUBLISH DASHBOARD FORM -->
+			<bizviz-publish-dashboard ng-switch-when="publishDashboard"></bizviz-publish-dashboard>
+			<!-- TEMPLATES FORM -->
+			<bizviz-templates ng-switch-when="templates"></bizviz-templates>
+			<!-- TEMPLATES List -->
+			<bizviz-template-list ng-switch-when="templateList"></bizviz-template-list>
+			<!-- SAMPLE DASHBOARD -->
+			<bizviz-sample-dashboard ng-switch-when="sampleDashboard"></bizviz-sample-dashboard>
+			<!-- USER PREFERENCES FORM -->
+			<bizviz-user-preferences-dashboard ng-switch-when="userPreferencesDashboard"></bizviz-user-preferences-dashboard>
+			<!-- HELP -->
+			<bizviz-designer-help ng-switch-when="designerHelp"></bizviz-designer-help>
+			<!-- Welcome FORM -->
+			<div ng-switch-default class="ht100per"> <bizviz-workspace-management/> </div>
+		</div>
+		
+	</div>
+	 <div id="sessionWarning" class="modal" data-backdrop="{{modal.databackdrop}}" data-keyboard="false">
+        <div class="modal-dialog ">
+            <div class="modal-content " style="  padding: 10px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"><span class="bd-warning"> Session Expired </span></h4>
+                </div>
+                <div class="modal-body">
+                    <p>Your session has expired !</p><p> Please
+                    	<a target="_blank" href="../../index.html"><i> Sign in </i></a> to continue.
+	                    <span ng-show="modal.dashboards.length > 0" >  Or 
+		                    <a href="javascript:void( 0 )" ng-click="exportCurrentDashboard()">
+		                    	 	<i> Save </i> 
+		                    </a>the current dashboard to local disk.
+	                    </span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input class="propValue" type="file" style="display:none"	id="browseBVZXDashboard" accept=".bvzx" on-read-file="browseBVZXDashboard($file);">

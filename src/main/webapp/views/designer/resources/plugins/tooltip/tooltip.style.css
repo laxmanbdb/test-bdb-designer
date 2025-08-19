@@ -1,0 +1,132 @@
+div[data-tippy-root] {
+	z-index: 999999999 !important;
+}
+
+.tippy-box {
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+
+.tippy-box>.tippy-content {
+	padding: 24px;
+	z-index: 999;
+}
+
+.tippy-box[data-placement^=top]>.tippy-arrow:before {
+    bottom: -14px;
+	left: -6px;
+    border-width: 14px 14px 0;
+	border-top-color: #ffffff;
+}
+
+.tippy-box[data-placement^=top-start] {
+    left: -9px;
+}
+.tippy-box[data-placement^=top-start]>.tippy-arrow:before {
+    bottom: -14px;
+	left: 4px;
+    border-width: 14px 14px 0;
+	border-top-color: #ffffff;
+}
+
+.tippy-box[data-placement^=top-end] {
+    left: 10px;
+}
+.tippy-box[data-placement^=top-end]>.tippy-arrow:before {
+    bottom: -14px;
+	left: -15px;
+    border-width: 14px 14px 0;
+	border-top-color: #ffffff;
+}
+
+.tippy-box[data-placement^=right] {
+    top: 0px;
+}
+.tippy-box[data-placement^=right]>.tippy-arrow:before {
+    left: -14px;
+	top: -7px;
+    border-width: 14px 14px 14px 0;
+    border-right-color: #ffffff;
+}
+
+.tippy-box[data-placement^=right-start] {
+    top: -10px;
+}
+.tippy-box[data-placement^=right-start]>.tippy-arrow:before {
+    left: -14px;
+	top: 4px;
+    border-width: 14px 14px 14px 0;
+    border-right-color: #ffffff;
+}
+
+.tippy-box[data-placement^=right-end] {
+    top: 10px;
+}
+.tippy-box[data-placement^=right-end]>.tippy-arrow:before {
+    left: -14px;
+	top: -15px;
+    border-width: 14px 14px 14px 0;
+    border-right-color: #ffffff;
+}
+
+.tippy-box[data-placement^=bottom] {
+	top: 5px;
+    left: -7px;
+}
+.tippy-box[data-placement^=bottom]>.tippy-arrow:before {
+	top: -14px;
+    border-width: 0 14px 14px;
+	border-color: transparent transparent #ffffff transparent;
+}
+
+.tippy-box[data-placement^=bottom-start] {
+    left: -10px;
+}
+.tippy-box[data-placement^=bottom-start]>.tippy-arrow:before {
+	top: -14px;
+	left: 4px;
+    border-width: 0 14px 14px;
+	border-color: transparent transparent #ffffff transparent;
+}
+
+.tippy-box[data-placement^=bottom-end] {
+	top: 5px;
+    left: 10px;
+}
+.tippy-box[data-placement^=bottom-end]>.tippy-arrow:before {
+	top: -14px;
+	left: -15px;
+    border-width: 0 14px 14px;
+	border-color: transparent transparent #ffffff transparent;
+}
+
+.tippy-box[data-placement^=left] {
+    top: 0px;
+}
+.tippy-box[data-placement^=left]>.tippy-arrow:before {
+    left: -14px;
+	top: -7px;
+    border-width: 14px 14px 14px 0;
+    border-right-color: #ffffff;
+}
+
+.tippy-box[data-placement^=left-start] {
+    top: -10px;
+}
+.tippy-box[data-placement^=left-start]>.tippy-arrow:before {
+    left: -14px;
+	top: 4px;
+    border-width: 14px 14px 14px 0;
+    border-right-color: #ffffff;
+}
+
+.tippy-box[data-placement^=left-end] {
+    top: 10px;
+}
+.tippy-box[data-placement^=left-end]>.tippy-arrow:before {
+    left: -14px;
+	top: -15px;
+    border-width: 14px 14px 14px 0;
+    border-right-color: #ffffff;
+}

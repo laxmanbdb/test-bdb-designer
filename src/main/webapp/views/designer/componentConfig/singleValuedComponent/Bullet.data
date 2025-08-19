@@ -1,0 +1,59 @@
+{
+	"Bullet" : {
+		"Properties" : {
+			"Object" : {
+				"componentType" : "bullet",
+				"isDataSetAvailable" : "false",
+				"enableScript" : "true",
+				"referenceID" : "",
+				"isValueFieldsAvailable" : "false",
+				"showContextMenu" : "false",
+				"shortName" : "bullet",
+				"objectName" : "bullet_1",
+				"subElement" : "Bullet",
+				"globalVariableKeyAttribute" : "globalkey",
+				"height" : "70",
+				"percentheight" : "100",
+				"y" : "881",
+				"objectType" : "bullet",
+				"percentwidth" : "400",
+				"width" : "420",
+				"initialVisibility" : "true",
+				"showLocked" : "false",
+				"unShowHidden" : "false",
+				"objectID" : "Obj.BN863CN533TT2D4NE6EB4E194B8E",
+				"x" : "662",
+				"Bullet" : {
+					"fieldName" : "Value",
+					"fieldValue" : "",
+					"actualValue" : "82",
+					"targetValue" : "70",
+					"ticksColor" : "#2c628d",
+					"borderColor" : "#333333",
+					"LabelText" : "Profit",
+					"faceColor" : "#000000",
+					"targetColor" : "#ff0000",
+					"rangedColors" : "#cc3300,#ffff00,#66ff66,#00cc66",
+					"rangesOfSeries" : "0~30,30~60,60~80,80~100",
+					"rangedSeriesDisplayNames" : "Range1,Range2,Range3,Range4",
+					"actualMeterSize" : "0.3",
+					"targetMeterSize" : "0.3",
+					"alphas" : "0.5,1,1,0.7",
+					"globalkey" : "",
+					"dataRowNumber" : "",
+					"id" : "",
+					"fontColor" : "#333333",
+					"markerTextColor" : "#333333",
+					"fontSize" : "8",
+					"labelFontFamily" : "BizvizFont",
+					"ShowText" : "false",
+					"showTicks" : "true",
+					"showValue" : "true",
+					"showTargetValue" : "false",
+					"BulletType" : "horizontal",
+					"orientation" : "normal"
+				}
+			}
+		}
+	}
+}

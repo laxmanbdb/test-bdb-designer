@@ -1,0 +1,808 @@
+{
+	"NewWordCloudChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "new_word_cloud_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "newwordcloud",
+				"showLocked": "false",
+				"objectName": "NewWordCloud_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "643",
+				"x": "20",
+				"height": "536",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "NewWordCloud",
+					"showGradient": "true",
+					"bgGradients": "#ffffff",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+					"exportToExcel": "true",
+					"exportToCSV": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"exportType":"screenshot",
+					"showScreenShotButton": "true",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showTooltip": "true",
+					"showMaximizeButton": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"showExcelDownload": "true",
+					"showSubTitle": "false",
+					"showTitle": "true",
+					"Formater": "Currency",
+ 					"Unit": "none",
+ 					"SignPosition": "prefix",
+ 					"Precision": "default",
+ 					"NumberFormatter": "number",
+ 					"SecondaryFormater": "Number",
+ 					"SecondaryUnit": "none",
+					"GradientColor": "#FFFFFF,#FFFFFF",
+					"showLegends": "false",
+					"legendDirection": "vertical",
+					"legendfontSize": "14",
+					"legendtextDecoration": "none",
+					"legendfontStyle": "normal",
+					"legendfontFamily": "BizvizFont",
+					"legendfontColor": "#000000",
+					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+					"showcheckboxwithlegend": "false",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#EFF0F0",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"cloudGradients": "#216cdf, #285bbb, #284b99, #253b77, #202c58",
+					"markerColor": "#F5F5F5",
+					"markerTransparency": "0.3",
+					"showMarkerLine": true,
+					"showVerticalMarkerLine": "false",
+					"autoaxisSetup": "true",
+					"minimumAxisValue": "-20",
+					"maximumAxisValue": "110",
+					"baseZero": "true",
+					"FixedLabel": "true",
+					"Globalkey": "",
+					"enableColorFromDrill": "false",
+					"showPoint": "false",
+					"lineForm": "curve",
+					"fillOpacity": "1",
+					"lineWidth": "1",
+					"ChartType": "overlaid",
+
+					"shuffledtext": "false",
+					"nthtextvalue": "100",
+					"showntext": "false",
+					"maxvaluefontsize": "60",
+					"minvaluefontsize": "20",
+					"rotatetext": "true",
+					"excludePronouns": "true",
+					"excludedWords": "all,another,any,anybody,anyone,anything,both,each,each other,either,everybody,everyone,everything,few,he,her,hers,herself,him,himself,his,I,it,its,itself,little,many,me,mine,more,most,much,my,myself,neither,no one,nobody,none,nothing,one,one another,other,others,our,ours,ourselves,several,she,some,somebody,someone,something,that,their,theirs,them,themselves,these,they,this,those,us,we,what,whatever,which,whichever,who,whoever,whom,whomever,whose,you,your,yours,yourself,yourselves",
+					"HighlightColor": "#f2c80f",
+					"HighlightFontSize": "12",
+					"showRangeBar": "false",
+					"useRandomColor": "true",
+					"shrinkToFit" : "true",
+					"wordFontFamily": "BizvizFont",
+					"layoutAnimation": "false",
+					"wordCloudShape" : "square",
+					"rotationRangeMin": "0",
+					"rotationRangeMax": "90",
+					"rotationRangeStep": "90",
+					"shadowDepth": "0",
+					"shadowOffestX": "0",
+					"shadowOffestY": "0",
+					"wordCase": "upper",
+					"cloudGridSize": "12",
+					"wordPadding" : "0",
+					"wordLayoutShape": "none",
+					"wordInputFormat": "word",
+					"maxTextValue": "2000",
+					"rangeColorBarWidth": "15",
+					"showDynamicRange": "false",
+					"maxRangeColor": "#00b16a",
+					"minRangeColor": "#f89406",
+ 					"updatedDesign": "true",
+					"Legend": {
+						"DisplayName": "Low,Medium,High,Very High",
+						"Ranges": "0~5,5~10,10~20,20~30",
+						"Colors": "#DADADA,#00BCD4,#039DEF,#124CA3"
+					},
+					"xAxis": {
+						"ShowLineXAxis": "false",
+						"LineXAxisColor": "#ffffff",
+						"Description": "",
+						"LabelFontWeight": "normal",
+						"FontSize": "12",
+						"LabelFontColor": "#808080",
+						"LabelFontStyle": "normal",
+						"TextDecoration": "none",
+						"LabelFontFamily": "BizvizFont",
+						"Labelrotation": "90",
+						"LabelTilted": "false",
+						"FontColor": "#808080",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "12",
+						"FontStyle": "normal",
+						"FontFamily": "BizvizFont",
+						"FontWeight": "normal",
+						"TickMarks": "true",
+						"CategoryMarkingColor": "#cccccc"
+					},
+					"yAxis": {
+						"ShowLineYAxis": "false",
+						"LineYAxisColor": "#ffffff",
+						"Description": "",
+						"rightaxisFormater": "false",
+						"LabelFontWeight": "normal",
+						"FontStyle": "normal",
+						"LabelFontColor": "#808080",
+						"FontFamily": "BizvizFont",
+						"TextDecoration": "none",
+						"LabelFontStyle": "normal",
+						"LabelFontFamily": "BizvizFont",
+						"FontColor": "#808080",
+						"SecondDiscription": "yaxis",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "12",
+						"FontSize": "12",
+						"leftaxisFormater": "true",
+						"FontWeight": "normal"
+					},
+					"Title": {
+						"FontWeight": "600",
+						"Description": "Analysis of Donald Trump's acceptance speech",
+						"FontSize": "17",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"showDatasetDescription": "true",
+						"TitleBarHeight": "48"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "WordCloud",
+						"showSubTitle": "false",
+						"FontSize": "15",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal"
+					}
+				}
+			}
+		},
+		"Fields": [{
+				"DisplayName": "Word",
+				"Type": "Category",
+				"visible": "true",
+				"PlotRadius": "6",
+				"Name": "Word",
+				"Color": "#fcdb96",
+				"axis": "none",
+				"Precision": "0",
+				"PlotTransparency": "0.8",
+				"PlotType": "point",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "Frequency_Lift",
+				"Type": "Lift",
+				"visible": "true",
+				"PlotRadius": "6",
+				"Name": "Frequency_Lift",
+				"Color": "#797979",
+				"axis": "none",
+				"Precision": "0",
+				"PlotTransparency": "0.8",
+				"PlotType": "point",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "Color_Confidence",
+				"Type": "Confidence",
+				"visible": "true",
+				"PlotRadius": "6",
+				"Name": "Color_Confidence",
+				"Color": "#121212",
+				"axis": "none",
+				"Precision": "0",
+				"PlotTransparency": "0.8",
+				"PlotType": "point",
+				"ChartType": "none"
+			}
+		],
+		"Data": [{
+				  "Word": "data",
+				  "Frequency_Lift": 8,
+				  "Color_Confidence": 9
+				 },
+				 {
+				  "Word": "business",
+				  "Frequency_Lift": 6,
+				  "Color_Confidence": 9
+				 },
+				 {
+				  "Word": "platform",
+				  "Frequency_Lift": 3,
+				  "Color_Confidence": 9
+				 },
+				 {
+				  "Word": "models",
+				  "Frequency_Lift": 3,
+				  "Color_Confidence": 5
+				 },
+				 {
+				  "Word": "customized",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 7
+				 },
+				 {
+				  "Word": "analytics",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 7
+				 },
+				 {
+				  "Word": "machine",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 10
+				 },
+				 {
+				  "Word": "learning",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "interactive",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "advanced",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 5
+				 },
+				 {
+				  "Word": "dashboards",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 2
+				 },
+				 {
+				  "Word": "insights",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 6
+				 },
+				 {
+				  "Word": "capabilities",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "create",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 8
+				 },
+				 {
+				  "Word": "generate",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 10
+				 },
+				 {
+				  "Word": "better",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 6
+				 },
+				 {
+				  "Word": "scripts",
+				  "Frequency_Lift": 2,
+				  "Color_Confidence": 1
+				 },
+				 {
+				  "Word": "bdb",
+				  "Frequency_Lift": 20,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "decision",
+				  "Frequency_Lift": 10,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "big",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 1
+				 },
+				 {
+				  "Word": "pipeline",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 9
+				 },
+				 {
+				  "Word": "framework",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "handle",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 6
+				 },
+				 {
+				  "Word": "streaming",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 8
+				 },
+				 {
+				  "Word": "structured",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 2
+				 },
+				 {
+				  "Word": "unstructured",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 2
+				 },
+				 {
+				  "Word": "micro",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 5
+				 },
+				 {
+				  "Word": "services",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "architecture",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 2
+				 },
+				 {
+				  "Word": "based",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 5
+				 },
+				 {
+				  "Word": "modern",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 7
+				 },
+				 {
+				  "Word": "integrated",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "famous",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 1
+				 },
+				 {
+				  "Word": "applications",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 6
+				 },
+				 {
+				  "Word": "give",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 7
+				 },
+				 {
+				  "Word": "flow",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 10
+				 },
+				 {
+				  "Word": "elements",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 9
+				 },
+				 {
+				  "Word": "augmented",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 2
+				 },
+				 {
+				  "Word": "top",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 9
+				 },
+				 {
+				  "Word": "end",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "visualization",
+				  "Frequency_Lift": 9,
+				  "Color_Confidence": 9
+				 },
+				 {
+				  "Word": "product",
+				  "Frequency_Lift": 11,
+				  "Color_Confidence": 6
+				 },
+				 {
+				  "Word": "used",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 5
+				 },
+				 {
+				  "Word": "layers",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 2
+				 },
+				 {
+				  "Word": "organization",
+				  "Frequency_Lift": 11,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "cxos",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "citizen",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 5
+				 },
+				 {
+				  "Word": "scientist",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 7
+				 },
+				 {
+				  "Word": "scientists",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "analysts",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "users",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 1
+				 },
+				 {
+				  "Word": "etc",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "grow",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 6
+				 },
+				 {
+				  "Word": "insightful",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 2
+				 },
+				 {
+				  "Word": "reports",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 8
+				 },
+				 {
+				  "Word": "self-service",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 8
+				 },
+				 {
+				  "Word": "reporting",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 7
+				 },
+				 {
+				  "Word": "helps",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 2
+				 },
+				 {
+				  "Word": "quick",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "simple",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 9
+				 },
+				 {
+				  "Word": "drag-and",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 7
+				 },
+				 {
+				  "Word": "drop",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "designer",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 1
+				 },
+				 {
+				  "Word": "help",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 9
+				 },
+				 {
+				  "Word": "governed",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 9
+				 },
+				 {
+				  "Word": "extensibility",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 1
+				 },
+				 {
+				  "Word": "features",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 10
+				 },
+				 {
+				  "Word": "provides",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 10
+				 },
+				 {
+				  "Word": "built-in",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 10
+				 },
+				 {
+				  "Word": "components",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "including",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 6
+				 },
+				 {
+				  "Word": "charts",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "grids",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 5
+				 },
+				 {
+				  "Word": "filters",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 7
+				 },
+				 {
+				  "Word": "maps",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "automatically",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "profile",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "statistical",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "information",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "patterns",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "perform",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 2
+				 },
+				 {
+				  "Word": "multitude",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "transformation",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "steps",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "clean",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "optimize",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 4
+				 },
+				 {
+				  "Word": "transform",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "gives",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "deeper",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "understanding",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "decision-making",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "utilizing",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "power",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "neural",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "networks",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "ai",
+				  "Frequency_Lift": 10,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "without",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "writing",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "line",
+				  "Frequency_Lift": 1
+				 },
+				 {
+				  "Word": "code",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "load",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "dataset",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "automl",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "tool",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "intuitive",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "predictive",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "streamline",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "deployment",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "improve",
+				  "Frequency_Lift": 1
+				 },
+				 {
+				  "Word": "operations",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 },
+				 {
+				  "Word": "seamless",
+				  "Frequency_Lift": 1,
+				  "Color_Confidence": 3
+				 }
+				]
+	}
+}

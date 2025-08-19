@@ -1,0 +1,353 @@
+{
+	"WordCloudChart": {
+		"Properties": {
+			"Object": {
+				"componentType": "word_cloud_chart",
+				"objectType": "chart",
+				"subElement": "Chart",
+				"themeType": "default-theme",
+				"globalVariableKeyAttribute": "Globalkey",
+				"isDataSetAvailable": "true",
+				"enableScript": "true",
+				"referenceID": "",
+				"isValueFieldsAvailable": "false",
+				"showContextMenu": "false",
+				"shortName": "wordcloud",
+				"showLocked": "false",
+				"objectName": "WordCloud_1",
+				"unShowHidden": "false",
+				"groupings": "",
+				"percentheight": "320",
+				"width": "643",
+				"x": "20",
+				"height": "536",
+				"y": "10",
+				"initialVisibility": "true",
+				"percentwidth": "450",
+				"objectID": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+				"Chart": {
+					"id": "Obj.784241DDN8439NB566NF0C7N7BBDD306B14F",
+					"Type": "WordCloud",
+					"showGradient": "true",
+					"bgGradients": "#ffffff",
+					"bgAlpha": "1",
+					"bgGradientRotation": "0",
+					"exportToExcel": "true",
+					"exportToCSV": "true",
+					"exportToJPEG": "true",
+					"exportToPNG": "true",
+					"exportToPDF": "true",
+					"exportToPPT": "true",
+					"exportToPrint": "true",
+					"exportType":"screenshot",
+					"showScreenShotButton": "true",
+					"screenShotMode": "ppt",
+					"pptServiceURL": "http://bdbizviz.com/PPT/Parser",
+					"pptHeading": "Heading",
+					"pptSubHeading": "Sub Heading",
+					"subHeading": "Sub Heading",
+					"scrnShotFileName": "exportDashboard",
+					"showTooltip": "true",
+					"showMaximizeButton": "true",
+					"tooltipBackgroundColor": "#FFFFFF",
+					"tooltipBackgroundTransparency": "1",
+					"tooltipBorderColor": "#E0DFDF",
+					"customTooltipWidth": "auto",
+					"tooltipPrecision": "default",
+					"tooltipHighlighter": "true",
+					"tooltipFontSize": "12",
+					"showExcelDownload": "true",
+					"showSubTitle": "false",
+					"showTitle": "true",
+					"GradientColor": "#FFFFFF,#FFFFFF",
+					"showLegends": "false",
+					"legendDirection": "vertical",
+					"legendfontSize": "14",
+					"legendtextDecoration": "none",
+					"legendfontStyle": "normal",
+					"legendfontFamily": "BizvizFont",
+					"legendfontColor": "#000000",
+					"legendfontWeight": "normal",
+					"legendbackgroundColor": "#ffffff",
+					"legendbackgroundTransparency": "1",
+					"showcheckboxwithlegend": "false",
+					"showCheckboxSeprate": "false",
+					"showBorder": "true",
+					"borderColor": "#cccccc",
+					"borderRadius": "5",
+					"borderThickness": "1",
+					"showShadow": "false",
+					"shadowColor": "#cccccc",
+					"shadowOpacity": "0.3",
+					"markerColor": "#F5F5F5",
+					"markerTransparency": "0.3",
+					"showMarkerLine": true,
+					"showVerticalMarkerLine": "false",
+					"autoaxisSetup": "true",
+					"minimumAxisValue": "-20",
+					"maximumAxisValue": "110",
+					"baseZero": "true",
+					"FixedLabel": "true",
+					"Formater": "none",
+					"Unit": "",
+					"SignPosition": "suffix",
+					"Precision": "0",
+					"SecondaryFormater": "none",
+					"SecondaryUnit": "",
+					"Globalkey": "",
+					"enableColorFromDrill": "false",
+					"showPoint": "false",
+					"lineForm": "curve",
+					"fillOpacity": "1",
+					"lineWidth": "1",
+					"ChartType": "overlaid",
+
+					"shuffledtext": "true",
+					"nthtextvalue": "100",
+					"showntext": "true",
+					"maxvaluefontsize": "58",
+					"minvaluefontsize": "10",
+					"rotatetext": "true",
+					"excludePronouns": "true",
+					"excludedWords": "all,another,any,anybody,anyone,anything,both,each,each other,either,everybody,everyone,everything,few,he,her,hers,herself,him,himself,his,I,it,its,itself,little,many,me,mine,more,most,much,my,myself,neither,no one,nobody,none,nothing,one,one another,other,others,our,ours,ourselves,several,she,some,somebody,someone,something,that,their,theirs,them,themselves,these,they,this,those,us,we,what,whatever,which,whichever,who,whoever,whom,whomever,whose,you,your,yours,yourself,yourselves",
+					"HighlightColor": "#f2c80f",
+					"showRangeBar": "false",
+					"useRandomColor": "true",
+					"wordFontFamily": "BizvizFont",
+					"wordCase": "upper",
+					"rangeColorBarWidth": "15",
+					"showDynamicRange": "false",
+					"maxRangeColor": "#00b16a",
+					"minRangeColor": "#f89406",
+ 					"updatedDesign": "true",
+					"Legend": {
+						"DisplayName": "Low,Medium,High,Very High",
+						"Ranges": "0~5,5~10,10~20,20~30",
+						"Colors": "#DADADA,#00BCD4,#039DEF,#124CA3"
+					},
+					"xAxis": {
+						"ShowLineXAxis": "false",
+						"LineXAxisColor": "#ffffff",
+						"Description": "",
+						"LabelFontWeight": "normal",
+						"FontSize": "12",
+						"LabelFontColor": "#808080",
+						"LabelFontStyle": "normal",
+						"TextDecoration": "none",
+						"LabelFontFamily": "BizvizFont",
+						"Labelrotation": "90",
+						"LabelTilted": "false",
+						"FontColor": "#808080",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "12",
+						"FontStyle": "normal",
+						"FontFamily": "BizvizFont",
+						"FontWeight": "normal",
+						"TickMarks": "true",
+						"CategoryMarkingColor": "#cccccc"
+					},
+					"yAxis": {
+						"ShowLineYAxis": "false",
+						"LineYAxisColor": "#ffffff",
+						"Description": "",
+						"rightaxisFormater": "false",
+						"LabelFontWeight": "normal",
+						"FontStyle": "normal",
+						"LabelFontColor": "#808080",
+						"FontFamily": "BizvizFont",
+						"TextDecoration": "none",
+						"LabelFontStyle": "normal",
+						"LabelFontFamily": "BizvizFont",
+						"FontColor": "#808080",
+						"SecondDiscription": "yaxis",
+						"LabelTextDecoration": "none",
+						"LabelFontSize": "12",
+						"FontSize": "12",
+						"leftaxisFormater": "true",
+						"FontWeight": "normal"
+					},
+					"Title": {
+						"FontWeight": "600",
+						"Description": "Analysis of Donald Trump's acceptance speech",
+						"FontSize": "17",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal",
+						"showTitle": "true",
+						"showDatasetDescription": "true",
+						"TitleBarHeight": "48"
+					},
+					"SubTitle": {
+						"FontWeight": "normal",
+						"Description": "WordCloud",
+						"showSubTitle": "false",
+						"FontSize": "15",
+						"TextDecoration": "none",
+						"Align": "left",
+						"FontFamily": "BizvizFont",
+						"FontColor": "#000000",
+						"FontStyle": "normal"
+					}
+				}
+			}
+		},
+		"Fields": [{
+				"DisplayName": "Word",
+				"Type": "Category",
+				"visible": "true",
+				"PlotRadius": "6",
+				"Name": "Word",
+				"Color": "#fcdb96",
+				"axis": "none",
+				"Precision": "0",
+				"PlotTransparency": "0.8",
+				"PlotType": "point",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "Frequency_Lift",
+				"Type": "Lift",
+				"visible": "true",
+				"PlotRadius": "6",
+				"Name": "Frequency_Lift",
+				"Color": "#797979",
+				"axis": "none",
+				"Precision": "0",
+				"PlotTransparency": "0.8",
+				"PlotType": "point",
+				"ChartType": "none"
+			},
+			{
+				"DisplayName": "Color_Confidence",
+				"Type": "Confidence",
+				"visible": "true",
+				"PlotRadius": "6",
+				"Name": "Color_Confidence",
+				"Color": "#121212",
+				"axis": "none",
+				"Precision": "0",
+				"PlotTransparency": "0.8",
+				"PlotType": "point",
+				"ChartType": "none"
+			}
+		],
+		"Data": [{
+				"Word": "america",
+				"Frequency_Lift": "30",
+				"Color_Confidence": "30"
+			},
+			{
+				"Word": "americans",
+				"Frequency_Lift": "28",
+				"Color_Confidence": "28"
+			},
+			{
+				"Word": "border",
+				"Frequency_Lift": "8",
+				"Color_Confidence": "8"
+			},
+			{
+				"Word": "children",
+				"Frequency_Lift": "8",
+				"Color_Confidence": "8"
+			},
+			{
+				"Word": "communities",
+				"Frequency_Lift": "8",
+				"Color_Confidence": "8"
+			},
+			{
+				"Word": "country",
+				"Frequency_Lift": "30",
+				"Color_Confidence": "30"
+			},
+			{
+				"Word": "government",
+				"Frequency_Lift": "6",
+				"Color_Confidence": "6"
+			},
+			{
+				"Word": "hillary",
+				"Frequency_Lift": "10",
+				"Color_Confidence": "10"
+			},
+			{
+				"Word": "jobs",
+				"Frequency_Lift": "14",
+				"Color_Confidence": "12"
+			},
+			{
+				"Word": "law",
+				"Frequency_Lift": "16",
+				"Color_Confidence": "16"
+			},
+			{
+				"Word": "lives",
+				"Frequency_Lift": "8",
+				"Color_Confidence": "8"
+			},
+			{
+				"Word": "millions",
+				"Frequency_Lift": "8",
+				"Color_Confidence": "8"
+			},
+			{
+				"Word": "nation",
+				"Frequency_Lift": "16",
+				"Color_Confidence": "16"
+			},
+			{
+				"Word": "order",
+				"Frequency_Lift": "6",
+				"Color_Confidence": "6"
+			},
+			{
+				"Word": "politicians",
+				"Frequency_Lift": "6",
+				"Color_Confidence": "6"
+			},
+			{
+				"Word": "safe",
+				"Frequency_Lift": "10",
+				"Color_Confidence": "6"
+			},
+			{
+				"Word": "state",
+				"Frequency_Lift": "6",
+				"Color_Confidence": "6"
+			},
+			{
+				"Word": "tax",
+				"Frequency_Lift": "6",
+				"Color_Confidence": "6"
+			},
+			{
+				"Word": "tonight",
+				"Frequency_Lift": "8",
+				"Color_Confidence": "10"
+			},
+			{
+				"Word": "trade",
+				"Frequency_Lift": "12",
+				"Color_Confidence": "14"
+			},
+			{
+				"Word": "trillion",
+				"Frequency_Lift": "6",
+				"Color_Confidence": "6"
+			},
+			{
+				"Word": "work",
+				"Frequency_Lift": "16",
+				"Color_Confidence": "16"
+			},
+			{
+				"Word": "world",
+				"Frequency_Lift": "8",
+				"Color_Confidence": "10"
+			}
+		]
+	}
+}
