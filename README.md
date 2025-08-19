@@ -1,4 +1,6 @@
 # html file that load all js files to render and preview of dashboards charts and ui
+# use this code project to only migration of angularJs to angular 16 version only
+# resrtricted copyrught @bdb.ai
 <!DOCTYPE HTML>
 <html>
 	<head>
